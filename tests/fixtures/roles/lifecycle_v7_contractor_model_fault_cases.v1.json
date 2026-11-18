@@ -1,0 +1,43 @@
+{
+  "schema_version": "lifecycle-input-case.v1",
+  "scenario_id": "V7",
+  "origin": "synthetic",
+  "source_declaration": "Two complete independent assumed Contractor A12 protect/suspend input configurations. Both run the original authorized processors before the explicitly local model fault. No business success or external effect is supplied.",
+  "steps": [
+    {
+      "step_id": "v7-contractor-a12-model-timeout",
+      "action_id": "CONTRACTOR-A12",
+      "input_configuration_path": "tests/fixtures/roles/v7-contractor-a12-model-timeout.v1.json",
+      "input_configuration_sha256": "1f6092c0703af5320a8d89b7f39e2bdfd894b7eca5a90f11f1d9d3b334a7473b",
+      "entrypoint": "integration.lifecycle_v7_model_fault:run_v7_model_fault",
+      "output_directory": "output/integration/v7-contractor-a12-model-timeout_verification_01",
+      "expected_kind": "technical_error",
+      "expected_error_code": "action_model_selection_failed",
+      "expected_error_type": "TimeoutError",
+      "expected_script_calls": 1,
+      "expected_network_requests": 0,
+      "expected_task_state": "technical_failure",
+      "automatic_retry": false
+    },
+    {
+      "step_id": "v7-contractor-a12-model-invalid_json",
+      "action_id": "CONTRACTOR-A12",
+      "input_configuration_path": "tests/fixtures/roles/v7-contractor-a12-model-invalid_json.v1.json",
+      "input_configuration_sha256": "c4ec471845c36b9838678576735a8f936c3d662cdd9d24a93d23268629b45232",
+      "entrypoint": "integration.lifecycle_v7_model_fault:run_v7_model_fault",
+      "output_directory": "output/integration/v7-contractor-a12-model-invalid_json_verification_01",
+      "expected_kind": "technical_error",
+      "expected_error_code": "action_model_selection_failed",
+      "expected_error_type": "JSONDecodeError",
+      "expected_script_calls": 1,
+      "expected_network_requests": 0,
+      "expected_task_state": "technical_failure",
+      "automatic_retry": false
+    }
+  ],
+  "limitations": [
+    "Configuration prepared only; factories, processors, model scripts and journals have not been executed.",
+    "Empty assets/work/cash history is an explicit isolated synthetic assumption, not completeness evidence for a real business.",
+    "Local faults do not prove real model/provider behavior; all broader PLAN scenarios remain in scope."
+  ]
+}

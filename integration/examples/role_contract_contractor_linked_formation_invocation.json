@@ -1,0 +1,392 @@
+{
+  "schema_version": "role-contract-invocation.v1",
+  "context": {
+    "run_id": "synthetic-v2-procurement-publication-01",
+    "actor_id": "v2-publication-contractor-actor",
+    "function_ref": {
+      "kind": "FunctionAssignment",
+      "id": "v2-owner-publication-contractor-function",
+      "version": "1"
+    },
+    "authorization_refs": [
+      {
+        "kind": "Authorization",
+        "id": "v2-owner-publication-contractor-grant",
+        "version": "3"
+      }
+    ],
+    "operation_id": "v2-linked-formation-accept-01",
+    "contract_ref": {
+      "kind": "ActionContract",
+      "id": "CONTRACTOR-A02",
+      "version": "1"
+    },
+    "task_ref": {
+      "kind": "DecisionTask",
+      "id": "v2-linked-formation-task",
+      "version": "1"
+    },
+    "scope": {
+      "kind": "project",
+      "ref": {
+        "kind": "Project",
+        "id": "v2-owner-publication-project",
+        "version": "1"
+      },
+      "coverage_refs": [
+        {
+          "kind": "WorkScope",
+          "id": "v2-owner-publication-work",
+          "version": "1"
+        }
+      ]
+    },
+    "business_time": {
+      "clock_ref": {
+        "kind": "ClockProfile",
+        "id": "v2-owner-publication-clock",
+        "version": "1"
+      },
+      "offset": 20
+    },
+    "read_token": "synthetic-v2-procurement-publication-01:linked-formation-read-20",
+    "visible_refs": [
+      {
+        "kind": "ProcurementPackage",
+        "id": "v2-contractor-bid-package",
+        "version": "1"
+      },
+      {
+        "kind": "TenderRound",
+        "id": "v2-contractor-bid-round",
+        "version": "1"
+      },
+      {
+        "kind": "MeasurementRule",
+        "id": "v2-contractor-bid-measurement-rule",
+        "version": "1"
+      },
+      {
+        "kind": "ContractTerms",
+        "id": "v2-contractor-bid-terms",
+        "version": "1"
+      },
+      {
+        "kind": "ReleasedDeliverable",
+        "id": "v2-contractor-bid-design",
+        "version": "1"
+      },
+      {
+        "kind": "QuantityBasis",
+        "id": "v2-contractor-bid-quantity",
+        "version": "1"
+      },
+      {
+        "kind": "CostBasis",
+        "id": "v2-contractor-bid-cost",
+        "version": "1"
+      },
+      {
+        "kind": "WorkMethod",
+        "id": "v2-contractor-bid-work-method",
+        "version": "1"
+      },
+      {
+        "kind": "ProgrammeProposal",
+        "id": "v2-contractor-bid-programme",
+        "version": "1"
+      },
+      {
+        "kind": "ResourcePool",
+        "id": "v2-contractor-bid-crew",
+        "version": "1"
+      },
+      {
+        "kind": "ResourceCommitment",
+        "id": "v2-contractor-bid-other-project-crew",
+        "version": "1"
+      },
+      {
+        "kind": "ContractorCapacity",
+        "id": "v2-contractor-bid-capacity",
+        "version": "1"
+      },
+      {
+        "kind": "Organization",
+        "id": "v2-publication-contractor",
+        "version": "1"
+      },
+      {
+        "kind": "Qualification",
+        "id": "v2-contractor-bid-general-works",
+        "version": "1"
+      },
+      {
+        "kind": "ContractorPricingProfile",
+        "id": "v2-contractor-bid-pricing",
+        "version": "1"
+      },
+      {
+        "kind": "TimeWindow",
+        "id": "v2-contractor-bid-work-slot",
+        "version": "1"
+      },
+      {
+        "kind": "TimeWindow",
+        "id": "v2-contractor-bid-bid-validity",
+        "version": "1"
+      },
+      {
+        "kind": "TimeWindow",
+        "id": "v2-owner-publication-submission-window",
+        "version": "1"
+      },
+      {
+        "kind": "ClockProfile",
+        "id": "v2-owner-publication-clock",
+        "version": "1"
+      },
+      {
+        "kind": "Project",
+        "id": "v2-owner-publication-project",
+        "version": "1"
+      },
+      {
+        "kind": "WorkScope",
+        "id": "v2-owner-publication-work",
+        "version": "1"
+      },
+      {
+        "kind": "FunctionAssignment",
+        "id": "v2-owner-publication-contractor-function",
+        "version": "1"
+      },
+      {
+        "kind": "FunctionAssignment",
+        "id": "v2-owner-publication-architect-function",
+        "version": "1"
+      },
+      {
+        "kind": "Evidence",
+        "id": "v2-owner-publication-basis",
+        "version": "1"
+      },
+      {
+        "kind": "Project",
+        "id": "v2-contractor-bid-other-project",
+        "version": "1"
+      },
+      {
+        "kind": "WorkScope",
+        "id": "v2-contractor-bid-other-work",
+        "version": "1"
+      },
+      {
+        "kind": "CandidateSet",
+        "id": "v2-contractor-bid-candidates",
+        "version": "1"
+      },
+      {
+        "kind": "Authorization",
+        "id": "v2-owner-publication-contractor-grant",
+        "version": "2"
+      },
+      {
+        "kind": "Authorization",
+        "id": "v2-owner-publication-architect-grant",
+        "version": "1"
+      },
+      {
+        "kind": "Evidence",
+        "id": "v2-contractor-bid-facts",
+        "version": "1"
+      },
+      {
+        "kind": "Method",
+        "id": "micro.supply.declared_cost_markup",
+        "version": "1"
+      },
+      {
+        "kind": "Authorization",
+        "id": "v2-owner-publication-owner-grant",
+        "version": "3"
+      },
+      {
+        "kind": "Evidence",
+        "id": "v2-owner-award-basis",
+        "version": "1"
+      },
+      {
+        "kind": "Authorization",
+        "id": "v2-owner-publication-contractor-grant",
+        "version": "3"
+      },
+      {
+        "kind": "ContractTerms",
+        "id": "v2-owner-award-final-terms",
+        "version": "1"
+      },
+      {
+        "kind": "ContractOffer",
+        "id": "v2-linked-formation-offer",
+        "version": "1"
+      },
+      {
+        "kind": "Bid",
+        "id": "v2-contractor-bid-submitted",
+        "version": "1"
+      },
+      {
+        "kind": "ContractFormationProfile",
+        "id": "v2-linked-formation-profile",
+        "version": "1"
+      },
+      {
+        "kind": "FundingPosition",
+        "id": "v2-linked-formation-funding",
+        "version": "1"
+      },
+      {
+        "kind": "PartyAcceptance",
+        "id": "v2-linked-formation-owner-acceptance",
+        "version": "1"
+      },
+      {
+        "kind": "ContractTemplate",
+        "id": "v2-owner-award-template",
+        "version": "1"
+      },
+      {
+        "kind": "ContractClause",
+        "id": "v2-owner-award-general-clause",
+        "version": "1"
+      },
+      {
+        "kind": "SubmissionExecution",
+        "id": "v2-linked-formation-bid-submission",
+        "version": "1"
+      },
+      {
+        "kind": "FundingSource",
+        "id": "v2-linked-formation-original-account",
+        "version": "1"
+      },
+      {
+        "kind": "ContractPayment",
+        "id": "v2-linked-formation-contract-payment",
+        "version": "1"
+      },
+      {
+        "kind": "ContractFundingPlan",
+        "id": "v2-linked-formation-cash-plan",
+        "version": "1"
+      },
+      {
+        "kind": "SettlementComponent",
+        "id": "v2-linked-formation-other-project-payable-component",
+        "version": "1"
+      },
+      {
+        "kind": "FundingCommitment",
+        "id": "v2-linked-formation-other-project-payable",
+        "version": "1"
+      },
+      {
+        "kind": "SettlementComponent",
+        "id": "v2-linked-formation-new-contract-cost-component",
+        "version": "1"
+      },
+      {
+        "kind": "FundingCommitment",
+        "id": "v2-linked-formation-new-contract-cost",
+        "version": "1"
+      },
+      {
+        "kind": "SettlementComponent",
+        "id": "v2-linked-formation-new-contract-receipt-component",
+        "version": "1"
+      },
+      {
+        "kind": "FundingCommitment",
+        "id": "v2-linked-formation-new-contract-receipt",
+        "version": "1"
+      },
+      {
+        "kind": "TimeWindow",
+        "id": "v2-linked-formation-response-window",
+        "version": "1"
+      },
+      {
+        "kind": "ContractorCapacity",
+        "id": "v2-contractor-bid-capacity",
+        "version": "2"
+      },
+      {
+        "kind": "Requirement",
+        "id": "v2-owner-award-pending-contractor-acceptance",
+        "version": "1"
+      },
+      {
+        "kind": "Requirement",
+        "id": "v2-owner-award-contractor-capacity",
+        "version": "1"
+      },
+      {
+        "kind": "CandidateSet",
+        "id": "v2-linked-formation-candidates",
+        "version": "1"
+      },
+      {
+        "kind": "Evidence",
+        "id": "v2-linked-formation-basis",
+        "version": "1"
+      }
+    ],
+    "candidate_set_ref": {
+      "kind": "CandidateSet",
+      "id": "v2-linked-formation-candidates",
+      "version": "1"
+    },
+    "execution_mode": "offline_fixture"
+  },
+  "action_input": {
+    "offer_ref": {
+      "kind": "ContractOffer",
+      "id": "v2-linked-formation-offer",
+      "version": "1"
+    },
+    "terms_ref": {
+      "kind": "ContractTerms",
+      "id": "v2-owner-award-final-terms",
+      "version": "1"
+    },
+    "counterpart_acceptance_refs": [
+      {
+        "kind": "PartyAcceptance",
+        "id": "v2-linked-formation-owner-acceptance",
+        "version": "1"
+      }
+    ],
+    "authority_ref": {
+      "kind": "Authorization",
+      "id": "v2-owner-publication-contractor-grant",
+      "version": "3"
+    },
+    "capacity_ref": {
+      "kind": "ContractorCapacity",
+      "id": "v2-contractor-bid-capacity",
+      "version": "2"
+    },
+    "funding_ref": {
+      "kind": "FundingPosition",
+      "id": "v2-linked-formation-funding",
+      "version": "1"
+    },
+    "formation_profile_ref": {
+      "kind": "ContractFormationProfile",
+      "id": "v2-linked-formation-profile",
+      "version": "1"
+    }
+  },
+  "execution_path": "deterministic"
+}

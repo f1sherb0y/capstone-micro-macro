@@ -1,0 +1,2106 @@
+{
+  "schema_version": "lifecycle-input-case.v1",
+  "scenario_id": "V6",
+  "case_id": "v6-supplier-change-preserves-installed-use",
+  "origin": "synthetic",
+  "run_id": "synthetic-v6-supplier-change",
+  "status": "input_prepared_execution_pending",
+  "source_declaration": {
+    "kind": "explicit_synthetic",
+    "assumptions": [
+      "One explicitly synthetic order has two original lines: one affected two-item line and one unaffected one-item line. The specific alternative product remains a proposal, and both product references are declared by the original requirement.",
+      "Two items of the original batch are installed and owned by the buyer; the site operator is independent of the supplier. No removal, disposition right, replacement work, new stock or acceptance is supplied.",
+      "Batch lineage/event, installation location/event and product specifications are declared synthetic identifiers, not independently observed native records or professional equivalence evidence.",
+      "The buyer supplies an independently authored synthetic contract procedure permitting a change proposal only. Defect/change-request/transaction/remedy-request histories are explicitly empty within this isolated fixture.",
+      "Cost change remains unknown. This proposal cannot revise the formal order, erase installed consumption or unaffected duties, determine equivalence, issue a refund or execute repair/replacement."
+    ]
+  },
+  "steps": [
+    {
+      "step_id": "v6-supplier-change",
+      "action_id": "SUPPLIER-A11",
+      "operation_id": "v6-supplier-change-30",
+      "expected_kind": "completed",
+      "expected_choice": "propose_change",
+      "expected_lines": [
+        {
+          "product_ref": {
+            "kind": "ProductSpecification",
+            "id": "v6-proposed-product",
+            "version": "1"
+          },
+          "destination_scope_ref": {
+            "kind": "assessment_case",
+            "ref": {
+              "kind": "OwnerCase",
+              "id": "v6-supplier-remedy-case",
+              "version": "1"
+            },
+            "coverage_refs": [
+              {
+                "kind": "WorkScope",
+                "id": "v6-supplier-installed-scope",
+                "version": "1"
+              }
+            ]
+          },
+          "quantity": {
+            "value": "2",
+            "unit": "item",
+            "basis_ref": {
+              "kind": "Evidence",
+              "id": "v6-supplier-change-synthetic",
+              "version": "1"
+            }
+          },
+          "requirement_refs": [
+            {
+              "kind": "Requirement",
+              "id": "v6-supply-product-requirement",
+              "version": "1"
+            }
+          ],
+          "deviation_refs": []
+        }
+      ],
+      "expected_affected_line_refs": [
+        {
+          "kind": "OrderLine",
+          "id": "v6-affected-order-line",
+          "version": "1"
+        }
+      ],
+      "expected_unaffected_line_refs": [
+        {
+          "kind": "OrderLine",
+          "id": "v6-unaffected-order-line",
+          "version": "1"
+        }
+      ],
+      "expected_installed_use_refs": [
+        {
+          "kind": "MaterialUse",
+          "id": "v6-original-installed-use",
+          "version": "1"
+        }
+      ],
+      "output_directory": "output/integration/v6_supplier_change_pending_01",
+      "host": "integration.supplier_role_contract_host:build_role_host",
+      "request": {
+        "schema_version": "role-contract-invocation.v1",
+        "context": {
+          "run_id": "synthetic-v6-supplier-change",
+          "actor_id": "supplier-actor",
+          "function_ref": {
+            "kind": "FunctionAssignment",
+            "id": "v6-supplier-remedy-function",
+            "version": "1"
+          },
+          "authorization_refs": [
+            {
+              "kind": "Authorization",
+              "id": "v6-supplier-remedy-grant",
+              "version": "1"
+            }
+          ],
+          "operation_id": "v6-supplier-change-30",
+          "contract_ref": {
+            "kind": "ActionContract",
+            "id": "SUPPLIER-A11",
+            "version": "1"
+          },
+          "task_ref": {
+            "kind": "DecisionTask",
+            "id": "v6-supplier-change-30-task",
+            "version": "1"
+          },
+          "scope": {
+            "kind": "assessment_case",
+            "ref": {
+              "kind": "OwnerCase",
+              "id": "v6-supplier-remedy-case",
+              "version": "1"
+            },
+            "coverage_refs": [
+              {
+                "kind": "WorkScope",
+                "id": "v6-supplier-installed-scope",
+                "version": "1"
+              }
+            ]
+          },
+          "business_time": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 30
+          },
+          "read_token": "synthetic-v6-supplier-change:read:1",
+          "visible_refs": [
+            {
+              "kind": "Order",
+              "id": "v6-supply-remedy-order",
+              "version": "1"
+            },
+            {
+              "kind": "OrderLine",
+              "id": "v6-affected-order-line",
+              "version": "1"
+            },
+            {
+              "kind": "OrderLine",
+              "id": "v6-unaffected-order-line",
+              "version": "1"
+            },
+            {
+              "kind": "SupplyRemedyProfile",
+              "id": "v6-supply-change-profile",
+              "version": "1"
+            },
+            {
+              "kind": "SupplyRemedyProcedure",
+              "id": "v6-supply-change-procedure",
+              "version": "1"
+            },
+            {
+              "kind": "SupplyChangeProposal",
+              "id": "v6-specific-change-proposal",
+              "version": "1"
+            },
+            {
+              "kind": "Requirement",
+              "id": "v6-supply-product-requirement",
+              "version": "1"
+            },
+            {
+              "kind": "ProductBatch",
+              "id": "v6-original-installed-batch",
+              "version": "1"
+            },
+            {
+              "kind": "MaterialUse",
+              "id": "v6-original-installed-use",
+              "version": "1"
+            },
+            {
+              "kind": "Evidence",
+              "id": "v6-supplier-change-synthetic",
+              "version": "1"
+            },
+            {
+              "kind": "FunctionAssignment",
+              "id": "v6-supplier-remedy-function",
+              "version": "1"
+            },
+            {
+              "kind": "FunctionAssignment",
+              "id": "v6-remedy-buyer-function",
+              "version": "1"
+            },
+            {
+              "kind": "OwnerCase",
+              "id": "v6-supplier-remedy-case",
+              "version": "1"
+            },
+            {
+              "kind": "WorkScope",
+              "id": "v6-supplier-installed-scope",
+              "version": "1"
+            },
+            {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            {
+              "kind": "CandidateSet",
+              "id": "v6-supplier-change-candidates",
+              "version": "1"
+            },
+            {
+              "kind": "Authorization",
+              "id": "v6-supplier-remedy-grant",
+              "version": "1"
+            },
+            {
+              "kind": "Authorization",
+              "id": "v6-remedy-buyer-grant",
+              "version": "1"
+            }
+          ],
+          "candidate_set_ref": {
+            "kind": "CandidateSet",
+            "id": "v6-supplier-change-candidates",
+            "version": "1"
+          },
+          "execution_mode": "offline_fixture"
+        },
+        "action_input": {
+          "order_ref": {
+            "kind": "Order",
+            "id": "v6-supply-remedy-order",
+            "version": "1"
+          },
+          "batch_refs": [
+            {
+              "kind": "ProductBatch",
+              "id": "v6-original-installed-batch",
+              "version": "1"
+            }
+          ],
+          "installed_use_refs": [
+            {
+              "kind": "MaterialUse",
+              "id": "v6-original-installed-use",
+              "version": "1"
+            }
+          ],
+          "change_refs": [],
+          "defect_refs": [],
+          "authority_refs": [
+            {
+              "kind": "Authorization",
+              "id": "v6-supplier-remedy-grant",
+              "version": "1"
+            }
+          ],
+          "remedy_profile_ref": {
+            "kind": "SupplyRemedyProfile",
+            "id": "v6-supply-change-profile",
+            "version": "1"
+          }
+        },
+        "execution_path": "deterministic"
+      },
+      "configuration": {
+        "schema_version": "role-contract-host-config.v1",
+        "host_id": "v6-supplier-change",
+        "version": "1",
+        "settings": {
+          "action_id": "SUPPLIER-A11",
+          "source_factory": "integration.supplier_remedy_fixture_sources:build_sources",
+          "source_version": "configured-supplier-remedy-fixture-sources.v1",
+          "macro_version": "synthetic-v6-supplier-change.v1",
+          "client_version": "role-contract-supplier-remedy-fixture.v1",
+          "policy_version": "role-contract-supplier-remedy-fixture.v1",
+          "model_version": "offline-fixture-no-model.v1",
+          "source_settings": {
+            "action_id": "SUPPLIER-A11",
+            "source_note": "Explicit synthetic concrete supply change proposal; installed use and unaffected order line retained.",
+            "journal_path": "output/integration/v6_supplier_change_pending_01/journal.sqlite",
+            "organization_snapshot": {
+              "schema_version": "organization.v2",
+              "run_id": "synthetic-v6-supplier-change",
+              "organizations": [
+                {
+                  "organization_id": "supplier",
+                  "actor_id": "supplier-actor",
+                  "source_ids": [
+                    "synthetic:v6-supplier-change:supplier"
+                  ],
+                  "public_description": "Synthetic supply remedy fixture organization.",
+                  "public_location": {
+                    "state": "unknown",
+                    "reason_code": "synthetic_unsupplied",
+                    "missing_refs": []
+                  },
+                  "members": [],
+                  "assignments": [
+                    {
+                      "role": "Supplier",
+                      "function_ref": {
+                        "kind": "FunctionAssignment",
+                        "id": "v6-supplier-remedy-function",
+                        "version": "1"
+                      },
+                      "configuration_version": "1",
+                      "basis_refs": [
+                        {
+                          "kind": "Evidence",
+                          "id": "v6-supplier-change-synthetic",
+                          "version": "1"
+                        }
+                      ]
+                    }
+                  ],
+                  "evidence_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "v6-supplier-change-synthetic",
+                      "version": "1"
+                    }
+                  ]
+                },
+                {
+                  "organization_id": "owner",
+                  "actor_id": "owner-actor",
+                  "source_ids": [
+                    "synthetic:v6-supplier-change:owner"
+                  ],
+                  "public_description": "Synthetic supply remedy fixture organization.",
+                  "public_location": {
+                    "state": "unknown",
+                    "reason_code": "synthetic_unsupplied",
+                    "missing_refs": []
+                  },
+                  "members": [],
+                  "assignments": [
+                    {
+                      "role": "Owner",
+                      "function_ref": {
+                        "kind": "FunctionAssignment",
+                        "id": "v6-remedy-buyer-function",
+                        "version": "1"
+                      },
+                      "configuration_version": "1",
+                      "basis_refs": [
+                        {
+                          "kind": "Evidence",
+                          "id": "v6-supplier-change-synthetic",
+                          "version": "1"
+                        }
+                      ]
+                    }
+                  ],
+                  "evidence_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "v6-supplier-change-synthetic",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "authorizations": [
+                {
+                  "ref": {
+                    "kind": "Authorization",
+                    "id": "v6-supplier-remedy-grant",
+                    "version": "1"
+                  },
+                  "organization_id": "supplier",
+                  "actor_id": "supplier-actor",
+                  "function_ref": {
+                    "kind": "FunctionAssignment",
+                    "id": "v6-supplier-remedy-function",
+                    "version": "1"
+                  },
+                  "action_ids": [
+                    "SUPPLIER-A11"
+                  ],
+                  "scopes": [
+                    {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-supplier-remedy-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-supplier-installed-scope",
+                          "version": "1"
+                        }
+                      ]
+                    }
+                  ],
+                  "readable_refs": [
+                    {
+                      "kind": "Order",
+                      "id": "v6-supply-remedy-order",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "OrderLine",
+                      "id": "v6-affected-order-line",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "OrderLine",
+                      "id": "v6-unaffected-order-line",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "SupplyRemedyProfile",
+                      "id": "v6-supply-change-profile",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "SupplyRemedyProcedure",
+                      "id": "v6-supply-change-procedure",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "SupplyChangeProposal",
+                      "id": "v6-specific-change-proposal",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Requirement",
+                      "id": "v6-supply-product-requirement",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ProductBatch",
+                      "id": "v6-original-installed-batch",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "MaterialUse",
+                      "id": "v6-original-installed-use",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Evidence",
+                      "id": "v6-supplier-change-synthetic",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-supplier-remedy-function",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-remedy-buyer-function",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "OwnerCase",
+                      "id": "v6-supplier-remedy-case",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "WorkScope",
+                      "id": "v6-supplier-installed-scope",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ClockProfile",
+                      "id": "business",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "CandidateSet",
+                      "id": "v6-supplier-change-candidates",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Authorization",
+                      "id": "v6-supplier-remedy-grant",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Authorization",
+                      "id": "v6-remedy-buyer-grant",
+                      "version": "1"
+                    }
+                  ],
+                  "tool_ids": [],
+                  "validity": {
+                    "start": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 0
+                    },
+                    "end": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 100
+                    },
+                    "bounds": "closed_open"
+                  },
+                  "basis_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "v6-supplier-change-synthetic",
+                      "version": "1"
+                    }
+                  ]
+                },
+                {
+                  "ref": {
+                    "kind": "Authorization",
+                    "id": "v6-remedy-buyer-grant",
+                    "version": "1"
+                  },
+                  "organization_id": "owner",
+                  "actor_id": "owner-actor",
+                  "function_ref": {
+                    "kind": "FunctionAssignment",
+                    "id": "v6-remedy-buyer-function",
+                    "version": "1"
+                  },
+                  "action_ids": [
+                    "OWN-A10"
+                  ],
+                  "scopes": [
+                    {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-supplier-remedy-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-supplier-installed-scope",
+                          "version": "1"
+                        }
+                      ]
+                    }
+                  ],
+                  "readable_refs": [
+                    {
+                      "kind": "Order",
+                      "id": "v6-supply-remedy-order",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "SupplyRemedyProcedure",
+                      "id": "v6-supply-change-procedure",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Requirement",
+                      "id": "v6-supply-product-requirement",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Evidence",
+                      "id": "v6-supplier-change-synthetic",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-remedy-buyer-function",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Authorization",
+                      "id": "v6-remedy-buyer-grant",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "OwnerCase",
+                      "id": "v6-supplier-remedy-case",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "WorkScope",
+                      "id": "v6-supplier-installed-scope",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ClockProfile",
+                      "id": "business",
+                      "version": "1"
+                    }
+                  ],
+                  "tool_ids": [],
+                  "validity": {
+                    "start": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 0
+                    },
+                    "end": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 100
+                    },
+                    "bounds": "closed_open"
+                  },
+                  "basis_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "v6-supplier-change-synthetic",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "inactive_authorization_refs": []
+            },
+            "source_projection": {
+              "run_id": "synthetic-v6-supplier-change",
+              "macro_version": "synthetic-v6-supplier-change.v1",
+              "state_version": "synthetic-v6-supplier-change-30.v1",
+              "read_token": "synthetic-v6-supplier-change:read:1",
+              "business_time": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 30
+              },
+              "organization_id": "supplier",
+              "objects": [
+                {
+                  "ref": {
+                    "kind": "Order",
+                    "id": "v6-supply-remedy-order",
+                    "version": "1"
+                  },
+                  "value": {
+                    "scope": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-supplier-remedy-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-supplier-installed-scope",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-supplier-change-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "ref": {
+                      "kind": "Order",
+                      "id": "v6-supply-remedy-order",
+                      "version": "1"
+                    },
+                    "supplier_id": "supplier",
+                    "buyer_id": "owner",
+                    "currency": "HKD",
+                    "line_refs": [
+                      {
+                        "kind": "OrderLine",
+                        "id": "v6-affected-order-line",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "OrderLine",
+                        "id": "v6-unaffected-order-line",
+                        "version": "1"
+                      }
+                    ],
+                    "batch_refs": [
+                      {
+                        "kind": "ProductBatch",
+                        "id": "v6-original-installed-batch",
+                        "version": "1"
+                      }
+                    ],
+                    "material_use_refs": [
+                      {
+                        "kind": "MaterialUse",
+                        "id": "v6-original-installed-use",
+                        "version": "1"
+                      }
+                    ],
+                    "change_refs": [],
+                    "defect_refs": [],
+                    "transaction_refs": [],
+                    "request_history_refs": [],
+                    "coverage": "complete",
+                    "as_of": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "OrderLine",
+                    "id": "v6-affected-order-line",
+                    "version": "1"
+                  },
+                  "value": {
+                    "scope": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-supplier-remedy-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-supplier-installed-scope",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-supplier-change-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "ref": {
+                      "kind": "OrderLine",
+                      "id": "v6-affected-order-line",
+                      "version": "1"
+                    },
+                    "order_ref": {
+                      "kind": "Order",
+                      "id": "v6-supply-remedy-order",
+                      "version": "1"
+                    },
+                    "product": {
+                      "product_ref": {
+                        "kind": "ProductSpecification",
+                        "id": "v6-original-product",
+                        "version": "1"
+                      },
+                      "destination_scope_ref": {
+                        "kind": "assessment_case",
+                        "ref": {
+                          "kind": "OwnerCase",
+                          "id": "v6-supplier-remedy-case",
+                          "version": "1"
+                        },
+                        "coverage_refs": [
+                          {
+                            "kind": "WorkScope",
+                            "id": "v6-supplier-installed-scope",
+                            "version": "1"
+                          }
+                        ]
+                      },
+                      "quantity": {
+                        "value": "2",
+                        "unit": "item",
+                        "basis_ref": {
+                          "kind": "Evidence",
+                          "id": "v6-supplier-change-synthetic",
+                          "version": "1"
+                        }
+                      },
+                      "requirement_refs": [
+                        {
+                          "kind": "Requirement",
+                          "id": "v6-supply-product-requirement",
+                          "version": "1"
+                        }
+                      ],
+                      "deviation_refs": []
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "OrderLine",
+                    "id": "v6-unaffected-order-line",
+                    "version": "1"
+                  },
+                  "value": {
+                    "scope": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-supplier-remedy-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-supplier-installed-scope",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-supplier-change-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "ref": {
+                      "kind": "OrderLine",
+                      "id": "v6-unaffected-order-line",
+                      "version": "1"
+                    },
+                    "order_ref": {
+                      "kind": "Order",
+                      "id": "v6-supply-remedy-order",
+                      "version": "1"
+                    },
+                    "product": {
+                      "product_ref": {
+                        "kind": "ProductSpecification",
+                        "id": "v6-original-product",
+                        "version": "1"
+                      },
+                      "destination_scope_ref": {
+                        "kind": "assessment_case",
+                        "ref": {
+                          "kind": "OwnerCase",
+                          "id": "v6-supplier-remedy-case",
+                          "version": "1"
+                        },
+                        "coverage_refs": [
+                          {
+                            "kind": "WorkScope",
+                            "id": "v6-supplier-installed-scope",
+                            "version": "1"
+                          }
+                        ]
+                      },
+                      "quantity": {
+                        "value": "1",
+                        "unit": "item",
+                        "basis_ref": {
+                          "kind": "Evidence",
+                          "id": "v6-supplier-change-synthetic",
+                          "version": "1"
+                        }
+                      },
+                      "requirement_refs": [
+                        {
+                          "kind": "Requirement",
+                          "id": "v6-supply-product-requirement",
+                          "version": "1"
+                        }
+                      ],
+                      "deviation_refs": []
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "SupplyRemedyProfile",
+                    "id": "v6-supply-change-profile",
+                    "version": "1"
+                  },
+                  "value": {
+                    "scope": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-supplier-remedy-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-supplier-installed-scope",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-supplier-change-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "ref": {
+                      "kind": "SupplyRemedyProfile",
+                      "id": "v6-supply-change-profile",
+                      "version": "1"
+                    },
+                    "order_ref": {
+                      "kind": "Order",
+                      "id": "v6-supply-remedy-order",
+                      "version": "1"
+                    },
+                    "organization_id": "supplier",
+                    "actor_id": "supplier-actor",
+                    "function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-supplier-remedy-function",
+                      "version": "1"
+                    },
+                    "authority_ref": {
+                      "kind": "Authorization",
+                      "id": "v6-supplier-remedy-grant",
+                      "version": "1"
+                    },
+                    "procedure_ref": {
+                      "kind": "SupplyRemedyProcedure",
+                      "id": "v6-supply-change-procedure",
+                      "version": "1"
+                    },
+                    "choice": "propose_change",
+                    "business_key": "v6-specific-supply-change",
+                    "request_ref": null,
+                    "change_proposal_ref": {
+                      "kind": "SupplyChangeProposal",
+                      "id": "v6-specific-change-proposal",
+                      "version": "1"
+                    },
+                    "remedy_plan_ref": null,
+                    "affected_line_refs": [
+                      {
+                        "kind": "OrderLine",
+                        "id": "v6-affected-order-line",
+                        "version": "1"
+                      }
+                    ],
+                    "unaffected_line_refs": [
+                      {
+                        "kind": "OrderLine",
+                        "id": "v6-unaffected-order-line",
+                        "version": "1"
+                      }
+                    ],
+                    "source_defect_refs": [],
+                    "disposition_scope": null,
+                    "right_refs": [],
+                    "transaction_refs": [],
+                    "proposed_amount": {
+                      "state": "unknown",
+                      "reason_code": "synthetic_cost_change_unassessed",
+                      "missing_refs": []
+                    },
+                    "assessment_ref": null,
+                    "basis_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-supplier-change-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "note": "Synthetic proposal for one order line; original installed consumption and unaffected line are retained."
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "SupplyRemedyProcedure",
+                    "id": "v6-supply-change-procedure",
+                    "version": "1"
+                  },
+                  "value": {
+                    "scope": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-supplier-remedy-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-supplier-installed-scope",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-supplier-change-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "ref": {
+                      "kind": "SupplyRemedyProcedure",
+                      "id": "v6-supply-change-procedure",
+                      "version": "1"
+                    },
+                    "order_ref": {
+                      "kind": "Order",
+                      "id": "v6-supply-remedy-order",
+                      "version": "1"
+                    },
+                    "permitted_choices": [
+                      "propose_change"
+                    ],
+                    "permitted": {
+                      "state": "known",
+                      "value": true
+                    },
+                    "recipient_ids": [
+                      "owner"
+                    ],
+                    "response_deadline": null,
+                    "late_response_permitted": {
+                      "state": "known",
+                      "value": false
+                    },
+                    "author_actor_id": "owner-actor",
+                    "author_organization_id": "owner",
+                    "author_function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-remedy-buyer-function",
+                      "version": "1"
+                    },
+                    "author_authority_ref": {
+                      "kind": "Authorization",
+                      "id": "v6-remedy-buyer-grant",
+                      "version": "1"
+                    },
+                    "author_action_id": "OWN-A10",
+                    "authored_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "SupplyChangeProposal",
+                    "id": "v6-specific-change-proposal",
+                    "version": "1"
+                  },
+                  "value": {
+                    "scope": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-supplier-remedy-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-supplier-installed-scope",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-supplier-change-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "ref": {
+                      "kind": "SupplyChangeProposal",
+                      "id": "v6-specific-change-proposal",
+                      "version": "1"
+                    },
+                    "order_ref": {
+                      "kind": "Order",
+                      "id": "v6-supply-remedy-order",
+                      "version": "1"
+                    },
+                    "lines": [
+                      {
+                        "product_ref": {
+                          "kind": "ProductSpecification",
+                          "id": "v6-proposed-product",
+                          "version": "1"
+                        },
+                        "destination_scope_ref": {
+                          "kind": "assessment_case",
+                          "ref": {
+                            "kind": "OwnerCase",
+                            "id": "v6-supplier-remedy-case",
+                            "version": "1"
+                          },
+                          "coverage_refs": [
+                            {
+                              "kind": "WorkScope",
+                              "id": "v6-supplier-installed-scope",
+                              "version": "1"
+                            }
+                          ]
+                        },
+                        "quantity": {
+                          "value": "2",
+                          "unit": "item",
+                          "basis_ref": {
+                            "kind": "Evidence",
+                            "id": "v6-supplier-change-synthetic",
+                            "version": "1"
+                          }
+                        },
+                        "requirement_refs": [
+                          {
+                            "kind": "Requirement",
+                            "id": "v6-supply-product-requirement",
+                            "version": "1"
+                          }
+                        ],
+                        "deviation_refs": []
+                      }
+                    ],
+                    "line_order_refs": [
+                      {
+                        "kind": "OrderLine",
+                        "id": "v6-affected-order-line",
+                        "version": "1"
+                      }
+                    ],
+                    "description": "Propose the identified alternative specification for the affected two-item line; installed units remain in the original consumption record pending independent approval and disposition.",
+                    "status": "proposal",
+                    "author_actor_id": "supplier-actor",
+                    "author_organization_id": "supplier",
+                    "author_function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-supplier-remedy-function",
+                      "version": "1"
+                    },
+                    "author_authority_ref": {
+                      "kind": "Authorization",
+                      "id": "v6-supplier-remedy-grant",
+                      "version": "1"
+                    },
+                    "author_action_id": "SUPPLIER-A11",
+                    "authored_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "Requirement",
+                    "id": "v6-supply-product-requirement",
+                    "version": "1"
+                  },
+                  "value": {
+                    "scope": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-supplier-remedy-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-supplier-installed-scope",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-supplier-change-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "ref": {
+                      "kind": "Requirement",
+                      "id": "v6-supply-product-requirement",
+                      "version": "1"
+                    },
+                    "order_ref": {
+                      "kind": "Order",
+                      "id": "v6-supply-remedy-order",
+                      "version": "1"
+                    },
+                    "product_refs": [
+                      {
+                        "kind": "ProductSpecification",
+                        "id": "v6-original-product",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "ProductSpecification",
+                        "id": "v6-proposed-product",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "ProductBatch",
+                    "id": "v6-original-installed-batch",
+                    "version": "1"
+                  },
+                  "value": {
+                    "scope": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-supplier-remedy-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-supplier-installed-scope",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-supplier-change-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "ref": {
+                      "kind": "ProductBatch",
+                      "id": "v6-original-installed-batch",
+                      "version": "1"
+                    },
+                    "organization_id": "supplier",
+                    "owner_id": "owner",
+                    "product_ref": {
+                      "kind": "ProductSpecification",
+                      "id": "v6-original-product",
+                      "version": "1"
+                    },
+                    "physical_batch_key": "v6-installed-batch-physical-1",
+                    "actual_quantity": {
+                      "value": "2",
+                      "unit": "item",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "v6-supplier-change-synthetic",
+                        "version": "1"
+                      }
+                    },
+                    "state": "usable",
+                    "lineage_ledger_ref": {
+                      "kind": "BatchLineageLedger",
+                      "id": "v6-declared-synthetic-lineage",
+                      "version": "1"
+                    },
+                    "requirement_refs": [],
+                    "known_defect_refs": [],
+                    "core_event_id": "synthetic-v6-original-batch-event",
+                    "as_of": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "MaterialUse",
+                    "id": "v6-original-installed-use",
+                    "version": "1"
+                  },
+                  "value": {
+                    "scope": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-supplier-remedy-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-supplier-installed-scope",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-supplier-change-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "ref": {
+                      "kind": "MaterialUse",
+                      "id": "v6-original-installed-use",
+                      "version": "1"
+                    },
+                    "order_ref": {
+                      "kind": "Order",
+                      "id": "v6-supply-remedy-order",
+                      "version": "1"
+                    },
+                    "batch_ref": {
+                      "kind": "ProductBatch",
+                      "id": "v6-original-installed-batch",
+                      "version": "1"
+                    },
+                    "physical_batch_key": "v6-installed-batch-physical-1",
+                    "physical_use_key": "v6-installed-use-physical-1",
+                    "owner_id": "owner",
+                    "site_operator_id": "contractor",
+                    "quantity": {
+                      "value": "2",
+                      "unit": "item",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "v6-supplier-change-synthetic",
+                        "version": "1"
+                      }
+                    },
+                    "location_ref": {
+                      "kind": "Location",
+                      "id": "v6-declared-installation-location",
+                      "version": "1"
+                    },
+                    "status": "installed",
+                    "removal_record_refs": [],
+                    "core_event_id": "synthetic-v6-original-installed-event"
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "Evidence",
+                    "id": "v6-supplier-change-synthetic",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "Evidence",
+                      "id": "v6-supplier-change-synthetic",
+                      "version": "1"
+                    },
+                    "source_kind": "synthetic",
+                    "basis_kind": "observed",
+                    "locator": "synthetic:v6-supplier-change",
+                    "content_hash": "ca42b9267b22c1ba54528d4ffc9b768a05c56d0366812c1a3c9843b64bc88429",
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "FunctionAssignment",
+                    "id": "v6-supplier-remedy-function",
+                    "version": "1"
+                  },
+                  "value": {
+                    "role": "Supplier",
+                    "function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-supplier-remedy-function",
+                      "version": "1"
+                    },
+                    "configuration_version": "1",
+                    "basis_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-supplier-change-synthetic",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "FunctionAssignment",
+                    "id": "v6-remedy-buyer-function",
+                    "version": "1"
+                  },
+                  "value": {
+                    "role": "Owner",
+                    "function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-remedy-buyer-function",
+                      "version": "1"
+                    },
+                    "configuration_version": "1",
+                    "basis_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-supplier-change-synthetic",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "OwnerCase",
+                    "id": "v6-supplier-remedy-case",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "OwnerCase",
+                      "id": "v6-supplier-remedy-case",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-supplier-change-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "organization_id": "supplier"
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "WorkScope",
+                    "id": "v6-supplier-installed-scope",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "WorkScope",
+                      "id": "v6-supplier-installed-scope",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-supplier-change-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "parent_ref": {
+                      "kind": "OwnerCase",
+                      "id": "v6-supplier-remedy-case",
+                      "version": "1"
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "ClockProfile",
+                      "id": "business",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-supplier-change-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "tick_unit": "day"
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "CandidateSet",
+                    "id": "v6-supplier-change-candidates",
+                    "version": "1"
+                  },
+                  "value": {
+                    "operation_id": "v6-supplier-change-30",
+                    "scope": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-supplier-remedy-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-supplier-installed-scope",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "as_of": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "candidates": [
+                      {
+                        "ref": {
+                          "kind": "Order",
+                          "id": "v6-supply-remedy-order",
+                          "version": "1"
+                        },
+                        "permitted_choices": [
+                          "propose_change"
+                        ]
+                      }
+                    ],
+                    "search_profile_ref": {
+                      "kind": "Profile",
+                      "id": "v6-supplier-remedy-search",
+                      "version": "1"
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "Authorization",
+                    "id": "v6-supplier-remedy-grant",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "Authorization",
+                      "id": "v6-supplier-remedy-grant",
+                      "version": "1"
+                    },
+                    "organization_id": "supplier",
+                    "actor_id": "supplier-actor",
+                    "function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-supplier-remedy-function",
+                      "version": "1"
+                    },
+                    "action_ids": [
+                      "SUPPLIER-A11"
+                    ],
+                    "scopes": [
+                      {
+                        "kind": "assessment_case",
+                        "ref": {
+                          "kind": "OwnerCase",
+                          "id": "v6-supplier-remedy-case",
+                          "version": "1"
+                        },
+                        "coverage_refs": [
+                          {
+                            "kind": "WorkScope",
+                            "id": "v6-supplier-installed-scope",
+                            "version": "1"
+                          }
+                        ]
+                      }
+                    ],
+                    "readable_refs": [
+                      {
+                        "kind": "Order",
+                        "id": "v6-supply-remedy-order",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "OrderLine",
+                        "id": "v6-affected-order-line",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "OrderLine",
+                        "id": "v6-unaffected-order-line",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "SupplyRemedyProfile",
+                        "id": "v6-supply-change-profile",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "SupplyRemedyProcedure",
+                        "id": "v6-supply-change-procedure",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "SupplyChangeProposal",
+                        "id": "v6-specific-change-proposal",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Requirement",
+                        "id": "v6-supply-product-requirement",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "ProductBatch",
+                        "id": "v6-original-installed-batch",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "MaterialUse",
+                        "id": "v6-original-installed-use",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-supplier-change-synthetic",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "FunctionAssignment",
+                        "id": "v6-supplier-remedy-function",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "FunctionAssignment",
+                        "id": "v6-remedy-buyer-function",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "OwnerCase",
+                        "id": "v6-supplier-remedy-case",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "WorkScope",
+                        "id": "v6-supplier-installed-scope",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "CandidateSet",
+                        "id": "v6-supplier-change-candidates",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Authorization",
+                        "id": "v6-supplier-remedy-grant",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Authorization",
+                        "id": "v6-remedy-buyer-grant",
+                        "version": "1"
+                      }
+                    ],
+                    "tool_ids": [],
+                    "validity": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "basis_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-supplier-change-synthetic",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "Authorization",
+                    "id": "v6-remedy-buyer-grant",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "Authorization",
+                      "id": "v6-remedy-buyer-grant",
+                      "version": "1"
+                    },
+                    "organization_id": "owner",
+                    "actor_id": "owner-actor",
+                    "function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-remedy-buyer-function",
+                      "version": "1"
+                    },
+                    "action_ids": [
+                      "OWN-A10"
+                    ],
+                    "scopes": [
+                      {
+                        "kind": "assessment_case",
+                        "ref": {
+                          "kind": "OwnerCase",
+                          "id": "v6-supplier-remedy-case",
+                          "version": "1"
+                        },
+                        "coverage_refs": [
+                          {
+                            "kind": "WorkScope",
+                            "id": "v6-supplier-installed-scope",
+                            "version": "1"
+                          }
+                        ]
+                      }
+                    ],
+                    "readable_refs": [
+                      {
+                        "kind": "Order",
+                        "id": "v6-supply-remedy-order",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "SupplyRemedyProcedure",
+                        "id": "v6-supply-change-procedure",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Requirement",
+                        "id": "v6-supply-product-requirement",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-supplier-change-synthetic",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "FunctionAssignment",
+                        "id": "v6-remedy-buyer-function",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Authorization",
+                        "id": "v6-remedy-buyer-grant",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "OwnerCase",
+                        "id": "v6-supplier-remedy-case",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "WorkScope",
+                        "id": "v6-supplier-installed-scope",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      }
+                    ],
+                    "tool_ids": [],
+                    "validity": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "basis_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-supplier-change-synthetic",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  ],
+  "remaining_requirements": [
+    "Execute the original host and verify the exact concrete proposal and original retained installed-use/unaffected-line sources without native disposition or transport.",
+    "SUPPLIER-A11 repair/replace/propose_refund/claim/decline_request and normal/boundary/recovery CHECK inputs.",
+    "Same-run V6 aftercare and independent reception, native rights/lineage/consumption/payment observations and complete PLAN verification."
+  ],
+  "limitations": "One isolated synthetic supply change proposal; no processor run, formal order amendment, professional equivalence, remedy execution or connected V6 chain proven."
+}

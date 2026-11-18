@@ -1,0 +1,15 @@
+# Preserve byte-exact inputs, responses and protected-source hashes on checkout.
+* -text
+"vendor/gba/data/processed/agent_database.sqlite.gz" filter=lfs diff=lfs merge=lfs -text
+"Capstone报告/验证体系/实验/2026-11-13_CP08全量微观扩样/continuation-001/run/first_results_all_slots.json" filter=lfs diff=lfs merge=lfs -text
+"Capstone报告/验证体系/实验/2026-11-13_CP08全量微观扩样/continuation-001/run/llm_calls.jsonl" filter=lfs diff=lfs merge=lfs -text
+"output/integration/linked_case0014_20261102/input/assembly-host.json" filter=lfs diff=lfs merge=lfs -text
+"output/integration/linked_case0014_20261102/input/bound-declarations/42-32-lifecycle-input.json" filter=lfs diff=lfs merge=lfs -text
+"output/integration/linked_case0014_20261102/input/case-declarations/42-32-lifecycle-input.json" filter=lfs diff=lfs merge=lfs -text
+"output/integration/linked_case0014_20261102/input/origin-foundation/assembly-host.json" filter=lfs diff=lfs merge=lfs -text
+"output/integration/linked_case0014_20261102/input/origin-foundation/integration-sources/bound-declarations/32-lifecycle-input.json" filter=lfs diff=lfs merge=lfs -text
+"output/integration/linked_case0014_20261102/input/origin-foundation/integration-sources/declarations/32-lifecycle-input.json" filter=lfs diff=lfs merge=lfs -text
+"output/integration/linked_case0014_20261102/input/origin-foundation/integration-sources/tender-seed/assembly-host.json" filter=lfs diff=lfs merge=lfs -text
+"output/integration/linked_case0014_20261102/input/origin-foundation/integration-sources/tender-seed/lifecycle-input.json" filter=lfs diff=lfs merge=lfs -text
+"reports/template/HKU.pptx" filter=lfs diff=lfs merge=lfs -text
+"results/experiments/*/full_run.zip" filter=lfs diff=lfs merge=lfs -text

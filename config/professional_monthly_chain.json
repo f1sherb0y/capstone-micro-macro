@@ -1,0 +1,12 @@
+{
+  "schema_version": "professional-monthly-chain.v1",
+  "run_id": "goal3c-monthly",
+  "ticks": 2,
+  "minimum_market_demand": "1",
+  "maximum_prior_outreach": 1,
+  "scenarios": {
+    "high": {"market_demand_index": 1.2},
+    "low": {"market_demand_index": 0.6}
+  },
+  "boundary": "Only original macro initial environment differs. Independent synthetic monthly dossiers, access, strategy and author grants are declared before execution; no prior outreach, decisions or results are prefilled."
+}

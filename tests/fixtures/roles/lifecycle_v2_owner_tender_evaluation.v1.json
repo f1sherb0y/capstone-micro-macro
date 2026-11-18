@@ -1,0 +1,33 @@
+{
+  "schema_version": "lifecycle-input-case.v1",
+  "scenario_id": "V2",
+  "case_id": "v2-owner-tender-evaluation",
+  "origin": "synthetic",
+  "run_id": "synthetic-v2-procurement-publication-01",
+  "status": "input_prepared_execution_pending",
+  "steps": [
+    {
+      "action_id": "OWN-A09",
+      "operation_id": "v2-owner-tender-evaluation-01",
+      "expected_kind": "completed",
+      "expected_choice": "evaluate",
+      "host_factory": "integration.owner_role_contract_host:build_role_host",
+      "invocation_path": "integration/examples/role_contract_owner_tender_evaluation_invocation.json",
+      "invocation_file_sha256": "5c2329f5937b10f459caf46d0d9d65d6716eafd53e9e399f892d0816e61e29ac",
+      "configuration_path": "integration/examples/role_contract_owner_tender_evaluation_host.json",
+      "configuration_file_sha256": "88dbff45aac4923a80267012a3a594feee495a54abd8bc3f5933600fe0298469",
+      "origin_path": "integration/examples/role_contract_owner_tender_evaluation_origin.json"
+    }
+  ],
+  "remaining_requirements": [
+    "Actual original Contractor result/authorized source witness and independent native bid reception binding.",
+    "Evaluation entry execution and original ranking method verification.",
+    "Same-run independent award selection and Contractor formation plus remaining PLAN."
+  ],
+  "limitations": [
+    "Independent assumed native package/round/bid and compliance/price input, not actual publication or received Contractor bid.",
+    "received_contractor_bid_inputs is not configured; source factory and configuration entry for actual reception already exist but require original journal and independent registration.",
+    "Ranking processor/method and input schemas have not run; expected ranked refs are metadata only.",
+    "No independent award choice, consent, contract, resource effect or complete V2/PLAN acceptance."
+  ]
+}

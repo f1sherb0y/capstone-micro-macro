@@ -1,0 +1,15 @@
+# OWN-A07 需求、方案取舍、服务接收与拟用途
+
+读取当前己方OwnerBrief、独立Authorization及原OwnerDesignProfile，只沿原版本和明确部分范围作业主选择。confirm_need不要求已有专业提交；choose_option需原已收比较和候选；accept_service/authorize_use各需原提交与己方权限。业务取舍不替代专业核验、法定许可、正式发布或合同变更。
+
+confirm_need确认原需求，不产生技术检查结论。choose_option沿同版可比资料和专业/业主独立作者核对，收到的成本与能力信息保留原来源；交期超有依据能力须原冲突Issue和显式己方取舍，不能改供应承诺或由成本预测单方调合同价。技术计算失败保持technical_error，不包装成商业放弃。
+
+request_revision逐原变更Requirement核对明确范围、全部受影响/可复用Dependency及专业作者。未变范围复用须原证据，原成果与费用不删除，缺依赖完整性保持信息缺口，不全量重做或无依据免除费用。只提出修订，不替编制方生成新技术成果。
+
+accept_service按原有效ServiceTerms核对要求成果、同版提交、独立接收条件与未决问题；可接收服务，不据此批准采购/施工。authorize_use提交原RequestedUse草稿，核对精确成果版本、成熟度/允许用途、原独立UseRule的全部必要条件、专业及适用法定结论和阻塞Issue；缺授权/条件不放行。分区范围与整体功能各自核对，不凭一次总确认替其他决定。
+
+choose_option 的 option_ref 必须是当前 CandidateSet 中明确允许 choose_option 的同版 ProjectOption；比较中可见不等于可选，空候选不产生方案选择，不自动增加候选或改选。
+
+结果中的scope保留原范围、证据与条件。RequestedUse是拟授权用途，只有核心再次核验和正式发布后才有用途放行；本处理器不写已获许可、不修改设计、不创建专业通过或法定批准，不付款或改合同价。
+
+CHECK-OWN-008/015/031/035待集中验证。实际专业/监管/用途/依赖生产者、跨动作投影兼容、正式submit/query、发布/任务后果及回执反馈仍待集成。

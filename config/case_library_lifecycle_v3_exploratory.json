@@ -1,0 +1,30 @@
+{
+  "schema_version": "case-library-lifecycle.v3",
+  "entry_kind": "case_library_initial_project",
+  "case_id": "CASE-0005",
+  "run_id": "case-library-v3-exploratory-20261101",
+  "base_config": "config/origin_model_lifecycle_case.json",
+  "mode": "model",
+  "ticks": 48,
+  "tender_open_tick": 12,
+  "contract_duration": 24,
+  "scenario_budget": 150000000,
+  "scenario_currency": "HKD",
+  "technical_complexity": 0.6,
+  "random_seed": 42,
+  "candidate_policy": {
+    "version": "public-project-fit.v3",
+    "contractor_count": 12
+  },
+  "active_contractor_count": 12,
+  "model_options": {
+    "strategy": "single_agent",
+    "provider": "deepseek",
+    "model": "deepseek-v4-flash",
+    "alternate_markup_fraction": "0.2",
+    "max_calls": 14,
+    "max_prompt_chars": 300000
+  },
+  "api_total_attempt_cap": 14,
+  "scope": "Exploratory normalized corpus-text retrieval; twelve active contractors. BM25 and synonym proxies do not establish real ability or historical tender rules. Validation deterioration is disclosed; not a confirmed improvement."
+}

@@ -1,0 +1,137 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "V6 original Owner closeout feedback to current continuation input",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "scenario_id",
+    "run_id",
+    "owner_organization_id",
+    "source_mode",
+    "closeout_feedback",
+    "request",
+    "configuration"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "lifecycle-v6-owner-continuation-input.v1"
+    },
+    "scenario_id": {
+      "const": "V6"
+    },
+    "run_id": {
+      "$ref": "#/$defs/text"
+    },
+    "owner_organization_id": {
+      "$ref": "#/$defs/text"
+    },
+    "source_mode": {
+      "const": "formal"
+    },
+    "closeout_feedback": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "record_path",
+        "record_file_sha256",
+        "feedback_record_sha256",
+        "basis_ref"
+      ],
+      "properties": {
+        "record_path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S",
+          "description": "Original persisted OwnerCloseoutSubmissionFeedback record exported without changes, absolute or relative to this input file."
+        },
+        "record_file_sha256": {
+          "$ref": "#/$defs/digest"
+        },
+        "feedback_record_sha256": {
+          "$ref": "#/$defs/digest"
+        },
+        "basis_ref": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "kind",
+            "id",
+            "version"
+          ],
+          "properties": {
+            "kind": {
+              "const": "CloseoutContinuationBasis"
+            },
+            "id": {
+              "$ref": "#/$defs/text"
+            },
+            "version": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/text"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "request": {
+      "type": "object",
+      "description": "Explicit current formal Owner A13 RoleContractInvocation, using a distinct operation/task/read token. Plan mode does not invoke a model."
+    },
+    "configuration": {
+      "type": "object",
+      "description": "Owner RoleContractHostConfiguration with closeout_continuation_inputs selecting this feedback_record_sha256 and basis_ref for the current operation. Source factory independently supplies authorized original feedback and complete current typed mapping with authentic disposition evidence."
+    },
+    "sources": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "owner_input",
+        "native_basis"
+      ],
+      "description": "Optional retained original files emitted by three-file assembly. Execution must consume the exact native mapping payload digest.",
+      "properties": {
+        "owner_input": {
+          "$ref": "#/$defs/sourceFile"
+        },
+        "native_basis": {
+          "$ref": "#/$defs/sourceFile",
+          "description": "Original owner-closeout-continuation-native-basis.v1 payload, including actual basis/state, all residual targets and separate disposition evidence."
+        }
+      }
+    }
+  },
+  "$defs": {
+    "text": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "sourceFile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "file_sha256"
+      ],
+      "properties": {
+        "path": {
+          "$ref": "#/$defs/text"
+        },
+        "file_sha256": {
+          "$ref": "#/$defs/digest"
+        }
+      }
+    }
+  }
+}

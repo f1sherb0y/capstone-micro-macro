@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Original accepted Bank intake and native review task for formal credit input",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "scenario_id",
+    "run_id",
+    "bank_organization_id",
+    "request",
+    "configuration",
+    "sources"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "lifecycle-v5-bank-intake-credit-input.v1"
+    },
+    "scenario_id": {
+      "const": "V5"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "request": {
+      "type": "object",
+      "description": "Formal current Bank A03 credit invocation selecting original application and product."
+    },
+    "configuration": {
+      "type": "object",
+      "description": "BankRoleContractSettings with intake_inputs selecting original same-Bank A02 TaskIdentity and BankIntakeHandoffBasis reference; actual same-store intake worker and independent history/handoff validators required."
+    },
+    "sources": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "intake_result",
+        "bank_input",
+        "intake_basis",
+        "native_intake"
+      ],
+      "properties": {
+        "intake_result": {
+          "$ref": "#/$defs/sourceFile"
+        },
+        "bank_input": {
+          "$ref": "#/$defs/sourceFile"
+        },
+        "intake_basis": {
+          "$ref": "#/$defs/sourceFile"
+        },
+        "native_intake": {
+          "$ref": "#/$defs/sourceFile"
+        }
+      }
+    },
+    "bank_organization_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    }
+  },
+  "$defs": {
+    "sourceFile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "file_sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "file_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    }
+  }
+}

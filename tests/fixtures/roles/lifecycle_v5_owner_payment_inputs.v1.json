@@ -1,0 +1,1224 @@
+{
+  "schema_version": "lifecycle-v5-owner-payment-input-case.v1",
+  "scenario_id": "V5",
+  "origin": "synthetic",
+  "run_id": "synthetic-v5-financing-application",
+  "source_declaration": {
+    "owner_reconcile_case_path": "tests/fixtures/roles/lifecycle_v5_owner_reconcile_inputs.v1.json",
+    "owner_reconcile_case_sha256": "1bf05376b5be1f3b04c9e39b9fa43d2aba3bd98da411c8d10f7a85047e9b2f71",
+    "assumptions": {
+      "schema_version": "v5-owner-certified-payment-assumptions.v1",
+      "input": {
+        "scope_ref": {
+          "kind": "assessment_case",
+          "ref": {
+            "kind": "OwnerCase",
+            "id": "case",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "funded-work",
+              "version": "1"
+            }
+          ]
+        },
+        "account_refs": [
+          {
+            "kind": "Account",
+            "id": "v5-owner-actual-payment-cash",
+            "version": "1"
+          }
+        ],
+        "arrangement_refs": [],
+        "due_refs": [
+          {
+            "kind": "Obligation",
+            "id": "v5-certified-works",
+            "version": "1"
+          }
+        ],
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "v5-owner-payment-assumptions",
+            "version": "1"
+          }
+        ],
+        "pending_execution_refs": []
+      },
+      "payment_authorization": {
+        "scope": {
+          "kind": "assessment_case",
+          "ref": {
+            "kind": "OwnerCase",
+            "id": "case",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "funded-work",
+              "version": "1"
+            }
+          ]
+        },
+        "available_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 25
+        },
+        "effective_window": {
+          "start": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 25
+          },
+          "end": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 30
+          },
+          "bounds": "closed_open"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "v5-owner-payment-assumptions",
+            "version": "1"
+          }
+        ],
+        "ref": {
+          "kind": "PaymentAuthorization",
+          "id": "v5-owner-certified-payment",
+          "version": "1"
+        },
+        "organization_id": "owner",
+        "actor_id": "owner-actor",
+        "function_ref": {
+          "kind": "FunctionAssignment",
+          "id": "owner-function",
+          "version": "1"
+        },
+        "authority_ref": {
+          "kind": "Authorization",
+          "id": "v5-owner-payment-grant",
+          "version": "1"
+        },
+        "choice": "pay",
+        "account_ref": {
+          "kind": "Account",
+          "id": "v5-owner-actual-payment-cash",
+          "version": "1"
+        },
+        "lines": [
+          {
+            "obligation_ref": {
+              "kind": "Obligation",
+              "id": "v5-certified-works",
+              "version": "1"
+            },
+            "payee_id": "contractor",
+            "amount": {
+              "value": "80",
+              "currency": "HKD",
+              "basis_ref": {
+                "kind": "Evidence",
+                "id": "v5-owner-payment-assumptions",
+                "version": "1"
+              }
+            },
+            "component_amounts": [
+              {
+                "component_ref": {
+                  "kind": "SettlementComponent",
+                  "id": "v5-certified-works-cash",
+                  "version": "1"
+                },
+                "amount": {
+                  "value": "80",
+                  "currency": "HKD",
+                  "basis_ref": {
+                    "kind": "Evidence",
+                    "id": "v5-owner-payment-assumptions",
+                    "version": "1"
+                  }
+                }
+              }
+            ],
+            "priority": 1
+          }
+        ],
+        "allow_partial": true,
+        "draw_authorization_ref": null,
+        "obligation_refs": [
+          {
+            "kind": "Obligation",
+            "id": "v5-certified-works",
+            "version": "1"
+          }
+        ],
+        "execution_refs": [],
+        "note": "Explicit pay up to80 HKD for independently certified works; partial permitted only within original actual free cash."
+      },
+      "certificate_receipt_ref": {
+        "kind": "PaymentCertificateReceipt",
+        "id": "v5-certified-works",
+        "version": "1"
+      }
+    },
+    "certificate_receipt_refs": [
+      {
+        "kind": "PaymentCertificateReceipt",
+        "id": "v5-certified-works",
+        "version": "1"
+      }
+    ],
+    "payment_authorization": {
+      "scope": {
+        "kind": "assessment_case",
+        "ref": {
+          "kind": "OwnerCase",
+          "id": "case",
+          "version": "1"
+        },
+        "coverage_refs": [
+          {
+            "kind": "WorkScope",
+            "id": "funded-work",
+            "version": "1"
+          }
+        ]
+      },
+      "available_at": {
+        "clock_ref": {
+          "kind": "ClockProfile",
+          "id": "business",
+          "version": "1"
+        },
+        "offset": 25
+      },
+      "effective_window": {
+        "start": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 25
+        },
+        "end": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 30
+        },
+        "bounds": "closed_open"
+      },
+      "evidence_refs": [
+        {
+          "kind": "Evidence",
+          "id": "v5-owner-payment-assumptions",
+          "version": "1"
+        }
+      ],
+      "ref": {
+        "kind": "PaymentAuthorization",
+        "id": "v5-owner-certified-payment",
+        "version": "1"
+      },
+      "organization_id": "owner",
+      "actor_id": "owner-actor",
+      "function_ref": {
+        "kind": "FunctionAssignment",
+        "id": "owner-function",
+        "version": "1"
+      },
+      "authority_ref": {
+        "kind": "Authorization",
+        "id": "v5-owner-payment-grant",
+        "version": "1"
+      },
+      "choice": "pay",
+      "account_ref": {
+        "kind": "Account",
+        "id": "v5-owner-actual-payment-cash",
+        "version": "1"
+      },
+      "lines": [
+        {
+          "obligation_ref": {
+            "kind": "Obligation",
+            "id": "v5-certified-works",
+            "version": "1"
+          },
+          "payee_id": "contractor",
+          "amount": {
+            "value": "80",
+            "currency": "HKD",
+            "basis_ref": {
+              "kind": "Evidence",
+              "id": "v5-owner-payment-assumptions",
+              "version": "1"
+            }
+          },
+          "component_amounts": [
+            {
+              "component_ref": {
+                "kind": "SettlementComponent",
+                "id": "v5-certified-works-cash",
+                "version": "1"
+              },
+              "amount": {
+                "value": "80",
+                "currency": "HKD",
+                "basis_ref": {
+                  "kind": "Evidence",
+                  "id": "v5-owner-payment-assumptions",
+                  "version": "1"
+                }
+              }
+            }
+          ],
+          "priority": 1
+        }
+      ],
+      "allow_partial": true,
+      "draw_authorization_ref": null,
+      "obligation_refs": [
+        {
+          "kind": "Obligation",
+          "id": "v5-certified-works",
+          "version": "1"
+        }
+      ],
+      "execution_refs": [],
+      "note": "Explicit pay up to80 HKD for independently certified works; partial permitted only within original actual free cash."
+    },
+    "required_actual_snapshot": {
+      "actual_cash": "100",
+      "restricted_cash": "10",
+      "reserved_cash": "20",
+      "actual_due": "100",
+      "actual_paid": "10",
+      "actual_offset": "10",
+      "currency": "HKD"
+    },
+    "owner_policy_version": "role-contract-owner-fixture.v1"
+  },
+  "steps": [
+    {
+      "step_id": "v5-owner-certified-payment",
+      "action_id": "OWN-A06",
+      "operation_id": "v5-owner-certified-payment-25",
+      "expected_kind": "completed",
+      "allowed_choices": [
+        "draw_request",
+        "pay",
+        "repay",
+        "dispute",
+        "negotiate",
+        "reconcile"
+      ],
+      "input_fixture": {
+        "source_kind": "synthetic",
+        "organization_id": "owner",
+        "actor_id": "owner-actor",
+        "business_time": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 25
+        },
+        "input": {
+          "scope_ref": {
+            "kind": "assessment_case",
+            "ref": {
+              "kind": "OwnerCase",
+              "id": "case",
+              "version": "1"
+            },
+            "coverage_refs": [
+              {
+                "kind": "WorkScope",
+                "id": "funded-work",
+                "version": "1"
+              }
+            ]
+          },
+          "account_refs": [
+            {
+              "kind": "Account",
+              "id": "v5-owner-actual-payment-cash",
+              "version": "1"
+            }
+          ],
+          "arrangement_refs": [],
+          "due_refs": [
+            {
+              "kind": "Obligation",
+              "id": "v5-certified-works",
+              "version": "1"
+            }
+          ],
+          "evidence_refs": [
+            {
+              "kind": "Evidence",
+              "id": "v5-owner-payment-assumptions",
+              "version": "1"
+            }
+          ],
+          "pending_execution_refs": []
+        },
+        "objects": [
+          {
+            "ref": {
+              "kind": "FunctionAssignment",
+              "id": "owner-function",
+              "version": "1"
+            },
+            "value": {
+              "role": "Owner",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "owner-function",
+                "version": "1"
+              },
+              "configuration_version": "1",
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "synthetic",
+                  "version": "1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "WorkScope",
+              "id": "funded-work",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "WorkScope",
+                "id": "funded-work",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "synthetic",
+                  "version": "1"
+                }
+              ],
+              "parent_ref": {
+                "kind": "OwnerCase",
+                "id": "case",
+                "version": "1"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "Evidence",
+              "id": "synthetic",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Evidence",
+                "id": "synthetic",
+                "version": "1"
+              },
+              "source_kind": "synthetic",
+              "basis_kind": "assumed",
+              "locator": "tests/fixtures/roles/lifecycle_v5_application_inputs.v1.json#source_declaration",
+              "content_hash": "e684fb52330350cba5ce837b656493c6ac2d44200fa08a329c2a8c663e1b2741",
+              "effective_window": null
+            }
+          },
+          {
+            "ref": {
+              "kind": "OwnerCase",
+              "id": "case",
+              "version": "1"
+            },
+            "value": {
+              "scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "funded-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 25
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 25
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v5-owner-payment-assumptions",
+                  "version": "1"
+                }
+              ],
+              "ref": {
+                "kind": "OwnerCase",
+                "id": "case",
+                "version": "1"
+              },
+              "organization_id": "owner",
+              "payment_authorization_ref": {
+                "kind": "PaymentAuthorization",
+                "id": "v5-owner-certified-payment",
+                "version": "1"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "PaymentAuthorization",
+              "id": "v5-owner-certified-payment",
+              "version": "1"
+            },
+            "value": {
+              "scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "funded-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 25
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 25
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v5-owner-payment-assumptions",
+                  "version": "1"
+                }
+              ],
+              "ref": {
+                "kind": "PaymentAuthorization",
+                "id": "v5-owner-certified-payment",
+                "version": "1"
+              },
+              "organization_id": "owner",
+              "actor_id": "owner-actor",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "owner-function",
+                "version": "1"
+              },
+              "authority_ref": {
+                "kind": "Authorization",
+                "id": "v5-owner-payment-grant",
+                "version": "1"
+              },
+              "choice": "pay",
+              "account_ref": {
+                "kind": "Account",
+                "id": "v5-owner-actual-payment-cash",
+                "version": "1"
+              },
+              "lines": [
+                {
+                  "obligation_ref": {
+                    "kind": "Obligation",
+                    "id": "v5-certified-works",
+                    "version": "1"
+                  },
+                  "payee_id": "contractor",
+                  "amount": {
+                    "value": "80",
+                    "currency": "HKD",
+                    "basis_ref": {
+                      "kind": "Evidence",
+                      "id": "v5-owner-payment-assumptions",
+                      "version": "1"
+                    }
+                  },
+                  "component_amounts": [
+                    {
+                      "component_ref": {
+                        "kind": "SettlementComponent",
+                        "id": "v5-certified-works-cash",
+                        "version": "1"
+                      },
+                      "amount": {
+                        "value": "80",
+                        "currency": "HKD",
+                        "basis_ref": {
+                          "kind": "Evidence",
+                          "id": "v5-owner-payment-assumptions",
+                          "version": "1"
+                        }
+                      }
+                    }
+                  ],
+                  "priority": 1
+                }
+              ],
+              "allow_partial": true,
+              "draw_authorization_ref": null,
+              "obligation_refs": [
+                {
+                  "kind": "Obligation",
+                  "id": "v5-certified-works",
+                  "version": "1"
+                }
+              ],
+              "execution_refs": [],
+              "note": "Explicit pay up to80 HKD for independently certified works; partial permitted only within original actual free cash."
+            }
+          },
+          {
+            "ref": {
+              "kind": "CandidateSet",
+              "id": "v5-owner-payment-candidates",
+              "version": "1"
+            },
+            "value": {
+              "operation_id": "v5-owner-certified-payment-25",
+              "scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "funded-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "as_of": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 25
+              },
+              "candidates": [
+                {
+                  "ref": {
+                    "kind": "Obligation",
+                    "id": "v5-certified-works",
+                    "version": "1"
+                  },
+                  "permitted_choices": [
+                    "pay"
+                  ]
+                }
+              ],
+              "search_profile_ref": {
+                "kind": "Profile",
+                "id": "v5-explicit-owner-payment-search",
+                "version": "1"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "Evidence",
+              "id": "v5-owner-payment-assumptions",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Evidence",
+                "id": "v5-owner-payment-assumptions",
+                "version": "1"
+              },
+              "source_kind": "synthetic",
+              "basis_kind": "assumed",
+              "locator": "Explicit Owner25 partial works payment instruction; actual certificates/financial snapshots independently supplied",
+              "content_hash": "195f95282a6b29736b971e47ac21f68a1b8dbe2f568e7f587079693a266a759d",
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 25
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "Authorization",
+              "id": "v5-owner-payment-grant",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Authorization",
+                "id": "v5-owner-payment-grant",
+                "version": "1"
+              },
+              "organization_id": "owner",
+              "actor_id": "owner-actor",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "owner-function",
+                "version": "1"
+              },
+              "action_ids": [
+                "OWN-A06"
+              ],
+              "scopes": [
+                {
+                  "kind": "assessment_case",
+                  "ref": {
+                    "kind": "OwnerCase",
+                    "id": "case",
+                    "version": "1"
+                  },
+                  "coverage_refs": [
+                    {
+                      "kind": "WorkScope",
+                      "id": "funded-work",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "readable_refs": [
+                {
+                  "kind": "FunctionAssignment",
+                  "id": "owner-function",
+                  "version": "1"
+                },
+                {
+                  "kind": "WorkScope",
+                  "id": "funded-work",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "synthetic",
+                  "version": "1"
+                },
+                {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                {
+                  "kind": "PaymentAuthorization",
+                  "id": "v5-owner-certified-payment",
+                  "version": "1"
+                },
+                {
+                  "kind": "CandidateSet",
+                  "id": "v5-owner-payment-candidates",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "v5-owner-payment-assumptions",
+                  "version": "1"
+                },
+                {
+                  "kind": "Authorization",
+                  "id": "v5-owner-payment-grant",
+                  "version": "1"
+                },
+                {
+                  "kind": "Account",
+                  "id": "v5-owner-actual-payment-cash",
+                  "version": "1"
+                },
+                {
+                  "kind": "Obligation",
+                  "id": "v5-certified-works",
+                  "version": "1"
+                },
+                {
+                  "kind": "SettlementComponent",
+                  "id": "v5-certified-works-cash",
+                  "version": "1"
+                },
+                {
+                  "kind": "PaymentCertificateReceipt",
+                  "id": "v5-certified-works",
+                  "version": "1"
+                }
+              ],
+              "tool_ids": [],
+              "validity": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 25
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              },
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v5-owner-payment-assumptions",
+                  "version": "1"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "offline_binding": {
+        "invocation": {
+          "context": {
+            "run_id": "synthetic-v5-financing-application",
+            "actor_id": "owner-actor",
+            "function_ref": {
+              "kind": "FunctionAssignment",
+              "id": "owner-function",
+              "version": "1"
+            },
+            "authorization_refs": [
+              {
+                "kind": "Authorization",
+                "id": "v5-owner-payment-grant",
+                "version": "1"
+              }
+            ],
+            "operation_id": "v5-owner-certified-payment-25",
+            "contract_ref": {
+              "kind": "ActionContract",
+              "id": "OWN-A06",
+              "version": "1"
+            },
+            "task_ref": {
+              "kind": "DecisionTask",
+              "id": "v5-owner-payment-task",
+              "version": "1"
+            },
+            "scope": {
+              "kind": "assessment_case",
+              "ref": {
+                "kind": "OwnerCase",
+                "id": "case",
+                "version": "1"
+              },
+              "coverage_refs": [
+                {
+                  "kind": "WorkScope",
+                  "id": "funded-work",
+                  "version": "1"
+                }
+              ]
+            },
+            "business_time": {
+              "clock_ref": {
+                "kind": "ClockProfile",
+                "id": "business",
+                "version": "1"
+              },
+              "offset": 25
+            },
+            "read_token": "synthetic-v5-financing-application:v5-owner-certified-payment-25:read:1",
+            "visible_refs": [
+              {
+                "kind": "FunctionAssignment",
+                "id": "owner-function",
+                "version": "1"
+              },
+              {
+                "kind": "WorkScope",
+                "id": "funded-work",
+                "version": "1"
+              },
+              {
+                "kind": "Evidence",
+                "id": "synthetic",
+                "version": "1"
+              },
+              {
+                "kind": "OwnerCase",
+                "id": "case",
+                "version": "1"
+              },
+              {
+                "kind": "PaymentAuthorization",
+                "id": "v5-owner-certified-payment",
+                "version": "1"
+              },
+              {
+                "kind": "CandidateSet",
+                "id": "v5-owner-payment-candidates",
+                "version": "1"
+              },
+              {
+                "kind": "Evidence",
+                "id": "v5-owner-payment-assumptions",
+                "version": "1"
+              },
+              {
+                "kind": "Authorization",
+                "id": "v5-owner-payment-grant",
+                "version": "1"
+              }
+            ],
+            "candidate_set_ref": {
+              "kind": "CandidateSet",
+              "id": "v5-owner-payment-candidates",
+              "version": "1"
+            },
+            "execution_mode": "offline_fixture"
+          },
+          "action_input": {
+            "scope_ref": {
+              "kind": "assessment_case",
+              "ref": {
+                "kind": "OwnerCase",
+                "id": "case",
+                "version": "1"
+              },
+              "coverage_refs": [
+                {
+                  "kind": "WorkScope",
+                  "id": "funded-work",
+                  "version": "1"
+                }
+              ]
+            },
+            "account_refs": [
+              {
+                "kind": "Account",
+                "id": "v5-owner-actual-payment-cash",
+                "version": "1"
+              }
+            ],
+            "arrangement_refs": [],
+            "due_refs": [
+              {
+                "kind": "Obligation",
+                "id": "v5-certified-works",
+                "version": "1"
+              }
+            ],
+            "evidence_refs": [
+              {
+                "kind": "Evidence",
+                "id": "v5-owner-payment-assumptions",
+                "version": "1"
+              }
+            ],
+            "pending_execution_refs": []
+          },
+          "execution_path": "deterministic"
+        },
+        "organization_snapshot": {
+          "schema_version": "organization.v2",
+          "run_id": "synthetic-v5-financing-application",
+          "organizations": [
+            {
+              "organization_id": "owner",
+              "actor_id": "owner-actor",
+              "source_ids": [
+                "synthetic:v5-owner-draw"
+              ],
+              "public_description": "Explicit synthetic Owner first draw instruction; actual signed Bank reception independently supplied.",
+              "public_location": {
+                "state": "unknown",
+                "reason_code": "synthetic_unsupplied",
+                "missing_refs": []
+              },
+              "members": [],
+              "assignments": [
+                {
+                  "role": "Owner",
+                  "function_ref": {
+                    "kind": "FunctionAssignment",
+                    "id": "owner-function",
+                    "version": "1"
+                  },
+                  "configuration_version": "1",
+                  "basis_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "synthetic",
+                  "version": "1"
+                }
+              ]
+            }
+          ],
+          "authorizations": [
+            {
+              "ref": {
+                "kind": "Authorization",
+                "id": "v5-owner-payment-grant",
+                "version": "1"
+              },
+              "organization_id": "owner",
+              "actor_id": "owner-actor",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "owner-function",
+                "version": "1"
+              },
+              "action_ids": [
+                "OWN-A06"
+              ],
+              "scopes": [
+                {
+                  "kind": "assessment_case",
+                  "ref": {
+                    "kind": "OwnerCase",
+                    "id": "case",
+                    "version": "1"
+                  },
+                  "coverage_refs": [
+                    {
+                      "kind": "WorkScope",
+                      "id": "funded-work",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "readable_refs": [
+                {
+                  "kind": "FunctionAssignment",
+                  "id": "owner-function",
+                  "version": "1"
+                },
+                {
+                  "kind": "WorkScope",
+                  "id": "funded-work",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "synthetic",
+                  "version": "1"
+                },
+                {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                {
+                  "kind": "PaymentAuthorization",
+                  "id": "v5-owner-certified-payment",
+                  "version": "1"
+                },
+                {
+                  "kind": "CandidateSet",
+                  "id": "v5-owner-payment-candidates",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "v5-owner-payment-assumptions",
+                  "version": "1"
+                },
+                {
+                  "kind": "Authorization",
+                  "id": "v5-owner-payment-grant",
+                  "version": "1"
+                },
+                {
+                  "kind": "Account",
+                  "id": "v5-owner-actual-payment-cash",
+                  "version": "1"
+                },
+                {
+                  "kind": "Obligation",
+                  "id": "v5-certified-works",
+                  "version": "1"
+                },
+                {
+                  "kind": "SettlementComponent",
+                  "id": "v5-certified-works-cash",
+                  "version": "1"
+                },
+                {
+                  "kind": "PaymentCertificateReceipt",
+                  "id": "v5-certified-works",
+                  "version": "1"
+                }
+              ],
+              "tool_ids": [],
+              "validity": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 25
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              },
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v5-owner-payment-assumptions",
+                  "version": "1"
+                }
+              ]
+            }
+          ],
+          "inactive_authorization_refs": []
+        },
+        "source_projection_envelope": {
+          "run_id": "synthetic-v5-financing-application",
+          "macro_version": "synthetic-v5-application.v1",
+          "state_version": "synthetic-v5-owner-payment-25.v1",
+          "read_token": "synthetic-v5-financing-application:v5-owner-certified-payment-25:read:1",
+          "business_time": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 25
+          },
+          "organization_id": "owner"
+        },
+        "source_note": "Owner25 explicit certified works pay80 instruction with partial permitted; independent observed current source history/actual cash/due/paid/offset and certificate lineage required.",
+        "schema_factory": "src.actions.contracts.owner_payment_objects:owner_payment_schemas"
+      }
+    }
+  ],
+  "predecessor_requirements": [
+    "Original Owner reconciliation and independently issued QS A08 certify/correct results in same run with existing separate journals.",
+    "Independent complete actual certificate mapping/history and current25 account/funding/obligation/component/reservation/execution sources; payable confirmed by original authority."
+  ],
+  "dependent_steps": [
+    "Actual native payment submission/partial receipt and cash/obligation effect reconciliation."
+  ],
+  "remaining_requirements": [
+    "Full QS upstream measurement/calculation/issuance inputs and supplier/contractor payment chain.",
+    "Core cash/debt, multi-command, transport/feedback and consolidated simple verification."
+  ],
+  "limitations": [
+    "Synthetic explicit payment authorization only; no native certificate, debt, account, cash or receipt generated.",
+    "Partial amount determined by original processor from independent received facts; local pay is not payment success.",
+    "All six Owner legal choices remain in scope."
+  ]
+}

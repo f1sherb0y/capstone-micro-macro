@@ -1,0 +1,15 @@
+{
+  "schema_version": "role-contract-owner-fixture-origin.v1",
+  "origin": "synthetic",
+  "case_path": "tests/fixtures/roles/lifecycle_v5_application_inputs.v1.json",
+  "case_sha256": "6fb8599098b7869e1dc8371ecaccd7c4003dc6a58ee9a3f4d2677467eb1e24d0",
+  "step_id": "v5-owner-application",
+  "run_id": "synthetic-v5-financing-application",
+  "source_factory": "integration.owner_role_contract_fixture_sources:build_sources",
+  "host_factory": "integration.owner_role_contract_host:build_role_host",
+  "limitations": [
+    "Explicit synthetic local Owner apply input and persistent result only.",
+    "No cross-organization journal callbacks, native registration/submission/feedback or model client.",
+    "Shared Bank/Owner source validation extracted; all functional checks deferred."
+  ]
+}

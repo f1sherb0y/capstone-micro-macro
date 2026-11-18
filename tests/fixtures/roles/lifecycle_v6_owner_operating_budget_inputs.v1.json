@@ -1,0 +1,1426 @@
+{
+  "schema_version": "lifecycle-input-case.v1",
+  "scenario_id": "V6",
+  "case_id": "v6-owner-future-budget-retains-whole-debt",
+  "origin": "synthetic",
+  "run_id": "synthetic-v6-owner-operating-budget",
+  "status": "input_prepared_execution_pending",
+  "source_declaration": {
+    "kind": "explicit_synthetic",
+    "assumptions": [
+      "The whole isolated synthetic Owner portfolio has no active projects but retains one organization works obligation: due 100 HKD, paid 20 HKD, zero offset. Absence of projects does not extinguish the obligation.",
+      "A private incomplete-status observation is provided with unknown verification and no outcome score or dimension. It is a budget-review basis, not a verified mature outcome or learning result.",
+      "The current synthetic research authority has maximum 1000 HKD, spent 100 HKD and reserved 50 HKD. Proposed limit 200 HKD preserves spent/reserved amounts within authority and creates no actual cash.",
+      "Current preferences remain own_use and are not revised. No learning method/report, allocations, resource commitments, prior operating executions or native closeout feedback are supplied.",
+      "FundingSource and SettlementComponent are declared upstream synthetic identifiers; their full native ledgers are not observed. This future-budget proposal does not pay debt or rewrite historical decisions/returns, and does not prove a connected V6 cycle."
+    ]
+  },
+  "steps": [
+    {
+      "step_id": "v6-owner-operating-budget",
+      "action_id": "OWN-A15",
+      "operation_id": "v6-owner-operating-budget-30",
+      "expected_kind": "completed",
+      "expected_choice": "revise_research_budget",
+      "expected_proposed_limit": {
+        "value": "200",
+        "currency": "HKD",
+        "basis_ref": {
+          "kind": "Evidence",
+          "id": "v6-owner-operating-budget-synthetic",
+          "version": "1"
+        }
+      },
+      "expected_basis_refs": [
+        {
+          "kind": "Observation",
+          "id": "v6-operating-incomplete-closeout-status",
+          "version": "1"
+        }
+      ],
+      "expected_retained_obligation_refs": [
+        {
+          "kind": "Obligation",
+          "id": "v6-operating-unpaid-works-duty",
+          "version": "1"
+        }
+      ],
+      "output_directory": "output/integration/v6_owner_operating_budget_pending_01",
+      "host": "integration.owner_role_contract_host:build_role_host",
+      "request": {
+        "schema_version": "role-contract-invocation.v1",
+        "context": {
+          "run_id": "synthetic-v6-owner-operating-budget",
+          "actor_id": "owner-actor",
+          "function_ref": {
+            "kind": "FunctionAssignment",
+            "id": "v6-owner-operating-budget-function",
+            "version": "1"
+          },
+          "authorization_refs": [
+            {
+              "kind": "Authorization",
+              "id": "v6-owner-operating-budget-grant",
+              "version": "1"
+            }
+          ],
+          "operation_id": "v6-owner-operating-budget-30",
+          "contract_ref": {
+            "kind": "ActionContract",
+            "id": "OWN-A15",
+            "version": "1"
+          },
+          "task_ref": {
+            "kind": "DecisionTask",
+            "id": "v6-owner-operating-budget-30-task",
+            "version": "1"
+          },
+          "scope": {
+            "kind": "assessment_case",
+            "ref": {
+              "kind": "OwnerCase",
+              "id": "v6-owner-operating-budget-case",
+              "version": "1"
+            },
+            "coverage_refs": [
+              {
+                "kind": "WorkScope",
+                "id": "v6-owner-operating-budget-limited-work",
+                "version": "1"
+              }
+            ]
+          },
+          "business_time": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 30
+          },
+          "read_token": "synthetic-v6-owner-operating-budget:read:1",
+          "visible_refs": [
+            {
+              "kind": "Organization",
+              "id": "owner",
+              "version": "1"
+            },
+            {
+              "kind": "OwnerPortfolio",
+              "id": "v6-operating-current-portfolio",
+              "version": "1"
+            },
+            {
+              "kind": "OwnerOperatingProfile",
+              "id": "v6-operating-budget-profile",
+              "version": "1"
+            },
+            {
+              "kind": "OwnerPreferenceProfile",
+              "id": "v6-operating-current-preferences",
+              "version": "1"
+            },
+            {
+              "kind": "ResearchBudgetAuthority",
+              "id": "v6-operating-research-budget-authority",
+              "version": "1"
+            },
+            {
+              "kind": "Obligation",
+              "id": "v6-operating-unpaid-works-duty",
+              "version": "1"
+            },
+            {
+              "kind": "Observation",
+              "id": "v6-operating-incomplete-closeout-status",
+              "version": "1"
+            },
+            {
+              "kind": "Evidence",
+              "id": "v6-owner-operating-budget-synthetic",
+              "version": "1"
+            },
+            {
+              "kind": "FunctionAssignment",
+              "id": "v6-owner-operating-budget-function",
+              "version": "1"
+            },
+            {
+              "kind": "OwnerCase",
+              "id": "v6-owner-operating-budget-case",
+              "version": "1"
+            },
+            {
+              "kind": "WorkScope",
+              "id": "v6-owner-operating-budget-limited-work",
+              "version": "1"
+            },
+            {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            {
+              "kind": "CandidateSet",
+              "id": "v6-owner-operating-budget-candidates",
+              "version": "1"
+            },
+            {
+              "kind": "Authorization",
+              "id": "v6-owner-operating-budget-grant",
+              "version": "1"
+            }
+          ],
+          "candidate_set_ref": {
+            "kind": "CandidateSet",
+            "id": "v6-owner-operating-budget-candidates",
+            "version": "1"
+          },
+          "execution_mode": "offline_fixture"
+        },
+        "execution_path": "deterministic",
+        "action_input": {
+          "organization_ref": {
+            "kind": "Organization",
+            "id": "owner",
+            "version": "1"
+          },
+          "portfolio_ref": {
+            "kind": "OwnerPortfolio",
+            "id": "v6-operating-current-portfolio",
+            "version": "1"
+          },
+          "obligation_refs": [
+            {
+              "kind": "Obligation",
+              "id": "v6-operating-unpaid-works-duty",
+              "version": "1"
+            }
+          ],
+          "observation_refs": [
+            {
+              "kind": "Observation",
+              "id": "v6-operating-incomplete-closeout-status",
+              "version": "1"
+            }
+          ],
+          "operating_profile_ref": {
+            "kind": "OwnerOperatingProfile",
+            "id": "v6-operating-budget-profile",
+            "version": "1"
+          },
+          "learning_method_ref": null
+        }
+      },
+      "configuration": {
+        "schema_version": "role-contract-host-config.v1",
+        "host_id": "v6-owner-operating-budget",
+        "version": "1",
+        "settings": {
+          "action_id": "OWN-A15",
+          "source_factory": "integration.owner_role_contract_fixture_sources:build_sources",
+          "source_version": "configured-owner-fixture-sources.v1",
+          "macro_version": "synthetic-v6-owner-operating-budget.v1",
+          "client_version": "role-contract-owner-operating-fixture.v1",
+          "policy_version": "role-contract-owner-operating-fixture.v1",
+          "model_version": "offline-fixture-no-model.v1",
+          "source_settings": {
+            "action_id": "OWN-A15",
+            "source_note": "Explicit synthetic future research budget proposal with incomplete private feedback and retained original debt.",
+            "journal_path": "output/integration/v6_owner_operating_budget_pending_01/journal.sqlite",
+            "organization_snapshot": {
+              "schema_version": "organization.v2",
+              "run_id": "synthetic-v6-owner-operating-budget",
+              "organizations": [
+                {
+                  "organization_id": "owner",
+                  "actor_id": "owner-actor",
+                  "source_ids": [
+                    "synthetic:v6-owner-operating-budget:owner"
+                  ],
+                  "public_description": "Synthetic Owner future operating-budget fixture.",
+                  "public_location": {
+                    "state": "unknown",
+                    "reason_code": "synthetic_unsupplied",
+                    "missing_refs": []
+                  },
+                  "members": [],
+                  "assignments": [
+                    {
+                      "role": "Owner",
+                      "function_ref": {
+                        "kind": "FunctionAssignment",
+                        "id": "v6-owner-operating-budget-function",
+                        "version": "1"
+                      },
+                      "configuration_version": "1",
+                      "basis_refs": [
+                        {
+                          "kind": "Evidence",
+                          "id": "v6-owner-operating-budget-synthetic",
+                          "version": "1"
+                        }
+                      ]
+                    }
+                  ],
+                  "evidence_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "v6-owner-operating-budget-synthetic",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "authorizations": [
+                {
+                  "ref": {
+                    "kind": "Authorization",
+                    "id": "v6-owner-operating-budget-grant",
+                    "version": "1"
+                  },
+                  "organization_id": "owner",
+                  "actor_id": "owner-actor",
+                  "function_ref": {
+                    "kind": "FunctionAssignment",
+                    "id": "v6-owner-operating-budget-function",
+                    "version": "1"
+                  },
+                  "action_ids": [
+                    "OWN-A15"
+                  ],
+                  "scopes": [
+                    {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-owner-operating-budget-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-owner-operating-budget-limited-work",
+                          "version": "1"
+                        }
+                      ]
+                    }
+                  ],
+                  "readable_refs": [
+                    {
+                      "kind": "Organization",
+                      "id": "owner",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "OwnerPortfolio",
+                      "id": "v6-operating-current-portfolio",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "OwnerOperatingProfile",
+                      "id": "v6-operating-budget-profile",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "OwnerPreferenceProfile",
+                      "id": "v6-operating-current-preferences",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ResearchBudgetAuthority",
+                      "id": "v6-operating-research-budget-authority",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Obligation",
+                      "id": "v6-operating-unpaid-works-duty",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Observation",
+                      "id": "v6-operating-incomplete-closeout-status",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Evidence",
+                      "id": "v6-owner-operating-budget-synthetic",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-owner-operating-budget-function",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "OwnerCase",
+                      "id": "v6-owner-operating-budget-case",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "WorkScope",
+                      "id": "v6-owner-operating-budget-limited-work",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ClockProfile",
+                      "id": "business",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "CandidateSet",
+                      "id": "v6-owner-operating-budget-candidates",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Authorization",
+                      "id": "v6-owner-operating-budget-grant",
+                      "version": "1"
+                    }
+                  ],
+                  "tool_ids": [],
+                  "validity": {
+                    "start": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 0
+                    },
+                    "end": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 100
+                    },
+                    "bounds": "closed_open"
+                  },
+                  "basis_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "v6-owner-operating-budget-synthetic",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "inactive_authorization_refs": []
+            },
+            "source_projection": {
+              "run_id": "synthetic-v6-owner-operating-budget",
+              "macro_version": "synthetic-v6-owner-operating-budget.v1",
+              "state_version": "synthetic-v6-owner-operating-budget-30.v1",
+              "read_token": "synthetic-v6-owner-operating-budget:read:1",
+              "business_time": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 30
+              },
+              "organization_id": "owner",
+              "objects": [
+                {
+                  "ref": {
+                    "kind": "Organization",
+                    "id": "owner",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "Organization",
+                      "id": "owner",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-owner-operating-budget-synthetic",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "OwnerPortfolio",
+                    "id": "v6-operating-current-portfolio",
+                    "version": "1"
+                  },
+                  "value": {
+                    "scope": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-owner-operating-budget-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-owner-operating-budget-limited-work",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-owner-operating-budget-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "ref": {
+                      "kind": "OwnerPortfolio",
+                      "id": "v6-operating-current-portfolio",
+                      "version": "1"
+                    },
+                    "organization_id": "owner",
+                    "project_refs": [],
+                    "obligation_refs": [
+                      {
+                        "kind": "Obligation",
+                        "id": "v6-operating-unpaid-works-duty",
+                        "version": "1"
+                      }
+                    ],
+                    "observation_refs": [
+                      {
+                        "kind": "Observation",
+                        "id": "v6-operating-incomplete-closeout-status",
+                        "version": "1"
+                      }
+                    ],
+                    "resource_refs": [],
+                    "task_refs": [],
+                    "required_task_refs": [],
+                    "current_preference_ref": {
+                      "kind": "OwnerPreferenceProfile",
+                      "id": "v6-operating-current-preferences",
+                      "version": "1"
+                    },
+                    "execution_refs": [],
+                    "coverage": "complete",
+                    "as_of": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "producer": "core"
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "OwnerOperatingProfile",
+                    "id": "v6-operating-budget-profile",
+                    "version": "1"
+                  },
+                  "value": {
+                    "scope": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-owner-operating-budget-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-owner-operating-budget-limited-work",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-owner-operating-budget-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "ref": {
+                      "kind": "OwnerOperatingProfile",
+                      "id": "v6-operating-budget-profile",
+                      "version": "1"
+                    },
+                    "organization_id": "owner",
+                    "portfolio_ref": {
+                      "kind": "OwnerPortfolio",
+                      "id": "v6-operating-current-portfolio",
+                      "version": "1"
+                    },
+                    "actor_id": "owner-actor",
+                    "function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-owner-operating-budget-function",
+                      "version": "1"
+                    },
+                    "authority_ref": {
+                      "kind": "Authorization",
+                      "id": "v6-owner-operating-budget-grant",
+                      "version": "1"
+                    },
+                    "choice": "revise_research_budget",
+                    "business_key": "v6-owner-future-research-budget",
+                    "basis_refs": [
+                      {
+                        "kind": "Observation",
+                        "id": "v6-operating-incomplete-closeout-status",
+                        "version": "1"
+                      }
+                    ],
+                    "preference_profile_ref": null,
+                    "budget_authority_ref": {
+                      "kind": "ResearchBudgetAuthority",
+                      "id": "v6-operating-research-budget-authority",
+                      "version": "1"
+                    },
+                    "proposed_limit": {
+                      "value": "200",
+                      "currency": "HKD",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "v6-owner-operating-budget-synthetic",
+                        "version": "1"
+                      }
+                    },
+                    "allocations": [],
+                    "allocation_task_refs": [],
+                    "replaced_commitment_refs": [],
+                    "allocation_revision_ref": null,
+                    "note": "Synthetic future research-budget proposal; spent/reserved research and original unpaid organization debt remain. Incomplete status is not treated as verified learning."
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "OwnerPreferenceProfile",
+                    "id": "v6-operating-current-preferences",
+                    "version": "1"
+                  },
+                  "value": {
+                    "scope": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-owner-operating-budget-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-owner-operating-budget-limited-work",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-owner-operating-budget-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "author_actor_id": "owner-actor",
+                    "author_organization_id": "owner",
+                    "author_function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-owner-operating-budget-function",
+                      "version": "1"
+                    },
+                    "author_authority_ref": {
+                      "kind": "Authorization",
+                      "id": "v6-owner-operating-budget-grant",
+                      "version": "1"
+                    },
+                    "author_action_id": "OWN-A15",
+                    "authored_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "ref": {
+                      "kind": "OwnerPreferenceProfile",
+                      "id": "v6-operating-current-preferences",
+                      "version": "1"
+                    },
+                    "organization_id": "owner",
+                    "prior_profile_ref": null,
+                    "purpose": "own_use",
+                    "scores": {
+                      "resilience": "0.5"
+                    },
+                    "basis_refs": [],
+                    "requires_learning": false,
+                    "learning_assessment_ref": null,
+                    "effect": "future_preferences_only"
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "ResearchBudgetAuthority",
+                    "id": "v6-operating-research-budget-authority",
+                    "version": "1"
+                  },
+                  "value": {
+                    "scope": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-owner-operating-budget-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-owner-operating-budget-limited-work",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-owner-operating-budget-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "author_actor_id": "owner-actor",
+                    "author_organization_id": "owner",
+                    "author_function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-owner-operating-budget-function",
+                      "version": "1"
+                    },
+                    "author_authority_ref": {
+                      "kind": "Authorization",
+                      "id": "v6-owner-operating-budget-grant",
+                      "version": "1"
+                    },
+                    "author_action_id": "OWN-A15",
+                    "authored_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "ref": {
+                      "kind": "ResearchBudgetAuthority",
+                      "id": "v6-operating-research-budget-authority",
+                      "version": "1"
+                    },
+                    "organization_id": "owner",
+                    "currency": "HKD",
+                    "maximum_limit": {
+                      "value": "1000",
+                      "currency": "HKD",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "v6-owner-operating-budget-synthetic",
+                        "version": "1"
+                      }
+                    },
+                    "actual_spent": {
+                      "value": "100",
+                      "currency": "HKD",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "v6-owner-operating-budget-synthetic",
+                        "version": "1"
+                      }
+                    },
+                    "reserved": {
+                      "value": "50",
+                      "currency": "HKD",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "v6-owner-operating-budget-synthetic",
+                        "version": "1"
+                      }
+                    },
+                    "permitted": {
+                      "state": "known",
+                      "value": true
+                    },
+                    "coverage": "complete",
+                    "as_of": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "Obligation",
+                    "id": "v6-operating-unpaid-works-duty",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "Obligation",
+                      "id": "v6-operating-unpaid-works-duty",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-owner-operating-budget-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "debtor_id": "owner",
+                    "payee_id": "contractor",
+                    "source_ref": {
+                      "kind": "FundingSource",
+                      "id": "v6-operating-declared-original-funding",
+                      "version": "1"
+                    },
+                    "origin_scope": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-owner-operating-budget-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-owner-operating-budget-limited-work",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "debt_ref": null,
+                    "component_refs": [
+                      {
+                        "kind": "SettlementComponent",
+                        "id": "v6-operating-declared-works-component",
+                        "version": "1"
+                      }
+                    ],
+                    "actual_due": {
+                      "state": "known",
+                      "value": {
+                        "value": "100",
+                        "currency": "HKD",
+                        "basis_ref": {
+                          "kind": "Evidence",
+                          "id": "v6-owner-operating-budget-synthetic",
+                          "version": "1"
+                        }
+                      }
+                    },
+                    "actual_paid": {
+                      "state": "known",
+                      "value": {
+                        "value": "20",
+                        "currency": "HKD",
+                        "basis_ref": {
+                          "kind": "Evidence",
+                          "id": "v6-owner-operating-budget-synthetic",
+                          "version": "1"
+                        }
+                      }
+                    },
+                    "due_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "as_of": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "status": "effective",
+                    "kind": "works",
+                    "actual_offset": {
+                      "state": "known",
+                      "value": {
+                        "value": "0",
+                        "currency": "HKD",
+                        "basis_ref": {
+                          "kind": "Evidence",
+                          "id": "v6-owner-operating-budget-synthetic",
+                          "version": "1"
+                        }
+                      }
+                    },
+                    "payable": {
+                      "state": "known",
+                      "value": true
+                    },
+                    "verification_evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-owner-operating-budget-synthetic",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "Observation",
+                    "id": "v6-operating-incomplete-closeout-status",
+                    "version": "1"
+                  },
+                  "value": {
+                    "scope": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-owner-operating-budget-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-owner-operating-budget-limited-work",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-owner-operating-budget-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "author_actor_id": "owner-actor",
+                    "author_organization_id": "owner",
+                    "author_function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-owner-operating-budget-function",
+                      "version": "1"
+                    },
+                    "author_authority_ref": {
+                      "kind": "Authorization",
+                      "id": "v6-owner-operating-budget-grant",
+                      "version": "1"
+                    },
+                    "author_action_id": "OWN-A15",
+                    "authored_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "ref": {
+                      "kind": "Observation",
+                      "id": "v6-operating-incomplete-closeout-status",
+                      "version": "1"
+                    },
+                    "recipient_organization_id": "owner",
+                    "event_id": "synthetic-v6-operating-incomplete-closeout-event",
+                    "observed_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "kind": "incomplete_status",
+                    "outcome_code": null,
+                    "dimension_codes": [],
+                    "verified": {
+                      "state": "unknown",
+                      "reason_code": "synthetic_outcome_not_complete",
+                      "missing_refs": []
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "Evidence",
+                    "id": "v6-owner-operating-budget-synthetic",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "Evidence",
+                      "id": "v6-owner-operating-budget-synthetic",
+                      "version": "1"
+                    },
+                    "source_kind": "synthetic",
+                    "basis_kind": "observed",
+                    "locator": "synthetic:v6-owner-operating-budget",
+                    "content_hash": "711f94a9260aff1b1dfb2720c4bdc0fce964c5d289fdaa645a5202fecb8697b8",
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "FunctionAssignment",
+                    "id": "v6-owner-operating-budget-function",
+                    "version": "1"
+                  },
+                  "value": {
+                    "role": "Owner",
+                    "function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-owner-operating-budget-function",
+                      "version": "1"
+                    },
+                    "configuration_version": "1",
+                    "basis_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-owner-operating-budget-synthetic",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "OwnerCase",
+                    "id": "v6-owner-operating-budget-case",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "OwnerCase",
+                      "id": "v6-owner-operating-budget-case",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-owner-operating-budget-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "organization_id": "owner"
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "WorkScope",
+                    "id": "v6-owner-operating-budget-limited-work",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "WorkScope",
+                      "id": "v6-owner-operating-budget-limited-work",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-owner-operating-budget-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "parent_ref": {
+                      "kind": "OwnerCase",
+                      "id": "v6-owner-operating-budget-case",
+                      "version": "1"
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "ClockProfile",
+                      "id": "business",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-owner-operating-budget-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "tick_unit": "day"
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "CandidateSet",
+                    "id": "v6-owner-operating-budget-candidates",
+                    "version": "1"
+                  },
+                  "value": {
+                    "operation_id": "v6-owner-operating-budget-30",
+                    "scope": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-owner-operating-budget-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-owner-operating-budget-limited-work",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "as_of": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "candidates": [
+                      {
+                        "ref": {
+                          "kind": "OwnerPortfolio",
+                          "id": "v6-operating-current-portfolio",
+                          "version": "1"
+                        },
+                        "permitted_choices": [
+                          "revise_research_budget"
+                        ]
+                      }
+                    ],
+                    "search_profile_ref": {
+                      "kind": "Profile",
+                      "id": "v6-operating-budget-search",
+                      "version": "1"
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "Authorization",
+                    "id": "v6-owner-operating-budget-grant",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "Authorization",
+                      "id": "v6-owner-operating-budget-grant",
+                      "version": "1"
+                    },
+                    "organization_id": "owner",
+                    "actor_id": "owner-actor",
+                    "function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-owner-operating-budget-function",
+                      "version": "1"
+                    },
+                    "action_ids": [
+                      "OWN-A15"
+                    ],
+                    "scopes": [
+                      {
+                        "kind": "assessment_case",
+                        "ref": {
+                          "kind": "OwnerCase",
+                          "id": "v6-owner-operating-budget-case",
+                          "version": "1"
+                        },
+                        "coverage_refs": [
+                          {
+                            "kind": "WorkScope",
+                            "id": "v6-owner-operating-budget-limited-work",
+                            "version": "1"
+                          }
+                        ]
+                      }
+                    ],
+                    "readable_refs": [
+                      {
+                        "kind": "Organization",
+                        "id": "owner",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "OwnerPortfolio",
+                        "id": "v6-operating-current-portfolio",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "OwnerOperatingProfile",
+                        "id": "v6-operating-budget-profile",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "OwnerPreferenceProfile",
+                        "id": "v6-operating-current-preferences",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "ResearchBudgetAuthority",
+                        "id": "v6-operating-research-budget-authority",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Obligation",
+                        "id": "v6-operating-unpaid-works-duty",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Observation",
+                        "id": "v6-operating-incomplete-closeout-status",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-owner-operating-budget-synthetic",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "FunctionAssignment",
+                        "id": "v6-owner-operating-budget-function",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "OwnerCase",
+                        "id": "v6-owner-operating-budget-case",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "WorkScope",
+                        "id": "v6-owner-operating-budget-limited-work",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "CandidateSet",
+                        "id": "v6-owner-operating-budget-candidates",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Authorization",
+                        "id": "v6-owner-operating-budget-grant",
+                        "version": "1"
+                      }
+                    ],
+                    "tool_ids": [],
+                    "validity": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "basis_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-owner-operating-budget-synthetic",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  ],
+  "remaining_requirements": [
+    "Execute original Owner host and verify exact future-budget limit/private basis while original spent/reserved research and unpaid whole-organization obligation survive.",
+    "OWN-A15 retain_policy/revise_preferences/rebalance_tasks with professional learning/valid outcome lineage and capacity checks; normal/boundary/recovery CHECK cases.",
+    "Actual same-run private feedback and closeout-to-next-decision linkage, original native obligations/research reservations and complete PLAN verification."
+  ],
+  "limitations": "One isolated synthetic research-budget proposal input; no business execution, effective learning, native budget mutation, debt discharge or complete V6 feedback cycle proven."
+}

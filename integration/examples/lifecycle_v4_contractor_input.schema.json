@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Original Contractor request/configuration for V4 material-input assembly",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["run_id", "contractor_organization_id", "request", "configuration"],
+  "properties": {
+    "run_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "contractor_organization_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "request": {
+      "type": "object",
+      "description": "Distinct current Contractor A07 invocation with actual inventory, allowed use and work authority; source mode must match the original Supplier result."
+    },
+    "configuration": {
+      "type": "object",
+      "description": "Original Contractor RoleContractHostConfiguration with received_material_inputs selecting the original Supplier task and ordered actual material basis references."
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": "payment-chain.v1",
+  "run_id": "goal3h-payment-feedback",
+  "ticks": 3,
+  "random_seed": 1,
+  "progress_payment_ticks": [1, 2],
+  "max_prior_payment_requests": 1,
+  "scenarios": {
+    "low_reliability": {"owner_payment_reliability": 0.0},
+    "high_reliability": {"owner_payment_reliability": 1.0}
+  },
+  "source_note": "Original shared builder authors initial existing construction and independent private disputed positions before runtime. Native requested/approved/delayed statuses are not cash, signed certificates, liabilities or cleared obligations."
+}

@@ -1,0 +1,32 @@
+{
+  "skill_id": "QS-A06.bid-cost-evaluation",
+  "skill_version": "1",
+  "action_id": "QS-A06",
+  "role": "QS",
+  "status": "implemented",
+  "spec_source": "zwtnew/04_roles/04_roles/qs.md",
+  "spec_source_sha256": "ffbfdc7c23b4677567ee66b9af02156c2fb81b40e36954f75d1e0f84b2c99634",
+  "skill_path": "skills/actions/qs/QS-A06/SKILL.md",
+  "skill_sha256": "9bf4fce8fd35cdf6b680dac70ed064d9bf346869618f0210e3039c97a8db96fc",
+  "input_schema_id": "role-contract.v1:QS-A06:input",
+  "output_schema_id": "role-contract.v1:QS-A06:payload",
+  "processor_id": "qs.bid_cost_evaluation.v1",
+  "tool_ids": [],
+  "shared_refs": [
+    "skills/shared/decision-basics.md"
+  ],
+  "shared_sha256s": {"skills/shared/decision-basics.md": "77da3d2fc1683068353888daccecfabe25278bf180b593747e39505fea987e60"},
+  "prompt_sha256": "9bf4fce8fd35cdf6b680dac70ed064d9bf346869618f0210e3039c97a8db96fc",
+  "method_refs": [
+    {
+      "kind": "Method",
+      "id": "micro.qs.sourced_bid_normalization",
+      "version": "1"
+    },
+    {
+      "kind": "Method",
+      "id": "micro.qs.declared_bid_comparison",
+      "version": "1"
+    }
+  ]
+}

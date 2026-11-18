@@ -1,0 +1,8 @@
+{
+  "text_files_scanned": 15473,
+  "credential_pattern_alerts": [],
+  "canonical_broken_links": [],
+  "note": "Pattern scan is a local preflight, not a guarantee that all data are suitable for public redistribution. No credentials or matched values are printed.",
+  "supplemental_text_files_scanned": 28,
+  "supplemental_credential_pattern_alerts": []
+}

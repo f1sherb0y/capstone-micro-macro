@@ -1,0 +1,38 @@
+{
+  "schema_version": "role-contract-fixture-origin.v1",
+  "origin": "synthetic",
+  "source_note": "Synthetic Supplier A02 original-product proposal example: invented inquiry, panel properties, test applicability and authority. No real engineering approval, formal ProductProposal, supply offer, production, inventory or macro effect.",
+  "archival_input_file": "output/integration/plan_20261006_supplier_a02_01/inputs.json",
+  "archival_input_sha256": "911260ef261a8a5f3d8383d43c9f3dad9cd780474dc8c533d4ee72839ed29c3c",
+  "archival_case": "original",
+  "archival_evidence": {
+    "ref": {
+      "kind": "Evidence",
+      "id": "synthetic-basis",
+      "version": "1"
+    },
+    "source_kind": "synthetic",
+    "basis_kind": "assumed",
+    "locator": "tests/test_supplier_product.py:facts",
+    "content_hash": "70114f45531ed35aa0b93dd3f65169a7fe0de64b5bcb94ef7a5ecabed5917527",
+    "effective_window": null
+  },
+  "run_id": "synthetic-role-contract-supplier-product-01",
+  "changes": [
+    "Independent run/operation/task/read-token identities; candidate operation updated.",
+    "Original product values and nine typed projections retained.",
+    "Explicit synthetic organization and single-action authorization snapshot supplied.",
+    "Basis evidence locator/hash now describes this self-contained example."
+  ],
+  "basis_sha256": "595d27a66ab72949966c574ff2c3b51ea3bac5f4f264336eb02b07b2904eb685",
+  "basis_hash_recipe": "SHA256 of UTF-8 JSON with sort_keys=True, separators=(comma,colon), ensure_ascii=False; object keys: action_input, objects_without_evidence, source_note.",
+  "runtime_dependencies": [
+    "Supplied invocation JSON, host configuration JSON and original project code only."
+  ],
+  "functional_status": "unverified",
+  "limitations": [
+    "No expected output is supplied to the runtime.",
+    "No test modules or archived result files are imported at runtime.",
+    "One synthetic A02 branch only; no 106-action or real-model validation."
+  ]
+}

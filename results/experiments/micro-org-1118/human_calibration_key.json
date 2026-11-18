@@ -1,0 +1,146 @@
+[
+  {
+    "sheet_id": "H01",
+    "unit_id": "5920a6c0bf712f3d",
+    "arm": "multi",
+    "pair_id": "CASE-0050|evaluation_award|design_package"
+  },
+  {
+    "sheet_id": "H02",
+    "unit_id": "152783bfc7c66e2b",
+    "arm": "single",
+    "pair_id": "CASE-0008|bid|COMP-0470|contractor_package"
+  },
+  {
+    "sheet_id": "H03",
+    "unit_id": "2081dfd2858b554e",
+    "arm": "single",
+    "pair_id": "CASE-0050|evaluation_award|supplier_package"
+  },
+  {
+    "sheet_id": "H04",
+    "unit_id": "671353026d779e65",
+    "arm": "single",
+    "pair_id": "CASE-0001|bid|COMP-0259|supplier_package"
+  },
+  {
+    "sheet_id": "H05",
+    "unit_id": "410f95b6d734da14",
+    "arm": "single",
+    "pair_id": "CASE-0002|participation|COMP-0494|contractor_package"
+  },
+  {
+    "sheet_id": "H06",
+    "unit_id": "b23d3ed5ef83b03f",
+    "arm": "single",
+    "pair_id": "CASE-0014|evaluation_award|contractor_package"
+  },
+  {
+    "sheet_id": "H07",
+    "unit_id": "db1fa1f1c674c5c7",
+    "arm": "single",
+    "pair_id": "CASE-0014|bid|COMP-0259|supplier_package"
+  },
+  {
+    "sheet_id": "H08",
+    "unit_id": "f908e557e4738bbf",
+    "arm": "multi",
+    "pair_id": "CASE-0008|evaluation_award|design_package"
+  },
+  {
+    "sheet_id": "H09",
+    "unit_id": "93f267b3efd12ab1",
+    "arm": "single",
+    "pair_id": "CASE-0014|participation|COMP-0271|supplier_package"
+  },
+  {
+    "sheet_id": "H10",
+    "unit_id": "f703fd0b04e7d3fb",
+    "arm": "single",
+    "pair_id": "CASE-0001|bid|COMP-0208|supervision_package"
+  },
+  {
+    "sheet_id": "H11",
+    "unit_id": "5c26b669f347be08",
+    "arm": "single",
+    "pair_id": "CASE-0002|evaluation_award|supplier_package"
+  },
+  {
+    "sheet_id": "H12",
+    "unit_id": "c1ac87af0d4fb09e",
+    "arm": "multi",
+    "pair_id": "CASE-0001|evaluation_award|contractor_package"
+  },
+  {
+    "sheet_id": "H13",
+    "unit_id": "136c9cdc792ef721",
+    "arm": "single",
+    "pair_id": "CASE-0004|bid|COMP-0259|supplier_package"
+  },
+  {
+    "sheet_id": "H14",
+    "unit_id": "bc912ee3a8d769bd",
+    "arm": "multi",
+    "pair_id": "CASE-0008|participation|COMP-0470|contractor_package"
+  },
+  {
+    "sheet_id": "H15",
+    "unit_id": "59296bd85ce0f573",
+    "arm": "multi",
+    "pair_id": "CASE-0002|bid|COMP-0461|design_package"
+  },
+  {
+    "sheet_id": "H16",
+    "unit_id": "6a2a39f74d54e5e9",
+    "arm": "multi",
+    "pair_id": "CASE-0008|participation|COMP-0271|supplier_package"
+  },
+  {
+    "sheet_id": "H17",
+    "unit_id": "593f7eb252d7064e",
+    "arm": "single",
+    "pair_id": "CASE-0001|participation|COMP-0724|design_package"
+  },
+  {
+    "sheet_id": "H18",
+    "unit_id": "bbc6b545c066ab26",
+    "arm": "single",
+    "pair_id": "CASE-0001|bid|COMP-0473|contractor_package"
+  },
+  {
+    "sheet_id": "H19",
+    "unit_id": "ae1fda3ba8aeb2c2",
+    "arm": "single",
+    "pair_id": "CASE-0008|evaluation_award|contractor_package"
+  },
+  {
+    "sheet_id": "H20",
+    "unit_id": "689d6d0c63dd4d32",
+    "arm": "single",
+    "pair_id": "CASE-0014|owner_brief|owner"
+  },
+  {
+    "sheet_id": "H21",
+    "unit_id": "9819ca842bb1270d",
+    "arm": "single",
+    "pair_id": "CASE-0001|evaluation_award|design_package"
+  },
+  {
+    "sheet_id": "H22",
+    "unit_id": "5f9f4e4547fbfa56",
+    "arm": "multi",
+    "pair_id": "CASE-0004|participation|COMP-0066|contractor_package"
+  },
+  {
+    "sheet_id": "H23",
+    "unit_id": "186f3e1300d667f8",
+    "arm": "single",
+    "pair_id": "CASE-0014|bid|COMP-0025|contractor_package"
+  },
+  {
+    "sheet_id": "H24",
+    "unit_id": "4b786ded327f3546",
+    "arm": "single",
+    "pair_id": "CASE-0002|bid|COMP-0467|supervision_package"
+  }
+]

@@ -1,0 +1,4741 @@
+{
+  "schema_version": "lifecycle-input-case.v1",
+  "scenario_id": "V2",
+  "case_id": "v2-independent-commission",
+  "origin": "synthetic",
+  "run_id": "synthetic-v2-commission",
+  "status": "input_prepared_execution_pending",
+  "source_fixtures": [
+    {
+      "path": "tests/fixtures/roles/owner_commission.v1.json",
+      "sha256": "b254f525eabcae4aef11e4a604eec277875f054ed116976dc6d5e1ac51b3eb68"
+    }
+  ],
+  "steps": [
+    {
+      "step_id": "architect-independent-intake",
+      "action_id": "ARCHITECT-A02",
+      "operation_id": "v2-intake-10",
+      "input_fixture": {
+        "fixture_version": "synthetic-v2-architect-intake.v1",
+        "source_kind": "synthetic",
+        "organization_id": "architect",
+        "actor_id": "architect-actor",
+        "business_time": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "assumptions": [
+          "Independent explicitly synthetic professional inputs; not an observed acceptance.",
+          "Capacity 10, effort 2, productivity 1, payment risk 1 and minimum fee 20 HKD are declared scenario facts.",
+          "Authority projections are synthetic declarations, distinct from execution Authorization and real host grants."
+        ],
+        "input": {
+          "scope": {
+            "kind": "assessment_case",
+            "ref": {
+              "kind": "OwnerCase",
+              "id": "case",
+              "version": "1"
+            },
+            "coverage_refs": [
+              {
+                "kind": "WorkScope",
+                "id": "service-work",
+                "version": "1"
+              }
+            ]
+          },
+          "request_ref": {
+            "kind": "ServiceRequest",
+            "id": "v2-concept-request",
+            "version": "1"
+          },
+          "terms_ref": {
+            "kind": "ServiceTerms",
+            "id": "v2-primary-service-terms",
+            "version": "1"
+          },
+          "capability_ref": {
+            "kind": "Capability",
+            "id": "external-architect",
+            "version": "1"
+          },
+          "capacity_ref": {
+            "kind": "ResourceCalendar",
+            "id": "v2-architect-calendar",
+            "version": "1"
+          },
+          "price_basis_ref": {
+            "kind": "FeeBasis",
+            "id": "v2-architect-fees",
+            "version": "1"
+          }
+        },
+        "objects": [
+          {
+            "ref": {
+              "kind": "Authority",
+              "id": "v2-client-commission",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Authority",
+                "id": "v2-client-commission",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ],
+              "organization_id": "owner",
+              "actor_id": "owner-actor",
+              "purposes": [
+                "commission_service"
+              ],
+              "scopes": [
+                {
+                  "kind": "assessment_case",
+                  "ref": {
+                    "kind": "OwnerCase",
+                    "id": "case",
+                    "version": "1"
+                  },
+                  "coverage_refs": [
+                    {
+                      "kind": "WorkScope",
+                      "id": "service-work",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "service_codes": [
+                "concept_design"
+              ],
+              "validity": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 10
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "Authority",
+              "id": "v2-payer-payment",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Authority",
+                "id": "v2-payer-payment",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ],
+              "organization_id": "owner",
+              "actor_id": "owner-actor",
+              "purposes": [
+                "authorize_payment"
+              ],
+              "scopes": [
+                {
+                  "kind": "assessment_case",
+                  "ref": {
+                    "kind": "OwnerCase",
+                    "id": "case",
+                    "version": "1"
+                  },
+                  "coverage_refs": [
+                    {
+                      "kind": "WorkScope",
+                      "id": "service-work",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "service_codes": [
+                "concept_design"
+              ],
+              "validity": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 10
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "ServiceRequest",
+              "id": "v2-concept-request",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "ServiceRequest",
+                "id": "v2-concept-request",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ],
+              "scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "service-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "provider_id": "architect-actor",
+              "provider_organization_id": "architect",
+              "client_id": "owner-actor",
+              "client_organization_id": "owner",
+              "payer_id": "owner-actor",
+              "payer_organization_id": "owner",
+              "client_authority_ref": {
+                "kind": "Authority",
+                "id": "v2-client-commission",
+                "version": "1"
+              },
+              "payer_authority_ref": {
+                "kind": "Authority",
+                "id": "v2-payer-payment",
+                "version": "1"
+              },
+              "offered_terms_ref": {
+                "kind": "ServiceTerms",
+                "id": "v2-primary-service-terms",
+                "version": "1"
+              },
+              "fee_basis_ref": {
+                "kind": "FeeBasis",
+                "id": "v2-architect-fees",
+                "version": "1"
+              },
+              "permitted_offer_scopes": [
+                {
+                  "kind": "assessment_case",
+                  "ref": {
+                    "kind": "OwnerCase",
+                    "id": "case",
+                    "version": "1"
+                  },
+                  "coverage_refs": [
+                    {
+                      "kind": "WorkScope",
+                      "id": "service-work",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "permitted_service_codes": [
+                "concept_design"
+              ],
+              "open_question_refs": [],
+              "received_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 10
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              },
+              "status": "active"
+            }
+          },
+          {
+            "ref": {
+              "kind": "ServiceTerms",
+              "id": "v2-primary-service-terms",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "ServiceTerms",
+                "id": "v2-primary-service-terms",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ],
+              "request_ref": {
+                "kind": "ServiceRequest",
+                "id": "v2-concept-request",
+                "version": "1"
+              },
+              "prior_terms_ref": null,
+              "scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "service-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "provider_id": "architect-actor",
+              "client_id": "owner-actor",
+              "payer_id": "owner-actor",
+              "relation": "external",
+              "region_id": {
+                "state": "known",
+                "value": "HK"
+              },
+              "service_code": {
+                "state": "known",
+                "value": "concept_design"
+              },
+              "object_type": {
+                "state": "known",
+                "value": "building"
+              },
+              "requested_uses": {
+                "state": "known",
+                "value": [
+                  "research"
+                ]
+              },
+              "responsibility_codes": {
+                "state": "known",
+                "value": [
+                  "design_advice"
+                ]
+              },
+              "required_qualification_codes": {
+                "state": "known",
+                "value": [
+                  "local_architect"
+                ]
+              },
+              "required_method_refs": {
+                "state": "known",
+                "value": [
+                  {
+                    "kind": "Method",
+                    "id": "concept-support",
+                    "version": "1"
+                  }
+                ]
+              },
+              "fee": {
+                "state": "known",
+                "value": {
+                  "value": "30",
+                  "currency": "HKD",
+                  "basis_ref": {
+                    "kind": "Evidence",
+                    "id": "declared-synthetic-source",
+                    "version": "1"
+                  }
+                }
+              },
+              "payment_risk": {
+                "state": "known",
+                "value": {
+                  "value": "1",
+                  "unit": "risk",
+                  "basis_ref": {
+                    "kind": "Evidence",
+                    "id": "declared-synthetic-source",
+                    "version": "1"
+                  }
+                }
+              },
+              "work_profile_ref": {
+                "kind": "WorkProfile",
+                "id": "v2-concept-profile",
+                "version": "1"
+              },
+              "effort_estimate": {
+                "state": "known",
+                "value": {
+                  "value": "2",
+                  "unit": "effort",
+                  "basis_ref": {
+                    "kind": "Evidence",
+                    "id": "declared-synthetic-source",
+                    "version": "1"
+                  }
+                }
+              },
+              "desired_window": {
+                "state": "known",
+                "value": {
+                  "start": {
+                    "clock_ref": {
+                      "kind": "ClockProfile",
+                      "id": "business",
+                      "version": "1"
+                    },
+                    "offset": 12
+                  },
+                  "end": {
+                    "clock_ref": {
+                      "kind": "ClockProfile",
+                      "id": "business",
+                      "version": "1"
+                    },
+                    "offset": 20
+                  },
+                  "bounds": "closed_open"
+                }
+              },
+              "deliverable_requirement_refs": [
+                {
+                  "kind": "DeliverableRequirement",
+                  "id": "concept-report",
+                  "version": "1"
+                }
+              ],
+              "issued_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 10
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              },
+              "status": "offered",
+              "selection_priority": {
+                "state": "known",
+                "value": 1
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "Capability",
+              "id": "external-architect",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Capability",
+                "id": "external-architect",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ],
+              "organization_id": "architect",
+              "region_ids": {
+                "state": "known",
+                "value": [
+                  "HK"
+                ]
+              },
+              "service_codes": {
+                "state": "known",
+                "value": [
+                  "concept_design"
+                ]
+              },
+              "allowed_uses": {
+                "state": "known",
+                "value": [
+                  "research"
+                ]
+              },
+              "responsibility_codes": {
+                "state": "known",
+                "value": [
+                  "design_advice"
+                ]
+              },
+              "qualification_refs": [
+                {
+                  "kind": "Qualification",
+                  "id": "external-qualification",
+                  "version": "1"
+                }
+              ],
+              "qualification_coverage": "complete",
+              "method_refs": {
+                "state": "known",
+                "value": [
+                  {
+                    "kind": "Method",
+                    "id": "concept-support",
+                    "version": "1"
+                  }
+                ]
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 10
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              },
+              "object_types": {
+                "state": "known",
+                "value": [
+                  "building"
+                ]
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "Qualification",
+              "id": "external-qualification",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Qualification",
+                "id": "external-qualification",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ],
+              "organization_id": "architect",
+              "code": "local_architect",
+              "region_ids": [
+                "HK"
+              ],
+              "service_codes": [
+                "concept_design"
+              ],
+              "standing": {
+                "state": "known",
+                "value": true
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 10
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "Method",
+              "id": "concept-support",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Method",
+                "id": "concept-support",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ],
+              "purpose": "service_support",
+              "region_ids": [
+                "HK"
+              ],
+              "service_codes": [
+                "concept_design"
+              ],
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 10
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              },
+              "object_types": [
+                "building"
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "WorkProfile",
+              "id": "v2-concept-profile",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "WorkProfile",
+                "id": "v2-concept-profile",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ],
+              "region_ids": [
+                "HK"
+              ],
+              "service_codes": [
+                "concept_design"
+              ],
+              "object_types": [
+                "building"
+              ],
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 10
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              },
+              "clock_ref": {
+                "kind": "ClockProfile",
+                "id": "business",
+                "version": "1"
+              },
+              "resource_kind": "architect",
+              "effort_unit": "effort",
+              "capacity_unit": "capacity",
+              "effort_per_capacity_tick": "1",
+              "method": "constant_capacity_over_half_open_window_v1"
+            }
+          },
+          {
+            "ref": {
+              "kind": "ResourceCalendar",
+              "id": "v2-architect-calendar",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "ResourceCalendar",
+                "id": "v2-architect-calendar",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ],
+              "organization_id": "architect",
+              "as_of": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "coverage": "complete",
+              "resources": [
+                {
+                  "resource_ref": {
+                    "kind": "Resource",
+                    "id": "v2-architect-resource",
+                    "version": "1"
+                  },
+                  "resource_kind": "architect",
+                  "region_id": {
+                    "state": "known",
+                    "value": "HK"
+                  },
+                  "total": {
+                    "state": "known",
+                    "value": {
+                      "value": "10",
+                      "unit": "capacity",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "declared-synthetic-source",
+                        "version": "1"
+                      }
+                    }
+                  },
+                  "effective_window": {
+                    "start": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 10
+                    },
+                    "end": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "bounds": "closed_open"
+                  }
+                }
+              ],
+              "commitments": []
+            }
+          },
+          {
+            "ref": {
+              "kind": "FeeBasis",
+              "id": "v2-architect-fees",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "FeeBasis",
+                "id": "v2-architect-fees",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ],
+              "organization_id": "architect",
+              "scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "service-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 10
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              },
+              "minimum_fee": {
+                "state": "known",
+                "value": {
+                  "value": "20",
+                  "currency": "HKD",
+                  "basis_ref": {
+                    "kind": "Evidence",
+                    "id": "declared-synthetic-source",
+                    "version": "1"
+                  }
+                }
+              },
+              "maximum_payment_risk": {
+                "state": "known",
+                "value": {
+                  "value": "5",
+                  "unit": "risk",
+                  "basis_ref": {
+                    "kind": "Evidence",
+                    "id": "declared-synthetic-source",
+                    "version": "1"
+                  }
+                }
+              },
+              "new_work_policy": {
+                "state": "known",
+                "value": "evaluate"
+              },
+              "counteroffer_terms_refs": [],
+              "counteroffer_calculation_refs": []
+            }
+          },
+          {
+            "ref": {
+              "kind": "DeliverableRequirement",
+              "id": "concept-report",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "DeliverableRequirement",
+                "id": "concept-report",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ],
+              "request_ref": {
+                "kind": "ServiceRequest",
+                "id": "v2-concept-request",
+                "version": "1"
+              },
+              "scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "service-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "requested_use": "research",
+              "description": "Explicitly synthetic concept report"
+            }
+          },
+          {
+            "ref": {
+              "kind": "OwnerCase",
+              "id": "case",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "OwnerCase",
+                "id": "case",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ],
+              "organization_id": "owner"
+            }
+          },
+          {
+            "ref": {
+              "kind": "WorkScope",
+              "id": "service-work",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "WorkScope",
+                "id": "service-work",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ],
+              "parent_ref": {
+                "kind": "OwnerCase",
+                "id": "case",
+                "version": "1"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "ClockProfile",
+                "id": "business",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ],
+              "tick_unit": "day"
+            }
+          },
+          {
+            "ref": {
+              "kind": "Organization",
+              "id": "architect",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Organization",
+                "id": "architect",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "FunctionAssignment",
+              "id": "architect-function",
+              "version": "1"
+            },
+            "value": {
+              "role": "Architect",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "architect-function",
+                "version": "1"
+              },
+              "configuration_version": "1",
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "Authorization",
+              "id": "architect-authority",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Authorization",
+                "id": "architect-authority",
+                "version": "1"
+              },
+              "organization_id": "architect",
+              "actor_id": "architect-actor",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "architect-function",
+                "version": "1"
+              },
+              "action_ids": [
+                "ARCHITECT-A02"
+              ],
+              "scopes": [
+                {
+                  "kind": "assessment_case",
+                  "ref": {
+                    "kind": "OwnerCase",
+                    "id": "case",
+                    "version": "1"
+                  },
+                  "coverage_refs": [
+                    {
+                      "kind": "WorkScope",
+                      "id": "service-work",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "readable_refs": [
+                {
+                  "kind": "Authority",
+                  "id": "v2-client-commission",
+                  "version": "1"
+                },
+                {
+                  "kind": "Authority",
+                  "id": "v2-payer-payment",
+                  "version": "1"
+                },
+                {
+                  "kind": "ServiceRequest",
+                  "id": "v2-concept-request",
+                  "version": "1"
+                },
+                {
+                  "kind": "ServiceTerms",
+                  "id": "v2-primary-service-terms",
+                  "version": "1"
+                },
+                {
+                  "kind": "Capability",
+                  "id": "external-architect",
+                  "version": "1"
+                },
+                {
+                  "kind": "Qualification",
+                  "id": "external-qualification",
+                  "version": "1"
+                },
+                {
+                  "kind": "Method",
+                  "id": "concept-support",
+                  "version": "1"
+                },
+                {
+                  "kind": "WorkProfile",
+                  "id": "v2-concept-profile",
+                  "version": "1"
+                },
+                {
+                  "kind": "ResourceCalendar",
+                  "id": "v2-architect-calendar",
+                  "version": "1"
+                },
+                {
+                  "kind": "FeeBasis",
+                  "id": "v2-architect-fees",
+                  "version": "1"
+                },
+                {
+                  "kind": "DeliverableRequirement",
+                  "id": "concept-report",
+                  "version": "1"
+                },
+                {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                {
+                  "kind": "WorkScope",
+                  "id": "service-work",
+                  "version": "1"
+                },
+                {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                {
+                  "kind": "Organization",
+                  "id": "architect",
+                  "version": "1"
+                },
+                {
+                  "kind": "FunctionAssignment",
+                  "id": "architect-function",
+                  "version": "1"
+                },
+                {
+                  "kind": "Authorization",
+                  "id": "architect-authority",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                },
+                {
+                  "kind": "CandidateSet",
+                  "id": "architect-independent-intake-candidates",
+                  "version": "1"
+                }
+              ],
+              "tool_ids": [],
+              "validity": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 10
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              },
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "Evidence",
+              "id": "declared-synthetic-source",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Evidence",
+                "id": "declared-synthetic-source",
+                "version": "1"
+              },
+              "source_kind": "synthetic",
+              "basis_kind": "assumed",
+              "locator": "tests/fixtures/roles/lifecycle_v2_commission_inputs.v1.json#architect-independent-intake",
+              "content_hash": "13d5080bb05aa61d61aad10bcfb6a012450cfdd2d825796ef54aaf466cdbf850",
+              "effective_window": null
+            }
+          }
+        ]
+      },
+      "expected_kind": "completed",
+      "expected_choice": "accept",
+      "offline_binding": {
+        "schema_factory": "src.actions.contracts.architect_objects:architect_intake_schemas",
+        "source_note": "Explicit synthetic V2 independent commission decision inputs and authored read grants; no native acceptance receipt or appointment.",
+        "invocation": {
+          "schema_version": "role-contract-invocation.v1",
+          "context": {
+            "run_id": "synthetic-v2-commission",
+            "actor_id": "architect-actor",
+            "function_ref": {
+              "kind": "FunctionAssignment",
+              "id": "architect-function",
+              "version": "1"
+            },
+            "authorization_refs": [
+              {
+                "kind": "Authorization",
+                "id": "architect-authority",
+                "version": "1"
+              }
+            ],
+            "operation_id": "v2-intake-10",
+            "contract_ref": {
+              "kind": "ActionContract",
+              "id": "ARCHITECT-A02",
+              "version": "1"
+            },
+            "task_ref": {
+              "kind": "DecisionTask",
+              "id": "v2-intake-10-task",
+              "version": "1"
+            },
+            "scope": {
+              "kind": "assessment_case",
+              "ref": {
+                "kind": "OwnerCase",
+                "id": "case",
+                "version": "1"
+              },
+              "coverage_refs": [
+                {
+                  "kind": "WorkScope",
+                  "id": "service-work",
+                  "version": "1"
+                }
+              ]
+            },
+            "business_time": {
+              "clock_ref": {
+                "kind": "ClockProfile",
+                "id": "business",
+                "version": "1"
+              },
+              "offset": 10
+            },
+            "read_token": "synthetic-v2-commission:architect-independent-intake:read:1",
+            "visible_refs": [
+              {
+                "kind": "Authority",
+                "id": "v2-client-commission",
+                "version": "1"
+              },
+              {
+                "kind": "Authority",
+                "id": "v2-payer-payment",
+                "version": "1"
+              },
+              {
+                "kind": "ServiceRequest",
+                "id": "v2-concept-request",
+                "version": "1"
+              },
+              {
+                "kind": "ServiceTerms",
+                "id": "v2-primary-service-terms",
+                "version": "1"
+              },
+              {
+                "kind": "Capability",
+                "id": "external-architect",
+                "version": "1"
+              },
+              {
+                "kind": "Qualification",
+                "id": "external-qualification",
+                "version": "1"
+              },
+              {
+                "kind": "Method",
+                "id": "concept-support",
+                "version": "1"
+              },
+              {
+                "kind": "WorkProfile",
+                "id": "v2-concept-profile",
+                "version": "1"
+              },
+              {
+                "kind": "ResourceCalendar",
+                "id": "v2-architect-calendar",
+                "version": "1"
+              },
+              {
+                "kind": "FeeBasis",
+                "id": "v2-architect-fees",
+                "version": "1"
+              },
+              {
+                "kind": "DeliverableRequirement",
+                "id": "concept-report",
+                "version": "1"
+              },
+              {
+                "kind": "OwnerCase",
+                "id": "case",
+                "version": "1"
+              },
+              {
+                "kind": "WorkScope",
+                "id": "service-work",
+                "version": "1"
+              },
+              {
+                "kind": "ClockProfile",
+                "id": "business",
+                "version": "1"
+              },
+              {
+                "kind": "Organization",
+                "id": "architect",
+                "version": "1"
+              },
+              {
+                "kind": "FunctionAssignment",
+                "id": "architect-function",
+                "version": "1"
+              },
+              {
+                "kind": "Authorization",
+                "id": "architect-authority",
+                "version": "1"
+              },
+              {
+                "kind": "Evidence",
+                "id": "declared-synthetic-source",
+                "version": "1"
+              },
+              {
+                "kind": "CandidateSet",
+                "id": "architect-independent-intake-candidates",
+                "version": "1"
+              }
+            ],
+            "candidate_set_ref": {
+              "kind": "CandidateSet",
+              "id": "architect-independent-intake-candidates",
+              "version": "1"
+            },
+            "execution_mode": "offline_fixture"
+          },
+          "execution_path": "deterministic"
+        },
+        "organization_snapshot": {
+          "schema_version": "organization.v2",
+          "run_id": "synthetic-v2-commission",
+          "organizations": [
+            {
+              "organization_id": "architect",
+              "actor_id": "architect-actor",
+              "source_ids": [
+                "synthetic:v2-commission"
+              ],
+              "public_description": "Explicit synthetic V2 independent architect decision inputs.",
+              "public_location": {
+                "state": "unknown",
+                "reason_code": "synthetic_unsupplied",
+                "missing_refs": []
+              },
+              "members": [],
+              "assignments": [
+                {
+                  "role": "Architect",
+                  "function_ref": {
+                    "kind": "FunctionAssignment",
+                    "id": "architect-function",
+                    "version": "1"
+                  },
+                  "configuration_version": "1",
+                  "basis_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "declared-synthetic-source",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ]
+            }
+          ],
+          "authorizations": [
+            {
+              "ref": {
+                "kind": "Authorization",
+                "id": "architect-authority",
+                "version": "1"
+              },
+              "organization_id": "architect",
+              "actor_id": "architect-actor",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "architect-function",
+                "version": "1"
+              },
+              "action_ids": [
+                "ARCHITECT-A02"
+              ],
+              "scopes": [
+                {
+                  "kind": "assessment_case",
+                  "ref": {
+                    "kind": "OwnerCase",
+                    "id": "case",
+                    "version": "1"
+                  },
+                  "coverage_refs": [
+                    {
+                      "kind": "WorkScope",
+                      "id": "service-work",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "readable_refs": [
+                {
+                  "kind": "Authority",
+                  "id": "v2-client-commission",
+                  "version": "1"
+                },
+                {
+                  "kind": "Authority",
+                  "id": "v2-payer-payment",
+                  "version": "1"
+                },
+                {
+                  "kind": "ServiceRequest",
+                  "id": "v2-concept-request",
+                  "version": "1"
+                },
+                {
+                  "kind": "ServiceTerms",
+                  "id": "v2-primary-service-terms",
+                  "version": "1"
+                },
+                {
+                  "kind": "Capability",
+                  "id": "external-architect",
+                  "version": "1"
+                },
+                {
+                  "kind": "Qualification",
+                  "id": "external-qualification",
+                  "version": "1"
+                },
+                {
+                  "kind": "Method",
+                  "id": "concept-support",
+                  "version": "1"
+                },
+                {
+                  "kind": "WorkProfile",
+                  "id": "v2-concept-profile",
+                  "version": "1"
+                },
+                {
+                  "kind": "ResourceCalendar",
+                  "id": "v2-architect-calendar",
+                  "version": "1"
+                },
+                {
+                  "kind": "FeeBasis",
+                  "id": "v2-architect-fees",
+                  "version": "1"
+                },
+                {
+                  "kind": "DeliverableRequirement",
+                  "id": "concept-report",
+                  "version": "1"
+                },
+                {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                {
+                  "kind": "WorkScope",
+                  "id": "service-work",
+                  "version": "1"
+                },
+                {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                {
+                  "kind": "Organization",
+                  "id": "architect",
+                  "version": "1"
+                },
+                {
+                  "kind": "FunctionAssignment",
+                  "id": "architect-function",
+                  "version": "1"
+                },
+                {
+                  "kind": "Authorization",
+                  "id": "architect-authority",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                },
+                {
+                  "kind": "CandidateSet",
+                  "id": "architect-independent-intake-candidates",
+                  "version": "1"
+                }
+              ],
+              "tool_ids": [],
+              "validity": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 10
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              },
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ]
+            }
+          ],
+          "inactive_authorization_refs": []
+        },
+        "source_projection_envelope": {
+          "run_id": "synthetic-v2-commission",
+          "macro_version": "synthetic-v2-commission.v1",
+          "state_version": "architect-independent-intake:1",
+          "read_token": "synthetic-v2-commission:architect-independent-intake:read:1",
+          "business_time": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 10
+          },
+          "organization_id": "architect"
+        },
+        "supplemental_objects": [
+          {
+            "ref": {
+              "kind": "CandidateSet",
+              "id": "architect-independent-intake-candidates",
+              "version": "1"
+            },
+            "value": {
+              "operation_id": "v2-intake-10",
+              "scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "service-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "as_of": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "candidates": [
+                {
+                  "ref": {
+                    "kind": "ServiceTerms",
+                    "id": "v2-primary-service-terms",
+                    "version": "1"
+                  },
+                  "permitted_choices": [
+                    "accept",
+                    "counteroffer"
+                  ]
+                }
+              ],
+              "search_profile_ref": {
+                "kind": "Profile",
+                "id": "architect-independent-intake-space",
+                "version": "1"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "step_id": "owner-primary-selection",
+      "action_id": "OWN-A04",
+      "operation_id": "v2-selection-11",
+      "input_fixture": {
+        "fixture_version": "synthetic-owner-commission.v1",
+        "source_kind": "synthetic",
+        "organization_id": "owner",
+        "actor_id": "owner-actor",
+        "business_time": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 11
+        },
+        "assumptions": [
+          "All organizations, qualifications, permissions, costs, productivity and resource pools are synthetic",
+          "One explicit clock, one currency, one fixed location and declared constant physical capacity",
+          "Received service offers are not formal appointments, independent acceptance, invoices or receipts",
+          "V2 selects only the original primary offer; secondary remains unused source data.",
+          "Current owner capacity observations are explicitly authored at 11; original offered/issued/available times remain 10."
+        ],
+        "input": {
+          "scope_ref": {
+            "kind": "assessment_case",
+            "ref": {
+              "kind": "OwnerCase",
+              "id": "case",
+              "version": "1"
+            },
+            "coverage_refs": [
+              {
+                "kind": "WorkScope",
+                "id": "service-work",
+                "version": "1"
+              }
+            ]
+          },
+          "procurement_profile_ref": {
+            "kind": "ProcurementProfile",
+            "id": "procurement",
+            "version": "1"
+          },
+          "service_scope_ref": {
+            "kind": "ServiceScope",
+            "id": "design",
+            "version": "1"
+          },
+          "candidate_provider_refs": [
+            {
+              "kind": "EligibleProvider",
+              "id": "architect",
+              "version": "1"
+            }
+          ],
+          "candidates": [
+            {
+              "kind": "ServiceOffer",
+              "id": "primary",
+              "version": "1"
+            }
+          ],
+          "authority_ref": {
+            "kind": "Authorization",
+            "id": "owner-authority",
+            "version": "1"
+          },
+          "capacity_ref": {
+            "kind": "ManagementCapacity",
+            "id": "management",
+            "version": "1"
+          }
+        },
+        "objects": [
+          {
+            "ref": {
+              "kind": "OwnerCase",
+              "id": "case",
+              "version": "1"
+            },
+            "value": {
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ],
+              "ref": {
+                "kind": "OwnerCase",
+                "id": "case",
+                "version": "1"
+              },
+              "organization_id": "owner",
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "status": "active"
+            }
+          },
+          {
+            "ref": {
+              "kind": "Organization",
+              "id": "owner",
+              "version": "1"
+            },
+            "value": {
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ],
+              "ref": {
+                "kind": "Organization",
+                "id": "owner",
+                "version": "1"
+              },
+              "organization_id": "owner"
+            }
+          },
+          {
+            "ref": {
+              "kind": "ServiceScope",
+              "id": "design",
+              "version": "1"
+            },
+            "value": {
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ],
+              "ref": {
+                "kind": "ServiceScope",
+                "id": "design",
+                "version": "1"
+              },
+              "employer_organization_id": "owner",
+              "scope_ref": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "service-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "region_id": "HK",
+              "permitted_roles": [
+                "Architect"
+              ],
+              "service_codes": [
+                "concept_design"
+              ],
+              "requested_uses": [
+                "research"
+              ],
+              "responsibility_codes": [
+                "design_advice"
+              ],
+              "required_qualification_codes": [
+                "local_architect"
+              ],
+              "required_method_refs": [
+                {
+                  "kind": "Method",
+                  "id": "concept-support",
+                  "version": "1"
+                }
+              ],
+              "deliverable_refs": [
+                {
+                  "kind": "DeliverableRequirement",
+                  "id": "concept-report",
+                  "version": "1"
+                }
+              ],
+              "window_ref": {
+                "kind": "TimeWindow",
+                "id": "service-window",
+                "version": "1"
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 10
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "WorkScope",
+              "id": "service-work",
+              "version": "1"
+            },
+            "value": {
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ],
+              "ref": {
+                "kind": "WorkScope",
+                "id": "service-work",
+                "version": "1"
+              },
+              "scope_ref": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "service-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "service_codes": [
+                "concept_design"
+              ],
+              "requested_uses": [
+                "research"
+              ],
+              "responsibility_codes": [
+                "design_advice"
+              ],
+              "deliverable_refs": [
+                {
+                  "kind": "DeliverableRequirement",
+                  "id": "concept-report",
+                  "version": "1"
+                }
+              ],
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 10
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "DeliverableRequirement",
+              "id": "concept-report",
+              "version": "1"
+            },
+            "value": {
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ],
+              "ref": {
+                "kind": "DeliverableRequirement",
+                "id": "concept-report",
+                "version": "1"
+              },
+              "service_scope_ref": {
+                "kind": "ServiceScope",
+                "id": "design",
+                "version": "1"
+              },
+              "work_ref": {
+                "kind": "WorkScope",
+                "id": "service-work",
+                "version": "1"
+              },
+              "requested_use": "research",
+              "description": "Explicitly synthetic concept report"
+            }
+          },
+          {
+            "ref": {
+              "kind": "Method",
+              "id": "concept-support",
+              "version": "1"
+            },
+            "value": {
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ],
+              "ref": {
+                "kind": "Method",
+                "id": "concept-support",
+                "version": "1"
+              },
+              "purpose": "service_support",
+              "region_ids": [
+                "HK"
+              ],
+              "service_codes": [
+                "concept_design"
+              ],
+              "permitted_roles": [
+                "Architect"
+              ],
+              "allowed_uses": [
+                "research"
+              ],
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 10
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "TimeWindow",
+              "id": "service-window",
+              "version": "1"
+            },
+            "value": {
+              "start": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 12
+              },
+              "end": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 20
+              },
+              "bounds": "closed_open"
+            }
+          },
+          {
+            "ref": {
+              "kind": "FunctionAssignment",
+              "id": "owner-function",
+              "version": "1"
+            },
+            "value": {
+              "role": "Owner",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "owner-function",
+                "version": "1"
+              },
+              "configuration_version": "1",
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "FunctionAssignment",
+              "id": "architect-function",
+              "version": "1"
+            },
+            "value": {
+              "role": "Architect",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "architect-function",
+                "version": "1"
+              },
+              "configuration_version": "1",
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "FunctionAssignment",
+              "id": "internal-architect-function",
+              "version": "1"
+            },
+            "value": {
+              "role": "Architect",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "internal-architect-function",
+                "version": "1"
+              },
+              "configuration_version": "1",
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "Authorization",
+              "id": "owner-authority",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Authorization",
+                "id": "owner-authority",
+                "version": "1"
+              },
+              "organization_id": "owner",
+              "actor_id": "owner-actor",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "owner-function",
+                "version": "1"
+              },
+              "action_ids": [
+                "OWN-A04"
+              ],
+              "scopes": [
+                {
+                  "kind": "assessment_case",
+                  "ref": {
+                    "kind": "OwnerCase",
+                    "id": "case",
+                    "version": "1"
+                  },
+                  "coverage_refs": [
+                    {
+                      "kind": "WorkScope",
+                      "id": "service-work",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "readable_refs": [
+                {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                {
+                  "kind": "Organization",
+                  "id": "owner",
+                  "version": "1"
+                },
+                {
+                  "kind": "ServiceScope",
+                  "id": "design",
+                  "version": "1"
+                },
+                {
+                  "kind": "WorkScope",
+                  "id": "service-work",
+                  "version": "1"
+                },
+                {
+                  "kind": "DeliverableRequirement",
+                  "id": "concept-report",
+                  "version": "1"
+                },
+                {
+                  "kind": "Method",
+                  "id": "concept-support",
+                  "version": "1"
+                },
+                {
+                  "kind": "TimeWindow",
+                  "id": "service-window",
+                  "version": "1"
+                },
+                {
+                  "kind": "FunctionAssignment",
+                  "id": "owner-function",
+                  "version": "1"
+                },
+                {
+                  "kind": "FunctionAssignment",
+                  "id": "architect-function",
+                  "version": "1"
+                },
+                {
+                  "kind": "FunctionAssignment",
+                  "id": "internal-architect-function",
+                  "version": "1"
+                },
+                {
+                  "kind": "Authorization",
+                  "id": "owner-authority",
+                  "version": "1"
+                },
+                {
+                  "kind": "Authorization",
+                  "id": "architect-authority",
+                  "version": "1"
+                },
+                {
+                  "kind": "Authorization",
+                  "id": "internal-service-authority",
+                  "version": "1"
+                },
+                {
+                  "kind": "Qualification",
+                  "id": "external-qualification",
+                  "version": "1"
+                },
+                {
+                  "kind": "Capability",
+                  "id": "external-architect",
+                  "version": "1"
+                },
+                {
+                  "kind": "Qualification",
+                  "id": "internal-qualification",
+                  "version": "1"
+                },
+                {
+                  "kind": "Capability",
+                  "id": "internal-architect",
+                  "version": "1"
+                },
+                {
+                  "kind": "EligibleProvider",
+                  "id": "architect",
+                  "version": "1"
+                },
+                {
+                  "kind": "ContractTerms",
+                  "id": "primary-terms",
+                  "version": "1"
+                },
+                {
+                  "kind": "ServiceOffer",
+                  "id": "primary",
+                  "version": "1"
+                },
+                {
+                  "kind": "ContractTerms",
+                  "id": "secondary-terms",
+                  "version": "1"
+                },
+                {
+                  "kind": "ServiceOffer",
+                  "id": "secondary",
+                  "version": "1"
+                },
+                {
+                  "kind": "Issue",
+                  "id": "clarify-qualification",
+                  "version": "1"
+                },
+                {
+                  "kind": "Requirement",
+                  "id": "commission-permission",
+                  "version": "1"
+                },
+                {
+                  "kind": "ResourcePool",
+                  "id": "shared-staff",
+                  "version": "1"
+                },
+                {
+                  "kind": "ManagementCapacity",
+                  "id": "management",
+                  "version": "1"
+                },
+                {
+                  "kind": "InternalServicePlan",
+                  "id": "internal-design-plan",
+                  "version": "1"
+                },
+                {
+                  "kind": "Task",
+                  "id": "existing-design",
+                  "version": "1"
+                },
+                {
+                  "kind": "ProcurementProfile",
+                  "id": "procurement",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                },
+                {
+                  "kind": "CandidateSet",
+                  "id": "owner-primary-selection-candidates",
+                  "version": "1"
+                }
+              ],
+              "tool_ids": [],
+              "validity": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 10
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              },
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "Authorization",
+              "id": "architect-authority",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Authorization",
+                "id": "architect-authority",
+                "version": "1"
+              },
+              "organization_id": "architect",
+              "actor_id": "architect-actor",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "architect-function",
+                "version": "1"
+              },
+              "action_ids": [
+                "ARCHITECT-A02"
+              ],
+              "scopes": [
+                {
+                  "kind": "assessment_case",
+                  "ref": {
+                    "kind": "OwnerCase",
+                    "id": "case",
+                    "version": "1"
+                  },
+                  "coverage_refs": [
+                    {
+                      "kind": "WorkScope",
+                      "id": "service-work",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "readable_refs": [],
+              "tool_ids": [],
+              "validity": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 10
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              },
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "Authorization",
+              "id": "internal-service-authority",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Authorization",
+                "id": "internal-service-authority",
+                "version": "1"
+              },
+              "organization_id": "owner",
+              "actor_id": "internal-architect",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "internal-architect-function",
+                "version": "1"
+              },
+              "action_ids": [
+                "ARCHITECT-A02"
+              ],
+              "scopes": [
+                {
+                  "kind": "assessment_case",
+                  "ref": {
+                    "kind": "OwnerCase",
+                    "id": "case",
+                    "version": "1"
+                  },
+                  "coverage_refs": [
+                    {
+                      "kind": "WorkScope",
+                      "id": "service-work",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "readable_refs": [],
+              "tool_ids": [],
+              "validity": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 10
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              },
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "Qualification",
+              "id": "external-qualification",
+              "version": "1"
+            },
+            "value": {
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ],
+              "ref": {
+                "kind": "Qualification",
+                "id": "external-qualification",
+                "version": "1"
+              },
+              "organization_id": "architect",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "architect-function",
+                "version": "1"
+              },
+              "code": "local_architect",
+              "region_ids": [
+                "HK"
+              ],
+              "service_codes": [
+                "concept_design"
+              ],
+              "standing": {
+                "state": "known",
+                "value": true
+              },
+              "verified_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 10
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "Capability",
+              "id": "external-architect",
+              "version": "1"
+            },
+            "value": {
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ],
+              "ref": {
+                "kind": "Capability",
+                "id": "external-architect",
+                "version": "1"
+              },
+              "organization_id": "architect",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "architect-function",
+                "version": "1"
+              },
+              "region_ids": {
+                "state": "known",
+                "value": [
+                  "HK"
+                ]
+              },
+              "service_codes": {
+                "state": "known",
+                "value": [
+                  "concept_design"
+                ]
+              },
+              "allowed_uses": {
+                "state": "known",
+                "value": [
+                  "research"
+                ]
+              },
+              "responsibility_codes": {
+                "state": "known",
+                "value": [
+                  "design_advice"
+                ]
+              },
+              "qualification_refs": [
+                {
+                  "kind": "Qualification",
+                  "id": "external-qualification",
+                  "version": "1"
+                }
+              ],
+              "qualification_coverage": "complete",
+              "method_refs": {
+                "state": "known",
+                "value": [
+                  {
+                    "kind": "Method",
+                    "id": "concept-support",
+                    "version": "1"
+                  }
+                ]
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 10
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "Qualification",
+              "id": "internal-qualification",
+              "version": "1"
+            },
+            "value": {
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ],
+              "ref": {
+                "kind": "Qualification",
+                "id": "internal-qualification",
+                "version": "1"
+              },
+              "organization_id": "owner",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "internal-architect-function",
+                "version": "1"
+              },
+              "code": "local_architect",
+              "region_ids": [
+                "HK"
+              ],
+              "service_codes": [
+                "concept_design"
+              ],
+              "standing": {
+                "state": "known",
+                "value": true
+              },
+              "verified_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 10
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "Capability",
+              "id": "internal-architect",
+              "version": "1"
+            },
+            "value": {
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ],
+              "ref": {
+                "kind": "Capability",
+                "id": "internal-architect",
+                "version": "1"
+              },
+              "organization_id": "owner",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "internal-architect-function",
+                "version": "1"
+              },
+              "region_ids": {
+                "state": "known",
+                "value": [
+                  "HK"
+                ]
+              },
+              "service_codes": {
+                "state": "known",
+                "value": [
+                  "concept_design"
+                ]
+              },
+              "allowed_uses": {
+                "state": "known",
+                "value": [
+                  "research"
+                ]
+              },
+              "responsibility_codes": {
+                "state": "known",
+                "value": [
+                  "design_advice"
+                ]
+              },
+              "qualification_refs": [
+                {
+                  "kind": "Qualification",
+                  "id": "internal-qualification",
+                  "version": "1"
+                }
+              ],
+              "qualification_coverage": "complete",
+              "method_refs": {
+                "state": "known",
+                "value": [
+                  {
+                    "kind": "Method",
+                    "id": "concept-support",
+                    "version": "1"
+                  }
+                ]
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 10
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "EligibleProvider",
+              "id": "architect",
+              "version": "1"
+            },
+            "value": {
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ],
+              "ref": {
+                "kind": "EligibleProvider",
+                "id": "architect",
+                "version": "1"
+              },
+              "organization_id": "architect",
+              "actor_id": "architect-actor",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "architect-function",
+                "version": "1"
+              },
+              "capability_ref": {
+                "kind": "Capability",
+                "id": "external-architect",
+                "version": "1"
+              },
+              "invitation_permitted": {
+                "state": "known",
+                "value": true
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 10
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              },
+              "status": "active"
+            }
+          },
+          {
+            "ref": {
+              "kind": "ContractTerms",
+              "id": "primary-terms",
+              "version": "1"
+            },
+            "value": {
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ],
+              "ref": {
+                "kind": "ContractTerms",
+                "id": "primary-terms",
+                "version": "1"
+              },
+              "service_scope_ref": {
+                "kind": "ServiceScope",
+                "id": "design",
+                "version": "1"
+              },
+              "scope_ref": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "service-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "employer_organization_id": "owner",
+              "provider_organization_id": "architect",
+              "payer_organization_id": "owner",
+              "payer_actor_id": "owner-actor",
+              "payer_function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "owner-function",
+                "version": "1"
+              },
+              "payer_authority_ref": {
+                "kind": "Authorization",
+                "id": "owner-authority",
+                "version": "1"
+              },
+              "payer_authority_action_id": "OWN-A04",
+              "fee": {
+                "state": "known",
+                "value": {
+                  "value": "30",
+                  "currency": "HKD",
+                  "basis_ref": {
+                    "kind": "Evidence",
+                    "id": "declared-synthetic-source",
+                    "version": "1"
+                  }
+                }
+              },
+              "service_codes": {
+                "state": "known",
+                "value": [
+                  "concept_design"
+                ]
+              },
+              "requested_uses": {
+                "state": "known",
+                "value": [
+                  "research"
+                ]
+              },
+              "responsibility_codes": {
+                "state": "known",
+                "value": [
+                  "design_advice"
+                ]
+              },
+              "deliverable_refs": [
+                {
+                  "kind": "DeliverableRequirement",
+                  "id": "concept-report",
+                  "version": "1"
+                }
+              ],
+              "window_ref": {
+                "kind": "TimeWindow",
+                "id": "service-window",
+                "version": "1"
+              },
+              "condition_refs": [],
+              "authority_limits": {
+                "state": "known",
+                "value": [
+                  "advice_only"
+                ]
+              },
+              "status": "offered",
+              "issued_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 10
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "ServiceOffer",
+              "id": "primary",
+              "version": "1"
+            },
+            "value": {
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ],
+              "ref": {
+                "kind": "ServiceOffer",
+                "id": "primary",
+                "version": "1"
+              },
+              "provider_ref": {
+                "kind": "EligibleProvider",
+                "id": "architect",
+                "version": "1"
+              },
+              "service_scope_ref": {
+                "kind": "ServiceScope",
+                "id": "design",
+                "version": "1"
+              },
+              "terms_ref": {
+                "kind": "ContractTerms",
+                "id": "primary-terms",
+                "version": "1"
+              },
+              "author_actor_id": "architect-actor",
+              "author_function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "architect-function",
+                "version": "1"
+              },
+              "authority_ref": {
+                "kind": "Authorization",
+                "id": "architect-authority",
+                "version": "1"
+              },
+              "authority_action_id": "ARCHITECT-A02",
+              "priority": {
+                "state": "known",
+                "value": 1
+              },
+              "received_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 10
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              },
+              "status": "offered"
+            }
+          },
+          {
+            "ref": {
+              "kind": "ContractTerms",
+              "id": "secondary-terms",
+              "version": "1"
+            },
+            "value": {
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ],
+              "ref": {
+                "kind": "ContractTerms",
+                "id": "secondary-terms",
+                "version": "1"
+              },
+              "service_scope_ref": {
+                "kind": "ServiceScope",
+                "id": "design",
+                "version": "1"
+              },
+              "scope_ref": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "service-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "employer_organization_id": "owner",
+              "provider_organization_id": "architect",
+              "payer_organization_id": "owner",
+              "payer_actor_id": "owner-actor",
+              "payer_function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "owner-function",
+                "version": "1"
+              },
+              "payer_authority_ref": {
+                "kind": "Authorization",
+                "id": "owner-authority",
+                "version": "1"
+              },
+              "payer_authority_action_id": "OWN-A04",
+              "fee": {
+                "state": "known",
+                "value": {
+                  "value": "20",
+                  "currency": "HKD",
+                  "basis_ref": {
+                    "kind": "Evidence",
+                    "id": "declared-synthetic-source",
+                    "version": "1"
+                  }
+                }
+              },
+              "service_codes": {
+                "state": "known",
+                "value": [
+                  "concept_design"
+                ]
+              },
+              "requested_uses": {
+                "state": "known",
+                "value": [
+                  "research"
+                ]
+              },
+              "responsibility_codes": {
+                "state": "known",
+                "value": [
+                  "design_advice"
+                ]
+              },
+              "deliverable_refs": [
+                {
+                  "kind": "DeliverableRequirement",
+                  "id": "concept-report",
+                  "version": "1"
+                }
+              ],
+              "window_ref": {
+                "kind": "TimeWindow",
+                "id": "service-window",
+                "version": "1"
+              },
+              "condition_refs": [],
+              "authority_limits": {
+                "state": "known",
+                "value": [
+                  "advice_only"
+                ]
+              },
+              "status": "offered",
+              "issued_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 10
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "ServiceOffer",
+              "id": "secondary",
+              "version": "1"
+            },
+            "value": {
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ],
+              "ref": {
+                "kind": "ServiceOffer",
+                "id": "secondary",
+                "version": "1"
+              },
+              "provider_ref": {
+                "kind": "EligibleProvider",
+                "id": "architect",
+                "version": "1"
+              },
+              "service_scope_ref": {
+                "kind": "ServiceScope",
+                "id": "design",
+                "version": "1"
+              },
+              "terms_ref": {
+                "kind": "ContractTerms",
+                "id": "secondary-terms",
+                "version": "1"
+              },
+              "author_actor_id": "architect-actor",
+              "author_function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "architect-function",
+                "version": "1"
+              },
+              "authority_ref": {
+                "kind": "Authorization",
+                "id": "architect-authority",
+                "version": "1"
+              },
+              "authority_action_id": "ARCHITECT-A02",
+              "priority": {
+                "state": "known",
+                "value": 2
+              },
+              "received_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 10
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              },
+              "status": "offered"
+            }
+          },
+          {
+            "ref": {
+              "kind": "Issue",
+              "id": "clarify-qualification",
+              "version": "1"
+            },
+            "value": {
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ],
+              "ref": {
+                "kind": "Issue",
+                "id": "clarify-qualification",
+                "version": "1"
+              },
+              "service_scope_ref": {
+                "kind": "ServiceScope",
+                "id": "design",
+                "version": "1"
+              },
+              "scope_ref": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "service-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "provider_refs": [
+                {
+                  "kind": "EligibleProvider",
+                  "id": "architect",
+                  "version": "1"
+                }
+              ],
+              "offer_refs": [
+                {
+                  "kind": "ServiceOffer",
+                  "id": "primary",
+                  "version": "1"
+                }
+              ],
+              "question": "Clarify the exact qualification scope",
+              "status": "unresolved",
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 10
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "Requirement",
+              "id": "commission-permission",
+              "version": "1"
+            },
+            "value": {
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ],
+              "ref": {
+                "kind": "Requirement",
+                "id": "commission-permission",
+                "version": "1"
+              },
+              "service_scope_ref": {
+                "kind": "ServiceScope",
+                "id": "design",
+                "version": "1"
+              },
+              "terms_ref": null,
+              "scope_ref": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "service-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "permitted": {
+                "state": "known",
+                "value": true
+              },
+              "verified_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 10
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "ResourcePool",
+              "id": "shared-staff",
+              "version": "1"
+            },
+            "value": {
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ],
+              "ref": {
+                "kind": "ResourcePool",
+                "id": "shared-staff",
+                "version": "1"
+              },
+              "organization_id": "owner",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "internal-architect-function",
+                "version": "1"
+              },
+              "authority_ref": {
+                "kind": "Authorization",
+                "id": "owner-authority",
+                "version": "1"
+              },
+              "service_authority_ref": {
+                "kind": "Authorization",
+                "id": "internal-service-authority",
+                "version": "1"
+              },
+              "service_actor_id": "internal-architect",
+              "service_authority_action_id": "ARCHITECT-A02",
+              "capability_ref": {
+                "kind": "Capability",
+                "id": "internal-architect",
+                "version": "1"
+              },
+              "purpose_codes": [
+                "management",
+                "internal_service"
+              ],
+              "region_id": "HK",
+              "total": {
+                "state": "known",
+                "value": {
+                  "value": "3",
+                  "unit": "person",
+                  "basis_ref": {
+                    "kind": "Evidence",
+                    "id": "declared-synthetic-source",
+                    "version": "1"
+                  }
+                }
+              },
+              "commitments": [
+                {
+                  "ref": {
+                    "kind": "ResourceCommitment",
+                    "id": "other-project",
+                    "version": "1"
+                  },
+                  "quantity": {
+                    "value": "1",
+                    "unit": "person",
+                    "basis_ref": {
+                      "kind": "Evidence",
+                      "id": "declared-synthetic-source",
+                      "version": "1"
+                    }
+                  },
+                  "window": {
+                    "start": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 13
+                    },
+                    "end": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 16
+                    },
+                    "bounds": "closed_open"
+                  }
+                }
+              ],
+              "as_of": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 11
+              },
+              "coverage": "complete",
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 10
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "ManagementCapacity",
+              "id": "management",
+              "version": "1"
+            },
+            "value": {
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ],
+              "ref": {
+                "kind": "ManagementCapacity",
+                "id": "management",
+                "version": "1"
+              },
+              "organization_id": "owner",
+              "resource_refs": [
+                {
+                  "kind": "ResourcePool",
+                  "id": "shared-staff",
+                  "version": "1"
+                }
+              ],
+              "as_of": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 11
+              },
+              "coverage": "complete"
+            }
+          },
+          {
+            "ref": {
+              "kind": "InternalServicePlan",
+              "id": "internal-design-plan",
+              "version": "1"
+            },
+            "value": {
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ],
+              "ref": {
+                "kind": "InternalServicePlan",
+                "id": "internal-design-plan",
+                "version": "1"
+              },
+              "organization_id": "owner",
+              "service_scope_ref": {
+                "kind": "ServiceScope",
+                "id": "design",
+                "version": "1"
+              },
+              "allocations": [
+                {
+                  "resource_ref": {
+                    "kind": "ResourcePool",
+                    "id": "shared-staff",
+                    "version": "1"
+                  },
+                  "window_ref": {
+                    "kind": "TimeWindow",
+                    "id": "service-window",
+                    "version": "1"
+                  },
+                  "quantity": {
+                    "value": "1.5",
+                    "unit": "person",
+                    "basis_ref": {
+                      "kind": "Evidence",
+                      "id": "declared-synthetic-source",
+                      "version": "1"
+                    }
+                  },
+                  "task_target": {
+                    "kind": "proposed",
+                    "local_key": "internal-design",
+                    "scope_ref": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "service-work",
+                          "version": "1"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ],
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 10
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "Task",
+              "id": "existing-design",
+              "version": "1"
+            },
+            "value": {
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ],
+              "ref": {
+                "kind": "Task",
+                "id": "existing-design",
+                "version": "1"
+              },
+              "organization_id": "owner",
+              "service_scope_ref": {
+                "kind": "ServiceScope",
+                "id": "design",
+                "version": "1"
+              },
+              "scope_ref": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "service-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "status": "active",
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 10
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "ProcurementProfile",
+              "id": "procurement",
+              "version": "1"
+            },
+            "value": {
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ],
+              "ref": {
+                "kind": "ProcurementProfile",
+                "id": "procurement",
+                "version": "1"
+              },
+              "organization_id": "owner",
+              "scope_ref": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "service-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "service_scope_ref": {
+                "kind": "ServiceScope",
+                "id": "design",
+                "version": "1"
+              },
+              "policy": {
+                "state": "known",
+                "value": "evaluate"
+              },
+              "on_unavailable": {
+                "state": "known",
+                "value": "retender"
+              },
+              "permitted_roles": [
+                "Architect"
+              ],
+              "fee_cap": {
+                "state": "known",
+                "value": {
+                  "value": "100",
+                  "currency": "HKD",
+                  "basis_ref": {
+                    "kind": "Evidence",
+                    "id": "declared-synthetic-source",
+                    "version": "1"
+                  }
+                }
+              },
+              "invitation_provider_refs": [
+                {
+                  "kind": "EligibleProvider",
+                  "id": "architect",
+                  "version": "1"
+                }
+              ],
+              "clarification_issue_refs": [
+                {
+                  "kind": "Issue",
+                  "id": "clarify-qualification",
+                  "version": "1"
+                }
+              ],
+              "management_allocations": [
+                {
+                  "resource_ref": {
+                    "kind": "ResourcePool",
+                    "id": "shared-staff",
+                    "version": "1"
+                  },
+                  "window_ref": {
+                    "kind": "TimeWindow",
+                    "id": "service-window",
+                    "version": "1"
+                  },
+                  "quantity": {
+                    "value": "0.5",
+                    "unit": "person",
+                    "basis_ref": {
+                      "kind": "Evidence",
+                      "id": "declared-synthetic-source",
+                      "version": "1"
+                    }
+                  },
+                  "task_target": {
+                    "kind": "proposed",
+                    "local_key": "manage-service",
+                    "scope_ref": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "service-work",
+                          "version": "1"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ],
+              "internal_plan_ref": {
+                "kind": "InternalServicePlan",
+                "id": "internal-design-plan",
+                "version": "1"
+              },
+              "required_condition_refs": [
+                {
+                  "kind": "Requirement",
+                  "id": "commission-permission",
+                  "version": "1"
+                }
+              ],
+              "permitted_authority_codes": {
+                "state": "known",
+                "value": [
+                  "advice_only"
+                ]
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 10
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "Evidence",
+              "id": "declared-synthetic-source",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Evidence",
+                "id": "declared-synthetic-source",
+                "version": "1"
+              },
+              "source_kind": "synthetic",
+              "basis_kind": "assumed",
+              "locator": "tests/fixtures/roles/lifecycle_v2_commission_inputs.v1.json#owner-primary-selection",
+              "content_hash": "5c6a5ec95113e7e1b0e8d39728a9c569984aa222ad2d38234dcea6de6361e81d",
+              "effective_window": null
+            }
+          }
+        ]
+      },
+      "expected_kind": "completed",
+      "expected_choice": "accept",
+      "offline_binding": {
+        "schema_factory": "src.actions.contracts.owner_commission_objects:owner_commission_schemas",
+        "source_note": "Explicit synthetic V2 independent commission decision inputs and authored read grants; no native acceptance receipt or appointment.",
+        "invocation": {
+          "schema_version": "role-contract-invocation.v1",
+          "context": {
+            "run_id": "synthetic-v2-commission",
+            "actor_id": "owner-actor",
+            "function_ref": {
+              "kind": "FunctionAssignment",
+              "id": "owner-function",
+              "version": "1"
+            },
+            "authorization_refs": [
+              {
+                "kind": "Authorization",
+                "id": "owner-authority",
+                "version": "1"
+              }
+            ],
+            "operation_id": "v2-selection-11",
+            "contract_ref": {
+              "kind": "ActionContract",
+              "id": "OWN-A04",
+              "version": "1"
+            },
+            "task_ref": {
+              "kind": "DecisionTask",
+              "id": "v2-selection-11-task",
+              "version": "1"
+            },
+            "scope": {
+              "kind": "assessment_case",
+              "ref": {
+                "kind": "OwnerCase",
+                "id": "case",
+                "version": "1"
+              },
+              "coverage_refs": [
+                {
+                  "kind": "WorkScope",
+                  "id": "service-work",
+                  "version": "1"
+                }
+              ]
+            },
+            "business_time": {
+              "clock_ref": {
+                "kind": "ClockProfile",
+                "id": "business",
+                "version": "1"
+              },
+              "offset": 11
+            },
+            "read_token": "synthetic-v2-commission:owner-primary-selection:read:1",
+            "visible_refs": [
+              {
+                "kind": "OwnerCase",
+                "id": "case",
+                "version": "1"
+              },
+              {
+                "kind": "Organization",
+                "id": "owner",
+                "version": "1"
+              },
+              {
+                "kind": "ServiceScope",
+                "id": "design",
+                "version": "1"
+              },
+              {
+                "kind": "WorkScope",
+                "id": "service-work",
+                "version": "1"
+              },
+              {
+                "kind": "DeliverableRequirement",
+                "id": "concept-report",
+                "version": "1"
+              },
+              {
+                "kind": "Method",
+                "id": "concept-support",
+                "version": "1"
+              },
+              {
+                "kind": "TimeWindow",
+                "id": "service-window",
+                "version": "1"
+              },
+              {
+                "kind": "FunctionAssignment",
+                "id": "owner-function",
+                "version": "1"
+              },
+              {
+                "kind": "FunctionAssignment",
+                "id": "architect-function",
+                "version": "1"
+              },
+              {
+                "kind": "FunctionAssignment",
+                "id": "internal-architect-function",
+                "version": "1"
+              },
+              {
+                "kind": "Authorization",
+                "id": "owner-authority",
+                "version": "1"
+              },
+              {
+                "kind": "Authorization",
+                "id": "architect-authority",
+                "version": "1"
+              },
+              {
+                "kind": "Authorization",
+                "id": "internal-service-authority",
+                "version": "1"
+              },
+              {
+                "kind": "Qualification",
+                "id": "external-qualification",
+                "version": "1"
+              },
+              {
+                "kind": "Capability",
+                "id": "external-architect",
+                "version": "1"
+              },
+              {
+                "kind": "Qualification",
+                "id": "internal-qualification",
+                "version": "1"
+              },
+              {
+                "kind": "Capability",
+                "id": "internal-architect",
+                "version": "1"
+              },
+              {
+                "kind": "EligibleProvider",
+                "id": "architect",
+                "version": "1"
+              },
+              {
+                "kind": "ContractTerms",
+                "id": "primary-terms",
+                "version": "1"
+              },
+              {
+                "kind": "ServiceOffer",
+                "id": "primary",
+                "version": "1"
+              },
+              {
+                "kind": "ContractTerms",
+                "id": "secondary-terms",
+                "version": "1"
+              },
+              {
+                "kind": "ServiceOffer",
+                "id": "secondary",
+                "version": "1"
+              },
+              {
+                "kind": "Issue",
+                "id": "clarify-qualification",
+                "version": "1"
+              },
+              {
+                "kind": "Requirement",
+                "id": "commission-permission",
+                "version": "1"
+              },
+              {
+                "kind": "ResourcePool",
+                "id": "shared-staff",
+                "version": "1"
+              },
+              {
+                "kind": "ManagementCapacity",
+                "id": "management",
+                "version": "1"
+              },
+              {
+                "kind": "InternalServicePlan",
+                "id": "internal-design-plan",
+                "version": "1"
+              },
+              {
+                "kind": "Task",
+                "id": "existing-design",
+                "version": "1"
+              },
+              {
+                "kind": "ProcurementProfile",
+                "id": "procurement",
+                "version": "1"
+              },
+              {
+                "kind": "Evidence",
+                "id": "declared-synthetic-source",
+                "version": "1"
+              },
+              {
+                "kind": "CandidateSet",
+                "id": "owner-primary-selection-candidates",
+                "version": "1"
+              }
+            ],
+            "candidate_set_ref": {
+              "kind": "CandidateSet",
+              "id": "owner-primary-selection-candidates",
+              "version": "1"
+            },
+            "execution_mode": "offline_fixture"
+          },
+          "execution_path": "deterministic"
+        },
+        "organization_snapshot": {
+          "schema_version": "organization.v2",
+          "run_id": "synthetic-v2-commission",
+          "organizations": [
+            {
+              "organization_id": "owner",
+              "actor_id": "owner-actor",
+              "source_ids": [
+                "synthetic:v2-commission"
+              ],
+              "public_description": "Explicit synthetic V2 independent owner decision inputs.",
+              "public_location": {
+                "state": "unknown",
+                "reason_code": "synthetic_unsupplied",
+                "missing_refs": []
+              },
+              "members": [],
+              "assignments": [
+                {
+                  "role": "Owner",
+                  "function_ref": {
+                    "kind": "FunctionAssignment",
+                    "id": "owner-function",
+                    "version": "1"
+                  },
+                  "configuration_version": "1",
+                  "basis_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "declared-synthetic-source",
+                      "version": "1"
+                    }
+                  ]
+                },
+                {
+                  "role": "Architect",
+                  "function_ref": {
+                    "kind": "FunctionAssignment",
+                    "id": "internal-architect-function",
+                    "version": "1"
+                  },
+                  "configuration_version": "1",
+                  "basis_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "declared-synthetic-source",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ]
+            }
+          ],
+          "authorizations": [
+            {
+              "ref": {
+                "kind": "Authorization",
+                "id": "owner-authority",
+                "version": "1"
+              },
+              "organization_id": "owner",
+              "actor_id": "owner-actor",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "owner-function",
+                "version": "1"
+              },
+              "action_ids": [
+                "OWN-A04"
+              ],
+              "scopes": [
+                {
+                  "kind": "assessment_case",
+                  "ref": {
+                    "kind": "OwnerCase",
+                    "id": "case",
+                    "version": "1"
+                  },
+                  "coverage_refs": [
+                    {
+                      "kind": "WorkScope",
+                      "id": "service-work",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "readable_refs": [
+                {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                {
+                  "kind": "Organization",
+                  "id": "owner",
+                  "version": "1"
+                },
+                {
+                  "kind": "ServiceScope",
+                  "id": "design",
+                  "version": "1"
+                },
+                {
+                  "kind": "WorkScope",
+                  "id": "service-work",
+                  "version": "1"
+                },
+                {
+                  "kind": "DeliverableRequirement",
+                  "id": "concept-report",
+                  "version": "1"
+                },
+                {
+                  "kind": "Method",
+                  "id": "concept-support",
+                  "version": "1"
+                },
+                {
+                  "kind": "TimeWindow",
+                  "id": "service-window",
+                  "version": "1"
+                },
+                {
+                  "kind": "FunctionAssignment",
+                  "id": "owner-function",
+                  "version": "1"
+                },
+                {
+                  "kind": "FunctionAssignment",
+                  "id": "architect-function",
+                  "version": "1"
+                },
+                {
+                  "kind": "FunctionAssignment",
+                  "id": "internal-architect-function",
+                  "version": "1"
+                },
+                {
+                  "kind": "Authorization",
+                  "id": "owner-authority",
+                  "version": "1"
+                },
+                {
+                  "kind": "Authorization",
+                  "id": "architect-authority",
+                  "version": "1"
+                },
+                {
+                  "kind": "Authorization",
+                  "id": "internal-service-authority",
+                  "version": "1"
+                },
+                {
+                  "kind": "Qualification",
+                  "id": "external-qualification",
+                  "version": "1"
+                },
+                {
+                  "kind": "Capability",
+                  "id": "external-architect",
+                  "version": "1"
+                },
+                {
+                  "kind": "Qualification",
+                  "id": "internal-qualification",
+                  "version": "1"
+                },
+                {
+                  "kind": "Capability",
+                  "id": "internal-architect",
+                  "version": "1"
+                },
+                {
+                  "kind": "EligibleProvider",
+                  "id": "architect",
+                  "version": "1"
+                },
+                {
+                  "kind": "ContractTerms",
+                  "id": "primary-terms",
+                  "version": "1"
+                },
+                {
+                  "kind": "ServiceOffer",
+                  "id": "primary",
+                  "version": "1"
+                },
+                {
+                  "kind": "ContractTerms",
+                  "id": "secondary-terms",
+                  "version": "1"
+                },
+                {
+                  "kind": "ServiceOffer",
+                  "id": "secondary",
+                  "version": "1"
+                },
+                {
+                  "kind": "Issue",
+                  "id": "clarify-qualification",
+                  "version": "1"
+                },
+                {
+                  "kind": "Requirement",
+                  "id": "commission-permission",
+                  "version": "1"
+                },
+                {
+                  "kind": "ResourcePool",
+                  "id": "shared-staff",
+                  "version": "1"
+                },
+                {
+                  "kind": "ManagementCapacity",
+                  "id": "management",
+                  "version": "1"
+                },
+                {
+                  "kind": "InternalServicePlan",
+                  "id": "internal-design-plan",
+                  "version": "1"
+                },
+                {
+                  "kind": "Task",
+                  "id": "existing-design",
+                  "version": "1"
+                },
+                {
+                  "kind": "ProcurementProfile",
+                  "id": "procurement",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                },
+                {
+                  "kind": "CandidateSet",
+                  "id": "owner-primary-selection-candidates",
+                  "version": "1"
+                }
+              ],
+              "tool_ids": [],
+              "validity": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 10
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              },
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "declared-synthetic-source",
+                  "version": "1"
+                }
+              ]
+            }
+          ],
+          "inactive_authorization_refs": []
+        },
+        "source_projection_envelope": {
+          "run_id": "synthetic-v2-commission",
+          "macro_version": "synthetic-v2-commission.v1",
+          "state_version": "owner-primary-selection:1",
+          "read_token": "synthetic-v2-commission:owner-primary-selection:read:1",
+          "business_time": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 11
+          },
+          "organization_id": "owner"
+        },
+        "supplemental_objects": [
+          {
+            "ref": {
+              "kind": "CandidateSet",
+              "id": "owner-primary-selection-candidates",
+              "version": "1"
+            },
+            "value": {
+              "operation_id": "v2-selection-11",
+              "scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "service-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "as_of": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 11
+              },
+              "candidates": [
+                {
+                  "ref": {
+                    "kind": "EligibleProvider",
+                    "id": "architect",
+                    "version": "1"
+                  },
+                  "permitted_choices": [
+                    "invite",
+                    "clarify"
+                  ]
+                },
+                {
+                  "ref": {
+                    "kind": "ServiceOffer",
+                    "id": "primary",
+                    "version": "1"
+                  },
+                  "permitted_choices": [
+                    "accept"
+                  ]
+                }
+              ],
+              "search_profile_ref": {
+                "kind": "Profile",
+                "id": "owner-primary-selection-space",
+                "version": "1"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "terms_mapping": {
+    "status": "declared_mapping_actual_reception_pending",
+    "owner_offer_ref": {
+      "kind": "ServiceOffer",
+      "id": "primary",
+      "version": "1"
+    },
+    "owner_contract_terms_ref": {
+      "kind": "ContractTerms",
+      "id": "primary-terms",
+      "version": "1"
+    },
+    "architect_service_terms_ref": {
+      "kind": "ServiceTerms",
+      "id": "v2-primary-service-terms",
+      "version": "1"
+    },
+    "scope": {
+      "kind": "assessment_case",
+      "ref": {
+        "kind": "OwnerCase",
+        "id": "case",
+        "version": "1"
+      },
+      "coverage_refs": [
+        {
+          "kind": "WorkScope",
+          "id": "service-work",
+          "version": "1"
+        }
+      ]
+    },
+    "provider_organization_id": "architect",
+    "provider_actor_id": "architect-actor",
+    "employer_organization_id": "owner",
+    "client_actor_id": "owner-actor",
+    "payer_organization_id": "owner",
+    "payer_actor_id": "owner-actor",
+    "fee": {
+      "state": "known",
+      "value": {
+        "value": "30",
+        "currency": "HKD",
+        "basis_ref": {
+          "kind": "Evidence",
+          "id": "declared-synthetic-source",
+          "version": "1"
+        }
+      }
+    },
+    "service_codes": {
+      "state": "known",
+      "value": [
+        "concept_design"
+      ]
+    },
+    "requested_uses": {
+      "state": "known",
+      "value": [
+        "research"
+      ]
+    },
+    "responsibility_codes": {
+      "state": "known",
+      "value": [
+        "design_advice"
+      ]
+    },
+    "deliverable_refs": [
+      {
+        "kind": "DeliverableRequirement",
+        "id": "concept-report",
+        "version": "1"
+      }
+    ],
+    "desired_window": {
+      "start": {
+        "clock_ref": {
+          "kind": "ClockProfile",
+          "id": "business",
+          "version": "1"
+        },
+        "offset": 12
+      },
+      "end": {
+        "clock_ref": {
+          "kind": "ClockProfile",
+          "id": "business",
+          "version": "1"
+        },
+        "offset": 20
+      },
+      "bounds": "closed_open"
+    },
+    "condition_refs": [],
+    "authority_limits": {
+      "state": "known",
+      "value": [
+        "advice_only"
+      ]
+    },
+    "owner_required_condition_refs": [
+      {
+        "kind": "Requirement",
+        "id": "commission-permission",
+        "version": "1"
+      }
+    ],
+    "note": "Separate typed projections; explicit mapping is not an actual acceptance or appointment receipt."
+  },
+  "dependent_steps": [
+    {
+      "action_id": "ARCHITECT-A03",
+      "status": "awaiting_original_results_and_actual_received_appointment",
+      "requires": [
+        "SavedArchitectIntake accept from step 1",
+        "SavedOwnerCommission accept from step 2",
+        "Actually received Appointment, RecordedDecision and exact ServiceTerms",
+        "Independent application validation of original provenance, authority limits and condition mapping"
+      ],
+      "handoff": "integration.owner_architect_commission_handoff"
+    }
+  ],
+  "remaining_requirements": [
+    "Execute the authored bindings with the original host; ActionRunner already supplies local_method_registry including capacity and owner commission selection.",
+    "Actual journal/reception validation and A03 ordered execution.",
+    "V2 procurement branches, other service roles/multiservice and native publication/feedback."
+  ],
+  "limitations": "Inputs and expected choices only; no action, receipt, appointment, stock or funding effect executed or generated. Offline bindings declare synthetic context, snapshots and candidates; no native grant is inferred at runtime. Original ActionRunner default method registration already exists (correction to earlier handoff)."
+}

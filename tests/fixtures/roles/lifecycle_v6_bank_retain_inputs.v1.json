@@ -1,0 +1,1167 @@
+{
+  "schema_version": "lifecycle-input-case.v1",
+  "scenario_id": "V6",
+  "case_id": "v6-bank-retain-unresolved-duty",
+  "origin": "synthetic",
+  "run_id": "synthetic-v6-bank-retain",
+  "status": "input_prepared_execution_pending",
+  "source_declaration": {
+    "kind": "explicit_synthetic",
+    "assumptions": [
+      "One open FinanceIssue and exact matching RemainingObligation source digest.",
+      "Debt, commitments, executions, security and prior closure records explicitly empty in this isolated synthetic facility.",
+      "Retain only; no closure, cash, debt discharge or formal native ledger observation."
+    ]
+  },
+  "steps": [
+    {
+      "step_id": "v6-bank-retain",
+      "action_id": "BANK-A11",
+      "operation_id": "v6-bank-retain-30",
+      "expected_kind": "completed",
+      "expected_choice": "retain",
+      "expected_remaining_obligation_refs": [
+        {
+          "kind": "RemainingObligation",
+          "id": "v6-retained-issue-duty",
+          "version": "1"
+        }
+      ],
+      "output_directory": "output/integration/v6_bank_retain_pending_01",
+      "host": "integration.bank_role_contract_host:build_role_host",
+      "request": {
+        "schema_version": "role-contract-invocation.v1",
+        "context": {
+          "run_id": "synthetic-v6-bank-retain",
+          "actor_id": "bank-actor",
+          "function_ref": {
+            "kind": "FunctionAssignment",
+            "id": "v6-bank-closeout-function",
+            "version": "1"
+          },
+          "authorization_refs": [
+            {
+              "kind": "Authorization",
+              "id": "v6-bank-closeout-grant",
+              "version": "1"
+            }
+          ],
+          "operation_id": "v6-bank-retain-30",
+          "contract_ref": {
+            "kind": "ActionContract",
+            "id": "BANK-A11",
+            "version": "1"
+          },
+          "task_ref": {
+            "kind": "DecisionTask",
+            "id": "v6-bank-retain-30-task",
+            "version": "1"
+          },
+          "scope": {
+            "kind": "assessment_case",
+            "ref": {
+              "kind": "OwnerCase",
+              "id": "v6-closeout-case",
+              "version": "1"
+            },
+            "coverage_refs": [
+              {
+                "kind": "WorkScope",
+                "id": "v6-unsettled-scope",
+                "version": "1"
+              }
+            ]
+          },
+          "business_time": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 30
+          },
+          "read_token": "synthetic-v6-bank-retain:read:1",
+          "visible_refs": [
+            {
+              "kind": "FinanceArrangement",
+              "id": "v6-retained-arrangement",
+              "version": "1"
+            },
+            {
+              "kind": "FinanceCloseoutProfile",
+              "id": "v6-retain-profile",
+              "version": "1"
+            },
+            {
+              "kind": "FinanceCloseoutRule",
+              "id": "v6-retain-rule",
+              "version": "1"
+            },
+            {
+              "kind": "FinanceIssue",
+              "id": "v6-unresolved-finance-issue",
+              "version": "1"
+            },
+            {
+              "kind": "RemainingObligation",
+              "id": "v6-retained-issue-duty",
+              "version": "1"
+            },
+            {
+              "kind": "Evidence",
+              "id": "v6-bank-retain-synthetic",
+              "version": "1"
+            },
+            {
+              "kind": "FunctionAssignment",
+              "id": "v6-bank-closeout-function",
+              "version": "1"
+            },
+            {
+              "kind": "OwnerCase",
+              "id": "v6-closeout-case",
+              "version": "1"
+            },
+            {
+              "kind": "WorkScope",
+              "id": "v6-unsettled-scope",
+              "version": "1"
+            },
+            {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            {
+              "kind": "CandidateSet",
+              "id": "v6-retain-candidates",
+              "version": "1"
+            },
+            {
+              "kind": "Authorization",
+              "id": "v6-bank-closeout-grant",
+              "version": "1"
+            }
+          ],
+          "candidate_set_ref": {
+            "kind": "CandidateSet",
+            "id": "v6-retain-candidates",
+            "version": "1"
+          },
+          "execution_mode": "offline_fixture"
+        },
+        "action_input": {
+          "arrangement_ref": {
+            "kind": "FinanceArrangement",
+            "id": "v6-retained-arrangement",
+            "version": "1"
+          },
+          "unused_commitment_refs": [],
+          "debt_refs": [],
+          "pending_execution_refs": [],
+          "security_refs": [],
+          "unresolved_refs": [
+            {
+              "kind": "FinanceIssue",
+              "id": "v6-unresolved-finance-issue",
+              "version": "1"
+            }
+          ]
+        },
+        "execution_path": "deterministic"
+      },
+      "configuration": {
+        "schema_version": "role-contract-host-config.v1",
+        "host_id": "v6-bank-retain",
+        "version": "1",
+        "settings": {
+          "action_id": "BANK-A11",
+          "source_factory": "integration.bank_role_contract_fixture_sources:build_sources",
+          "source_version": "configured-bank-fixture-sources.v1",
+          "macro_version": "synthetic-v6-bank-retain.v1",
+          "client_version": "role-contract-bank-fixture.v1",
+          "policy_version": "role-contract-bank-fixture.v1",
+          "model_version": "offline-fixture-no-model.v1",
+          "source_settings": {
+            "action_id": "BANK-A11",
+            "source_note": "Explicit synthetic V6 retain. Open issue remains; no native closure or ledger observation.",
+            "journal_path": "output/integration/v6_bank_retain_pending_01/journal.sqlite",
+            "organization_snapshot": {
+              "schema_version": "organization.v2",
+              "run_id": "synthetic-v6-bank-retain",
+              "organizations": [
+                {
+                  "organization_id": "bank",
+                  "actor_id": "bank-actor",
+                  "source_ids": [
+                    "synthetic:v6-bank-retain"
+                  ],
+                  "public_description": "Synthetic lender retains one unresolved finance issue.",
+                  "public_location": {
+                    "state": "unknown",
+                    "reason_code": "synthetic_unsupplied",
+                    "missing_refs": []
+                  },
+                  "members": [],
+                  "assignments": [
+                    {
+                      "role": "Bank",
+                      "function_ref": {
+                        "kind": "FunctionAssignment",
+                        "id": "v6-bank-closeout-function",
+                        "version": "1"
+                      },
+                      "configuration_version": "1",
+                      "basis_refs": [
+                        {
+                          "kind": "Evidence",
+                          "id": "v6-bank-retain-synthetic",
+                          "version": "1"
+                        }
+                      ]
+                    }
+                  ],
+                  "evidence_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "v6-bank-retain-synthetic",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "authorizations": [
+                {
+                  "ref": {
+                    "kind": "Authorization",
+                    "id": "v6-bank-closeout-grant",
+                    "version": "1"
+                  },
+                  "organization_id": "bank",
+                  "actor_id": "bank-actor",
+                  "function_ref": {
+                    "kind": "FunctionAssignment",
+                    "id": "v6-bank-closeout-function",
+                    "version": "1"
+                  },
+                  "action_ids": [
+                    "BANK-A11"
+                  ],
+                  "scopes": [
+                    {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-closeout-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-unsettled-scope",
+                          "version": "1"
+                        }
+                      ]
+                    }
+                  ],
+                  "readable_refs": [
+                    {
+                      "kind": "FinanceArrangement",
+                      "id": "v6-retained-arrangement",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "FinanceCloseoutProfile",
+                      "id": "v6-retain-profile",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "FinanceCloseoutRule",
+                      "id": "v6-retain-rule",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "FinanceIssue",
+                      "id": "v6-unresolved-finance-issue",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "RemainingObligation",
+                      "id": "v6-retained-issue-duty",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Evidence",
+                      "id": "v6-bank-retain-synthetic",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-bank-closeout-function",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "OwnerCase",
+                      "id": "v6-closeout-case",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "WorkScope",
+                      "id": "v6-unsettled-scope",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ClockProfile",
+                      "id": "business",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "CandidateSet",
+                      "id": "v6-retain-candidates",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Authorization",
+                      "id": "v6-bank-closeout-grant",
+                      "version": "1"
+                    }
+                  ],
+                  "tool_ids": [],
+                  "validity": {
+                    "start": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 0
+                    },
+                    "end": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 100
+                    },
+                    "bounds": "closed_open"
+                  },
+                  "basis_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "v6-bank-retain-synthetic",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "inactive_authorization_refs": []
+            },
+            "source_projection": {
+              "run_id": "synthetic-v6-bank-retain",
+              "macro_version": "synthetic-v6-bank-retain.v1",
+              "state_version": "synthetic-v6-bank-retain-30.v1",
+              "read_token": "synthetic-v6-bank-retain:read:1",
+              "business_time": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 30
+              },
+              "organization_id": "bank",
+              "objects": [
+                {
+                  "ref": {
+                    "kind": "FinanceArrangement",
+                    "id": "v6-retained-arrangement",
+                    "version": "1"
+                  },
+                  "value": {
+                    "scope": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-closeout-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-unsettled-scope",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-bank-retain-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "ref": {
+                      "kind": "FinanceArrangement",
+                      "id": "v6-retained-arrangement",
+                      "version": "1"
+                    },
+                    "lender_id": "bank",
+                    "borrower_id": "owner",
+                    "currency": "HKD",
+                    "closeout_profile_ref": {
+                      "kind": "FinanceCloseoutProfile",
+                      "id": "v6-retain-profile",
+                      "version": "1"
+                    },
+                    "rule_ref": {
+                      "kind": "FinanceCloseoutRule",
+                      "id": "v6-retain-rule",
+                      "version": "1"
+                    },
+                    "commitment_refs": [],
+                    "debt_refs": [],
+                    "payment_execution_refs": [],
+                    "security_refs": [],
+                    "issue_refs": [
+                      {
+                        "kind": "FinanceIssue",
+                        "id": "v6-unresolved-finance-issue",
+                        "version": "1"
+                      }
+                    ],
+                    "remaining_obligation_refs": [
+                      {
+                        "kind": "RemainingObligation",
+                        "id": "v6-retained-issue-duty",
+                        "version": "1"
+                      }
+                    ],
+                    "closeout_execution_refs": [],
+                    "coverage": "complete",
+                    "as_of": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "producer": "core"
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "FinanceCloseoutProfile",
+                    "id": "v6-retain-profile",
+                    "version": "1"
+                  },
+                  "value": {
+                    "scope": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-closeout-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-unsettled-scope",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-bank-retain-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "ref": {
+                      "kind": "FinanceCloseoutProfile",
+                      "id": "v6-retain-profile",
+                      "version": "1"
+                    },
+                    "arrangement_ref": {
+                      "kind": "FinanceArrangement",
+                      "id": "v6-retained-arrangement",
+                      "version": "1"
+                    },
+                    "organization_id": "bank",
+                    "actor_id": "bank-actor",
+                    "function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-bank-closeout-function",
+                      "version": "1"
+                    },
+                    "authority_ref": {
+                      "kind": "Authorization",
+                      "id": "v6-bank-closeout-grant",
+                      "version": "1"
+                    },
+                    "choice": "retain",
+                    "business_key": "v6-retain-unresolved-finance",
+                    "scope_ref": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-closeout-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-unsettled-scope",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "release_candidate_refs": [],
+                    "security_close_refs": [],
+                    "basis_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-bank-retain-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "note": "Synthetic open issue remains; no native release inferred."
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "FinanceCloseoutRule",
+                    "id": "v6-retain-rule",
+                    "version": "1"
+                  },
+                  "value": {
+                    "scope": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-closeout-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-unsettled-scope",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-bank-retain-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "ref": {
+                      "kind": "FinanceCloseoutRule",
+                      "id": "v6-retain-rule",
+                      "version": "1"
+                    },
+                    "arrangement_ref": {
+                      "kind": "FinanceArrangement",
+                      "id": "v6-retained-arrangement",
+                      "version": "1"
+                    },
+                    "permitted_choices": [
+                      "retain"
+                    ],
+                    "permitted": {
+                      "state": "known",
+                      "value": true
+                    },
+                    "verification_refs": [],
+                    "author_actor_id": "bank-actor",
+                    "author_organization_id": "bank",
+                    "author_function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-bank-closeout-function",
+                      "version": "1"
+                    },
+                    "author_authority_ref": {
+                      "kind": "Authorization",
+                      "id": "v6-bank-closeout-grant",
+                      "version": "1"
+                    },
+                    "author_action_id": "BANK-A11",
+                    "authored_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "FinanceIssue",
+                    "id": "v6-unresolved-finance-issue",
+                    "version": "1"
+                  },
+                  "value": {
+                    "scope": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-closeout-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-unsettled-scope",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-bank-retain-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "ref": {
+                      "kind": "FinanceIssue",
+                      "id": "v6-unresolved-finance-issue",
+                      "version": "1"
+                    },
+                    "arrangement_ref": {
+                      "kind": "FinanceArrangement",
+                      "id": "v6-retained-arrangement",
+                      "version": "1"
+                    },
+                    "subject_refs": [
+                      {
+                        "kind": "FinanceArrangement",
+                        "id": "v6-retained-arrangement",
+                        "version": "1"
+                      }
+                    ],
+                    "status": "open"
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "RemainingObligation",
+                    "id": "v6-retained-issue-duty",
+                    "version": "1"
+                  },
+                  "value": {
+                    "scope": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-closeout-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-unsettled-scope",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-bank-retain-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "ref": {
+                      "kind": "RemainingObligation",
+                      "id": "v6-retained-issue-duty",
+                      "version": "1"
+                    },
+                    "arrangement_ref": {
+                      "kind": "FinanceArrangement",
+                      "id": "v6-retained-arrangement",
+                      "version": "1"
+                    },
+                    "source_ref": {
+                      "kind": "FinanceIssue",
+                      "id": "v6-unresolved-finance-issue",
+                      "version": "1"
+                    },
+                    "source_sha256": "6256b9c8d0ce57177c7b23ce3b57fda1b8f968cebffe326d97a900c6f95a6513",
+                    "producer": "core",
+                    "as_of": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "Evidence",
+                    "id": "v6-bank-retain-synthetic",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "Evidence",
+                      "id": "v6-bank-retain-synthetic",
+                      "version": "1"
+                    },
+                    "source_kind": "synthetic",
+                    "basis_kind": "observed",
+                    "locator": "synthetic:v6-bank-retain",
+                    "content_hash": "02e82450666115ba7b949d7d316e5ca6e162497c766f65ebb9d7cdaa410580e1",
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "FunctionAssignment",
+                    "id": "v6-bank-closeout-function",
+                    "version": "1"
+                  },
+                  "value": {
+                    "role": "Bank",
+                    "function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-bank-closeout-function",
+                      "version": "1"
+                    },
+                    "configuration_version": "1",
+                    "basis_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-bank-retain-synthetic",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "OwnerCase",
+                    "id": "v6-closeout-case",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "OwnerCase",
+                      "id": "v6-closeout-case",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-bank-retain-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "organization_id": "bank"
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "WorkScope",
+                    "id": "v6-unsettled-scope",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "WorkScope",
+                      "id": "v6-unsettled-scope",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-bank-retain-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "parent_ref": {
+                      "kind": "OwnerCase",
+                      "id": "v6-closeout-case",
+                      "version": "1"
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "ClockProfile",
+                      "id": "business",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-bank-retain-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "tick_unit": "day"
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "CandidateSet",
+                    "id": "v6-retain-candidates",
+                    "version": "1"
+                  },
+                  "value": {
+                    "operation_id": "v6-bank-retain-30",
+                    "scope": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-closeout-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-unsettled-scope",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "as_of": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "candidates": [
+                      {
+                        "ref": {
+                          "kind": "FinanceArrangement",
+                          "id": "v6-retained-arrangement",
+                          "version": "1"
+                        },
+                        "permitted_choices": [
+                          "retain"
+                        ]
+                      }
+                    ],
+                    "search_profile_ref": {
+                      "kind": "Profile",
+                      "id": "v6-closeout-search",
+                      "version": "1"
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "Authorization",
+                    "id": "v6-bank-closeout-grant",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "Authorization",
+                      "id": "v6-bank-closeout-grant",
+                      "version": "1"
+                    },
+                    "organization_id": "bank",
+                    "actor_id": "bank-actor",
+                    "function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-bank-closeout-function",
+                      "version": "1"
+                    },
+                    "action_ids": [
+                      "BANK-A11"
+                    ],
+                    "scopes": [
+                      {
+                        "kind": "assessment_case",
+                        "ref": {
+                          "kind": "OwnerCase",
+                          "id": "v6-closeout-case",
+                          "version": "1"
+                        },
+                        "coverage_refs": [
+                          {
+                            "kind": "WorkScope",
+                            "id": "v6-unsettled-scope",
+                            "version": "1"
+                          }
+                        ]
+                      }
+                    ],
+                    "readable_refs": [
+                      {
+                        "kind": "FinanceArrangement",
+                        "id": "v6-retained-arrangement",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "FinanceCloseoutProfile",
+                        "id": "v6-retain-profile",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "FinanceCloseoutRule",
+                        "id": "v6-retain-rule",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "FinanceIssue",
+                        "id": "v6-unresolved-finance-issue",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "RemainingObligation",
+                        "id": "v6-retained-issue-duty",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-bank-retain-synthetic",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "FunctionAssignment",
+                        "id": "v6-bank-closeout-function",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "OwnerCase",
+                        "id": "v6-closeout-case",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "WorkScope",
+                        "id": "v6-unsettled-scope",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "CandidateSet",
+                        "id": "v6-retain-candidates",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Authorization",
+                        "id": "v6-bank-closeout-grant",
+                        "version": "1"
+                      }
+                    ],
+                    "tool_ids": [],
+                    "validity": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "basis_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-bank-retain-synthetic",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  ],
+  "remaining_requirements": [
+    "Execute original host and verify retain preserves exact unresolved duty.",
+    "BANK-A11 close_unused/close_cleared_scope and normal/boundary/recovery CHECK cases.",
+    "Other six V6 actions; same-run handover/settlement/continuation and shared resources.",
+    "Actual native binding/receipts/feedback and complete PLAN verification."
+  ],
+  "limitations": "One isolated synthetic retain input; no host run, connected V6 chain or formal behavior proven."
+}

@@ -1,0 +1,520 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "V7 selected original wait to independently revalidated current successor",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "scenario_id",
+    "source_identity",
+    "source_task_sha256",
+    "wait_sha256",
+    "signal",
+    "successor",
+    "recovery"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "lifecycle-v7-wait-recovery-input.v1"
+    },
+    "scenario_id": {
+      "const": "V7"
+    },
+    "source_identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "run_id",
+        "organization_id",
+        "role",
+        "action_id",
+        "request_id",
+        "purpose",
+        "input_sha256",
+        "context_sha256",
+        "versions"
+      ],
+      "properties": {
+        "run_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "organization_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "role": {
+          "enum": [
+            "Owner",
+            "Bank",
+            "Architect",
+            "Engineer",
+            "QS",
+            "Government",
+            "Contractor",
+            "Supplier"
+          ]
+        },
+        "action_id": {
+          "enum": [
+            "OWN-A01",
+            "OWN-A16",
+            "OWN-A02",
+            "OWN-A03",
+            "OWN-A04",
+            "OWN-A05",
+            "OWN-A06",
+            "OWN-A07",
+            "OWN-A08",
+            "OWN-A09",
+            "OWN-A10",
+            "OWN-A11",
+            "OWN-A12",
+            "OWN-A13",
+            "OWN-A14",
+            "OWN-A15",
+            "BANK-A01",
+            "BANK-A02",
+            "BANK-A03",
+            "BANK-A04",
+            "BANK-A05",
+            "BANK-A06",
+            "BANK-A07",
+            "BANK-A08",
+            "BANK-A09",
+            "BANK-A10",
+            "BANK-A11",
+            "BANK-A12",
+            "BANK-A13",
+            "ARCHITECT-A01",
+            "ARCHITECT-A02",
+            "ARCHITECT-A03",
+            "ARCHITECT-A04",
+            "ARCHITECT-A05",
+            "ARCHITECT-A06",
+            "ARCHITECT-A07",
+            "ARCHITECT-A08",
+            "ARCHITECT-A09",
+            "ARCHITECT-A10",
+            "ARCHITECT-A11",
+            "ARCHITECT-A12",
+            "ARCHITECT-A13",
+            "ENGINEER-A01",
+            "ENGINEER-A02",
+            "ENGINEER-A03",
+            "ENGINEER-A04",
+            "ENGINEER-A05",
+            "ENGINEER-A06",
+            "ENGINEER-A07",
+            "ENGINEER-A08",
+            "ENGINEER-A09",
+            "ENGINEER-A10",
+            "ENGINEER-A11",
+            "ENGINEER-A12",
+            "ENGINEER-A13",
+            "QS-A01",
+            "QS-A02",
+            "QS-A03",
+            "QS-A04",
+            "QS-A05",
+            "QS-A06",
+            "QS-A07",
+            "QS-A08",
+            "QS-A09",
+            "QS-A10",
+            "QS-A11",
+            "QS-A12",
+            "QS-A13",
+            "GOV-A01",
+            "GOV-A02",
+            "GOV-A03",
+            "GOV-A04",
+            "GOV-A05",
+            "GOV-A06",
+            "GOV-A07",
+            "GOV-A08",
+            "GOV-A09",
+            "GOV-A10",
+            "GOV-A11",
+            "GOV-A12",
+            "CONTRACTOR-A01",
+            "CONTRACTOR-A02",
+            "CONTRACTOR-A03",
+            "CONTRACTOR-A04",
+            "CONTRACTOR-A05",
+            "CONTRACTOR-A06",
+            "CONTRACTOR-A07",
+            "CONTRACTOR-A08",
+            "CONTRACTOR-A09",
+            "CONTRACTOR-A10",
+            "CONTRACTOR-A11",
+            "CONTRACTOR-A12",
+            "CONTRACTOR-A13",
+            "SUPPLIER-A01",
+            "SUPPLIER-A02",
+            "SUPPLIER-A03",
+            "SUPPLIER-A04",
+            "SUPPLIER-A05",
+            "SUPPLIER-A06",
+            "SUPPLIER-A07",
+            "SUPPLIER-A08",
+            "SUPPLIER-A09",
+            "SUPPLIER-A10",
+            "SUPPLIER-A11",
+            "SUPPLIER-A12",
+            "SUPPLIER-A13"
+          ]
+        },
+        "request_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "purpose": {
+          "const": "action"
+        },
+        "input_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "context_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "versions": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "client",
+            "skill",
+            "prompt",
+            "contract",
+            "method",
+            "model",
+            "strategy"
+          ],
+          "properties": {
+            "client": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "skill": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "prompt": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "contract": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "method": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "model": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "strategy": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            }
+          }
+        }
+      }
+    },
+    "source_task_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "wait_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "signal": {
+      "type": "object",
+      "description": "Exact ResumeSignal: run/recipient/event/trigger/business_time/object_refs/payload; scheduling hint only, never proof of revised terms or readiness."
+    },
+    "successor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "identity",
+        "facts_sha256",
+        "authorization_sha256",
+        "input",
+        "context"
+      ],
+      "properties": {
+        "identity": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "run_id",
+            "organization_id",
+            "role",
+            "action_id",
+            "request_id",
+            "purpose",
+            "input_sha256",
+            "context_sha256",
+            "versions"
+          ],
+          "properties": {
+            "run_id": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "organization_id": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "role": {
+              "enum": [
+                "Owner",
+                "Bank",
+                "Architect",
+                "Engineer",
+                "QS",
+                "Government",
+                "Contractor",
+                "Supplier"
+              ]
+            },
+            "action_id": {
+              "enum": [
+                "OWN-A01",
+                "OWN-A16",
+                "OWN-A02",
+                "OWN-A03",
+                "OWN-A04",
+                "OWN-A05",
+                "OWN-A06",
+                "OWN-A07",
+                "OWN-A08",
+                "OWN-A09",
+                "OWN-A10",
+                "OWN-A11",
+                "OWN-A12",
+                "OWN-A13",
+                "OWN-A14",
+                "OWN-A15",
+                "BANK-A01",
+                "BANK-A02",
+                "BANK-A03",
+                "BANK-A04",
+                "BANK-A05",
+                "BANK-A06",
+                "BANK-A07",
+                "BANK-A08",
+                "BANK-A09",
+                "BANK-A10",
+                "BANK-A11",
+                "BANK-A12",
+                "BANK-A13",
+                "ARCHITECT-A01",
+                "ARCHITECT-A02",
+                "ARCHITECT-A03",
+                "ARCHITECT-A04",
+                "ARCHITECT-A05",
+                "ARCHITECT-A06",
+                "ARCHITECT-A07",
+                "ARCHITECT-A08",
+                "ARCHITECT-A09",
+                "ARCHITECT-A10",
+                "ARCHITECT-A11",
+                "ARCHITECT-A12",
+                "ARCHITECT-A13",
+                "ENGINEER-A01",
+                "ENGINEER-A02",
+                "ENGINEER-A03",
+                "ENGINEER-A04",
+                "ENGINEER-A05",
+                "ENGINEER-A06",
+                "ENGINEER-A07",
+                "ENGINEER-A08",
+                "ENGINEER-A09",
+                "ENGINEER-A10",
+                "ENGINEER-A11",
+                "ENGINEER-A12",
+                "ENGINEER-A13",
+                "QS-A01",
+                "QS-A02",
+                "QS-A03",
+                "QS-A04",
+                "QS-A05",
+                "QS-A06",
+                "QS-A07",
+                "QS-A08",
+                "QS-A09",
+                "QS-A10",
+                "QS-A11",
+                "QS-A12",
+                "QS-A13",
+                "GOV-A01",
+                "GOV-A02",
+                "GOV-A03",
+                "GOV-A04",
+                "GOV-A05",
+                "GOV-A06",
+                "GOV-A07",
+                "GOV-A08",
+                "GOV-A09",
+                "GOV-A10",
+                "GOV-A11",
+                "GOV-A12",
+                "CONTRACTOR-A01",
+                "CONTRACTOR-A02",
+                "CONTRACTOR-A03",
+                "CONTRACTOR-A04",
+                "CONTRACTOR-A05",
+                "CONTRACTOR-A06",
+                "CONTRACTOR-A07",
+                "CONTRACTOR-A08",
+                "CONTRACTOR-A09",
+                "CONTRACTOR-A10",
+                "CONTRACTOR-A11",
+                "CONTRACTOR-A12",
+                "CONTRACTOR-A13",
+                "SUPPLIER-A01",
+                "SUPPLIER-A02",
+                "SUPPLIER-A03",
+                "SUPPLIER-A04",
+                "SUPPLIER-A05",
+                "SUPPLIER-A06",
+                "SUPPLIER-A07",
+                "SUPPLIER-A08",
+                "SUPPLIER-A09",
+                "SUPPLIER-A10",
+                "SUPPLIER-A11",
+                "SUPPLIER-A12",
+                "SUPPLIER-A13"
+              ]
+            },
+            "request_id": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "purpose": {
+              "const": "action"
+            },
+            "input_sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "context_sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "versions": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "client",
+                "skill",
+                "prompt",
+                "contract",
+                "method",
+                "model",
+                "strategy"
+              ],
+              "properties": {
+                "client": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "skill": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "prompt": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "contract": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "method": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "model": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "strategy": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                }
+              }
+            }
+          }
+        },
+        "facts_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "authorization_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "input": {
+          "type": "object",
+          "minProperties": 1,
+          "description": "Exact current full action input, independently assembled by application prepare callback."
+        },
+        "context": {
+          "type": "object",
+          "description": "Exact current formal ActionContext with fresh operation and facts/authority versions."
+        }
+      }
+    },
+    "recovery": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "factory",
+        "settings",
+        "journal_path"
+      ],
+      "properties": {
+        "factory": {
+          "type": "string",
+          "pattern": "^[^:]+:[^:]+$",
+          "description": "Returns WaitRecoverySources for existing ContinuationJournal with real registered current condition evaluators, prepare/revalidate, read_guard and cleanup."
+        },
+        "settings": {
+          "type": "object"
+        },
+        "journal_path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        }
+      }
+    }
+  }
+}

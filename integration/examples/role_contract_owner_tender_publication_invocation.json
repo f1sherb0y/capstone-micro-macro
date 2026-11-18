@@ -1,0 +1,229 @@
+{
+  "schema_version": "role-contract-invocation.v1",
+  "context": {
+    "run_id": "synthetic-v2-procurement-publication-01",
+    "actor_id": "v2-publication-owner-actor",
+    "function_ref": {
+      "kind": "FunctionAssignment",
+      "id": "v2-owner-publication-owner-function",
+      "version": "1"
+    },
+    "authorization_refs": [
+      {
+        "kind": "Authorization",
+        "id": "v2-owner-publication-owner-grant",
+        "version": "1"
+      }
+    ],
+    "operation_id": "v2-owner-tender-publication-01",
+    "contract_ref": {
+      "kind": "ActionContract",
+      "id": "OWN-A09",
+      "version": "1"
+    },
+    "task_ref": {
+      "kind": "DecisionTask",
+      "id": "v2-owner-publication-task",
+      "version": "1"
+    },
+    "scope": {
+      "kind": "project",
+      "ref": {
+        "kind": "Project",
+        "id": "v2-owner-publication-project",
+        "version": "1"
+      },
+      "coverage_refs": [
+        {
+          "kind": "WorkScope",
+          "id": "v2-owner-publication-work",
+          "version": "1"
+        }
+      ]
+    },
+    "business_time": {
+      "clock_ref": {
+        "kind": "ClockProfile",
+        "id": "v2-owner-publication-clock",
+        "version": "1"
+      },
+      "offset": 10
+    },
+    "read_token": "synthetic-v2-procurement-publication-01:read-10",
+    "visible_refs": [
+      {
+        "kind": "ProcurementProcedure",
+        "id": "v2-owner-publication-procedure",
+        "version": "1"
+      },
+      {
+        "kind": "TenderEvaluationProfile",
+        "id": "v2-owner-publication-evaluation-profile",
+        "version": "1"
+      },
+      {
+        "kind": "QuantityBasis",
+        "id": "v2-owner-publication-quantity",
+        "version": "1"
+      },
+      {
+        "kind": "Requirement",
+        "id": "v2-owner-publication-procurement-requirement",
+        "version": "1"
+      },
+      {
+        "kind": "DeliverableSubmission",
+        "id": "v2-owner-publication-technical-submission",
+        "version": "1"
+      },
+      {
+        "kind": "FundingPosition",
+        "id": "v2-owner-publication-authorized-budget",
+        "version": "1"
+      },
+      {
+        "kind": "FundingCommitment",
+        "id": "v2-owner-publication-prior-budget-commitment",
+        "version": "1"
+      },
+      {
+        "kind": "EligibleBidder",
+        "id": "v2-owner-publication-contractor",
+        "version": "1"
+      },
+      {
+        "kind": "TimeWindow",
+        "id": "v2-owner-publication-submission-window",
+        "version": "1"
+      },
+      {
+        "kind": "ClockProfile",
+        "id": "v2-owner-publication-clock",
+        "version": "1"
+      },
+      {
+        "kind": "Project",
+        "id": "v2-owner-publication-project",
+        "version": "1"
+      },
+      {
+        "kind": "WorkScope",
+        "id": "v2-owner-publication-work",
+        "version": "1"
+      },
+      {
+        "kind": "FunctionAssignment",
+        "id": "v2-owner-publication-owner-function",
+        "version": "1"
+      },
+      {
+        "kind": "FunctionAssignment",
+        "id": "v2-owner-publication-architect-function",
+        "version": "1"
+      },
+      {
+        "kind": "FunctionAssignment",
+        "id": "v2-owner-publication-contractor-function",
+        "version": "1"
+      },
+      {
+        "kind": "CandidateSet",
+        "id": "v2-owner-publication-candidates",
+        "version": "1"
+      },
+      {
+        "kind": "Authorization",
+        "id": "v2-owner-publication-owner-grant",
+        "version": "1"
+      },
+      {
+        "kind": "Authorization",
+        "id": "v2-owner-publication-architect-grant",
+        "version": "1"
+      },
+      {
+        "kind": "Authorization",
+        "id": "v2-owner-publication-contractor-grant",
+        "version": "1"
+      },
+      {
+        "kind": "Evidence",
+        "id": "v2-owner-publication-basis",
+        "version": "1"
+      }
+    ],
+    "candidate_set_ref": {
+      "kind": "CandidateSet",
+      "id": "v2-owner-publication-candidates",
+      "version": "1"
+    },
+    "execution_mode": "offline_fixture"
+  },
+  "action_input": {
+    "package_context": {
+      "kind": "preparation",
+      "scope_ref": {
+        "kind": "project",
+        "ref": {
+          "kind": "Project",
+          "id": "v2-owner-publication-project",
+          "version": "1"
+        },
+        "coverage_refs": [
+          {
+            "kind": "WorkScope",
+            "id": "v2-owner-publication-work",
+            "version": "1"
+          }
+        ]
+      },
+      "technical_submission_refs": [
+        {
+          "kind": "DeliverableSubmission",
+          "id": "v2-owner-publication-technical-submission",
+          "version": "1"
+        }
+      ],
+      "quantity_basis": {
+        "state": "known",
+        "value": {
+          "kind": "QuantityBasis",
+          "id": "v2-owner-publication-quantity",
+          "version": "1"
+        }
+      },
+      "procedure_ref": {
+        "kind": "ProcurementProcedure",
+        "id": "v2-owner-publication-procedure",
+        "version": "1"
+      },
+      "requirement_refs": [
+        {
+          "kind": "Requirement",
+          "id": "v2-owner-publication-procurement-requirement",
+          "version": "1"
+        }
+      ]
+    },
+    "round_refs": [],
+    "bidder_refs": [
+      {
+        "kind": "EligibleBidder",
+        "id": "v2-owner-publication-contractor",
+        "version": "1"
+      }
+    ],
+    "bid_refs": [],
+    "evaluation_profile_ref": {
+      "kind": "TenderEvaluationProfile",
+      "id": "v2-owner-publication-evaluation-profile",
+      "version": "1"
+    },
+    "funding_ref": {
+      "kind": "FundingPosition",
+      "id": "v2-owner-publication-authorized-budget",
+      "version": "1"
+    }
+  },
+  "execution_path": "deterministic"
+}

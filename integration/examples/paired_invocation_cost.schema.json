@@ -1,0 +1,90 @@
+{
+  "additionalProperties": false,
+  "description": "One complete invocation allocation from an independently checked source.\n\nThe application's gate verifies the original source, allocation, currency,\nbilled/estimated classification and coverage of every adapter attempt.",
+  "properties": {
+    "schema_version": {
+      "const": "paired-invocation-cost.v1",
+      "default": "paired-invocation-cost.v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "identity_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Identity Sha256",
+      "type": "string"
+    },
+    "audit_sha256": {
+      "anyOf": [
+        {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Audit Sha256"
+    },
+    "model_version": {
+      "minLength": 1,
+      "pattern": "\\S",
+      "title": "Model Version",
+      "type": "string"
+    },
+    "adapter_attempts": {
+      "minimum": 0,
+      "title": "Adapter Attempts",
+      "type": "integer"
+    },
+    "record_id": {
+      "minLength": 1,
+      "pattern": "\\S",
+      "title": "Record Id",
+      "type": "string"
+    },
+    "source_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Source Sha256",
+      "type": "string"
+    },
+    "kind": {
+      "enum": [
+        "billed",
+        "estimated"
+      ],
+      "title": "Kind",
+      "type": "string"
+    },
+    "currency": {
+      "pattern": "^[A-Z]{3}$",
+      "title": "Currency",
+      "type": "string"
+    },
+    "amount": {
+      "anyOf": [
+        {
+          "minimum": 0.0,
+          "type": "number"
+        },
+        {
+          "pattern": "^(?!^[-+.]*$)[+-]?0*(?:\\d{0,18}|(?=[\\d.]{1,31}0*$)\\d{0,18}\\.\\d{0,12}0*$)",
+          "type": "string"
+        }
+      ],
+      "title": "Amount"
+    }
+  },
+  "required": [
+    "identity_sha256",
+    "audit_sha256",
+    "model_version",
+    "adapter_attempts",
+    "record_id",
+    "source_sha256",
+    "kind",
+    "currency",
+    "amount"
+  ],
+  "title": "PairedInvocationCost",
+  "type": "object"
+}

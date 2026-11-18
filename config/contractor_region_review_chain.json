@@ -1,0 +1,6 @@
+{
+  "schema_version":"contractor-region-review-chain.v1",
+  "run_id":"goal3a-contractor-region-review",
+  "scenarios":{"low":{"regional_friction":0.15},"high":{"regional_friction":0.65}},
+  "source_note":"Independent initial synthetic Macao qualification, work method, two-crew capacity, one-crew existing commitment and one-crew public candidate demand. Public partner disclosure is an independently declared initial listing, not consent or committed capacity. Only original initial macro_environment.regional_friction_matrix changes. Actual runtime observations and execution feedback remain unbound until original request. No market entry, JV, outreach, bid or new commitment."
+}

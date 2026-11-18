@@ -1,0 +1,762 @@
+{
+  "schema_version": "role-contract-host-config.v1",
+  "host_id": "synthetic-supplier-product-host",
+  "version": "1",
+  "settings": {
+    "action_id": "SUPPLIER-A02",
+    "schema_factory": "src.actions.contracts.supplier_product_objects:supplier_product_schemas",
+    "source_note": "Synthetic Supplier A02 original-product proposal example: invented inquiry, panel properties, test applicability and authority. No real engineering approval, formal ProductProposal, supply offer, production, inventory or macro effect.",
+    "organization_snapshot": {
+      "schema_version": "organization.v2",
+      "run_id": "synthetic-role-contract-supplier-product-01",
+      "organizations": [
+        {
+          "organization_id": "supplier-org",
+          "actor_id": "supplier-actor",
+          "source_ids": [
+            "synthetic:role-contract-supplier-product-01"
+          ],
+          "public_description": "Synthetic Supplier A02 original-product proposal example: invented inquiry, panel properties, test applicability and authority. No real engineering approval, formal ProductProposal, supply offer, production, inventory or macro effect.",
+          "public_location": {
+            "state": "unknown",
+            "reason_code": "synthetic_unsupplied",
+            "missing_refs": []
+          },
+          "assignments": [
+            {
+              "role": "Supplier",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "supplier-product",
+                "version": "1"
+              },
+              "configuration_version": "1",
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "synthetic-basis",
+                  "version": "1"
+                }
+              ]
+            }
+          ],
+          "members": [],
+          "evidence_refs": [
+            {
+              "kind": "Evidence",
+              "id": "synthetic-basis",
+              "version": "1"
+            }
+          ]
+        }
+      ],
+      "authorizations": [
+        {
+          "ref": {
+            "kind": "Authorization",
+            "id": "supplier-grant",
+            "version": "1"
+          },
+          "organization_id": "supplier-org",
+          "actor_id": "supplier-actor",
+          "function_ref": {
+            "kind": "FunctionAssignment",
+            "id": "supplier-product",
+            "version": "1"
+          },
+          "action_ids": [
+            "SUPPLIER-A02"
+          ],
+          "scopes": [
+            {
+              "kind": "project",
+              "ref": {
+                "kind": "Project",
+                "id": "buyer-project",
+                "version": "1"
+              },
+              "coverage_refs": [
+                {
+                  "kind": "WorkScope",
+                  "id": "line-1",
+                  "version": "1"
+                }
+              ]
+            }
+          ],
+          "readable_refs": [
+            {
+              "kind": "SupplyInquiry",
+              "id": "inquiry",
+              "version": "1"
+            },
+            {
+              "kind": "Requirement",
+              "id": "line-1",
+              "version": "1"
+            },
+            {
+              "kind": "ProductSpecification",
+              "id": "panel-1",
+              "version": "1"
+            },
+            {
+              "kind": "ProductEvidence",
+              "id": "test-1",
+              "version": "1"
+            },
+            {
+              "kind": "ProductCompatibilityMethod",
+              "id": "product-method",
+              "version": "1"
+            },
+            {
+              "kind": "Evidence",
+              "id": "synthetic-basis",
+              "version": "1"
+            },
+            {
+              "kind": "Project",
+              "id": "buyer-project",
+              "version": "1"
+            },
+            {
+              "kind": "WorkScope",
+              "id": "line-1",
+              "version": "1"
+            },
+            {
+              "kind": "CandidateSet",
+              "id": "product-candidates",
+              "version": "1"
+            }
+          ],
+          "tool_ids": [],
+          "validity": {
+            "start": {
+              "clock_ref": {
+                "kind": "ClockProfile",
+                "id": "synthetic-clock",
+                "version": "1"
+              },
+              "offset": 0
+            },
+            "end": {
+              "clock_ref": {
+                "kind": "ClockProfile",
+                "id": "synthetic-clock",
+                "version": "1"
+              },
+              "offset": 100
+            },
+            "bounds": "closed_open"
+          },
+          "basis_refs": [
+            {
+              "kind": "Evidence",
+              "id": "synthetic-basis",
+              "version": "1"
+            }
+          ]
+        }
+      ],
+      "inactive_authorization_refs": []
+    },
+    "source_projection": {
+      "run_id": "synthetic-role-contract-supplier-product-01",
+      "macro_version": "synthetic-role-product.v1",
+      "state_version": "synthetic-product-state-1",
+      "read_token": "synthetic-role-contract-supplier-product-01:read-1",
+      "business_time": {
+        "clock_ref": {
+          "kind": "ClockProfile",
+          "id": "synthetic-clock",
+          "version": "1"
+        },
+        "offset": 1
+      },
+      "organization_id": "supplier-org",
+      "objects": [
+        {
+          "ref": {
+            "kind": "SupplyInquiry",
+            "id": "inquiry",
+            "version": "1"
+          },
+          "value": {
+            "ref": {
+              "kind": "SupplyInquiry",
+              "id": "inquiry",
+              "version": "1"
+            },
+            "scope": {
+              "kind": "project",
+              "ref": {
+                "kind": "Project",
+                "id": "buyer-project",
+                "version": "1"
+              },
+              "coverage_refs": [
+                {
+                  "kind": "WorkScope",
+                  "id": "line-1",
+                  "version": "1"
+                }
+              ]
+            },
+            "buyer_id": "synthetic-buyer",
+            "recipient_id": "supplier-actor",
+            "recipient_organization_id": "supplier-org",
+            "received_at": {
+              "clock_ref": {
+                "kind": "ClockProfile",
+                "id": "synthetic-clock",
+                "version": "1"
+              },
+              "offset": 1
+            },
+            "response_window": {
+              "start": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "synthetic-clock",
+                  "version": "1"
+                },
+                "offset": 0
+              },
+              "end": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "synthetic-clock",
+                  "version": "1"
+                },
+                "offset": 5
+              },
+              "bounds": "closed_open"
+            },
+            "status": "active",
+            "allow_partial_scope": true,
+            "lines": [
+              {
+                "requirement_ref": {
+                  "kind": "Requirement",
+                  "id": "line-1",
+                  "version": "1"
+                },
+                "scope": {
+                  "kind": "project",
+                  "ref": {
+                    "kind": "Project",
+                    "id": "buyer-project",
+                    "version": "1"
+                  },
+                  "coverage_refs": [
+                    {
+                      "kind": "WorkScope",
+                      "id": "line-1",
+                      "version": "1"
+                    }
+                  ]
+                },
+                "product_code": {
+                  "state": "known",
+                  "value": "panel"
+                },
+                "quantity": {
+                  "state": "known",
+                  "value": {
+                    "value": "10",
+                    "unit": "panel",
+                    "basis_ref": {
+                      "kind": "Evidence",
+                      "id": "synthetic-basis",
+                      "version": "1"
+                    }
+                  }
+                },
+                "production_region_id": {
+                  "state": "known",
+                  "value": "HK"
+                },
+                "delivery_region_id": {
+                  "state": "known",
+                  "value": "HK"
+                },
+                "work_window": {
+                  "state": "known",
+                  "value": {
+                    "start": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 10
+                    },
+                    "end": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 20
+                    },
+                    "bounds": "closed_open"
+                  }
+                },
+                "required_function_codes": {
+                  "state": "known",
+                  "value": [
+                    "supply"
+                  ]
+                },
+                "allowed_fulfillment_modes": {
+                  "state": "known",
+                  "value": [
+                    "manufacture"
+                  ]
+                }
+              }
+            ],
+            "clarification_requirement_refs": [],
+            "evidence_refs": [
+              {
+                "kind": "Evidence",
+                "id": "synthetic-basis",
+                "version": "1"
+              }
+            ]
+          }
+        },
+        {
+          "ref": {
+            "kind": "Requirement",
+            "id": "line-1",
+            "version": "1"
+          },
+          "value": {
+            "ref": {
+              "kind": "Requirement",
+              "id": "line-1",
+              "version": "1"
+            },
+            "inquiry_ref": {
+              "kind": "SupplyInquiry",
+              "id": "inquiry",
+              "version": "1"
+            },
+            "scope": {
+              "kind": "project",
+              "ref": {
+                "kind": "Project",
+                "id": "buyer-project",
+                "version": "1"
+              },
+              "coverage_refs": [
+                {
+                  "kind": "WorkScope",
+                  "id": "line-1",
+                  "version": "1"
+                }
+              ]
+            },
+            "intended_use_code": {
+              "state": "known",
+              "value": "wall"
+            },
+            "allowed_factory_ids": {
+              "state": "known",
+              "value": [
+                "factory-1"
+              ]
+            },
+            "constraints": {
+              "state": "known",
+              "value": [
+                {
+                  "kind": "category",
+                  "property_code": "material",
+                  "allowed_values": [
+                    "concrete"
+                  ],
+                  "basis_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-basis",
+                      "version": "1"
+                    }
+                  ]
+                },
+                {
+                  "kind": "range",
+                  "property_code": "strength",
+                  "unit": "MPa",
+                  "minimum": "30",
+                  "maximum": "50",
+                  "basis_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-basis",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ]
+            },
+            "substitutable_property_codes": [],
+            "allow_product_substitution": false,
+            "design_dependencies": [],
+            "evidence_refs": [
+              {
+                "kind": "Evidence",
+                "id": "synthetic-basis",
+                "version": "1"
+              }
+            ]
+          }
+        },
+        {
+          "ref": {
+            "kind": "ProductSpecification",
+            "id": "panel-1",
+            "version": "1"
+          },
+          "value": {
+            "ref": {
+              "kind": "ProductSpecification",
+              "id": "panel-1",
+              "version": "1"
+            },
+            "supplier_organization_id": "supplier-org",
+            "product_code": {
+              "state": "known",
+              "value": "panel"
+            },
+            "factory_id": {
+              "state": "known",
+              "value": "factory-1"
+            },
+            "use_codes": {
+              "state": "known",
+              "value": [
+                "wall"
+              ]
+            },
+            "quantity_unit": "panel",
+            "effective_window": {
+              "start": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "synthetic-clock",
+                  "version": "1"
+                },
+                "offset": 0
+              },
+              "end": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "synthetic-clock",
+                  "version": "1"
+                },
+                "offset": 100
+              },
+              "bounds": "closed_open"
+            },
+            "properties": {
+              "state": "known",
+              "value": [
+                {
+                  "kind": "category",
+                  "property_code": "material",
+                  "value": "concrete",
+                  "basis_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-basis",
+                      "version": "1"
+                    }
+                  ]
+                },
+                {
+                  "kind": "range",
+                  "property_code": "strength",
+                  "unit": "MPa",
+                  "value": "40",
+                  "basis_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-basis",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ]
+            },
+            "product_evidence_refs": [
+              {
+                "kind": "ProductEvidence",
+                "id": "test-1",
+                "version": "1"
+              }
+            ],
+            "deviation_refs": [],
+            "evidence_refs": [
+              {
+                "kind": "Evidence",
+                "id": "synthetic-basis",
+                "version": "1"
+              }
+            ]
+          }
+        },
+        {
+          "ref": {
+            "kind": "ProductEvidence",
+            "id": "test-1",
+            "version": "1"
+          },
+          "value": {
+            "ref": {
+              "kind": "ProductEvidence",
+              "id": "test-1",
+              "version": "1"
+            },
+            "product_ref": {
+              "kind": "ProductSpecification",
+              "id": "panel-1",
+              "version": "1"
+            },
+            "factory_id": "factory-1",
+            "intended_use_code": "wall",
+            "scope": {
+              "kind": "project",
+              "ref": {
+                "kind": "Project",
+                "id": "buyer-project",
+                "version": "1"
+              },
+              "coverage_refs": [
+                {
+                  "kind": "WorkScope",
+                  "id": "line-1",
+                  "version": "1"
+                }
+              ]
+            },
+            "property_codes": [
+              "material",
+              "strength"
+            ],
+            "effective_window": {
+              "start": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "synthetic-clock",
+                  "version": "1"
+                },
+                "offset": 0
+              },
+              "end": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "synthetic-clock",
+                  "version": "1"
+                },
+                "offset": 100
+              },
+              "bounds": "closed_open"
+            },
+            "available_at": {
+              "clock_ref": {
+                "kind": "ClockProfile",
+                "id": "synthetic-clock",
+                "version": "1"
+              },
+              "offset": 1
+            },
+            "evidence_refs": [
+              {
+                "kind": "Evidence",
+                "id": "synthetic-basis",
+                "version": "1"
+              }
+            ]
+          }
+        },
+        {
+          "ref": {
+            "kind": "ProductCompatibilityMethod",
+            "id": "product-method",
+            "version": "1"
+          },
+          "value": {
+            "ref": {
+              "kind": "ProductCompatibilityMethod",
+              "id": "product-method",
+              "version": "1"
+            },
+            "organization_id": "supplier-org",
+            "effective_window": {
+              "start": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "synthetic-clock",
+                  "version": "1"
+                },
+                "offset": 0
+              },
+              "end": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "synthetic-clock",
+                  "version": "1"
+                },
+                "offset": 100
+              },
+              "bounds": "closed_open"
+            },
+            "algorithm_code": "declared_constraints_v1",
+            "supported_use_codes": [
+              "wall"
+            ],
+            "supported_factory_ids": [
+              "factory-1"
+            ],
+            "supported_property_codes": [
+              "material",
+              "strength"
+            ],
+            "design_action_ids": [
+              "ENGINEER-A06"
+            ],
+            "selection_priorities": [],
+            "evidence_refs": [
+              {
+                "kind": "Evidence",
+                "id": "synthetic-basis",
+                "version": "1"
+              }
+            ]
+          }
+        },
+        {
+          "ref": {
+            "kind": "Evidence",
+            "id": "synthetic-basis",
+            "version": "1"
+          },
+          "value": {
+            "ref": {
+              "kind": "Evidence",
+              "id": "synthetic-basis",
+              "version": "1"
+            },
+            "source_kind": "synthetic",
+            "basis_kind": "assumed",
+            "locator": "integration/examples/role_contract_supplier_product_origin.json",
+            "content_hash": "595d27a66ab72949966c574ff2c3b51ea3bac5f4f264336eb02b07b2904eb685",
+            "effective_window": null
+          }
+        },
+        {
+          "ref": {
+            "kind": "Project",
+            "id": "buyer-project",
+            "version": "1"
+          },
+          "value": {
+            "ref": {
+              "kind": "Project",
+              "id": "buyer-project",
+              "version": "1"
+            },
+            "evidence_refs": [
+              {
+                "kind": "Evidence",
+                "id": "synthetic-basis",
+                "version": "1"
+              }
+            ]
+          }
+        },
+        {
+          "ref": {
+            "kind": "WorkScope",
+            "id": "line-1",
+            "version": "1"
+          },
+          "value": {
+            "ref": {
+              "kind": "WorkScope",
+              "id": "line-1",
+              "version": "1"
+            },
+            "parent_ref": {
+              "kind": "Project",
+              "id": "buyer-project",
+              "version": "1"
+            },
+            "evidence_refs": [
+              {
+                "kind": "Evidence",
+                "id": "synthetic-basis",
+                "version": "1"
+              }
+            ]
+          }
+        },
+        {
+          "ref": {
+            "kind": "CandidateSet",
+            "id": "product-candidates",
+            "version": "1"
+          },
+          "value": {
+            "operation_id": "supplier-product-example-1",
+            "scope": {
+              "kind": "project",
+              "ref": {
+                "kind": "Project",
+                "id": "buyer-project",
+                "version": "1"
+              },
+              "coverage_refs": [
+                {
+                  "kind": "WorkScope",
+                  "id": "line-1",
+                  "version": "1"
+                }
+              ]
+            },
+            "as_of": {
+              "clock_ref": {
+                "kind": "ClockProfile",
+                "id": "synthetic-clock",
+                "version": "1"
+              },
+              "offset": 1
+            },
+            "candidates": [
+              {
+                "ref": {
+                  "kind": "ProductSpecification",
+                  "id": "panel-1",
+                  "version": "1"
+                },
+                "permitted_choices": [
+                  "propose_original",
+                  "propose_substitute"
+                ]
+              }
+            ],
+            "search_profile_ref": {
+              "kind": "Profile",
+              "id": "synthetic-exposure",
+              "version": "1"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

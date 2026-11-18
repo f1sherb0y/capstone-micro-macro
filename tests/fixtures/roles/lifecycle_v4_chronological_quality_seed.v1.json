@@ -1,0 +1,1909 @@
+{
+  "schema_version": "lifecycle-v4-quality-connection-seed.v1",
+  "scenario_id": "V4",
+  "origin": "synthetic",
+  "status": "awaiting_original_quality_result",
+  "quality_input_path": "tests/fixtures/roles/lifecycle_v4_chronological_quality.v1.json",
+  "quality_input_sha256": "3588e571c708ed446f42e288b3dff7895fa6e2810992fc510ea8a2c5b8d6f8c9",
+  "logistics_input_path": "tests/fixtures/roles/lifecycle_v4_chronological_quality_pending_logistics.v1.json",
+  "logistics_input_sha256": "db68b7e9c412fd4490e9a282489055c8d2f055bd5b8dd4309c1e27e1ac68b37e",
+  "registration_id": "synthetic-independent-quality-dispatch-registration",
+  "relation": {
+    "scope": {
+      "kind": "project",
+      "ref": {
+        "kind": "Project",
+        "id": "buyer-project",
+        "version": "1"
+      },
+      "coverage_refs": [
+        {
+          "kind": "WorkScope",
+          "id": "receiving-line-1",
+          "version": "1"
+        }
+      ]
+    },
+    "available_at": {
+      "clock_ref": {
+        "kind": "ClockProfile",
+        "id": "synthetic-clock",
+        "version": "1"
+      },
+      "offset": 11
+    },
+    "effective_window": {
+      "start": {
+        "clock_ref": {
+          "kind": "ClockProfile",
+          "id": "synthetic-clock",
+          "version": "1"
+        },
+        "offset": 10
+      },
+      "end": {
+        "clock_ref": {
+          "kind": "ClockProfile",
+          "id": "synthetic-clock",
+          "version": "1"
+        },
+        "offset": 30
+      },
+      "bounds": "closed_open"
+    },
+    "ref": {
+      "kind": "SupplierQualityHandoffBasis",
+      "id": "synthetic-original-quality-to-dispatch-relation",
+      "version": "1"
+    },
+    "evidence_refs": [
+      {
+        "kind": "Evidence",
+        "id": "synthetic-independent-quality-dispatch-relation",
+        "version": "1"
+      }
+    ],
+    "run_id": "synthetic-v4-production-material-connection",
+    "organization_id": "supplier-org",
+    "author_actor_id": "supplier-actor",
+    "author_organization_id": "supplier-org",
+    "author_function_ref": {
+      "kind": "FunctionAssignment",
+      "id": "v4-supplier-logistics-function",
+      "version": "1"
+    },
+    "author_authority_ref": {
+      "kind": "Authorization",
+      "id": "v4-supplier-logistics-grant",
+      "version": "1"
+    },
+    "author_action_id": "SUPPLIER-A08",
+    "authored_at": {
+      "clock_ref": {
+        "kind": "ClockProfile",
+        "id": "synthetic-clock",
+        "version": "1"
+      },
+      "offset": 11
+    },
+    "release_record_ref": {
+      "kind": "SupplierQualityReleaseRecord",
+      "id": "synthetic-independent-quality-release-record",
+      "version": "1"
+    },
+    "dispatchable_refs": [
+      {
+        "kind": "DispatchableBatch",
+        "id": "dispatchable-cargo",
+        "version": "1"
+      }
+    ],
+    "relation_evidence_refs": [
+      {
+        "kind": "Evidence",
+        "id": "synthetic-independent-quality-dispatch-relation",
+        "version": "1"
+      }
+    ]
+  },
+  "release_record": {
+    "scope": {
+      "kind": "project",
+      "ref": {
+        "kind": "Project",
+        "id": "buyer-project",
+        "version": "1"
+      },
+      "coverage_refs": [
+        {
+          "kind": "WorkScope",
+          "id": "receiving-line-1",
+          "version": "1"
+        }
+      ]
+    },
+    "available_at": {
+      "clock_ref": {
+        "kind": "ClockProfile",
+        "id": "synthetic-clock",
+        "version": "1"
+      },
+      "offset": 11
+    },
+    "effective_window": {
+      "start": {
+        "clock_ref": {
+          "kind": "ClockProfile",
+          "id": "synthetic-clock",
+          "version": "1"
+        },
+        "offset": 10
+      },
+      "end": {
+        "clock_ref": {
+          "kind": "ClockProfile",
+          "id": "synthetic-clock",
+          "version": "1"
+        },
+        "offset": 30
+      },
+      "bounds": "closed_open"
+    },
+    "ref": {
+      "kind": "SupplierQualityReleaseRecord",
+      "id": "synthetic-independent-quality-release-record",
+      "version": "1"
+    },
+    "evidence_refs": [
+      {
+        "kind": "Evidence",
+        "id": "synthetic-independent-native-quality-release",
+        "version": "1"
+      }
+    ],
+    "run_id": "synthetic-v4-production-material-connection",
+    "organization_id": "supplier-org",
+    "original_batch_ref": {
+      "kind": "ProductBatch",
+      "id": "source-cargo",
+      "version": "0"
+    },
+    "current_batch_ref": {
+      "kind": "ProductBatch",
+      "id": "source-cargo",
+      "version": "1"
+    },
+    "release_ref": {
+      "kind": "DispatchRelease",
+      "id": "cargo-release",
+      "version": "1"
+    },
+    "status": "released",
+    "released_quantity": {
+      "value": "6",
+      "unit": "panel",
+      "basis_ref": {
+        "kind": "Evidence",
+        "id": "synthetic-connected-logistics-basis",
+        "version": "1"
+      }
+    },
+    "professional_evidence_refs": [
+      {
+        "kind": "Evidence",
+        "id": "synthetic-independent-quality-recheck-and-defect-closure",
+        "version": "1"
+      }
+    ],
+    "native_record_evidence_ref": {
+      "kind": "Evidence",
+      "id": "synthetic-independent-native-quality-release",
+      "version": "1"
+    }
+  },
+  "batch": {
+    "ref": {
+      "kind": "ProductBatch",
+      "id": "source-cargo",
+      "version": "1"
+    },
+    "evidence_refs": [
+      {
+        "kind": "Evidence",
+        "id": "synthetic-connected-logistics-basis",
+        "version": "1"
+      }
+    ],
+    "scope": {
+      "kind": "project",
+      "ref": {
+        "kind": "Project",
+        "id": "buyer-project",
+        "version": "1"
+      },
+      "coverage_refs": [
+        {
+          "kind": "WorkScope",
+          "id": "receiving-line-1",
+          "version": "1"
+        }
+      ]
+    },
+    "available_at": {
+      "clock_ref": {
+        "kind": "ClockProfile",
+        "id": "synthetic-clock",
+        "version": "1"
+      },
+      "offset": 11
+    },
+    "effective_window": {
+      "start": {
+        "clock_ref": {
+          "kind": "ClockProfile",
+          "id": "synthetic-clock",
+          "version": "1"
+        },
+        "offset": 10
+      },
+      "end": {
+        "clock_ref": {
+          "kind": "ClockProfile",
+          "id": "synthetic-clock",
+          "version": "1"
+        },
+        "offset": 30
+      },
+      "bounds": "closed_open"
+    },
+    "organization_id": "supplier-org",
+    "owner_id": "supplier-org",
+    "product_ref": {
+      "kind": "ProductSpecification",
+      "id": "panel-spec",
+      "version": "1"
+    },
+    "physical_batch_key": "synthetic-receiving-physical-batch",
+    "actual_quantity": {
+      "value": "6",
+      "unit": "panel",
+      "basis_ref": {
+        "kind": "Evidence",
+        "id": "synthetic-connected-logistics-basis",
+        "version": "1"
+      }
+    },
+    "state": "usable",
+    "lineage_ledger_ref": {
+      "kind": "BatchLineageLedger",
+      "id": "source-batch-lineage",
+      "version": "1"
+    },
+    "requirement_refs": [],
+    "known_defect_refs": [],
+    "core_event_id": "synthetic-source-usable-batch-event",
+    "as_of": {
+      "clock_ref": {
+        "kind": "ClockProfile",
+        "id": "synthetic-clock",
+        "version": "1"
+      },
+      "offset": 11
+    }
+  },
+  "release": {
+    "ref": {
+      "kind": "DispatchRelease",
+      "id": "cargo-release",
+      "version": "1"
+    },
+    "evidence_refs": [
+      {
+        "kind": "Evidence",
+        "id": "synthetic-connected-logistics-basis",
+        "version": "1"
+      }
+    ],
+    "scope": {
+      "kind": "project",
+      "ref": {
+        "kind": "Project",
+        "id": "buyer-project",
+        "version": "1"
+      },
+      "coverage_refs": [
+        {
+          "kind": "WorkScope",
+          "id": "receiving-line-1",
+          "version": "1"
+        }
+      ]
+    },
+    "available_at": {
+      "clock_ref": {
+        "kind": "ClockProfile",
+        "id": "synthetic-clock",
+        "version": "1"
+      },
+      "offset": 11
+    },
+    "effective_window": {
+      "start": {
+        "clock_ref": {
+          "kind": "ClockProfile",
+          "id": "synthetic-clock",
+          "version": "1"
+        },
+        "offset": 10
+      },
+      "end": {
+        "clock_ref": {
+          "kind": "ClockProfile",
+          "id": "synthetic-clock",
+          "version": "1"
+        },
+        "offset": 30
+      },
+      "bounds": "closed_open"
+    },
+    "batch_ref": {
+      "kind": "ProductBatch",
+      "id": "source-cargo",
+      "version": "1"
+    },
+    "physical_batch_key": "synthetic-receiving-physical-batch",
+    "order_ref": {
+      "kind": "Order",
+      "id": "receiving-order",
+      "version": "1"
+    },
+    "quantity": {
+      "value": "6",
+      "unit": "panel",
+      "basis_ref": {
+        "kind": "Evidence",
+        "id": "synthetic-connected-logistics-basis",
+        "version": "1"
+      }
+    },
+    "permitted": {
+      "state": "known",
+      "value": true
+    },
+    "core_event_id": "synthetic-dispatch-release-event"
+  },
+  "dispatchables": [
+    {
+      "ref": {
+        "kind": "DispatchableBatch",
+        "id": "dispatchable-cargo",
+        "version": "1"
+      },
+      "evidence_refs": [
+        {
+          "kind": "Evidence",
+          "id": "synthetic-connected-logistics-basis",
+          "version": "1"
+        }
+      ],
+      "scope": {
+        "kind": "project",
+        "ref": {
+          "kind": "Project",
+          "id": "buyer-project",
+          "version": "1"
+        },
+        "coverage_refs": [
+          {
+            "kind": "WorkScope",
+            "id": "receiving-line-1",
+            "version": "1"
+          }
+        ]
+      },
+      "available_at": {
+        "clock_ref": {
+          "kind": "ClockProfile",
+          "id": "synthetic-clock",
+          "version": "1"
+        },
+        "offset": 11
+      },
+      "effective_window": {
+        "start": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "synthetic-clock",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "end": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "synthetic-clock",
+            "version": "1"
+          },
+          "offset": 30
+        },
+        "bounds": "closed_open"
+      },
+      "order_ref": {
+        "kind": "Order",
+        "id": "receiving-order",
+        "version": "1"
+      },
+      "line_ref": {
+        "kind": "OrderLine",
+        "id": "dispatch-line",
+        "version": "1"
+      },
+      "batch_ref": {
+        "kind": "ProductBatch",
+        "id": "source-cargo",
+        "version": "1"
+      },
+      "physical_batch_key": "synthetic-receiving-physical-batch",
+      "product_ref": {
+        "kind": "ProductSpecification",
+        "id": "panel-spec",
+        "version": "1"
+      },
+      "source_ref": {
+        "kind": "Location",
+        "id": "factory",
+        "version": "1"
+      },
+      "actual_remaining": {
+        "value": "6",
+        "unit": "panel",
+        "basis_ref": {
+          "kind": "Evidence",
+          "id": "synthetic-connected-logistics-basis",
+          "version": "1"
+        }
+      },
+      "dispatchable_quantity": {
+        "value": "6",
+        "unit": "panel",
+        "basis_ref": {
+          "kind": "Evidence",
+          "id": "synthetic-connected-logistics-basis",
+          "version": "1"
+        }
+      },
+      "release_ref": {
+        "kind": "DispatchRelease",
+        "id": "cargo-release",
+        "version": "1"
+      },
+      "ledger_ref": {
+        "kind": "DispatchLedger",
+        "id": "cargo-ledger",
+        "version": "1"
+      },
+      "as_of": {
+        "clock_ref": {
+          "kind": "ClockProfile",
+          "id": "synthetic-clock",
+          "version": "1"
+        },
+        "offset": 11
+      }
+    }
+  ],
+  "confirmation": {
+    "recheck": {
+      "scope": {
+        "kind": "project",
+        "ref": {
+          "kind": "Project",
+          "id": "buyer-project",
+          "version": "1"
+        },
+        "coverage_refs": [
+          {
+            "kind": "WorkScope",
+            "id": "receiving-line-1",
+            "version": "1"
+          }
+        ]
+      },
+      "available_at": {
+        "clock_ref": {
+          "kind": "ClockProfile",
+          "id": "synthetic-clock",
+          "version": "1"
+        },
+        "offset": 11
+      },
+      "effective_window": {
+        "start": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "synthetic-clock",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "end": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "synthetic-clock",
+            "version": "1"
+          },
+          "offset": 30
+        },
+        "bounds": "closed_open"
+      },
+      "ref": {
+        "kind": "BatchRecheck",
+        "id": "synthetic-independent-panel-release-recheck",
+        "version": "1"
+      },
+      "evidence_refs": [
+        {
+          "kind": "Evidence",
+          "id": "synthetic-independent-quality-recheck-and-defect-closure",
+          "version": "1"
+        }
+      ],
+      "author_actor_id": "independent-engineer-actor",
+      "author_organization_id": "independent-engineer-org",
+      "author_function_ref": {
+        "kind": "FunctionAssignment",
+        "id": "independent-engineer-function",
+        "version": "1"
+      },
+      "author_authority_ref": {
+        "kind": "Authorization",
+        "id": "independent-engineer-grant",
+        "version": "1"
+      },
+      "author_action_id": "ENGINEER-A08",
+      "authored_at": {
+        "clock_ref": {
+          "kind": "ClockProfile",
+          "id": "synthetic-clock",
+          "version": "1"
+        },
+        "offset": 11
+      },
+      "physical_batch_key": "synthetic-receiving-physical-batch",
+      "supported": {
+        "state": "known",
+        "value": true
+      },
+      "passed": {
+        "state": "known",
+        "value": true
+      },
+      "method_ref": {
+        "kind": "InspectionMethod",
+        "id": "external-panel-check",
+        "version": "1"
+      },
+      "requirement_refs": [
+        {
+          "kind": "InspectionRequirement",
+          "id": "panel-use-inspection",
+          "version": "1"
+        }
+      ],
+      "scope_of_release": {
+        "value": "6",
+        "unit": "panel",
+        "basis_ref": {
+          "kind": "Evidence",
+          "id": "synthetic-independent-quality-recheck-and-defect-closure",
+          "version": "1"
+        }
+      }
+    },
+    "method": {
+      "ref": {
+        "kind": "InspectionMethod",
+        "id": "external-panel-check",
+        "version": "1"
+      },
+      "evidence_refs": [
+        {
+          "kind": "Evidence",
+          "id": "synthetic-connected-quality-basis",
+          "version": "1"
+        }
+      ],
+      "scope": {
+        "kind": "project",
+        "ref": {
+          "kind": "Project",
+          "id": "buyer-project",
+          "version": "1"
+        },
+        "coverage_refs": [
+          {
+            "kind": "WorkScope",
+            "id": "receiving-line-1",
+            "version": "1"
+          }
+        ]
+      },
+      "available_at": {
+        "clock_ref": {
+          "kind": "ClockProfile",
+          "id": "synthetic-clock",
+          "version": "1"
+        },
+        "offset": 11
+      },
+      "effective_window": {
+        "start": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "synthetic-clock",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "end": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "synthetic-clock",
+            "version": "1"
+          },
+          "offset": 20
+        },
+        "bounds": "closed_open"
+      },
+      "supported": {
+        "state": "known",
+        "value": true
+      },
+      "requirement_refs": [
+        {
+          "kind": "InspectionRequirement",
+          "id": "panel-use-inspection",
+          "version": "1"
+        }
+      ],
+      "observation_method_ref": {
+        "kind": "Method",
+        "id": "synthetic-panel-observation",
+        "version": "1"
+      },
+      "executor_organization_id": "independent-engineer-org",
+      "executor_actor_id": "independent-engineer-actor",
+      "executor_function_ref": {
+        "kind": "FunctionAssignment",
+        "id": "independent-engineer-function",
+        "version": "1"
+      },
+      "executor_authority_ref": {
+        "kind": "Authorization",
+        "id": "independent-engineer-grant",
+        "version": "1"
+      },
+      "executor_action_id": "ENGINEER-A08",
+      "requires_actual_evidence": true
+    },
+    "observation_method": {
+      "ref": {
+        "kind": "Method",
+        "id": "synthetic-panel-observation",
+        "version": "1"
+      },
+      "evidence_refs": [
+        {
+          "kind": "Evidence",
+          "id": "synthetic-connected-quality-basis",
+          "version": "1"
+        }
+      ],
+      "scope": {
+        "kind": "project",
+        "ref": {
+          "kind": "Project",
+          "id": "buyer-project",
+          "version": "1"
+        },
+        "coverage_refs": [
+          {
+            "kind": "WorkScope",
+            "id": "receiving-line-1",
+            "version": "1"
+          }
+        ]
+      },
+      "available_at": {
+        "clock_ref": {
+          "kind": "ClockProfile",
+          "id": "synthetic-clock",
+          "version": "1"
+        },
+        "offset": 11
+      },
+      "effective_window": {
+        "start": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "synthetic-clock",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "end": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "synthetic-clock",
+            "version": "1"
+          },
+          "offset": 20
+        },
+        "bounds": "closed_open"
+      },
+      "supported": {
+        "state": "known",
+        "value": true
+      },
+      "allowed_author_action_ids": [
+        "ENGINEER-A08"
+      ]
+    },
+    "requirements": [
+      {
+        "ref": {
+          "kind": "InspectionRequirement",
+          "id": "panel-use-inspection",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic-connected-quality-basis",
+            "version": "1"
+          }
+        ],
+        "scope": {
+          "kind": "project",
+          "ref": {
+            "kind": "Project",
+            "id": "buyer-project",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "receiving-line-1",
+              "version": "1"
+            }
+          ]
+        },
+        "available_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "synthetic-clock",
+            "version": "1"
+          },
+          "offset": 11
+        },
+        "effective_window": {
+          "start": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "synthetic-clock",
+              "version": "1"
+            },
+            "offset": 10
+          },
+          "end": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "synthetic-clock",
+              "version": "1"
+            },
+            "offset": 20
+          },
+          "bounds": "closed_open"
+        },
+        "batch_ref": {
+          "kind": "ProductBatch",
+          "id": "source-cargo",
+          "version": "0"
+        },
+        "product_ref": {
+          "kind": "ProductSpecification",
+          "id": "panel-spec",
+          "version": "1"
+        },
+        "use_codes": [
+          "panel_batch_quality"
+        ],
+        "allowed_method_refs": [
+          {
+            "kind": "InspectionMethod",
+            "id": "external-panel-check",
+            "version": "1"
+          }
+        ],
+        "external_verification_required": true
+      }
+    ],
+    "author_grant": {
+      "ref": {
+        "kind": "Authorization",
+        "id": "independent-engineer-grant",
+        "version": "1"
+      },
+      "organization_id": "independent-engineer-org",
+      "actor_id": "independent-engineer-actor",
+      "function_ref": {
+        "kind": "FunctionAssignment",
+        "id": "independent-engineer-function",
+        "version": "1"
+      },
+      "action_ids": [
+        "ENGINEER-A08"
+      ],
+      "scopes": [
+        {
+          "kind": "project",
+          "ref": {
+            "kind": "Project",
+            "id": "buyer-project",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "receiving-line-1",
+              "version": "1"
+            }
+          ]
+        }
+      ],
+      "readable_refs": [
+        {
+          "kind": "ProductBatch",
+          "id": "source-cargo",
+          "version": "0"
+        },
+        {
+          "kind": "BatchLineageLedger",
+          "id": "source-batch-lineage",
+          "version": "1"
+        },
+        {
+          "kind": "InspectionProfile",
+          "id": "external-check-profile",
+          "version": "1"
+        },
+        {
+          "kind": "InspectionRequirement",
+          "id": "panel-use-inspection",
+          "version": "1"
+        },
+        {
+          "kind": "InspectionMethod",
+          "id": "external-panel-check",
+          "version": "1"
+        },
+        {
+          "kind": "Method",
+          "id": "synthetic-panel-observation",
+          "version": "1"
+        },
+        {
+          "kind": "InspectionEvidence",
+          "id": "supplier-visible-observation",
+          "version": "1"
+        },
+        {
+          "kind": "Defect",
+          "id": "visible-panel-defect",
+          "version": "1"
+        },
+        {
+          "kind": "Evidence",
+          "id": "synthetic-connected-quality-basis",
+          "version": "1"
+        },
+        {
+          "kind": "ClockProfile",
+          "id": "synthetic-clock",
+          "version": "1"
+        },
+        {
+          "kind": "Project",
+          "id": "buyer-project",
+          "version": "1"
+        },
+        {
+          "kind": "WorkScope",
+          "id": "receiving-line-1",
+          "version": "1"
+        },
+        {
+          "kind": "FunctionAssignment",
+          "id": "v4-supplier-quality-function",
+          "version": "1"
+        },
+        {
+          "kind": "FunctionAssignment",
+          "id": "independent-engineer-function",
+          "version": "1"
+        },
+        {
+          "kind": "CandidateSet",
+          "id": "v4-supplier-quality-candidates",
+          "version": "1"
+        },
+        {
+          "kind": "Authorization",
+          "id": "v4-supplier-quality-grant",
+          "version": "1"
+        },
+        {
+          "kind": "Authorization",
+          "id": "independent-engineer-grant",
+          "version": "1"
+        }
+      ],
+      "tool_ids": [],
+      "validity": {
+        "start": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "synthetic-clock",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "end": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "synthetic-clock",
+            "version": "1"
+          },
+          "offset": 20
+        },
+        "bounds": "closed_open"
+      },
+      "basis_refs": [
+        {
+          "kind": "Evidence",
+          "id": "synthetic-connected-quality-basis",
+          "version": "1"
+        }
+      ]
+    },
+    "author_assignment": {
+      "role": "Engineer",
+      "function_ref": {
+        "kind": "FunctionAssignment",
+        "id": "independent-engineer-function",
+        "version": "1"
+      },
+      "configuration_version": "1",
+      "basis_refs": [
+        {
+          "kind": "Evidence",
+          "id": "synthetic-connected-quality-basis",
+          "version": "1"
+        }
+      ]
+    },
+    "defect_resolutions": [
+      {
+        "original_defect_ref": {
+          "kind": "Defect",
+          "id": "visible-panel-defect",
+          "version": "1"
+        },
+        "closed_defect": {
+          "ref": {
+            "kind": "Defect",
+            "id": "visible-panel-defect",
+            "version": "2"
+          },
+          "evidence_refs": [
+            {
+              "kind": "Evidence",
+              "id": "synthetic-independent-quality-recheck-and-defect-closure",
+              "version": "1"
+            }
+          ],
+          "scope": {
+            "kind": "project",
+            "ref": {
+              "kind": "Project",
+              "id": "buyer-project",
+              "version": "1"
+            },
+            "coverage_refs": [
+              {
+                "kind": "WorkScope",
+                "id": "receiving-line-1",
+                "version": "1"
+              }
+            ]
+          },
+          "available_at": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "synthetic-clock",
+              "version": "1"
+            },
+            "offset": 11
+          },
+          "effective_window": {
+            "start": {
+              "clock_ref": {
+                "kind": "ClockProfile",
+                "id": "synthetic-clock",
+                "version": "1"
+              },
+              "offset": 10
+            },
+            "end": {
+              "clock_ref": {
+                "kind": "ClockProfile",
+                "id": "synthetic-clock",
+                "version": "1"
+              },
+              "offset": 20
+            },
+            "bounds": "closed_open"
+          },
+          "batch_ref": {
+            "kind": "ProductBatch",
+            "id": "source-cargo",
+            "version": "1"
+          },
+          "physical_batch_key": "synthetic-receiving-physical-batch",
+          "observation_ref": {
+            "kind": "InspectionEvidence",
+            "id": "supplier-visible-observation",
+            "version": "1"
+          },
+          "requirement_refs": [
+            {
+              "kind": "InspectionRequirement",
+              "id": "panel-use-inspection",
+              "version": "1"
+            }
+          ],
+          "status": "closed",
+          "responsible_organization_id": {
+            "state": "unknown",
+            "reason_code": "synthetic_unsupplied",
+            "missing_refs": []
+          },
+          "cost_bearer_id": {
+            "state": "unknown",
+            "reason_code": "synthetic_unsupplied",
+            "missing_refs": []
+          }
+        },
+        "recheck_ref": {
+          "kind": "BatchRecheck",
+          "id": "synthetic-independent-panel-release-recheck",
+          "version": "1"
+        },
+        "closed_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "synthetic-clock",
+            "version": "1"
+          },
+          "offset": 11
+        },
+        "core_event_id": "synthetic-independent-panel-defect-closure-event",
+        "producer": "core",
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic-independent-quality-recheck-and-defect-closure",
+            "version": "1"
+          }
+        ]
+      }
+    ]
+  },
+  "native_record": {
+    "schema_version": "supplier-native-quality-release-observation.v1",
+    "run_id": "synthetic-v4-production-material-connection",
+    "batch": {
+      "ref": {
+        "kind": "ProductBatch",
+        "id": "source-cargo",
+        "version": "1"
+      },
+      "evidence_refs": [
+        {
+          "kind": "Evidence",
+          "id": "synthetic-connected-logistics-basis",
+          "version": "1"
+        }
+      ],
+      "scope": {
+        "kind": "project",
+        "ref": {
+          "kind": "Project",
+          "id": "buyer-project",
+          "version": "1"
+        },
+        "coverage_refs": [
+          {
+            "kind": "WorkScope",
+            "id": "receiving-line-1",
+            "version": "1"
+          }
+        ]
+      },
+      "available_at": {
+        "clock_ref": {
+          "kind": "ClockProfile",
+          "id": "synthetic-clock",
+          "version": "1"
+        },
+        "offset": 11
+      },
+      "effective_window": {
+        "start": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "synthetic-clock",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "end": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "synthetic-clock",
+            "version": "1"
+          },
+          "offset": 30
+        },
+        "bounds": "closed_open"
+      },
+      "organization_id": "supplier-org",
+      "owner_id": "supplier-org",
+      "product_ref": {
+        "kind": "ProductSpecification",
+        "id": "panel-spec",
+        "version": "1"
+      },
+      "physical_batch_key": "synthetic-receiving-physical-batch",
+      "actual_quantity": {
+        "value": "6",
+        "unit": "panel",
+        "basis_ref": {
+          "kind": "Evidence",
+          "id": "synthetic-connected-logistics-basis",
+          "version": "1"
+        }
+      },
+      "state": "usable",
+      "lineage_ledger_ref": {
+        "kind": "BatchLineageLedger",
+        "id": "source-batch-lineage",
+        "version": "1"
+      },
+      "requirement_refs": [],
+      "known_defect_refs": [],
+      "core_event_id": "synthetic-source-usable-batch-event",
+      "as_of": {
+        "clock_ref": {
+          "kind": "ClockProfile",
+          "id": "synthetic-clock",
+          "version": "1"
+        },
+        "offset": 11
+      }
+    },
+    "release": {
+      "ref": {
+        "kind": "DispatchRelease",
+        "id": "cargo-release",
+        "version": "1"
+      },
+      "evidence_refs": [
+        {
+          "kind": "Evidence",
+          "id": "synthetic-connected-logistics-basis",
+          "version": "1"
+        }
+      ],
+      "scope": {
+        "kind": "project",
+        "ref": {
+          "kind": "Project",
+          "id": "buyer-project",
+          "version": "1"
+        },
+        "coverage_refs": [
+          {
+            "kind": "WorkScope",
+            "id": "receiving-line-1",
+            "version": "1"
+          }
+        ]
+      },
+      "available_at": {
+        "clock_ref": {
+          "kind": "ClockProfile",
+          "id": "synthetic-clock",
+          "version": "1"
+        },
+        "offset": 11
+      },
+      "effective_window": {
+        "start": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "synthetic-clock",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "end": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "synthetic-clock",
+            "version": "1"
+          },
+          "offset": 30
+        },
+        "bounds": "closed_open"
+      },
+      "batch_ref": {
+        "kind": "ProductBatch",
+        "id": "source-cargo",
+        "version": "1"
+      },
+      "physical_batch_key": "synthetic-receiving-physical-batch",
+      "order_ref": {
+        "kind": "Order",
+        "id": "receiving-order",
+        "version": "1"
+      },
+      "quantity": {
+        "value": "6",
+        "unit": "panel",
+        "basis_ref": {
+          "kind": "Evidence",
+          "id": "synthetic-connected-logistics-basis",
+          "version": "1"
+        }
+      },
+      "permitted": {
+        "state": "known",
+        "value": true
+      },
+      "core_event_id": "synthetic-dispatch-release-event"
+    },
+    "confirmation": {
+      "recheck": {
+        "scope": {
+          "kind": "project",
+          "ref": {
+            "kind": "Project",
+            "id": "buyer-project",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "receiving-line-1",
+              "version": "1"
+            }
+          ]
+        },
+        "available_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "synthetic-clock",
+            "version": "1"
+          },
+          "offset": 11
+        },
+        "effective_window": {
+          "start": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "synthetic-clock",
+              "version": "1"
+            },
+            "offset": 10
+          },
+          "end": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "synthetic-clock",
+              "version": "1"
+            },
+            "offset": 30
+          },
+          "bounds": "closed_open"
+        },
+        "ref": {
+          "kind": "BatchRecheck",
+          "id": "synthetic-independent-panel-release-recheck",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic-independent-quality-recheck-and-defect-closure",
+            "version": "1"
+          }
+        ],
+        "author_actor_id": "independent-engineer-actor",
+        "author_organization_id": "independent-engineer-org",
+        "author_function_ref": {
+          "kind": "FunctionAssignment",
+          "id": "independent-engineer-function",
+          "version": "1"
+        },
+        "author_authority_ref": {
+          "kind": "Authorization",
+          "id": "independent-engineer-grant",
+          "version": "1"
+        },
+        "author_action_id": "ENGINEER-A08",
+        "authored_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "synthetic-clock",
+            "version": "1"
+          },
+          "offset": 11
+        },
+        "physical_batch_key": "synthetic-receiving-physical-batch",
+        "supported": {
+          "state": "known",
+          "value": true
+        },
+        "passed": {
+          "state": "known",
+          "value": true
+        },
+        "method_ref": {
+          "kind": "InspectionMethod",
+          "id": "external-panel-check",
+          "version": "1"
+        },
+        "requirement_refs": [
+          {
+            "kind": "InspectionRequirement",
+            "id": "panel-use-inspection",
+            "version": "1"
+          }
+        ],
+        "scope_of_release": {
+          "value": "6",
+          "unit": "panel",
+          "basis_ref": {
+            "kind": "Evidence",
+            "id": "synthetic-independent-quality-recheck-and-defect-closure",
+            "version": "1"
+          }
+        }
+      },
+      "method": {
+        "ref": {
+          "kind": "InspectionMethod",
+          "id": "external-panel-check",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic-connected-quality-basis",
+            "version": "1"
+          }
+        ],
+        "scope": {
+          "kind": "project",
+          "ref": {
+            "kind": "Project",
+            "id": "buyer-project",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "receiving-line-1",
+              "version": "1"
+            }
+          ]
+        },
+        "available_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "synthetic-clock",
+            "version": "1"
+          },
+          "offset": 11
+        },
+        "effective_window": {
+          "start": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "synthetic-clock",
+              "version": "1"
+            },
+            "offset": 10
+          },
+          "end": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "synthetic-clock",
+              "version": "1"
+            },
+            "offset": 20
+          },
+          "bounds": "closed_open"
+        },
+        "supported": {
+          "state": "known",
+          "value": true
+        },
+        "requirement_refs": [
+          {
+            "kind": "InspectionRequirement",
+            "id": "panel-use-inspection",
+            "version": "1"
+          }
+        ],
+        "observation_method_ref": {
+          "kind": "Method",
+          "id": "synthetic-panel-observation",
+          "version": "1"
+        },
+        "executor_organization_id": "independent-engineer-org",
+        "executor_actor_id": "independent-engineer-actor",
+        "executor_function_ref": {
+          "kind": "FunctionAssignment",
+          "id": "independent-engineer-function",
+          "version": "1"
+        },
+        "executor_authority_ref": {
+          "kind": "Authorization",
+          "id": "independent-engineer-grant",
+          "version": "1"
+        },
+        "executor_action_id": "ENGINEER-A08",
+        "requires_actual_evidence": true
+      },
+      "observation_method": {
+        "ref": {
+          "kind": "Method",
+          "id": "synthetic-panel-observation",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic-connected-quality-basis",
+            "version": "1"
+          }
+        ],
+        "scope": {
+          "kind": "project",
+          "ref": {
+            "kind": "Project",
+            "id": "buyer-project",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "receiving-line-1",
+              "version": "1"
+            }
+          ]
+        },
+        "available_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "synthetic-clock",
+            "version": "1"
+          },
+          "offset": 11
+        },
+        "effective_window": {
+          "start": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "synthetic-clock",
+              "version": "1"
+            },
+            "offset": 10
+          },
+          "end": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "synthetic-clock",
+              "version": "1"
+            },
+            "offset": 20
+          },
+          "bounds": "closed_open"
+        },
+        "supported": {
+          "state": "known",
+          "value": true
+        },
+        "allowed_author_action_ids": [
+          "ENGINEER-A08"
+        ]
+      },
+      "requirements": [
+        {
+          "ref": {
+            "kind": "InspectionRequirement",
+            "id": "panel-use-inspection",
+            "version": "1"
+          },
+          "evidence_refs": [
+            {
+              "kind": "Evidence",
+              "id": "synthetic-connected-quality-basis",
+              "version": "1"
+            }
+          ],
+          "scope": {
+            "kind": "project",
+            "ref": {
+              "kind": "Project",
+              "id": "buyer-project",
+              "version": "1"
+            },
+            "coverage_refs": [
+              {
+                "kind": "WorkScope",
+                "id": "receiving-line-1",
+                "version": "1"
+              }
+            ]
+          },
+          "available_at": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "synthetic-clock",
+              "version": "1"
+            },
+            "offset": 11
+          },
+          "effective_window": {
+            "start": {
+              "clock_ref": {
+                "kind": "ClockProfile",
+                "id": "synthetic-clock",
+                "version": "1"
+              },
+              "offset": 10
+            },
+            "end": {
+              "clock_ref": {
+                "kind": "ClockProfile",
+                "id": "synthetic-clock",
+                "version": "1"
+              },
+              "offset": 20
+            },
+            "bounds": "closed_open"
+          },
+          "batch_ref": {
+            "kind": "ProductBatch",
+            "id": "source-cargo",
+            "version": "0"
+          },
+          "product_ref": {
+            "kind": "ProductSpecification",
+            "id": "panel-spec",
+            "version": "1"
+          },
+          "use_codes": [
+            "panel_batch_quality"
+          ],
+          "allowed_method_refs": [
+            {
+              "kind": "InspectionMethod",
+              "id": "external-panel-check",
+              "version": "1"
+            }
+          ],
+          "external_verification_required": true
+        }
+      ],
+      "author_grant": {
+        "ref": {
+          "kind": "Authorization",
+          "id": "independent-engineer-grant",
+          "version": "1"
+        },
+        "organization_id": "independent-engineer-org",
+        "actor_id": "independent-engineer-actor",
+        "function_ref": {
+          "kind": "FunctionAssignment",
+          "id": "independent-engineer-function",
+          "version": "1"
+        },
+        "action_ids": [
+          "ENGINEER-A08"
+        ],
+        "scopes": [
+          {
+            "kind": "project",
+            "ref": {
+              "kind": "Project",
+              "id": "buyer-project",
+              "version": "1"
+            },
+            "coverage_refs": [
+              {
+                "kind": "WorkScope",
+                "id": "receiving-line-1",
+                "version": "1"
+              }
+            ]
+          }
+        ],
+        "readable_refs": [
+          {
+            "kind": "ProductBatch",
+            "id": "source-cargo",
+            "version": "0"
+          },
+          {
+            "kind": "BatchLineageLedger",
+            "id": "source-batch-lineage",
+            "version": "1"
+          },
+          {
+            "kind": "InspectionProfile",
+            "id": "external-check-profile",
+            "version": "1"
+          },
+          {
+            "kind": "InspectionRequirement",
+            "id": "panel-use-inspection",
+            "version": "1"
+          },
+          {
+            "kind": "InspectionMethod",
+            "id": "external-panel-check",
+            "version": "1"
+          },
+          {
+            "kind": "Method",
+            "id": "synthetic-panel-observation",
+            "version": "1"
+          },
+          {
+            "kind": "InspectionEvidence",
+            "id": "supplier-visible-observation",
+            "version": "1"
+          },
+          {
+            "kind": "Defect",
+            "id": "visible-panel-defect",
+            "version": "1"
+          },
+          {
+            "kind": "Evidence",
+            "id": "synthetic-connected-quality-basis",
+            "version": "1"
+          },
+          {
+            "kind": "ClockProfile",
+            "id": "synthetic-clock",
+            "version": "1"
+          },
+          {
+            "kind": "Project",
+            "id": "buyer-project",
+            "version": "1"
+          },
+          {
+            "kind": "WorkScope",
+            "id": "receiving-line-1",
+            "version": "1"
+          },
+          {
+            "kind": "FunctionAssignment",
+            "id": "v4-supplier-quality-function",
+            "version": "1"
+          },
+          {
+            "kind": "FunctionAssignment",
+            "id": "independent-engineer-function",
+            "version": "1"
+          },
+          {
+            "kind": "CandidateSet",
+            "id": "v4-supplier-quality-candidates",
+            "version": "1"
+          },
+          {
+            "kind": "Authorization",
+            "id": "v4-supplier-quality-grant",
+            "version": "1"
+          },
+          {
+            "kind": "Authorization",
+            "id": "independent-engineer-grant",
+            "version": "1"
+          }
+        ],
+        "tool_ids": [],
+        "validity": {
+          "start": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "synthetic-clock",
+              "version": "1"
+            },
+            "offset": 10
+          },
+          "end": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "synthetic-clock",
+              "version": "1"
+            },
+            "offset": 20
+          },
+          "bounds": "closed_open"
+        },
+        "basis_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic-connected-quality-basis",
+            "version": "1"
+          }
+        ]
+      },
+      "author_assignment": {
+        "role": "Engineer",
+        "function_ref": {
+          "kind": "FunctionAssignment",
+          "id": "independent-engineer-function",
+          "version": "1"
+        },
+        "configuration_version": "1",
+        "basis_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic-connected-quality-basis",
+            "version": "1"
+          }
+        ]
+      },
+      "defect_resolutions": [
+        {
+          "original_defect_ref": {
+            "kind": "Defect",
+            "id": "visible-panel-defect",
+            "version": "1"
+          },
+          "closed_defect": {
+            "ref": {
+              "kind": "Defect",
+              "id": "visible-panel-defect",
+              "version": "2"
+            },
+            "evidence_refs": [
+              {
+                "kind": "Evidence",
+                "id": "synthetic-independent-quality-recheck-and-defect-closure",
+                "version": "1"
+              }
+            ],
+            "scope": {
+              "kind": "project",
+              "ref": {
+                "kind": "Project",
+                "id": "buyer-project",
+                "version": "1"
+              },
+              "coverage_refs": [
+                {
+                  "kind": "WorkScope",
+                  "id": "receiving-line-1",
+                  "version": "1"
+                }
+              ]
+            },
+            "available_at": {
+              "clock_ref": {
+                "kind": "ClockProfile",
+                "id": "synthetic-clock",
+                "version": "1"
+              },
+              "offset": 11
+            },
+            "effective_window": {
+              "start": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "synthetic-clock",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "end": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "synthetic-clock",
+                  "version": "1"
+                },
+                "offset": 20
+              },
+              "bounds": "closed_open"
+            },
+            "batch_ref": {
+              "kind": "ProductBatch",
+              "id": "source-cargo",
+              "version": "1"
+            },
+            "physical_batch_key": "synthetic-receiving-physical-batch",
+            "observation_ref": {
+              "kind": "InspectionEvidence",
+              "id": "supplier-visible-observation",
+              "version": "1"
+            },
+            "requirement_refs": [
+              {
+                "kind": "InspectionRequirement",
+                "id": "panel-use-inspection",
+                "version": "1"
+              }
+            ],
+            "status": "closed",
+            "responsible_organization_id": {
+              "state": "unknown",
+              "reason_code": "synthetic_unsupplied",
+              "missing_refs": []
+            },
+            "cost_bearer_id": {
+              "state": "unknown",
+              "reason_code": "synthetic_unsupplied",
+              "missing_refs": []
+            }
+          },
+          "recheck_ref": {
+            "kind": "BatchRecheck",
+            "id": "synthetic-independent-panel-release-recheck",
+            "version": "1"
+          },
+          "closed_at": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "synthetic-clock",
+              "version": "1"
+            },
+            "offset": 11
+          },
+          "core_event_id": "synthetic-independent-panel-defect-closure-event",
+          "producer": "core",
+          "evidence_refs": [
+            {
+              "kind": "Evidence",
+              "id": "synthetic-independent-quality-recheck-and-defect-closure",
+              "version": "1"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "assumptions": [
+    "Explicit synthetic chronological derivative of tests/fixtures/roles/lifecycle_v4_quality_connection_seed.v1.json at SHA256 d31ac36f736771255477177a51c0144451367720f78896b57dab7bb710344cfe.",
+    "Downstream clocks/grants/method and resource windows shift together by ten ticks; production at 1 precedes quality at 10 and logistics at 11. No saved original action digests are fabricated.",
+    "Original defect lineage/unknown responsibility/cost values and independent receipt short/damaged discrepancy remain present. Native/professional state is explicitly synthetic; no real effects are generated."
+  ]
+}

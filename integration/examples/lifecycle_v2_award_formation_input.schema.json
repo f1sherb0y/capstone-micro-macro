@@ -1,0 +1,244 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "V2 original Owner award reception to independent Contractor formation decision",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "scenario_id",
+    "run_id",
+    "contractor_organization_id",
+    "source_mode",
+    "award",
+    "request",
+    "configuration"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "lifecycle-v2-award-formation-input.v1"
+    },
+    "scenario_id": {
+      "const": "V2"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "contractor_organization_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "source_mode": {
+      "const": "formal"
+    },
+    "award": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "result_path",
+        "result_file_sha256",
+        "identity",
+        "record_sha256",
+        "result_sha256",
+        "reading_sha256",
+        "selection"
+      ],
+      "properties": {
+        "result_path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S",
+          "description": "Original formal Owner A10 accept role-contract result.json; absolute or relative to this input."
+        },
+        "result_file_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "identity": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "run_id",
+            "organization_id",
+            "role",
+            "action_id",
+            "request_id",
+            "purpose",
+            "input_sha256",
+            "context_sha256",
+            "versions"
+          ],
+          "properties": {
+            "run_id": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "organization_id": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "role": {
+              "const": "Owner"
+            },
+            "action_id": {
+              "const": "OWN-A10"
+            },
+            "request_id": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "purpose": {
+              "const": "action"
+            },
+            "input_sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "context_sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "versions": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "client",
+                "skill",
+                "prompt",
+                "contract",
+                "method",
+                "model",
+                "strategy"
+              ],
+              "properties": {
+                "client": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "skill": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "prompt": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "contract": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "method": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "model": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "strategy": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                }
+              }
+            }
+          }
+        },
+        "record_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "result_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "reading_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "selection": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "source_task_sha256",
+            "acceptance_ref",
+            "native_evidence_ref"
+          ],
+          "properties": {
+            "source_task_sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "acceptance_ref": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "kind",
+                "id",
+                "version"
+              ],
+              "properties": {
+                "kind": {
+                  "const": "PartyAcceptance"
+                },
+                "id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "version": {
+                  "type": [
+                    "string",
+                    "integer"
+                  ]
+                }
+              }
+            },
+            "native_evidence_ref": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "kind",
+                "id",
+                "version"
+              ],
+              "properties": {
+                "kind": {
+                  "const": "Evidence"
+                },
+                "id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "version": {
+                  "type": [
+                    "string",
+                    "integer"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "request": {
+      "type": "object",
+      "description": "Current independently authorized formal Contractor A04 invocation. Completion may accept, revise or reject; no default consent."
+    },
+    "configuration": {
+      "type": "object",
+      "description": "Contractor RoleContractHostConfiguration with received_award_inputs selecting exactly award.selection; application supplies original OwnerAwardPublicationSource and actual independent reception/agreement validators."
+    }
+  }
+}

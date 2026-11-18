@@ -1,0 +1,330 @@
+{
+  "schema_version": "gba-v1-3c-closeout.v1",
+  "batch": "3C",
+  "supported_native_wiring_complete": true,
+  "overall_goal3_complete": false,
+  "scope": "4 original appointment operation contracts, 11 original professional monthly subactions, actual team/appointment and three aggregate design feedback contacts. This is a batch inventory, not the denominator for all macro actions.",
+  "operation_contracts": [
+    {
+      "role": "Architect",
+      "operation": "consider_appointment",
+      "macro_input": [
+        "project",
+        "policy",
+        "macro_environment",
+        "required_resource",
+        "prior_fit"
+      ],
+      "micro_handler": "integration/professional_intake_native.py",
+      "micro_processing": "Original ARCHITECT-A01 received opportunity then A02 exact service acceptance/refusal, current native project/region/type and own earlier actual appointments/A03/A12",
+      "return_to_macro": "Original role-specific acceptance/refusal proposal and final architect_appointment_acceptance; same micro result and native scope",
+      "feedback_consumer": "Actual appointment_decision -> own A12; accepted terms -> original OWN-A04; selected team -> own A03/A12 and later own A02",
+      "status": "executed_current_professional_chain",
+      "evidence": "output/integration/goal3c_professional_20261018_01/checks.json",
+      "boundary": "Native normalized resource does not supply personnel/fees. Private detailed sources are declared synthetic inputs; received selection is not a detailed relationship activation."
+    },
+    {
+      "role": "Engineer",
+      "operation": "consider_appointment",
+      "macro_input": [
+        "project",
+        "required_resource",
+        "prior_fit"
+      ],
+      "micro_handler": "integration/professional_intake_native.py",
+      "micro_processing": "Original ENGINEER-A01 received opportunity then A02 exact service acceptance/refusal, current native project/region/type and own earlier actual appointments/A03/A12",
+      "return_to_macro": "Original role-specific acceptance/refusal proposal and final engineer_appointment_acceptance; same micro result and native scope",
+      "feedback_consumer": "Actual appointment_decision -> own A12; accepted terms -> original OWN-A04; selected team -> own A03/A12 and later own A02",
+      "status": "executed_current_professional_chain",
+      "evidence": "output/integration/goal3c_professional_20261018_01/checks.json",
+      "boundary": "Native normalized resource does not supply personnel/fees. Private detailed sources are declared synthetic inputs; received selection is not a detailed relationship activation."
+    },
+    {
+      "role": "QS",
+      "operation": "consider_appointment",
+      "macro_input": [
+        "project",
+        "policy",
+        "macro_environment",
+        "required_resource",
+        "prior_fit"
+      ],
+      "micro_handler": "integration/professional_intake_native.py",
+      "micro_processing": "Original QS-A01 received opportunity then A02 exact service acceptance/refusal, current native project/region/type and own earlier actual appointments/A03/A12",
+      "return_to_macro": "Original role-specific acceptance/refusal proposal and final qs_appointment_acceptance; same micro result and native scope",
+      "feedback_consumer": "Actual appointment_decision -> own A12; accepted terms -> original OWN-A04; selected team -> own A03/A12 and later own A02",
+      "status": "executed_current_professional_chain",
+      "evidence": "output/integration/goal3c_professional_20261018_01/checks.json",
+      "boundary": "Native normalized resource does not supply personnel/fees. Private detailed sources are declared synthetic inputs; received selection is not a detailed relationship activation."
+    },
+    {
+      "role": "Owner",
+      "operation": "select_appointment",
+      "macro_input": [
+        "candidates",
+        "purpose"
+      ],
+      "micro_handler": "integration/owner_commission_native.py",
+      "micro_processing": "Original OWN-A04 compares current independently accepted exact provider terms, authorized management/fee sources and own previous commission preference",
+      "return_to_macro": "Original select_architect/qs/engineer proposal plus final owner_select_* selected_agent_id; reject_all retains no selection",
+      "feedback_consumer": "Native consultant_team_appointed and selected_* -> selected provider A03/A12; own later OWN-A04 exact history",
+      "status": "executed_current_professional_chain",
+      "evidence": "output/integration/goal3c_professional_20261018_01/checks.json",
+      "boundary": "Native core alone creates team/ACTIVE normalized engagement. No detailed signed service contract, personnel allocation or fee/cash receipt."
+    }
+  ],
+  "monthly_subactions": [
+    {
+      "role": "Architect",
+      "operation": "build_cross_region_reputation",
+      "macro_input": "Actual market_demand_index, own native free ratio, same-run native selected project events and original A03 confirmations",
+      "micro_handler": "integration.architect_portfolio_native:ArchitectPortfolioApplication",
+      "micro_processing": "Original ARCHITECT-A12 record_feedback with typed private selection portfolio, independently authorized market/free ratio gates and authenticated same-run A03 records",
+      "return_to_macro": "Original monthly proposal/final and scheduler agent_operation",
+      "feedback_consumer": "Later own A12 uses the same executed portfolio artifact; unchanged entries defer repeated update",
+      "status": "executed_current_micro_judgment_and_feedback",
+      "evidence": "output/integration/goal3c_portfolio_20261018_01/checks.json",
+      "boundary": "Private selected-project portfolio from actual same-run native selections and original A03 confirmations. Selection is not service completion, client satisfaction, publicity permission or measured reputation growth. No cross-region collaboration is inferred without a corresponding actual selection. Formal learning and qualifications stay unknown; original random capability updates are not caused-effect evidence.",
+      "configuration": null
+    },
+    {
+      "role": "Architect",
+      "operation": "improve_design_capability",
+      "macro_input": "Actual original regulatory_pressure_index and current own native capability/free resource profile",
+      "micro_handler": "integration.professional_methods_native:ProfessionalMethodsApplication",
+      "micro_processing": "ARCHITECT-A12 optional monthly observation analysis",
+      "return_to_macro": "Original monthly proposal → final decision → original scheduler operation and retained memory",
+      "feedback_consumer": "Later own original A12 reads the same executed event and prior method-focus artifact, and uses the count to constrain new improvement",
+      "status": "executed_current_micro_judgment_and_feedback",
+      "evidence": "output/integration/goal3c_methods_20261018_01/checks.json",
+      "boundary": "Native background method-improvement planning and original monthly operations only. Detailed private learning history and capabilities remain unknown; no completed training, formal design/check output, issued qualification, client/reputation record or project cost outcome is inferred. Native normalized capability updates remain the original random mechanism, including on maintain_operations; they are not proof that this activity caused improvement.",
+      "configuration": null
+    },
+    {
+      "role": "Architect",
+      "operation": "maintain_client_relationship",
+      "macro_input": "Own strictly earlier same-run original A03-confirmed team selections and native owner/consultant identities; actual current market demand/free ratio; independent internally authorized client-follow-up task",
+      "micro_handler": "integration.architect_client_relationship:ArchitectClientRelationshipApplication",
+      "micro_processing": "Original A12 private strategy/author/authority checks then typed client-and-consultant follow-up recording; current demand times private task weight determines priority, exact prior accepted records and review interval determine update due status",
+      "return_to_macro": "Same original A12 result -> original monthly proposal/final -> actual maintain_client_relationship or maintain_operations and own memory",
+      "feedback_consumer": "Later own A12 reads exact actually executed private follow-up records and next-review tick; high main Architect tick 3 retains tick 2 owner/Engineer/QS records and suppresses duplicate update until tick 4",
+      "status": "executed_current_micro_judgment_and_feedback",
+      "evidence": "output/integration/goal3c_client_review_20261018_01/checks.json",
+      "boundary": "Authorized private client/consultant follow-up record and review schedule from actual same-run own selected appointments and original A03 confirmations. Actual native team events identify the owner and selected consultants; they are not client satisfaction or completed collaboration. The responsible actor, permitted internal use, allowed counterparties, priority weight/threshold and review interval are independent synthetic initial task inputs. Only a confirmed original monthly execution permits later adoption of the same private records. External contact consent, delivered messages and activated detailed service relationships stay unknown. No outreach, receipt, new commission, spending, resource reservation, reputation or measured capability improvement is inferred.",
+      "configuration": null
+    },
+    {
+      "role": "Architect",
+      "operation": "seek_design_commission",
+      "macro_input": "Original current macro_environment plus own normalized profile/free resource. These do not supply all private detailed decision facts.",
+      "micro_handler": "integration.professional_monthly_native:ProfessionalMonthlyApplication",
+      "micro_processing": "Original professional A01 optional sourced outreach constraints, original assembler/worker",
+      "return_to_macro": "Legal original positive candidate proposal then original final response carries exact micro participation; refusals execute native maintain_operations",
+      "feedback_consumer": "Next original own A01 constraint counts actual own outreach, not maintenance or another enterprise",
+      "status": "executed_current_micro_judgment_and_feedback",
+      "evidence": "output/integration/goal3c_monthly_20261018_07/verification.json",
+      "boundary": null,
+      "configuration": null
+    },
+    {
+      "role": "Engineer",
+      "operation": "improve_engineering_capability",
+      "macro_input": "Actual original regulatory_pressure_index and current own native capability/free resource profile",
+      "micro_handler": "integration.professional_methods_native:ProfessionalMethodsApplication",
+      "micro_processing": "ENGINEER-A12 optional monthly observation analysis",
+      "return_to_macro": "Original monthly proposal → final decision → original scheduler operation and retained memory",
+      "feedback_consumer": "Later own original A12 reads the same executed event and prior method-focus artifact, and uses the count to constrain new improvement",
+      "status": "executed_current_micro_judgment_and_feedback",
+      "evidence": "output/integration/goal3c_methods_20261018_01/checks.json",
+      "boundary": "Native background method-improvement planning and original monthly operations only. Detailed private learning history and capabilities remain unknown; no completed training, formal design/check output, issued qualification, client/reputation record or project cost outcome is inferred. Native normalized capability updates remain the original random mechanism, including on maintain_operations; they are not proof that this activity caused improvement.",
+      "configuration": null
+    },
+    {
+      "role": "Engineer",
+      "operation": "maintain_professional_qualifications",
+      "macro_input": "Actual original monthly regulatory_pressure_index and own available/total capacity; exact strictly earlier own committed monthly event/result/memory. Explicit initial private pressure threshold, free-capacity limit and repeat limit.",
+      "micro_handler": "integration.engineer_qualification_maintenance:EngineerQualificationMaintenanceApplication",
+      "micro_processing": "Existing ENGINEER-A12 record_feedback mode compares pressure with 0.6, free ratio with 0.2 and own earlier executed upkeep count with 1. Technical capability is observed but is not a credential or upkeep decision criterion.",
+      "return_to_macro": "Exact A12 judgment -> original maintain_professional_qualifications candidate/final -> original scheduler upkeep or maintain_operations.",
+      "feedback_consumer": "Tick-2 ENGINEER-A12 reads the same tick-1 native event, exact micro result/focus and original episodic memory; high case count=1 suppresses repetition.",
+      "status": "executed_current_micro_judgment_and_feedback",
+      "evidence": "output/integration/goal3c_closeout_20261019_01/upkeep/checks.json",
+      "boundary": "Background review of professional obligations and regional compliance knowledge only. No issued, renewed, verified or applied credential is produced. Formal qualifications and private training history remain unknown. Native capability updates are original random mechanics and not credential evidence.",
+      "configuration": "config/engineer_qualification_maintenance.json"
+    },
+    {
+      "role": "Engineer",
+      "operation": "review_technical_market",
+      "macro_input": "Original current macro_environment plus own normalized profile/free resource. These do not supply all private detailed decision facts.",
+      "micro_handler": "integration.professional_monthly_native:ProfessionalMonthlyApplication",
+      "micro_processing": "Original professional A01 optional sourced outreach constraints, original assembler/worker",
+      "return_to_macro": "Legal original positive candidate proposal then original final response carries exact micro participation; refusals execute native maintain_operations",
+      "feedback_consumer": "Next original own A01 constraint counts actual own outreach, not maintenance or another enterprise",
+      "status": "executed_current_micro_judgment_and_feedback",
+      "evidence": "output/integration/goal3c_monthly_20261018_07/verification.json",
+      "boundary": null,
+      "configuration": null
+    },
+    {
+      "role": "QS",
+      "operation": "improve_cost_estimation",
+      "macro_input": "Actual current native material_price_index, own available resource, authorized own original design planned_cost events and strictly earlier own confirmed monthly outcomes",
+      "micro_handler": "integration.qs_monthly_estimation:QSMonthlyEstimationApplication",
+      "micro_processing": "Original QS-A12 record_feedback with optional typed bounded private index-sensitivity review; actual index enters relative-change judgment and reference_estimate multiplied by accepted index factor. No forecast-error calibration is asserted.",
+      "return_to_macro": "Exact QS-A12 result drives original monthly candidate and final decision; scheduler actually executes improve_cost_estimation or maintain_operations",
+      "feedback_consumer": "Next own QS-A12 verifies the exact earlier micro result, proposal, final, native activity and memory; uses its accepted factor in the new private calculation and change constraint",
+      "status": "executed_current_micro_judgment_and_feedback",
+      "evidence": "output/integration/goal3c_qs_estimation_20261018_03/checks.json",
+      "boundary": "Bounded QS monthly private index-sensitivity review and original improve_cost_estimation activity only. The own initial QS mandate and access permission are declared scenario inputs. Original design planned_cost is a reference estimate, not incurred cost or a frozen independent forecast. The indicative estimate is a private sensitivity calculation in abstract native model units; it does not overwrite the macro estimate or establish regional prices, improved accuracy, calibrated error, final cost, payment or issued training. A private index assumption is treated as accepted only after the exact micro proposal, final decision and own native activity are confirmed. Original random capability updates remain native mechanics, not causal evidence of improvement.",
+      "configuration": null
+    },
+    {
+      "role": "QS",
+      "operation": "review_cost_market",
+      "macro_input": "Actual original material_price_index plus strictly earlier own native monthly events and exact registered private simulation indices",
+      "micro_handler": "integration.qs_monthly_cost_market:QSCostMarketApplication",
+      "micro_processing": "Original QS-A01 source gates, optional typed cost-pressure/change calculation and registration/review judgment",
+      "return_to_macro": "Original monthly proposal and final decision execute the selected original native operation; index publication waits for confirmed native execution",
+      "feedback_consumer": "Later own original QS-A01 consumes exact native events and immutable private index entries in its change calculation and update limit",
+      "status": "executed_current_micro_judgment_and_feedback",
+      "evidence": "output/integration/goal3c_qs_cost_market_20261018_03/final-verification.json",
+      "boundary": "Private original dimensionless simulation-global material index knowledge only. No currency conversion, supplier quote, delivered material price, regional/tender benchmark, actual project quantity/cost, forecast validation or cost-estimation improvement is inferred. Native capability changes remain original random mechanics. Publication requires a confirmed original update_cost_database event and occurs at the next actual own observation.",
+      "configuration": null
+    },
+    {
+      "role": "QS",
+      "operation": "seek_consulting_work",
+      "macro_input": "Original current macro_environment plus own normalized profile/free resource. These do not supply all private detailed decision facts.",
+      "micro_handler": "integration.professional_monthly_native:ProfessionalMonthlyApplication",
+      "micro_processing": "Original professional A01 optional sourced outreach constraints, original assembler/worker",
+      "return_to_macro": "Legal original positive candidate proposal then original final response carries exact micro participation; refusals execute native maintain_operations",
+      "feedback_consumer": "Next original own A01 constraint counts actual own outreach, not maintenance or another enterprise",
+      "status": "executed_current_micro_judgment_and_feedback",
+      "evidence": "output/integration/goal3c_monthly_20261018_07/verification.json",
+      "boundary": null,
+      "configuration": null
+    },
+    {
+      "role": "QS",
+      "operation": "update_cost_database",
+      "macro_input": "Actual original material_price_index plus strictly earlier own native monthly events and exact registered private simulation indices",
+      "micro_handler": "integration.qs_monthly_cost_market:QSCostMarketApplication",
+      "micro_processing": "Original QS-A01 source gates, optional typed cost-pressure/change calculation and registration/review judgment",
+      "return_to_macro": "Original monthly proposal and final decision execute the selected original native operation; index publication waits for confirmed native execution",
+      "feedback_consumer": "Later own original QS-A01 consumes exact native events and immutable private index entries in its change calculation and update limit",
+      "status": "executed_current_micro_judgment_and_feedback",
+      "evidence": "output/integration/goal3c_qs_cost_market_20261018_03/final-verification.json",
+      "boundary": "Private original dimensionless simulation-global material index knowledge only. No currency conversion, supplier quote, delivered material price, regional/tender benchmark, actual project quantity/cost, forecast validation or cost-estimation improvement is inferred. Native capability changes remain original random mechanics. Publication requires a confirmed original update_cost_database event and occurs at the next actual own observation.",
+      "configuration": null
+    }
+  ],
+  "lifecycle_feedback": [
+    {
+      "macro_call_site": "simulation/project_lifecycle_engine.py: _handle_design; simulation/project_state_update_engine.py: update_design_state",
+      "behavior": "Design progression uses aggregate design/information quality, Architect/QS profiles and estimated cost. _handle_design transitions to APPROVAL when design_quality >= 0.70 and information_quality >= 0.65.",
+      "micro_contacts": [
+        "integration/architect_planning_actions.py",
+        "integration/architect_design_actions.py",
+        "integration/engineer_planning_actions.py",
+        "integration/engineer_design_actions.py",
+        "integration/qs_cost_actions.py",
+        "integration/qs_cost_calculations.py",
+        "integration/qs_cost_calculation_publication.py",
+        "integration/professional_work_source_review.py",
+        "integration/professional_design_feedback.py",
+        "src/actions/roles/professional_monthly_methods.py"
+      ],
+      "boundary": "Native design updater, APPROVAL threshold and completed lifecycle archive remain macro-owned. No detailed design/cost task, publication, credentials or work-dispatch execution is inferred.",
+      "status": "executed_supported_aggregate_feedback_archive_is_pure_macro_mechanism",
+      "batch": "3C",
+      "evidence": "output/integration/goal3c_design_20261019_01/verified/checks.json",
+      "scope_calibration": {
+        "required_refs": [
+          "N06"
+        ],
+        "note": "N06 aggregate feedback accepted; completed Owner archive is pure macro mechanism, not a separate work dispatch requirement.",
+        "new_execution_evidence": true
+      },
+      "historical_detailed_source_review": {
+        "status": "blocked_detailed_professional_sources_and_handoffs",
+        "boundary": "Original aggregate design quality/information quality/estimated cost and design_coordination_task archives remain native. Real selected teams/normalized engagements exist, but do not produce detailed active ServiceRelationship, released professional tasks, personnel commitments, independent quantities/prices or exact design/cost submissions/receptions. Those handoffs remain blocked, not covered by original action classes.",
+        "evidence": "output/integration/goal3c_professional_20261018_01/source-boundaries.json"
+      },
+      "macro_input": "Actual same-tick project_state_updated design_quality/information_quality/planned_cost, live native estimated_cost/initial_budget and own actual selected/A03-confirmed appointment.",
+      "micro_processing": "Existing ARCHITECT/ENGINEER-A12 methods calculate actual design/information gaps and estimate/budget ratio; original selected firms require actual own A03 confirmation. No detailed design or costing tasks inferred.",
+      "return_to_macro": "Original monthly method proposal/final decision and scheduler execute improve_design_capability/improve_engineering_capability or maintain_operations. Design updater and APPROVAL threshold remain native.",
+      "feedback_consumer": "Two controlled original runs, each four own actual design consumers and two later same-execution consumers; tick-2 A12 uses tick-1 actual operation count and original review/result identities to defer repetition.",
+      "historical_partial_delivery": {
+        "status": "executed_aggregate_feedback_detailed_work_and_coordination_dispatch_still_blocked",
+        "boundary": "Native design/state/approval mechanisms unchanged. Aggregate observations do not become detailed service tasks, design releases, quantities, prices, accepted cost plans, actual expenditure, training or qualifications. Owner coordination-task dispatch remains unproved.",
+        "scope_calibration": {
+          "required_refs": [
+            "N06"
+          ],
+          "note": "Three aggregate fields now have actual original A12 consumers. Keep remaining coordination archive/task-dispatch boundary unresolved.",
+          "new_execution_evidence": true
+        }
+      }
+    },
+    {
+      "macro_call_site": "simulation/project_lifecycle_engine.py: _handle_initiation / consultant_team_appointed",
+      "behavior": "After independent professional acceptance and actual Owner selection, stores the selected team and emits consultant_team_appointed. Only selected professionals receive their existing own membership projection.",
+      "micro_contacts": [
+        "integration/professional_appointment_native.py",
+        "integration/professional_appointment_native_sources.py",
+        "integration/professional_intake_feedback.py",
+        "integration/native_lifecycle_actions.py",
+        "integration/owner_commission_native_feedback.py"
+      ],
+      "boundary": "Five actual selected professionals receive original private A03 confirmation and own A12. Thirteen A12 records cover actual intake and selection; three later A02 read own selected histories and one Engineer A02 refuses new work. Native ACTIVE normalized engagement is real; private Appointment stays selected without detailed relationship/reservation. No fees/training/qualification/work completion inferred.",
+      "status": "executed_current_private_confirmation_and_feedback",
+      "batch": "3C",
+      "evidence": "output/integration/goal3c_professional_20261018_01/checks.json",
+      "scope_calibration": {
+        "required_refs": [],
+        "note": "Actual appointment and later own consumers have bounded evidence; detailed service/fees are separate PLAN work.",
+        "new_execution_evidence": false
+      }
+    }
+  ],
+  "N06_archive": {
+    "macro_source": "simulation/project_lifecycle_engine.py:_transition/_record_lifecycle_task",
+    "behavior": "Immediately records Owner design_coordination_task state=done, created_tick=completed_tick, result={stage,project_name}; no separate received work request or detailed assignment.",
+    "classification": "pure_macro_completion_archive",
+    "micro_consumer_required": false,
+    "reason": "The native archival mechanism remains macro-owned. Its stage_transition is already consumed with the aggregate design result; detailed dispatch is not a GOAL3 native gate.",
+    "not_execution_claim": "No new archive receipt, detailed dispatch or task work is asserted by this correction."
+  },
+  "pure_macro_mechanisms": [
+    "Resource/engagement reservation and release",
+    "Design aggregate state calculation and APPROVAL thresholds",
+    "Completed lifecycle task archival",
+    "Validation-only representative role checks"
+  ],
+  "native_mechanism_anomalies": [
+    {
+      "source": "simulation/project_lifecycle_engine.py:_validate_representative_actions",
+      "evidence": "output/integration/goal3c_design_20261019_01/verified/lower_qs_accuracy/runtime/result.json",
+      "event_ids": [
+        "EVT000017",
+        "EVT000018",
+        "EVT000019"
+      ],
+      "actions": [
+        "approve_concept_design",
+        "prepare_concept_design",
+        "prepare_cost_plan"
+      ],
+      "status": "unresolved_original_validation_only_mechanism_defect",
+      "reason": "Original diagnostic payload includes forbidden engagement_status and is rejected. No external enterprise decision is requested here, return is not used to perform detailed work; aggregate design state is computed separately. Do not claim these labels executed or add detailed micro tasks.",
+      "macro_source_modified": false
+    }
+  ],
+  "remaining_plan_details": [
+    "Detailed released professional work tasks, independent quantity/price/cost submissions and service activation",
+    "Authentic credential issuance, renewal, verification, validity changes and applied qualification"
+  ],
+  "scope_rule": "PLAN details and validation-only macro mechanisms are outside this batch micro business wiring gate. Native diagnostic error is explicitly retained, not represented as a successful detailed design action.",
+  "evidence": "output/integration/goal3c_closeout_20261019_01/checks.json",
+  "stop_after_delivery": true
+}

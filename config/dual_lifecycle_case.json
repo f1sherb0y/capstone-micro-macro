@@ -1,0 +1,14 @@
+{
+  "schema_version": "dual-lifecycle-case.v1",
+  "run_id": "dual-lifecycle-20261025",
+  "model_options": {
+    "strategy": "single_agent",
+    "provider": "deepseek",
+    "model": "deepseek-v4-flash",
+    "alternate_markup_fraction": "0.2",
+    "max_calls": 4,
+    "max_prompt_chars": 300000
+  },
+  "api_budget": "New separately authorized case: at most four attempts, no automatic retries or offline fallback. Prior three attempts remain sealed in their original batch.",
+  "scope": "Same synthetic initial project and two legal pricing policies; offline rule versus live A02 policy selection. Both retain native signing, aggregate settlement and rule-based later Owner A03 consumption. This is a demonstration, not a strategy benchmark or an all-action LLM model."
+}

@@ -1,0 +1,2927 @@
+{
+  "generated_at": "2026-08-02T22:25:32",
+  "selection_rule": "all cases with at least one benchmark row",
+  "case_count": 352,
+  "benchmark_row_count": 499,
+  "enterprise_row_count": 904,
+  "match_report_row_count": 499,
+  "benchmark_count_distribution": {
+    "1": 300,
+    "2": 22,
+    "3": 8,
+    "4": 8,
+    "5": 7,
+    "6": 4,
+    "9": 1,
+    "11": 1,
+    "20": 1
+  },
+  "candidate_pool": {
+    "max_companies": 20,
+    "role_targets": {
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "include_benchmark_companies": true
+  },
+  "candidate_size_includes_owner": true,
+  "original_candidate_size": {
+    "min": 29,
+    "average": 29.0,
+    "max": 29,
+    "total_company_runs": 10208
+  },
+  "compact_candidate_size": {
+    "min": 14,
+    "average": 14.01,
+    "max": 18,
+    "total_company_runs": 4933
+  },
+  "estimated_company_run_reduction_percent": 51.7,
+  "enterprise_coverage": {
+    "available_unique_enterprises": 904,
+    "selected_unique_enterprises": 185,
+    "unselected_unique_enterprises": 719,
+    "benchmark_unique_enterprises": 173,
+    "selected_benchmark_unique_enterprises": 173,
+    "unselected_benchmark_unique_enterprises": 0,
+    "selected_nonbenchmark_unique_enterprises": 12,
+    "candidate_placements_excluding_owner": 4581,
+    "owner_placements": 352,
+    "total_company_runs": 4933
+  },
+  "most_reused_enterprises": [
+    {
+      "company_id": "COMP-0259",
+      "company_name": "广东粤明动力有限公司",
+      "candidate_case_count": 352
+    },
+    {
+      "company_id": "COMP-0271",
+      "company_name": "广州市安装集团有限公司",
+      "candidate_case_count": 352
+    },
+    {
+      "company_id": "COMP-0494",
+      "company_name": "得寶國際-得寶建築合作經營",
+      "candidate_case_count": 350
+    },
+    {
+      "company_id": "COMP-0459",
+      "company_name": "上海隧道工程有限公司-澳門分公司",
+      "candidate_case_count": 348
+    },
+    {
+      "company_id": "COMP-0208",
+      "company_name": "中铁武汉大桥工程咨询监理有限公司",
+      "candidate_case_count": 347
+    },
+    {
+      "company_id": "COMP-0467",
+      "company_name": "中鐵大橋勘測設計院集團有限公司澳門分公司",
+      "candidate_case_count": 347
+    },
+    {
+      "company_id": "COMP-0461",
+      "company_name": "中交公路規劃設計院有限公司澳門分公司",
+      "candidate_case_count": 345
+    },
+    {
+      "company_id": "COMP-0478",
+      "company_name": "南光工程有限公司",
+      "candidate_case_count": 338
+    },
+    {
+      "company_id": "COMP-0154",
+      "company_name": "中交第二公路工程局有限公司",
+      "candidate_case_count": 307
+    },
+    {
+      "company_id": "COMP-0258",
+      "company_name": "保利长大工程有限公司",
+      "candidate_case_count": 268
+    }
+  ],
+  "case_candidate_sizes": {
+    "CASE-0001": 14,
+    "CASE-0002": 14,
+    "CASE-0003": 14,
+    "CASE-0004": 14,
+    "CASE-0005": 15,
+    "CASE-0006": 14,
+    "CASE-0007": 14,
+    "CASE-0008": 14,
+    "CASE-0009": 14,
+    "CASE-0010": 14,
+    "CASE-0011": 14,
+    "CASE-0012": 14,
+    "CASE-0013": 14,
+    "CASE-0014": 14,
+    "CASE-0015": 14,
+    "CASE-0016": 14,
+    "CASE-0017": 14,
+    "CASE-0018": 14,
+    "CASE-0019": 14,
+    "CASE-0020": 14,
+    "CASE-0021": 14,
+    "CASE-0022": 14,
+    "CASE-0023": 14,
+    "CASE-0024": 14,
+    "CASE-0025": 14,
+    "CASE-0026": 14,
+    "CASE-0027": 14,
+    "CASE-0028": 14,
+    "CASE-0029": 14,
+    "CASE-0030": 14,
+    "CASE-0031": 14,
+    "CASE-0032": 18,
+    "CASE-0033": 14,
+    "CASE-0034": 14,
+    "CASE-0035": 14,
+    "CASE-0036": 14,
+    "CASE-0037": 14,
+    "CASE-0038": 14,
+    "CASE-0039": 14,
+    "CASE-0040": 14,
+    "CASE-0041": 14,
+    "CASE-0042": 14,
+    "CASE-0043": 14,
+    "CASE-0044": 14,
+    "CASE-0045": 14,
+    "CASE-0046": 14,
+    "CASE-0047": 14,
+    "CASE-0048": 14,
+    "CASE-0049": 14,
+    "CASE-0050": 14,
+    "CASE-0051": 14,
+    "CASE-0052": 14,
+    "CASE-0053": 14,
+    "CASE-0054": 14,
+    "CASE-0055": 14,
+    "CASE-0056": 14,
+    "CASE-0057": 14,
+    "CASE-0058": 14,
+    "CASE-0059": 14,
+    "CASE-0060": 14,
+    "CASE-0061": 14,
+    "CASE-0062": 14,
+    "CASE-0063": 14,
+    "CASE-0064": 14,
+    "CASE-0065": 14,
+    "CASE-0066": 14,
+    "CASE-0067": 14,
+    "CASE-0068": 14,
+    "CASE-0069": 14,
+    "CASE-0070": 14,
+    "CASE-0071": 14,
+    "CASE-0072": 14,
+    "CASE-0073": 14,
+    "CASE-0074": 14,
+    "CASE-0075": 14,
+    "CASE-0076": 14,
+    "CASE-0077": 14,
+    "CASE-0078": 14,
+    "CASE-0079": 14,
+    "CASE-0080": 14,
+    "CASE-0081": 14,
+    "CASE-0082": 14,
+    "CASE-0083": 14,
+    "CASE-0084": 14,
+    "CASE-0085": 14,
+    "CASE-0086": 14,
+    "CASE-0087": 14,
+    "CASE-0088": 14,
+    "CASE-0089": 14,
+    "CASE-0090": 14,
+    "CASE-0091": 14,
+    "CASE-0092": 14,
+    "CASE-0093": 14,
+    "CASE-0094": 14,
+    "CASE-0095": 14,
+    "CASE-0096": 14,
+    "CASE-0097": 14,
+    "CASE-0098": 14,
+    "CASE-0099": 14,
+    "CASE-0100": 14,
+    "CASE-0101": 14,
+    "CASE-0102": 14,
+    "CASE-0103": 14,
+    "CASE-0104": 14,
+    "CASE-0105": 14,
+    "CASE-0106": 14,
+    "CASE-0107": 14,
+    "CASE-0108": 14,
+    "CASE-0109": 14,
+    "CASE-0110": 14,
+    "CASE-0111": 14,
+    "CASE-0112": 14,
+    "CASE-0113": 14,
+    "CASE-0114": 14,
+    "CASE-0115": 14,
+    "CASE-0116": 14,
+    "CASE-0117": 14,
+    "CASE-0118": 14,
+    "CASE-0119": 14,
+    "CASE-0120": 14,
+    "CASE-0121": 14,
+    "CASE-0122": 14,
+    "CASE-0123": 14,
+    "CASE-0124": 14,
+    "CASE-0125": 14,
+    "CASE-0126": 14,
+    "CASE-0127": 14,
+    "CASE-0128": 14,
+    "CASE-0129": 14,
+    "CASE-0130": 14,
+    "CASE-0131": 14,
+    "CASE-0132": 14,
+    "CASE-0133": 14,
+    "CASE-0134": 14,
+    "CASE-0135": 14,
+    "CASE-0136": 14,
+    "CASE-0137": 14,
+    "CASE-0138": 14,
+    "CASE-0139": 14,
+    "CASE-0140": 14,
+    "CASE-0141": 14,
+    "CASE-0142": 14,
+    "CASE-0143": 14,
+    "CASE-0144": 14,
+    "CASE-0145": 14,
+    "CASE-0146": 14,
+    "CASE-0147": 14,
+    "CASE-0148": 14,
+    "CASE-0149": 14,
+    "CASE-0150": 14,
+    "CASE-0151": 14,
+    "CASE-0152": 14,
+    "CASE-0153": 14,
+    "CASE-0154": 14,
+    "CASE-0155": 14,
+    "CASE-0156": 14,
+    "CASE-0157": 14,
+    "CASE-0158": 14,
+    "CASE-0159": 14,
+    "CASE-0160": 14,
+    "CASE-0161": 14,
+    "CASE-0162": 14,
+    "CASE-0163": 14,
+    "CASE-0164": 14,
+    "CASE-0165": 14,
+    "CASE-0166": 14,
+    "CASE-0167": 14,
+    "CASE-0168": 14,
+    "CASE-0169": 14,
+    "CASE-0170": 14,
+    "CASE-0171": 14,
+    "CASE-0172": 14,
+    "CASE-0173": 14,
+    "CASE-0174": 14,
+    "CASE-0175": 14,
+    "CASE-0176": 14,
+    "CASE-0177": 14,
+    "CASE-0178": 14,
+    "CASE-0179": 14,
+    "CASE-0180": 14,
+    "CASE-0181": 14,
+    "CASE-0182": 14,
+    "CASE-0183": 14,
+    "CASE-0184": 14,
+    "CASE-0185": 14,
+    "CASE-0186": 14,
+    "CASE-0187": 14,
+    "CASE-0188": 14,
+    "CASE-0189": 14,
+    "CASE-0190": 14,
+    "CASE-0191": 14,
+    "CASE-0192": 14,
+    "CASE-0193": 14,
+    "CASE-0194": 14,
+    "CASE-0195": 14,
+    "CASE-0196": 14,
+    "CASE-0197": 14,
+    "CASE-0198": 14,
+    "CASE-0199": 14,
+    "CASE-0200": 14,
+    "CASE-0201": 14,
+    "CASE-0202": 14,
+    "CASE-0203": 14,
+    "CASE-0204": 14,
+    "CASE-0205": 14,
+    "CASE-0206": 14,
+    "CASE-0207": 14,
+    "CASE-0208": 14,
+    "CASE-0209": 14,
+    "CASE-0210": 14,
+    "CASE-0211": 14,
+    "CASE-0212": 14,
+    "CASE-0213": 14,
+    "CASE-0214": 14,
+    "CASE-0215": 14,
+    "CASE-0216": 14,
+    "CASE-0217": 14,
+    "CASE-0218": 14,
+    "CASE-0219": 14,
+    "CASE-0220": 14,
+    "CASE-0221": 14,
+    "CASE-0222": 14,
+    "CASE-0223": 14,
+    "CASE-0224": 14,
+    "CASE-0225": 14,
+    "CASE-0226": 14,
+    "CASE-0227": 14,
+    "CASE-0228": 14,
+    "CASE-0229": 14,
+    "CASE-0230": 14,
+    "CASE-0231": 14,
+    "CASE-0232": 14,
+    "CASE-0233": 14,
+    "CASE-0234": 14,
+    "CASE-0235": 14,
+    "CASE-0236": 14,
+    "CASE-0237": 14,
+    "CASE-0238": 14,
+    "CASE-0239": 14,
+    "CASE-0240": 14,
+    "CASE-0241": 14,
+    "CASE-0242": 14,
+    "CASE-0243": 14,
+    "CASE-0244": 14,
+    "CASE-0245": 14,
+    "CASE-0246": 14,
+    "CASE-0247": 14,
+    "CASE-0248": 14,
+    "CASE-0249": 14,
+    "CASE-0250": 14,
+    "CASE-0251": 14,
+    "CASE-0252": 14,
+    "CASE-0253": 14,
+    "CASE-0254": 14,
+    "CASE-0255": 14,
+    "CASE-0256": 14,
+    "CASE-0257": 14,
+    "CASE-0258": 14,
+    "CASE-0259": 14,
+    "CASE-0260": 14,
+    "CASE-0261": 14,
+    "CASE-0262": 14,
+    "CASE-0263": 14,
+    "CASE-0264": 14,
+    "CASE-0265": 14,
+    "CASE-0266": 14,
+    "CASE-0267": 14,
+    "CASE-0268": 14,
+    "CASE-0269": 14,
+    "CASE-0270": 14,
+    "CASE-0271": 14,
+    "CASE-0272": 14,
+    "CASE-0273": 14,
+    "CASE-0274": 14,
+    "CASE-0275": 14,
+    "CASE-0276": 14,
+    "CASE-0277": 14,
+    "CASE-0278": 14,
+    "CASE-0279": 14,
+    "CASE-0280": 14,
+    "CASE-0281": 14,
+    "CASE-0282": 14,
+    "CASE-0283": 14,
+    "CASE-0284": 14,
+    "CASE-0285": 14,
+    "CASE-0286": 14,
+    "CASE-0287": 14,
+    "CASE-0288": 14,
+    "CASE-0289": 14,
+    "CASE-0290": 14,
+    "CASE-0291": 14,
+    "CASE-0292": 14,
+    "CASE-0293": 14,
+    "CASE-0294": 14,
+    "CASE-0295": 14,
+    "CASE-0296": 14,
+    "CASE-0297": 14,
+    "CASE-0298": 14,
+    "CASE-0299": 14,
+    "CASE-0300": 14,
+    "CASE-0301": 14,
+    "CASE-0302": 14,
+    "CASE-0303": 14,
+    "CASE-0304": 14,
+    "CASE-0305": 14,
+    "CASE-0306": 14,
+    "CASE-0307": 14,
+    "CASE-0308": 14,
+    "CASE-0309": 14,
+    "CASE-0310": 14,
+    "CASE-0311": 14,
+    "CASE-0312": 14,
+    "CASE-0313": 14,
+    "CASE-0314": 14,
+    "CASE-0315": 14,
+    "CASE-0316": 14,
+    "CASE-0317": 14,
+    "CASE-0318": 14,
+    "CASE-0319": 14,
+    "CASE-0320": 14,
+    "CASE-0321": 14,
+    "CASE-0322": 14,
+    "CASE-0323": 14,
+    "CASE-0324": 14,
+    "CASE-0325": 14,
+    "CASE-0326": 14,
+    "CASE-0327": 14,
+    "CASE-0328": 14,
+    "CASE-0329": 14,
+    "CASE-0330": 14,
+    "CASE-0331": 14,
+    "CASE-0332": 14,
+    "CASE-0333": 14,
+    "CASE-0334": 14,
+    "CASE-0335": 14,
+    "CASE-0336": 14,
+    "CASE-0337": 14,
+    "CASE-0338": 14,
+    "CASE-0339": 14,
+    "CASE-0340": 14,
+    "CASE-0341": 14,
+    "CASE-0342": 14,
+    "CASE-0343": 14,
+    "CASE-0344": 14,
+    "CASE-0345": 14,
+    "CASE-0346": 14,
+    "CASE-0347": 14,
+    "CASE-0348": 14,
+    "CASE-0349": 14,
+    "CASE-0350": 14,
+    "CASE-0351": 14,
+    "CASE-0352": 14
+  },
+  "case_candidate_role_counts": {
+    "CASE-0001": {
+      "owner": 1,
+      "designer": 3,
+      "contractor": 4,
+      "supervisor": 3,
+      "supplier": 3
+    },
+    "CASE-0002": {
+      "owner": 1,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0003": {
+      "owner": 1,
+      "designer": 3,
+      "contractor": 4,
+      "supervisor": 3,
+      "supplier": 3
+    },
+    "CASE-0004": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supervisor": 3,
+      "supplier": 3
+    },
+    "CASE-0005": {
+      "owner": 1,
+      "designer": 3,
+      "supervisor": 4,
+      "contractor": 4,
+      "supplier": 3
+    },
+    "CASE-0006": {
+      "owner": 1,
+      "designer": 3,
+      "contractor": 4,
+      "supervisor": 3,
+      "supplier": 3
+    },
+    "CASE-0007": {
+      "owner": 1,
+      "designer": 3,
+      "contractor": 4,
+      "supervisor": 3,
+      "supplier": 3
+    },
+    "CASE-0008": {
+      "owner": 1,
+      "contractor": 4,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3
+    },
+    "CASE-0009": {
+      "owner": 1,
+      "contractor": 4,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3
+    },
+    "CASE-0010": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0011": {
+      "owner": 1,
+      "contractor": 4,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3
+    },
+    "CASE-0012": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0013": {
+      "owner": 1,
+      "contractor": 4,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3
+    },
+    "CASE-0014": {
+      "owner": 1,
+      "designer": 3,
+      "contractor": 4,
+      "supervisor": 3,
+      "supplier": 3
+    },
+    "CASE-0015": {
+      "owner": 1,
+      "designer": 3,
+      "contractor": 4,
+      "supervisor": 3,
+      "supplier": 3
+    },
+    "CASE-0016": {
+      "owner": 1,
+      "contractor": 4,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3
+    },
+    "CASE-0017": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0018": {
+      "owner": 1,
+      "contractor": 4,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3
+    },
+    "CASE-0019": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0020": {
+      "owner": 1,
+      "designer": 3,
+      "supervisor": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0021": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0022": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0023": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0024": {
+      "owner": 1,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0025": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0026": {
+      "owner": 1,
+      "designer": 3,
+      "supervisor": 3,
+      "contractor": 4,
+      "supplier": 3
+    },
+    "CASE-0027": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0028": {
+      "owner": 1,
+      "designer": 3,
+      "supervisor": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0029": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0030": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0031": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0032": {
+      "owner": 1,
+      "supervisor": 3,
+      "contractor": 8,
+      "designer": 3,
+      "supplier": 3
+    },
+    "CASE-0033": {
+      "owner": 1,
+      "supervisor": 3,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3
+    },
+    "CASE-0034": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0035": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0036": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0037": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0038": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0039": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0040": {
+      "owner": 1,
+      "supplier": 3,
+      "designer": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0041": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0042": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0043": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0044": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0045": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0046": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0047": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0048": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0049": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0050": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0051": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0052": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0053": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0054": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0055": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0056": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0057": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0058": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0059": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0060": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0061": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0062": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0063": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0064": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0065": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0066": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0067": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0068": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0069": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0070": {
+      "owner": 1,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0071": {
+      "owner": 1,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0072": {
+      "owner": 1,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0073": {
+      "owner": 1,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0074": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0075": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0076": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0077": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0078": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0079": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0080": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0081": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0082": {
+      "owner": 1,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0083": {
+      "owner": 1,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0084": {
+      "owner": 1,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0085": {
+      "owner": 1,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0086": {
+      "owner": 1,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0087": {
+      "owner": 1,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0088": {
+      "owner": 1,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0089": {
+      "owner": 1,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0090": {
+      "owner": 1,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0091": {
+      "owner": 1,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0092": {
+      "owner": 1,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0093": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0094": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0095": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0096": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0097": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0098": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0099": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0100": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0101": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0102": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0103": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0104": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0105": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0106": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0107": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0108": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0109": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0110": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0111": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0112": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0113": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0114": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0115": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0116": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0117": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0118": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0119": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0120": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0121": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0122": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0123": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0124": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0125": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0126": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0127": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0128": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0129": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0130": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0131": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0132": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0133": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0134": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0135": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0136": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0137": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0138": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0139": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0140": {
+      "owner": 1,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0141": {
+      "owner": 1,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0142": {
+      "owner": 1,
+      "contractor": 4,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3
+    },
+    "CASE-0143": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0144": {
+      "owner": 1,
+      "designer": 3,
+      "supervisor": 3,
+      "contractor": 4,
+      "supplier": 3
+    },
+    "CASE-0145": {
+      "owner": 1,
+      "designer": 3,
+      "contractor": 4,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0146": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0147": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0148": {
+      "owner": 1,
+      "designer": 3,
+      "contractor": 4,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0149": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0150": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supervisor": 3,
+      "supplier": 3
+    },
+    "CASE-0151": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0152": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0153": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0154": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0155": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0156": {
+      "owner": 1,
+      "contractor": 4,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3
+    },
+    "CASE-0157": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supervisor": 3,
+      "supplier": 3
+    },
+    "CASE-0158": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0159": {
+      "owner": 1,
+      "designer": 3,
+      "supervisor": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0160": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0161": {
+      "owner": 1,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0162": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0163": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0164": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0165": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0166": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0167": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0168": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0169": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0170": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0171": {
+      "owner": 1,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0172": {
+      "owner": 1,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0173": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0174": {
+      "owner": 1,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0175": {
+      "owner": 1,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0176": {
+      "owner": 1,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0177": {
+      "owner": 1,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0178": {
+      "owner": 1,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0179": {
+      "owner": 1,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0180": {
+      "owner": 1,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0181": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0182": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0183": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0184": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0185": {
+      "owner": 1,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0186": {
+      "owner": 1,
+      "contractor": 4,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3
+    },
+    "CASE-0187": {
+      "owner": 1,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0188": {
+      "owner": 1,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0189": {
+      "owner": 1,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0190": {
+      "owner": 1,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0191": {
+      "owner": 1,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0192": {
+      "owner": 1,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0193": {
+      "owner": 1,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0194": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0195": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supervisor": 3,
+      "supplier": 3
+    },
+    "CASE-0196": {
+      "owner": 1,
+      "designer": 3,
+      "supervisor": 3,
+      "contractor": 4,
+      "supplier": 3
+    },
+    "CASE-0197": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0198": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supervisor": 3,
+      "supplier": 3
+    },
+    "CASE-0199": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0200": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0201": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0202": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0203": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0204": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0205": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0206": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0207": {
+      "owner": 1,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0208": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0209": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0210": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0211": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0212": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0213": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0214": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0215": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0216": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0217": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0218": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0219": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0220": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0221": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0222": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0223": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0224": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0225": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0226": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0227": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0228": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0229": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0230": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0231": {
+      "owner": 1,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0232": {
+      "owner": 1,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0233": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0234": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0235": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0236": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0237": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0238": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0239": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0240": {
+      "owner": 1,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0241": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0242": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0243": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0244": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0245": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0246": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0247": {
+      "owner": 1,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0248": {
+      "owner": 1,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0249": {
+      "owner": 1,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0250": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0251": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0252": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0253": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0254": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0255": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0256": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0257": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0258": {
+      "owner": 1,
+      "supplier": 3,
+      "designer": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0259": {
+      "owner": 1,
+      "designer": 3,
+      "contractor": 4,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0260": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0261": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0262": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0263": {
+      "owner": 1,
+      "supplier": 3,
+      "designer": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0264": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0265": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0266": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0267": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0268": {
+      "owner": 1,
+      "supplier": 3,
+      "designer": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0269": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0270": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0271": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0272": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0273": {
+      "owner": 1,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0274": {
+      "owner": 1,
+      "supplier": 3,
+      "designer": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0275": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0276": {
+      "owner": 1,
+      "supplier": 3,
+      "designer": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0277": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0278": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0279": {
+      "owner": 1,
+      "supervisor": 3,
+      "contractor": 4,
+      "supplier": 3,
+      "designer": 3
+    },
+    "CASE-0280": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0281": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0282": {
+      "owner": 1,
+      "supplier": 3,
+      "designer": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0283": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0284": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0285": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0286": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0287": {
+      "owner": 1,
+      "supplier": 3,
+      "designer": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0288": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0289": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0290": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0291": {
+      "owner": 1,
+      "supplier": 3,
+      "designer": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0292": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0293": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0294": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0295": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0296": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0297": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0298": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0299": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0300": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0301": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0302": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0303": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0304": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0305": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0306": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0307": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0308": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0309": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0310": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0311": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0312": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0313": {
+      "owner": 1,
+      "supplier": 3,
+      "designer": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0314": {
+      "owner": 1,
+      "supplier": 3,
+      "designer": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0315": {
+      "owner": 1,
+      "supplier": 3,
+      "designer": 3,
+      "contractor": 4,
+      "supervisor": 3
+    },
+    "CASE-0316": {
+      "owner": 1,
+      "supervisor": 3,
+      "designer": 3,
+      "supplier": 3,
+      "contractor": 4
+    },
+    "CASE-0317": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0318": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0319": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0320": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0321": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0322": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0323": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0324": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0325": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0326": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0327": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0328": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0329": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0330": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0331": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0332": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0333": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0334": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0335": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0336": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0337": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0338": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0339": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0340": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0341": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0342": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0343": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0344": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0345": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0346": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0347": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0348": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0349": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0350": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0351": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    },
+    "CASE-0352": {
+      "owner": 1,
+      "contractor": 4,
+      "designer": 3,
+      "supplier": 3,
+      "supervisor": 3
+    }
+  }
+}

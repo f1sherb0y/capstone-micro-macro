@@ -1,0 +1,1799 @@
+{
+  "schema_version": "lifecycle-input-case.v1",
+  "scenario_id": "V4",
+  "case_id": "v4-supplier-request_quote",
+  "origin": "synthetic",
+  "run_id": "synthetic-v4-request-quote",
+  "status": "input_prepared_execution_pending",
+  "source_declaration": {
+    "origin": "synthetic",
+    "note": "Explicit non-plan request with independent supplied sources; no native effect or counterpart agreement inferred. CandidateSet version2 binds this exact request; any upstream acceptance uses an explicitly supplied synthetic candidate permission.",
+    "templates": [
+      {
+        "path": "tests/fixtures/roles/lifecycle_v4_supplier_purchase_planning.v1.json",
+        "sha256": "2882ad2f0b09b8fd76d63a2209f3679fb253eafbdbc2bc616468afc261a77c3d"
+      },
+      {
+        "path": "tests/fixtures/roles/lifecycle_v4_chronological_order.v1.json",
+        "sha256": "1b5bffb0ebcdc59f62186550d2aeca71f5b8f096a59dcdb4e4b7a38bebb9ce25"
+      }
+    ]
+  },
+  "remaining_requirements": [
+    "Local functional evaluation and actual submission/feedback remain unverified."
+  ],
+  "limitations": [
+    "All sources explicitly synthetic; no quote delivery, effective upstream order or agreed delivery change proven."
+  ],
+  "steps": [
+    {
+      "step_id": "v4-supplier-request_quote",
+      "action_id": "SUPPLIER-A05",
+      "operation_id": "v4-supplier-request_quote-1",
+      "host": "integration.supplier_role_contract_host:build_role_host",
+      "expected_kind": "completed",
+      "expected_choice": "request_quote",
+      "expected_work_authority_ref": {
+        "kind": "SupplyWorkAuthorization",
+        "id": "planning-work",
+        "version": "1"
+      },
+      "output_directory": "output/integration/v4_supplier_request_quote_pending_01",
+      "request": {
+        "schema_version": "role-contract-invocation.v1",
+        "context": {
+          "run_id": "synthetic-v4-request-quote",
+          "actor_id": "supplier-actor",
+          "function_ref": {
+            "kind": "FunctionAssignment",
+            "id": "v4-supplier-planning-function",
+            "version": "1"
+          },
+          "authorization_refs": [
+            {
+              "kind": "Authorization",
+              "id": "v4-supplier-planning-grant",
+              "version": "1"
+            }
+          ],
+          "operation_id": "v4-supplier-request_quote-1",
+          "contract_ref": {
+            "kind": "ActionContract",
+            "id": "SUPPLIER-A05",
+            "version": "1"
+          },
+          "task_ref": {
+            "kind": "DecisionTask",
+            "id": "v4-supplier-request_quote-decision",
+            "version": "1"
+          },
+          "scope": {
+            "kind": "project",
+            "ref": {
+              "kind": "Project",
+              "id": "buyer-project",
+              "version": "1"
+            },
+            "coverage_refs": [
+              {
+                "kind": "WorkScope",
+                "id": "receiving-line-1",
+                "version": "1"
+              }
+            ]
+          },
+          "business_time": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "synthetic-clock",
+              "version": "1"
+            },
+            "offset": 0
+          },
+          "read_token": "synthetic-v4-request-quote:request:read:0",
+          "visible_refs": [
+            {
+              "kind": "SupplyWorkAuthorization",
+              "id": "planning-work",
+              "version": "1"
+            },
+            {
+              "kind": "SupplyPlanningProfile",
+              "id": "planning-profile",
+              "version": "1"
+            },
+            {
+              "kind": "Order",
+              "id": "planning-order",
+              "version": "1"
+            },
+            {
+              "kind": "OrderLine",
+              "id": "planning-order-line",
+              "version": "1"
+            },
+            {
+              "kind": "SupplyRequirement",
+              "id": "planning-output",
+              "version": "1"
+            },
+            {
+              "kind": "ProductSpecification",
+              "id": "supply-panel",
+              "version": "1"
+            },
+            {
+              "kind": "Requirement",
+              "id": "planning-product-requirement",
+              "version": "1"
+            },
+            {
+              "kind": "SupplyMethod",
+              "id": "planning-conversion",
+              "version": "1"
+            },
+            {
+              "kind": "InventorySnapshot",
+              "id": "planning-stock",
+              "version": "1"
+            },
+            {
+              "kind": "SupplierCapacity",
+              "id": "planning-capacity",
+              "version": "1"
+            },
+            {
+              "kind": "TimeWindow",
+              "id": "production-window",
+              "version": "1"
+            },
+            {
+              "kind": "Evidence",
+              "id": "synthetic-planning-basis",
+              "version": "1"
+            },
+            {
+              "kind": "ClockProfile",
+              "id": "synthetic-clock",
+              "version": "1"
+            },
+            {
+              "kind": "Project",
+              "id": "buyer-project",
+              "version": "1"
+            },
+            {
+              "kind": "WorkScope",
+              "id": "receiving-line-1",
+              "version": "1"
+            },
+            {
+              "kind": "FunctionAssignment",
+              "id": "v4-supplier-planning-function",
+              "version": "1"
+            },
+            {
+              "kind": "CandidateSet",
+              "id": "v4-supplier-planning-candidates",
+              "version": "2"
+            },
+            {
+              "kind": "Authorization",
+              "id": "v4-supplier-planning-grant",
+              "version": "1"
+            }
+          ],
+          "candidate_set_ref": {
+            "kind": "CandidateSet",
+            "id": "v4-supplier-planning-candidates",
+            "version": "2"
+          },
+          "execution_mode": "offline_fixture"
+        },
+        "action_input": {
+          "work_authority_ref": {
+            "kind": "SupplyWorkAuthorization",
+            "id": "planning-work",
+            "version": "1"
+          },
+          "scope_ref": {
+            "kind": "project",
+            "ref": {
+              "kind": "Project",
+              "id": "buyer-project",
+              "version": "1"
+            },
+            "coverage_refs": [
+              {
+                "kind": "WorkScope",
+                "id": "receiving-line-1",
+                "version": "1"
+              }
+            ]
+          },
+          "requirement_refs": [
+            {
+              "kind": "SupplyRequirement",
+              "id": "planning-output",
+              "version": "1"
+            }
+          ],
+          "design_refs": [],
+          "inventory_ref": {
+            "kind": "InventorySnapshot",
+            "id": "planning-stock",
+            "version": "1"
+          },
+          "upstream_offer_refs": [],
+          "capacity_ref": {
+            "kind": "SupplierCapacity",
+            "id": "planning-capacity",
+            "version": "1"
+          },
+          "method_refs": [
+            {
+              "kind": "SupplyMethod",
+              "id": "planning-conversion",
+              "version": "1"
+            }
+          ]
+        },
+        "execution_path": "deterministic"
+      },
+      "configuration": {
+        "schema_version": "role-contract-host-config.v1",
+        "host_id": "v4-supplier-planning-fixture",
+        "version": "1",
+        "settings": {
+          "action_id": "SUPPLIER-A05",
+          "source_factory": "integration.supplier_planning_fixture_sources:build_sources",
+          "source_version": "configured-supplier-planning-fixture-sources.v1",
+          "macro_version": "synthetic-v4-request-quote.v1",
+          "client_version": "role-contract-supplier-planning-fixture.v1",
+          "policy_version": "role-contract-supplier-planning-fixture.v1",
+          "model_version": "offline-fixture-no-model.v1",
+          "source_settings": {
+            "action_id": "SUPPLIER-A05",
+            "source_note": "Independent synthetic request_quote sources.",
+            "journal_path": "output/integration/v4_supplier_request_quote_pending_01/journal.sqlite",
+            "allow_saved_recovery": false,
+            "organization_snapshot": {
+              "schema_version": "organization.v2",
+              "run_id": "synthetic-v4-request-quote",
+              "organizations": [
+                {
+                  "organization_id": "supplier-org",
+                  "actor_id": "supplier-actor",
+                  "source_ids": [
+                    "synthetic:v4-request_quote:supplier-org"
+                  ],
+                  "public_description": "Synthetic Supplier purchase participant.",
+                  "public_location": {
+                    "state": "unknown",
+                    "reason_code": "synthetic_unsupplied",
+                    "missing_refs": []
+                  },
+                  "members": [],
+                  "assignments": [
+                    {
+                      "role": "Supplier",
+                      "function_ref": {
+                        "kind": "FunctionAssignment",
+                        "id": "v4-supplier-planning-function",
+                        "version": "1"
+                      },
+                      "configuration_version": "1",
+                      "basis_refs": [
+                        {
+                          "kind": "Evidence",
+                          "id": "synthetic-planning-basis",
+                          "version": "1"
+                        }
+                      ]
+                    }
+                  ],
+                  "evidence_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-planning-basis",
+                      "version": "1"
+                    }
+                  ]
+                },
+                {
+                  "organization_id": "upstream-supplier-org",
+                  "actor_id": "upstream-supplier-actor",
+                  "source_ids": [
+                    "synthetic:v4-request_quote:upstream-supplier-org"
+                  ],
+                  "public_description": "Independent synthetic upstream supplier.",
+                  "public_location": {
+                    "state": "unknown",
+                    "reason_code": "synthetic_unsupplied",
+                    "missing_refs": []
+                  },
+                  "members": [],
+                  "assignments": [
+                    {
+                      "role": "Supplier",
+                      "function_ref": {
+                        "kind": "FunctionAssignment",
+                        "id": "independent-upstream-function",
+                        "version": "1"
+                      },
+                      "configuration_version": "1",
+                      "basis_refs": [
+                        {
+                          "kind": "Evidence",
+                          "id": "synthetic-planning-basis",
+                          "version": "1"
+                        }
+                      ]
+                    }
+                  ],
+                  "evidence_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-planning-basis",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "authorizations": [
+                {
+                  "ref": {
+                    "kind": "Authorization",
+                    "id": "v4-supplier-planning-grant",
+                    "version": "1"
+                  },
+                  "organization_id": "supplier-org",
+                  "actor_id": "supplier-actor",
+                  "function_ref": {
+                    "kind": "FunctionAssignment",
+                    "id": "v4-supplier-planning-function",
+                    "version": "1"
+                  },
+                  "action_ids": [
+                    "SUPPLIER-A05"
+                  ],
+                  "scopes": [
+                    {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    }
+                  ],
+                  "readable_refs": [
+                    {
+                      "kind": "SupplyWorkAuthorization",
+                      "id": "planning-work",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "SupplyPlanningProfile",
+                      "id": "planning-profile",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Order",
+                      "id": "planning-order",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "OrderLine",
+                      "id": "planning-order-line",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "SupplyRequirement",
+                      "id": "planning-output",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ProductSpecification",
+                      "id": "supply-panel",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Requirement",
+                      "id": "planning-product-requirement",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "SupplyMethod",
+                      "id": "planning-conversion",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "InventorySnapshot",
+                      "id": "planning-stock",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "SupplierCapacity",
+                      "id": "planning-capacity",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "TimeWindow",
+                      "id": "production-window",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-planning-basis",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ClockProfile",
+                      "id": "synthetic-clock",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Project",
+                      "id": "buyer-project",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "WorkScope",
+                      "id": "receiving-line-1",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "FunctionAssignment",
+                      "id": "v4-supplier-planning-function",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "CandidateSet",
+                      "id": "v4-supplier-planning-candidates",
+                      "version": "2"
+                    },
+                    {
+                      "kind": "Authorization",
+                      "id": "v4-supplier-planning-grant",
+                      "version": "1"
+                    }
+                  ],
+                  "tool_ids": [
+                    "micro.capacity.fixed_location"
+                  ],
+                  "validity": {
+                    "start": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 0
+                    },
+                    "end": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 10
+                    },
+                    "bounds": "closed_open"
+                  },
+                  "basis_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-planning-basis",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "inactive_authorization_refs": []
+            },
+            "source_projection": {
+              "run_id": "synthetic-v4-request-quote",
+              "macro_version": "synthetic-v4-request-quote.v1",
+              "state_version": "synthetic-planning-state.v1",
+              "read_token": "synthetic-v4-request-quote:request:read:0",
+              "business_time": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "synthetic-clock",
+                  "version": "1"
+                },
+                "offset": 0
+              },
+              "organization_id": "supplier-org",
+              "objects": [
+                {
+                  "ref": {
+                    "kind": "SupplyWorkAuthorization",
+                    "id": "planning-work",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "SupplyWorkAuthorization",
+                      "id": "planning-work",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-planning-basis",
+                        "version": "1"
+                      }
+                    ],
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 0
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "organization_id": "supplier-org",
+                    "permitted": {
+                      "state": "known",
+                      "value": true
+                    },
+                    "order_ref": {
+                      "kind": "Order",
+                      "id": "planning-order",
+                      "version": "1"
+                    },
+                    "speculative_authority_ref": null,
+                    "profile_ref": {
+                      "kind": "SupplyPlanningProfile",
+                      "id": "planning-profile",
+                      "version": "1"
+                    },
+                    "permitted_modes": [
+                      "purchase"
+                    ],
+                    "requirement_refs": [
+                      {
+                        "kind": "SupplyRequirement",
+                        "id": "planning-output",
+                        "version": "1"
+                      }
+                    ],
+                    "design_refs": [],
+                    "method_refs": [
+                      {
+                        "kind": "SupplyMethod",
+                        "id": "planning-conversion",
+                        "version": "1"
+                      }
+                    ],
+                    "order_line_refs": [
+                      {
+                        "kind": "OrderLine",
+                        "id": "planning-order-line",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "SupplyPlanningProfile",
+                    "id": "planning-profile",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "SupplyPlanningProfile",
+                      "id": "planning-profile",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-planning-basis",
+                        "version": "1"
+                      }
+                    ],
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 0
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "work_authority_ref": {
+                      "kind": "SupplyWorkAuthorization",
+                      "id": "planning-work",
+                      "version": "1"
+                    },
+                    "organization_id": "supplier-org",
+                    "actor_id": "supplier-actor",
+                    "function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v4-supplier-planning-function",
+                      "version": "1"
+                    },
+                    "authority_ref": {
+                      "kind": "Authorization",
+                      "id": "v4-supplier-planning-grant",
+                      "version": "1"
+                    },
+                    "choice": "request_quote",
+                    "plan_ref": null,
+                    "prior_plan_ref": null,
+                    "supplier_ids": [
+                      "upstream-supplier-org"
+                    ],
+                    "required_lines": [
+                      {
+                        "product_ref": {
+                          "kind": "ProductSpecification",
+                          "id": "supply-panel",
+                          "version": "1"
+                        },
+                        "destination_scope_ref": {
+                          "kind": "project",
+                          "ref": {
+                            "kind": "Project",
+                            "id": "buyer-project",
+                            "version": "1"
+                          },
+                          "coverage_refs": [
+                            {
+                              "kind": "WorkScope",
+                              "id": "receiving-line-1",
+                              "version": "1"
+                            }
+                          ]
+                        },
+                        "quantity": {
+                          "value": "6",
+                          "unit": "panel",
+                          "basis_ref": {
+                            "kind": "Evidence",
+                            "id": "synthetic-planning-basis",
+                            "version": "1"
+                          }
+                        },
+                        "requirement_refs": [
+                          {
+                            "kind": "Requirement",
+                            "id": "planning-product-requirement",
+                            "version": "1"
+                          }
+                        ],
+                        "deviation_refs": []
+                      }
+                    ],
+                    "offer_ref": null,
+                    "offer_line_keys": [],
+                    "procurement_authority_ref": null,
+                    "affected_line_refs": [],
+                    "proposed_window_ref": null,
+                    "note": "Explicit synthetic request_quote; output is a request/acceptance intention, no effective order or delivery change created."
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "Order",
+                    "id": "planning-order",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "Order",
+                      "id": "planning-order",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-planning-basis",
+                        "version": "1"
+                      }
+                    ],
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 0
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "supplier_id": "supplier-org",
+                    "buyer_id": "contractor-org",
+                    "effective": {
+                      "state": "known",
+                      "value": true
+                    },
+                    "line_refs": [
+                      {
+                        "kind": "OrderLine",
+                        "id": "planning-order-line",
+                        "version": "1"
+                      }
+                    ],
+                    "core_event_id": "synthetic-planning-effective-order-event"
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "OrderLine",
+                    "id": "planning-order-line",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "OrderLine",
+                      "id": "planning-order-line",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-planning-basis",
+                        "version": "1"
+                      }
+                    ],
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 0
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "order_ref": {
+                      "kind": "Order",
+                      "id": "planning-order",
+                      "version": "1"
+                    },
+                    "product": {
+                      "product_ref": {
+                        "kind": "ProductSpecification",
+                        "id": "supply-panel",
+                        "version": "1"
+                      },
+                      "destination_scope_ref": {
+                        "kind": "project",
+                        "ref": {
+                          "kind": "Project",
+                          "id": "buyer-project",
+                          "version": "1"
+                        },
+                        "coverage_refs": [
+                          {
+                            "kind": "WorkScope",
+                            "id": "receiving-line-1",
+                            "version": "1"
+                          }
+                        ]
+                      },
+                      "quantity": {
+                        "value": "6",
+                        "unit": "panel",
+                        "basis_ref": {
+                          "kind": "Evidence",
+                          "id": "synthetic-planning-basis",
+                          "version": "1"
+                        }
+                      },
+                      "requirement_refs": [
+                        {
+                          "kind": "Requirement",
+                          "id": "planning-product-requirement",
+                          "version": "1"
+                        }
+                      ],
+                      "deviation_refs": []
+                    },
+                    "delivery_window_ref": {
+                      "kind": "TimeWindow",
+                      "id": "production-window",
+                      "version": "1"
+                    },
+                    "remaining_quantity": {
+                      "value": "6",
+                      "unit": "panel",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "synthetic-planning-basis",
+                        "version": "1"
+                      }
+                    },
+                    "as_of": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 0
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "SupplyRequirement",
+                    "id": "planning-output",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "SupplyRequirement",
+                      "id": "planning-output",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-planning-basis",
+                        "version": "1"
+                      }
+                    ],
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 0
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "work_authority_ref": {
+                      "kind": "SupplyWorkAuthorization",
+                      "id": "planning-work",
+                      "version": "1"
+                    },
+                    "purpose": "order_output",
+                    "target": {
+                      "product_ref": {
+                        "kind": "ProductSpecification",
+                        "id": "supply-panel",
+                        "version": "1"
+                      },
+                      "destination_scope_ref": {
+                        "kind": "project",
+                        "ref": {
+                          "kind": "Project",
+                          "id": "buyer-project",
+                          "version": "1"
+                        },
+                        "coverage_refs": [
+                          {
+                            "kind": "WorkScope",
+                            "id": "receiving-line-1",
+                            "version": "1"
+                          }
+                        ]
+                      },
+                      "quantity": {
+                        "value": "6",
+                        "unit": "panel",
+                        "basis_ref": {
+                          "kind": "Evidence",
+                          "id": "synthetic-planning-basis",
+                          "version": "1"
+                        }
+                      },
+                      "requirement_refs": [
+                        {
+                          "kind": "Requirement",
+                          "id": "planning-product-requirement",
+                          "version": "1"
+                        }
+                      ],
+                      "deviation_refs": []
+                    },
+                    "permitted": {
+                      "state": "known",
+                      "value": true
+                    },
+                    "order_line_ref": {
+                      "kind": "OrderLine",
+                      "id": "planning-order-line",
+                      "version": "1"
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "ProductSpecification",
+                    "id": "supply-panel",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "ProductSpecification",
+                      "id": "supply-panel",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-planning-basis",
+                        "version": "1"
+                      }
+                    ],
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 0
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "quantity_unit": "panel"
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "Requirement",
+                    "id": "planning-product-requirement",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "Requirement",
+                      "id": "planning-product-requirement",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-planning-basis",
+                        "version": "1"
+                      }
+                    ],
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 0
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "product_refs": [
+                      {
+                        "kind": "ProductSpecification",
+                        "id": "supply-panel",
+                        "version": "1"
+                      }
+                    ],
+                    "offer_ref": null,
+                    "satisfied": {
+                      "state": "known",
+                      "value": true
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "SupplyMethod",
+                    "id": "planning-conversion",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "SupplyMethod",
+                      "id": "planning-conversion",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-planning-basis",
+                        "version": "1"
+                      }
+                    ],
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 0
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "mode": "purchase",
+                    "product_ref": {
+                      "kind": "ProductSpecification",
+                      "id": "supply-panel",
+                      "version": "1"
+                    },
+                    "quantity_unit": "panel",
+                    "supported": {
+                      "state": "known",
+                      "value": true
+                    },
+                    "design_refs": [],
+                    "material_inputs": [],
+                    "resource_kind": null,
+                    "capacity_unit": null,
+                    "quantity_per_capacity_tick": {
+                      "state": "known",
+                      "value": "0.3"
+                    },
+                    "productivity_basis_ref": {
+                      "kind": "Evidence",
+                      "id": "synthetic-planning-basis",
+                      "version": "1"
+                    },
+                    "procurement_basis_ref": {
+                      "kind": "Evidence",
+                      "id": "synthetic-planning-basis",
+                      "version": "1"
+                    },
+                    "purchase_window_ref": {
+                      "kind": "TimeWindow",
+                      "id": "production-window",
+                      "version": "1"
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "InventorySnapshot",
+                    "id": "planning-stock",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "InventorySnapshot",
+                      "id": "planning-stock",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-planning-basis",
+                        "version": "1"
+                      }
+                    ],
+                    "organization_id": "supplier-org",
+                    "as_of": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 0
+                    },
+                    "coverage": "complete",
+                    "lots": []
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "SupplierCapacity",
+                    "id": "planning-capacity",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "SupplierCapacity",
+                      "id": "planning-capacity",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-planning-basis",
+                        "version": "1"
+                      }
+                    ],
+                    "organization_id": "supplier-org",
+                    "as_of": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 0
+                    },
+                    "resource_coverage": "complete",
+                    "commitment_coverage": "complete",
+                    "resources": [],
+                    "commitments": []
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "TimeWindow",
+                    "id": "production-window",
+                    "version": "1"
+                  },
+                  "value": {
+                    "start": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 0
+                    },
+                    "end": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 10
+                    },
+                    "bounds": "closed_open"
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "Evidence",
+                    "id": "synthetic-planning-basis",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "Evidence",
+                      "id": "synthetic-planning-basis",
+                      "version": "1"
+                    },
+                    "source_kind": "synthetic",
+                    "basis_kind": "assumed",
+                    "locator": "synthetic:v4-supplier-planning",
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "content_hash": "39df56507d751202af90dac5538c356a254c43a54859b285ca362077b2328176"
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "ClockProfile",
+                    "id": "synthetic-clock",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "ClockProfile",
+                      "id": "synthetic-clock",
+                      "version": "1"
+                    },
+                    "tick_unit": "synthetic-tick",
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-planning-basis",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "Project",
+                    "id": "buyer-project",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "Project",
+                      "id": "buyer-project",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-planning-basis",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "WorkScope",
+                    "id": "receiving-line-1",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "WorkScope",
+                      "id": "receiving-line-1",
+                      "version": "1"
+                    },
+                    "parent_ref": {
+                      "kind": "Project",
+                      "id": "buyer-project",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-planning-basis",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "FunctionAssignment",
+                    "id": "v4-supplier-planning-function",
+                    "version": "1"
+                  },
+                  "value": {
+                    "role": "Supplier",
+                    "function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v4-supplier-planning-function",
+                      "version": "1"
+                    },
+                    "configuration_version": "1",
+                    "basis_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-planning-basis",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "CandidateSet",
+                    "id": "v4-supplier-planning-candidates",
+                    "version": "2"
+                  },
+                  "value": {
+                    "operation_id": "v4-supplier-request_quote-1",
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "as_of": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 0
+                    },
+                    "candidates": [
+                      {
+                        "ref": {
+                          "kind": "SupplyPlan",
+                          "id": "planning-plan",
+                          "version": "1"
+                        },
+                        "permitted_choices": [
+                          "plan_manufacture"
+                        ]
+                      }
+                    ],
+                    "search_profile_ref": {
+                      "kind": "Profile",
+                      "id": "planning-search",
+                      "version": "1"
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "Authorization",
+                    "id": "v4-supplier-planning-grant",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "Authorization",
+                      "id": "v4-supplier-planning-grant",
+                      "version": "1"
+                    },
+                    "organization_id": "supplier-org",
+                    "actor_id": "supplier-actor",
+                    "function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v4-supplier-planning-function",
+                      "version": "1"
+                    },
+                    "action_ids": [
+                      "SUPPLIER-A05"
+                    ],
+                    "scopes": [
+                      {
+                        "kind": "project",
+                        "ref": {
+                          "kind": "Project",
+                          "id": "buyer-project",
+                          "version": "1"
+                        },
+                        "coverage_refs": [
+                          {
+                            "kind": "WorkScope",
+                            "id": "receiving-line-1",
+                            "version": "1"
+                          }
+                        ]
+                      }
+                    ],
+                    "readable_refs": [
+                      {
+                        "kind": "SupplyWorkAuthorization",
+                        "id": "planning-work",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "SupplyPlanningProfile",
+                        "id": "planning-profile",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Order",
+                        "id": "planning-order",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "OrderLine",
+                        "id": "planning-order-line",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "SupplyRequirement",
+                        "id": "planning-output",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "ProductSpecification",
+                        "id": "supply-panel",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Requirement",
+                        "id": "planning-product-requirement",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "SupplyMethod",
+                        "id": "planning-conversion",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "InventorySnapshot",
+                        "id": "planning-stock",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "SupplierCapacity",
+                        "id": "planning-capacity",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "TimeWindow",
+                        "id": "production-window",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-planning-basis",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "WorkScope",
+                        "id": "receiving-line-1",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "FunctionAssignment",
+                        "id": "v4-supplier-planning-function",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "CandidateSet",
+                        "id": "v4-supplier-planning-candidates",
+                        "version": "2"
+                      },
+                      {
+                        "kind": "Authorization",
+                        "id": "v4-supplier-planning-grant",
+                        "version": "1"
+                      }
+                    ],
+                    "tool_ids": [
+                      "micro.capacity.fixed_location"
+                    ],
+                    "validity": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "basis_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-planning-basis",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      "expected_payload": {
+        "supplier_ids": [
+          "upstream-supplier-org"
+        ],
+        "required_lines": [
+          {
+            "product_ref": {
+              "kind": "ProductSpecification",
+              "id": "supply-panel",
+              "version": "1"
+            },
+            "destination_scope_ref": {
+              "kind": "project",
+              "ref": {
+                "kind": "Project",
+                "id": "buyer-project",
+                "version": "1"
+              },
+              "coverage_refs": [
+                {
+                  "kind": "WorkScope",
+                  "id": "receiving-line-1",
+                  "version": "1"
+                }
+              ]
+            },
+            "quantity": {
+              "value": "6",
+              "unit": "panel",
+              "basis_ref": {
+                "kind": "Evidence",
+                "id": "synthetic-planning-basis",
+                "version": "1"
+              }
+            },
+            "requirement_refs": [
+              {
+                "kind": "Requirement",
+                "id": "planning-product-requirement",
+                "version": "1"
+              }
+            ],
+            "deviation_refs": []
+          }
+        ]
+      }
+    }
+  ]
+}

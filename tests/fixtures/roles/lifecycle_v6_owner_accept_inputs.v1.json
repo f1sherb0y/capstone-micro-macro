@@ -1,0 +1,3082 @@
+{
+  "schema_version": "lifecycle-input-case.v1",
+  "scenario_id": "V6",
+  "case_id": "v6-owner-scoped-acceptance-retains-issues",
+  "origin": "synthetic",
+  "run_id": "synthetic-v6-owner-accept",
+  "status": "input_prepared_execution_pending",
+  "source_declaration": {
+    "kind": "explicit_synthetic",
+    "assumptions": [
+      "Isolated synthetic limited-scope handover: original submitted contractor request, received submission, one actual configuration and positive net work are declared fixture inputs, not persisted upstream action outputs or native observations.",
+      "An independent synthetic Engineer authorization and version-bound passed Verification are supplied. This is explicit fixture data, not execution of a professional method or real-world certification.",
+      "The original procedure explicitly allows conditional acceptance within the declared scope while an open documentary issue and continuing contractor guarantee remain. All required engineering checks for that scope are declared passed.",
+      "Independent use support is a synthetic input assumption. No use permit is required by this isolated fixture; this does not grant legal use permission or bypass an actual project permit.",
+      "Debt, defects, settlement proposals/components, permits and prior owner decisions are explicitly empty in this fixture. Acceptance opinion does not settle cash, transfer assets, discharge guarantees or prove whole-project availability."
+    ]
+  },
+  "steps": [
+    {
+      "step_id": "v6-owner-accept",
+      "action_id": "OWN-A12",
+      "operation_id": "v6-owner-accept-30",
+      "expected_kind": "completed",
+      "expected_choice": "accept_scope",
+      "expected_handover_ref": {
+        "kind": "HandoverSubmission",
+        "id": "v6-owner-received-handover",
+        "version": "1"
+      },
+      "expected_accepted_scope": {
+        "scope_ref": {
+          "kind": "assessment_case",
+          "ref": {
+            "kind": "OwnerCase",
+            "id": "v6-owner-accept-case",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "v6-owner-accept-limited-work",
+              "version": "1"
+            }
+          ]
+        },
+        "basis_refs": [
+          {
+            "kind": "Evidence",
+            "id": "v6-owner-accept-synthetic",
+            "version": "1"
+          }
+        ],
+        "condition_refs": [
+          {
+            "kind": "Requirement",
+            "id": "v6-owner-independent-requirement",
+            "version": "1"
+          }
+        ]
+      },
+      "expected_remaining_issue_refs": [
+        {
+          "kind": "Issue",
+          "id": "v6-owner-unresolved-document-issue",
+          "version": "1"
+        }
+      ],
+      "expected_continuing_responsibility_refs": [
+        {
+          "kind": "ContinuingResponsibility",
+          "id": "v6-owner-retained-guarantee",
+          "version": "1"
+        }
+      ],
+      "output_directory": "output/integration/v6_owner_accept_pending_01",
+      "host": "integration.owner_role_contract_host:build_role_host",
+      "request": {
+        "schema_version": "role-contract-invocation.v1",
+        "context": {
+          "run_id": "synthetic-v6-owner-accept",
+          "actor_id": "owner-actor",
+          "function_ref": {
+            "kind": "FunctionAssignment",
+            "id": "v6-owner-accept-function",
+            "version": "1"
+          },
+          "authorization_refs": [
+            {
+              "kind": "Authorization",
+              "id": "v6-owner-accept-grant",
+              "version": "1"
+            }
+          ],
+          "operation_id": "v6-owner-accept-30",
+          "contract_ref": {
+            "kind": "ActionContract",
+            "id": "OWN-A12",
+            "version": "1"
+          },
+          "task_ref": {
+            "kind": "DecisionTask",
+            "id": "v6-owner-accept-30-task",
+            "version": "1"
+          },
+          "scope": {
+            "kind": "assessment_case",
+            "ref": {
+              "kind": "OwnerCase",
+              "id": "v6-owner-accept-case",
+              "version": "1"
+            },
+            "coverage_refs": [
+              {
+                "kind": "WorkScope",
+                "id": "v6-owner-accept-limited-work",
+                "version": "1"
+              }
+            ]
+          },
+          "business_time": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 30
+          },
+          "read_token": "synthetic-v6-owner-accept:read:1",
+          "visible_refs": [
+            {
+              "kind": "OwnerCloseoutState",
+              "id": "v6-owner-accept-state",
+              "version": "1"
+            },
+            {
+              "kind": "OwnerCloseoutProfile",
+              "id": "v6-owner-accept-profile",
+              "version": "1"
+            },
+            {
+              "kind": "Contract",
+              "id": "v6-owner-accept-contract",
+              "version": "1"
+            },
+            {
+              "kind": "OwnerCloseoutProcedure",
+              "id": "v6-owner-accept-procedure",
+              "version": "1"
+            },
+            {
+              "kind": "HandoverSubmission",
+              "id": "v6-owner-received-handover",
+              "version": "1"
+            },
+            {
+              "kind": "HandoverRequest",
+              "id": "v6-contractor-declared-handover-request",
+              "version": "1"
+            },
+            {
+              "kind": "AsBuiltRecord",
+              "id": "v6-owner-actual-configuration",
+              "version": "1"
+            },
+            {
+              "kind": "Deliverable",
+              "id": "v6-owner-actual-design",
+              "version": "1"
+            },
+            {
+              "kind": "ProductBatch",
+              "id": "v6-owner-installed-batch",
+              "version": "1"
+            },
+            {
+              "kind": "WorkRecord",
+              "id": "v6-owner-actual-work",
+              "version": "1"
+            },
+            {
+              "kind": "Requirement",
+              "id": "v6-owner-independent-requirement",
+              "version": "1"
+            },
+            {
+              "kind": "Verification",
+              "id": "v6-owner-independent-verification",
+              "version": "1"
+            },
+            {
+              "kind": "VerificationMethod",
+              "id": "v6-owner-independent-verification-method",
+              "version": "1"
+            },
+            {
+              "kind": "Issue",
+              "id": "v6-owner-unresolved-document-issue",
+              "version": "1"
+            },
+            {
+              "kind": "ContinuingResponsibility",
+              "id": "v6-owner-retained-guarantee",
+              "version": "1"
+            },
+            {
+              "kind": "Evidence",
+              "id": "v6-owner-accept-synthetic",
+              "version": "1"
+            },
+            {
+              "kind": "FunctionAssignment",
+              "id": "v6-owner-accept-function",
+              "version": "1"
+            },
+            {
+              "kind": "FunctionAssignment",
+              "id": "v6-owner-handover-contractor-function",
+              "version": "1"
+            },
+            {
+              "kind": "FunctionAssignment",
+              "id": "v6-owner-independent-check-function",
+              "version": "1"
+            },
+            {
+              "kind": "OwnerCase",
+              "id": "v6-owner-accept-case",
+              "version": "1"
+            },
+            {
+              "kind": "WorkScope",
+              "id": "v6-owner-accept-limited-work",
+              "version": "1"
+            },
+            {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            {
+              "kind": "CandidateSet",
+              "id": "v6-owner-accept-candidates",
+              "version": "1"
+            },
+            {
+              "kind": "Authorization",
+              "id": "v6-owner-accept-grant",
+              "version": "1"
+            },
+            {
+              "kind": "Authorization",
+              "id": "v6-owner-handover-contractor-grant",
+              "version": "1"
+            },
+            {
+              "kind": "Authorization",
+              "id": "v6-owner-independent-check-grant",
+              "version": "1"
+            }
+          ],
+          "candidate_set_ref": {
+            "kind": "CandidateSet",
+            "id": "v6-owner-accept-candidates",
+            "version": "1"
+          },
+          "execution_mode": "offline_fixture"
+        },
+        "action_input": {
+          "scope_ref": {
+            "kind": "assessment_case",
+            "ref": {
+              "kind": "OwnerCase",
+              "id": "v6-owner-accept-case",
+              "version": "1"
+            },
+            "coverage_refs": [
+              {
+                "kind": "WorkScope",
+                "id": "v6-owner-accept-limited-work",
+                "version": "1"
+              }
+            ]
+          },
+          "handover_refs": [
+            {
+              "kind": "HandoverSubmission",
+              "id": "v6-owner-received-handover",
+              "version": "1"
+            }
+          ],
+          "verification_refs": [
+            {
+              "kind": "Verification",
+              "id": "v6-owner-independent-verification",
+              "version": "1"
+            }
+          ],
+          "permit_refs": [],
+          "defect_refs": [],
+          "settlement_refs": []
+        },
+        "execution_path": "deterministic"
+      },
+      "configuration": {
+        "schema_version": "role-contract-host-config.v1",
+        "host_id": "v6-owner-accept",
+        "version": "1",
+        "settings": {
+          "action_id": "OWN-A12",
+          "source_factory": "integration.owner_role_contract_fixture_sources:build_sources",
+          "source_version": "configured-owner-fixture-sources.v1",
+          "macro_version": "synthetic-v6-owner-accept.v1",
+          "client_version": "role-contract-owner-closeout-fixture.v1",
+          "policy_version": "role-contract-owner-closeout-fixture.v1",
+          "model_version": "offline-fixture-no-model.v1",
+          "source_settings": {
+            "action_id": "OWN-A12",
+            "source_note": "Explicit synthetic scoped conditional acceptance opinion; open documentary issue and guarantee remain.",
+            "journal_path": "output/integration/v6_owner_accept_pending_01/journal.sqlite",
+            "organization_snapshot": {
+              "schema_version": "organization.v2",
+              "run_id": "synthetic-v6-owner-accept",
+              "organizations": [
+                {
+                  "organization_id": "owner",
+                  "actor_id": "owner-actor",
+                  "source_ids": [
+                    "synthetic:v6-owner-accept:owner"
+                  ],
+                  "public_description": "Synthetic scoped owner closeout fixture organization.",
+                  "public_location": {
+                    "state": "unknown",
+                    "reason_code": "synthetic_unsupplied",
+                    "missing_refs": []
+                  },
+                  "members": [],
+                  "assignments": [
+                    {
+                      "role": "Owner",
+                      "function_ref": {
+                        "kind": "FunctionAssignment",
+                        "id": "v6-owner-accept-function",
+                        "version": "1"
+                      },
+                      "configuration_version": "1",
+                      "basis_refs": [
+                        {
+                          "kind": "Evidence",
+                          "id": "v6-owner-accept-synthetic",
+                          "version": "1"
+                        }
+                      ]
+                    }
+                  ],
+                  "evidence_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "v6-owner-accept-synthetic",
+                      "version": "1"
+                    }
+                  ]
+                },
+                {
+                  "organization_id": "contractor",
+                  "actor_id": "contractor-actor",
+                  "source_ids": [
+                    "synthetic:v6-owner-accept:contractor"
+                  ],
+                  "public_description": "Synthetic scoped owner closeout fixture organization.",
+                  "public_location": {
+                    "state": "unknown",
+                    "reason_code": "synthetic_unsupplied",
+                    "missing_refs": []
+                  },
+                  "members": [],
+                  "assignments": [
+                    {
+                      "role": "Contractor",
+                      "function_ref": {
+                        "kind": "FunctionAssignment",
+                        "id": "v6-owner-handover-contractor-function",
+                        "version": "1"
+                      },
+                      "configuration_version": "1",
+                      "basis_refs": [
+                        {
+                          "kind": "Evidence",
+                          "id": "v6-owner-accept-synthetic",
+                          "version": "1"
+                        }
+                      ]
+                    }
+                  ],
+                  "evidence_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "v6-owner-accept-synthetic",
+                      "version": "1"
+                    }
+                  ]
+                },
+                {
+                  "organization_id": "engineer",
+                  "actor_id": "engineer-actor",
+                  "source_ids": [
+                    "synthetic:v6-owner-accept:engineer"
+                  ],
+                  "public_description": "Synthetic scoped owner closeout fixture organization.",
+                  "public_location": {
+                    "state": "unknown",
+                    "reason_code": "synthetic_unsupplied",
+                    "missing_refs": []
+                  },
+                  "members": [],
+                  "assignments": [
+                    {
+                      "role": "Engineer",
+                      "function_ref": {
+                        "kind": "FunctionAssignment",
+                        "id": "v6-owner-independent-check-function",
+                        "version": "1"
+                      },
+                      "configuration_version": "1",
+                      "basis_refs": [
+                        {
+                          "kind": "Evidence",
+                          "id": "v6-owner-accept-synthetic",
+                          "version": "1"
+                        }
+                      ]
+                    }
+                  ],
+                  "evidence_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "v6-owner-accept-synthetic",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "authorizations": [
+                {
+                  "ref": {
+                    "kind": "Authorization",
+                    "id": "v6-owner-accept-grant",
+                    "version": "1"
+                  },
+                  "organization_id": "owner",
+                  "actor_id": "owner-actor",
+                  "function_ref": {
+                    "kind": "FunctionAssignment",
+                    "id": "v6-owner-accept-function",
+                    "version": "1"
+                  },
+                  "action_ids": [
+                    "OWN-A12"
+                  ],
+                  "scopes": [
+                    {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-owner-accept-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-owner-accept-limited-work",
+                          "version": "1"
+                        }
+                      ]
+                    }
+                  ],
+                  "readable_refs": [
+                    {
+                      "kind": "OwnerCloseoutState",
+                      "id": "v6-owner-accept-state",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "OwnerCloseoutProfile",
+                      "id": "v6-owner-accept-profile",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Contract",
+                      "id": "v6-owner-accept-contract",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "OwnerCloseoutProcedure",
+                      "id": "v6-owner-accept-procedure",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "HandoverSubmission",
+                      "id": "v6-owner-received-handover",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "HandoverRequest",
+                      "id": "v6-contractor-declared-handover-request",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "AsBuiltRecord",
+                      "id": "v6-owner-actual-configuration",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Deliverable",
+                      "id": "v6-owner-actual-design",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ProductBatch",
+                      "id": "v6-owner-installed-batch",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "WorkRecord",
+                      "id": "v6-owner-actual-work",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Requirement",
+                      "id": "v6-owner-independent-requirement",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Verification",
+                      "id": "v6-owner-independent-verification",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "VerificationMethod",
+                      "id": "v6-owner-independent-verification-method",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Issue",
+                      "id": "v6-owner-unresolved-document-issue",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ContinuingResponsibility",
+                      "id": "v6-owner-retained-guarantee",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Evidence",
+                      "id": "v6-owner-accept-synthetic",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-owner-accept-function",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-owner-handover-contractor-function",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-owner-independent-check-function",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "OwnerCase",
+                      "id": "v6-owner-accept-case",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "WorkScope",
+                      "id": "v6-owner-accept-limited-work",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ClockProfile",
+                      "id": "business",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "CandidateSet",
+                      "id": "v6-owner-accept-candidates",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Authorization",
+                      "id": "v6-owner-accept-grant",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Authorization",
+                      "id": "v6-owner-handover-contractor-grant",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Authorization",
+                      "id": "v6-owner-independent-check-grant",
+                      "version": "1"
+                    }
+                  ],
+                  "tool_ids": [],
+                  "validity": {
+                    "start": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 0
+                    },
+                    "end": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 100
+                    },
+                    "bounds": "closed_open"
+                  },
+                  "basis_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "v6-owner-accept-synthetic",
+                      "version": "1"
+                    }
+                  ]
+                },
+                {
+                  "ref": {
+                    "kind": "Authorization",
+                    "id": "v6-owner-handover-contractor-grant",
+                    "version": "1"
+                  },
+                  "organization_id": "contractor",
+                  "actor_id": "contractor-actor",
+                  "function_ref": {
+                    "kind": "FunctionAssignment",
+                    "id": "v6-owner-handover-contractor-function",
+                    "version": "1"
+                  },
+                  "action_ids": [
+                    "CONTRACTOR-A11"
+                  ],
+                  "scopes": [
+                    {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-owner-accept-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-owner-accept-limited-work",
+                          "version": "1"
+                        }
+                      ]
+                    }
+                  ],
+                  "readable_refs": [
+                    {
+                      "kind": "Contract",
+                      "id": "v6-owner-accept-contract",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "HandoverSubmission",
+                      "id": "v6-owner-received-handover",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "HandoverRequest",
+                      "id": "v6-contractor-declared-handover-request",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "AsBuiltRecord",
+                      "id": "v6-owner-actual-configuration",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Deliverable",
+                      "id": "v6-owner-actual-design",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ProductBatch",
+                      "id": "v6-owner-installed-batch",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "WorkRecord",
+                      "id": "v6-owner-actual-work",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Issue",
+                      "id": "v6-owner-unresolved-document-issue",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ContinuingResponsibility",
+                      "id": "v6-owner-retained-guarantee",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Evidence",
+                      "id": "v6-owner-accept-synthetic",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-owner-handover-contractor-function",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Authorization",
+                      "id": "v6-owner-handover-contractor-grant",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "OwnerCase",
+                      "id": "v6-owner-accept-case",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "WorkScope",
+                      "id": "v6-owner-accept-limited-work",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ClockProfile",
+                      "id": "business",
+                      "version": "1"
+                    }
+                  ],
+                  "tool_ids": [],
+                  "validity": {
+                    "start": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 0
+                    },
+                    "end": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 100
+                    },
+                    "bounds": "closed_open"
+                  },
+                  "basis_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "v6-owner-accept-synthetic",
+                      "version": "1"
+                    }
+                  ]
+                },
+                {
+                  "ref": {
+                    "kind": "Authorization",
+                    "id": "v6-owner-independent-check-grant",
+                    "version": "1"
+                  },
+                  "organization_id": "engineer",
+                  "actor_id": "engineer-actor",
+                  "function_ref": {
+                    "kind": "FunctionAssignment",
+                    "id": "v6-owner-independent-check-function",
+                    "version": "1"
+                  },
+                  "action_ids": [
+                    "ENGINEER-A09"
+                  ],
+                  "scopes": [
+                    {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-owner-accept-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-owner-accept-limited-work",
+                          "version": "1"
+                        }
+                      ]
+                    }
+                  ],
+                  "readable_refs": [
+                    {
+                      "kind": "Contract",
+                      "id": "v6-owner-accept-contract",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "AsBuiltRecord",
+                      "id": "v6-owner-actual-configuration",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Requirement",
+                      "id": "v6-owner-independent-requirement",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Verification",
+                      "id": "v6-owner-independent-verification",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "VerificationMethod",
+                      "id": "v6-owner-independent-verification-method",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Evidence",
+                      "id": "v6-owner-accept-synthetic",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-owner-independent-check-function",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Authorization",
+                      "id": "v6-owner-independent-check-grant",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "OwnerCase",
+                      "id": "v6-owner-accept-case",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "WorkScope",
+                      "id": "v6-owner-accept-limited-work",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ClockProfile",
+                      "id": "business",
+                      "version": "1"
+                    }
+                  ],
+                  "tool_ids": [],
+                  "validity": {
+                    "start": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 0
+                    },
+                    "end": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 100
+                    },
+                    "bounds": "closed_open"
+                  },
+                  "basis_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "v6-owner-accept-synthetic",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "inactive_authorization_refs": []
+            },
+            "source_projection": {
+              "run_id": "synthetic-v6-owner-accept",
+              "macro_version": "synthetic-v6-owner-accept.v1",
+              "state_version": "synthetic-v6-owner-accept-30.v1",
+              "read_token": "synthetic-v6-owner-accept:read:1",
+              "business_time": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 30
+              },
+              "organization_id": "owner",
+              "objects": [
+                {
+                  "ref": {
+                    "kind": "OwnerCloseoutState",
+                    "id": "v6-owner-accept-state",
+                    "version": "1"
+                  },
+                  "value": {
+                    "scope": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-owner-accept-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-owner-accept-limited-work",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-owner-accept-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "ref": {
+                      "kind": "OwnerCloseoutState",
+                      "id": "v6-owner-accept-state",
+                      "version": "1"
+                    },
+                    "organization_id": "owner",
+                    "decision_profile_ref": {
+                      "kind": "OwnerCloseoutProfile",
+                      "id": "v6-owner-accept-profile",
+                      "version": "1"
+                    },
+                    "contract_refs": [
+                      {
+                        "kind": "Contract",
+                        "id": "v6-owner-accept-contract",
+                        "version": "1"
+                      }
+                    ],
+                    "handover_refs": [
+                      {
+                        "kind": "HandoverSubmission",
+                        "id": "v6-owner-received-handover",
+                        "version": "1"
+                      }
+                    ],
+                    "verification_refs": [
+                      {
+                        "kind": "Verification",
+                        "id": "v6-owner-independent-verification",
+                        "version": "1"
+                      }
+                    ],
+                    "permit_refs": [],
+                    "defect_refs": [],
+                    "settlement_refs": [],
+                    "obligation_refs": [],
+                    "responsibility_refs": [
+                      {
+                        "kind": "ContinuingResponsibility",
+                        "id": "v6-owner-retained-guarantee",
+                        "version": "1"
+                      }
+                    ],
+                    "decision_history_refs": [],
+                    "coverage": "complete",
+                    "as_of": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "OwnerCloseoutProfile",
+                    "id": "v6-owner-accept-profile",
+                    "version": "1"
+                  },
+                  "value": {
+                    "scope": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-owner-accept-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-owner-accept-limited-work",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-owner-accept-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "ref": {
+                      "kind": "OwnerCloseoutProfile",
+                      "id": "v6-owner-accept-profile",
+                      "version": "1"
+                    },
+                    "state_ref": {
+                      "kind": "OwnerCloseoutState",
+                      "id": "v6-owner-accept-state",
+                      "version": "1"
+                    },
+                    "organization_id": "owner",
+                    "actor_id": "owner-actor",
+                    "function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-owner-accept-function",
+                      "version": "1"
+                    },
+                    "authority_ref": {
+                      "kind": "Authorization",
+                      "id": "v6-owner-accept-grant",
+                      "version": "1"
+                    },
+                    "contract_ref": {
+                      "kind": "Contract",
+                      "id": "v6-owner-accept-contract",
+                      "version": "1"
+                    },
+                    "choice": "accept_scope",
+                    "business_key": "v6-owner-scoped-conditional-acceptance",
+                    "handover_ref": {
+                      "kind": "HandoverSubmission",
+                      "id": "v6-owner-received-handover",
+                      "version": "1"
+                    },
+                    "accepted_scope": {
+                      "scope_ref": {
+                        "kind": "assessment_case",
+                        "ref": {
+                          "kind": "OwnerCase",
+                          "id": "v6-owner-accept-case",
+                          "version": "1"
+                        },
+                        "coverage_refs": [
+                          {
+                            "kind": "WorkScope",
+                            "id": "v6-owner-accept-limited-work",
+                            "version": "1"
+                          }
+                        ]
+                      },
+                      "basis_refs": [
+                        {
+                          "kind": "Evidence",
+                          "id": "v6-owner-accept-synthetic",
+                          "version": "1"
+                        }
+                      ],
+                      "condition_refs": [
+                        {
+                          "kind": "Requirement",
+                          "id": "v6-owner-independent-requirement",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "remaining_issue_refs": [
+                      {
+                        "kind": "Issue",
+                        "id": "v6-owner-unresolved-document-issue",
+                        "version": "1"
+                      }
+                    ],
+                    "defect_refs": [],
+                    "component_refs": [],
+                    "basis_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-owner-accept-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "note": "Synthetic limited-scope conditional acceptance opinion; documentary issue and guarantee remain."
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "Contract",
+                    "id": "v6-owner-accept-contract",
+                    "version": "1"
+                  },
+                  "value": {
+                    "scope": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-owner-accept-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-owner-accept-limited-work",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-owner-accept-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "ref": {
+                      "kind": "Contract",
+                      "id": "v6-owner-accept-contract",
+                      "version": "1"
+                    },
+                    "owner_id": "owner",
+                    "contractor_id": "contractor",
+                    "currency": "HKD",
+                    "procedure_ref": {
+                      "kind": "OwnerCloseoutProcedure",
+                      "id": "v6-owner-accept-procedure",
+                      "version": "1"
+                    },
+                    "handover_refs": [
+                      {
+                        "kind": "HandoverSubmission",
+                        "id": "v6-owner-received-handover",
+                        "version": "1"
+                      }
+                    ],
+                    "settlement_refs": [],
+                    "component_refs": [],
+                    "issue_refs": [
+                      {
+                        "kind": "Issue",
+                        "id": "v6-owner-unresolved-document-issue",
+                        "version": "1"
+                      }
+                    ],
+                    "defect_refs": [],
+                    "responsibility_refs": [
+                      {
+                        "kind": "ContinuingResponsibility",
+                        "id": "v6-owner-retained-guarantee",
+                        "version": "1"
+                      }
+                    ],
+                    "coverage": "complete",
+                    "as_of": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "OwnerCloseoutProcedure",
+                    "id": "v6-owner-accept-procedure",
+                    "version": "1"
+                  },
+                  "value": {
+                    "scope": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-owner-accept-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-owner-accept-limited-work",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-owner-accept-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "author_actor_id": "owner-actor",
+                    "author_organization_id": "owner",
+                    "author_function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-owner-accept-function",
+                      "version": "1"
+                    },
+                    "author_authority_ref": {
+                      "kind": "Authorization",
+                      "id": "v6-owner-accept-grant",
+                      "version": "1"
+                    },
+                    "author_action_id": "OWN-A12",
+                    "authored_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "ref": {
+                      "kind": "OwnerCloseoutProcedure",
+                      "id": "v6-owner-accept-procedure",
+                      "version": "1"
+                    },
+                    "contract_ref": {
+                      "kind": "Contract",
+                      "id": "v6-owner-accept-contract",
+                      "version": "1"
+                    },
+                    "permitted_choices": [
+                      "accept_scope"
+                    ],
+                    "permitted": {
+                      "state": "known",
+                      "value": true
+                    },
+                    "allowed_acceptance_scopes": [
+                      {
+                        "kind": "assessment_case",
+                        "ref": {
+                          "kind": "OwnerCase",
+                          "id": "v6-owner-accept-case",
+                          "version": "1"
+                        },
+                        "coverage_refs": [
+                          {
+                            "kind": "WorkScope",
+                            "id": "v6-owner-accept-limited-work",
+                            "version": "1"
+                          }
+                        ]
+                      }
+                    ],
+                    "allow_conditional_acceptance": true,
+                    "allow_partial_settlement": false,
+                    "recipient_ids": [
+                      "contractor"
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "HandoverSubmission",
+                    "id": "v6-owner-received-handover",
+                    "version": "1"
+                  },
+                  "value": {
+                    "scope": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-owner-accept-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-owner-accept-limited-work",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-owner-accept-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "author_actor_id": "contractor-actor",
+                    "author_organization_id": "contractor",
+                    "author_function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-owner-handover-contractor-function",
+                      "version": "1"
+                    },
+                    "author_authority_ref": {
+                      "kind": "Authorization",
+                      "id": "v6-owner-handover-contractor-grant",
+                      "version": "1"
+                    },
+                    "author_action_id": "CONTRACTOR-A11",
+                    "authored_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "ref": {
+                      "kind": "HandoverSubmission",
+                      "id": "v6-owner-received-handover",
+                      "version": "1"
+                    },
+                    "contract_ref": {
+                      "kind": "Contract",
+                      "id": "v6-owner-accept-contract",
+                      "version": "1"
+                    },
+                    "request_ref": {
+                      "kind": "HandoverRequest",
+                      "id": "v6-contractor-declared-handover-request",
+                      "version": "1"
+                    },
+                    "as_built_refs": [
+                      {
+                        "kind": "AsBuiltRecord",
+                        "id": "v6-owner-actual-configuration",
+                        "version": "1"
+                      }
+                    ],
+                    "requirement_refs": [
+                      {
+                        "kind": "Requirement",
+                        "id": "v6-owner-independent-requirement",
+                        "version": "1"
+                      }
+                    ],
+                    "required_permit_refs": [],
+                    "issue_refs": [
+                      {
+                        "kind": "Issue",
+                        "id": "v6-owner-unresolved-document-issue",
+                        "version": "1"
+                      }
+                    ],
+                    "independent_use": {
+                      "state": "known",
+                      "value": true
+                    },
+                    "status": "submitted"
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "HandoverRequest",
+                    "id": "v6-contractor-declared-handover-request",
+                    "version": "1"
+                  },
+                  "value": {
+                    "scope": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-owner-accept-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-owner-accept-limited-work",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-owner-accept-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "author_actor_id": "contractor-actor",
+                    "author_organization_id": "contractor",
+                    "author_function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-owner-handover-contractor-function",
+                      "version": "1"
+                    },
+                    "author_authority_ref": {
+                      "kind": "Authorization",
+                      "id": "v6-owner-handover-contractor-grant",
+                      "version": "1"
+                    },
+                    "author_action_id": "CONTRACTOR-A11",
+                    "authored_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "ref": {
+                      "kind": "HandoverRequest",
+                      "id": "v6-contractor-declared-handover-request",
+                      "version": "1"
+                    },
+                    "contract_ref": {
+                      "kind": "Contract",
+                      "id": "v6-owner-accept-contract",
+                      "version": "1"
+                    },
+                    "business_key": "v6-contractor-declared-scoped-handover",
+                    "as_built_refs": [
+                      {
+                        "kind": "AsBuiltRecord",
+                        "id": "v6-owner-actual-configuration",
+                        "version": "1"
+                      }
+                    ],
+                    "status": "submitted"
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "AsBuiltRecord",
+                    "id": "v6-owner-actual-configuration",
+                    "version": "1"
+                  },
+                  "value": {
+                    "scope": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-owner-accept-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-owner-accept-limited-work",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-owner-accept-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "author_actor_id": "contractor-actor",
+                    "author_organization_id": "contractor",
+                    "author_function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-owner-handover-contractor-function",
+                      "version": "1"
+                    },
+                    "author_authority_ref": {
+                      "kind": "Authorization",
+                      "id": "v6-owner-handover-contractor-grant",
+                      "version": "1"
+                    },
+                    "author_action_id": "CONTRACTOR-A11",
+                    "authored_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "ref": {
+                      "kind": "AsBuiltRecord",
+                      "id": "v6-owner-actual-configuration",
+                      "version": "1"
+                    },
+                    "contract_ref": {
+                      "kind": "Contract",
+                      "id": "v6-owner-accept-contract",
+                      "version": "1"
+                    },
+                    "content_sha256": "6d004b43e7000db5d9b9c09b9e8ae9e33c2ab8d75a455c84a69cfd8426e16179",
+                    "configuration_key": "v6-owner-actual-config-1",
+                    "design_ref": {
+                      "kind": "Deliverable",
+                      "id": "v6-owner-actual-design",
+                      "version": "1"
+                    },
+                    "product_batch_refs": [
+                      {
+                        "kind": "ProductBatch",
+                        "id": "v6-owner-installed-batch",
+                        "version": "1"
+                      }
+                    ],
+                    "work_record_refs": [
+                      {
+                        "kind": "WorkRecord",
+                        "id": "v6-owner-actual-work",
+                        "version": "1"
+                      }
+                    ],
+                    "actual": {
+                      "state": "known",
+                      "value": true
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "Deliverable",
+                    "id": "v6-owner-actual-design",
+                    "version": "1"
+                  },
+                  "value": {
+                    "scope": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-owner-accept-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-owner-accept-limited-work",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-owner-accept-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "ref": {
+                      "kind": "Deliverable",
+                      "id": "v6-owner-actual-design",
+                      "version": "1"
+                    },
+                    "contract_ref": {
+                      "kind": "Contract",
+                      "id": "v6-owner-accept-contract",
+                      "version": "1"
+                    },
+                    "content_sha256": "ae69fce142fa7ab787d146cf3a57c92c709bbf3ae643790e522df8348fbd67d5"
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "ProductBatch",
+                    "id": "v6-owner-installed-batch",
+                    "version": "1"
+                  },
+                  "value": {
+                    "scope": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-owner-accept-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-owner-accept-limited-work",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-owner-accept-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "ref": {
+                      "kind": "ProductBatch",
+                      "id": "v6-owner-installed-batch",
+                      "version": "1"
+                    },
+                    "contract_ref": {
+                      "kind": "Contract",
+                      "id": "v6-owner-accept-contract",
+                      "version": "1"
+                    },
+                    "configuration_refs": [
+                      {
+                        "kind": "AsBuiltRecord",
+                        "id": "v6-owner-actual-configuration",
+                        "version": "1"
+                      }
+                    ],
+                    "content_sha256": "f5060143d90bbb3e095884d05950437b6277ae1de9e3c6820049d6bc69958fde"
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "WorkRecord",
+                    "id": "v6-owner-actual-work",
+                    "version": "1"
+                  },
+                  "value": {
+                    "scope": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-owner-accept-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-owner-accept-limited-work",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-owner-accept-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "ref": {
+                      "kind": "WorkRecord",
+                      "id": "v6-owner-actual-work",
+                      "version": "1"
+                    },
+                    "execution_ref": {
+                      "kind": "WorkExecution",
+                      "id": "v6-owner-declared-synthetic-execution",
+                      "version": "1"
+                    },
+                    "core_event_id": "synthetic-v6-owner-work-event",
+                    "physical_work_key": "v6-owner-actual-physical-work-1",
+                    "work_kind": "new_work",
+                    "gross_quantity": {
+                      "value": "1",
+                      "unit": "item",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "v6-owner-accept-synthetic",
+                        "version": "1"
+                      }
+                    },
+                    "net_quantity": {
+                      "value": "1",
+                      "unit": "item",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "v6-owner-accept-synthetic",
+                        "version": "1"
+                      }
+                    },
+                    "original_work_record_ref": null
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "Requirement",
+                    "id": "v6-owner-independent-requirement",
+                    "version": "1"
+                  },
+                  "value": {
+                    "scope": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-owner-accept-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-owner-accept-limited-work",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-owner-accept-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "ref": {
+                      "kind": "Requirement",
+                      "id": "v6-owner-independent-requirement",
+                      "version": "1"
+                    },
+                    "contract_ref": {
+                      "kind": "Contract",
+                      "id": "v6-owner-accept-contract",
+                      "version": "1"
+                    },
+                    "as_built_refs": [
+                      {
+                        "kind": "AsBuiltRecord",
+                        "id": "v6-owner-actual-configuration",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "Verification",
+                    "id": "v6-owner-independent-verification",
+                    "version": "1"
+                  },
+                  "value": {
+                    "scope": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-owner-accept-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-owner-accept-limited-work",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-owner-accept-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "author_actor_id": "engineer-actor",
+                    "author_organization_id": "engineer",
+                    "author_function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-owner-independent-check-function",
+                      "version": "1"
+                    },
+                    "author_authority_ref": {
+                      "kind": "Authorization",
+                      "id": "v6-owner-independent-check-grant",
+                      "version": "1"
+                    },
+                    "author_action_id": "ENGINEER-A09",
+                    "authored_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "ref": {
+                      "kind": "Verification",
+                      "id": "v6-owner-independent-verification",
+                      "version": "1"
+                    },
+                    "contract_ref": {
+                      "kind": "Contract",
+                      "id": "v6-owner-accept-contract",
+                      "version": "1"
+                    },
+                    "as_built_ref": {
+                      "kind": "AsBuiltRecord",
+                      "id": "v6-owner-actual-configuration",
+                      "version": "1"
+                    },
+                    "as_built_sha256": "6d004b43e7000db5d9b9c09b9e8ae9e33c2ab8d75a455c84a69cfd8426e16179",
+                    "requirement_ref": {
+                      "kind": "Requirement",
+                      "id": "v6-owner-independent-requirement",
+                      "version": "1"
+                    },
+                    "method_ref": {
+                      "kind": "VerificationMethod",
+                      "id": "v6-owner-independent-verification-method",
+                      "version": "1"
+                    },
+                    "status": "ok",
+                    "passed": {
+                      "state": "known",
+                      "value": true
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "VerificationMethod",
+                    "id": "v6-owner-independent-verification-method",
+                    "version": "1"
+                  },
+                  "value": {
+                    "scope": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-owner-accept-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-owner-accept-limited-work",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-owner-accept-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "ref": {
+                      "kind": "VerificationMethod",
+                      "id": "v6-owner-independent-verification-method",
+                      "version": "1"
+                    },
+                    "supported": {
+                      "state": "known",
+                      "value": true
+                    },
+                    "requirement_refs": [
+                      {
+                        "kind": "Requirement",
+                        "id": "v6-owner-independent-requirement",
+                        "version": "1"
+                      }
+                    ],
+                    "allowed_author_action_ids": [
+                      "ENGINEER-A09"
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "Issue",
+                    "id": "v6-owner-unresolved-document-issue",
+                    "version": "1"
+                  },
+                  "value": {
+                    "scope": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-owner-accept-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-owner-accept-limited-work",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-owner-accept-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "ref": {
+                      "kind": "Issue",
+                      "id": "v6-owner-unresolved-document-issue",
+                      "version": "1"
+                    },
+                    "contract_ref": {
+                      "kind": "Contract",
+                      "id": "v6-owner-accept-contract",
+                      "version": "1"
+                    },
+                    "as_built_refs": [
+                      {
+                        "kind": "AsBuiltRecord",
+                        "id": "v6-owner-actual-configuration",
+                        "version": "1"
+                      }
+                    ],
+                    "defect_refs": [],
+                    "requirement_refs": [],
+                    "component_refs": [],
+                    "status": "open"
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "ContinuingResponsibility",
+                    "id": "v6-owner-retained-guarantee",
+                    "version": "1"
+                  },
+                  "value": {
+                    "scope": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-owner-accept-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-owner-accept-limited-work",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-owner-accept-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "ref": {
+                      "kind": "ContinuingResponsibility",
+                      "id": "v6-owner-retained-guarantee",
+                      "version": "1"
+                    },
+                    "contract_ref": {
+                      "kind": "Contract",
+                      "id": "v6-owner-accept-contract",
+                      "version": "1"
+                    },
+                    "organization_id": "contractor",
+                    "kind": "guarantee",
+                    "remaining": {
+                      "state": "known",
+                      "value": true
+                    },
+                    "obligation_refs": [],
+                    "defect_refs": []
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "Evidence",
+                    "id": "v6-owner-accept-synthetic",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "Evidence",
+                      "id": "v6-owner-accept-synthetic",
+                      "version": "1"
+                    },
+                    "source_kind": "synthetic",
+                    "basis_kind": "observed",
+                    "locator": "synthetic:v6-owner-accept",
+                    "content_hash": "6c14fb991c561978edb683e5c07b0b7c51fc127915a72a952f40de296bd483ff",
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "FunctionAssignment",
+                    "id": "v6-owner-accept-function",
+                    "version": "1"
+                  },
+                  "value": {
+                    "role": "Owner",
+                    "function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-owner-accept-function",
+                      "version": "1"
+                    },
+                    "configuration_version": "1",
+                    "basis_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-owner-accept-synthetic",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "FunctionAssignment",
+                    "id": "v6-owner-handover-contractor-function",
+                    "version": "1"
+                  },
+                  "value": {
+                    "role": "Contractor",
+                    "function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-owner-handover-contractor-function",
+                      "version": "1"
+                    },
+                    "configuration_version": "1",
+                    "basis_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-owner-accept-synthetic",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "FunctionAssignment",
+                    "id": "v6-owner-independent-check-function",
+                    "version": "1"
+                  },
+                  "value": {
+                    "role": "Engineer",
+                    "function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-owner-independent-check-function",
+                      "version": "1"
+                    },
+                    "configuration_version": "1",
+                    "basis_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-owner-accept-synthetic",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "OwnerCase",
+                    "id": "v6-owner-accept-case",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "OwnerCase",
+                      "id": "v6-owner-accept-case",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-owner-accept-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "organization_id": "owner",
+                    "closeout_state_ref": {
+                      "kind": "OwnerCloseoutState",
+                      "id": "v6-owner-accept-state",
+                      "version": "1"
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "WorkScope",
+                    "id": "v6-owner-accept-limited-work",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "WorkScope",
+                      "id": "v6-owner-accept-limited-work",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-owner-accept-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "parent_ref": {
+                      "kind": "OwnerCase",
+                      "id": "v6-owner-accept-case",
+                      "version": "1"
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "ClockProfile",
+                      "id": "business",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-owner-accept-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "tick_unit": "day"
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "CandidateSet",
+                    "id": "v6-owner-accept-candidates",
+                    "version": "1"
+                  },
+                  "value": {
+                    "operation_id": "v6-owner-accept-30",
+                    "scope": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-owner-accept-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-owner-accept-limited-work",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "as_of": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "candidates": [
+                      {
+                        "ref": {
+                          "kind": "Contract",
+                          "id": "v6-owner-accept-contract",
+                          "version": "1"
+                        },
+                        "permitted_choices": [
+                          "accept_scope"
+                        ]
+                      }
+                    ],
+                    "search_profile_ref": {
+                      "kind": "Profile",
+                      "id": "v6-owner-closeout-search",
+                      "version": "1"
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "Authorization",
+                    "id": "v6-owner-accept-grant",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "Authorization",
+                      "id": "v6-owner-accept-grant",
+                      "version": "1"
+                    },
+                    "organization_id": "owner",
+                    "actor_id": "owner-actor",
+                    "function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-owner-accept-function",
+                      "version": "1"
+                    },
+                    "action_ids": [
+                      "OWN-A12"
+                    ],
+                    "scopes": [
+                      {
+                        "kind": "assessment_case",
+                        "ref": {
+                          "kind": "OwnerCase",
+                          "id": "v6-owner-accept-case",
+                          "version": "1"
+                        },
+                        "coverage_refs": [
+                          {
+                            "kind": "WorkScope",
+                            "id": "v6-owner-accept-limited-work",
+                            "version": "1"
+                          }
+                        ]
+                      }
+                    ],
+                    "readable_refs": [
+                      {
+                        "kind": "OwnerCloseoutState",
+                        "id": "v6-owner-accept-state",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "OwnerCloseoutProfile",
+                        "id": "v6-owner-accept-profile",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Contract",
+                        "id": "v6-owner-accept-contract",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "OwnerCloseoutProcedure",
+                        "id": "v6-owner-accept-procedure",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "HandoverSubmission",
+                        "id": "v6-owner-received-handover",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "HandoverRequest",
+                        "id": "v6-contractor-declared-handover-request",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "AsBuiltRecord",
+                        "id": "v6-owner-actual-configuration",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Deliverable",
+                        "id": "v6-owner-actual-design",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "ProductBatch",
+                        "id": "v6-owner-installed-batch",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "WorkRecord",
+                        "id": "v6-owner-actual-work",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Requirement",
+                        "id": "v6-owner-independent-requirement",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Verification",
+                        "id": "v6-owner-independent-verification",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "VerificationMethod",
+                        "id": "v6-owner-independent-verification-method",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Issue",
+                        "id": "v6-owner-unresolved-document-issue",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "ContinuingResponsibility",
+                        "id": "v6-owner-retained-guarantee",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-owner-accept-synthetic",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "FunctionAssignment",
+                        "id": "v6-owner-accept-function",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "FunctionAssignment",
+                        "id": "v6-owner-handover-contractor-function",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "FunctionAssignment",
+                        "id": "v6-owner-independent-check-function",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "OwnerCase",
+                        "id": "v6-owner-accept-case",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "WorkScope",
+                        "id": "v6-owner-accept-limited-work",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "CandidateSet",
+                        "id": "v6-owner-accept-candidates",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Authorization",
+                        "id": "v6-owner-accept-grant",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Authorization",
+                        "id": "v6-owner-handover-contractor-grant",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Authorization",
+                        "id": "v6-owner-independent-check-grant",
+                        "version": "1"
+                      }
+                    ],
+                    "tool_ids": [],
+                    "validity": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "basis_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-owner-accept-synthetic",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "Authorization",
+                    "id": "v6-owner-handover-contractor-grant",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "Authorization",
+                      "id": "v6-owner-handover-contractor-grant",
+                      "version": "1"
+                    },
+                    "organization_id": "contractor",
+                    "actor_id": "contractor-actor",
+                    "function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-owner-handover-contractor-function",
+                      "version": "1"
+                    },
+                    "action_ids": [
+                      "CONTRACTOR-A11"
+                    ],
+                    "scopes": [
+                      {
+                        "kind": "assessment_case",
+                        "ref": {
+                          "kind": "OwnerCase",
+                          "id": "v6-owner-accept-case",
+                          "version": "1"
+                        },
+                        "coverage_refs": [
+                          {
+                            "kind": "WorkScope",
+                            "id": "v6-owner-accept-limited-work",
+                            "version": "1"
+                          }
+                        ]
+                      }
+                    ],
+                    "readable_refs": [
+                      {
+                        "kind": "Contract",
+                        "id": "v6-owner-accept-contract",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "HandoverSubmission",
+                        "id": "v6-owner-received-handover",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "HandoverRequest",
+                        "id": "v6-contractor-declared-handover-request",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "AsBuiltRecord",
+                        "id": "v6-owner-actual-configuration",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Deliverable",
+                        "id": "v6-owner-actual-design",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "ProductBatch",
+                        "id": "v6-owner-installed-batch",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "WorkRecord",
+                        "id": "v6-owner-actual-work",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Issue",
+                        "id": "v6-owner-unresolved-document-issue",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "ContinuingResponsibility",
+                        "id": "v6-owner-retained-guarantee",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-owner-accept-synthetic",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "FunctionAssignment",
+                        "id": "v6-owner-handover-contractor-function",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Authorization",
+                        "id": "v6-owner-handover-contractor-grant",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "OwnerCase",
+                        "id": "v6-owner-accept-case",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "WorkScope",
+                        "id": "v6-owner-accept-limited-work",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      }
+                    ],
+                    "tool_ids": [],
+                    "validity": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "basis_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-owner-accept-synthetic",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "Authorization",
+                    "id": "v6-owner-independent-check-grant",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "Authorization",
+                      "id": "v6-owner-independent-check-grant",
+                      "version": "1"
+                    },
+                    "organization_id": "engineer",
+                    "actor_id": "engineer-actor",
+                    "function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-owner-independent-check-function",
+                      "version": "1"
+                    },
+                    "action_ids": [
+                      "ENGINEER-A09"
+                    ],
+                    "scopes": [
+                      {
+                        "kind": "assessment_case",
+                        "ref": {
+                          "kind": "OwnerCase",
+                          "id": "v6-owner-accept-case",
+                          "version": "1"
+                        },
+                        "coverage_refs": [
+                          {
+                            "kind": "WorkScope",
+                            "id": "v6-owner-accept-limited-work",
+                            "version": "1"
+                          }
+                        ]
+                      }
+                    ],
+                    "readable_refs": [
+                      {
+                        "kind": "Contract",
+                        "id": "v6-owner-accept-contract",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "AsBuiltRecord",
+                        "id": "v6-owner-actual-configuration",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Requirement",
+                        "id": "v6-owner-independent-requirement",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Verification",
+                        "id": "v6-owner-independent-verification",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "VerificationMethod",
+                        "id": "v6-owner-independent-verification-method",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-owner-accept-synthetic",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "FunctionAssignment",
+                        "id": "v6-owner-independent-check-function",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Authorization",
+                        "id": "v6-owner-independent-check-grant",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "OwnerCase",
+                        "id": "v6-owner-accept-case",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "WorkScope",
+                        "id": "v6-owner-accept-limited-work",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      }
+                    ],
+                    "tool_ids": [],
+                    "validity": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "basis_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-owner-accept-synthetic",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  ],
+  "remaining_requirements": [
+    "Execute original Owner host and verify exact scoped acceptance opinion, retained issue and guarantee sources without native effect or payment.",
+    "OWN-A12 request_rectification/agree_settlement/dispute_settlement/release_retention and missing/failed independent checks, permit/partial/boundary/recovery CHECK inputs.",
+    "Actual Contractor-to-Owner same-run reception, independent verification/permit/native observations, OWN-A13/A15 and complete PLAN validation."
+  ],
+  "limitations": "One isolated synthetic conditional scoped acceptance input; no upstream action execution, professional method run, native reception or full V6 continuity proven."
+}

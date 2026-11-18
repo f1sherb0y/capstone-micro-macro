@@ -1,0 +1,3655 @@
+{
+  "schema_version": "lifecycle-input-case.v1",
+  "scenario_id": "V4",
+  "case_id": "v4-chronological-logistics-pending-receiving",
+  "origin": "synthetic",
+  "run_id": "synthetic-v4-production-material-connection",
+  "status": "awaiting_original_logistics_result",
+  "source_declaration": {
+    "kind": "explicit_synthetic",
+    "assumptions": [
+      "Explicit synthetic chronological derivative of the pinned original input; preserve its bytes and evidence.",
+      "Production request at 1 with twelve kg reserved for six panels and two machine-hours; native completion must be independently declared by tick 10. Pending quality request at 10, independent recheck/defect closure and dispatch plan at 11, native dispatch at 12, travel [13,16), unload/arrival and receipt inspection at 17, use release/A09 at 18, Contractor material intention at 19.",
+      "Clock windows, grants and observations in downstream inputs shift together by ten ticks. Timing parameters remain declared synthetic assumptions; no action, professional method or native event is executed.",
+      "Passed inspection, closed defect, native release, observed transport and independent receiver stock remain explicit synthetic declarations. Original saved result digests remain absent until original actions are explicitly run and bound."
+    ],
+    "configuration_template": {
+      "path": "tests/fixtures/roles/lifecycle_v4_supplier_receiving_inputs.v1.json",
+      "sha256": "f39ae829b649d09c26bf304ff7966c7b85d0e3577e9b252e85f7e2dad0e42558"
+    },
+    "schema_code_sha256": {
+      "src/actions/contracts/supplier_receiving_objects.py": "108a563eba7e96d1dccf33bc6a09710fb2e1b6a4f6c0aae36f9b7a91e8445466",
+      "src/actions/roles/supplier_receiving.py": "aad83f9dd4fa7b5d131662dc862c6dd87af87ee46e4a6e40f8d81dc819c00191",
+      "src/actions/roles/supplier_transport_history.py": "39042add412129dfcc395185948b35eb1627824df4311b981df0dbace76bf424",
+      "integration/supplier_logistics_handoff.py": "e70ee7709a244c4c8f6f98dbf208f3e9df4a42587defebe074420d1e2264191b"
+    },
+    "derived_from": {
+      "path": "tests/fixtures/roles/lifecycle_v4_supplier_transported_receiving_inputs.v1.json",
+      "sha256": "0221095a6f37bb9484819ea3eb244922b8710c5045d4fcc241d4d3845ccdbc3d"
+    },
+    "chronological_derivation": {
+      "path": "tests/fixtures/roles/lifecycle_v4_supplier_logistics_receiving_seed_inputs.v1.json",
+      "sha256": "f23651a1324599351e446937dea5bd6b5262cdc0edbef489fc8d8d877176706b",
+      "downstream_tick_shift": 10
+    }
+  },
+  "steps": [
+    {
+      "step_id": "v4-supplier-usable-receiving",
+      "action_id": "SUPPLIER-A09",
+      "operation_id": "v4-supplier-usable-receiving-1",
+      "expected_kind": "completed",
+      "expected_choice": "acknowledge_receipt",
+      "expected_receipt_ref": {
+        "kind": "GoodsReceipt",
+        "id": "buyer-receipt",
+        "version": "1"
+      },
+      "expected_accepted_fact_refs": [
+        {
+          "kind": "ReceiptComponent",
+          "id": "short-damaged-component",
+          "version": "1"
+        }
+      ],
+      "expected_discrepancy_refs": [
+        {
+          "kind": "DeliveryDiscrepancy",
+          "id": "short-damaged-issue",
+          "version": "1"
+        }
+      ],
+      "expected_receiver_id": "buyer-contractor-org",
+      "output_directory": "output/integration/v4_chronological_logistics_pending_receiving_pending_01",
+      "host": "integration.supplier_role_contract_host:build_role_host",
+      "request": {
+        "schema_version": "role-contract-invocation.v1",
+        "context": {
+          "run_id": "synthetic-v4-production-material-connection",
+          "actor_id": "supplier-actor",
+          "function_ref": {
+            "kind": "FunctionAssignment",
+            "id": "v4-supplier-receiving-function",
+            "version": "1"
+          },
+          "authorization_refs": [
+            {
+              "kind": "Authorization",
+              "id": "v4-supplier-receiving-grant",
+              "version": "1"
+            }
+          ],
+          "operation_id": "v4-supplier-usable-receiving-1",
+          "contract_ref": {
+            "kind": "ActionContract",
+            "id": "SUPPLIER-A09",
+            "version": "1"
+          },
+          "task_ref": {
+            "kind": "DecisionTask",
+            "id": "v4-supplier-usable-receiving-1-task",
+            "version": "1"
+          },
+          "scope": {
+            "kind": "project",
+            "ref": {
+              "kind": "Project",
+              "id": "buyer-project",
+              "version": "1"
+            },
+            "coverage_refs": [
+              {
+                "kind": "WorkScope",
+                "id": "receiving-line-1",
+                "version": "1"
+              }
+            ]
+          },
+          "business_time": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "synthetic-clock",
+              "version": "1"
+            },
+            "offset": 18
+          },
+          "read_token": "synthetic-v4-production-material-connection:read:1",
+          "visible_refs": [
+            {
+              "kind": "Order",
+              "id": "receiving-order",
+              "version": "1"
+            },
+            {
+              "kind": "Shipment",
+              "id": "arrived-shipment",
+              "version": "1"
+            },
+            {
+              "kind": "DeliveryResponseProfile",
+              "id": "receipt-ack-profile",
+              "version": "1"
+            },
+            {
+              "kind": "ArrivalEvidence",
+              "id": "actual-arrival",
+              "version": "1"
+            },
+            {
+              "kind": "ReceivingParty",
+              "id": "buyer-receiver",
+              "version": "1"
+            },
+            {
+              "kind": "ReceivingMandate",
+              "id": "buyer-receiving-mandate",
+              "version": "1"
+            },
+            {
+              "kind": "GoodsReceipt",
+              "id": "buyer-receipt",
+              "version": "1"
+            },
+            {
+              "kind": "ReceiptComponent",
+              "id": "short-damaged-component",
+              "version": "1"
+            },
+            {
+              "kind": "DeliveryDiscrepancy",
+              "id": "short-damaged-issue",
+              "version": "1"
+            },
+            {
+              "kind": "ProductSpecification",
+              "id": "panel-spec",
+              "version": "1"
+            },
+            {
+              "kind": "Evidence",
+              "id": "synthetic-receiving-basis",
+              "version": "1"
+            },
+            {
+              "kind": "ClockProfile",
+              "id": "synthetic-clock",
+              "version": "1"
+            },
+            {
+              "kind": "Project",
+              "id": "buyer-project",
+              "version": "1"
+            },
+            {
+              "kind": "WorkScope",
+              "id": "receiving-line-1",
+              "version": "1"
+            },
+            {
+              "kind": "FunctionAssignment",
+              "id": "v4-supplier-receiving-function",
+              "version": "1"
+            },
+            {
+              "kind": "FunctionAssignment",
+              "id": "buyer-receiving-function",
+              "version": "1"
+            },
+            {
+              "kind": "CandidateSet",
+              "id": "v4-supplier-receiving-candidates",
+              "version": "1"
+            },
+            {
+              "kind": "Authorization",
+              "id": "v4-supplier-receiving-grant",
+              "version": "1"
+            },
+            {
+              "kind": "Authorization",
+              "id": "buyer-receiving-grant",
+              "version": "1"
+            },
+            {
+              "kind": "GoodsInspectionMethod",
+              "id": "panel-installation-inspection",
+              "version": "1"
+            },
+            {
+              "kind": "InspectionResult",
+              "id": "independent-partial-goods-check",
+              "version": "1"
+            },
+            {
+              "kind": "GoodsUseRelease",
+              "id": "two-panel-installation-release",
+              "version": "1"
+            },
+            {
+              "kind": "TransportMethod",
+              "id": "synthetic-panel-elapsed-transport",
+              "version": "1"
+            },
+            {
+              "kind": "TransportRoute",
+              "id": "source-route",
+              "version": "1"
+            },
+            {
+              "kind": "TransportTraversal",
+              "id": "synthetic-factory-to-buyer-traversal",
+              "version": "1"
+            },
+            {
+              "kind": "TransportPosition",
+              "id": "source-arrived-position",
+              "version": "1"
+            },
+            {
+              "kind": "Evidence",
+              "id": "synthetic-transport-duration-assumption",
+              "version": "1"
+            },
+            {
+              "kind": "Evidence",
+              "id": "synthetic-transport-observation",
+              "version": "1"
+            },
+            {
+              "kind": "Evidence",
+              "id": "synthetic-independent-native-shipment-observation",
+              "version": "1"
+            },
+            {
+              "kind": "Evidence",
+              "id": "synthetic-independent-logistics-shipment-relation",
+              "version": "1"
+            },
+            {
+              "kind": "SupplierLogisticsHandoffBasis",
+              "id": "synthetic-original-logistics-to-arrival-relation",
+              "version": "1"
+            }
+          ],
+          "candidate_set_ref": {
+            "kind": "CandidateSet",
+            "id": "v4-supplier-receiving-candidates",
+            "version": "1"
+          },
+          "execution_mode": "offline_fixture"
+        },
+        "action_input": {
+          "shipment_ref": {
+            "kind": "Shipment",
+            "id": "arrived-shipment",
+            "version": "1"
+          },
+          "arrival_refs": [
+            {
+              "kind": "ArrivalEvidence",
+              "id": "actual-arrival",
+              "version": "1"
+            }
+          ],
+          "receipt_refs": [
+            {
+              "kind": "GoodsReceipt",
+              "id": "buyer-receipt",
+              "version": "1"
+            }
+          ],
+          "inspection_refs": [
+            {
+              "kind": "InspectionResult",
+              "id": "independent-partial-goods-check",
+              "version": "1"
+            }
+          ],
+          "discrepancy_refs": [
+            {
+              "kind": "DeliveryDiscrepancy",
+              "id": "short-damaged-issue",
+              "version": "1"
+            }
+          ],
+          "receiving_party_refs": [
+            {
+              "kind": "ReceivingParty",
+              "id": "buyer-receiver",
+              "version": "1"
+            }
+          ]
+        },
+        "execution_path": "deterministic"
+      },
+      "configuration": {
+        "schema_version": "role-contract-host-config.v1",
+        "host_id": "v4-supplier-usable-receiving",
+        "version": "1",
+        "settings": {
+          "action_id": "SUPPLIER-A09",
+          "source_factory": "integration.supplier_receiving_fixture_sources:build_sources",
+          "source_version": "configured-supplier-receiving-fixture-sources.v1",
+          "macro_version": "synthetic-v4-production-material-connection.v1",
+          "client_version": "role-contract-supplier-receiving-fixture.v1",
+          "policy_version": "role-contract-supplier-receiving-fixture.v1",
+          "model_version": "offline-fixture-no-model.v1",
+          "source_settings": {
+            "action_id": "SUPPLIER-A09",
+            "source_note": "Explicit synthetic chronological logistics_pending_receiving input; no actual native/professional effects or saved upstream results are manufactured.",
+            "journal_path": "output/integration/v4_chronological_logistics_pending_receiving_pending_01/journal.sqlite",
+            "organization_snapshot": {
+              "schema_version": "organization.v2",
+              "run_id": "synthetic-v4-production-material-connection",
+              "organizations": [
+                {
+                  "organization_id": "supplier-org",
+                  "actor_id": "supplier-actor",
+                  "source_ids": [
+                    "synthetic:v4-material-connection:supplier-org"
+                  ],
+                  "public_description": "Synthetic independent receiving participant.",
+                  "public_location": {
+                    "state": "unknown",
+                    "reason_code": "synthetic_unsupplied",
+                    "missing_refs": []
+                  },
+                  "members": [],
+                  "assignments": [
+                    {
+                      "role": "Supplier",
+                      "function_ref": {
+                        "kind": "FunctionAssignment",
+                        "id": "v4-supplier-receiving-function",
+                        "version": "1"
+                      },
+                      "configuration_version": "1",
+                      "basis_refs": [
+                        {
+                          "kind": "Evidence",
+                          "id": "synthetic-receiving-basis",
+                          "version": "1"
+                        }
+                      ]
+                    }
+                  ],
+                  "evidence_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-receiving-basis",
+                      "version": "1"
+                    }
+                  ]
+                },
+                {
+                  "organization_id": "buyer-contractor-org",
+                  "actor_id": "buyer-contractor-actor",
+                  "source_ids": [
+                    "synthetic:v4-material-connection:buyer-contractor-org"
+                  ],
+                  "public_description": "Synthetic independent receiving participant.",
+                  "public_location": {
+                    "state": "unknown",
+                    "reason_code": "synthetic_unsupplied",
+                    "missing_refs": []
+                  },
+                  "members": [],
+                  "assignments": [
+                    {
+                      "role": "Contractor",
+                      "function_ref": {
+                        "kind": "FunctionAssignment",
+                        "id": "buyer-receiving-function",
+                        "version": "1"
+                      },
+                      "configuration_version": "1",
+                      "basis_refs": [
+                        {
+                          "kind": "Evidence",
+                          "id": "synthetic-receiving-basis",
+                          "version": "1"
+                        }
+                      ]
+                    }
+                  ],
+                  "evidence_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-receiving-basis",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "authorizations": [
+                {
+                  "ref": {
+                    "kind": "Authorization",
+                    "id": "v4-supplier-receiving-grant",
+                    "version": "1"
+                  },
+                  "organization_id": "supplier-org",
+                  "actor_id": "supplier-actor",
+                  "function_ref": {
+                    "kind": "FunctionAssignment",
+                    "id": "v4-supplier-receiving-function",
+                    "version": "1"
+                  },
+                  "action_ids": [
+                    "SUPPLIER-A09"
+                  ],
+                  "scopes": [
+                    {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    }
+                  ],
+                  "readable_refs": [
+                    {
+                      "kind": "Order",
+                      "id": "receiving-order",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Shipment",
+                      "id": "arrived-shipment",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "DeliveryResponseProfile",
+                      "id": "receipt-ack-profile",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ArrivalEvidence",
+                      "id": "actual-arrival",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ReceivingParty",
+                      "id": "buyer-receiver",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ReceivingMandate",
+                      "id": "buyer-receiving-mandate",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "GoodsReceipt",
+                      "id": "buyer-receipt",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ReceiptComponent",
+                      "id": "short-damaged-component",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "DeliveryDiscrepancy",
+                      "id": "short-damaged-issue",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ProductSpecification",
+                      "id": "panel-spec",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-receiving-basis",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ClockProfile",
+                      "id": "synthetic-clock",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Project",
+                      "id": "buyer-project",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "WorkScope",
+                      "id": "receiving-line-1",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "FunctionAssignment",
+                      "id": "v4-supplier-receiving-function",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "FunctionAssignment",
+                      "id": "buyer-receiving-function",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "CandidateSet",
+                      "id": "v4-supplier-receiving-candidates",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Authorization",
+                      "id": "v4-supplier-receiving-grant",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Authorization",
+                      "id": "buyer-receiving-grant",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "GoodsInspectionMethod",
+                      "id": "panel-installation-inspection",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "InspectionResult",
+                      "id": "independent-partial-goods-check",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "GoodsUseRelease",
+                      "id": "two-panel-installation-release",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "TransportMethod",
+                      "id": "synthetic-panel-elapsed-transport",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "TransportRoute",
+                      "id": "source-route",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "TransportTraversal",
+                      "id": "synthetic-factory-to-buyer-traversal",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "TransportPosition",
+                      "id": "source-arrived-position",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-transport-duration-assumption",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-transport-observation",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-independent-native-shipment-observation",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-independent-logistics-shipment-relation",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "SupplierLogisticsHandoffBasis",
+                      "id": "synthetic-original-logistics-to-arrival-relation",
+                      "version": "1"
+                    }
+                  ],
+                  "tool_ids": [],
+                  "validity": {
+                    "start": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 10
+                    },
+                    "end": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "bounds": "closed_open"
+                  },
+                  "basis_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-receiving-basis",
+                      "version": "1"
+                    }
+                  ]
+                },
+                {
+                  "ref": {
+                    "kind": "Authorization",
+                    "id": "buyer-receiving-grant",
+                    "version": "1"
+                  },
+                  "organization_id": "buyer-contractor-org",
+                  "actor_id": "buyer-contractor-actor",
+                  "function_ref": {
+                    "kind": "FunctionAssignment",
+                    "id": "buyer-receiving-function",
+                    "version": "1"
+                  },
+                  "action_ids": [
+                    "CONTRACTOR-A07"
+                  ],
+                  "scopes": [
+                    {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    }
+                  ],
+                  "readable_refs": [
+                    {
+                      "kind": "Order",
+                      "id": "receiving-order",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Shipment",
+                      "id": "arrived-shipment",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "DeliveryResponseProfile",
+                      "id": "receipt-ack-profile",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ArrivalEvidence",
+                      "id": "actual-arrival",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ReceivingParty",
+                      "id": "buyer-receiver",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ReceivingMandate",
+                      "id": "buyer-receiving-mandate",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "GoodsReceipt",
+                      "id": "buyer-receipt",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ReceiptComponent",
+                      "id": "short-damaged-component",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "DeliveryDiscrepancy",
+                      "id": "short-damaged-issue",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ProductSpecification",
+                      "id": "panel-spec",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-receiving-basis",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ClockProfile",
+                      "id": "synthetic-clock",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Project",
+                      "id": "buyer-project",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "WorkScope",
+                      "id": "receiving-line-1",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "FunctionAssignment",
+                      "id": "v4-supplier-receiving-function",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "FunctionAssignment",
+                      "id": "buyer-receiving-function",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "CandidateSet",
+                      "id": "v4-supplier-receiving-candidates",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Authorization",
+                      "id": "v4-supplier-receiving-grant",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Authorization",
+                      "id": "buyer-receiving-grant",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "GoodsInspectionMethod",
+                      "id": "panel-installation-inspection",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "InspectionResult",
+                      "id": "independent-partial-goods-check",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "GoodsUseRelease",
+                      "id": "two-panel-installation-release",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "TransportMethod",
+                      "id": "synthetic-panel-elapsed-transport",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "TransportRoute",
+                      "id": "source-route",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "TransportTraversal",
+                      "id": "synthetic-factory-to-buyer-traversal",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "TransportPosition",
+                      "id": "source-arrived-position",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-transport-duration-assumption",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-transport-observation",
+                      "version": "1"
+                    }
+                  ],
+                  "tool_ids": [],
+                  "validity": {
+                    "start": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 10
+                    },
+                    "end": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "bounds": "closed_open"
+                  },
+                  "basis_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-receiving-basis",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "inactive_authorization_refs": []
+            },
+            "source_projection": {
+              "run_id": "synthetic-v4-production-material-connection",
+              "macro_version": "synthetic-v4-production-material-connection.v1",
+              "state_version": "synthetic-v4-production-material-connection-receiving.v1",
+              "read_token": "synthetic-v4-production-material-connection:read:1",
+              "business_time": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "synthetic-clock",
+                  "version": "1"
+                },
+                "offset": 18
+              },
+              "organization_id": "supplier-org",
+              "objects": [
+                {
+                  "ref": {
+                    "kind": "Order",
+                    "id": "receiving-order",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "Order",
+                      "id": "receiving-order",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-receiving-basis",
+                        "version": "1"
+                      }
+                    ],
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 18
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "supplier_id": "supplier-org",
+                    "buyer_id": "buyer-contractor-org",
+                    "effective": {
+                      "state": "known",
+                      "value": true
+                    },
+                    "line_refs": [
+                      {
+                        "kind": "OrderLine",
+                        "id": "receiving-line",
+                        "version": "1"
+                      }
+                    ],
+                    "terms_ref": {
+                      "kind": "TransportTerms",
+                      "id": "source-terms",
+                      "version": "1"
+                    },
+                    "shipment_refs": [
+                      {
+                        "kind": "Shipment",
+                        "id": "arrived-shipment",
+                        "version": "1"
+                      }
+                    ],
+                    "coverage": "complete",
+                    "as_of": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 18
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "Shipment",
+                    "id": "arrived-shipment",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "Shipment",
+                      "id": "arrived-shipment",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-receiving-basis",
+                        "version": "1"
+                      }
+                    ],
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 18
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "order_ref": {
+                      "kind": "Order",
+                      "id": "receiving-order",
+                      "version": "1"
+                    },
+                    "organization_id": "supplier-org",
+                    "run_id": "synthetic-v4-production-material-connection",
+                    "operation_id": "synthetic-original-dispatch-operation",
+                    "command_id": "synthetic-original-dispatch-command",
+                    "business_key": "synthetic-original-dispatch-business",
+                    "physical_batch_key": "synthetic-receiving-physical-batch",
+                    "slice_refs": [
+                      {
+                        "kind": "ShipmentSlice",
+                        "id": "source-four-panel-slice",
+                        "version": "1"
+                      }
+                    ],
+                    "plan": {
+                      "batch_ref": {
+                        "kind": "ProductBatch",
+                        "id": "source-cargo",
+                        "version": "1"
+                      },
+                      "quantity": {
+                        "value": "4",
+                        "unit": "panel",
+                        "basis_ref": {
+                          "kind": "Evidence",
+                          "id": "synthetic-receiving-basis",
+                          "version": "1"
+                        }
+                      },
+                      "source_ref": {
+                        "kind": "Location",
+                        "id": "factory",
+                        "version": "1"
+                      },
+                      "destination_ref": {
+                        "kind": "Location",
+                        "id": "buyer-site",
+                        "version": "1"
+                      },
+                      "route_ref": {
+                        "kind": "TransportRoute",
+                        "id": "source-route",
+                        "version": "1"
+                      },
+                      "receiving_window_ref": {
+                        "kind": "TimeWindow",
+                        "id": "source-receiving-time",
+                        "version": "1"
+                      },
+                      "transport_allocation_refs": [
+                        {
+                          "kind": "ResourceAllocation",
+                          "id": "source-transport-allocation",
+                          "version": "1"
+                        }
+                      ],
+                      "condition_evidence_refs": [
+                        {
+                          "kind": "Evidence",
+                          "id": "synthetic-receiving-basis",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "request_sha256": "629f2b7a34e4b28798a52135a91ad0e95d0d444e76901975a9ba6b975ec081fe",
+                    "status": "arrived",
+                    "query_status": "present",
+                    "core_event_id": "synthetic-dispatch-event",
+                    "dispatched_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 12
+                    },
+                    "current_position_ref": {
+                      "kind": "TransportPosition",
+                      "id": "source-arrived-position",
+                      "version": "1"
+                    },
+                    "traversal_refs": [
+                      {
+                        "kind": "TransportTraversal",
+                        "id": "synthetic-factory-to-buyer-traversal",
+                        "version": "1"
+                      }
+                    ],
+                    "response_profile_ref": {
+                      "kind": "DeliveryResponseProfile",
+                      "id": "receipt-ack-profile",
+                      "version": "1"
+                    },
+                    "arrival_refs": [
+                      {
+                        "kind": "ArrivalEvidence",
+                        "id": "actual-arrival",
+                        "version": "1"
+                      }
+                    ],
+                    "receipt_refs": [
+                      {
+                        "kind": "GoodsReceipt",
+                        "id": "buyer-receipt",
+                        "version": "1"
+                      }
+                    ],
+                    "inspection_refs": [
+                      {
+                        "kind": "InspectionResult",
+                        "id": "independent-partial-goods-check",
+                        "version": "1"
+                      }
+                    ],
+                    "discrepancy_refs": [
+                      {
+                        "kind": "DeliveryDiscrepancy",
+                        "id": "short-damaged-issue",
+                        "version": "1"
+                      }
+                    ],
+                    "receiving_party_refs": [
+                      {
+                        "kind": "ReceivingParty",
+                        "id": "buyer-receiver",
+                        "version": "1"
+                      }
+                    ],
+                    "history_coverage": "complete",
+                    "as_of": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 18
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "DeliveryResponseProfile",
+                    "id": "receipt-ack-profile",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "DeliveryResponseProfile",
+                      "id": "receipt-ack-profile",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-receiving-basis",
+                        "version": "1"
+                      }
+                    ],
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 18
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "shipment_ref": {
+                      "kind": "Shipment",
+                      "id": "arrived-shipment",
+                      "version": "1"
+                    },
+                    "organization_id": "supplier-org",
+                    "actor_id": "supplier-actor",
+                    "function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v4-supplier-receiving-function",
+                      "version": "1"
+                    },
+                    "authority_ref": {
+                      "kind": "Authorization",
+                      "id": "v4-supplier-receiving-grant",
+                      "version": "1"
+                    },
+                    "choice": "acknowledge_receipt",
+                    "receipt_ref": {
+                      "kind": "GoodsReceipt",
+                      "id": "buyer-receipt",
+                      "version": "1"
+                    },
+                    "accepted_fact_refs": [
+                      {
+                        "kind": "ReceiptComponent",
+                        "id": "short-damaged-component",
+                        "version": "1"
+                      }
+                    ],
+                    "supplement_ref": null,
+                    "issue_ref": null,
+                    "replacement_ref": null,
+                    "component_refs": [],
+                    "evidence_refs_received": [],
+                    "note": "Acknowledge independent partial receiving facts: 4 shipped/arrived, 3 received including 1 damaged/quarantined; independent inspection and use release cover only 2 panels. Short/damaged discrepancy stays open."
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "ArrivalEvidence",
+                    "id": "actual-arrival",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "ArrivalEvidence",
+                      "id": "actual-arrival",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-receiving-basis",
+                        "version": "1"
+                      }
+                    ],
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 18
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "shipment_ref": {
+                      "kind": "Shipment",
+                      "id": "arrived-shipment",
+                      "version": "1"
+                    },
+                    "physical_batch_key": "synthetic-receiving-physical-batch",
+                    "destination_ref": {
+                      "kind": "Location",
+                      "id": "buyer-site",
+                      "version": "1"
+                    },
+                    "quantity": {
+                      "value": "4",
+                      "unit": "panel",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "synthetic-receiving-basis",
+                        "version": "1"
+                      }
+                    },
+                    "arrived_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 17
+                    },
+                    "core_event_id": "synthetic-arrival-event",
+                    "producer": "core"
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "ReceivingParty",
+                    "id": "buyer-receiver",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "ReceivingParty",
+                      "id": "buyer-receiver",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-receiving-basis",
+                        "version": "1"
+                      }
+                    ],
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 18
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "organization_id": "buyer-contractor-org",
+                    "actor_id": "buyer-contractor-actor",
+                    "function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "buyer-receiving-function",
+                      "version": "1"
+                    },
+                    "authority_ref": {
+                      "kind": "Authorization",
+                      "id": "buyer-receiving-grant",
+                      "version": "1"
+                    },
+                    "allowed_action_ids": [
+                      "CONTRACTOR-A07"
+                    ],
+                    "allowed_purposes": [
+                      "receipt",
+                      "inspection",
+                      "use_release"
+                    ],
+                    "order_ref": {
+                      "kind": "Order",
+                      "id": "receiving-order",
+                      "version": "1"
+                    },
+                    "destination_ref": {
+                      "kind": "Location",
+                      "id": "buyer-site",
+                      "version": "1"
+                    },
+                    "permitted": {
+                      "state": "known",
+                      "value": true
+                    },
+                    "mandate_ref": {
+                      "kind": "ReceivingMandate",
+                      "id": "buyer-receiving-mandate",
+                      "version": "1"
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "ReceivingMandate",
+                    "id": "buyer-receiving-mandate",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "ReceivingMandate",
+                      "id": "buyer-receiving-mandate",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-receiving-basis",
+                        "version": "1"
+                      }
+                    ],
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 18
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "order_ref": {
+                      "kind": "Order",
+                      "id": "receiving-order",
+                      "version": "1"
+                    },
+                    "receiving_party_ref": {
+                      "kind": "ReceivingParty",
+                      "id": "buyer-receiver",
+                      "version": "1"
+                    },
+                    "recipient_organization_id": "buyer-contractor-org",
+                    "allowed_purposes": [
+                      "receipt",
+                      "inspection",
+                      "use_release"
+                    ],
+                    "permitted": {
+                      "state": "known",
+                      "value": true
+                    },
+                    "author_actor_id": "buyer-contractor-actor",
+                    "author_organization_id": "buyer-contractor-org",
+                    "author_function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "buyer-receiving-function",
+                      "version": "1"
+                    },
+                    "author_authority_ref": {
+                      "kind": "Authorization",
+                      "id": "buyer-receiving-grant",
+                      "version": "1"
+                    },
+                    "author_action_id": "CONTRACTOR-A07",
+                    "authored_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 17
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "GoodsReceipt",
+                    "id": "buyer-receipt",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "GoodsReceipt",
+                      "id": "buyer-receipt",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-receiving-basis",
+                        "version": "1"
+                      }
+                    ],
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 18
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "shipment_ref": {
+                      "kind": "Shipment",
+                      "id": "arrived-shipment",
+                      "version": "1"
+                    },
+                    "arrival_refs": [
+                      {
+                        "kind": "ArrivalEvidence",
+                        "id": "actual-arrival",
+                        "version": "1"
+                      }
+                    ],
+                    "receiving_party_ref": {
+                      "kind": "ReceivingParty",
+                      "id": "buyer-receiver",
+                      "version": "1"
+                    },
+                    "component_refs": [
+                      {
+                        "kind": "ReceiptComponent",
+                        "id": "short-damaged-component",
+                        "version": "1"
+                      }
+                    ],
+                    "command_id": "synthetic-independent-receipt-command",
+                    "business_key": "synthetic-independent-receipt-business",
+                    "core_event_id": "synthetic-independent-receipt-event",
+                    "status": "recorded",
+                    "author_actor_id": "buyer-contractor-actor",
+                    "author_organization_id": "buyer-contractor-org",
+                    "author_function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "buyer-receiving-function",
+                      "version": "1"
+                    },
+                    "author_authority_ref": {
+                      "kind": "Authorization",
+                      "id": "buyer-receiving-grant",
+                      "version": "1"
+                    },
+                    "author_action_id": "CONTRACTOR-A07",
+                    "authored_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 17
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "ReceiptComponent",
+                    "id": "short-damaged-component",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "ReceiptComponent",
+                      "id": "short-damaged-component",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-receiving-basis",
+                        "version": "1"
+                      }
+                    ],
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 18
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "shipment_ref": {
+                      "kind": "Shipment",
+                      "id": "arrived-shipment",
+                      "version": "1"
+                    },
+                    "receipt_ref": {
+                      "kind": "GoodsReceipt",
+                      "id": "buyer-receipt",
+                      "version": "1"
+                    },
+                    "physical_slice_key": "synthetic-received-three-panel-slice",
+                    "product_ref": {
+                      "kind": "ProductSpecification",
+                      "id": "panel-spec",
+                      "version": "1"
+                    },
+                    "expected_quantity": {
+                      "value": "4",
+                      "unit": "panel",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "synthetic-receiving-basis",
+                        "version": "1"
+                      }
+                    },
+                    "received_quantity": {
+                      "value": "3",
+                      "unit": "panel",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "synthetic-receiving-basis",
+                        "version": "1"
+                      }
+                    },
+                    "damaged_quantity": {
+                      "value": "1",
+                      "unit": "panel",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "synthetic-receiving-basis",
+                        "version": "1"
+                      }
+                    },
+                    "rejected_quantity": {
+                      "value": "0",
+                      "unit": "panel",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "synthetic-receiving-basis",
+                        "version": "1"
+                      }
+                    },
+                    "quarantined_quantity": {
+                      "value": "1",
+                      "unit": "panel",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "synthetic-receiving-basis",
+                        "version": "1"
+                      }
+                    },
+                    "usable_quantity": {
+                      "value": "2",
+                      "unit": "panel",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "synthetic-receiving-basis",
+                        "version": "1"
+                      }
+                    },
+                    "specification_matches": {
+                      "state": "known",
+                      "value": true
+                    },
+                    "status": "short",
+                    "inspection_refs": [
+                      {
+                        "kind": "InspectionResult",
+                        "id": "independent-partial-goods-check",
+                        "version": "1"
+                      }
+                    ],
+                    "use_release_refs": [
+                      {
+                        "kind": "GoodsUseRelease",
+                        "id": "two-panel-installation-release",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "DeliveryDiscrepancy",
+                    "id": "short-damaged-issue",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "DeliveryDiscrepancy",
+                      "id": "short-damaged-issue",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-receiving-basis",
+                        "version": "1"
+                      }
+                    ],
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 18
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "shipment_ref": {
+                      "kind": "Shipment",
+                      "id": "arrived-shipment",
+                      "version": "1"
+                    },
+                    "component_refs": [
+                      {
+                        "kind": "ReceiptComponent",
+                        "id": "short-damaged-component",
+                        "version": "1"
+                      }
+                    ],
+                    "status": "open",
+                    "replacement_remaining": {
+                      "value": "2",
+                      "unit": "panel",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "synthetic-receiving-basis",
+                        "version": "1"
+                      }
+                    },
+                    "replacement_proposal_refs": [],
+                    "replacement_history_complete": true,
+                    "as_of": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 18
+                    },
+                    "author_actor_id": "buyer-contractor-actor",
+                    "author_organization_id": "buyer-contractor-org",
+                    "author_function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "buyer-receiving-function",
+                      "version": "1"
+                    },
+                    "author_authority_ref": {
+                      "kind": "Authorization",
+                      "id": "buyer-receiving-grant",
+                      "version": "1"
+                    },
+                    "author_action_id": "CONTRACTOR-A07",
+                    "authored_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 17
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "ProductSpecification",
+                    "id": "panel-spec",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "ProductSpecification",
+                      "id": "panel-spec",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-receiving-basis",
+                        "version": "1"
+                      }
+                    ],
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 18
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "quantity_unit": "panel"
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "Evidence",
+                    "id": "synthetic-receiving-basis",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "Evidence",
+                      "id": "synthetic-receiving-basis",
+                      "version": "1"
+                    },
+                    "source_kind": "synthetic",
+                    "basis_kind": "assumed",
+                    "locator": "synthetic:v4-material-connection:partial-use-input",
+                    "content_hash": "ba6840d42282544e5fa7511bdcec78002a51595fe4c68fe853c6a6018947ca03",
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "ClockProfile",
+                    "id": "synthetic-clock",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "ClockProfile",
+                      "id": "synthetic-clock",
+                      "version": "1"
+                    },
+                    "tick_unit": "synthetic-tick",
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-receiving-basis",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "Project",
+                    "id": "buyer-project",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "Project",
+                      "id": "buyer-project",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-receiving-basis",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "WorkScope",
+                    "id": "receiving-line-1",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "WorkScope",
+                      "id": "receiving-line-1",
+                      "version": "1"
+                    },
+                    "parent_ref": {
+                      "kind": "Project",
+                      "id": "buyer-project",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-receiving-basis",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "FunctionAssignment",
+                    "id": "v4-supplier-receiving-function",
+                    "version": "1"
+                  },
+                  "value": {
+                    "role": "Supplier",
+                    "function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v4-supplier-receiving-function",
+                      "version": "1"
+                    },
+                    "configuration_version": "1",
+                    "basis_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-receiving-basis",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "FunctionAssignment",
+                    "id": "buyer-receiving-function",
+                    "version": "1"
+                  },
+                  "value": {
+                    "role": "Contractor",
+                    "function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "buyer-receiving-function",
+                      "version": "1"
+                    },
+                    "configuration_version": "1",
+                    "basis_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-receiving-basis",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "CandidateSet",
+                    "id": "v4-supplier-receiving-candidates",
+                    "version": "1"
+                  },
+                  "value": {
+                    "operation_id": "v4-supplier-usable-receiving-1",
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "as_of": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 18
+                    },
+                    "candidates": [
+                      {
+                        "ref": {
+                          "kind": "Shipment",
+                          "id": "arrived-shipment",
+                          "version": "1"
+                        },
+                        "permitted_choices": [
+                          "acknowledge_receipt"
+                        ]
+                      }
+                    ],
+                    "search_profile_ref": {
+                      "kind": "Profile",
+                      "id": "receiving-search",
+                      "version": "1"
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "Authorization",
+                    "id": "v4-supplier-receiving-grant",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "Authorization",
+                      "id": "v4-supplier-receiving-grant",
+                      "version": "1"
+                    },
+                    "organization_id": "supplier-org",
+                    "actor_id": "supplier-actor",
+                    "function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v4-supplier-receiving-function",
+                      "version": "1"
+                    },
+                    "action_ids": [
+                      "SUPPLIER-A09"
+                    ],
+                    "scopes": [
+                      {
+                        "kind": "project",
+                        "ref": {
+                          "kind": "Project",
+                          "id": "buyer-project",
+                          "version": "1"
+                        },
+                        "coverage_refs": [
+                          {
+                            "kind": "WorkScope",
+                            "id": "receiving-line-1",
+                            "version": "1"
+                          }
+                        ]
+                      }
+                    ],
+                    "readable_refs": [
+                      {
+                        "kind": "Order",
+                        "id": "receiving-order",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Shipment",
+                        "id": "arrived-shipment",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "DeliveryResponseProfile",
+                        "id": "receipt-ack-profile",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "ArrivalEvidence",
+                        "id": "actual-arrival",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "ReceivingParty",
+                        "id": "buyer-receiver",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "ReceivingMandate",
+                        "id": "buyer-receiving-mandate",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "GoodsReceipt",
+                        "id": "buyer-receipt",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "ReceiptComponent",
+                        "id": "short-damaged-component",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "DeliveryDiscrepancy",
+                        "id": "short-damaged-issue",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "ProductSpecification",
+                        "id": "panel-spec",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-receiving-basis",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "WorkScope",
+                        "id": "receiving-line-1",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "FunctionAssignment",
+                        "id": "v4-supplier-receiving-function",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "FunctionAssignment",
+                        "id": "buyer-receiving-function",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "CandidateSet",
+                        "id": "v4-supplier-receiving-candidates",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Authorization",
+                        "id": "v4-supplier-receiving-grant",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Authorization",
+                        "id": "buyer-receiving-grant",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "GoodsInspectionMethod",
+                        "id": "panel-installation-inspection",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "InspectionResult",
+                        "id": "independent-partial-goods-check",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "GoodsUseRelease",
+                        "id": "two-panel-installation-release",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "TransportMethod",
+                        "id": "synthetic-panel-elapsed-transport",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "TransportRoute",
+                        "id": "source-route",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "TransportTraversal",
+                        "id": "synthetic-factory-to-buyer-traversal",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "TransportPosition",
+                        "id": "source-arrived-position",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-transport-duration-assumption",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-transport-observation",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-independent-native-shipment-observation",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-independent-logistics-shipment-relation",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "SupplierLogisticsHandoffBasis",
+                        "id": "synthetic-original-logistics-to-arrival-relation",
+                        "version": "1"
+                      }
+                    ],
+                    "tool_ids": [],
+                    "validity": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "basis_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-receiving-basis",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "Authorization",
+                    "id": "buyer-receiving-grant",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "Authorization",
+                      "id": "buyer-receiving-grant",
+                      "version": "1"
+                    },
+                    "organization_id": "buyer-contractor-org",
+                    "actor_id": "buyer-contractor-actor",
+                    "function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "buyer-receiving-function",
+                      "version": "1"
+                    },
+                    "action_ids": [
+                      "CONTRACTOR-A07"
+                    ],
+                    "scopes": [
+                      {
+                        "kind": "project",
+                        "ref": {
+                          "kind": "Project",
+                          "id": "buyer-project",
+                          "version": "1"
+                        },
+                        "coverage_refs": [
+                          {
+                            "kind": "WorkScope",
+                            "id": "receiving-line-1",
+                            "version": "1"
+                          }
+                        ]
+                      }
+                    ],
+                    "readable_refs": [
+                      {
+                        "kind": "Order",
+                        "id": "receiving-order",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Shipment",
+                        "id": "arrived-shipment",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "DeliveryResponseProfile",
+                        "id": "receipt-ack-profile",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "ArrivalEvidence",
+                        "id": "actual-arrival",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "ReceivingParty",
+                        "id": "buyer-receiver",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "ReceivingMandate",
+                        "id": "buyer-receiving-mandate",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "GoodsReceipt",
+                        "id": "buyer-receipt",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "ReceiptComponent",
+                        "id": "short-damaged-component",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "DeliveryDiscrepancy",
+                        "id": "short-damaged-issue",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "ProductSpecification",
+                        "id": "panel-spec",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-receiving-basis",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "WorkScope",
+                        "id": "receiving-line-1",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "FunctionAssignment",
+                        "id": "v4-supplier-receiving-function",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "FunctionAssignment",
+                        "id": "buyer-receiving-function",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "CandidateSet",
+                        "id": "v4-supplier-receiving-candidates",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Authorization",
+                        "id": "v4-supplier-receiving-grant",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Authorization",
+                        "id": "buyer-receiving-grant",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "GoodsInspectionMethod",
+                        "id": "panel-installation-inspection",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "InspectionResult",
+                        "id": "independent-partial-goods-check",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "GoodsUseRelease",
+                        "id": "two-panel-installation-release",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "TransportMethod",
+                        "id": "synthetic-panel-elapsed-transport",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "TransportRoute",
+                        "id": "source-route",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "TransportTraversal",
+                        "id": "synthetic-factory-to-buyer-traversal",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "TransportPosition",
+                        "id": "source-arrived-position",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-transport-duration-assumption",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-transport-observation",
+                        "version": "1"
+                      }
+                    ],
+                    "tool_ids": [],
+                    "validity": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "basis_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-receiving-basis",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "GoodsInspectionMethod",
+                    "id": "panel-installation-inspection",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "GoodsInspectionMethod",
+                      "id": "panel-installation-inspection",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-receiving-basis",
+                        "version": "1"
+                      }
+                    ],
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 18
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "supported": {
+                      "state": "known",
+                      "value": true
+                    },
+                    "product_refs": [
+                      {
+                        "kind": "ProductSpecification",
+                        "id": "panel-spec",
+                        "version": "1"
+                      }
+                    ],
+                    "use_codes": [
+                      "panel_installation"
+                    ],
+                    "allowed_author_action_ids": [
+                      "CONTRACTOR-A07"
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "InspectionResult",
+                    "id": "independent-partial-goods-check",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "InspectionResult",
+                      "id": "independent-partial-goods-check",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-receiving-basis",
+                        "version": "1"
+                      }
+                    ],
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 18
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "author_actor_id": "buyer-contractor-actor",
+                    "author_organization_id": "buyer-contractor-org",
+                    "author_function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "buyer-receiving-function",
+                      "version": "1"
+                    },
+                    "author_authority_ref": {
+                      "kind": "Authorization",
+                      "id": "buyer-receiving-grant",
+                      "version": "1"
+                    },
+                    "author_action_id": "CONTRACTOR-A07",
+                    "authored_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 17
+                    },
+                    "shipment_ref": {
+                      "kind": "Shipment",
+                      "id": "arrived-shipment",
+                      "version": "1"
+                    },
+                    "component_refs": [
+                      {
+                        "kind": "ReceiptComponent",
+                        "id": "short-damaged-component",
+                        "version": "1"
+                      }
+                    ],
+                    "receiving_party_ref": {
+                      "kind": "ReceivingParty",
+                      "id": "buyer-receiver",
+                      "version": "1"
+                    },
+                    "method_ref": {
+                      "kind": "GoodsInspectionMethod",
+                      "id": "panel-installation-inspection",
+                      "version": "1"
+                    },
+                    "status": "ok",
+                    "passed": {
+                      "state": "known",
+                      "value": true
+                    },
+                    "covered_quantity": {
+                      "value": "2",
+                      "unit": "panel",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "synthetic-receiving-basis",
+                        "version": "1"
+                      }
+                    },
+                    "use_codes": [
+                      "panel_installation"
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "GoodsUseRelease",
+                    "id": "two-panel-installation-release",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "GoodsUseRelease",
+                      "id": "two-panel-installation-release",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-receiving-basis",
+                        "version": "1"
+                      }
+                    ],
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 18
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "author_actor_id": "buyer-contractor-actor",
+                    "author_organization_id": "buyer-contractor-org",
+                    "author_function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "buyer-receiving-function",
+                      "version": "1"
+                    },
+                    "author_authority_ref": {
+                      "kind": "Authorization",
+                      "id": "buyer-receiving-grant",
+                      "version": "1"
+                    },
+                    "author_action_id": "CONTRACTOR-A07",
+                    "authored_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 18
+                    },
+                    "shipment_ref": {
+                      "kind": "Shipment",
+                      "id": "arrived-shipment",
+                      "version": "1"
+                    },
+                    "component_ref": {
+                      "kind": "ReceiptComponent",
+                      "id": "short-damaged-component",
+                      "version": "1"
+                    },
+                    "receiving_party_ref": {
+                      "kind": "ReceivingParty",
+                      "id": "buyer-receiver",
+                      "version": "1"
+                    },
+                    "inspection_ref": {
+                      "kind": "InspectionResult",
+                      "id": "independent-partial-goods-check",
+                      "version": "1"
+                    },
+                    "quantity": {
+                      "value": "2",
+                      "unit": "panel",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "synthetic-receiving-basis",
+                        "version": "1"
+                      }
+                    },
+                    "use_codes": [
+                      "panel_installation"
+                    ],
+                    "permitted": {
+                      "state": "known",
+                      "value": true
+                    },
+                    "core_event_id": "synthetic-two-panel-use-release-event"
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "TransportMethod",
+                    "id": "synthetic-panel-elapsed-transport",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "TransportMethod",
+                      "id": "synthetic-panel-elapsed-transport",
+                      "version": "1"
+                    },
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 18
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-transport-duration-assumption",
+                        "version": "1"
+                      }
+                    ],
+                    "supported": {
+                      "state": "known",
+                      "value": true
+                    },
+                    "clock_ref": {
+                      "kind": "ClockProfile",
+                      "id": "synthetic-clock",
+                      "version": "1"
+                    },
+                    "quantity_unit": "panel",
+                    "loading_ticks": 1,
+                    "unloading_ticks": 1,
+                    "basis_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-transport-duration-assumption",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "TransportRoute",
+                    "id": "source-route",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "TransportRoute",
+                      "id": "source-route",
+                      "version": "1"
+                    },
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 18
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-transport-duration-assumption",
+                        "version": "1"
+                      }
+                    ],
+                    "supported": {
+                      "state": "known",
+                      "value": true
+                    },
+                    "segments": [
+                      {
+                        "segment_ref": {
+                          "kind": "TransportSegment",
+                          "id": "synthetic-factory-to-buyer-segment",
+                          "version": "1"
+                        },
+                        "source_ref": {
+                          "kind": "Location",
+                          "id": "factory",
+                          "version": "1"
+                        },
+                        "destination_ref": {
+                          "kind": "Location",
+                          "id": "buyer-site",
+                          "version": "1"
+                        },
+                        "minimum_ticks": 3,
+                        "travel_basis_ref": {
+                          "kind": "Evidence",
+                          "id": "synthetic-transport-duration-assumption",
+                          "version": "1"
+                        }
+                      }
+                    ],
+                    "requirement_refs": [],
+                    "method_ref": {
+                      "kind": "TransportMethod",
+                      "id": "synthetic-panel-elapsed-transport",
+                      "version": "1"
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "TransportTraversal",
+                    "id": "synthetic-factory-to-buyer-traversal",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "TransportTraversal",
+                      "id": "synthetic-factory-to-buyer-traversal",
+                      "version": "1"
+                    },
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 18
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-transport-observation",
+                        "version": "1"
+                      }
+                    ],
+                    "shipment_ref": {
+                      "kind": "Shipment",
+                      "id": "arrived-shipment",
+                      "version": "1"
+                    },
+                    "route_ref": {
+                      "kind": "TransportRoute",
+                      "id": "source-route",
+                      "version": "1"
+                    },
+                    "segment_ref": {
+                      "kind": "TransportSegment",
+                      "id": "synthetic-factory-to-buyer-segment",
+                      "version": "1"
+                    },
+                    "source_ref": {
+                      "kind": "Location",
+                      "id": "factory",
+                      "version": "1"
+                    },
+                    "destination_ref": {
+                      "kind": "Location",
+                      "id": "buyer-site",
+                      "version": "1"
+                    },
+                    "started_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 13
+                    },
+                    "completed_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 16
+                    },
+                    "core_event_id": "synthetic-factory-buyer-traversal-event",
+                    "producer": "core"
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "TransportPosition",
+                    "id": "source-arrived-position",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "TransportPosition",
+                      "id": "source-arrived-position",
+                      "version": "1"
+                    },
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 18
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-transport-observation",
+                        "version": "1"
+                      }
+                    ],
+                    "shipment_ref": {
+                      "kind": "Shipment",
+                      "id": "arrived-shipment",
+                      "version": "1"
+                    },
+                    "location_ref": {
+                      "kind": "Location",
+                      "id": "buyer-site",
+                      "version": "1"
+                    },
+                    "position_kind": "destination",
+                    "remaining_quantity": {
+                      "value": "4",
+                      "unit": "panel",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "synthetic-transport-observation",
+                        "version": "1"
+                      }
+                    },
+                    "observed_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 17
+                    },
+                    "core_event_id": "synthetic-arrival-event",
+                    "producer": "core"
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "Evidence",
+                    "id": "synthetic-transport-duration-assumption",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "Evidence",
+                      "id": "synthetic-transport-duration-assumption",
+                      "version": "1"
+                    },
+                    "source_kind": "synthetic",
+                    "basis_kind": "assumed",
+                    "locator": "synthetic:v4-material-connection:elapsed-transport-parameters",
+                    "content_hash": "e8317d54eec3eaccebd98208e3915485cc0bcb26af69185c291eed08a49e8c40",
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "Evidence",
+                    "id": "synthetic-transport-observation",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "Evidence",
+                      "id": "synthetic-transport-observation",
+                      "version": "1"
+                    },
+                    "source_kind": "synthetic",
+                    "basis_kind": "observed",
+                    "locator": "synthetic:v4-material-connection:declared-core-travel-and-position",
+                    "content_hash": "9f278248ee29df562ed1b630382ee0c5768acaa7df2c610296b78b330f278504",
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "Evidence",
+                    "id": "synthetic-independent-native-shipment-observation",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "Evidence",
+                      "id": "synthetic-independent-native-shipment-observation",
+                      "version": "1"
+                    },
+                    "source_kind": "synthetic",
+                    "basis_kind": "observed",
+                    "locator": "synthetic:v4-material-connection:independent-native-shipment-observation",
+                    "content_hash": "62d131b4a0e8598543beae5297dbf5449535ec0e01a1d49868ecadd2573467ce",
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "Evidence",
+                    "id": "synthetic-independent-logistics-shipment-relation",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "Evidence",
+                      "id": "synthetic-independent-logistics-shipment-relation",
+                      "version": "1"
+                    },
+                    "source_kind": "synthetic",
+                    "basis_kind": "observed",
+                    "locator": "synthetic:v4-material-connection:independent-original-logistics-shipment-relation",
+                    "content_hash": "8746b0292e3242ebb4c77971a98c5dddb46f2472a8398859276115788963b29a",
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      "expected_receipt_components": [
+        {
+          "ref": {
+            "kind": "ReceiptComponent",
+            "id": "short-damaged-component",
+            "version": "1"
+          },
+          "evidence_refs": [
+            {
+              "kind": "Evidence",
+              "id": "synthetic-receiving-basis",
+              "version": "1"
+            }
+          ],
+          "scope": {
+            "kind": "project",
+            "ref": {
+              "kind": "Project",
+              "id": "buyer-project",
+              "version": "1"
+            },
+            "coverage_refs": [
+              {
+                "kind": "WorkScope",
+                "id": "receiving-line-1",
+                "version": "1"
+              }
+            ]
+          },
+          "available_at": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "synthetic-clock",
+              "version": "1"
+            },
+            "offset": 18
+          },
+          "effective_window": {
+            "start": {
+              "clock_ref": {
+                "kind": "ClockProfile",
+                "id": "synthetic-clock",
+                "version": "1"
+              },
+              "offset": 10
+            },
+            "end": {
+              "clock_ref": {
+                "kind": "ClockProfile",
+                "id": "synthetic-clock",
+                "version": "1"
+              },
+              "offset": 30
+            },
+            "bounds": "closed_open"
+          },
+          "shipment_ref": {
+            "kind": "Shipment",
+            "id": "arrived-shipment",
+            "version": "1"
+          },
+          "receipt_ref": {
+            "kind": "GoodsReceipt",
+            "id": "buyer-receipt",
+            "version": "1"
+          },
+          "physical_slice_key": "synthetic-received-three-panel-slice",
+          "product_ref": {
+            "kind": "ProductSpecification",
+            "id": "panel-spec",
+            "version": "1"
+          },
+          "expected_quantity": {
+            "value": "4",
+            "unit": "panel",
+            "basis_ref": {
+              "kind": "Evidence",
+              "id": "synthetic-receiving-basis",
+              "version": "1"
+            }
+          },
+          "received_quantity": {
+            "value": "3",
+            "unit": "panel",
+            "basis_ref": {
+              "kind": "Evidence",
+              "id": "synthetic-receiving-basis",
+              "version": "1"
+            }
+          },
+          "damaged_quantity": {
+            "value": "1",
+            "unit": "panel",
+            "basis_ref": {
+              "kind": "Evidence",
+              "id": "synthetic-receiving-basis",
+              "version": "1"
+            }
+          },
+          "rejected_quantity": {
+            "value": "0",
+            "unit": "panel",
+            "basis_ref": {
+              "kind": "Evidence",
+              "id": "synthetic-receiving-basis",
+              "version": "1"
+            }
+          },
+          "quarantined_quantity": {
+            "value": "1",
+            "unit": "panel",
+            "basis_ref": {
+              "kind": "Evidence",
+              "id": "synthetic-receiving-basis",
+              "version": "1"
+            }
+          },
+          "usable_quantity": {
+            "value": "2",
+            "unit": "panel",
+            "basis_ref": {
+              "kind": "Evidence",
+              "id": "synthetic-receiving-basis",
+              "version": "1"
+            }
+          },
+          "specification_matches": {
+            "state": "known",
+            "value": true
+          },
+          "status": "short",
+          "inspection_refs": [
+            {
+              "kind": "InspectionResult",
+              "id": "independent-partial-goods-check",
+              "version": "1"
+            }
+          ],
+          "use_release_refs": [
+            {
+              "kind": "GoodsUseRelease",
+              "id": "two-panel-installation-release",
+              "version": "1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "remaining_requirements": [
+    "Explicitly execute original A09 and save real offline identity/record/audit/source digest before assembling Contractor connection.",
+    "Independently declared current Contractor inventory/native mapping and same-run source registration; no zero/fake provenance digests.",
+    "All A09 branches/CHECKs, actual upstream transport/receiving chain and full PLAN validation."
+  ],
+  "limitations": "Chronological synthetic input only; original saved journal results, professional/native effects, upstream order/plan/task provenance and full V4 execution remain unproven."
+}

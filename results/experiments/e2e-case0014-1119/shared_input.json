@@ -1,0 +1,605 @@
+{
+  "schema_version": "1.0",
+  "companies": [
+    {
+      "company_id": "OWNER-4048bdd520aa7f",
+      "company_name": "澳门特别行政区政府公共建设局",
+      "company_role": "owner",
+      "profile": "项目输入中的业主；具体采购行为由组织成员讨论。",
+      "strengths": [],
+      "weaknesses": [],
+      "qualifications": [],
+      "past_project_experience": [],
+      "capacity": "见情景参数",
+      "risk_signals": [],
+      "eligible_packages": []
+    },
+    {
+      "company_id": "COMP-0169",
+      "company_name": "中国建筑第五工程局有限公司",
+      "company_role": "designer",
+      "profile": "本地企业资料：承接建筑工程、公路、铁路、市政公用、港口与航道、水利水电、机电安装各类别工程的施工总承包、工程总承包和项目管理业务；承担房屋建筑、机电安装、钢结构、道路桥梁、隧道、地基基础、起重设备安装、建筑装修装饰、环保工程、城市轨道交通工程、市政公用工程、高等级公路路基、公路路面的施工；建筑行业（建筑工程）、市政行业、公路行业工程设计；工程造价咨询业务；工程管理服务；规划设计管理；建设工程勘察；园林绿化工程施工；爆破作业；提供建设工程相关的技术服务。（依法须经批准的项目，经相关部门批准后方可开展经营活动）。本次为情景试运行，不复现历史中标结果。",
+      "strengths": [],
+      "weaknesses": [],
+      "qualifications": [],
+      "past_project_experience": [],
+      "capacity": "以授权情景资源为准",
+      "risk_signals": [],
+      "eligible_packages": []
+    },
+    {
+      "company_id": "COMP-0295",
+      "company_name": "江苏乾堪建设工程有限公司",
+      "company_role": "designer",
+      "profile": "本地企业资料：市政工程、园林建筑工程、绿化工程、仿古建筑工程、古典建筑工程、土石方工程、道路亮化工程、水利水电工程、建筑幕墙工程、公路工程、文物保护修缮工程、建筑装饰工程、房屋建筑工程、室内外装潢装饰工程设计及施工；花卉、苗木、盆景种植及销售；雕塑、喷泉设备销售、安装；五金产品、交通器材、电子产品、建筑材料（除危险品）、装潢材料（除危险品）、金属材料销售；园林设计；绿化养护。（依法须经批准的项目，经相关部门批准后方可开展经营活动。）。本次为情景试运行，不复现历史中标结果。",
+      "strengths": [],
+      "weaknesses": [],
+      "qualifications": [],
+      "past_project_experience": [],
+      "capacity": "以授权情景资源为准",
+      "risk_signals": [],
+      "eligible_packages": []
+    },
+    {
+      "company_id": "COMP-0286",
+      "company_name": "招商局重庆交通科研设计院有限公司",
+      "company_role": "supervisor",
+      "profile": "本地企业资料：一般项目：从事公路与城市市政道路、桥梁、隧道、交通工程、公路客车及专用车、汽车运用、环保与节能、计算机应用领域的科学研究、技术开发、技术转让、技术咨询服务。（以下经营范围凭相关资质证书执业）公路行业设计甲级，市政行业（道路工程、桥梁工程、城市隧道工程）设计甲级，市政行业（燃气、轨道交通除外）设计乙级，建筑行业（建筑工程）设计乙级，风景园林工程设计专项甲级，工程勘察综合类甲级，工程咨询：公路专业甲级，工程咨询：市政公用工程（市政交通）专业甲级，建设项目环境影响评价（甲级），水土保持方案编制（四星级），地质灾害治理工程施工（乙级），公路工程试验检测综合甲级，公路工程桥梁隧道工程专项试验检测。承包与其实力、规模、业绩相适应的国外工程项目，生产、销售建筑材料（不含危险化学品），仪器仪表、普通机械设备开发、生产、销售与安装（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）。本次为情景试运行，不复现历史中标结果。",
+      "strengths": [],
+      "weaknesses": [],
+      "qualifications": [],
+      "past_project_experience": [],
+      "capacity": "以授权情景资源为准",
+      "risk_signals": [],
+      "eligible_packages": []
+    },
+    {
+      "company_id": "COMP-0208",
+      "company_name": "中铁武汉大桥工程咨询监理有限公司",
+      "company_role": "supervisor",
+      "profile": "本地企业资料：工程监理；工程测量；工程试验检测；市政基础设施工程：一类（道路、桥梁工程、轨道交通勘察）施工图审查；工程代建、工程项目管理；工程招标代理、工程造价咨询服务、工程咨询及技术咨询服务。（涉及许可经营项目，应取得相关部门许可后方可经营）。本次为情景试运行，不复现历史中标结果。",
+      "strengths": [],
+      "weaknesses": [],
+      "qualifications": [],
+      "past_project_experience": [],
+      "capacity": "以授权情景资源为准",
+      "risk_signals": [],
+      "eligible_packages": []
+    },
+    {
+      "company_id": "COMP-0153",
+      "company_name": "中交第一航务工程局有限公司",
+      "company_role": "contractor",
+      "profile": "本地企业资料：许可项目：建设工程施工；建设工程设计；建设工程勘察；施工专业作业；预应力混凝土铁路桥梁简支梁产品生产；特种设备安装改造修理；国内船舶管理业务；船舶改装；船舶修理；船舶制造；输电、供电、受电电力设施的安装、维修和试验。第三类医疗器械经营；II、III类射线装置销售。（依法须经批准的项目，经相关部门批准后方可开展经营活动，具体经营项目以相关部门批准文件或许可证件为准）一般项目：对外承包工程；海洋环境服务；海洋服务；工程管理服务；渔港渔船泊位建设；海底管道运输服务；园林绿化工程施工；城市绿化管理；环境保护监测；水污染治理；污水处理及其再生利用；水环境污染防治服务；土地整治服务；土壤污染治理与修复服务；土壤环境污染防治服务；生态恢复及生态保护服务；工程和技术研究和试验发展；基础地质勘查；技术服务、技术开发、技术咨询、技术交流、技术转让、技术推广；技术进出口；货物进出口；进出口代理；土石方工程施工；建筑用石加工；交通设施维修；普通机械设备安装服务；电子、机械设备维护（不含特种设备）；砼结构构件制造；海上风电相关系统研发；风力发电技术服务；信息技术咨询服务；信息系统集成服务；咨询策划服务；船舶自动化、检测、监控系统制造；建筑用金属配件制造；金属结构制造；普通货物仓储服务（不含危险化学品等需许可审批的项目）；电气设备销售；机械电气设备销售；机械设备销售；建筑材料销售；非居住房地产租赁；住房租赁；金属材料销售；港口设施设备和机械租赁维修业务；运输设备租赁服务；建筑工程机械与设备租赁；机械设备租赁；第一类医疗器械销售；第二类医疗器械销售。（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）。本次为情景试运行，不复现历史中标结果。",
+      "strengths": [],
+      "weaknesses": [],
+      "qualifications": [],
+      "past_project_experience": [],
+      "capacity": "以授权情景资源为准",
+      "risk_signals": [],
+      "eligible_packages": []
+    },
+    {
+      "company_id": "COMP-0493",
+      "company_name": "得宝建筑集团有限公司",
+      "company_role": "contractor",
+      "profile": "本地企业资料：总承包、设计与建造、施工前咨询、项目及施工管理、房地产开发；涵盖建筑、综合体、商业、住宅、博彩酒店、公共机构、室内、休闲设施、基础设施/土木、轻轨、土方、地基、地下工程、道路桥梁、填海、海事、给排水和环保项目。本次为情景试运行，不复现历史中标结果。",
+      "strengths": [],
+      "weaknesses": [],
+      "qualifications": [
+        "ISO 9001质量管理体系、ISO 14001环境管理体系、ISO 45001职业健康安全管理体系认证"
+      ],
+      "past_project_experience": [],
+      "capacity": "以授权情景资源为准",
+      "risk_signals": [],
+      "eligible_packages": []
+    },
+    {
+      "company_id": "COMP-0494",
+      "company_name": "得寶國際-得寶建築合作經營",
+      "company_role": "contractor",
+      "profile": "本地企业资料：总承包、设计与建造、施工前咨询、项目及施工管理、房地产开发；涵盖建筑、综合体、商业、住宅、博彩酒店、公共机构、室内、休闲设施、基础设施/土木、轻轨、土方、地基、地下工程、道路桥梁、填海、海事、给排水和环保项目。本次为情景试运行，不复现历史中标结果。",
+      "strengths": [],
+      "weaknesses": [],
+      "qualifications": [
+        "ISO 9001质量管理体系、ISO 14001环境管理体系、ISO 45001职业健康安全管理体系认证"
+      ],
+      "past_project_experience": [],
+      "capacity": "以授权情景资源为准",
+      "risk_signals": [],
+      "eligible_packages": []
+    },
+    {
+      "company_id": "COMP-0191",
+      "company_name": "中建八局第二建设有限公司",
+      "company_role": "supplier",
+      "profile": "本地企业资料：许可项目：建设工程施工；施工专业作业；建设工程设计；住宅室内装饰装修；建设工程质量检测；建设工程勘察；建筑劳务分包；人防工程设计；特种设备安装改造修理；电气安装服务；预应力混凝土铁路桥梁简支梁产品生产；地质灾害治理工程施工；民用核安全设备设计；民用核安全设备安装；输电、供电、受电电力设施的安装、维修和试验；水利工程质量检测；文物保护工程施工；文物保护工程设计；文物保护工程勘察；建筑物拆除作业（爆破作业除外）；检验检测服务；认证服务；第三类医疗器械经营；医疗器械互联网信息服务；特种设备制造；特种设备设计；城市生活垃圾经营性服务；公路管理与养护；路基路面养护作业。（依法须经批准的项目，经相关部门批准后方可开展经营活动，具体经营项目以相关部门批准文件或许可证件为准）一般项目：工程管理服务；规划设计管理；建筑工程机械与设备租赁；普通机械设备安装服务；安全技术防范系统设计施工服务；砼结构构件制造；砼结构构件销售；门窗制造加工；门窗销售；金属门窗工程施工；建筑砌块制造；建筑砌块销售；新型建筑材料制造（不含危险化学品）；水泥制品销售；工程技术服务（规划管理、勘察、设计、监理除外）；技术服务、技术开发、技术咨询、技术交流、技术转让、技术推广；专业设计服务；工程造价咨询业务；园林绿化工程施工；对外承包工程；土石方工程施工；水污染治理；水环境污染防治服务；土壤污染治理与修复服务；土壤环境污染防治服务；生态恢复及生态保护服务；环保咨询服务；人工造林；机械设备研发；工业机器人销售；智能机器人的研发；金属制品研发；金属结构制造；金属结构销售；软件开发；软件销售；大数据服务；信息系统集成服务；互联网销售（除销售需要许可的商品）；人工智能应用软件开发；数据处理服务；数据处理和存储支持服务；云计算装备技术服务；物联网技术研发；物联网应用服务；物联网设备销售；5G通信技术服务；集成电路设计；电子产品销售；数字文化创意软件开发；数字文化创意内容应用服务；数字内容制作服务（不含出版发行）；会议及展览服务；建筑材料销售；公路水运工程试验检测服务；特种设备销售；建筑工程用机械销售；城市绿化管理；电气设备修理；新兴能源技术研发；科技中介服务；合同能源管理；计算机系统服务；运行效能评估服务；信息技术咨询服务；认证咨询；网络技术服务；第一类医疗器械销售；第二类医疗器械销售；实验分析仪器销售；仪器仪表修理；市政设施管理；城乡市容管理；交通设施维修；停车场服务；商业综合体管理服务；城市公园管理；园区管理服务；环境卫生公共设施安装服务。（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）。本次为情景试运行，不复现历史中标结果。",
+      "strengths": [],
+      "weaknesses": [],
+      "qualifications": [],
+      "past_project_experience": [],
+      "capacity": "以授权情景资源为准",
+      "risk_signals": [],
+      "eligible_packages": []
+    },
+    {
+      "company_id": "COMP-0154",
+      "company_name": "中交第二公路工程局有限公司",
+      "company_role": "supplier",
+      "profile": "本地企业资料：一般项目：对外承包工程；土石方工程施工；体育场地设施工程施工；金属门窗工程施工；砼结构构件制造（仅限分支机构经营）；水泥制品制造（仅限分支机构经营）；建筑砌块制造（仅限分支机构经营）；金属结构制造（仅限分支机构经营）；园林绿化工程施工；普通机械设备安装服务；人力资源服务（不含职业中介活动、劳务派遣服务）；教育咨询服务（不含涉许可审批的教育培训活动）；砼结构构件销售；货物进出口；技术进出口；进出口代理；地质勘查技术服务；机械设备租赁；工程和技术研究和试验发展；信息技术咨询服务；物业管理；土地使用权租赁；非居住房地产租赁；工程管理服务；工程造价咨询业务；专业设计服务；技术服务、技术开发、技术咨询、技术交流、技术转让、技术推广；公路水运工程试验检测服务；新材料技术推广服务；新材料技术研发；防洪除涝设施管理；水文服务；水土流失防治服务；规划设计管理；水利相关咨询服务；水污染治理；水环境污染防治服务；大气污染治理；大气环境污染防治服务；固体废物治理；土壤污染治理与修复服务；土壤环境污染防治服务；地质灾害治理服务；生态恢复及生态保护服务；环境应急治理服务；市政设施管理；城市绿化管理；城市公园管理；环境卫生公共设施安装服务；土地整治服务；土地调查评估服务；网络与信息安全软件开发；计算机系统服务；网络技术服务；软件开发；非金属矿物制品制造（仅限分支机构经营）；新型建筑材料制造（不含危险化学品）（仅限分支机构经营）；轻质建筑材料制造（仅限分支机构经营）；人工造林；森林固碳服务；建筑用石加工（仅限分支机构经营）；矿物洗选加工（仅限分支机构经营）；建筑砌块销售；建筑材料销售；仓储设备租赁服务；道路货物运输站经营；园区管理服务；机械设备研发。（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）许可项目：建设工程施工；建筑劳务分包；施工专业作业；文物保护工程施工；地质灾害治理工程施工；住宅室内装饰装修；公路管理与养护；建筑物拆除作业（爆破作业除外）；建筑智能化系统设计；测绘服务；安全生产检验检测；建设工程监理；公路工程监理；水利工程建设监理；建设工程勘察；地质灾害治理工程勘查；建设工程设计；建设工程质量检测；水利工程质量检测；预应力混凝土铁路桥梁简支梁产品生产（仅限分支机构经营）；电气安装服务；河道采砂；城市建筑垃圾处置（清运）；燃气燃烧器具安装、维修；输电、供电、受电电力设施的安装、维修和试验；非煤矿山矿产资源开采；特种设备安装改造修理；人防工程设计。（依法须经批准的项目，经相关部门批准后方可开展经营活动，具体经营项目以审批结果为准）。本次为情景试运行，不复现历史中标结果。",
+      "strengths": [],
+      "weaknesses": [],
+      "qualifications": [],
+      "past_project_experience": [],
+      "capacity": "以授权情景资源为准",
+      "risk_signals": [],
+      "eligible_packages": []
+    }
+  ],
+  "projects": [
+    {
+      "project_id": "CASE-0014",
+      "name": "氹仔污水厂排放管改道及周边平整工程",
+      "owner_id": "OWNER-4048bdd520aa7f",
+      "region": "Macau",
+      "project_type": "infrastructure",
+      "scope": "市政与公共基础设施；；氹仔污水厂排放管改道及周边平整工程",
+      "budget": 150000000,
+      "currency": "MOP",
+      "duration_months": 24,
+      "delivery_mode": "DBB"
+    }
+  ],
+  "packages": [
+    {
+      "package_id": "CASE-0014/design",
+      "project_id": "CASE-0014",
+      "kind": "design",
+      "buyer_id": "OWNER-4048bdd520aa7f",
+      "name": "总体及施工图设计与现场设计配合",
+      "scope": "总体及施工图设计与现场设计配合",
+      "budget": 4500000.0,
+      "currency": "MOP",
+      "resource_required": 0.25,
+      "depends_on": [],
+      "cost_inclusion": "owner_additional",
+      "parent_package_id": null,
+      "candidate_ids": [
+        "COMP-0169",
+        "COMP-0295"
+      ]
+    },
+    {
+      "package_id": "CASE-0014/cost",
+      "project_id": "CASE-0014",
+      "kind": "cost_consulting",
+      "buyer_id": "OWNER-4048bdd520aa7f",
+      "name": "造价咨询与合同成本管理",
+      "scope": "造价咨询与合同成本管理",
+      "budget": 2250000.0,
+      "currency": "MOP",
+      "resource_required": 0.25,
+      "depends_on": [],
+      "cost_inclusion": "owner_additional",
+      "parent_package_id": null,
+      "candidate_ids": [
+        "COMP-0286",
+        "COMP-0208"
+      ]
+    },
+    {
+      "package_id": "CASE-0014/construction-1",
+      "project_id": "CASE-0014",
+      "kind": "construction",
+      "buyer_id": "OWNER-4048bdd520aa7f",
+      "name": "排放管改道及附属构筑物施工包",
+      "scope": "氹仔污水厂排放管改道主体工程：旧管拆除与封堵、新排放管敷设与接口、检查井与附属构筑物、管道试压与通水调试，以及本包范围内的临时排水与施工围挡。不含厂区周边大面积平整与永久道路。",
+      "budget": 70125000.0,
+      "currency": "MOP",
+      "resource_required": 0.7,
+      "depends_on": [
+        "CASE-0014/design",
+        "CASE-0014/cost"
+      ],
+      "cost_inclusion": "owner_additional",
+      "parent_package_id": null,
+      "candidate_ids": [
+        "COMP-0153",
+        "COMP-0493",
+        "COMP-0494"
+      ]
+    },
+    {
+      "package_id": "CASE-0014/supply-1",
+      "project_id": "CASE-0014",
+      "kind": "supply",
+      "buyer_id": "$construction_lead",
+      "name": "排放管改道及附属构筑物施工包材料采购",
+      "scope": "仅为施工包「排放管改道及附属构筑物施工包」供应其施工所需的材料与构配件：供货、运输到场、质量证明文件和质保期内的更换。不含任何施工、安装、临时工程或措施费，也不承担施工界面责任。材料费用已包含在该施工包的合同价内，由该施工包的承包商作为买方支付。该施工包的工作内容（仅用于判断所需材料，不属于本包工作）：氹仔污水厂排放管改道主体工程：旧管拆除与封堵、新排放管敷设与接口、检查井与附属构筑物、管道试压与通水调试，以及本包范围内的临时排水与施工围挡。不含厂区周边大面积平整与永久道路。",
+      "budget": 19635000.0,
+      "currency": "MOP",
+      "resource_required": 0.25,
+      "depends_on": [
+        "CASE-0014/construction-1"
+      ],
+      "cost_inclusion": "included_in_parent",
+      "parent_package_id": "CASE-0014/construction-1",
+      "candidate_ids": [
+        "COMP-0191",
+        "COMP-0154"
+      ]
+    },
+    {
+      "package_id": "CASE-0014/construction-2",
+      "project_id": "CASE-0014",
+      "kind": "construction",
+      "buyer_id": "OWNER-4048bdd520aa7f",
+      "name": "周边平整及临时交通改道施工包",
+      "scope": "厂区周边场地平整、土方开挖与调配、永久道路与排水沟恢复、施工期临时交通改道与临时道路维护。不含排放管本体敷设及其附属构筑物。",
+      "budget": 57375000.0,
+      "currency": "MOP",
+      "resource_required": 0.7,
+      "depends_on": [
+        "CASE-0014/design",
+        "CASE-0014/cost"
+      ],
+      "cost_inclusion": "owner_additional",
+      "parent_package_id": null,
+      "candidate_ids": [
+        "COMP-0153",
+        "COMP-0493",
+        "COMP-0494"
+      ]
+    },
+    {
+      "package_id": "CASE-0014/supply-2",
+      "project_id": "CASE-0014",
+      "kind": "supply",
+      "buyer_id": "$construction_lead",
+      "name": "周边平整及临时交通改道施工包材料采购",
+      "scope": "仅为施工包「周边平整及临时交通改道施工包」供应其施工所需的材料与构配件：供货、运输到场、质量证明文件和质保期内的更换。不含任何施工、安装、临时工程或措施费，也不承担施工界面责任。材料费用已包含在该施工包的合同价内，由该施工包的承包商作为买方支付。该施工包的工作内容（仅用于判断所需材料，不属于本包工作）：厂区周边场地平整、土方开挖与调配、永久道路与排水沟恢复、施工期临时交通改道与临时道路维护。不含排放管本体敷设及其附属构筑物。",
+      "budget": 16065000.0,
+      "currency": "MOP",
+      "resource_required": 0.25,
+      "depends_on": [
+        "CASE-0014/construction-2"
+      ],
+      "cost_inclusion": "included_in_parent",
+      "parent_package_id": "CASE-0014/construction-2",
+      "candidate_ids": [
+        "COMP-0191",
+        "COMP-0154"
+      ]
+    }
+  ],
+  "environment": {},
+  "policy": {},
+  "assumptions": {
+    "version": "shared-dbb-scenario-20260920-v2",
+    "source_note": "真实项目/企业基本描述 + 明示情景预算、工期、角色资格和数值能力；不代表真实企业能力估计，也不是历史采购回放。",
+    "catalog": {
+      "source": "/home/fish/Documents/xmt/capstone-micro-macro/data/test_sources/casebank_enterprise_matched",
+      "project_count": 352,
+      "company_count": 904,
+      "project_fields": [
+        "case_id",
+        "project_name",
+        "project_type",
+        "location",
+        "delivery_mode",
+        "owner_name",
+        "scale"
+      ],
+      "company_fields": [
+        "company_id",
+        "company_name",
+        "office_location",
+        "business_scope",
+        "industry",
+        "certifications"
+      ],
+      "excluded": [
+        "hidden_benchmark",
+        "candidate_assignments",
+        "past_project_experience",
+        "partners_or_clients",
+        "investment_amount",
+        "reserve_price_hint",
+        "evaluation_criteria_hint"
+      ],
+      "input_version": "1c9b4773a95c3f7d108f306527ca499fb6f64fa28716aa50a822bd2da9abd044",
+      "source_sha256": {
+        "simulation_input_projects.csv": "c582892343cbadaff2dac39106a974508bc9f596e0e7a5ef9a40b404fb7e551b",
+        "simulation_input_enterprises.csv": "adda7da9a8c5a41face0ae80da6e42135fdf4c56c9790c5769d767041c74318c"
+      }
+    },
+    "candidate_selection": {
+      "COMP-0169": {
+        "source_id": "COMP-0169",
+        "scenario_role": "designer",
+        "role_evidence": [
+          "工程设计"
+        ],
+        "source_region": "湖南省长沙市雨花区",
+        "selection": "input_fields_only_no_benchmark"
+      },
+      "COMP-0295": {
+        "source_id": "COMP-0295",
+        "scenario_role": "designer",
+        "role_evidence": [
+          "工程设计"
+        ],
+        "source_region": "江苏省常州市武进区",
+        "selection": "input_fields_only_no_benchmark"
+      },
+      "COMP-0286": {
+        "source_id": "COMP-0286",
+        "scenario_role": "supervisor",
+        "role_evidence": [
+          "工程咨询"
+        ],
+        "source_region": "重庆市市辖区南岸区",
+        "selection": "input_fields_only_no_benchmark"
+      },
+      "COMP-0208": {
+        "source_id": "COMP-0208",
+        "scenario_role": "supervisor",
+        "role_evidence": [
+          "造价",
+          "工程咨询",
+          "监理"
+        ],
+        "source_region": "湖北省武汉市蔡甸区",
+        "selection": "input_fields_only_no_benchmark"
+      },
+      "COMP-0153": {
+        "source_id": "COMP-0153",
+        "scenario_role": "contractor",
+        "role_evidence": [
+          "工程施工",
+          "建筑工程",
+          "建设工程",
+          "土木",
+          "路桥"
+        ],
+        "source_region": "天津市市辖区滨海新区",
+        "selection": "input_fields_only_no_benchmark"
+      },
+      "COMP-0493": {
+        "source_id": "COMP-0493",
+        "scenario_role": "contractor",
+        "role_evidence": [
+          "建筑工程",
+          "土木",
+          "建筑集团",
+          "路桥"
+        ],
+        "source_region": "澳门/香港",
+        "selection": "input_fields_only_no_benchmark"
+      },
+      "COMP-0494": {
+        "source_id": "COMP-0494",
+        "scenario_role": "contractor",
+        "role_evidence": [
+          "工程施工",
+          "建筑工程",
+          "土木",
+          "路桥"
+        ],
+        "source_region": "澳门",
+        "selection": "input_fields_only_no_benchmark"
+      },
+      "COMP-0191": {
+        "source_id": "COMP-0191",
+        "scenario_role": "supplier",
+        "role_evidence": [
+          "混凝土",
+          "水泥",
+          "建筑材料"
+        ],
+        "source_region": "山东省济南市历下区",
+        "selection": "input_fields_only_no_benchmark"
+      },
+      "COMP-0154": {
+        "source_id": "COMP-0154",
+        "scenario_role": "supplier",
+        "role_evidence": [
+          "混凝土",
+          "水泥",
+          "建筑材料"
+        ],
+        "source_region": "陕西省西安市雁塔区",
+        "selection": "input_fields_only_no_benchmark"
+      }
+    },
+    "eligibility": "本次机制情景允许列出的候选以所分配角色独立投标或联合投标；不以缺失历史资质字段推断实际资格。企业仍可基于商业判断拒绝。",
+    "units": {
+      "resource": "normalized_enterprise_capacity",
+      "time": "months",
+      "currency": "MOP"
+    },
+    "enterprise_parameters": {
+      "OWNER-4048bdd520aa7f": {
+        "total_resource_capacity": 2.0,
+        "qualification_level": 0.85,
+        "financial_capacity": 0.8,
+        "technical_capability": 0.8,
+        "management_capability": 0.8,
+        "design_capability": 0.8,
+        "cost_estimation_capability": 0.8,
+        "construction_capability": 0.8,
+        "safety_management_capability": 0.8,
+        "quality_management_capability": 0.8,
+        "supply_reliability": 0.8,
+        "material_quality": 0.8,
+        "policy_adaptability": 0.8
+      },
+      "COMP-0169": {
+        "total_resource_capacity": 2.0,
+        "qualification_level": 0.85,
+        "financial_capacity": 0.8,
+        "technical_capability": 0.8,
+        "management_capability": 0.8,
+        "design_capability": 0.8,
+        "cost_estimation_capability": 0.8,
+        "construction_capability": 0.8,
+        "safety_management_capability": 0.8,
+        "quality_management_capability": 0.8,
+        "supply_reliability": 0.8,
+        "material_quality": 0.8,
+        "policy_adaptability": 0.8
+      },
+      "COMP-0295": {
+        "total_resource_capacity": 2.0,
+        "qualification_level": 0.85,
+        "financial_capacity": 0.8,
+        "technical_capability": 0.8,
+        "management_capability": 0.8,
+        "design_capability": 0.8,
+        "cost_estimation_capability": 0.8,
+        "construction_capability": 0.8,
+        "safety_management_capability": 0.8,
+        "quality_management_capability": 0.8,
+        "supply_reliability": 0.8,
+        "material_quality": 0.8,
+        "policy_adaptability": 0.8
+      },
+      "COMP-0286": {
+        "total_resource_capacity": 2.0,
+        "qualification_level": 0.85,
+        "financial_capacity": 0.8,
+        "technical_capability": 0.8,
+        "management_capability": 0.8,
+        "design_capability": 0.8,
+        "cost_estimation_capability": 0.8,
+        "construction_capability": 0.8,
+        "safety_management_capability": 0.8,
+        "quality_management_capability": 0.8,
+        "supply_reliability": 0.8,
+        "material_quality": 0.8,
+        "policy_adaptability": 0.8
+      },
+      "COMP-0208": {
+        "total_resource_capacity": 2.0,
+        "qualification_level": 0.85,
+        "financial_capacity": 0.8,
+        "technical_capability": 0.8,
+        "management_capability": 0.8,
+        "design_capability": 0.8,
+        "cost_estimation_capability": 0.8,
+        "construction_capability": 0.8,
+        "safety_management_capability": 0.8,
+        "quality_management_capability": 0.8,
+        "supply_reliability": 0.8,
+        "material_quality": 0.8,
+        "policy_adaptability": 0.8
+      },
+      "COMP-0153": {
+        "total_resource_capacity": 2.0,
+        "qualification_level": 0.85,
+        "financial_capacity": 0.8,
+        "technical_capability": 0.8,
+        "management_capability": 0.8,
+        "design_capability": 0.8,
+        "cost_estimation_capability": 0.8,
+        "construction_capability": 0.8,
+        "safety_management_capability": 0.8,
+        "quality_management_capability": 0.8,
+        "supply_reliability": 0.8,
+        "material_quality": 0.8,
+        "policy_adaptability": 0.8
+      },
+      "COMP-0493": {
+        "total_resource_capacity": 2.0,
+        "qualification_level": 0.85,
+        "financial_capacity": 0.8,
+        "technical_capability": 0.8,
+        "management_capability": 0.8,
+        "design_capability": 0.8,
+        "cost_estimation_capability": 0.8,
+        "construction_capability": 0.8,
+        "safety_management_capability": 0.8,
+        "quality_management_capability": 0.8,
+        "supply_reliability": 0.8,
+        "material_quality": 0.8,
+        "policy_adaptability": 0.8
+      },
+      "COMP-0494": {
+        "total_resource_capacity": 2.0,
+        "qualification_level": 0.85,
+        "financial_capacity": 0.8,
+        "technical_capability": 0.8,
+        "management_capability": 0.8,
+        "design_capability": 0.8,
+        "cost_estimation_capability": 0.8,
+        "construction_capability": 0.8,
+        "safety_management_capability": 0.8,
+        "quality_management_capability": 0.8,
+        "supply_reliability": 0.8,
+        "material_quality": 0.8,
+        "policy_adaptability": 0.8
+      },
+      "COMP-0191": {
+        "total_resource_capacity": 2.0,
+        "qualification_level": 0.85,
+        "financial_capacity": 0.8,
+        "technical_capability": 0.8,
+        "management_capability": 0.8,
+        "design_capability": 0.8,
+        "cost_estimation_capability": 0.8,
+        "construction_capability": 0.8,
+        "safety_management_capability": 0.8,
+        "quality_management_capability": 0.8,
+        "supply_reliability": 0.8,
+        "material_quality": 0.8,
+        "policy_adaptability": 0.8
+      },
+      "COMP-0154": {
+        "total_resource_capacity": 2.0,
+        "qualification_level": 0.85,
+        "financial_capacity": 0.8,
+        "technical_capability": 0.8,
+        "management_capability": 0.8,
+        "design_capability": 0.8,
+        "cost_estimation_capability": 0.8,
+        "construction_capability": 0.8,
+        "safety_management_capability": 0.8,
+        "quality_management_capability": 0.8,
+        "supply_reliability": 0.8,
+        "material_quality": 0.8,
+        "policy_adaptability": 0.8
+      }
+    },
+    "enterprise_regions": {
+      "OWNER-4048bdd520aa7f": "Macau",
+      "COMP-0169": "Macau",
+      "COMP-0295": "Macau",
+      "COMP-0286": "Macau",
+      "COMP-0208": "Macau",
+      "COMP-0153": "Macau",
+      "COMP-0493": "Macau",
+      "COMP-0494": "Macau",
+      "COMP-0191": "Macau",
+      "COMP-0154": "Macau"
+    },
+    "support_agents": [
+      {
+        "agent_id": "REGULATOR-Macau",
+        "name": "Scenario regulator",
+        "role": "Government",
+        "enterprise_type": "scenario_support",
+        "region": "Macau",
+        "total_resource_capacity": 3,
+        "policy_adaptability": 0.9
+      }
+    ],
+    "budget_origin": "scenario_assumption_not_observed_cost",
+    "duration_origin": "scenario_assumption_not_observed_duration",
+    "procurement_plan": {
+      "source": "owner_organization_model_proposal",
+      "reason": "按业主成员讨论，排放管改道与周边平整在临时排水、交通改道和土方平衡上交叉最密，界面不清会导致重复计价与接口责任真空。故按空间与工序切为两个并行施工包：管道包承担管本体及附属构筑物，平整包承担场地平整、永久道路与临时交通改道，土方调配与临时设施各归其一，避免重叠计价。两包合计占施工总预算 85% 的 100%，即各占总预算 46.75% 与 38.25%。首轮仅设两个包以控制现场协调成本；若设计方后续包界面与工程量清单对应说明显示工作量或专业跨度需要，再论证拆分第三包。设计 3%、造价 1.5%、施工 85%、业主预备金 10.5% 的比例保持不变。",
+      "base_data_version": "29a9365f9b2b8810b54ef033694d3f9c8dabfe85755fd8022a23ba3a52cb793c",
+      "numeric_approval": "DBB structure and budget/dependency validation"
+    }
+  }
+}

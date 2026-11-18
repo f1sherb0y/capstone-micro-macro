@@ -1,0 +1,10 @@
+{
+  "role": "QS", "version": "1", "strategy": "organization_discussion",
+  "source": "zwtnew/04_roles/04_roles/qs.md",
+  "members": [
+    {"member_id": "quantity", "name": "Quantity Reviewer", "functions": ["quantity_review"], "responsibilities": ["Check scope, quantity basis and measurement method evidence"]},
+    {"member_id": "cost", "name": "Cost Reviewer", "functions": ["cost_comparison"], "responsibilities": ["Review comparable price sources, currencies and uncertainty"]},
+    {"member_id": "contract", "name": "Contract Reviewer", "functions": ["valuation_review", "appointment_review"], "responsibilities": ["Separate valuation, certification authority, fee claims and payment receipts"]}
+  ],
+  "tool_ids": []
+}

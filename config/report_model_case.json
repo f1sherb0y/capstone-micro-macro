@@ -1,0 +1,20 @@
+{
+  "schema_version": "report-model-case.v1",
+  "run_id": "report-model-case-20261025-02",
+  "with_feedback": true,
+  "model_options": {
+    "strategy": "single_agent",
+    "provider": "deepseek",
+    "model": "deepseek-v4-flash",
+    "alternate_markup_fraction": "0.2",
+    "max_calls": 3,
+    "max_prompt_chars": 300000
+  },
+  "original_markup_fraction": "0.1",
+  "batch_attempt_limit": 4,
+  "prior_failed_attempts_charged": 1,
+  "first_failed_run": "output/integration/report_model_case_20261025_01",
+  "successful_run": "output/integration/report_model_case_20261025_02",
+  "scope": "One synthetic three-tick tender window using live model selection between independently declared pricing policies, original macro submission and later own feedback consumption. No award, full lifecycle or strategy superiority claim.",
+  "stop_rule": "Preserve every started request and failure. No SDK retries, automatic offline fallback, unknown-submission replay or automatic budget increase."
+}

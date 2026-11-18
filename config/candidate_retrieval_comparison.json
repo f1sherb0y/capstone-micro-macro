@@ -1,0 +1,11 @@
+{
+  "description": "Exploratory retrieval audit; no model calls or macro runs. Freeze inputs before reading labels.",
+  "development_ids": ["CASE-0001", "CASE-0003", "CASE-0005", "CASE-0006", "CASE-0007", "CASE-0010", "CASE-0012", "CASE-0014", "CASE-0019"],
+  "validation_scope": "All other DBB project rows; excluded from the nine-case iteration feedback",
+  "candidate_count": 12,
+  "coverage_curve_k": [5, 10, 12, 20, 24, 50],
+  "benchmark_role": "施工/总承包",
+  "policies": ["public-project-fit.v2", "public-project-fit.v3"],
+  "main_matching": "exact company_id",
+  "normalization_note": "Traditional/simplified characters and punctuation normalization is diagnostic only. Do not merge parent, branch, subsidiary or consortium identities."
+}

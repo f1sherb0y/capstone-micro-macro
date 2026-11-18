@@ -1,0 +1,68 @@
+{
+  "schema_version": "owner-observation-fixture.v1",
+  "origin": "synthetic",
+  "assumptions": "Synthetic private owner, reported need and declared screening thresholds. No real demand, rights, project, funding or research fee is asserted.",
+  "organization_id": "owner",
+  "actor_id": "owner-actor",
+  "business_time": {"clock_ref": {"kind": "ClockProfile", "id": "fixture-clock", "version": "1"}, "offset": 10},
+  "input": {
+    "scope_ref": {"kind": "organization", "ref": {"kind": "Organization", "id": "owner", "version": "1"}, "coverage_refs": []},
+    "objective_ref": {"kind": "OwnerObjective", "id": "objective", "version": "1"},
+    "observations": [{"kind": "DemandObservation", "id": "need", "version": "1"}],
+    "opportunity_refs": [],
+    "existing_case_refs": [],
+    "capacity_ref": {"kind": "ManagementCapacity", "id": "management", "version": "1"}
+  },
+  "objects": [
+    {
+      "ref": {"kind": "Organization", "id": "owner", "version": "1"},
+      "value": {"ref": {"kind": "Organization", "id": "owner", "version": "1"}, "evidence_refs": [{"kind": "Evidence", "id": "fixture-basis", "version": "1"}]}
+    },
+    {
+      "ref": {"kind": "OwnerObjective", "id": "objective", "version": "1"},
+      "value": {
+        "ref": {"kind": "OwnerObjective", "id": "objective", "version": "1"},
+        "organization_id": "owner",
+        "template": "own_use",
+        "effective_window": {"start": {"clock_ref": {"kind": "ClockProfile", "id": "fixture-clock", "version": "1"}, "offset": 0}, "end": {"clock_ref": {"kind": "ClockProfile", "id": "fixture-clock", "version": "1"}, "offset": 100}, "bounds": "closed_open"},
+        "allowed_region_ids": {"state": "known", "value": ["HK"]},
+        "allowed_use_codes": {"state": "known", "value": ["workspace"]},
+        "signal_rules": {"state": "known", "value": [{"signal_code": "unserved_internal_need", "comparison": "at_least", "threshold": {"value": "10", "unit": "persons", "basis_ref": {"kind": "Evidence", "id": "fixture-basis", "version": "1"}}}]},
+        "maximum_observation_age": {"state": "known", "value": 5},
+        "new_signal_choice": {"state": "known", "value": "create_case"},
+        "allow_reopen": {"state": "known", "value": false},
+        "evidence_refs": [{"kind": "Evidence", "id": "fixture-basis", "version": "1"}]
+      }
+    },
+    {
+      "ref": {"kind": "DemandObservation", "id": "need", "version": "1"},
+      "value": {
+        "ref": {"kind": "DemandObservation", "id": "need", "version": "1"},
+        "source_ref": {"kind": "Observation", "id": "need-source", "version": "1"},
+        "region_id": "HK", "use_code": "workspace", "signal_code": "unserved_internal_need",
+        "measure": {"state": "known", "value": {"value": "12", "unit": "persons", "basis_ref": {"kind": "Evidence", "id": "fixture-basis", "version": "1"}}},
+        "research_permitted": {"state": "known", "value": true},
+        "observed_at": {"clock_ref": {"kind": "ClockProfile", "id": "fixture-clock", "version": "1"}, "offset": 8},
+        "learned_at": {"clock_ref": {"kind": "ClockProfile", "id": "fixture-clock", "version": "1"}, "offset": 9},
+        "effective_window": {"start": {"clock_ref": {"kind": "ClockProfile", "id": "fixture-clock", "version": "1"}, "offset": 8}, "end": {"clock_ref": {"kind": "ClockProfile", "id": "fixture-clock", "version": "1"}, "offset": 100}, "bounds": "closed_open"},
+        "evidence_refs": [{"kind": "Evidence", "id": "fixture-basis", "version": "1"}]
+      }
+    },
+    {
+      "ref": {"kind": "Observation", "id": "need-source", "version": "1"},
+      "value": {"ref": {"kind": "Observation", "id": "need-source", "version": "1"}, "demand_ref": {"kind": "DemandObservation", "id": "need", "version": "1"}, "evidence_refs": [{"kind": "Evidence", "id": "fixture-basis", "version": "1"}]}
+    },
+    {
+      "ref": {"kind": "ManagementCapacity", "id": "management", "version": "1"},
+      "value": {
+        "ref": {"kind": "ManagementCapacity", "id": "management", "version": "1"},
+        "organization_id": "owner",
+        "effective_window": {"start": {"clock_ref": {"kind": "ClockProfile", "id": "fixture-clock", "version": "1"}, "offset": 0}, "end": {"clock_ref": {"kind": "ClockProfile", "id": "fixture-clock", "version": "1"}, "offset": 100}, "bounds": "closed_open"},
+        "total": {"state": "known", "value": {"value": "3", "unit": "analyst", "basis_ref": {"kind": "Evidence", "id": "fixture-basis", "version": "1"}}},
+        "screening_requirement": {"state": "known", "value": {"value": "1", "unit": "analyst", "basis_ref": {"kind": "Evidence", "id": "fixture-basis", "version": "1"}}},
+        "commitments": [{"commitment_ref": {"kind": "ResourceCommitment", "id": "prior-analysis", "version": "1"}, "window": {"start": {"clock_ref": {"kind": "ClockProfile", "id": "fixture-clock", "version": "1"}, "offset": 0}, "end": {"clock_ref": {"kind": "ClockProfile", "id": "fixture-clock", "version": "1"}, "offset": 100}, "bounds": "closed_open"}, "quantity": {"value": "2", "unit": "analyst", "basis_ref": {"kind": "Evidence", "id": "fixture-basis", "version": "1"}}}],
+        "evidence_refs": [{"kind": "Evidence", "id": "fixture-basis", "version": "1"}]
+      }
+    }
+  ]
+}

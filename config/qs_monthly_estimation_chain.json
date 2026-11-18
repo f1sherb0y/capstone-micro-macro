@@ -1,0 +1,9 @@
+{
+  "schema_version": "qs-monthly-estimation-chain.v1",
+  "run_id": "goal3c-qs-estimation",
+  "ticks": 2,
+  "scenarios": {
+    "high": {"material_price_index": 1.2},
+    "low": {"material_price_index": 0.8}
+  }
+}

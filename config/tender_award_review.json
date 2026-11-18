@@ -1,0 +1,9 @@
+{
+  "schema_version": "tender-award-review.v1",
+  "run_id": "goal3a-tender-award-review",
+  "source_note": "Synthetic initial commercial, eligibility and authorized budget declarations; actual bids, QS results and selection must be produced by the original runtime.",
+  "scenarios": {
+    "normal": {"authorized_budget": "1000", "ticks": 8},
+    "budget_refusal": {"authorized_budget": "80", "ticks": 4}
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "schema_version": "front-to-closeout-case.v1",
+  "run_id": "front-to-closeout-20261025",
+  "ticks": 60,
+  "initial_projects": "none; only the original opportunity generator creates projects",
+  "mode": "offline",
+  "scope": "Start with actual Owner observation, proposal and investment, Bank financing, professional intake and appointment. Native later background is declared separately until connected; no all-action/model coverage claim."
+}

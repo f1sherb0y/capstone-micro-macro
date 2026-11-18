@@ -1,0 +1,27 @@
+{
+  "skill_id": "ENGINEER-A03.appointment-confirmation",
+  "skill_version": "1",
+  "action_id": "ENGINEER-A03",
+  "role": "Engineer",
+  "status": "implemented",
+  "spec_source": "zwtnew/04_roles/04_roles/engineer.md",
+  "spec_source_sha256": "fb22a164aa0032b7c274888ec2db62226c70833e079de764595c16e70829effe",
+  "skill_path": "skills/actions/engineer/ENGINEER-A03/SKILL.md",
+  "skill_sha256": "6fed328ba5f3a70991a68d1bc9d78f24252aaec182c9aeb33f7c0d612d63962a",
+  "input_schema_id": "role-contract.v1:ENGINEER-A03:input",
+  "output_schema_id": "role-contract.v1:ENGINEER-A03:payload",
+  "processor_id": "engineer.appointment_confirmation.v1",
+  "tool_ids": [],
+  "shared_refs": [
+    "skills/shared/decision-basics.md"
+  ],
+  "shared_sha256s": {"skills/shared/decision-basics.md": "77da3d2fc1683068353888daccecfabe25278bf180b593747e39505fea987e60"},
+  "prompt_sha256": "6fed328ba5f3a70991a68d1bc9d78f24252aaec182c9aeb33f7c0d612d63962a",
+  "method_refs": [
+    {
+      "kind": "Method",
+      "id": "micro.capacity.fixed_location",
+      "version": "1"
+    }
+  ]
+}

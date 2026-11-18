@@ -1,0 +1,10 @@
+{
+  "role": "Bank", "version": "1", "strategy": "organization_discussion",
+  "source": "zwtnew/04_roles/04_roles/bank.md",
+  "members": [
+    {"member_id": "intake", "name": "Application Reviewer", "functions": ["application_intake"], "responsibilities": ["Check borrower identity, application version and disclosed purpose"]},
+    {"member_id": "credit", "name": "Credit Reviewer", "functions": ["risk_review", "product_review"], "responsibilities": ["Review product applicability, authorized risk evidence and conditions"]},
+    {"member_id": "execution", "name": "Execution Reviewer", "functions": ["funding_reconciliation"], "responsibilities": ["Distinguish commitments, pending transfers, receipts and debt"]}
+  ],
+  "tool_ids": []
+}

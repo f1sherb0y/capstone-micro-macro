@@ -1,0 +1,32 @@
+{
+  "schema_version": "lifecycle-input-case.v1",
+  "scenario_id": "V2",
+  "case_id": "v2-linked-formation-accept",
+  "origin": "synthetic",
+  "run_id": "synthetic-v2-procurement-publication-01",
+  "status": "input_prepared_execution_pending",
+  "steps": [
+    {
+      "action_id": "CONTRACTOR-A04",
+      "operation_id": "v2-linked-formation-accept-01",
+      "expected_kind": "completed",
+      "expected_choice": "accept",
+      "host_factory": "integration.contractor_role_contract_host:build_role_host",
+      "invocation_path": "integration/examples/role_contract_contractor_linked_formation_invocation.json",
+      "invocation_file_sha256": "4c8e73375237e1cf7f9339456de7e578fbcddf13e92a44cf43ebd9fb49ba8726",
+      "configuration_path": "integration/examples/role_contract_contractor_linked_formation_host.json",
+      "configuration_file_sha256": "72c9b626fdf3ef4223a64513f82eac25ec4d21d35c10e19f34cf9cdd79e71431",
+      "origin_path": "integration/examples/role_contract_contractor_linked_formation_origin.json"
+    }
+  ],
+  "remaining_requirements": [
+    "Original bid/Owner acceptance and independent actual reception mapping.",
+    "Linked A04 entry execution and original cash/capacity verification.",
+    "Complete V2 and remaining PLAN acceptance."
+  ],
+  "limitations": [
+    "Native Bid/submission and Owner acceptance are independent synthetic assumed facts, not saved A02/A10 results or real reception.",
+    "Same-run identity and exact terms do not prove actual registration or independent signatures; received_award_inputs is not configured.",
+    "Original A04/cash/capacity methods and schemas have not run; expected agreement/output are metadata only."
+  ]
+}

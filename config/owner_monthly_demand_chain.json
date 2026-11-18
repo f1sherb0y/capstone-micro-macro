@@ -1,0 +1,8 @@
+{
+  "schema_version":"owner-monthly-demand-chain.v1",
+  "run_id":"goal3i-owner-monthly-demand",
+  "ticks":2,
+  "background_project_stage":"design",
+  "scenarios":{"high":{"market_demand_index":1.2},"low":{"market_demand_index":0.6}},
+  "source_note":"Only the original initial market_demand_index varies. Original OWN-A01 screens the actual simulation-global index against an independently declared private threshold, then compares the previous actually executed own analysis. This is not a local survey, concrete pipeline candidate, case/project commitment, financing-capacity review or investment-strategy publication."
+}

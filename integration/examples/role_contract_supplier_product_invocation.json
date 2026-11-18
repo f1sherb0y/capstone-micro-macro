@@ -1,0 +1,136 @@
+{
+  "schema_version": "role-contract-invocation.v1",
+  "context": {
+    "run_id": "synthetic-role-contract-supplier-product-01",
+    "actor_id": "supplier-actor",
+    "function_ref": {
+      "kind": "FunctionAssignment",
+      "id": "supplier-product",
+      "version": "1"
+    },
+    "authorization_refs": [
+      {
+        "kind": "Authorization",
+        "id": "supplier-grant",
+        "version": "1"
+      }
+    ],
+    "operation_id": "supplier-product-example-1",
+    "contract_ref": {
+      "kind": "ActionContract",
+      "id": "SUPPLIER-A02",
+      "version": "1"
+    },
+    "task_ref": {
+      "kind": "DecisionTask",
+      "id": "supplier-product-example-task",
+      "version": "1"
+    },
+    "scope": {
+      "kind": "project",
+      "ref": {
+        "kind": "Project",
+        "id": "buyer-project",
+        "version": "1"
+      },
+      "coverage_refs": [
+        {
+          "kind": "WorkScope",
+          "id": "line-1",
+          "version": "1"
+        }
+      ]
+    },
+    "business_time": {
+      "clock_ref": {
+        "kind": "ClockProfile",
+        "id": "synthetic-clock",
+        "version": "1"
+      },
+      "offset": 1
+    },
+    "read_token": "synthetic-role-contract-supplier-product-01:read-1",
+    "visible_refs": [
+      {
+        "kind": "SupplyInquiry",
+        "id": "inquiry",
+        "version": "1"
+      },
+      {
+        "kind": "Requirement",
+        "id": "line-1",
+        "version": "1"
+      },
+      {
+        "kind": "ProductSpecification",
+        "id": "panel-1",
+        "version": "1"
+      },
+      {
+        "kind": "ProductEvidence",
+        "id": "test-1",
+        "version": "1"
+      },
+      {
+        "kind": "ProductCompatibilityMethod",
+        "id": "product-method",
+        "version": "1"
+      },
+      {
+        "kind": "Evidence",
+        "id": "synthetic-basis",
+        "version": "1"
+      },
+      {
+        "kind": "Project",
+        "id": "buyer-project",
+        "version": "1"
+      },
+      {
+        "kind": "WorkScope",
+        "id": "line-1",
+        "version": "1"
+      },
+      {
+        "kind": "CandidateSet",
+        "id": "product-candidates",
+        "version": "1"
+      }
+    ],
+    "candidate_set_ref": {
+      "kind": "CandidateSet",
+      "id": "product-candidates",
+      "version": "1"
+    },
+    "execution_mode": "offline_fixture"
+  },
+  "action_input": {
+    "inquiry_ref": {
+      "kind": "SupplyInquiry",
+      "id": "inquiry",
+      "version": "1"
+    },
+    "requirement_refs": [
+      {
+        "kind": "Requirement",
+        "id": "line-1",
+        "version": "1"
+      }
+    ],
+    "design_refs": [],
+    "product_candidates": [
+      {
+        "kind": "ProductSpecification",
+        "id": "panel-1",
+        "version": "1"
+      }
+    ],
+    "compatibility_method_ref": {
+      "kind": "ProductCompatibilityMethod",
+      "id": "product-method",
+      "version": "1"
+    },
+    "design_authority_refs": []
+  },
+  "execution_path": "deterministic"
+}

@@ -1,0 +1,41 @@
+# Local-only material
+.env
+.env.*
+!.env.example
+.venv/
+.migration/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.cache/
+runs/
+research/admin/
+*.sqlite-wal
+*.sqlite-shm
+*.db-wal
+*.db-shm
+.DS_Store
+Thumbs.db
+
+# Credentials remain local in the complete collaboration repository.
+.aws/
+.ssh/
+*.pem
+*.key
+*.pfx
+credentials.json
+/vendor/gba/data/processed/agent_database.setup.lock
+
+# Historical evidence kept locally and in the full handoff repository
+# (https://github.com/XiongBT49/capstone-micro-macro); not part of this slim repository.
+/Capstone报告/
+/output/*
+!/output/integration/
+/output/integration/*
+!/output/integration/implementation_20261016_01/
+/output/integration/implementation_20261016_01/*
+# The macro demo reads this baseline (integration/verify_goal3_minimal_native_fix.py).
+!/output/integration/implementation_20261016_01/macro_baseline.json
+/validation/benchmark_ge3_compact/
+/reports/template/
+.env.prev

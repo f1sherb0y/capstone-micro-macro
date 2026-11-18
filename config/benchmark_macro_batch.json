@@ -1,0 +1,12 @@
+{
+  "schema_version": "benchmark-macro-batch.v1",
+  "batch_id": "benchmark-macro-20261030",
+  "template": "config/case0005_model_lifecycle.json",
+  "source_directory": "data/test_sources/casebank_enterprise_matched",
+  "first_phase_case_ids": ["CASE-0001", "CASE-0003", "CASE-0005", "CASE-0006", "CASE-0007", "CASE-0010", "CASE-0012", "CASE-0014", "CASE-0019"],
+  "scope": "First phase: actual Macau DBB infrastructure cases only. Keep all benchmark cases in the inventory. Other DBB and EPC require original-mode adapters; no silent DBB conversion.",
+  "checkpoint_unit": "case; interrupted case may reassemble using the SAME frozen input bundle and exact successful-response cache",
+  "model_scope": "A02 pricing-option selection only; remaining decisions use existing rule processors",
+  "max_paid_attempts_per_case": 4,
+  "metrics": [1, 3, 5]
+}

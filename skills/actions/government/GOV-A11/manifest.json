@@ -1,0 +1,27 @@
+{
+  "skill_id": "GOV-A11.current-use-review",
+  "skill_version": "1",
+  "action_id": "GOV-A11",
+  "role": "Government",
+  "status": "implemented",
+  "spec_source": "zwtnew/04_roles/04_roles/government.md",
+  "spec_source_sha256": "6537100fbde0572ae49d557969df531ffe40ee74c010ee442f59f75da0a1f3de",
+  "skill_path": "skills/actions/government/GOV-A11/SKILL.md",
+  "skill_sha256": "54edfa0239bd2a38476a359af7b8e62bb03d6f014e7dadadbee9aa670aa6a89f",
+  "input_schema_id": "role-contract.v1:GOV-A11:input",
+  "output_schema_id": "role-contract.v1:GOV-A11:payload",
+  "processor_id": "government.current_use_review.v1",
+  "tool_ids": [],
+  "shared_refs": [
+    "skills/shared/decision-basics.md"
+  ],
+  "shared_sha256s": {"skills/shared/decision-basics.md": "77da3d2fc1683068353888daccecfabe25278bf180b593747e39505fea987e60"},
+  "prompt_sha256": "54edfa0239bd2a38476a359af7b8e62bb03d6f014e7dadadbee9aa670aa6a89f",
+  "method_refs": [
+    {
+      "kind": "Method",
+      "id": "micro.capacity.fixed_location",
+      "version": "1"
+    }
+  ]
+}

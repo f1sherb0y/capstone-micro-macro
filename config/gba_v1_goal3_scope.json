@@ -1,0 +1,966 @@
+{
+  "schema_version": "goal3-scope-calibration.v1",
+  "basis": "GOALS.md: original native business entry points and events; PLAN.md retains detailed micro branches. This is scope annotation, not new execution evidence.",
+  "batch": "GOAL3-minimal-native-fix-closeout-20261022",
+  "original_record_count": 38,
+  "overall_goal3_complete": true,
+  "historical_record_policy": "Keep every original blocking record, status, missing source and evidence unchanged; scope annotations supersede only the interpretation that all 38 are mandatory GOAL 3 blockers.",
+  "categories": {
+    "required_native_wiring": "Original operation/interface defect remains required and unresolved.",
+    "mixed_native_and_plan": "Keep the original native judgment/feedback requirement; retain detailed extensions separately in PLAN.",
+    "duplicate_required_rollup": "Historical aggregate record; track its remaining native requirement once, at the individual action.",
+    "plan_detail": "Detailed effect absent from the current native business model. Keep the detailed gap unresolved in PLAN; existing native events still require their own consumers."
+  },
+  "records": [
+    {
+      "id": "B01",
+      "original_index": 1,
+      "category": "required_native_wiring",
+      "required_refs": [
+        "N01"
+      ],
+      "rationale": "Owner.select_preferred_bid is a real native decision. The mandatory choice field is rejected at both transport and final-choice boundaries. Boolean review of a native winner does not resolve micro winner selection.",
+      "current_required_contacts_complete": true,
+      "current_resolution_evidence": "output/integration/goal3_macro_minfix_20261022_01/interface-closure-final-checks.json"
+    },
+    {
+      "id": "B02",
+      "original_index": 2,
+      "category": "mixed_native_and_plan",
+      "required_refs": [
+        "N12"
+      ],
+      "rationale": "Preserve the real no_finance semantic gap. GOAL 3 requires honest refusal/wait and its feedback through an existing bounded interface; it does not automatically require adding every micro branch as a new macro action. Existing refusal/defer behavior and downstream identity consumption need targeted confirmation; never coerce no_finance into equity.",
+      "current_required_contacts_complete": true,
+      "current_resolution_evidence": "output/integration/goal3_macro_minfix_20261022_01/interface-closure-final-checks.json"
+    },
+    {
+      "id": "B03",
+      "original_index": 3,
+      "category": "required_native_wiring",
+      "required_refs": [
+        "N02"
+      ],
+      "rationale": "Equity is already a native financing option; null selected_bank_id rejected when bank candidates exist is a genuine native choice-contract inconsistency.",
+      "current_required_contacts_complete": true,
+      "current_resolution_evidence": "output/integration/goal3_macro_minfix_20261022_01/interface-closure-final-checks.json"
+    },
+    {
+      "id": "B04",
+      "original_index": 4,
+      "category": "plan_detail",
+      "required_refs": [],
+      "rationale": "Native offers and financing selection already have bounded consumers. Registered facilities, signatures, drawdown and cash are additional detailed effects; their missing issuers stay unresolved in PLAN."
+    },
+    {
+      "id": "B05",
+      "original_index": 5,
+      "category": "mixed_native_and_plan",
+      "required_refs": [
+        "N06"
+      ],
+      "rationale": "Detailed professional tasks, quantities, prices and publication remain PLAN gaps. N06 three aggregate fields have actual consumers; the completed lifecycle archive is pure macro mechanism, so detailed dispatch is not a native wiring gate.",
+      "current_3c_delivery": {
+        "aggregate_feedback": "Three native fields now consumed by original professional A12; see N06 evidence.",
+        "detailed_source_gap": "Detailed professional tasks/quantities/prices/publication remain unresolved PLAN work.",
+        "native_requirement": "N06 accepted aggregate feedback; completed coordination archive is pure macro mechanism, no detailed dispatcher gate."
+      },
+      "historical_rationale": "Detailed service/task/quantity/price/publication models are PLAN detail. Native design/information quality, estimated cost and design coordination remain GOAL 3 feedback inputs; this record has no proven aggregate-result consumer and must not be marked covered.",
+      "current_required_contacts_complete": true,
+      "current_resolution_evidence": "output/integration/goal3_macro_minfix_20261022_01/interface-closure-final-checks.json"
+    },
+    {
+      "id": "B06",
+      "original_index": 6,
+      "category": "duplicate_required_rollup",
+      "required_refs": [
+        "N03"
+      ],
+      "rationale": "Historical monthly rollup. All eleven supported professional monthly subactions now have separate actual judgment/execution/later-consumption evidence, including bounded N03 knowledge upkeep. No detailed effects inferred.",
+      "current_3c_delivery": {
+        "native_requirement": "N03 background knowledge upkeep accepted with actual same-result later consumption.",
+        "evidence": "output/integration/goal3c_closeout_20261019_01/upkeep/checks.json",
+        "remaining_plan_detail": "Independent authentic credential issuance, renewal, verification, validity and applied qualifications remain unsupported; historical source gaps preserved. These are not the native background-knowledge activity."
+      },
+      "historical_rationale": "Remaining monthly native action is Engineer qualification maintenance, also B37. Preserve bounded Architect/QS evidence; do not count this rollup as another independent blocker.",
+      "current_required_contacts_complete": true,
+      "current_resolution_evidence": "output/integration/goal3_macro_minfix_20261022_01/interface-closure-final-checks.json"
+    },
+    {
+      "id": "B07",
+      "original_index": 7,
+      "category": "plan_detail",
+      "required_refs": [],
+      "rationale": "Formal filings, signatures, service of notices and permits are outside the native boolean regulatory model. Bounded native assignment/approval/completion feedback is recorded separately; no formal legal effect is asserted."
+    },
+    {
+      "id": "B08",
+      "original_index": 8,
+      "category": "plan_detail",
+      "required_refs": [],
+      "rationale": "Conditional approval/referral and other unsupported detailed outcomes are not mandatory extra native actions merely because micro branches exist. Keep their gaps; original approve/request_revision and accept/defer contacts remain the applicable GOAL 3 scope."
+    },
+    {
+      "id": "B09",
+      "original_index": 9,
+      "category": "plan_detail",
+      "required_refs": [
+        "N08"
+      ],
+      "rationale": "Detailed physical measurements, remedy acceptance and handover/permit are PLAN detail. Existing aggregate completion feedback has bounded 3D evidence; scheduled native inspection-result consumers must still be checked separately under N08.",
+      "current_required_contacts_complete": true,
+      "current_resolution_evidence": "output/integration/goal3_macro_minfix_20261022_01/interface-closure-final-checks.json"
+    },
+    {
+      "id": "B10",
+      "original_index": 10,
+      "category": "plan_detail",
+      "required_refs": [],
+      "rationale": "Native willingness/selection/ACTIVE relationship and later consumers exist. Detailed OrderLine, signed supplier contract and exclusive physical reservations are not created by that model and stay unproved in PLAN."
+    },
+    {
+      "id": "B11",
+      "original_index": 11,
+      "category": "mixed_native_and_plan",
+      "required_refs": [
+        "N05"
+      ],
+      "rationale": "N05 actual no-accepted A05 dependency judgment now drives original negative selection and later same-failure consumption. Unsupported partial/revised terms, formal inquiry delivery and detailed order effects remain blocked; this does not count all micro branches as native business actions.",
+      "historical_rationale": "Original no-accepted-supplier outcome exists; its negative selection still lacks a completed micro choice, although failure-to-private-reinquiry feedback runs. Partial/revised terms and formal reinquiry delivery are separate detailed unsupported branches.",
+      "current_3e_delivery": {
+        "native_requirement": "N05 accepted with actual native failure/delay and later consumption; pending A05 preserved.",
+        "evidence": "output/integration/goal3e_closeout_20261019_01/accepted/checks.json",
+        "remaining_interfaces": "Partial/revised terms and formal inquiry delivery remain unsupported; no detailed order effect claimed."
+      },
+      "current_required_contacts_complete": true,
+      "current_resolution_evidence": "output/integration/goal3_macro_minfix_20261022_01/interface-closure-final-checks.json"
+    },
+    {
+      "id": "B12",
+      "original_index": 12,
+      "category": "duplicate_required_rollup",
+      "required_refs": [
+        "N04"
+      ],
+      "rationale": "Remaining procurement monthly native action is Supplier.adjust_inventory, also B38. Existing seeking/pricing/private supplier-review evidence is preserved.",
+      "current_required_contacts_complete": true,
+      "current_resolution_evidence": "output/integration/goal3_macro_minfix_20261022_01/interface-closure-final-checks.json"
+    },
+    {
+      "id": "B13",
+      "original_index": 13,
+      "category": "plan_detail",
+      "required_refs": [
+        "N04",
+        "N07"
+      ],
+      "rationale": "Physical order/speculative production planning sources belong to PLAN detail. Do not impose customer orders universally. Native inventory monthly judgment and aggregate supply-result consumption remain separate required contacts.",
+      "current_required_contacts_complete": true,
+      "current_resolution_evidence": "output/integration/goal3_macro_minfix_20261022_01/interface-closure-final-checks.json"
+    },
+    {
+      "id": "B14",
+      "original_index": 14,
+      "category": "plan_detail",
+      "required_refs": [
+        "N07"
+      ],
+      "rationale": "Physical task release, production and actual stock query are absent detailed effects; aggregate supply observations alone do not cover their native feedback consumer either.",
+      "current_required_contacts_complete": true,
+      "current_resolution_evidence": "output/integration/goal3_macro_minfix_20261022_01/interface-closure-final-checks.json"
+    },
+    {
+      "id": "B15",
+      "original_index": 15,
+      "category": "plan_detail",
+      "required_refs": [
+        "N07"
+      ],
+      "rationale": "Physical batches/quality inspection/disposition remain unproved PLAN detail. Native aggregate material quality/reliability feedback remains under N07.",
+      "current_required_contacts_complete": true,
+      "current_resolution_evidence": "output/integration/goal3_macro_minfix_20261022_01/interface-closure-final-checks.json"
+    },
+    {
+      "id": "B16",
+      "original_index": 16,
+      "category": "plan_detail",
+      "required_refs": [
+        "N07"
+      ],
+      "rationale": "Actual dispatch/transport/shipments are detailed PLAN effects. Existing native supply_delay still needs an actual later micro consumer, not merely source staging.",
+      "current_required_contacts_complete": true,
+      "current_resolution_evidence": "output/integration/goal3_macro_minfix_20261022_01/interface-closure-final-checks.json"
+    },
+    {
+      "id": "B17",
+      "original_index": 17,
+      "category": "plan_detail",
+      "required_refs": [
+        "N07"
+      ],
+      "rationale": "Physical arrival/customer receipt/use release are detailed PLAN effects. Do not infer them from aggregate availability or selected Supplier engagement.",
+      "current_required_contacts_complete": true,
+      "current_resolution_evidence": "output/integration/goal3_macro_minfix_20261022_01/interface-closure-final-checks.json"
+    },
+    {
+      "id": "B18",
+      "original_index": 18,
+      "category": "plan_detail",
+      "required_refs": [
+        "N08",
+        "N11"
+      ],
+      "rationale": "Detailed task-release/input verification is PLAN work. Original aggregate construction feedback and the native execute_work contract defect remain separately required.",
+      "current_required_contacts_complete": true,
+      "current_resolution_evidence": "output/integration/goal3_macro_minfix_20261022_01/interface-closure-final-checks.json"
+    },
+    {
+      "id": "B19",
+      "original_index": 19,
+      "category": "plan_detail",
+      "required_refs": [
+        "N08",
+        "N11"
+      ],
+      "rationale": "Atomic physical work/cost/crew/stock execution is absent from the native aggregate updater. Keep those detail gaps; neither native aggregate progress nor a failed validation-only action proves physical work.",
+      "current_required_contacts_complete": true,
+      "current_resolution_evidence": "output/integration/goal3_macro_minfix_20261022_01/interface-closure-final-checks.json"
+    },
+    {
+      "id": "B20",
+      "original_index": 20,
+      "category": "plan_detail",
+      "required_refs": [
+        "N08"
+      ],
+      "rationale": "Independent detailed measurements and disposition are PLAN detail. Native scheduled inspection_passed/inspection_failed are real existing outcomes whose micro feedback contact remains required.",
+      "current_required_contacts_complete": true,
+      "current_resolution_evidence": "output/integration/goal3_macro_minfix_20261022_01/interface-closure-final-checks.json"
+    },
+    {
+      "id": "B21",
+      "original_index": 21,
+      "category": "plan_detail",
+      "required_refs": [
+        "N08"
+      ],
+      "rationale": "Detailed measured work/valuation/application/result is PLAN detail. Native aggregate progress/payment-request feedback remains in scope, without asserting certified quantities.",
+      "current_required_contacts_complete": true,
+      "current_resolution_evidence": "output/integration/goal3_macro_minfix_20261022_01/interface-closure-final-checks.json"
+    },
+    {
+      "id": "B22",
+      "original_index": 22,
+      "category": "plan_detail",
+      "required_refs": [
+        "N08"
+      ],
+      "rationale": "Signed independent certificates/rates and their issuers are PLAN detail. Native aggregate inspection/progress must not be renamed certification.",
+      "current_required_contacts_complete": true,
+      "current_resolution_evidence": "output/integration/goal3_macro_minfix_20261022_01/interface-closure-final-checks.json"
+    },
+    {
+      "id": "B23",
+      "original_index": 23,
+      "category": "mixed_native_and_plan",
+      "required_refs": [
+        "N09"
+      ],
+      "rationale": "Original variation_requested/variation_resolved exist and still need corresponding micro feedback consumers. Detailed signed change authority, deliverables and physical/cost impacts remain PLAN detail.",
+      "current_required_contacts_complete": true,
+      "current_resolution_evidence": "output/integration/goal3_macro_minfix_20261022_01/interface-closure-final-checks.json"
+    },
+    {
+      "id": "B24",
+      "original_index": 24,
+      "category": "required_native_wiring",
+      "required_refs": [
+        "N11"
+      ],
+      "rationale": "Original execute_work validation_only payload is rejected for engagement_status. Preserve this real native defect; independent aggregate state updates do not resolve that failed role action.",
+      "current_required_contacts_complete": true,
+      "current_resolution_evidence": "output/integration/goal3_macro_minfix_20261022_01/interface-closure-final-checks.json"
+    },
+    {
+      "id": "B25",
+      "original_index": 25,
+      "category": "plan_detail",
+      "required_refs": [],
+      "rationale": "Facility registration, real draw request/reservation and draw execution/query are additional formal-money models; no native financing selection is counted as drawdown."
+    },
+    {
+      "id": "B26",
+      "original_index": 26,
+      "category": "plan_detail",
+      "required_refs": [],
+      "rationale": "Accounts, principal allocations, transfers and complete cash receipts are PLAN detail absent from the aggregate macro. Preserve all financial source/issuer gaps."
+    },
+    {
+      "id": "B27",
+      "original_index": 27,
+      "category": "plan_detail",
+      "required_refs": [],
+      "rationale": "Native payment request/delay already reaches original private OWN-A06 and later OWN-A03. Actual pay/repay/cash reconciliation remain unproved PLAN detail; private negotiate is not payment."
+    },
+    {
+      "id": "B28",
+      "original_index": 28,
+      "category": "plan_detail",
+      "required_refs": [],
+      "rationale": "Actual native delay triggers Contractor A10 needs_information; same native request lineage also reaches later OWN-A03. This is bounded waiting/feedback only. Entitlement adjudication, completed dispute and received cash remain missing PLAN detail, not newly proved by this classification."
+    },
+    {
+      "id": "B29",
+      "original_index": 29,
+      "category": "plan_detail",
+      "required_refs": [],
+      "rationale": "Detailed delivery rights, payable obligations, recipient credit and settlement-query models are absent. Existing supplier selection feedback is separate and must not be called cash reconciliation."
+    },
+    {
+      "id": "B30",
+      "original_index": 30,
+      "category": "plan_detail",
+      "required_refs": [],
+      "rationale": "Signed certificates and complete execution/offset/receipt mapping remain PLAN detail. Native payment_requested certified_progress is an aggregate label, not signed certification or cash."
+    },
+    {
+      "id": "B31",
+      "original_index": 31,
+      "category": "plan_detail",
+      "required_refs": [],
+      "rationale": "Native final_account_settled has actual QS-A12 and later OWN-A03 consumers. Detailed signed component settlement and complete work/cash histories remain missing PLAN detail."
+    },
+    {
+      "id": "B32",
+      "original_index": 32,
+      "category": "plan_detail",
+      "required_refs": [],
+      "rationale": "Native aggregate completion has bounded regulatory feedback. As-built deliverables, rights, permits and detailed acceptance remain unproved PLAN detail; aggregate closure does not supply them."
+    },
+    {
+      "id": "B33",
+      "original_index": 33,
+      "category": "plan_detail",
+      "required_refs": [],
+      "rationale": "Accepted operating assets, disposal rights and operating cash models are future detailed business, not an existing native operation requiring a newly invented issuer in GOAL 3."
+    },
+    {
+      "id": "B34",
+      "original_index": 34,
+      "category": "plan_detail",
+      "required_refs": [],
+      "rationale": "Detailed goods rights, warranty/remedy/payment/release model is retained in PLAN. No clearing of continuing obligations is inferred from CLOSED or role release."
+    },
+    {
+      "id": "B35",
+      "original_index": 35,
+      "category": "plan_detail",
+      "required_refs": [],
+      "rationale": "Detailed deliverable billing/receivables/access transition issuers are PLAN work. Existing professional intake/monthly/private learning evidence remains bounded to its actual actions."
+    },
+    {
+      "id": "B36",
+      "original_index": 36,
+      "category": "plan_detail",
+      "required_refs": [],
+      "rationale": "Registered debt, principal/interest postings, repayments and debt resolution are absent detailed finance models. Existing native Bank risk/strategy monthly decisions do not prove these effects."
+    },
+    {
+      "id": "B37",
+      "original_index": 37,
+      "category": "mixed_native_and_plan",
+      "required_refs": [
+        "N03"
+      ],
+      "rationale": "Original monthly background qualification/regional-compliance knowledge upkeep is accepted at N03; authentic credential issuance/renewal/verification remains PLAN detail.",
+      "current_3c_delivery": {
+        "native_requirement": "N03 background knowledge upkeep accepted with actual same-result later consumption.",
+        "evidence": "output/integration/goal3c_closeout_20261019_01/upkeep/checks.json",
+        "remaining_plan_detail": "Independent authentic credential issuance, renewal, verification, validity and applied qualifications remain unsupported; historical source gaps preserved. These are not the native background-knowledge activity."
+      },
+      "historical_rationale": "Engineer monthly qualification action is a real native judgment/feedback gap. Reuse original handlers where inputs permit, retain honest waiting where not. Formal credential renewal/verification/issuer effect is a separate unproved PLAN extension; normalized capability is never a renewed credential.",
+      "current_required_contacts_complete": true,
+      "current_resolution_evidence": "output/integration/goal3_macro_minfix_20261022_01/interface-closure-final-checks.json"
+    },
+    {
+      "id": "B38",
+      "original_index": 38,
+      "category": "mixed_native_and_plan",
+      "required_refs": [
+        "N04"
+      ],
+      "rationale": "Supplier monthly inventory action is a real native judgment/feedback gap. Original activity labels alone are insufficient. A physical stock ledger/movement/production issuer is separate PLAN detail and must not be fabricated to complete aggregate monthly wiring.",
+      "current_required_contacts_complete": true,
+      "current_resolution_evidence": "output/integration/goal3_macro_minfix_20261022_01/interface-closure-final-checks.json"
+    }
+  ],
+  "native_remaining_contacts": [
+    {
+      "id": "N01",
+      "batch": "3A",
+      "status": "executed_bounded_micro_bid_choice_native_commitment_and_later_consumption",
+      "records": [
+        "B01"
+      ],
+      "macro_input": "Owner.select_preferred_bid: actual QS-evaluated bids/current candidate IDs",
+      "micro_processing": "Original OWN-A09 admissibility/comparison plus explicitly declared lowest eligible actual price and organization-ID tie policy; original macro proposal selected b, micro final selected a.",
+      "return_to_macro": "Bounded final selected_contractor_id crosses shared proposal/final guards; macro commits actual candidate and actual bid price.",
+      "feedback_consumer": "Same EVT000030 bid_evaluation_completed -> strictly later original Contractor A04 and native bilateral signature.",
+      "next": "Delivered; cross-batch combinations remain GOAL 4, detailed branch work remains PLAN.",
+      "complete": true,
+      "historical_pre_native_fix": {
+        "id": "N01",
+        "batch": "3A",
+        "status": "blocked_native_contract_proposal_only",
+        "records": [
+          "B01"
+        ],
+        "macro_input": "Owner.select_preferred_bid: actual QS-evaluated bids/current candidate IDs",
+        "micro_processing": "Existing owner selection review; a bounded micro choice of another current bidder is still blocked",
+        "return_to_macro": "Original proposal then owner_preferred_bidder_selection; macro alone commits selection, ranked bids, contract sum and event",
+        "feedback_consumer": "Later own tender/formation consumers must use the same bid_evaluation_completed outcome after the fix",
+        "next": "Review docs/GOAL3宏观最小修复与接线收尾.md; no native source modification is authorized",
+        "complete": false
+      },
+      "evidence": "output/integration/goal3_macro_minfix_20261022_01/selection/checks.json"
+    },
+    {
+      "id": "N02",
+      "batch": "3B",
+      "status": "executed_micro_equity_with_accepted_bank_candidates_and_later_own_consumption",
+      "records": [
+        "B03"
+      ],
+      "macro_input": "Actual bank candidates and Owner equity decision",
+      "micro_processing": "Original OWN-A05 computes cash feasibility from declared initial cash/restrictions, existing unpaid debt and actual native requested financing amount.",
+      "return_to_macro": "Explicit owner_equity / null selected_bank_id is a valid accepted native choice despite actual Bank candidates.",
+      "feedback_consumer": "Real project_financing_selected owner_equity -> strictly later own original OWN-A05; no cash transfer inferred.",
+      "next": "Delivered; cross-batch combinations remain GOAL 4, detailed branch work remains PLAN.",
+      "complete": true,
+      "historical_pre_native_fix": {
+        "id": "N02",
+        "batch": "3B",
+        "status": "blocked_native_equity_choice_contract",
+        "records": [
+          "B03"
+        ],
+        "macro_input": "Actual bank candidates and Owner equity decision",
+        "micro_processing": "Existing OWN-A05 financing comparison",
+        "return_to_macro": "owner_financing_selection with equity/null bank must have coherent acceptance semantics",
+        "feedback_consumer": "Original financing-result consumers must preserve the actual refusal until corrected",
+        "next": "Separate bounded financing interface repair; do not modify macro in 3A",
+        "complete": false
+      },
+      "evidence": "output/integration/goal3_macro_minfix_20261022_01/interface-closure-final-checks.json"
+    },
+    {
+      "id": "N03",
+      "batch": "3C",
+      "status": "executed_original_monthly_judgment_and_later_feedback",
+      "records": [
+        "B06",
+        "B37"
+      ],
+      "macro_input": "Actual original monthly regulatory_pressure_index and own available/total capacity; exact strictly earlier own committed monthly event/result/memory. Explicit initial private pressure threshold, free-capacity limit and repeat limit.",
+      "micro_processing": "Existing ENGINEER-A12 record_feedback mode compares pressure with 0.6, free ratio with 0.2 and own earlier executed upkeep count with 1. Technical capability is observed but is not a credential or upkeep decision criterion.",
+      "return_to_macro": "Exact A12 judgment -> original maintain_professional_qualifications candidate/final -> original scheduler upkeep or maintain_operations.",
+      "feedback_consumer": "Tick-2 ENGINEER-A12 reads the same tick-1 native event, exact micro result/focus and original episodic memory; high case count=1 suppresses repetition.",
+      "next": "Bounded native upkeep accepted. Detailed authentic credential issuance/renewal remains PLAN detail; do not infer credential effects.",
+      "historical_status": "unwired_micro_monthly_judgment_and_later_feedback",
+      "complete": true,
+      "evidence": "output/integration/goal3c_closeout_20261019_01/upkeep/checks.json",
+      "configuration": "config/engineer_qualification_maintenance.json",
+      "boundary": "Background review of professional obligations and regional compliance knowledge only. No issued, renewed, verified or applied credential is produced. Formal qualifications and private training history remain unknown. Native capability updates are original random mechanics and not credential evidence."
+    },
+    {
+      "id": "N04",
+      "batch": "3F",
+      "status": "executed_original_inventory_planning_judgment_and_later_feedback",
+      "records": [
+        "B12",
+        "B13",
+        "B38"
+      ],
+      "macro_input": "Actual original monthly material_price_index, own native available/total capacity and exact strictly earlier own executed review; independent initial own-risk stocking forecast and thresholds.",
+      "micro_processing": "Existing SUPPLIER-A05 request_quote validates independent stocking authority and exact forecast. Typed inventory review computes price minus 1.05, free ratio >=0.2 and prior actual review count <1. Physical stock and capacity remain unknown.",
+      "return_to_macro": "Same completed A05 planning judgment -> legal original adjust_inventory candidate -> final boolean -> native actual adjust_inventory or maintain_operations.",
+      "feedback_consumer": "Tick-2 original own A05 reads exact tick-1 actual agent_operation, original micro result, request candidate and episodic memory; high-price case count 1 suppresses repetition.",
+      "next": "Supported native inventory-planning contact accepted. Detailed stock movement, order, reservation and physical execution remain PLAN/interface detail.",
+      "historical_pre_remaining_delivery": {
+        "id": "N04",
+        "batch": "3F",
+        "status": "unwired_micro_monthly_judgment_and_later_feedback",
+        "records": [
+          "B12",
+          "B13",
+          "B38"
+        ],
+        "macro_input": "Original Supplier monthly request/material index/own authorized private assumptions and earlier operation",
+        "micro_processing": "Reuse inventory/planning handlers where supported or explicit wait; no invented physical stock",
+        "return_to_macro": "Original adjust_inventory monthly proposal/final action",
+        "feedback_consumer": "Later original Supplier micro judgment consuming the same committed aggregate operation; missing",
+        "next": "Separate aggregate monthly wiring from future physical stock execution"
+      },
+      "complete": true,
+      "evidence": "output/integration/goal3_remaining_20261019_01/inventory-accepted/checks.json",
+      "configuration": "config/supplier_inventory_chain.json",
+      "boundary": "No inquiry sent, physical stock moved, upstream order formed, exclusive reservation or funds effect. Random native capability updates are not causal stock or reliability improvement evidence."
+    },
+    {
+      "id": "N05",
+      "batch": "3E",
+      "status": "executed_micro_negative_selection_native_failure_and_later_same_result_consumption",
+      "records": [
+        "B11"
+      ],
+      "macro_input": "Exact current original select_supplier offers, each authenticated current supplier_order_decision and own strictly earlier committed supplier_selection_failed; own actual signed contractor mandate.",
+      "micro_processing": "Existing CONTRACTOR-A05 optional native refusal observation checks all current decisions are refusals, verifies own earlier failure proofs and returns an explicit dependency wait. Earlier actual failure changes the later wait condition to repeated-no-accepted. Generic missing/partial/unresolved results are never translated.",
+      "return_to_macro": "Exact original A05 wait result/hash -> original select_supplier proposal accepted=false -> contractor_supplier_selection final decision=false -> original engine supplier_selection_failed and +15 delay days. Pending micro task remains waiting_input.",
+      "feedback_consumer": "Existing ProcurementFailureFollowup authenticates same committed event/proposal/final/A05 result and forms private request_quote intention; next-tick A05 consumes same earlier actual failure/result and changes its dependency condition.",
+      "next": "N05 actual no-accepted path accepted. Retain unsupported partial/revised terms, formal inquiry delivery and detailed order execution as explicit interface/PLAN gaps; no other batch started.",
+      "historical_unwired_status": {
+        "id": "N05",
+        "batch": "3E",
+        "status": "unwired_negative_selection_micro_judgment",
+        "records": [
+          "B11"
+        ],
+        "macro_input": "Actual original all-supplier refusals/empty accepted candidate set",
+        "micro_processing": "Original Contractor A05 lacks a completed negative selection option; existing failure followup is not that decision",
+        "return_to_macro": "Original negative supplier selection without inventing an accepted supplier",
+        "feedback_consumer": "Existing ProcurementFailureFollowup consumes actual failure; preserve its evidence",
+        "next": "Reuse handler with a bounded negative choice or document exact interface limitation"
+      },
+      "complete": true,
+      "evidence": "output/integration/goal3e_closeout_20261019_01/accepted/checks.json",
+      "configuration": "config/procurement_negative_selection.json",
+      "boundary": "No inquiry delivery, supplier appointment, formal order, reservation, cash or physical work from the private follow-up. Three micro waits remain pending rather than being relabeled as successful procurement."
+    },
+    {
+      "id": "N06",
+      "batch": "3C",
+      "status": "executed_aggregate_feedback_archive_retained_as_pure_macro_mechanism",
+      "records": [
+        "B05"
+      ],
+      "macro_input": "update_design_state native design_quality/information_quality/estimated_cost and design_coordination_task",
+      "micro_processing": "Existing ARCHITECT/ENGINEER-A12 methods calculate actual design/information gaps and estimate/budget ratio; original selected firms require actual own A03 confirmation. No detailed design or costing tasks inferred.",
+      "return_to_macro": "Original monthly method proposal/final decision and scheduler execute improve_design_capability/improve_engineering_capability or maintain_operations. Design updater and APPROVAL threshold remain native.",
+      "feedback_consumer": "Two controlled original runs, each four own actual design consumers and two later same-execution consumers; tick-2 A12 uses tick-1 actual operation count and original review/result identities to defer repetition.",
+      "next": "No remaining N06 micro wiring at supported native aggregate semantics. Keep detailed task dispatch/design publication in PLAN.",
+      "historical_status": "missing_proven_native_aggregate_feedback_consumer",
+      "evidence": "output/integration/goal3c_design_20261019_01/verified/checks.json",
+      "covered_fields": [
+        "design_quality",
+        "information_quality",
+        "estimated_cost"
+      ],
+      "remaining_blocker": null,
+      "timing_boundary": "Design update -> A12 is same-tick later invocation; actual monthly execution -> later A12 is tick 1 -> tick 2.",
+      "complete": true,
+      "historical_partial_delivery": {
+        "id": "N06",
+        "batch": "3C",
+        "status": "partially_executed_three_aggregate_fields_coordination_archive_dispatch_blocked",
+        "records": [
+          "B05"
+        ],
+        "macro_input": "update_design_state native design_quality/information_quality/estimated_cost and design_coordination_task",
+        "micro_processing": "Existing ARCHITECT/ENGINEER-A12 methods calculate actual design/information gaps and estimate/budget ratio; original selected firms require actual own A03 confirmation. No detailed design or costing tasks inferred.",
+        "return_to_macro": "Original monthly method proposal/final decision and scheduler execute improve_design_capability/improve_engineering_capability or maintain_operations. Design updater and APPROVAL threshold remain native.",
+        "feedback_consumer": "Two controlled original runs, each four own actual design consumers and two later same-execution consumers; tick-2 A12 uses tick-1 actual operation count and original review/result identities to defer repetition.",
+        "next": "Retain unconnected Owner design_coordination_task work-dispatch boundary and N03. No new detailed task model or other batch started.",
+        "historical_status": "missing_proven_native_aggregate_feedback_consumer",
+        "evidence": "output/integration/goal3c_design_20261019_01/verified/checks.json",
+        "covered_fields": [
+          "design_quality",
+          "information_quality",
+          "estimated_cost"
+        ],
+        "remaining_blocker": "Owner design_coordination_task is native completed archival metadata, not a received work task. No separate actual owner task-feedback consumer or detailed dispatch is claimed.",
+        "timing_boundary": "Design update -> A12 is same-tick later invocation; actual monthly execution -> later A12 is tick 1 -> tick 2.",
+        "complete": false
+      },
+      "archive_scope_correction": {
+        "macro_source": "simulation/project_lifecycle_engine.py:_transition/_record_lifecycle_task",
+        "behavior": "Immediately records Owner design_coordination_task state=done, created_tick=completed_tick, result={stage,project_name}; no separate received work request or detailed assignment.",
+        "classification": "pure_macro_completion_archive",
+        "micro_consumer_required": false,
+        "reason": "The native archival mechanism remains macro-owned. Its stage_transition is already consumed with the aggregate design result; detailed dispatch is not a GOAL3 native gate.",
+        "not_execution_claim": "No new archive receipt, detailed dispatch or task work is asserted by this correction."
+      }
+    },
+    {
+      "id": "N07",
+      "batch": "3F",
+      "status": "executed_native_supply_progress_and_actual_delay_later_micro_consumption",
+      "records": [
+        "B13",
+        "B14",
+        "B15",
+        "B16",
+        "B17"
+      ],
+      "macro_input": "Actual selected Supplier own aggregate material availability/reliability/quality, construction_progress_updated and supply_delay",
+      "micro_processing": "Existing Supplier A05 authorized own-risk inventory planning consumes exact own earlier selected Supplier records and actual original construction_progress_updated/supply_delay observations. Latest per-project availability/delay risk changes its background review judgment.",
+      "return_to_macro": "Same original A05 planning judgment maps to native monthly adjust_inventory or maintain_operations; macro keeps all aggregate physical mechanisms.",
+      "feedback_consumer": "Original tick-4 supply-a A05 consumes its actual tick-3 EVT000034 supply_delay (SHA256 4cddbc49e472ae2771916bd5a59a7a200e8bc8553a04678f8f69afc22dd3e5d1); native delay risk triggers original adjust_inventory. Later ticks consume both the same delay and actually executed own review to constrain repetition. supply-b independently consumes its own tick-4 EVT000052 from tick 5.",
+      "next": "Accepted bounded original aggregate supply feedback; retain detailed stock/production/quality/shipment/receipt gaps in PLAN.",
+      "historical_pre_remaining_delivery": {
+        "id": "N07",
+        "batch": "3F",
+        "status": "source_staging_only_later_micro_consumption_missing",
+        "records": [
+          "B13",
+          "B14",
+          "B15",
+          "B16",
+          "B17"
+        ],
+        "macro_input": "Actual selected Supplier own aggregate material availability/reliability/quality, construction_progress_updated and supply_delay",
+        "micro_processing": "SupplyFulfillmentObservation currently stages sources; an actual existing micro judgment/feedback action remains required",
+        "return_to_macro": "Native supply updater remains macro-owned; no physical stock/dispatch receipt",
+        "feedback_consumer": "No later micro consumption currently claimed by the lifecycle contact",
+        "next": "Bind a supported own planning/risk feedback consumer to the same actual native result"
+      },
+      "complete": true,
+      "wiring_complete": true,
+      "evidence": "output/integration/goal3_remaining_20261019_01/inventory-accepted/checks.json",
+      "configuration": "config/supplier_inventory_chain.json",
+      "actual_sample_scope": [
+        "supplier_selected",
+        "construction_progress_updated",
+        "supply_delay"
+      ],
+      "pending_actual_sample": [],
+      "boundary": "Actual native normalized progress and delay observations only; no detailed stock, production, physical inspections, shipments or receipts are inferred.",
+      "historical_progress_only_delivery": {
+        "id": "N07",
+        "batch": "3F",
+        "status": "executed_native_supply_progress_consumer_delay_branch_pending_actual_sample",
+        "records": [
+          "B13",
+          "B14",
+          "B15",
+          "B16",
+          "B17"
+        ],
+        "macro_input": "Actual selected Supplier own aggregate material availability/reliability/quality, construction_progress_updated and supply_delay",
+        "micro_processing": "Existing Supplier A05 authorized own-risk inventory planning consumes exact own earlier selected Supplier records and actual original construction_progress_updated/supply_delay observations. Latest per-project availability/delay risk changes its background review judgment.",
+        "return_to_macro": "Same original A05 planning judgment maps to native monthly adjust_inventory or maintain_operations; macro keeps all aggregate physical mechanisms.",
+        "feedback_consumer": "Weak supply: tick-4 supply-a reads same tick-3 EVT000033 and actual native supply risk; risk flag changes to true and original macro executes inventory planning. Reliable control consumes its own corresponding progress without risk trigger.",
+        "next": "Consumer wiring exists for supply_delay, but no actual random delay event occurred in the four-tick sample. Obtain a supported native input/window sample before claiming full N07 actual evidence.",
+        "complete": false,
+        "wiring_complete": true,
+        "evidence": "output/integration/goal3_remaining_20261019_01/inventory-accepted/checks.json",
+        "configuration": "config/supplier_inventory_chain.json",
+        "actual_sample_scope": [
+          "supplier_selected",
+          "construction_progress_updated"
+        ],
+        "pending_actual_sample": [
+          "supply_delay"
+        ],
+        "boundary": "Normalized availability/reliability/quality and delay risk are not detailed stock, production, inspections, shipments or receipts. No actual supply_delay event consumed is claimed."
+      },
+      "delay_evidence": "output/integration/goal3_remaining_20261019_01/supply-delay/checks.json",
+      "delay_configuration": "config/supplier_supply_delay_chain.json"
+    },
+    {
+      "id": "N08",
+      "batch": "3G",
+      "status": "executed_original_aggregate_events_later_A12_judgment_and_native_monthly_feedback",
+      "records": [
+        "B09",
+        "B18",
+        "B19",
+        "B20",
+        "B21",
+        "B22"
+      ],
+      "macro_input": "Original construction_progress_updated, inspection_passed/inspection_failed and safety_issue, authenticated own initial existing professional relationship and native monthly profile.",
+      "micro_processing": "Existing Architect/Engineer original A12 record_feedback with optional typed aggregate construction policy/observation; exact earlier own events authenticated against original initial existing engagements, run, tick and event digest.",
+      "return_to_macro": "Original monthly proposal/final boolean -> improve_design_capability / improve_engineering_capability or maintain_operations. All construction, inspection and variation execution stays in original macro.",
+      "feedback_consumer": "Tick2 A12 uses tick1 original failed inspection to judge quality_remedy_review and original macro executes method improvement; tick3 consumes actual tick2 passed inspection and same prior improvement, clears failed-inspection flag and maintains operations. Tick10 actual progress delay 21 days minus independent 14-day limit =7 days -> progress_recovery. Safety variant: tick3 own A12 consumes actual tick2 EVT000015 safety_issue; actual 0.71 minus private 0.65 =0.06 -> site_safety_review -> original improve_engineering_capability. Later A12 also consumes the same actual executed review.",
+      "next": "Accepted bounded aggregate feedback only; detailed work, measurements, independent certificates, change authority and cost models remain PLAN detail. N11 remains blocked.",
+      "historical_pre_remaining_delivery": {
+        "id": "N08",
+        "batch": "3G",
+        "status": "aggregate_progress_quality_inspection_consumers_not_proven",
+        "records": [
+          "B09",
+          "B18",
+          "B19",
+          "B20",
+          "B21",
+          "B22"
+        ],
+        "macro_input": "Original construction_progress_updated and inspection_passed/inspection_failed with native progress/quality snapshots",
+        "micro_processing": "Reuse appropriate Contractor/Engineer/QS feedback handlers for their actual authorized aggregate inputs",
+        "return_to_macro": "Pure aggregate state update/inspection mechanisms remain macro-owned",
+        "feedback_consumer": "Suspension-to-A04 is proved separately; it does not prove these remaining result consumers",
+        "next": "Locate/reuse consumer evidence or wire missing consumers; do not require signed measurements/certificates to consume existing aggregate results"
+      },
+      "complete": true,
+      "evidence": "output/integration/goal3_remaining_20261019_01/construction-feedback-seed2/checks.json",
+      "configuration": "config/professional_construction_feedback_chain.json",
+      "actual_sample_scope": [
+        "construction_progress_updated",
+        "inspection_failed",
+        "inspection_passed",
+        "safety_issue"
+      ],
+      "safety_evidence": "output/integration/goal3_remaining_20261019_01/safety-feedback/checks.json",
+      "safety_configuration": "config/professional_safety_feedback_chain.json"
+    },
+    {
+      "id": "N09",
+      "batch": "3G",
+      "status": "executed_original_aggregate_events_later_A12_judgment_and_native_monthly_feedback",
+      "records": [
+        "B23"
+      ],
+      "macro_input": "ProjectLifecycleEngine variation_requested/variation_resolved",
+      "micro_processing": "Existing Architect/Engineer original A12 record_feedback with optional typed aggregate construction policy/observation; exact earlier own events authenticated against original initial existing engagements, run, tick and event digest.",
+      "return_to_macro": "Original monthly proposal/final boolean -> improve_design_capability / improve_engineering_capability or maintain_operations. All construction, inspection and variation execution stays in original macro.",
+      "feedback_consumer": "Tick9 own original Architect/Engineer A12 consumes actual tick8 variation_requested EVT000086 and judges variation_open=true; tick10 consumes actual tick9 variation_resolved EVT000100 and judges false. Pending variation enters the policy priority calculation; simultaneous failed inspection has higher priority. Unit behavior verifies isolated variation changes review priority; no formal change approval or work is inferred.",
+      "next": "Accepted bounded aggregate feedback only; detailed work, measurements, independent certificates, change authority and cost models remain PLAN detail. N11 remains blocked.",
+      "historical_pre_remaining_delivery": {
+        "id": "N09",
+        "batch": "3G",
+        "status": "native_variation_feedback_consumer_not_proven",
+        "records": [
+          "B23"
+        ],
+        "macro_input": "ProjectLifecycleEngine variation_requested/variation_resolved",
+        "micro_processing": "Reuse actual Architect/Contractor professional feedback handling within available fields",
+        "return_to_macro": "Original variation recall/standby and flags remain macro-owned",
+        "feedback_consumer": "No corresponding executed micro consumer established by the current detailed-change review",
+        "next": "Wire the existing native request/result before detailed change authority or cost model"
+      },
+      "complete": true,
+      "evidence": "output/integration/goal3_remaining_20261019_01/construction-feedback-seed2/checks.json",
+      "configuration": "config/professional_construction_feedback_chain.json",
+      "actual_sample_scope": [
+        "variation_requested",
+        "variation_resolved"
+      ]
+    },
+    {
+      "id": "N10",
+      "batch": "3A",
+      "status": "executed_fixed_clarification_successors_and_cross_tick_feedback",
+      "records": [],
+      "macro_input": "Actual original invitation/session/question/authorized QS-A05 native replies; own prior bid_submitted events",
+      "micro_processing": "Existing A01 clarify -> original QS-A05 publish_authorized -> actual native reply -> new package v2 A01 -> A02; later A01 reads original submitted_count=1 policy before/after its own clarification",
+      "return_to_macro": "Original native session/message publication and unchanged tender_decision/bid submission/refusal; no winner override",
+      "feedback_consumer": "Four actual reply-to-successor micro chains within their own macro ticks; two tick-2 bid submissions consumed by tick-3 original clarify A01 and successor decline A01/A02",
+      "next": "This fixed supported path accepted. Missing permission/answers still wait; N01 remains blocked. Stop this batch, do not auto-start other batches.",
+      "evidence": "output/integration/goal3a_remaining_20261018_01/clarification-business-proof.json",
+      "timing_boundary": "Reply successor is same-tick later micro invocation; bid feedback consumption is tick 2 -> tick 3. Replies are never reused across projects.",
+      "complete": true
+    },
+    {
+      "id": "N11",
+      "batch": "3G",
+      "status": "resolved_shared_native_validation_guard_with_actual_construction_feedback",
+      "records": [
+        "B24"
+      ],
+      "macro_input": "Original validation_only execute_work action containing engagement_status",
+      "micro_processing": "Pure native validation_only diagnostic, not a separate micro decision or physical WorkExecution. Shared constructor covers 27 original stage/role action names.",
+      "return_to_macro": "Remove redundant engagement_status from diagnostic payload; original actual engagement, role, status and resource guards remain authoritative. Native execute_work local guard returns True.",
+      "feedback_consumer": "Diagnostic remains a macro mechanism. Actual current construction progress/inspection/variation -> original later A12 -> macro monthly execution -> later A12 consumption; no diagnostic receipt substituted for work.",
+      "next": "Delivered; cross-batch combinations remain GOAL 4, detailed branch work remains PLAN.",
+      "complete": true,
+      "historical_pre_native_fix": {
+        "id": "N11",
+        "batch": "3G",
+        "status": "blocked_frozen_native_validation_contract",
+        "records": [
+          "B24"
+        ],
+        "macro_input": "Original validation_only execute_work action containing engagement_status",
+        "micro_processing": "Native role-action contract must be coherent before treating it as successful; current diagnostic is failure",
+        "return_to_macro": "Original action validator/execute_work; separate aggregate updater still runs",
+        "feedback_consumer": "Failure/invalid_action may be consumed as failure, never as WorkExecution receipt",
+        "next": "Prepare a separate bounded correction proposal or bind an already existing equivalent path; no native change authorized here",
+        "complete": false
+      },
+      "evidence": [
+        "output/integration/goal3_macro_minfix_20261022_01/final-focused/test_shared_representative_con0/representative-validation.json",
+        "output/integration/goal3_macro_minfix_20261022_01/construction-guard/checks.json"
+      ]
+    },
+    {
+      "id": "N12",
+      "batch": "3B",
+      "status": "executed_original_no_finance_native_defer_wait_and_later_own_consumption",
+      "records": [
+        "B02"
+      ],
+      "macro_input": "Actual OWN-A05 no_finance outcome under original funding inputs",
+      "micro_processing": "Original OWN-A05 actually returns no_finance under a supported initial cash disclosure. Later same-Owner A05 reads that exact actual refusal and applies an independently declared prior-refusal priority penalty.",
+      "return_to_macro": "Existing select_project_finance action has a negative proposal pair and final false. Macro emits project_financing_deferred, commits no bank/equity and holds the original project in initiation.",
+      "feedback_consumer": "Same EVT000003 / EVT000007 refusal -> next-tick own original OWN-A05, prior refusal count 1 and actual offer priorities 1/2 + 2 = 3/4.",
+      "next": "Delivered; cross-batch combinations remain GOAL 4, detailed branch work remains PLAN.",
+      "historical_pending_review": {
+        "id": "N12",
+        "batch": "3B",
+        "status": "pending_existing_refusal_wait_semantics_and_consumer_review",
+        "records": [
+          "B02"
+        ],
+        "macro_input": "Actual OWN-A05 no_finance outcome under original funding inputs",
+        "micro_processing": "Preserve no financing as refusal/wait; no substitution with owner equity",
+        "return_to_macro": "First assess supported original accepted=False/defer semantics; new no_finance macro action is not automatically required",
+        "feedback_consumer": "Same actual native deferred/declined result must reach an appropriate later micro consumer; not proved here",
+        "next": "Targeted existing-interface check in 3B, not another general source audit"
+      },
+      "complete": true,
+      "evidence": "output/integration/goal3_macro_minfix_20261022_01/interface-closure-final-checks.json",
+      "historical_pre_native_fix": {
+        "id": "N12",
+        "batch": "3B",
+        "status": "blocked_native_caller_ignores_final_refusal_semantics",
+        "records": [
+          "B02"
+        ],
+        "macro_input": "Actual OWN-A05 no_finance outcome under original funding inputs",
+        "micro_processing": "Reuse authentic historical OWN-A05 no_finance result; original final false adapter contract is structurally supported, but is not a safe native execution mapping.",
+        "return_to_macro": "Blocked: native registry retains proposal selection on final false and native financing caller unconditionally commits selected bank / emits owner-financed selection.",
+        "feedback_consumer": "No honest native refusal/wait outcome exists on this call path, so a same-outcome later business consumer is blocked. Existing monthly no_finance analysis cannot substitute this selection result.",
+        "next": "Minimal native fix: accepted guard plus explicit refusal/defer feedback and downstream wait/retry. Existing final false can be reused; a new macro action name is not inherently required. Macro frozen in this delivery.",
+        "historical_pending_review": {
+          "id": "N12",
+          "batch": "3B",
+          "status": "pending_existing_refusal_wait_semantics_and_consumer_review",
+          "records": [
+            "B02"
+          ],
+          "macro_input": "Actual OWN-A05 no_finance outcome under original funding inputs",
+          "micro_processing": "Preserve no financing as refusal/wait; no substitution with owner equity",
+          "return_to_macro": "First assess supported original accepted=False/defer semantics; new no_finance macro action is not automatically required",
+          "feedback_consumer": "Same actual native deferred/declined result must reach an appropriate later micro consumer; not proved here",
+          "next": "Targeted existing-interface check in 3B, not another general source audit"
+        },
+        "complete": false,
+        "evidence": "output/integration/goal3_remaining_20261019_01/financing-refusal-boundary.json"
+      }
+    }
+  ],
+  "coverage_limits": [
+    "Original 25 operation identities are matched to current registered contracts. 32 monthly subactions and 15 lifecycle families overlap and are not a completion denominator.",
+    "All 12 residual contacts have a bounded resolution. Four newly fixed contacts have actual business evidence or explicit native-mechanism guard evidence. N11 does not represent physical WorkExecution.",
+    "All 38 original source/interface records and detailed PLAN gaps are preserved. Detailed physical, credential, legal and cash effects are not inferred from aggregate results.",
+    "GOAL 3 wiring is complete under the existing native action/event scope. GOAL 4 combined validation and the original PLAN remain unfinished."
+  ],
+  "proposal": "docs/GOAL3宏观最小修复与接线收尾.md",
+  "evidence": "output/integration/goal3_scope_3a_proposal_20261018_01/checks.json",
+  "latest_3a_delivery": {
+    "batch": "3A-clarification-and-feedback-consumers",
+    "configuration": "config/tender_clarification_loop.json",
+    "documentation": "docs/3A剩余接线与澄清续办验收.md",
+    "evidence": "output/integration/goal3a_remaining_20261018_01/checks.json",
+    "accepted_contact": "N10",
+    "remaining_native_choice_blocker": "N01",
+    "whole_3a_complete": false,
+    "overall_goal3_complete": false
+  },
+  "latest_3c_delivery": {
+    "batch": "3C-closeout",
+    "configuration": "config/engineer_qualification_maintenance.json",
+    "action_inventory": "config/gba_v1_3c_closeout.json",
+    "documentation": "docs/3C收尾与工程师资质维护接线验收.md",
+    "evidence": "output/integration/goal3c_closeout_20261019_01/checks.json",
+    "accepted_contact_ids": [
+      "N03",
+      "N06"
+    ],
+    "whole_3c_supported_native_wiring_complete": true,
+    "whole_3c_complete": true,
+    "overall_goal3_complete": false,
+    "remaining_plan_details": [
+      "Detailed professional work dispatch and publication",
+      "Authentic credential issuance/renewal/verification"
+    ],
+    "native_mechanism_anomaly": "Existing DESIGN validation_only representative actions reject engagement_status; no detailed role action is claimed executed. See closeout inventory."
+  },
+  "historical_latest_3c_delivery": {
+    "batch": "3C-design-feedback",
+    "configuration": "config/professional_design_feedback.json",
+    "documentation": "docs/3C设计聚合反馈接线与验收.md",
+    "evidence": "output/integration/goal3c_design_20261019_01/checks.json",
+    "partially_wired_contact": "N06",
+    "remaining_contacts": [
+      "N03",
+      "N06 coordination task dispatch"
+    ],
+    "whole_3c_complete": false,
+    "overall_goal3_complete": false
+  },
+  "latest_3e_delivery": {
+    "batch": "3E-closeout",
+    "configuration": "config/procurement_negative_selection.json",
+    "action_inventory": "config/gba_v1_3e_closeout.json",
+    "documentation": "docs/3E收尾与无接受供应商接线验收.md",
+    "evidence": "output/integration/goal3e_closeout_20261019_01/checks.json",
+    "accepted_contact_ids": [
+      "N05"
+    ],
+    "supported_native_3e_wiring_complete": true,
+    "unsupported_interface_decisions_still_blocked": true,
+    "overall_goal3_complete": false,
+    "stop_after_delivery": true
+  },
+  "latest_3f_delivery": {
+    "evidence": "output/integration/goal3_remaining_20261019_01/inventory-accepted/checks.json",
+    "N04_complete": true,
+    "N07_complete": true,
+    "N07_pending_actual_sample": null,
+    "overall_goal3_complete": false,
+    "continue_remaining_batches": true,
+    "delay_evidence": "output/integration/goal3_remaining_20261019_01/supply-delay/checks.json",
+    "delay_technical_tasks": 110,
+    "delay_micro_actions": 16,
+    "delay_later_consumers": 9
+  },
+  "latest_3g_delivery": {
+    "configuration": "config/professional_construction_feedback_chain.json",
+    "evidence": "output/integration/goal3_remaining_20261019_01/construction-feedback-seed2/checks.json",
+    "technical_tasks": 180,
+    "micro_actions": 20,
+    "accepted_contact_ids": [
+      "N08",
+      "N09"
+    ],
+    "remaining_native_contract_blocker": "N11",
+    "whole_3g_complete": false,
+    "overall_goal3_complete": false,
+    "safety_evidence": "output/integration/goal3_remaining_20261019_01/safety-feedback/checks.json",
+    "safety_configuration": "config/professional_safety_feedback_chain.json",
+    "safety_technical_tasks": 108,
+    "safety_micro_actions": 12,
+    "safety_actual_improvement_followups": 8,
+    "focused_tests": "22 passed: professional-feedback-regression.xml"
+  },
+  "historical_coverage_limits": [
+    "12 calibrated contacts remain tracked. N10 has bounded actual acceptance; N06 now has actual consumers for three aggregate fields with its coordination-task dispatch boundary still blocked. Other contacts retain prior statuses. This is not a total macro coverage denominator.",
+    "Monthly 30/32 is bounded monthly evidence only; no counts changed and no new micro execution is proved by this calibration.",
+    "All 38 original missing-source/interface records remain present and unresolved at their original detailed semantics.",
+    "Existing 25 operation contracts and 12 lifecycle records remain the inventory basis. Future batch delivery must update actual input/worker/return/consumer evidence; classification is not wiring completion."
+  ],
+  "latest_native_fix_delivery": {
+    "date": "2026-10-22",
+    "configuration": "config/goal3_minimal_native_fix.json",
+    "evidence": "output/integration/goal3_macro_minfix_20261022_01/interface-closure-final-checks.json",
+    "documentation": "docs/GOAL3宏观最小修复与接线收尾.md",
+    "accepted_contact_ids": [
+      "N01",
+      "N02",
+      "N11",
+      "N12"
+    ],
+    "goal4_started": false
+  }
+}

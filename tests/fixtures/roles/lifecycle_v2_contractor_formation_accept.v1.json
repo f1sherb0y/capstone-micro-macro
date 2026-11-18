@@ -1,0 +1,33 @@
+{
+  "schema_version": "lifecycle-input-case.v1",
+  "scenario_id": "V2",
+  "case_id": "v2-contractor-formation-accept",
+  "origin": "synthetic",
+  "run_id": "synthetic-v2-contractor-formation-accept-01",
+  "status": "input_prepared_execution_pending",
+  "steps": [
+    {
+      "step_id": "contractor-formation-accept",
+      "action_id": "CONTRACTOR-A04",
+      "operation_id": "v2-contractor-formation-accept-01",
+      "expected_kind": "completed",
+      "expected_choice": "accept",
+      "host_factory": "integration.contractor_role_contract_host:build_role_host",
+      "invocation_path": "integration/examples/role_contract_contractor_formation_accept_invocation.json",
+      "invocation_file_sha256": "56f673c04cab361ca15ecaabcab4da9709b9591af1ed68f7663c4d332aa43cbe",
+      "configuration_path": "integration/examples/role_contract_contractor_formation_accept_host.json",
+      "configuration_file_sha256": "a44f0e2376772561cd557006cf1ced25560d824750949206eefb97087c0d275e",
+      "origin_path": "integration/examples/role_contract_contractor_formation_accept_origin.json"
+    }
+  ],
+  "remaining_requirements": [
+    "Actual independent accept/revise/reject runs and complete V2 chain.",
+    "Formal source factories, reception validators and actual final agreement signing/effectiveness evidence."
+  ],
+  "limitations": [
+    "Independent synthetic accept input only; actual processor and methods have not been run.",
+    "Owner acceptance and bid submission are configured assumptions without original formal result journals or confirmed receipts.",
+    "Acceptance intentions and proposed allocations/receipts do not create signed contracts, resource reservations or payments.",
+    "Full V2 same-run lifecycle and rejection branch remain pending."
+  ]
+}

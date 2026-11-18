@@ -1,0 +1,6 @@
+{
+  "schema_version": "gba-module-host-config.v1",
+  "host_id": "gba-module-host-example",
+  "version": "1",
+  "settings": {}
+}

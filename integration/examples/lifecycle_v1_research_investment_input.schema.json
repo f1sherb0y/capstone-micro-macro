@@ -1,0 +1,258 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "V1 actual QS A13 research reception to Owner A03 investment decision",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "scenario_id",
+    "run_id",
+    "owner_organization_id",
+    "source_mode",
+    "research",
+    "request",
+    "configuration"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "lifecycle-v1-research-investment-input.v1"
+    },
+    "scenario_id": {
+      "const": "V1"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "owner_organization_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "source_mode": {
+      "const": "formal"
+    },
+    "assembly_sources": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["owner_input", "receipt"],
+      "description": "Original Owner input and received research receipt retained by the input builder and checked before and after execution. Omitted only for legacy inline inputs.",
+      "properties": {
+        "owner_input": {"$ref": "#/$defs/assembly_source"},
+        "receipt": {"$ref": "#/$defs/assembly_source"}
+      }
+    },
+    "research": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "result_path",
+        "result_file_sha256",
+        "identity",
+        "record_sha256",
+        "result_sha256",
+        "reading_sha256",
+        "selection",
+        "receipt_sha256",
+        "option_links_sha256"
+      ],
+      "properties": {
+        "result_path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S",
+          "description": "Original formal QS A13 role-contract result.json, absolute or relative to this input file."
+        },
+        "result_file_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "identity": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "run_id",
+            "organization_id",
+            "role",
+            "action_id",
+            "request_id",
+            "purpose",
+            "input_sha256",
+            "context_sha256",
+            "versions"
+          ],
+          "properties": {
+            "run_id": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "organization_id": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "role": {
+              "const": "QS"
+            },
+            "action_id": {
+              "const": "QS-A13"
+            },
+            "request_id": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "purpose": {
+              "const": "action"
+            },
+            "input_sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "context_sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "versions": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "client",
+                "skill",
+                "prompt",
+                "contract",
+                "method",
+                "model",
+                "strategy"
+              ],
+              "properties": {
+                "client": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "skill": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "prompt": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "contract": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "method": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "model": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "strategy": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                }
+              }
+            }
+          }
+        },
+        "record_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "result_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "reading_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "selection": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "source_task_sha256",
+            "receipt_ref"
+          ],
+          "properties": {
+            "source_task_sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "receipt_ref": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "kind",
+                "id",
+                "version"
+              ],
+              "properties": {
+                "kind": {
+                  "const": "ResearchComparisonReceipt"
+                },
+                "id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "version": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          }
+        },
+        "receipt_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$",
+          "description": "Digest of the complete actually received ResearchComparisonReceipt projection."
+        },
+        "option_links_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$",
+          "description": "Digest of the ordered exact research-to-investment option-link projections."
+        }
+      }
+    },
+    "request": {
+      "type": "object",
+      "description": "Distinct current formal Owner A03 invocation with complete independently supplied investment inputs. Limited QS research does not supply a lifecycle cash forecast or an investment authorization."
+    },
+    "configuration": {
+      "type": "object",
+      "description": "Owner RoleContractHostConfiguration with research_comparison_inputs selecting exactly research.selection. Application supplies original SavedQSResearch, actual receipt, delegated authority, exact option mapping and independent reception validation."
+    }
+  },
+  "$defs": {
+    "assembly_source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "file_sha256"],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S",
+          "description": "Absolute path or path relative to the assembled input file."
+        },
+        "file_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    }
+  }
+}

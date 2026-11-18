@@ -1,0 +1,86 @@
+{
+  "schema_version": "role-contract-fixture-origin.v1",
+  "origin": "synthetic",
+  "scenario_id": "V2",
+  "case_id": "v2-linked-formation-accept",
+  "action_id": "CONTRACTOR-A04",
+  "run_id": "synthetic-v2-procurement-publication-01",
+  "source_note": "Independent synthetic same-run Contractor A04 acceptance input aligned with original A02 sources and unexecuted Owner A10 final terms. Native Bid/accepted SubmissionExecution and Owner PartyAcceptance are explicitly assumed, not original completed actions or actual reception. Current Contractor capacity/cash are independent supplied snapshots; no Owner budget projection is copied. Retain pending acceptance/signature and effectiveness conditions. Original A04 must calculate capacity and cash feasibility; no contract, signature, reservation or formal receipt is supplied.",
+  "functional_status": "unverified",
+  "expected_result": {
+    "kind": "completed",
+    "choice": "accept"
+  },
+  "expected_output_refs": {
+    "offer_ref": {
+      "kind": "ContractOffer",
+      "id": "v2-linked-formation-offer",
+      "version": "1"
+    },
+    "terms_ref": {
+      "kind": "ContractTerms",
+      "id": "v2-owner-award-final-terms",
+      "version": "1"
+    },
+    "proposed_allocations": [
+      {
+        "resource_ref": {
+          "kind": "ResourcePool",
+          "id": "v2-contractor-bid-crew",
+          "version": "1"
+        },
+        "task_scope_ref": {
+          "kind": "project",
+          "ref": {
+            "kind": "Project",
+            "id": "v2-owner-publication-project",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "v2-owner-publication-work",
+              "version": "1"
+            }
+          ]
+        },
+        "window_ref": {
+          "kind": "TimeWindow",
+          "id": "v2-contractor-bid-work-slot",
+          "version": "1"
+        },
+        "quantity": {
+          "value": "2",
+          "unit": "crew",
+          "basis_ref": {
+            "kind": "Evidence",
+            "id": "v2-contractor-bid-facts",
+            "version": "1"
+          }
+        }
+      }
+    ]
+  },
+  "agreement_sha256": "74d80515753e193a76b3a2be9dae724b853f22c96340521c410cc3926beb0b28",
+  "basis_sha256": "a313f3148c29fbd048fed6a308b5a3f9ec8c6ca8a6969ec1e324bc2dafb691fb",
+  "artifact_sha256": {
+    "role_contract_contractor_linked_formation_invocation.json": "4c8e73375237e1cf7f9339456de7e578fbcddf13e92a44cf43ebd9fb49ba8726",
+    "role_contract_contractor_linked_formation_host.json": "72c9b626fdf3ef4223a64513f82eac25ec4d21d35c10e19f34cf9cdd79e71431"
+  },
+  "source_artifacts": {
+    "integration/examples/role_contract_contractor_bid_invocation.json": "5b6a5a6f1eba10911c5a58a6b8cdc378600a4292569300eb8e97f9d4550711ea",
+    "integration/examples/role_contract_contractor_bid_host.json": "6a30df092f46bdcc8c4a313cdcce42ba67573932b7c3f8f5600989879e958827",
+    "integration/examples/role_contract_contractor_bid_origin.json": "bd60726bda80eaa12bb0ed899cef112916fe6f46bd7d4ca4a03d3f8afb030eb0",
+    "integration/examples/role_contract_owner_award_invocation.json": "37a1e77af0aca70e6d1c31e33fdd0ed1993052a588c3fe81bea863d644eb1aa6",
+    "integration/examples/role_contract_owner_award_host.json": "96274c6edf585c1d41e103038c167fcce8aed1218dd21c6903b1d1b1f6e52b8f",
+    "integration/examples/role_contract_owner_award_origin.json": "8db8ce9bdfceb120d5d326eaab2f025987ee8b965a0300b074fcacaf3a833a83",
+    "integration/examples/role_contract_contractor_formation_accept_invocation.json": "56f673c04cab361ca15ecaabcab4da9709b9591af1ed68f7663c4d332aa43cbe",
+    "integration/examples/role_contract_contractor_formation_accept_host.json": "a44f0e2376772561cd557006cf1ced25560d824750949206eefb97087c0d275e",
+    "integration/examples/role_contract_contractor_formation_accept_origin.json": "16f175ce947f87c6ae25035aa5d8fcc7b9e635f738793e6f2bccc1e4ded2973d"
+  },
+  "limitations": [
+    "Native Bid/submission and Owner acceptance are independent synthetic assumed facts, not saved A02/A10 results or real reception.",
+    "Same-run identity and exact terms do not prove actual registration or independent signatures; received_award_inputs is not configured.",
+    "Original A04/cash/capacity methods and schemas have not run; expected agreement/output are metadata only."
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Actual Owner draw request received for Bank approval input",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "scenario_id",
+    "run_id",
+    "bank_organization_id",
+    "request",
+    "configuration",
+    "sources"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "lifecycle-v5-owner-draw-bank-input.v1"
+    },
+    "scenario_id": {
+      "const": "V5"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "request": {
+      "type": "object",
+      "description": "Formal current Bank A06 RoleContractInvocation with an actual received draw request."
+    },
+    "configuration": {
+      "type": "object",
+      "description": "BankRoleContractSettings with owner_draw_request_inputs selecting original Owner A06 draw_request task, receipt_ref and receipt_sha256 of typed OwnerDrawRequestReceiptView."
+    },
+    "sources": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "owner_result",
+        "bank_input",
+        "reception"
+      ],
+      "properties": {
+        "owner_result": {
+          "$ref": "#/$defs/sourceFile"
+        },
+        "bank_input": {
+          "$ref": "#/$defs/sourceFile"
+        },
+        "reception": {
+          "$ref": "#/$defs/sourceFile"
+        }
+      }
+    },
+    "bank_organization_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    }
+  },
+  "$defs": {
+    "sourceFile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "file_sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "file_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    }
+  }
+}

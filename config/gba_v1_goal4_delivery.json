@@ -1,0 +1,687 @@
+{
+  "schema_version": "gba-v1-goal4-delivery.v1",
+  "date": "2026-10-23",
+  "overall_goal4_complete": true,
+  "original_plan_complete": false,
+  "configuration": "config/goal4_integration.json",
+  "entry": "integration.verify_goal4_integration",
+  "evidence_root": "output/integration/goal4_integration_20261023_03",
+  "documentation": "docs/GOAL4整体联调与运行交付.md",
+  "operation_contracts": [
+    {
+      "role": "Architect",
+      "operation": "consider_appointment",
+      "status": "actual_records_verified",
+      "macro_input": [
+        "project",
+        "policy",
+        "macro_environment",
+        "required_resource",
+        "prior_fit"
+      ],
+      "micro_handler": "integration/professional_intake_native.py",
+      "return_to_macro": "Original role-specific acceptance/refusal proposal and final architect_appointment_acceptance; same micro result and native scope",
+      "feedback_consumer": "Actual appointment_decision -> own A12; accepted terms -> original OWN-A04; selected team -> own A03/A12 and later own A02",
+      "evidence": {
+        "file": "reused-business-checks.json",
+        "case": "professional"
+      },
+      "original_evidence": "output/integration/goal3c_professional_20261018_01/checks.json",
+      "actual_record_refs": [
+        "output/integration/goal4_integration_20261023_03/coverage-checks.json#/nonmonthly_actual_links/0"
+      ]
+    },
+    {
+      "role": "Engineer",
+      "operation": "consider_appointment",
+      "status": "actual_records_verified",
+      "macro_input": [
+        "project",
+        "required_resource",
+        "prior_fit"
+      ],
+      "micro_handler": "integration/professional_intake_native.py",
+      "return_to_macro": "Original role-specific acceptance/refusal proposal and final engineer_appointment_acceptance; same micro result and native scope",
+      "feedback_consumer": "Actual appointment_decision -> own A12; accepted terms -> original OWN-A04; selected team -> own A03/A12 and later own A02",
+      "evidence": {
+        "file": "reused-business-checks.json",
+        "case": "professional"
+      },
+      "original_evidence": "output/integration/goal3c_professional_20261018_01/checks.json",
+      "actual_record_refs": [
+        "output/integration/goal4_integration_20261023_03/coverage-checks.json#/nonmonthly_actual_links/1"
+      ]
+    },
+    {
+      "role": "QS",
+      "operation": "consider_appointment",
+      "status": "actual_records_verified",
+      "macro_input": [
+        "project",
+        "policy",
+        "macro_environment",
+        "required_resource",
+        "prior_fit"
+      ],
+      "micro_handler": "integration/professional_intake_native.py",
+      "return_to_macro": "Original role-specific acceptance/refusal proposal and final qs_appointment_acceptance; same micro result and native scope",
+      "feedback_consumer": "Actual appointment_decision -> own A12; accepted terms -> original OWN-A04; selected team -> own A03/A12 and later own A02",
+      "evidence": {
+        "file": "reused-business-checks.json",
+        "case": "professional"
+      },
+      "original_evidence": "output/integration/goal3c_professional_20261018_01/checks.json",
+      "actual_record_refs": [
+        "output/integration/goal4_integration_20261023_03/coverage-checks.json#/nonmonthly_actual_links/2"
+      ]
+    },
+    {
+      "role": "Bank",
+      "operation": "consider_financing",
+      "status": "actual_records_verified",
+      "macro_input": [
+        "requested_amount",
+        "borrower_financial_capacity",
+        "project_risk",
+        "financing_condition_index"
+      ],
+      "micro_handler": "integration/bank_financing_native.py",
+      "return_to_macro": "Original approve/reject proposal and final bank_project_financing; authenticated micro task/result SHA",
+      "feedback_consumer": "bank_financing_decision -> original OWN-A05 disclosed offer; earlier project_financing_selected -> own original BANK-A01/A04",
+      "evidence": {
+        "file": "business-final-checks.json",
+        "case": "fresh_financing"
+      },
+      "original_evidence": "output/integration/goal3b_financing_20261018_01/checks.json",
+      "actual_record_refs": [
+        "output/integration/goal4_integration_20261023_03/coverage-checks.json#/nonmonthly_actual_links/3"
+      ]
+    },
+    {
+      "role": "Government",
+      "operation": "consider_review_assignment",
+      "status": "actual_records_verified",
+      "macro_input": [
+        "project",
+        "required_resource"
+      ],
+      "micro_handler": "integration/government_intake_native.py",
+      "return_to_macro": "Exact original micro result bound to original proposal and final government_review_assignment; native accepted/deferred regulatory_review_decision.",
+      "feedback_consumer": "Actual own regulatory_review_decision -> later own GOV-A02 and authorized GOV-A04/A07 assignment source.",
+      "evidence": {
+        "file": "reused-business-checks.json",
+        "case": "regulatory_design"
+      },
+      "original_evidence": "output/integration/goal3d_regulatory_20261018_01/checks.json",
+      "actual_record_refs": [
+        "output/integration/goal4_integration_20261023_03/coverage-checks.json#/nonmonthly_actual_links/4"
+      ]
+    },
+    {
+      "role": "Supplier",
+      "operation": "consider_supply_order",
+      "status": "actual_records_verified",
+      "macro_input": [
+        "project",
+        "contractor_id",
+        "required_resource",
+        "prior_fit"
+      ],
+      "micro_handler": "integration/supplier_order_native.py",
+      "return_to_macro": "Same original result bound to consider_supply_order proposal and final supplier_order_acceptance; native supplier_order_decision accepted/declined.",
+      "feedback_consumer": "Own actual supplier_order_decision/supplier_selected -> later Supplier A01-A04; actual quote refusal changes later original A01 policy under declared threshold. Current actual contract_awarded consumed by all four stages.",
+      "evidence": {
+        "file": "reused-business-checks.json",
+        "case": "procurement_accepted"
+      },
+      "original_evidence": "output/integration/goal3e_procurement_20261018_01/checks.json",
+      "actual_record_refs": [
+        "output/integration/goal4_integration_20261023_03/coverage-checks.json#/nonmonthly_actual_links/5"
+      ]
+    },
+    {
+      "role": "Contractor",
+      "operation": "consider_tender",
+      "status": "actual_records_verified",
+      "macro_input": [
+        "project",
+        "policy",
+        "macro_environment",
+        "attractiveness"
+      ],
+      "micro_handler": "integration/contractor_tender_request_trigger.py",
+      "return_to_macro": "proposal and final tender_decision",
+      "feedback_consumer": "bid_submitted/bid_declined -> later original A01/A02; A04 uses actual selected bid",
+      "evidence": {
+        "file": "reused-business-checks.json",
+        "case": "invitation_evaluation_award"
+      },
+      "original_evidence": "output/integration/goal3a_20261018_05/checks.json",
+      "actual_record_refs": [
+        "output/integration/goal4_integration_20261023_03/coverage-checks.json#/nonmonthly_actual_links/6"
+      ]
+    },
+    {
+      "role": "Government",
+      "operation": "decide_approval",
+      "status": "actual_records_verified",
+      "macro_input": [
+        "project",
+        "policy"
+      ],
+      "micro_handler": "integration/government_approval_native.py",
+      "return_to_macro": "Original government_design_approval or government_completion_approval approve/request_revision, bound to same A07 result and exact proposal.",
+      "feedback_consumer": "Actual approval_approved / quality_issue / project_completed -> strictly later own A12 -> A04/A07 private Evidence; agent-free completion requires actual assignment/final/engagement authority.",
+      "evidence": {
+        "file": "reused-business-checks.json",
+        "case": "regulatory_completion"
+      },
+      "original_evidence": "output/integration/goal3d_regulatory_20261018_01/checks.json",
+      "actual_record_refs": [
+        "output/integration/goal4_integration_20261023_03/coverage-checks.json#/nonmonthly_actual_links/7"
+      ]
+    },
+    {
+      "role": "Owner",
+      "operation": "decide_contract_award",
+      "status": "actual_records_verified",
+      "macro_input": [
+        "project",
+        "preferred_bid"
+      ],
+      "micro_handler": "integration/owner_award_native.py",
+      "return_to_macro": "proposal and final owner_contract_award",
+      "feedback_consumer": "owner_contract_award_decision -> native signature and later own A10 history",
+      "evidence": {
+        "file": "reused-business-checks.json",
+        "case": "invitation_evaluation_award"
+      },
+      "original_evidence": "output/integration/goal3a_20261018_05/checks.json",
+      "actual_record_refs": [
+        "output/integration/goal4_integration_20261023_03/coverage-checks.json#/nonmonthly_actual_links/8"
+      ]
+    },
+    {
+      "role": "Contractor",
+      "operation": "decide_contract_terms",
+      "status": "actual_records_verified",
+      "macro_input": [
+        "project",
+        "preferred_bid"
+      ],
+      "micro_handler": "integration/contractor_formation_native.py",
+      "return_to_macro": "proposal and final contract_negotiation",
+      "feedback_consumer": "contract_negotiation_recommendation -> original Owner A10; later own A04 history",
+      "evidence": {
+        "file": "reused-business-checks.json",
+        "case": "invitation_evaluation_award"
+      },
+      "original_evidence": "output/integration/goal3a_20261018_05/checks.json",
+      "actual_record_refs": [
+        "output/integration/goal4_integration_20261023_03/coverage-checks.json#/nonmonthly_actual_links/9"
+      ]
+    },
+    {
+      "role": "Architect",
+      "operation": "decide_monthly_operation",
+      "status": "actual_records_verified",
+      "macro_input": [
+        "macro_environment"
+      ],
+      "micro_handler": "integration/architect_portfolio_native.py",
+      "return_to_macro": "Original bounded proposal/final participation and actual corresponding native monthly operation.",
+      "feedback_consumer": "Later own original A01/A12 reads same earlier native event and exact private result; portfolio entries are adopted only after original execution.",
+      "evidence": {
+        "file": "monthly-reuse-checks.json",
+        "role": "Architect",
+        "subaction_count": 4
+      },
+      "original_evidence": "output/integration/goal3c_portfolio_20261018_01/checks.json",
+      "actual_record_refs": [
+        "output/integration/goal4_integration_20261023_03/monthly-reuse-checks.json#/subactions/8",
+        "output/integration/goal4_integration_20261023_03/monthly-reuse-checks.json#/subactions/9",
+        "output/integration/goal4_integration_20261023_03/monthly-reuse-checks.json#/subactions/10",
+        "output/integration/goal4_integration_20261023_03/monthly-reuse-checks.json#/subactions/11"
+      ]
+    },
+    {
+      "role": "Bank",
+      "operation": "decide_monthly_operation",
+      "status": "actual_records_verified",
+      "macro_input": [
+        "macro_environment"
+      ],
+      "micro_handler": "integration/bank_monthly_native.py",
+      "return_to_macro": "Each executed monthly subaction has original micro/proposal/final and actual own agent_operation evidence in the per-subaction inventory.",
+      "feedback_consumer": "Actual strictly earlier own monthly results enter later original micro judgments; see per-subaction evidence. No formal credential/stock/legal/cash effect is inferred.",
+      "evidence": {
+        "file": "monthly-reuse-checks.json",
+        "role": "Bank",
+        "subaction_count": 3
+      },
+      "original_evidence": "config/gba_v1_monthly_business_wiring.json",
+      "actual_record_refs": [
+        "output/integration/goal4_integration_20261023_03/monthly-reuse-checks.json#/subactions/5",
+        "output/integration/goal4_integration_20261023_03/monthly-reuse-checks.json#/subactions/6",
+        "output/integration/goal4_integration_20261023_03/monthly-reuse-checks.json#/subactions/7"
+      ]
+    },
+    {
+      "role": "Contractor",
+      "operation": "decide_monthly_operation",
+      "status": "actual_records_verified",
+      "macro_input": [
+        "macro_environment"
+      ],
+      "micro_handler": "integration/contractor_monthly_native.py",
+      "return_to_macro": "Legal original candidate proposal then original final decision carries actual A01 participate/decline; original scheduler executes scan or maintain_operations",
+      "feedback_consumer": "Later own original A01 consumes exact earlier original monthly event and counts actual scan, excluding maintenance and other organizations",
+      "evidence": {
+        "file": "monthly-reuse-checks.json",
+        "role": "Contractor",
+        "subaction_count": 5
+      },
+      "original_evidence": "output/integration/goal3a_monthly_20261018_03/checks.json",
+      "actual_record_refs": [
+        "output/integration/goal4_integration_20261023_03/monthly-reuse-checks.json#/subactions/19",
+        "output/integration/goal4_integration_20261023_03/monthly-reuse-checks.json#/subactions/20",
+        "output/integration/goal4_integration_20261023_03/monthly-reuse-checks.json#/subactions/21",
+        "output/integration/goal4_integration_20261023_03/monthly-reuse-checks.json#/subactions/22",
+        "output/integration/goal4_integration_20261023_03/monthly-reuse-checks.json#/subactions/23"
+      ]
+    },
+    {
+      "role": "Engineer",
+      "operation": "decide_monthly_operation",
+      "status": "actual_records_verified",
+      "macro_input": [
+        "macro_environment"
+      ],
+      "micro_handler": "integration/professional_monthly_native.py",
+      "return_to_macro": "Original scoped micro results drive original bounded monthly proposal/final and actual native activity.",
+      "feedback_consumer": "Later own A01/A12 consumes same authenticated earlier actual operation; N03 A12 applies prior upkeep count to suppress repetition.",
+      "evidence": {
+        "file": "monthly-reuse-checks.json",
+        "role": "Engineer",
+        "subaction_count": 3
+      },
+      "original_evidence": "output/integration/goal3c_monthly_20261018_07/verification.json",
+      "actual_record_refs": [
+        "output/integration/goal4_integration_20261023_03/monthly-reuse-checks.json#/subactions/12",
+        "output/integration/goal4_integration_20261023_03/monthly-reuse-checks.json#/subactions/13",
+        "output/integration/goal4_integration_20261023_03/monthly-reuse-checks.json#/subactions/14"
+      ]
+    },
+    {
+      "role": "Government",
+      "operation": "decide_monthly_operation",
+      "status": "actual_records_verified",
+      "macro_input": [
+        "macro_environment"
+      ],
+      "micro_handler": "integration/government_monthly_native.py",
+      "return_to_macro": "Each executed monthly subaction has original micro/proposal/final and actual own agent_operation evidence in the per-subaction inventory.",
+      "feedback_consumer": "Actual strictly earlier own monthly results enter later original micro judgments; see per-subaction evidence. No formal credential/stock/legal/cash effect is inferred.",
+      "evidence": {
+        "file": "monthly-reuse-checks.json",
+        "role": "Government",
+        "subaction_count": 4
+      },
+      "original_evidence": "config/gba_v1_monthly_business_wiring.json",
+      "actual_record_refs": [
+        "output/integration/goal4_integration_20261023_03/monthly-reuse-checks.json#/subactions/28",
+        "output/integration/goal4_integration_20261023_03/monthly-reuse-checks.json#/subactions/29",
+        "output/integration/goal4_integration_20261023_03/monthly-reuse-checks.json#/subactions/30",
+        "output/integration/goal4_integration_20261023_03/monthly-reuse-checks.json#/subactions/31"
+      ]
+    },
+    {
+      "role": "Owner",
+      "operation": "decide_monthly_operation",
+      "status": "actual_records_verified",
+      "macro_input": [
+        "macro_environment"
+      ],
+      "micro_handler": "integration/owner_monthly_strategy.py",
+      "return_to_macro": "Each delivered own contact returns through original monthly proposal/final and actual own agent_operation; other detailed formal interfaces remain separately blocked.",
+      "feedback_consumer": "Exact own earlier actual event and original micro output are consumed by the next scoped processor. Pipeline feedback gates next original A03 private appetite; strategy feedback supplies actual adopted comparison criteria.",
+      "evidence": {
+        "file": "monthly-reuse-checks.json",
+        "role": "Owner",
+        "subaction_count": 5
+      },
+      "original_evidence": "output/integration/goal3i_owner_pipeline_20261018_05/checks.json",
+      "actual_record_refs": [
+        "output/integration/goal4_integration_20261023_03/monthly-reuse-checks.json#/subactions/0",
+        "output/integration/goal4_integration_20261023_03/monthly-reuse-checks.json#/subactions/1",
+        "output/integration/goal4_integration_20261023_03/monthly-reuse-checks.json#/subactions/2",
+        "output/integration/goal4_integration_20261023_03/monthly-reuse-checks.json#/subactions/3",
+        "output/integration/goal4_integration_20261023_03/monthly-reuse-checks.json#/subactions/4"
+      ]
+    },
+    {
+      "role": "QS",
+      "operation": "decide_monthly_operation",
+      "status": "actual_records_verified",
+      "macro_input": [
+        "macro_environment"
+      ],
+      "micro_handler": "integration/qs_monthly_estimation.py",
+      "return_to_macro": "Original legal proposals and final responses carry exact micro participation; original monthly scheduler executes each bounded operation or maintain_operations",
+      "feedback_consumer": "Later own source constraints, market analysis and estimation review consume the same actually executed prior own contact",
+      "evidence": {
+        "file": "monthly-reuse-checks.json",
+        "role": "QS",
+        "subaction_count": 4
+      },
+      "original_evidence": [
+        "output/integration/goal3c_monthly_20261018_07/verification.json",
+        "output/integration/goal3c_qs_cost_market_20261018_03/checks.json",
+        "output/integration/goal3c_qs_estimation_20261018_03/checks.json"
+      ],
+      "actual_record_refs": [
+        "output/integration/goal4_integration_20261023_03/monthly-reuse-checks.json#/subactions/15",
+        "output/integration/goal4_integration_20261023_03/monthly-reuse-checks.json#/subactions/16",
+        "output/integration/goal4_integration_20261023_03/monthly-reuse-checks.json#/subactions/17",
+        "output/integration/goal4_integration_20261023_03/monthly-reuse-checks.json#/subactions/18"
+      ]
+    },
+    {
+      "role": "Supplier",
+      "operation": "decide_monthly_operation",
+      "status": "actual_records_verified",
+      "macro_input": [
+        "macro_environment"
+      ],
+      "micro_handler": "See per-subaction original hosts in config/gba_v1_monthly_business_wiring.json",
+      "return_to_macro": "For executed entries only, exact original proposal/final hash plus actual own agent_operation; all other mappings remain blocked.",
+      "feedback_consumer": "Each executed subaction consumes strictly earlier own authenticated actual monthly history and its original private result.",
+      "evidence": {
+        "file": "monthly-reuse-checks.json",
+        "role": "Supplier",
+        "subaction_count": 4
+      },
+      "original_evidence": "config/gba_v1_monthly_business_wiring.json",
+      "actual_record_refs": [
+        "output/integration/goal4_integration_20261023_03/monthly-reuse-checks.json#/subactions/24",
+        "output/integration/goal4_integration_20261023_03/monthly-reuse-checks.json#/subactions/25",
+        "output/integration/goal4_integration_20261023_03/monthly-reuse-checks.json#/subactions/26",
+        "output/integration/goal4_integration_20261023_03/monthly-reuse-checks.json#/subactions/27"
+      ]
+    },
+    {
+      "role": "QS",
+      "operation": "evaluate_bid",
+      "status": "actual_records_verified",
+      "macro_input": [
+        "bid",
+        "contractor",
+        "project",
+        "policy",
+        "prior_fit"
+      ],
+      "micro_handler": "integration/qs_bid_native.py",
+      "return_to_macro": "evaluation_score and final per-bid approval",
+      "feedback_consumer": "actual evaluated bid -> Owner review; evaluation outcome -> QS-A12",
+      "evidence": {
+        "file": "reused-business-checks.json",
+        "case": "invitation_evaluation_award"
+      },
+      "original_evidence": "output/integration/goal3a_20261018_05/checks.json",
+      "actual_record_refs": [
+        "output/integration/goal4_integration_20261023_03/coverage-checks.json#/nonmonthly_actual_links/10"
+      ]
+    },
+    {
+      "role": "Owner",
+      "operation": "evaluate_project_opportunity",
+      "status": "actual_records_verified",
+      "macro_input": [
+        "opportunity",
+        "macro_environment",
+        "policy",
+        "active_project_count",
+        "target_pressure"
+      ],
+      "micro_handler": "integration.owner_monthly_pipeline:OwnerMonthlyPipelineApplication",
+      "return_to_macro": "Actual original A03 invest/reject returns through unchanged original proposal/final. Original core selects and creates actual projects; positive individual candidates are not all treated as created.",
+      "feedback_consumer": "Actual original candidate evaluations feed monthly internal pipeline review. Its confirmed original native execution gates the next original A03 private appetite.",
+      "evidence": {
+        "file": "monthly-reuse-checks.json",
+        "case": "monthly_pipeline"
+      },
+      "original_evidence": "output/integration/goal3i_owner_pipeline_20261018_05/checks.json",
+      "actual_record_refs": [
+        "output/integration/goal4_integration_20261023_03/coverage-checks.json#/nonmonthly_actual_links/11"
+      ]
+    },
+    {
+      "role": "Owner",
+      "operation": "select_appointment",
+      "status": "actual_records_verified",
+      "macro_input": [
+        "candidates",
+        "purpose"
+      ],
+      "micro_handler": "integration/owner_commission_native.py",
+      "return_to_macro": "Original select_architect/qs/engineer proposal plus final owner_select_* selected_agent_id; reject_all retains no selection",
+      "feedback_consumer": "Native consultant_team_appointed and selected_* -> selected provider A03/A12; own later OWN-A04 exact history",
+      "evidence": {
+        "file": "reused-business-checks.json",
+        "case": "professional"
+      },
+      "original_evidence": "output/integration/goal3c_professional_20261018_01/checks.json",
+      "actual_record_refs": [
+        "output/integration/goal4_integration_20261023_03/coverage-checks.json#/nonmonthly_actual_links/12"
+      ]
+    },
+    {
+      "role": "Owner",
+      "operation": "select_financing_offer",
+      "status": "actual_records_verified",
+      "macro_input": [
+        "offers"
+      ],
+      "micro_handler": "integration/owner_financing_native.py",
+      "return_to_macro": "Explicit owner_equity / null selected_bank_id is a valid accepted native choice despite actual Bank candidates.",
+      "feedback_consumer": "Real project_financing_selected owner_equity -> strictly later own original OWN-A05; no cash transfer inferred. Same EVT000003 / EVT000007 refusal -> next-tick own original OWN-A05, prior refusal count 1 and actual offer priorities 1/2 + 2 = 3/4.",
+      "evidence": {
+        "file": "business-final-checks.json",
+        "case": "fresh_financing"
+      },
+      "original_evidence": "output/integration/goal3_macro_minfix_20261022_01/interface-closure-final-checks.json",
+      "actual_record_refs": [
+        "output/integration/goal4_integration_20261023_03/coverage-checks.json#/nonmonthly_actual_links/13"
+      ]
+    },
+    {
+      "role": "Owner",
+      "operation": "select_preferred_bid",
+      "status": "actual_records_verified",
+      "macro_input": [
+        "evaluated_bids",
+        "agents"
+      ],
+      "micro_handler": "integration/owner_selection_review.py",
+      "return_to_macro": "Bounded final selected_contractor_id crosses shared proposal/final guards; macro commits actual candidate and actual bid price.",
+      "feedback_consumer": "Same EVT000030 bid_evaluation_completed -> strictly later original Contractor A04 and native bilateral signature.",
+      "evidence": {
+        "file": "reused-business-checks.json",
+        "case": "micro_selection"
+      },
+      "original_evidence": "output/integration/goal3_macro_minfix_20261022_01/selection/checks.json",
+      "actual_record_refs": [
+        "output/integration/goal4_integration_20261023_03/coverage-checks.json#/nonmonthly_actual_links/14"
+      ]
+    },
+    {
+      "role": "Contractor",
+      "operation": "select_supplier",
+      "status": "actual_records_verified",
+      "macro_input": [
+        "offers"
+      ],
+      "micro_handler": "integration/contractor_supply_native.py",
+      "return_to_macro": "Same selected_supplier_id in original select_supplier proposal and contractor_supplier_selection final; original engine stores selection/flag/ACTIVE normalized engagement. Mobilization and construction transition occur in a later native call. N05 specific wait maps to accepted=false/final=false; native engine records actual failed selection and 15-day delay, without a supplier.",
+      "feedback_consumer": "Actual supplier_selected -> own later A05; earlier actual selection adjusts A priority 0+2*1=2 vs B=1 and changes selection. Same actual contract_awarded also consumed by current A05. Same negative A05/native outcome -> existing private failure follow-up and next-tick original A05 repeated-failure dependency judgment.",
+      "evidence": {
+        "file": "reused-business-checks.json",
+        "case": "procurement_refused"
+      },
+      "original_evidence": "output/integration/goal3e_closeout_20261019_01/accepted/checks.json",
+      "actual_record_refs": [
+        "output/integration/goal4_integration_20261023_03/coverage-checks.json#/nonmonthly_actual_links/15"
+      ]
+    },
+    {
+      "role": "Owner",
+      "operation": "select_tender_invitees",
+      "status": "actual_records_verified",
+      "macro_input": [
+        "candidates",
+        "project",
+        "policy",
+        "macro_environment",
+        "limit"
+      ],
+      "micro_handler": "integration/owner_invitation_native.py",
+      "return_to_macro": "selected_agent_ids in proposal and final decision",
+      "feedback_consumer": "tender_opened -> original Contractor A01/A02",
+      "evidence": {
+        "file": "reused-business-checks.json",
+        "case": "invitation_evaluation_award"
+      },
+      "original_evidence": "output/integration/goal3a_20261018_05/checks.json",
+      "actual_record_refs": [
+        "output/integration/goal4_integration_20261023_03/coverage-checks.json#/nonmonthly_actual_links/16"
+      ]
+    }
+  ],
+  "monthly_subactions": 32,
+  "lifecycle_families": [
+    {
+      "family": "opportunity",
+      "status": "actual_records_verified",
+      "verification_case": "monthly_pipeline",
+      "handler": "integration/owner_opportunity_native.py",
+      "feedback_consumer": "Owner A03 / monthly pipeline and strategy consumers"
+    },
+    {
+      "family": "financing",
+      "status": "actual_records_verified",
+      "verification_case": "fresh_financing",
+      "handler": "integration/owner_financing_native.py",
+      "feedback_consumer": "Actual bank/equity/refusal outcomes -> own later original A05; selected-bank A01/A04/A05 links retained from prior evidence."
+    },
+    {
+      "family": "professional_appointment",
+      "status": "actual_records_verified",
+      "verification_case": "professional",
+      "handler": "integration/professional_intake_feedback.py",
+      "feedback_consumer": "Own original A03/A12 and later A02"
+    },
+    {
+      "family": "design",
+      "status": "actual_records_verified",
+      "verification_case": "design_higher",
+      "handler": "integration/professional_design_feedback.py",
+      "feedback_consumer": "Own original professional A12; archive remains macro mechanism"
+    },
+    {
+      "family": "regulatory",
+      "status": "actual_records_verified",
+      "verification_case": "regulatory_design",
+      "handler": "integration/government_native_outcome_query.py",
+      "feedback_consumer": "Own original regulatory feedback and later original decisions; no formal permit"
+    },
+    {
+      "family": "tender_clarification",
+      "status": "actual_records_verified",
+      "verification_case": "clarification",
+      "handler": "integration/bindings/gba_v1_tender_clarification.py",
+      "feedback_consumer": "Original Contractor A01/A02 and QS authorized clarification evaluation"
+    },
+    {
+      "family": "bid_evaluation_award_signature",
+      "status": "actual_records_verified",
+      "verification_case": "fresh_tender_and_micro_selection",
+      "handler": "integration/owner_selection_review.py",
+      "feedback_consumer": "Actual bounded micro selection -> native commitment and original Contractor A04; prior QS/Owner A10/signature-to-supply links retained."
+    },
+    {
+      "family": "procurement",
+      "status": "actual_records_verified",
+      "verification_case": "fresh_tender_and_procurement_refused",
+      "handler": "integration/contractor_supply_native.py",
+      "feedback_consumer": "Own Supplier A01-A04 / Contractor A05 and private failed-selection follow-up"
+    },
+    {
+      "family": "supply_progress_delay",
+      "status": "actual_records_verified",
+      "verification_case": "supply_delay",
+      "handler": "integration/supplier_monthly_inventory.py",
+      "feedback_consumer": "Own original Supplier A05 and exact later executed monthly review"
+    },
+    {
+      "family": "construction_inspection",
+      "status": "actual_records_verified",
+      "verification_case": "fresh_construction",
+      "handler": "integration/professional_construction_feedback.py",
+      "feedback_consumer": "Own original Architect/Engineer A12 and subsequent actual monthly result consumer"
+    },
+    {
+      "family": "site_safety",
+      "status": "actual_records_verified",
+      "verification_case": "safety",
+      "handler": "integration/professional_construction_feedback.py",
+      "feedback_consumer": "Own original A12 safety review threshold and later actual review consumption"
+    },
+    {
+      "family": "variation",
+      "status": "actual_records_verified",
+      "verification_case": "fresh_construction",
+      "handler": "integration/professional_construction_feedback.py",
+      "feedback_consumer": "Own original Architect/Engineer A12 open/resolved judgment; no formal change approval"
+    },
+    {
+      "family": "suspension",
+      "status": "actual_records_verified",
+      "verification_case": "suspension",
+      "handler": "integration/bindings/gba_v1_construction_suspensions.py",
+      "feedback_consumer": "Later own original Contractor A04 changes acceptance constraint"
+    },
+    {
+      "family": "payment",
+      "status": "actual_records_verified",
+      "verification_case": "payment_delayed",
+      "handler": "integration/bindings/gba_v1_progress_payments.py",
+      "feedback_consumer": "Existing own private payment review and later original Contractor terms; no cash receipt"
+    },
+    {
+      "family": "final_account",
+      "status": "actual_records_verified",
+      "verification_case": "fresh_tender",
+      "handler": "integration/native_lifecycle_actions.py",
+      "feedback_consumer": "Original QS feedback and later Owner private communication; no obligation discharge"
+    }
+  ],
+  "required_blockers": [],
+  "pending_joint_validation": [],
+  "new_scenarios": [
+    "tender-full",
+    "financing-normal",
+    "financing-equity",
+    "financing-limited_cash",
+    "construction"
+  ],
+  "macro_changes_in_goal4": [],
+  "focused_checks": {
+    "tests": 30,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "retained_native_diagnostic_rejections": 6,
+  "detailed_private_waits_retained": "Three historical procurement follow-up tasks remain waiting for detailed sources; their original negative selections and failure feedback are verified. No detailed inquiry delivery or order execution inferred.",
+  "boundary": "Current macro business operation/event scope; 25/32/15 overlap. Full 106 actions/438 branches, physical receipts, formal certificates, cash clearance and research experiments remain outside this completion."
+}

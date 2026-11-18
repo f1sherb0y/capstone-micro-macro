@@ -1,0 +1,9 @@
+{
+  "schema_version": "tender-clarification-loop.v1",
+  "run_id": "goal3a-clarification-loop",
+  "source_note": "Explicit synthetic initial commercial/quantity/authority assumptions. Questions, QS-A05 publication, replies, revised screening, bids and feedback must be produced by the unchanged native runtime; no prefilled decisions.",
+  "builder_options": {
+    "continue_clarification": true,
+    "clarification_publication_permitted": true
+  }
+}

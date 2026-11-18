@@ -1,0 +1,35 @@
+{
+  "schema_version": "role-contract-fixture-origin.v1",
+  "origin": "synthetic",
+  "scenario_id": "V2",
+  "case_id": "v2-contractor-formation-reject",
+  "action_id": "CONTRACTOR-A04",
+  "run_id": "synthetic-v2-contractor-formation-reject-01",
+  "source_note": "Synthetic independent Contractor A04 rejection: parties, authority, bid and final agreement are invented. The Contractor explicitly rejects the offered price/terms. Partial capacity and unknown funding are retained; this is an explicit decision input, with no computed refusal, submitted rejection, signature, contract or reservation.",
+  "functional_status": "unverified",
+  "expected_result": {
+    "kind": "completed",
+    "choice": "reject"
+  },
+  "basis_sha256": "d707c159a67c1de58d74cc217ea4f19115912b0aa0c0f395df44e3aab3fa5635",
+  "agreement_sha256": "e92a5e7513f19c3a0d04d36b7f907b11442eba42e6abe26c6b8bb4bd33c28d08",
+  "basis_hash_recipe": "SHA256 canonical UTF-8 JSON of action_input, objects_without_evidence, source_note; sort_keys=True, separators=(comma,colon), ensure_ascii=False.",
+  "agreement_hash_recipe": "Same canonical encoding for original ContractTerms excluding evidence_refs, available_at and effective_window.",
+  "source_artifacts": {
+    "integration/examples/role_contract_contractor_formation_invocation.json": "8fd34f4d3641539eff96af0968ff3075cdd3f0062ceeb65bfcd8774885b4a016",
+    "integration/examples/role_contract_contractor_formation_host.json": "b0094b77694758d7fcdd94d2529839341df362b10eee0a031505a701522b514b"
+  },
+  "artifact_sha256": {
+    "role_contract_contractor_formation_reject_invocation.json": "5c743fe998dc3f28e20ad1352dc69979924e2f460e95d796957a0221a8e964b8",
+    "role_contract_contractor_formation_reject_host.json": "d1057e408ac596a9c56ab5c08c074259694df7237f3e4fdcc215d5bc2748a7c7"
+  },
+  "runtime_dependencies": [
+    "Materialized invocation/configuration JSON and original project code only."
+  ],
+  "limitations": [
+    "One synthetic explicit reject branch; no actual processor result yet.",
+    "Owner acceptance and bid submission remain configured synthetic assumptions, not confirmed formal receipts.",
+    "Partial capacity/unknown funding are not inferred into rejection; profile supplies the independent decision.",
+    "Full same-run V2 chain and native reception/signing/effectiveness evidence remain pending."
+  ]
+}

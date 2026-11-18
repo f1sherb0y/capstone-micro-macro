@@ -1,0 +1,3492 @@
+{
+  "schema_version": "lifecycle-input-case.v1",
+  "scenario_id": "V4",
+  "case_id": "v4-chronological-logistics",
+  "origin": "synthetic",
+  "run_id": "synthetic-v4-production-material-connection",
+  "status": "input_prepared_execution_pending",
+  "source_declaration": {
+    "kind": "explicit_synthetic",
+    "assumptions": [
+      "Explicit synthetic chronological derivative of the pinned original input; preserve its bytes and evidence.",
+      "Production request at 1 with twelve kg reserved for six panels and two machine-hours; native completion must be independently declared by tick 10. Pending quality request at 10, independent recheck/defect closure and dispatch plan at 11, native dispatch at 12, travel [13,16), unload/arrival and receipt inspection at 17, use release/A09 at 18, Contractor material intention at 19.",
+      "Clock windows, grants and observations in downstream inputs shift together by ten ticks. Timing parameters remain declared synthetic assumptions; no action, professional method or native event is executed.",
+      "Passed inspection, closed defect, native release, observed transport and independent receiver stock remain explicit synthetic declarations. Original saved result digests remain absent until original actions are explicitly run and bound.",
+      "CandidateSet version 2 explicitly includes each original supplied TransportRoute with dispatch permission; candidate exposure is a synthetic input declaration, not an executed dispatch, reservation or approval. Original template/derivation hashes retain their historical provenance."
+    ],
+    "configuration_template": {
+      "path": "tests/fixtures/roles/lifecycle_v4_supplier_logistics_inputs.v1.json",
+      "sha256": "b671d435104a594b6f956cecd430e14bdf86ea3a6fd65af35157d7374754633e"
+    },
+    "schema_code_sha256": {
+      "src/actions/contracts/supplier_logistics_objects.py": "1578d64fa46cf0ab0b1b777f87356a3f74f8b35422a8f48a9b8cf2428165836c",
+      "src/actions/roles/supplier_logistics.py": "b534a91893ee1a076ebcf1d08b5ef18f8d2f3075388979e0889fb1b4863c05da"
+    },
+    "receiving_plan_source": {
+      "path": "tests/fixtures/roles/lifecycle_v4_supplier_transported_receiving_inputs.v1.json",
+      "sha256": "0221095a6f37bb9484819ea3eb244922b8710c5045d4fcc241d4d3845ccdbc3d"
+    },
+    "chronological_derivation": {
+      "path": "tests/fixtures/roles/lifecycle_v4_connected_supplier_logistics_inputs.v1.json",
+      "sha256": "7b2ca99ba9ef55fc3bfaae8a1abe3a33a116305db5e90a0bbcbd6b24f3b137af",
+      "downstream_tick_shift": 10
+    }
+  },
+  "steps": [
+    {
+      "step_id": "v4-supplier-logistics",
+      "action_id": "SUPPLIER-A08",
+      "operation_id": "synthetic-original-dispatch-operation",
+      "expected_kind": "completed",
+      "expected_choice": "dispatch",
+      "expected_plans": [
+        {
+          "batch_ref": {
+            "kind": "ProductBatch",
+            "id": "source-cargo",
+            "version": "1"
+          },
+          "quantity": {
+            "value": "4",
+            "unit": "panel",
+            "basis_ref": {
+              "kind": "Evidence",
+              "id": "synthetic-receiving-basis",
+              "version": "1"
+            }
+          },
+          "source_ref": {
+            "kind": "Location",
+            "id": "factory",
+            "version": "1"
+          },
+          "destination_ref": {
+            "kind": "Location",
+            "id": "buyer-site",
+            "version": "1"
+          },
+          "route_ref": {
+            "kind": "TransportRoute",
+            "id": "source-route",
+            "version": "1"
+          },
+          "receiving_window_ref": {
+            "kind": "TimeWindow",
+            "id": "source-receiving-time",
+            "version": "1"
+          },
+          "transport_allocation_refs": [
+            {
+              "kind": "ResourceAllocation",
+              "id": "source-transport-allocation",
+              "version": "1"
+            }
+          ],
+          "condition_evidence_refs": [
+            {
+              "kind": "Evidence",
+              "id": "synthetic-receiving-basis",
+              "version": "1"
+            }
+          ]
+        }
+      ],
+      "expected_order_ref": {
+        "kind": "Order",
+        "id": "receiving-order",
+        "version": "1"
+      },
+      "expected_plan_slice_refs": [
+        [
+          {
+            "kind": "ShipmentSlice",
+            "id": "source-four-panel-slice",
+            "version": "1"
+          }
+        ]
+      ],
+      "expected_receiver_id": "buyer-contractor-org",
+      "output_directory": "output/integration/v4_chronological_logistics_pending_01",
+      "host": "integration.supplier_role_contract_host:build_role_host",
+      "request": {
+        "schema_version": "role-contract-invocation.v1",
+        "context": {
+          "run_id": "synthetic-v4-production-material-connection",
+          "actor_id": "supplier-actor",
+          "function_ref": {
+            "kind": "FunctionAssignment",
+            "id": "v4-supplier-logistics-function",
+            "version": "1"
+          },
+          "authorization_refs": [
+            {
+              "kind": "Authorization",
+              "id": "v4-supplier-logistics-grant",
+              "version": "1"
+            }
+          ],
+          "operation_id": "synthetic-original-dispatch-operation",
+          "contract_ref": {
+            "kind": "ActionContract",
+            "id": "SUPPLIER-A08",
+            "version": "1"
+          },
+          "task_ref": {
+            "kind": "DecisionTask",
+            "id": "synthetic-original-dispatch-operation-task",
+            "version": "1"
+          },
+          "scope": {
+            "kind": "project",
+            "ref": {
+              "kind": "Project",
+              "id": "buyer-project",
+              "version": "1"
+            },
+            "coverage_refs": [
+              {
+                "kind": "WorkScope",
+                "id": "receiving-line-1",
+                "version": "1"
+              }
+            ]
+          },
+          "business_time": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "synthetic-clock",
+              "version": "1"
+            },
+            "offset": 11
+          },
+          "read_token": "synthetic-v4-supplier-logistics:read:1",
+          "visible_refs": [
+            {
+              "kind": "Order",
+              "id": "receiving-order",
+              "version": "1"
+            },
+            {
+              "kind": "OrderLine",
+              "id": "dispatch-line",
+              "version": "1"
+            },
+            {
+              "kind": "TransportTerms",
+              "id": "dispatch-terms",
+              "version": "1"
+            },
+            {
+              "kind": "ProductBatch",
+              "id": "source-cargo",
+              "version": "1"
+            },
+            {
+              "kind": "DispatchableBatch",
+              "id": "dispatchable-cargo",
+              "version": "1"
+            },
+            {
+              "kind": "DispatchRelease",
+              "id": "cargo-release",
+              "version": "1"
+            },
+            {
+              "kind": "DispatchLedger",
+              "id": "cargo-ledger",
+              "version": "1"
+            },
+            {
+              "kind": "ShipmentSlice",
+              "id": "source-four-panel-slice",
+              "version": "1"
+            },
+            {
+              "kind": "LogisticsProfile",
+              "id": "dispatch-profile",
+              "version": "1"
+            },
+            {
+              "kind": "ReceivingWindow",
+              "id": "buyer-availability",
+              "version": "1"
+            },
+            {
+              "kind": "TimeWindow",
+              "id": "source-receiving-time",
+              "version": "1"
+            },
+            {
+              "kind": "TransportRoute",
+              "id": "source-route",
+              "version": "1"
+            },
+            {
+              "kind": "TransportMethod",
+              "id": "synthetic-panel-elapsed-transport",
+              "version": "1"
+            },
+            {
+              "kind": "TransportRequirement",
+              "id": "route-permit",
+              "version": "1"
+            },
+            {
+              "kind": "Location",
+              "id": "factory",
+              "version": "1"
+            },
+            {
+              "kind": "Location",
+              "id": "buyer-site",
+              "version": "1"
+            },
+            {
+              "kind": "TransportSegment",
+              "id": "synthetic-factory-to-buyer-segment",
+              "version": "1"
+            },
+            {
+              "kind": "TransportCapacity",
+              "id": "first-leg-capacity",
+              "version": "1"
+            },
+            {
+              "kind": "ResourceAllocation",
+              "id": "source-transport-allocation",
+              "version": "1"
+            },
+            {
+              "kind": "TransportReservation",
+              "id": "first-leg-reservation",
+              "version": "1"
+            },
+            {
+              "kind": "Evidence",
+              "id": "synthetic-connected-logistics-basis",
+              "version": "1"
+            },
+            {
+              "kind": "ClockProfile",
+              "id": "synthetic-clock",
+              "version": "1"
+            },
+            {
+              "kind": "Project",
+              "id": "buyer-project",
+              "version": "1"
+            },
+            {
+              "kind": "WorkScope",
+              "id": "receiving-line-1",
+              "version": "1"
+            },
+            {
+              "kind": "FunctionAssignment",
+              "id": "v4-supplier-logistics-function",
+              "version": "1"
+            },
+            {
+              "kind": "FunctionAssignment",
+              "id": "buyer-receiving-function",
+              "version": "1"
+            },
+            {
+              "kind": "CandidateSet",
+              "id": "v4-supplier-logistics-candidates",
+              "version": "2"
+            },
+            {
+              "kind": "Authorization",
+              "id": "v4-supplier-logistics-grant",
+              "version": "1"
+            },
+            {
+              "kind": "Authorization",
+              "id": "buyer-receiving-grant",
+              "version": "1"
+            },
+            {
+              "kind": "Evidence",
+              "id": "synthetic-receiving-basis",
+              "version": "1"
+            },
+            {
+              "kind": "Evidence",
+              "id": "synthetic-transport-duration-assumption",
+              "version": "1"
+            }
+          ],
+          "candidate_set_ref": {
+            "kind": "CandidateSet",
+            "id": "v4-supplier-logistics-candidates",
+            "version": "2"
+          },
+          "execution_mode": "offline_fixture"
+        },
+        "action_input": {
+          "order_ref": {
+            "kind": "Order",
+            "id": "receiving-order",
+            "version": "1"
+          },
+          "dispatchable_refs": [
+            {
+              "kind": "DispatchableBatch",
+              "id": "dispatchable-cargo",
+              "version": "1"
+            }
+          ],
+          "receiving_window_refs": [
+            {
+              "kind": "ReceivingWindow",
+              "id": "buyer-availability",
+              "version": "1"
+            }
+          ],
+          "route_candidates": [
+            {
+              "kind": "TransportRoute",
+              "id": "source-route",
+              "version": "1"
+            }
+          ],
+          "capacity_refs": [
+            {
+              "kind": "TransportCapacity",
+              "id": "first-leg-capacity",
+              "version": "1"
+            }
+          ],
+          "requirement_refs": [
+            {
+              "kind": "TransportRequirement",
+              "id": "route-permit",
+              "version": "1"
+            }
+          ],
+          "shipment_refs": [],
+          "position_refs": [],
+          "logistics_profile_ref": {
+            "kind": "LogisticsProfile",
+            "id": "dispatch-profile",
+            "version": "1"
+          }
+        },
+        "execution_path": "deterministic"
+      },
+      "configuration": {
+        "schema_version": "role-contract-host-config.v1",
+        "host_id": "v4-supplier-logistics",
+        "version": "1",
+        "settings": {
+          "action_id": "SUPPLIER-A08",
+          "source_factory": "integration.supplier_logistics_fixture_sources:build_sources",
+          "source_version": "configured-supplier-logistics-fixture-sources.v1",
+          "macro_version": "synthetic-v4-production-material-connection.v1",
+          "client_version": "role-contract-supplier-logistics-fixture.v1",
+          "policy_version": "role-contract-supplier-logistics-fixture.v1",
+          "model_version": "offline-fixture-no-model.v1",
+          "source_settings": {
+            "action_id": "SUPPLIER-A08",
+            "source_note": "Explicit synthetic chronological logistics input; no actual native/professional effects or saved upstream results are manufactured.",
+            "journal_path": "output/integration/v4_chronological_logistics_pending_01/journal.sqlite",
+            "organization_snapshot": {
+              "schema_version": "organization.v2",
+              "run_id": "synthetic-v4-production-material-connection",
+              "organizations": [
+                {
+                  "organization_id": "supplier-org",
+                  "actor_id": "supplier-actor",
+                  "source_ids": [
+                    "synthetic:v4-supplier-logistics:supplier-org"
+                  ],
+                  "public_description": "Synthetic independent logistics participant.",
+                  "public_location": {
+                    "state": "unknown",
+                    "reason_code": "synthetic_unsupplied",
+                    "missing_refs": []
+                  },
+                  "members": [],
+                  "assignments": [
+                    {
+                      "role": "Supplier",
+                      "function_ref": {
+                        "kind": "FunctionAssignment",
+                        "id": "v4-supplier-logistics-function",
+                        "version": "1"
+                      },
+                      "configuration_version": "1",
+                      "basis_refs": [
+                        {
+                          "kind": "Evidence",
+                          "id": "synthetic-connected-logistics-basis",
+                          "version": "1"
+                        }
+                      ]
+                    }
+                  ],
+                  "evidence_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-connected-logistics-basis",
+                      "version": "1"
+                    }
+                  ]
+                },
+                {
+                  "organization_id": "buyer-contractor-org",
+                  "actor_id": "buyer-contractor-actor",
+                  "source_ids": [
+                    "synthetic:v4-supplier-logistics:buyer-contractor-org"
+                  ],
+                  "public_description": "Synthetic independent logistics participant.",
+                  "public_location": {
+                    "state": "unknown",
+                    "reason_code": "synthetic_unsupplied",
+                    "missing_refs": []
+                  },
+                  "members": [],
+                  "assignments": [
+                    {
+                      "role": "Contractor",
+                      "function_ref": {
+                        "kind": "FunctionAssignment",
+                        "id": "buyer-receiving-function",
+                        "version": "1"
+                      },
+                      "configuration_version": "1",
+                      "basis_refs": [
+                        {
+                          "kind": "Evidence",
+                          "id": "synthetic-connected-logistics-basis",
+                          "version": "1"
+                        }
+                      ]
+                    }
+                  ],
+                  "evidence_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-connected-logistics-basis",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "authorizations": [
+                {
+                  "ref": {
+                    "kind": "Authorization",
+                    "id": "v4-supplier-logistics-grant",
+                    "version": "1"
+                  },
+                  "organization_id": "supplier-org",
+                  "actor_id": "supplier-actor",
+                  "function_ref": {
+                    "kind": "FunctionAssignment",
+                    "id": "v4-supplier-logistics-function",
+                    "version": "1"
+                  },
+                  "action_ids": [
+                    "SUPPLIER-A08"
+                  ],
+                  "scopes": [
+                    {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    }
+                  ],
+                  "readable_refs": [
+                    {
+                      "kind": "Order",
+                      "id": "receiving-order",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "OrderLine",
+                      "id": "dispatch-line",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "TransportTerms",
+                      "id": "dispatch-terms",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ProductBatch",
+                      "id": "source-cargo",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "DispatchableBatch",
+                      "id": "dispatchable-cargo",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "DispatchRelease",
+                      "id": "cargo-release",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "DispatchLedger",
+                      "id": "cargo-ledger",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ShipmentSlice",
+                      "id": "source-four-panel-slice",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "LogisticsProfile",
+                      "id": "dispatch-profile",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ReceivingWindow",
+                      "id": "buyer-availability",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "TimeWindow",
+                      "id": "source-receiving-time",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "TransportRoute",
+                      "id": "source-route",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "TransportMethod",
+                      "id": "synthetic-panel-elapsed-transport",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "TransportRequirement",
+                      "id": "route-permit",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Location",
+                      "id": "factory",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Location",
+                      "id": "buyer-site",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "TransportSegment",
+                      "id": "synthetic-factory-to-buyer-segment",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "TransportCapacity",
+                      "id": "first-leg-capacity",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ResourceAllocation",
+                      "id": "source-transport-allocation",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "TransportReservation",
+                      "id": "first-leg-reservation",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-connected-logistics-basis",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ClockProfile",
+                      "id": "synthetic-clock",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Project",
+                      "id": "buyer-project",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "WorkScope",
+                      "id": "receiving-line-1",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "FunctionAssignment",
+                      "id": "v4-supplier-logistics-function",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "FunctionAssignment",
+                      "id": "buyer-receiving-function",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "CandidateSet",
+                      "id": "v4-supplier-logistics-candidates",
+                      "version": "2"
+                    },
+                    {
+                      "kind": "Authorization",
+                      "id": "v4-supplier-logistics-grant",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Authorization",
+                      "id": "buyer-receiving-grant",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-receiving-basis",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-transport-duration-assumption",
+                      "version": "1"
+                    }
+                  ],
+                  "tool_ids": [],
+                  "validity": {
+                    "start": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 10
+                    },
+                    "end": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "bounds": "closed_open"
+                  },
+                  "basis_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-connected-logistics-basis",
+                      "version": "1"
+                    }
+                  ]
+                },
+                {
+                  "ref": {
+                    "kind": "Authorization",
+                    "id": "buyer-receiving-grant",
+                    "version": "1"
+                  },
+                  "organization_id": "buyer-contractor-org",
+                  "actor_id": "buyer-contractor-actor",
+                  "function_ref": {
+                    "kind": "FunctionAssignment",
+                    "id": "buyer-receiving-function",
+                    "version": "1"
+                  },
+                  "action_ids": [
+                    "CONTRACTOR-A07"
+                  ],
+                  "scopes": [
+                    {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    }
+                  ],
+                  "readable_refs": [
+                    {
+                      "kind": "Order",
+                      "id": "receiving-order",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "OrderLine",
+                      "id": "dispatch-line",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "TransportTerms",
+                      "id": "dispatch-terms",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ProductBatch",
+                      "id": "source-cargo",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "DispatchableBatch",
+                      "id": "dispatchable-cargo",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "DispatchRelease",
+                      "id": "cargo-release",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "DispatchLedger",
+                      "id": "cargo-ledger",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ShipmentSlice",
+                      "id": "source-four-panel-slice",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "LogisticsProfile",
+                      "id": "dispatch-profile",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ReceivingWindow",
+                      "id": "buyer-availability",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "TimeWindow",
+                      "id": "source-receiving-time",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "TransportRoute",
+                      "id": "source-route",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "TransportMethod",
+                      "id": "synthetic-panel-elapsed-transport",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "TransportRequirement",
+                      "id": "route-permit",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Location",
+                      "id": "factory",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Location",
+                      "id": "buyer-site",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "TransportSegment",
+                      "id": "synthetic-factory-to-buyer-segment",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "TransportCapacity",
+                      "id": "first-leg-capacity",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ResourceAllocation",
+                      "id": "source-transport-allocation",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "TransportReservation",
+                      "id": "first-leg-reservation",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-connected-logistics-basis",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ClockProfile",
+                      "id": "synthetic-clock",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Project",
+                      "id": "buyer-project",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "WorkScope",
+                      "id": "receiving-line-1",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "FunctionAssignment",
+                      "id": "v4-supplier-logistics-function",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "FunctionAssignment",
+                      "id": "buyer-receiving-function",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "CandidateSet",
+                      "id": "v4-supplier-logistics-candidates",
+                      "version": "2"
+                    },
+                    {
+                      "kind": "Authorization",
+                      "id": "v4-supplier-logistics-grant",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Authorization",
+                      "id": "buyer-receiving-grant",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-receiving-basis",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-transport-duration-assumption",
+                      "version": "1"
+                    }
+                  ],
+                  "tool_ids": [],
+                  "validity": {
+                    "start": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 10
+                    },
+                    "end": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "bounds": "closed_open"
+                  },
+                  "basis_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-connected-logistics-basis",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "inactive_authorization_refs": []
+            },
+            "source_projection": {
+              "run_id": "synthetic-v4-production-material-connection",
+              "macro_version": "synthetic-v4-production-material-connection.v1",
+              "state_version": "synthetic-v4-supplier-logistics-1.v1",
+              "read_token": "synthetic-v4-supplier-logistics:read:1",
+              "business_time": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "synthetic-clock",
+                  "version": "1"
+                },
+                "offset": 11
+              },
+              "organization_id": "supplier-org",
+              "objects": [
+                {
+                  "ref": {
+                    "kind": "Order",
+                    "id": "receiving-order",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "Order",
+                      "id": "receiving-order",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-connected-logistics-basis",
+                        "version": "1"
+                      }
+                    ],
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 11
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "supplier_id": "supplier-org",
+                    "buyer_id": "buyer-contractor-org",
+                    "effective": {
+                      "state": "known",
+                      "value": true
+                    },
+                    "line_refs": [
+                      {
+                        "kind": "OrderLine",
+                        "id": "dispatch-line",
+                        "version": "1"
+                      }
+                    ],
+                    "terms_ref": {
+                      "kind": "TransportTerms",
+                      "id": "dispatch-terms",
+                      "version": "1"
+                    },
+                    "shipment_refs": [],
+                    "coverage": "complete",
+                    "as_of": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 11
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "OrderLine",
+                    "id": "dispatch-line",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "OrderLine",
+                      "id": "dispatch-line",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-connected-logistics-basis",
+                        "version": "1"
+                      }
+                    ],
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 11
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "order_ref": {
+                      "kind": "Order",
+                      "id": "receiving-order",
+                      "version": "1"
+                    },
+                    "product_ref": {
+                      "kind": "ProductSpecification",
+                      "id": "panel-spec",
+                      "version": "1"
+                    },
+                    "destination_ref": {
+                      "kind": "Location",
+                      "id": "buyer-site",
+                      "version": "1"
+                    },
+                    "remaining_to_dispatch": {
+                      "value": "6",
+                      "unit": "panel",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "synthetic-connected-logistics-basis",
+                        "version": "1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "TransportTerms",
+                    "id": "dispatch-terms",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "TransportTerms",
+                      "id": "dispatch-terms",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-connected-logistics-basis",
+                        "version": "1"
+                      }
+                    ],
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 11
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "order_ref": {
+                      "kind": "Order",
+                      "id": "receiving-order",
+                      "version": "1"
+                    },
+                    "supplier_id": "supplier-org",
+                    "buyer_id": "buyer-contractor-org",
+                    "risk_transfer_event": "carrier_receipt",
+                    "title_transfer_event": "payment",
+                    "transport_requirement_refs": [
+                      {
+                        "kind": "TransportRequirement",
+                        "id": "route-permit",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "ProductBatch",
+                    "id": "source-cargo",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "ProductBatch",
+                      "id": "source-cargo",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-connected-logistics-basis",
+                        "version": "1"
+                      }
+                    ],
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 11
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "organization_id": "supplier-org",
+                    "owner_id": "supplier-org",
+                    "product_ref": {
+                      "kind": "ProductSpecification",
+                      "id": "panel-spec",
+                      "version": "1"
+                    },
+                    "physical_batch_key": "synthetic-receiving-physical-batch",
+                    "actual_quantity": {
+                      "value": "6",
+                      "unit": "panel",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "synthetic-connected-logistics-basis",
+                        "version": "1"
+                      }
+                    },
+                    "state": "usable",
+                    "lineage_ledger_ref": {
+                      "kind": "BatchLineageLedger",
+                      "id": "source-batch-lineage",
+                      "version": "1"
+                    },
+                    "requirement_refs": [],
+                    "known_defect_refs": [],
+                    "core_event_id": "synthetic-source-usable-batch-event",
+                    "as_of": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 11
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "DispatchableBatch",
+                    "id": "dispatchable-cargo",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "DispatchableBatch",
+                      "id": "dispatchable-cargo",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-connected-logistics-basis",
+                        "version": "1"
+                      }
+                    ],
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 11
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "order_ref": {
+                      "kind": "Order",
+                      "id": "receiving-order",
+                      "version": "1"
+                    },
+                    "line_ref": {
+                      "kind": "OrderLine",
+                      "id": "dispatch-line",
+                      "version": "1"
+                    },
+                    "batch_ref": {
+                      "kind": "ProductBatch",
+                      "id": "source-cargo",
+                      "version": "1"
+                    },
+                    "physical_batch_key": "synthetic-receiving-physical-batch",
+                    "product_ref": {
+                      "kind": "ProductSpecification",
+                      "id": "panel-spec",
+                      "version": "1"
+                    },
+                    "source_ref": {
+                      "kind": "Location",
+                      "id": "factory",
+                      "version": "1"
+                    },
+                    "actual_remaining": {
+                      "value": "6",
+                      "unit": "panel",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "synthetic-connected-logistics-basis",
+                        "version": "1"
+                      }
+                    },
+                    "dispatchable_quantity": {
+                      "value": "6",
+                      "unit": "panel",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "synthetic-connected-logistics-basis",
+                        "version": "1"
+                      }
+                    },
+                    "release_ref": {
+                      "kind": "DispatchRelease",
+                      "id": "cargo-release",
+                      "version": "1"
+                    },
+                    "ledger_ref": {
+                      "kind": "DispatchLedger",
+                      "id": "cargo-ledger",
+                      "version": "1"
+                    },
+                    "as_of": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 11
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "DispatchRelease",
+                    "id": "cargo-release",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "DispatchRelease",
+                      "id": "cargo-release",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-connected-logistics-basis",
+                        "version": "1"
+                      }
+                    ],
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 11
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "batch_ref": {
+                      "kind": "ProductBatch",
+                      "id": "source-cargo",
+                      "version": "1"
+                    },
+                    "physical_batch_key": "synthetic-receiving-physical-batch",
+                    "order_ref": {
+                      "kind": "Order",
+                      "id": "receiving-order",
+                      "version": "1"
+                    },
+                    "quantity": {
+                      "value": "6",
+                      "unit": "panel",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "synthetic-connected-logistics-basis",
+                        "version": "1"
+                      }
+                    },
+                    "permitted": {
+                      "state": "known",
+                      "value": true
+                    },
+                    "core_event_id": "synthetic-dispatch-release-event"
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "DispatchLedger",
+                    "id": "cargo-ledger",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "DispatchLedger",
+                      "id": "cargo-ledger",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-connected-logistics-basis",
+                        "version": "1"
+                      }
+                    ],
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 11
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "physical_batch_key": "synthetic-receiving-physical-batch",
+                    "original_dispatchable": {
+                      "value": "6",
+                      "unit": "panel",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "synthetic-connected-logistics-basis",
+                        "version": "1"
+                      }
+                    },
+                    "actual_remaining": {
+                      "value": "6",
+                      "unit": "panel",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "synthetic-connected-logistics-basis",
+                        "version": "1"
+                      }
+                    },
+                    "other_outflow": {
+                      "value": "0",
+                      "unit": "panel",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "synthetic-connected-logistics-basis",
+                        "version": "1"
+                      }
+                    },
+                    "pending_quantity": {
+                      "value": "0",
+                      "unit": "panel",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "synthetic-connected-logistics-basis",
+                        "version": "1"
+                      }
+                    },
+                    "shipment_refs": [],
+                    "coverage": "complete",
+                    "as_of": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 11
+                    },
+                    "producer": "core"
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "ShipmentSlice",
+                    "id": "source-four-panel-slice",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "ShipmentSlice",
+                      "id": "source-four-panel-slice",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-connected-logistics-basis",
+                        "version": "1"
+                      }
+                    ],
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 11
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "dispatchable_ref": {
+                      "kind": "DispatchableBatch",
+                      "id": "dispatchable-cargo",
+                      "version": "1"
+                    },
+                    "physical_slice_key": "synthetic-received-three-panel-slice",
+                    "quantity": {
+                      "value": "4",
+                      "unit": "panel",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "synthetic-receiving-basis",
+                        "version": "1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "LogisticsProfile",
+                    "id": "dispatch-profile",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "LogisticsProfile",
+                      "id": "dispatch-profile",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-connected-logistics-basis",
+                        "version": "1"
+                      }
+                    ],
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 11
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "organization_id": "supplier-org",
+                    "actor_id": "supplier-actor",
+                    "function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v4-supplier-logistics-function",
+                      "version": "1"
+                    },
+                    "authority_ref": {
+                      "kind": "Authorization",
+                      "id": "v4-supplier-logistics-grant",
+                      "version": "1"
+                    },
+                    "order_ref": {
+                      "kind": "Order",
+                      "id": "receiving-order",
+                      "version": "1"
+                    },
+                    "choice": "dispatch",
+                    "plans": [
+                      {
+                        "batch_ref": {
+                          "kind": "ProductBatch",
+                          "id": "source-cargo",
+                          "version": "1"
+                        },
+                        "quantity": {
+                          "value": "4",
+                          "unit": "panel",
+                          "basis_ref": {
+                            "kind": "Evidence",
+                            "id": "synthetic-receiving-basis",
+                            "version": "1"
+                          }
+                        },
+                        "source_ref": {
+                          "kind": "Location",
+                          "id": "factory",
+                          "version": "1"
+                        },
+                        "destination_ref": {
+                          "kind": "Location",
+                          "id": "buyer-site",
+                          "version": "1"
+                        },
+                        "route_ref": {
+                          "kind": "TransportRoute",
+                          "id": "source-route",
+                          "version": "1"
+                        },
+                        "receiving_window_ref": {
+                          "kind": "TimeWindow",
+                          "id": "source-receiving-time",
+                          "version": "1"
+                        },
+                        "transport_allocation_refs": [
+                          {
+                            "kind": "ResourceAllocation",
+                            "id": "source-transport-allocation",
+                            "version": "1"
+                          }
+                        ],
+                        "condition_evidence_refs": [
+                          {
+                            "kind": "Evidence",
+                            "id": "synthetic-receiving-basis",
+                            "version": "1"
+                          }
+                        ]
+                      }
+                    ],
+                    "plan_slice_refs": [
+                      [
+                        {
+                          "kind": "ShipmentSlice",
+                          "id": "source-four-panel-slice",
+                          "version": "1"
+                        }
+                      ]
+                    ],
+                    "shipment_ref": null,
+                    "replacement_route_ref": null,
+                    "current_position_ref": null,
+                    "replacement_allocation_refs": [],
+                    "target_kind": null,
+                    "target_line_refs": [],
+                    "target_shipment_refs": [],
+                    "proposed_window_ref": null,
+                    "note": "Synthetic same-run original four-panel dispatch plan for the separately declared transported receipt; no native dispatch is generated."
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "ReceivingWindow",
+                    "id": "buyer-availability",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "ReceivingWindow",
+                      "id": "buyer-availability",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-connected-logistics-basis",
+                        "version": "1"
+                      }
+                    ],
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 11
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "order_ref": {
+                      "kind": "Order",
+                      "id": "receiving-order",
+                      "version": "1"
+                    },
+                    "receiver_id": "buyer-contractor-org",
+                    "destination_ref": {
+                      "kind": "Location",
+                      "id": "buyer-site",
+                      "version": "1"
+                    },
+                    "window_ref": {
+                      "kind": "TimeWindow",
+                      "id": "source-receiving-time",
+                      "version": "1"
+                    },
+                    "available": {
+                      "state": "known",
+                      "value": true
+                    },
+                    "author_actor_id": "buyer-contractor-actor",
+                    "author_organization_id": "buyer-contractor-org",
+                    "author_function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "buyer-receiving-function",
+                      "version": "1"
+                    },
+                    "author_authority_ref": {
+                      "kind": "Authorization",
+                      "id": "buyer-receiving-grant",
+                      "version": "1"
+                    },
+                    "author_action_id": "CONTRACTOR-A07",
+                    "authored_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 11
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "TimeWindow",
+                    "id": "source-receiving-time",
+                    "version": "1"
+                  },
+                  "value": {
+                    "start": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 17
+                    },
+                    "end": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 20
+                    },
+                    "bounds": "closed_open"
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "TransportRoute",
+                    "id": "source-route",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "TransportRoute",
+                      "id": "source-route",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-transport-duration-assumption",
+                        "version": "1"
+                      }
+                    ],
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 11
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "supported": {
+                      "state": "known",
+                      "value": true
+                    },
+                    "segments": [
+                      {
+                        "segment_ref": {
+                          "kind": "TransportSegment",
+                          "id": "synthetic-factory-to-buyer-segment",
+                          "version": "1"
+                        },
+                        "source_ref": {
+                          "kind": "Location",
+                          "id": "factory",
+                          "version": "1"
+                        },
+                        "destination_ref": {
+                          "kind": "Location",
+                          "id": "buyer-site",
+                          "version": "1"
+                        },
+                        "minimum_ticks": 3,
+                        "travel_basis_ref": {
+                          "kind": "Evidence",
+                          "id": "synthetic-transport-duration-assumption",
+                          "version": "1"
+                        }
+                      }
+                    ],
+                    "requirement_refs": [],
+                    "method_ref": {
+                      "kind": "TransportMethod",
+                      "id": "synthetic-panel-elapsed-transport",
+                      "version": "1"
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "TransportMethod",
+                    "id": "synthetic-panel-elapsed-transport",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "TransportMethod",
+                      "id": "synthetic-panel-elapsed-transport",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-transport-duration-assumption",
+                        "version": "1"
+                      }
+                    ],
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 11
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "supported": {
+                      "state": "known",
+                      "value": true
+                    },
+                    "clock_ref": {
+                      "kind": "ClockProfile",
+                      "id": "synthetic-clock",
+                      "version": "1"
+                    },
+                    "quantity_unit": "panel",
+                    "loading_ticks": 1,
+                    "unloading_ticks": 1,
+                    "basis_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-transport-duration-assumption",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "TransportRequirement",
+                    "id": "route-permit",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "TransportRequirement",
+                      "id": "route-permit",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-connected-logistics-basis",
+                        "version": "1"
+                      }
+                    ],
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 11
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "order_ref": {
+                      "kind": "Order",
+                      "id": "receiving-order",
+                      "version": "1"
+                    },
+                    "route_refs": [
+                      {
+                        "kind": "TransportRoute",
+                        "id": "source-route",
+                        "version": "1"
+                      }
+                    ],
+                    "satisfied": {
+                      "state": "known",
+                      "value": true
+                    },
+                    "condition_evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-receiving-basis",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "Location",
+                    "id": "factory",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "Location",
+                      "id": "factory",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-connected-logistics-basis",
+                        "version": "1"
+                      }
+                    ],
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 11
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "Location",
+                    "id": "buyer-site",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "Location",
+                      "id": "buyer-site",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-connected-logistics-basis",
+                        "version": "1"
+                      }
+                    ],
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 11
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "TransportSegment",
+                    "id": "synthetic-factory-to-buyer-segment",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "TransportSegment",
+                      "id": "synthetic-factory-to-buyer-segment",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-connected-logistics-basis",
+                        "version": "1"
+                      }
+                    ],
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 11
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "TransportCapacity",
+                    "id": "first-leg-capacity",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "TransportCapacity",
+                      "id": "first-leg-capacity",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-connected-logistics-basis",
+                        "version": "1"
+                      }
+                    ],
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 11
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "physical_pool_key": "synthetic-shared-transport-pool-1",
+                    "segment_ref": {
+                      "kind": "TransportSegment",
+                      "id": "synthetic-factory-to-buyer-segment",
+                      "version": "1"
+                    },
+                    "actual_capacity": {
+                      "value": "4",
+                      "unit": "panel",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "synthetic-connected-logistics-basis",
+                        "version": "1"
+                      }
+                    },
+                    "actually_available": {
+                      "state": "known",
+                      "value": true
+                    },
+                    "reservation_refs": [
+                      {
+                        "kind": "TransportReservation",
+                        "id": "first-leg-reservation",
+                        "version": "1"
+                      }
+                    ],
+                    "coverage": "complete",
+                    "as_of": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 11
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "ResourceAllocation",
+                    "id": "source-transport-allocation",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "ResourceAllocation",
+                      "id": "source-transport-allocation",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-connected-logistics-basis",
+                        "version": "1"
+                      }
+                    ],
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 11
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "organization_id": "supplier-org",
+                    "order_ref": {
+                      "kind": "Order",
+                      "id": "receiving-order",
+                      "version": "1"
+                    },
+                    "capacity_ref": {
+                      "kind": "TransportCapacity",
+                      "id": "first-leg-capacity",
+                      "version": "1"
+                    },
+                    "segment_ref": {
+                      "kind": "TransportSegment",
+                      "id": "synthetic-factory-to-buyer-segment",
+                      "version": "1"
+                    },
+                    "quantity": {
+                      "value": "4",
+                      "unit": "panel",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "synthetic-receiving-basis",
+                        "version": "1"
+                      }
+                    },
+                    "window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 13
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 16
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "status": "reserved",
+                    "reservation_ref": {
+                      "kind": "TransportReservation",
+                      "id": "first-leg-reservation",
+                      "version": "1"
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "TransportReservation",
+                    "id": "first-leg-reservation",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "TransportReservation",
+                      "id": "first-leg-reservation",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-connected-logistics-basis",
+                        "version": "1"
+                      }
+                    ],
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 11
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "allocation_ref": {
+                      "kind": "ResourceAllocation",
+                      "id": "source-transport-allocation",
+                      "version": "1"
+                    },
+                    "capacity_ref": {
+                      "kind": "TransportCapacity",
+                      "id": "first-leg-capacity",
+                      "version": "1"
+                    },
+                    "segment_ref": {
+                      "kind": "TransportSegment",
+                      "id": "synthetic-factory-to-buyer-segment",
+                      "version": "1"
+                    },
+                    "quantity": {
+                      "value": "4",
+                      "unit": "panel",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "synthetic-receiving-basis",
+                        "version": "1"
+                      }
+                    },
+                    "window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 13
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 16
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "core_event_id": "synthetic-leg-reservation-event-1",
+                    "status": "reserved"
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "Evidence",
+                    "id": "synthetic-connected-logistics-basis",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "Evidence",
+                      "id": "synthetic-connected-logistics-basis",
+                      "version": "1"
+                    },
+                    "source_kind": "synthetic",
+                    "basis_kind": "assumed",
+                    "locator": "synthetic:v4-material-connection:original-logistics-declarations",
+                    "content_hash": "3a2447ba42fd657bc2cc4bc8e9f2b1264123bd930a16cb9c81a25c6986a657c8",
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "ClockProfile",
+                    "id": "synthetic-clock",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "ClockProfile",
+                      "id": "synthetic-clock",
+                      "version": "1"
+                    },
+                    "tick_unit": "synthetic-tick",
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-connected-logistics-basis",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "Project",
+                    "id": "buyer-project",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "Project",
+                      "id": "buyer-project",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-connected-logistics-basis",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "WorkScope",
+                    "id": "receiving-line-1",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "WorkScope",
+                      "id": "receiving-line-1",
+                      "version": "1"
+                    },
+                    "parent_ref": {
+                      "kind": "Project",
+                      "id": "buyer-project",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-connected-logistics-basis",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "FunctionAssignment",
+                    "id": "v4-supplier-logistics-function",
+                    "version": "1"
+                  },
+                  "value": {
+                    "role": "Supplier",
+                    "function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v4-supplier-logistics-function",
+                      "version": "1"
+                    },
+                    "configuration_version": "1",
+                    "basis_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-connected-logistics-basis",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "FunctionAssignment",
+                    "id": "buyer-receiving-function",
+                    "version": "1"
+                  },
+                  "value": {
+                    "role": "Contractor",
+                    "function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "buyer-receiving-function",
+                      "version": "1"
+                    },
+                    "configuration_version": "1",
+                    "basis_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-connected-logistics-basis",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "CandidateSet",
+                    "id": "v4-supplier-logistics-candidates",
+                    "version": "2"
+                  },
+                  "value": {
+                    "operation_id": "synthetic-original-dispatch-operation",
+                    "scope": {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "as_of": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 11
+                    },
+                    "candidates": [
+                      {
+                        "ref": {
+                          "kind": "Order",
+                          "id": "receiving-order",
+                          "version": "1"
+                        },
+                        "permitted_choices": [
+                          "dispatch"
+                        ]
+                      },
+                      {
+                        "ref": {
+                          "kind": "TransportRoute",
+                          "id": "source-route",
+                          "version": "1"
+                        },
+                        "permitted_choices": [
+                          "dispatch"
+                        ]
+                      }
+                    ],
+                    "search_profile_ref": {
+                      "kind": "Profile",
+                      "id": "logistics-search",
+                      "version": "1"
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "Authorization",
+                    "id": "v4-supplier-logistics-grant",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "Authorization",
+                      "id": "v4-supplier-logistics-grant",
+                      "version": "1"
+                    },
+                    "organization_id": "supplier-org",
+                    "actor_id": "supplier-actor",
+                    "function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v4-supplier-logistics-function",
+                      "version": "1"
+                    },
+                    "action_ids": [
+                      "SUPPLIER-A08"
+                    ],
+                    "scopes": [
+                      {
+                        "kind": "project",
+                        "ref": {
+                          "kind": "Project",
+                          "id": "buyer-project",
+                          "version": "1"
+                        },
+                        "coverage_refs": [
+                          {
+                            "kind": "WorkScope",
+                            "id": "receiving-line-1",
+                            "version": "1"
+                          }
+                        ]
+                      }
+                    ],
+                    "readable_refs": [
+                      {
+                        "kind": "Order",
+                        "id": "receiving-order",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "OrderLine",
+                        "id": "dispatch-line",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "TransportTerms",
+                        "id": "dispatch-terms",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "ProductBatch",
+                        "id": "source-cargo",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "DispatchableBatch",
+                        "id": "dispatchable-cargo",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "DispatchRelease",
+                        "id": "cargo-release",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "DispatchLedger",
+                        "id": "cargo-ledger",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "ShipmentSlice",
+                        "id": "source-four-panel-slice",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "LogisticsProfile",
+                        "id": "dispatch-profile",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "ReceivingWindow",
+                        "id": "buyer-availability",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "TimeWindow",
+                        "id": "source-receiving-time",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "TransportRoute",
+                        "id": "source-route",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "TransportMethod",
+                        "id": "synthetic-panel-elapsed-transport",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "TransportRequirement",
+                        "id": "route-permit",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Location",
+                        "id": "factory",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Location",
+                        "id": "buyer-site",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "TransportSegment",
+                        "id": "synthetic-factory-to-buyer-segment",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "TransportCapacity",
+                        "id": "first-leg-capacity",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "ResourceAllocation",
+                        "id": "source-transport-allocation",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "TransportReservation",
+                        "id": "first-leg-reservation",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-connected-logistics-basis",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "WorkScope",
+                        "id": "receiving-line-1",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "FunctionAssignment",
+                        "id": "v4-supplier-logistics-function",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "FunctionAssignment",
+                        "id": "buyer-receiving-function",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "CandidateSet",
+                        "id": "v4-supplier-logistics-candidates",
+                        "version": "2"
+                      },
+                      {
+                        "kind": "Authorization",
+                        "id": "v4-supplier-logistics-grant",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Authorization",
+                        "id": "buyer-receiving-grant",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-receiving-basis",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-transport-duration-assumption",
+                        "version": "1"
+                      }
+                    ],
+                    "tool_ids": [],
+                    "validity": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "basis_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-connected-logistics-basis",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "Authorization",
+                    "id": "buyer-receiving-grant",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "Authorization",
+                      "id": "buyer-receiving-grant",
+                      "version": "1"
+                    },
+                    "organization_id": "buyer-contractor-org",
+                    "actor_id": "buyer-contractor-actor",
+                    "function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "buyer-receiving-function",
+                      "version": "1"
+                    },
+                    "action_ids": [
+                      "CONTRACTOR-A07"
+                    ],
+                    "scopes": [
+                      {
+                        "kind": "project",
+                        "ref": {
+                          "kind": "Project",
+                          "id": "buyer-project",
+                          "version": "1"
+                        },
+                        "coverage_refs": [
+                          {
+                            "kind": "WorkScope",
+                            "id": "receiving-line-1",
+                            "version": "1"
+                          }
+                        ]
+                      }
+                    ],
+                    "readable_refs": [
+                      {
+                        "kind": "Order",
+                        "id": "receiving-order",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "OrderLine",
+                        "id": "dispatch-line",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "TransportTerms",
+                        "id": "dispatch-terms",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "ProductBatch",
+                        "id": "source-cargo",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "DispatchableBatch",
+                        "id": "dispatchable-cargo",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "DispatchRelease",
+                        "id": "cargo-release",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "DispatchLedger",
+                        "id": "cargo-ledger",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "ShipmentSlice",
+                        "id": "source-four-panel-slice",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "LogisticsProfile",
+                        "id": "dispatch-profile",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "ReceivingWindow",
+                        "id": "buyer-availability",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "TimeWindow",
+                        "id": "source-receiving-time",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "TransportRoute",
+                        "id": "source-route",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "TransportMethod",
+                        "id": "synthetic-panel-elapsed-transport",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "TransportRequirement",
+                        "id": "route-permit",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Location",
+                        "id": "factory",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Location",
+                        "id": "buyer-site",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "TransportSegment",
+                        "id": "synthetic-factory-to-buyer-segment",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "TransportCapacity",
+                        "id": "first-leg-capacity",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "ResourceAllocation",
+                        "id": "source-transport-allocation",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "TransportReservation",
+                        "id": "first-leg-reservation",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-connected-logistics-basis",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "WorkScope",
+                        "id": "receiving-line-1",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "FunctionAssignment",
+                        "id": "v4-supplier-logistics-function",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "FunctionAssignment",
+                        "id": "buyer-receiving-function",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "CandidateSet",
+                        "id": "v4-supplier-logistics-candidates",
+                        "version": "2"
+                      },
+                      {
+                        "kind": "Authorization",
+                        "id": "v4-supplier-logistics-grant",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Authorization",
+                        "id": "buyer-receiving-grant",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-receiving-basis",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-transport-duration-assumption",
+                        "version": "1"
+                      }
+                    ],
+                    "tool_ids": [],
+                    "validity": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "basis_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-connected-logistics-basis",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "Evidence",
+                    "id": "synthetic-receiving-basis",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "Evidence",
+                      "id": "synthetic-receiving-basis",
+                      "version": "1"
+                    },
+                    "source_kind": "synthetic",
+                    "basis_kind": "assumed",
+                    "locator": "synthetic:v4-material-connection:partial-use-input",
+                    "content_hash": "ba6840d42282544e5fa7511bdcec78002a51595fe4c68fe853c6a6018947ca03",
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "Evidence",
+                    "id": "synthetic-transport-duration-assumption",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "Evidence",
+                      "id": "synthetic-transport-duration-assumption",
+                      "version": "1"
+                    },
+                    "source_kind": "synthetic",
+                    "basis_kind": "assumed",
+                    "locator": "synthetic:v4-material-connection:elapsed-transport-parameters",
+                    "content_hash": "7943a207c6aeba886391748981a92fb97a2f5d4266512d66b99cc5c2a6f6cc61",
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 10
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "synthetic-clock",
+                          "version": "1"
+                        },
+                        "offset": 30
+                      },
+                      "bounds": "closed_open"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  ],
+  "remaining_requirements": [
+    "Evaluate original Supplier A08 host; retain exact physical plan/slice, receiving availability, route elapsed time and exclusive capacity without stock movement.",
+    "A08 split/reroute/reschedule/reconcile and all CHECK cases.",
+    "Actual same-run effective order, quality release, original shipment/arrival/receipt events and actual shared resource competition; full PLAN acceptance."
+  ],
+  "limitations": "Chronological synthetic input only; original saved journal results, professional/native effects, upstream order/plan/task provenance and full V4 execution remain unproven."
+}

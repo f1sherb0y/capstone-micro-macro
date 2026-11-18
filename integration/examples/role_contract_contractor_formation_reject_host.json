@@ -1,0 +1,2358 @@
+{
+  "schema_version": "role-contract-host-config.v1",
+  "host_id": "synthetic-v2-contractor-formation-reject-01",
+  "version": "1",
+  "settings": {
+    "action_id": "CONTRACTOR-A04",
+    "source_factory": "integration.contractor_formation_fixture_sources:build_sources",
+    "source_version": "configured-contractor-formation-fixture-sources.v1",
+    "source_settings": {
+      "action_id": "CONTRACTOR-A04",
+      "source_note": "Synthetic independent Contractor A04 rejection: parties, authority, bid and final agreement are invented. The Contractor explicitly rejects the offered price/terms. Partial capacity and unknown funding are retained; this is an explicit decision input, with no computed refusal, submitted rejection, signature, contract or reservation.",
+      "journal_path": "output/integration/v2-contractor-formation-reject-01/tasks.sqlite",
+      "organization_snapshot": {
+        "schema_version": "organization.v2",
+        "run_id": "synthetic-v2-contractor-formation-reject-01",
+        "organizations": [
+          {
+            "organization_id": "v2-fixture-contractor",
+            "actor_id": "v2-fixture-contractor-actor",
+            "source_ids": [
+              "synthetic:synthetic-v2-contractor-formation-reject-01:v2-fixture-contractor"
+            ],
+            "public_description": "Synthetic independent Contractor A04 rejection: parties, authority, bid and final agreement are invented. The Contractor explicitly rejects the offered price/terms. Partial capacity and unknown funding are retained; this is an explicit decision input, with no computed refusal, submitted rejection, signature, contract or reservation.",
+            "public_location": {
+              "state": "unknown",
+              "reason_code": "synthetic_unsupplied",
+              "missing_refs": []
+            },
+            "assignments": [
+              {
+                "role": "Contractor",
+                "function_ref": {
+                  "kind": "FunctionAssignment",
+                  "id": "v2-formation-reject-contractor-function",
+                  "version": "1"
+                },
+                "configuration_version": "1",
+                "basis_refs": [
+                  {
+                    "kind": "Evidence",
+                    "id": "v2-formation-reject-basis",
+                    "version": "1"
+                  }
+                ]
+              }
+            ],
+            "members": [],
+            "evidence_refs": [
+              {
+                "kind": "Evidence",
+                "id": "v2-formation-reject-basis",
+                "version": "1"
+              }
+            ]
+          },
+          {
+            "organization_id": "v2-fixture-owner",
+            "actor_id": "v2-fixture-owner-actor",
+            "source_ids": [
+              "synthetic:synthetic-v2-contractor-formation-reject-01:v2-fixture-owner"
+            ],
+            "public_description": "Synthetic independent Contractor A04 rejection: parties, authority, bid and final agreement are invented. The Contractor explicitly rejects the offered price/terms. Partial capacity and unknown funding are retained; this is an explicit decision input, with no computed refusal, submitted rejection, signature, contract or reservation.",
+            "public_location": {
+              "state": "unknown",
+              "reason_code": "synthetic_unsupplied",
+              "missing_refs": []
+            },
+            "assignments": [
+              {
+                "role": "Owner",
+                "function_ref": {
+                  "kind": "FunctionAssignment",
+                  "id": "v2-formation-reject-owner-function",
+                  "version": "1"
+                },
+                "configuration_version": "1",
+                "basis_refs": [
+                  {
+                    "kind": "Evidence",
+                    "id": "v2-formation-reject-basis",
+                    "version": "1"
+                  }
+                ]
+              }
+            ],
+            "members": [],
+            "evidence_refs": [
+              {
+                "kind": "Evidence",
+                "id": "v2-formation-reject-basis",
+                "version": "1"
+              }
+            ]
+          }
+        ],
+        "authorizations": [
+          {
+            "ref": {
+              "kind": "Authorization",
+              "id": "v2-formation-reject-contractor-grant",
+              "version": "1"
+            },
+            "organization_id": "v2-fixture-contractor",
+            "actor_id": "v2-fixture-contractor-actor",
+            "function_ref": {
+              "kind": "FunctionAssignment",
+              "id": "v2-formation-reject-contractor-function",
+              "version": "1"
+            },
+            "action_ids": [
+              "CONTRACTOR-A04"
+            ],
+            "scopes": [
+              {
+                "kind": "project",
+                "ref": {
+                  "kind": "Project",
+                  "id": "v2-formation-reject-project",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "v2-formation-reject-work",
+                    "version": "1"
+                  }
+                ]
+              }
+            ],
+            "readable_refs": [
+              {
+                "kind": "ContractTerms",
+                "id": "v2-formation-reject-terms",
+                "version": "1"
+              },
+              {
+                "kind": "ContractOffer",
+                "id": "v2-formation-reject-offer",
+                "version": "1"
+              },
+              {
+                "kind": "Bid",
+                "id": "v2-formation-reject-bid",
+                "version": "1"
+              },
+              {
+                "kind": "ContractFormationProfile",
+                "id": "v2-formation-reject-profile",
+                "version": "1"
+              },
+              {
+                "kind": "ContractorCapacity",
+                "id": "v2-formation-reject-capacity",
+                "version": "1"
+              },
+              {
+                "kind": "FundingPosition",
+                "id": "v2-formation-reject-funding",
+                "version": "1"
+              },
+              {
+                "kind": "PartyAcceptance",
+                "id": "v2-formation-reject-owner-acceptance",
+                "version": "1"
+              },
+              {
+                "kind": "ContractTemplate",
+                "id": "v2-formation-reject-template",
+                "version": "1"
+              },
+              {
+                "kind": "ContractClause",
+                "id": "v2-formation-reject-price-clause",
+                "version": "1"
+              },
+              {
+                "kind": "ProcurementPackage",
+                "id": "v2-formation-reject-package",
+                "version": "1"
+              },
+              {
+                "kind": "TenderRound",
+                "id": "v2-formation-reject-round",
+                "version": "1"
+              },
+              {
+                "kind": "ProgrammeProposal",
+                "id": "v2-formation-reject-programme",
+                "version": "1"
+              },
+              {
+                "kind": "SubmissionExecution",
+                "id": "v2-formation-reject-bid-submission",
+                "version": "1"
+              },
+              {
+                "kind": "TimeWindow",
+                "id": "v2-formation-reject-response-window",
+                "version": "1"
+              },
+              {
+                "kind": "TimeWindow",
+                "id": "v2-formation-reject-bid-validity",
+                "version": "1"
+              },
+              {
+                "kind": "ClockProfile",
+                "id": "v2-formation-reject-clock",
+                "version": "1"
+              },
+              {
+                "kind": "Project",
+                "id": "v2-formation-reject-project",
+                "version": "1"
+              },
+              {
+                "kind": "WorkScope",
+                "id": "v2-formation-reject-work",
+                "version": "1"
+              },
+              {
+                "kind": "FunctionAssignment",
+                "id": "v2-formation-reject-contractor-function",
+                "version": "1"
+              },
+              {
+                "kind": "FunctionAssignment",
+                "id": "v2-formation-reject-owner-function",
+                "version": "1"
+              },
+              {
+                "kind": "CandidateSet",
+                "id": "v2-formation-reject-candidates",
+                "version": "1"
+              },
+              {
+                "kind": "Authorization",
+                "id": "v2-formation-reject-contractor-grant",
+                "version": "1"
+              },
+              {
+                "kind": "Authorization",
+                "id": "v2-formation-reject-owner-grant",
+                "version": "1"
+              },
+              {
+                "kind": "Evidence",
+                "id": "v2-formation-reject-basis",
+                "version": "1"
+              }
+            ],
+            "tool_ids": [],
+            "validity": {
+              "start": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-formation-reject-clock",
+                  "version": "1"
+                },
+                "offset": 0
+              },
+              "end": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-formation-reject-clock",
+                  "version": "1"
+                },
+                "offset": 100
+              },
+              "bounds": "closed_open"
+            },
+            "basis_refs": [
+              {
+                "kind": "Evidence",
+                "id": "v2-formation-reject-basis",
+                "version": "1"
+              }
+            ]
+          },
+          {
+            "ref": {
+              "kind": "Authorization",
+              "id": "v2-formation-reject-owner-grant",
+              "version": "1"
+            },
+            "organization_id": "v2-fixture-owner",
+            "actor_id": "v2-fixture-owner-actor",
+            "function_ref": {
+              "kind": "FunctionAssignment",
+              "id": "v2-formation-reject-owner-function",
+              "version": "1"
+            },
+            "action_ids": [
+              "OWN-A10"
+            ],
+            "scopes": [
+              {
+                "kind": "project",
+                "ref": {
+                  "kind": "Project",
+                  "id": "v2-formation-reject-project",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "v2-formation-reject-work",
+                    "version": "1"
+                  }
+                ]
+              }
+            ],
+            "readable_refs": [
+              {
+                "kind": "ContractTerms",
+                "id": "v2-formation-reject-terms",
+                "version": "1"
+              },
+              {
+                "kind": "ContractOffer",
+                "id": "v2-formation-reject-offer",
+                "version": "1"
+              },
+              {
+                "kind": "Bid",
+                "id": "v2-formation-reject-bid",
+                "version": "1"
+              },
+              {
+                "kind": "ContractFormationProfile",
+                "id": "v2-formation-reject-profile",
+                "version": "1"
+              },
+              {
+                "kind": "ContractorCapacity",
+                "id": "v2-formation-reject-capacity",
+                "version": "1"
+              },
+              {
+                "kind": "FundingPosition",
+                "id": "v2-formation-reject-funding",
+                "version": "1"
+              },
+              {
+                "kind": "PartyAcceptance",
+                "id": "v2-formation-reject-owner-acceptance",
+                "version": "1"
+              },
+              {
+                "kind": "ContractTemplate",
+                "id": "v2-formation-reject-template",
+                "version": "1"
+              },
+              {
+                "kind": "ContractClause",
+                "id": "v2-formation-reject-price-clause",
+                "version": "1"
+              },
+              {
+                "kind": "ProcurementPackage",
+                "id": "v2-formation-reject-package",
+                "version": "1"
+              },
+              {
+                "kind": "TenderRound",
+                "id": "v2-formation-reject-round",
+                "version": "1"
+              },
+              {
+                "kind": "ProgrammeProposal",
+                "id": "v2-formation-reject-programme",
+                "version": "1"
+              },
+              {
+                "kind": "SubmissionExecution",
+                "id": "v2-formation-reject-bid-submission",
+                "version": "1"
+              },
+              {
+                "kind": "TimeWindow",
+                "id": "v2-formation-reject-response-window",
+                "version": "1"
+              },
+              {
+                "kind": "TimeWindow",
+                "id": "v2-formation-reject-bid-validity",
+                "version": "1"
+              },
+              {
+                "kind": "ClockProfile",
+                "id": "v2-formation-reject-clock",
+                "version": "1"
+              },
+              {
+                "kind": "Project",
+                "id": "v2-formation-reject-project",
+                "version": "1"
+              },
+              {
+                "kind": "WorkScope",
+                "id": "v2-formation-reject-work",
+                "version": "1"
+              },
+              {
+                "kind": "FunctionAssignment",
+                "id": "v2-formation-reject-contractor-function",
+                "version": "1"
+              },
+              {
+                "kind": "FunctionAssignment",
+                "id": "v2-formation-reject-owner-function",
+                "version": "1"
+              },
+              {
+                "kind": "CandidateSet",
+                "id": "v2-formation-reject-candidates",
+                "version": "1"
+              },
+              {
+                "kind": "Authorization",
+                "id": "v2-formation-reject-contractor-grant",
+                "version": "1"
+              },
+              {
+                "kind": "Authorization",
+                "id": "v2-formation-reject-owner-grant",
+                "version": "1"
+              },
+              {
+                "kind": "Evidence",
+                "id": "v2-formation-reject-basis",
+                "version": "1"
+              }
+            ],
+            "tool_ids": [],
+            "validity": {
+              "start": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-formation-reject-clock",
+                  "version": "1"
+                },
+                "offset": 0
+              },
+              "end": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-formation-reject-clock",
+                  "version": "1"
+                },
+                "offset": 100
+              },
+              "bounds": "closed_open"
+            },
+            "basis_refs": [
+              {
+                "kind": "Evidence",
+                "id": "v2-formation-reject-basis",
+                "version": "1"
+              }
+            ]
+          }
+        ],
+        "inactive_authorization_refs": []
+      },
+      "source_projection": {
+        "run_id": "synthetic-v2-contractor-formation-reject-01",
+        "macro_version": "synthetic-v2-formation-reject.v1",
+        "state_version": "synthetic-reject-read-10",
+        "read_token": "synthetic-v2-contractor-formation-reject-01:read-10",
+        "business_time": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "v2-formation-reject-clock",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "organization_id": "v2-fixture-contractor",
+        "objects": [
+          {
+            "ref": {
+              "kind": "ContractTerms",
+              "id": "v2-formation-reject-terms",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "ContractTerms",
+                "id": "v2-formation-reject-terms",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v2-formation-reject-basis",
+                  "version": "1"
+                }
+              ],
+              "scope": {
+                "kind": "project",
+                "ref": {
+                  "kind": "Project",
+                  "id": "v2-formation-reject-project",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "v2-formation-reject-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-formation-reject-clock",
+                  "version": "1"
+                },
+                "offset": 8
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-formation-reject-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-formation-reject-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              },
+              "offer_ref": {
+                "kind": "ContractOffer",
+                "id": "v2-formation-reject-offer",
+                "version": "1"
+              },
+              "bid_ref": {
+                "kind": "Bid",
+                "id": "v2-formation-reject-bid",
+                "version": "1"
+              },
+              "package_ref": {
+                "kind": "ProcurementPackage",
+                "id": "v2-formation-reject-package",
+                "version": "1"
+              },
+              "round_ref": {
+                "kind": "TenderRound",
+                "id": "v2-formation-reject-round",
+                "version": "1"
+              },
+              "contractor_id": "v2-fixture-contractor",
+              "client_id": "v2-fixture-owner",
+              "required_party_ids": [
+                "v2-fixture-owner",
+                "v2-fixture-contractor"
+              ],
+              "price": {
+                "value": "100",
+                "currency": "HKD",
+                "basis_ref": {
+                  "kind": "Evidence",
+                  "id": "v2-formation-reject-basis",
+                  "version": "1"
+                }
+              },
+              "scope_keys": [
+                "work"
+              ],
+              "programme_ref": {
+                "kind": "ProgrammeProposal",
+                "id": "v2-formation-reject-programme",
+                "version": "1"
+              },
+              "deliverable_refs": [],
+              "exclusion_refs": [],
+              "clause_refs": [
+                {
+                  "kind": "ContractClause",
+                  "id": "v2-formation-reject-price-clause",
+                  "version": "1"
+                }
+              ],
+              "condition_refs": [],
+              "payment_refs": [],
+              "work_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-formation-reject-clock",
+                    "version": "1"
+                  },
+                  "offset": 20
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-formation-reject-clock",
+                    "version": "1"
+                  },
+                  "offset": 40
+                },
+                "bounds": "closed_open"
+              },
+              "contract_template_ref": {
+                "kind": "ContractTemplate",
+                "id": "v2-formation-reject-template",
+                "version": "1"
+              },
+              "amendment_refs": []
+            }
+          },
+          {
+            "ref": {
+              "kind": "ContractOffer",
+              "id": "v2-formation-reject-offer",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "ContractOffer",
+                "id": "v2-formation-reject-offer",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v2-formation-reject-basis",
+                  "version": "1"
+                }
+              ],
+              "scope": {
+                "kind": "project",
+                "ref": {
+                  "kind": "Project",
+                  "id": "v2-formation-reject-project",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "v2-formation-reject-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-formation-reject-clock",
+                  "version": "1"
+                },
+                "offset": 8
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-formation-reject-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-formation-reject-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              },
+              "bid_ref": {
+                "kind": "Bid",
+                "id": "v2-formation-reject-bid",
+                "version": "1"
+              },
+              "package_ref": {
+                "kind": "ProcurementPackage",
+                "id": "v2-formation-reject-package",
+                "version": "1"
+              },
+              "round_ref": {
+                "kind": "TenderRound",
+                "id": "v2-formation-reject-round",
+                "version": "1"
+              },
+              "contractor_id": "v2-fixture-contractor",
+              "client_id": "v2-fixture-owner",
+              "terms_ref": {
+                "kind": "ContractTerms",
+                "id": "v2-formation-reject-terms",
+                "version": "1"
+              },
+              "response_window_ref": {
+                "kind": "TimeWindow",
+                "id": "v2-formation-reject-response-window",
+                "version": "1"
+              },
+              "status": "active",
+              "author_actor_id": "v2-fixture-owner-actor",
+              "author_function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "v2-formation-reject-owner-function",
+                "version": "1"
+              },
+              "author_authority_ref": {
+                "kind": "Authorization",
+                "id": "v2-formation-reject-owner-grant",
+                "version": "1"
+              },
+              "author_action_id": "OWN-A10"
+            }
+          },
+          {
+            "ref": {
+              "kind": "Bid",
+              "id": "v2-formation-reject-bid",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Bid",
+                "id": "v2-formation-reject-bid",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v2-formation-reject-basis",
+                  "version": "1"
+                }
+              ],
+              "scope": {
+                "kind": "project",
+                "ref": {
+                  "kind": "Project",
+                  "id": "v2-formation-reject-project",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "v2-formation-reject-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-formation-reject-clock",
+                  "version": "1"
+                },
+                "offset": 8
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-formation-reject-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-formation-reject-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              },
+              "organization_id": "v2-fixture-contractor",
+              "round_ref": {
+                "kind": "TenderRound",
+                "id": "v2-formation-reject-round",
+                "version": "1"
+              },
+              "submission_ref": {
+                "kind": "SubmissionExecution",
+                "id": "v2-formation-reject-bid-submission",
+                "version": "1"
+              },
+              "reservation_refs": [],
+              "draft": {
+                "package_ref": {
+                  "kind": "ProcurementPackage",
+                  "id": "v2-formation-reject-package",
+                  "version": "1"
+                },
+                "scope_ref": {
+                  "kind": "project",
+                  "ref": {
+                    "kind": "Project",
+                    "id": "v2-formation-reject-project",
+                    "version": "1"
+                  },
+                  "coverage_refs": [
+                    {
+                      "kind": "WorkScope",
+                      "id": "v2-formation-reject-work",
+                      "version": "1"
+                    }
+                  ]
+                },
+                "price": {
+                  "value": "100",
+                  "currency": "HKD",
+                  "basis_ref": {
+                    "kind": "Evidence",
+                    "id": "v2-formation-reject-basis",
+                    "version": "1"
+                  }
+                },
+                "cost_basis_refs": [],
+                "programme_ref": {
+                  "kind": "ProgrammeProposal",
+                  "id": "v2-formation-reject-programme",
+                  "version": "1"
+                },
+                "terms_ref": {
+                  "kind": "ContractTerms",
+                  "id": "v2-formation-reject-terms",
+                  "version": "1"
+                },
+                "exclusion_refs": [],
+                "validity_ref": {
+                  "kind": "TimeWindow",
+                  "id": "v2-formation-reject-bid-validity",
+                  "version": "1"
+                },
+                "proposed_resources": []
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "ContractFormationProfile",
+              "id": "v2-formation-reject-profile",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "ContractFormationProfile",
+                "id": "v2-formation-reject-profile",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v2-formation-reject-basis",
+                  "version": "1"
+                }
+              ],
+              "scope": {
+                "kind": "project",
+                "ref": {
+                  "kind": "Project",
+                  "id": "v2-formation-reject-project",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "v2-formation-reject-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-formation-reject-clock",
+                  "version": "1"
+                },
+                "offset": 8
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-formation-reject-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-formation-reject-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              },
+              "organization_id": "v2-fixture-contractor",
+              "offer_ref": {
+                "kind": "ContractOffer",
+                "id": "v2-formation-reject-offer",
+                "version": "1"
+              },
+              "terms_ref": {
+                "kind": "ContractTerms",
+                "id": "v2-formation-reject-terms",
+                "version": "1"
+              },
+              "authority_ref": {
+                "kind": "Authorization",
+                "id": "v2-formation-reject-contractor-grant",
+                "version": "1"
+              },
+              "choice": "reject",
+              "explicit_acceptance": {
+                "state": "known",
+                "value": false
+              },
+              "reviewed_agreement_sha256": "e92a5e7513f19c3a0d04d36b7f907b11442eba42e6abe26c6b8bb4bd33c28d08",
+              "reviewed_clause_refs": [
+                {
+                  "kind": "ContractClause",
+                  "id": "v2-formation-reject-price-clause",
+                  "version": "1"
+                }
+              ],
+              "cash_plan_ref": null,
+              "requirement_changes": [],
+              "note": "Synthetic explicit rejection of the final price/terms; no retained acceptance."
+            }
+          },
+          {
+            "ref": {
+              "kind": "ContractorCapacity",
+              "id": "v2-formation-reject-capacity",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "ContractorCapacity",
+                "id": "v2-formation-reject-capacity",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v2-formation-reject-basis",
+                  "version": "1"
+                }
+              ],
+              "scope": {
+                "kind": "project",
+                "ref": {
+                  "kind": "Project",
+                  "id": "v2-formation-reject-project",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "v2-formation-reject-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-formation-reject-clock",
+                  "version": "1"
+                },
+                "offset": 8
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-formation-reject-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-formation-reject-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              },
+              "organization_id": "v2-fixture-contractor",
+              "as_of": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-formation-reject-clock",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "coverage": "partial",
+              "resources": [],
+              "commitments": [],
+              "qualification_refs": [],
+              "qualification_coverage": "unknown"
+            }
+          },
+          {
+            "ref": {
+              "kind": "FundingPosition",
+              "id": "v2-formation-reject-funding",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "FundingPosition",
+                "id": "v2-formation-reject-funding",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v2-formation-reject-basis",
+                  "version": "1"
+                }
+              ],
+              "scope": {
+                "kind": "project",
+                "ref": {
+                  "kind": "Project",
+                  "id": "v2-formation-reject-project",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "v2-formation-reject-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-formation-reject-clock",
+                  "version": "1"
+                },
+                "offset": 8
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-formation-reject-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-formation-reject-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              },
+              "organization_id": "v2-fixture-contractor",
+              "as_of": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-formation-reject-clock",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "coverage": "unknown",
+              "source_refs": [],
+              "existing_payment_refs": [],
+              "inflow_refs": []
+            }
+          },
+          {
+            "ref": {
+              "kind": "PartyAcceptance",
+              "id": "v2-formation-reject-owner-acceptance",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "PartyAcceptance",
+                "id": "v2-formation-reject-owner-acceptance",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v2-formation-reject-basis",
+                  "version": "1"
+                }
+              ],
+              "scope": {
+                "kind": "project",
+                "ref": {
+                  "kind": "Project",
+                  "id": "v2-formation-reject-project",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "v2-formation-reject-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-formation-reject-clock",
+                  "version": "1"
+                },
+                "offset": 8
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-formation-reject-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-formation-reject-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              },
+              "run_id": "synthetic-v2-contractor-formation-reject-01",
+              "offer_ref": {
+                "kind": "ContractOffer",
+                "id": "v2-formation-reject-offer",
+                "version": "1"
+              },
+              "terms_ref": {
+                "kind": "ContractTerms",
+                "id": "v2-formation-reject-terms",
+                "version": "1"
+              },
+              "bid_ref": {
+                "kind": "Bid",
+                "id": "v2-formation-reject-bid",
+                "version": "1"
+              },
+              "party_id": "v2-fixture-owner",
+              "author_actor_id": "v2-fixture-owner-actor",
+              "author_function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "v2-formation-reject-owner-function",
+                "version": "1"
+              },
+              "author_authority_ref": {
+                "kind": "Authorization",
+                "id": "v2-formation-reject-owner-grant",
+                "version": "1"
+              },
+              "author_action_id": "OWN-A10",
+              "agreement_sha256": "e92a5e7513f19c3a0d04d36b7f907b11442eba42e6abe26c6b8bb4bd33c28d08",
+              "choice": "accept",
+              "explicit_acceptance": {
+                "state": "known",
+                "value": true
+              },
+              "status": "active",
+              "decided_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-formation-reject-clock",
+                  "version": "1"
+                },
+                "offset": 8
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "ContractTemplate",
+              "id": "v2-formation-reject-template",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "ContractTemplate",
+                "id": "v2-formation-reject-template",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v2-formation-reject-basis",
+                  "version": "1"
+                }
+              ],
+              "scope": {
+                "kind": "project",
+                "ref": {
+                  "kind": "Project",
+                  "id": "v2-formation-reject-project",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "v2-formation-reject-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-formation-reject-clock",
+                  "version": "1"
+                },
+                "offset": 8
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-formation-reject-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-formation-reject-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              },
+              "offer_ref": {
+                "kind": "ContractOffer",
+                "id": "v2-formation-reject-offer",
+                "version": "1"
+              },
+              "terms_ref": {
+                "kind": "ContractTerms",
+                "id": "v2-formation-reject-terms",
+                "version": "1"
+              },
+              "bid_ref": {
+                "kind": "Bid",
+                "id": "v2-formation-reject-bid",
+                "version": "1"
+              },
+              "allowed": {
+                "state": "known",
+                "value": true
+              },
+              "changed_field_codes": [],
+              "stage": "acceptance",
+              "satisfied": {
+                "state": "known",
+                "value": true
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "ContractClause",
+              "id": "v2-formation-reject-price-clause",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "ContractClause",
+                "id": "v2-formation-reject-price-clause",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v2-formation-reject-basis",
+                  "version": "1"
+                }
+              ],
+              "scope": {
+                "kind": "project",
+                "ref": {
+                  "kind": "Project",
+                  "id": "v2-formation-reject-project",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "v2-formation-reject-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-formation-reject-clock",
+                  "version": "1"
+                },
+                "offset": 8
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-formation-reject-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-formation-reject-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              },
+              "offer_ref": {
+                "kind": "ContractOffer",
+                "id": "v2-formation-reject-offer",
+                "version": "1"
+              },
+              "terms_ref": {
+                "kind": "ContractTerms",
+                "id": "v2-formation-reject-terms",
+                "version": "1"
+              },
+              "bid_ref": {
+                "kind": "Bid",
+                "id": "v2-formation-reject-bid",
+                "version": "1"
+              },
+              "allowed": {
+                "state": "known",
+                "value": true
+              },
+              "changed_field_codes": [],
+              "stage": "acceptance",
+              "satisfied": {
+                "state": "known",
+                "value": true
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "ProcurementPackage",
+              "id": "v2-formation-reject-package",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "ProcurementPackage",
+                "id": "v2-formation-reject-package",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v2-formation-reject-basis",
+                  "version": "1"
+                }
+              ],
+              "scope": {
+                "kind": "project",
+                "ref": {
+                  "kind": "Project",
+                  "id": "v2-formation-reject-project",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "v2-formation-reject-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-formation-reject-clock",
+                  "version": "1"
+                },
+                "offset": 8
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-formation-reject-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-formation-reject-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              },
+              "round_ref": {
+                "kind": "TenderRound",
+                "id": "v2-formation-reject-round",
+                "version": "1"
+              },
+              "recipient_organization_ids": [
+                "v2-fixture-contractor"
+              ],
+              "status": "closed",
+              "submission_window_ref": {
+                "kind": "TimeWindow",
+                "id": "v2-formation-reject-bid-validity",
+                "version": "1"
+              },
+              "region_id": "synthetic-HK",
+              "object_type": "synthetic-building",
+              "work_type": "synthetic-works",
+              "special_condition_codes": [],
+              "coverage_keys": [
+                "work"
+              ],
+              "deliverable_refs": [],
+              "quantity_refs": [],
+              "required_qualification_codes": [],
+              "permitted_maturities": [
+                "tender_design"
+              ],
+              "allowed_method_refs": [],
+              "allowed_exclusion_refs": [],
+              "allow_limited_bid": true
+            }
+          },
+          {
+            "ref": {
+              "kind": "TenderRound",
+              "id": "v2-formation-reject-round",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "TenderRound",
+                "id": "v2-formation-reject-round",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v2-formation-reject-basis",
+                  "version": "1"
+                }
+              ],
+              "scope": {
+                "kind": "project",
+                "ref": {
+                  "kind": "Project",
+                  "id": "v2-formation-reject-project",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "v2-formation-reject-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-formation-reject-clock",
+                  "version": "1"
+                },
+                "offset": 8
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-formation-reject-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-formation-reject-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              },
+              "package_ref": {
+                "kind": "ProcurementPackage",
+                "id": "v2-formation-reject-package",
+                "version": "1"
+              },
+              "organization_id": "v2-fixture-contractor",
+              "allowed": {
+                "state": "known",
+                "value": true
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "ProgrammeProposal",
+              "id": "v2-formation-reject-programme",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "ProgrammeProposal",
+                "id": "v2-formation-reject-programme",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v2-formation-reject-basis",
+                  "version": "1"
+                }
+              ],
+              "scope": {
+                "kind": "project",
+                "ref": {
+                  "kind": "Project",
+                  "id": "v2-formation-reject-project",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "v2-formation-reject-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-formation-reject-clock",
+                  "version": "1"
+                },
+                "offset": 8
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-formation-reject-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-formation-reject-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              },
+              "organization_id": "v2-fixture-contractor",
+              "package_ref": {
+                "kind": "ProcurementPackage",
+                "id": "v2-formation-reject-package",
+                "version": "1"
+              },
+              "quantity_refs": [],
+              "tasks": [],
+              "author_actor_id": "v2-fixture-contractor-actor",
+              "author_function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "v2-formation-reject-contractor-function",
+                "version": "1"
+              },
+              "author_authority_ref": {
+                "kind": "Authorization",
+                "id": "v2-formation-reject-contractor-grant",
+                "version": "1"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "SubmissionExecution",
+              "id": "v2-formation-reject-bid-submission",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "SubmissionExecution",
+                "id": "v2-formation-reject-bid-submission",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v2-formation-reject-basis",
+                  "version": "1"
+                }
+              ],
+              "scope": {
+                "kind": "project",
+                "ref": {
+                  "kind": "Project",
+                  "id": "v2-formation-reject-project",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "v2-formation-reject-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-formation-reject-clock",
+                  "version": "1"
+                },
+                "offset": 8
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-formation-reject-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-formation-reject-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              },
+              "organization_id": "v2-fixture-contractor",
+              "bid_ref": {
+                "kind": "Bid",
+                "id": "v2-formation-reject-bid",
+                "version": "1"
+              },
+              "package_ref": {
+                "kind": "ProcurementPackage",
+                "id": "v2-formation-reject-package",
+                "version": "1"
+              },
+              "round_ref": {
+                "kind": "TenderRound",
+                "id": "v2-formation-reject-round",
+                "version": "1"
+              },
+              "command_id": "synthetic-bid-submission-01",
+              "status": "accepted",
+              "result_basis_ref": {
+                "kind": "Evidence",
+                "id": "v2-formation-reject-basis",
+                "version": "1"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "TimeWindow",
+              "id": "v2-formation-reject-response-window",
+              "version": "1"
+            },
+            "value": {
+              "start": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-formation-reject-clock",
+                  "version": "1"
+                },
+                "offset": 8
+              },
+              "end": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-formation-reject-clock",
+                  "version": "1"
+                },
+                "offset": 15
+              },
+              "bounds": "closed_open"
+            }
+          },
+          {
+            "ref": {
+              "kind": "TimeWindow",
+              "id": "v2-formation-reject-bid-validity",
+              "version": "1"
+            },
+            "value": {
+              "start": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-formation-reject-clock",
+                  "version": "1"
+                },
+                "offset": 0
+              },
+              "end": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-formation-reject-clock",
+                  "version": "1"
+                },
+                "offset": 100
+              },
+              "bounds": "closed_open"
+            }
+          },
+          {
+            "ref": {
+              "kind": "ClockProfile",
+              "id": "v2-formation-reject-clock",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "ClockProfile",
+                "id": "v2-formation-reject-clock",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v2-formation-reject-basis",
+                  "version": "1"
+                }
+              ],
+              "tick_unit": "synthetic-tick"
+            }
+          },
+          {
+            "ref": {
+              "kind": "Project",
+              "id": "v2-formation-reject-project",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Project",
+                "id": "v2-formation-reject-project",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v2-formation-reject-basis",
+                  "version": "1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "WorkScope",
+              "id": "v2-formation-reject-work",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "WorkScope",
+                "id": "v2-formation-reject-work",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v2-formation-reject-basis",
+                  "version": "1"
+                }
+              ],
+              "parent_ref": {
+                "kind": "Project",
+                "id": "v2-formation-reject-project",
+                "version": "1"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "FunctionAssignment",
+              "id": "v2-formation-reject-contractor-function",
+              "version": "1"
+            },
+            "value": {
+              "role": "Contractor",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "v2-formation-reject-contractor-function",
+                "version": "1"
+              },
+              "configuration_version": "1",
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v2-formation-reject-basis",
+                  "version": "1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "FunctionAssignment",
+              "id": "v2-formation-reject-owner-function",
+              "version": "1"
+            },
+            "value": {
+              "role": "Owner",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "v2-formation-reject-owner-function",
+                "version": "1"
+              },
+              "configuration_version": "1",
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v2-formation-reject-basis",
+                  "version": "1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "CandidateSet",
+              "id": "v2-formation-reject-candidates",
+              "version": "1"
+            },
+            "value": {
+              "operation_id": "v2-contractor-formation-reject-01",
+              "scope": {
+                "kind": "project",
+                "ref": {
+                  "kind": "Project",
+                  "id": "v2-formation-reject-project",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "v2-formation-reject-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "as_of": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-formation-reject-clock",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "candidates": [
+                {
+                  "ref": {
+                    "kind": "ContractOffer",
+                    "id": "v2-formation-reject-offer",
+                    "version": "1"
+                  },
+                  "permitted_choices": [
+                    "reject"
+                  ]
+                }
+              ],
+              "search_profile_ref": {
+                "kind": "Profile",
+                "id": "v2-formation-reject-declared-revision",
+                "version": "1"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "Authorization",
+              "id": "v2-formation-reject-contractor-grant",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Authorization",
+                "id": "v2-formation-reject-contractor-grant",
+                "version": "1"
+              },
+              "organization_id": "v2-fixture-contractor",
+              "actor_id": "v2-fixture-contractor-actor",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "v2-formation-reject-contractor-function",
+                "version": "1"
+              },
+              "action_ids": [
+                "CONTRACTOR-A04"
+              ],
+              "scopes": [
+                {
+                  "kind": "project",
+                  "ref": {
+                    "kind": "Project",
+                    "id": "v2-formation-reject-project",
+                    "version": "1"
+                  },
+                  "coverage_refs": [
+                    {
+                      "kind": "WorkScope",
+                      "id": "v2-formation-reject-work",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "readable_refs": [
+                {
+                  "kind": "ContractTerms",
+                  "id": "v2-formation-reject-terms",
+                  "version": "1"
+                },
+                {
+                  "kind": "ContractOffer",
+                  "id": "v2-formation-reject-offer",
+                  "version": "1"
+                },
+                {
+                  "kind": "Bid",
+                  "id": "v2-formation-reject-bid",
+                  "version": "1"
+                },
+                {
+                  "kind": "ContractFormationProfile",
+                  "id": "v2-formation-reject-profile",
+                  "version": "1"
+                },
+                {
+                  "kind": "ContractorCapacity",
+                  "id": "v2-formation-reject-capacity",
+                  "version": "1"
+                },
+                {
+                  "kind": "FundingPosition",
+                  "id": "v2-formation-reject-funding",
+                  "version": "1"
+                },
+                {
+                  "kind": "PartyAcceptance",
+                  "id": "v2-formation-reject-owner-acceptance",
+                  "version": "1"
+                },
+                {
+                  "kind": "ContractTemplate",
+                  "id": "v2-formation-reject-template",
+                  "version": "1"
+                },
+                {
+                  "kind": "ContractClause",
+                  "id": "v2-formation-reject-price-clause",
+                  "version": "1"
+                },
+                {
+                  "kind": "ProcurementPackage",
+                  "id": "v2-formation-reject-package",
+                  "version": "1"
+                },
+                {
+                  "kind": "TenderRound",
+                  "id": "v2-formation-reject-round",
+                  "version": "1"
+                },
+                {
+                  "kind": "ProgrammeProposal",
+                  "id": "v2-formation-reject-programme",
+                  "version": "1"
+                },
+                {
+                  "kind": "SubmissionExecution",
+                  "id": "v2-formation-reject-bid-submission",
+                  "version": "1"
+                },
+                {
+                  "kind": "TimeWindow",
+                  "id": "v2-formation-reject-response-window",
+                  "version": "1"
+                },
+                {
+                  "kind": "TimeWindow",
+                  "id": "v2-formation-reject-bid-validity",
+                  "version": "1"
+                },
+                {
+                  "kind": "ClockProfile",
+                  "id": "v2-formation-reject-clock",
+                  "version": "1"
+                },
+                {
+                  "kind": "Project",
+                  "id": "v2-formation-reject-project",
+                  "version": "1"
+                },
+                {
+                  "kind": "WorkScope",
+                  "id": "v2-formation-reject-work",
+                  "version": "1"
+                },
+                {
+                  "kind": "FunctionAssignment",
+                  "id": "v2-formation-reject-contractor-function",
+                  "version": "1"
+                },
+                {
+                  "kind": "FunctionAssignment",
+                  "id": "v2-formation-reject-owner-function",
+                  "version": "1"
+                },
+                {
+                  "kind": "CandidateSet",
+                  "id": "v2-formation-reject-candidates",
+                  "version": "1"
+                },
+                {
+                  "kind": "Authorization",
+                  "id": "v2-formation-reject-contractor-grant",
+                  "version": "1"
+                },
+                {
+                  "kind": "Authorization",
+                  "id": "v2-formation-reject-owner-grant",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "v2-formation-reject-basis",
+                  "version": "1"
+                }
+              ],
+              "tool_ids": [],
+              "validity": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-formation-reject-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-formation-reject-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              },
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v2-formation-reject-basis",
+                  "version": "1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "Authorization",
+              "id": "v2-formation-reject-owner-grant",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Authorization",
+                "id": "v2-formation-reject-owner-grant",
+                "version": "1"
+              },
+              "organization_id": "v2-fixture-owner",
+              "actor_id": "v2-fixture-owner-actor",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "v2-formation-reject-owner-function",
+                "version": "1"
+              },
+              "action_ids": [
+                "OWN-A10"
+              ],
+              "scopes": [
+                {
+                  "kind": "project",
+                  "ref": {
+                    "kind": "Project",
+                    "id": "v2-formation-reject-project",
+                    "version": "1"
+                  },
+                  "coverage_refs": [
+                    {
+                      "kind": "WorkScope",
+                      "id": "v2-formation-reject-work",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "readable_refs": [
+                {
+                  "kind": "ContractTerms",
+                  "id": "v2-formation-reject-terms",
+                  "version": "1"
+                },
+                {
+                  "kind": "ContractOffer",
+                  "id": "v2-formation-reject-offer",
+                  "version": "1"
+                },
+                {
+                  "kind": "Bid",
+                  "id": "v2-formation-reject-bid",
+                  "version": "1"
+                },
+                {
+                  "kind": "ContractFormationProfile",
+                  "id": "v2-formation-reject-profile",
+                  "version": "1"
+                },
+                {
+                  "kind": "ContractorCapacity",
+                  "id": "v2-formation-reject-capacity",
+                  "version": "1"
+                },
+                {
+                  "kind": "FundingPosition",
+                  "id": "v2-formation-reject-funding",
+                  "version": "1"
+                },
+                {
+                  "kind": "PartyAcceptance",
+                  "id": "v2-formation-reject-owner-acceptance",
+                  "version": "1"
+                },
+                {
+                  "kind": "ContractTemplate",
+                  "id": "v2-formation-reject-template",
+                  "version": "1"
+                },
+                {
+                  "kind": "ContractClause",
+                  "id": "v2-formation-reject-price-clause",
+                  "version": "1"
+                },
+                {
+                  "kind": "ProcurementPackage",
+                  "id": "v2-formation-reject-package",
+                  "version": "1"
+                },
+                {
+                  "kind": "TenderRound",
+                  "id": "v2-formation-reject-round",
+                  "version": "1"
+                },
+                {
+                  "kind": "ProgrammeProposal",
+                  "id": "v2-formation-reject-programme",
+                  "version": "1"
+                },
+                {
+                  "kind": "SubmissionExecution",
+                  "id": "v2-formation-reject-bid-submission",
+                  "version": "1"
+                },
+                {
+                  "kind": "TimeWindow",
+                  "id": "v2-formation-reject-response-window",
+                  "version": "1"
+                },
+                {
+                  "kind": "TimeWindow",
+                  "id": "v2-formation-reject-bid-validity",
+                  "version": "1"
+                },
+                {
+                  "kind": "ClockProfile",
+                  "id": "v2-formation-reject-clock",
+                  "version": "1"
+                },
+                {
+                  "kind": "Project",
+                  "id": "v2-formation-reject-project",
+                  "version": "1"
+                },
+                {
+                  "kind": "WorkScope",
+                  "id": "v2-formation-reject-work",
+                  "version": "1"
+                },
+                {
+                  "kind": "FunctionAssignment",
+                  "id": "v2-formation-reject-contractor-function",
+                  "version": "1"
+                },
+                {
+                  "kind": "FunctionAssignment",
+                  "id": "v2-formation-reject-owner-function",
+                  "version": "1"
+                },
+                {
+                  "kind": "CandidateSet",
+                  "id": "v2-formation-reject-candidates",
+                  "version": "1"
+                },
+                {
+                  "kind": "Authorization",
+                  "id": "v2-formation-reject-contractor-grant",
+                  "version": "1"
+                },
+                {
+                  "kind": "Authorization",
+                  "id": "v2-formation-reject-owner-grant",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "v2-formation-reject-basis",
+                  "version": "1"
+                }
+              ],
+              "tool_ids": [],
+              "validity": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-formation-reject-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-formation-reject-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              },
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v2-formation-reject-basis",
+                  "version": "1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "Evidence",
+              "id": "v2-formation-reject-basis",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Evidence",
+                "id": "v2-formation-reject-basis",
+                "version": "1"
+              },
+              "source_kind": "synthetic",
+              "basis_kind": "assumed",
+              "locator": "integration/examples/role_contract_contractor_formation_reject_origin.json",
+              "content_hash": "d707c159a67c1de58d74cc217ea4f19115912b0aa0c0f395df44e3aab3fa5635",
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-formation-reject-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-formation-reject-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              }
+            }
+          }
+        ]
+      },
+      "allow_saved_recovery": false
+    },
+    "macro_version": "synthetic-v2-formation-reject.v1",
+    "client_version": "synthetic-formation-reject-client.v1",
+    "policy_version": "synthetic-formation-reject-policy.v1",
+    "model_version": "offline-no-model.v1"
+  }
+}

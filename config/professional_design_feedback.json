@@ -1,0 +1,15 @@
+{
+  "schema_version": "professional-design-feedback.v1",
+  "run_id": "goal3c-design-feedback",
+  "source_note": "Synthetic initial professional profiles and private review thresholds; original macro computes design results after actual appointments. Only initial QS cost_estimation_capability differs.",
+  "ticks": 2,
+  "design_review": {
+    "minimum_design_quality": 0.7,
+    "minimum_information_quality": 0.65,
+    "maximum_estimate_budget_ratio": 1.0
+  },
+  "scenarios": {
+    "lower_qs_accuracy": 0.2,
+    "higher_qs_accuracy": 0.9
+  }
+}

@@ -1,0 +1,373 @@
+{
+  "schema_version": "role-contract-invocation.v1",
+  "context": {
+    "run_id": "synthetic-v5-financing-application",
+    "actor_id": "owner-actor",
+    "function_ref": {
+      "kind": "FunctionAssignment",
+      "id": "owner-function",
+      "version": "1"
+    },
+    "authorization_refs": [
+      {
+        "kind": "Authorization",
+        "id": "owner-authority",
+        "version": "1"
+      }
+    ],
+    "operation_id": "v5-owner-apply-10",
+    "contract_ref": {
+      "kind": "ActionContract",
+      "id": "OWN-A05",
+      "version": "1"
+    },
+    "task_ref": {
+      "kind": "DecisionTask",
+      "id": "v5-owner-task",
+      "version": "1"
+    },
+    "scope": {
+      "kind": "assessment_case",
+      "ref": {
+        "kind": "OwnerCase",
+        "id": "case",
+        "version": "1"
+      },
+      "coverage_refs": [
+        {
+          "kind": "WorkScope",
+          "id": "funded-work",
+          "version": "1"
+        }
+      ]
+    },
+    "business_time": {
+      "clock_ref": {
+        "kind": "ClockProfile",
+        "id": "business",
+        "version": "1"
+      },
+      "offset": 10
+    },
+    "read_token": "synthetic-v5-financing-application:v5-owner-apply-10:read:1",
+    "visible_refs": [
+      {
+        "kind": "FunctionAssignment",
+        "id": "owner-function",
+        "version": "1"
+      },
+      {
+        "kind": "FunctionAssignment",
+        "id": "bank-function",
+        "version": "1"
+      },
+      {
+        "kind": "FunctionAssignment",
+        "id": "bank-two-function",
+        "version": "1"
+      },
+      {
+        "kind": "Authorization",
+        "id": "owner-authority",
+        "version": "1"
+      },
+      {
+        "kind": "Authorization",
+        "id": "bank-authority",
+        "version": "1"
+      },
+      {
+        "kind": "Authorization",
+        "id": "bank-two-authority",
+        "version": "1"
+      },
+      {
+        "kind": "OwnerCase",
+        "id": "case",
+        "version": "1"
+      },
+      {
+        "kind": "Project",
+        "id": "prior-project",
+        "version": "1"
+      },
+      {
+        "kind": "WorkScope",
+        "id": "funded-work",
+        "version": "1"
+      },
+      {
+        "kind": "WorkScope",
+        "id": "prior-work",
+        "version": "1"
+      },
+      {
+        "kind": "Organization",
+        "id": "owner",
+        "version": "1"
+      },
+      {
+        "kind": "FundingPurpose",
+        "id": "research",
+        "version": "1"
+      },
+      {
+        "kind": "FundingPurpose",
+        "id": "prior-purpose",
+        "version": "1"
+      },
+      {
+        "kind": "FinanceProductProfile",
+        "id": "product",
+        "version": "1"
+      },
+      {
+        "kind": "FinanceProductProfile",
+        "id": "product-two",
+        "version": "1"
+      },
+      {
+        "kind": "TimeWindow",
+        "id": "period",
+        "version": "1"
+      },
+      {
+        "kind": "TimeWindow",
+        "id": "tenor",
+        "version": "1"
+      },
+      {
+        "kind": "TimeWindow",
+        "id": "validity",
+        "version": "1"
+      },
+      {
+        "kind": "TimeWindow",
+        "id": "revision-period",
+        "version": "1"
+      },
+      {
+        "kind": "FundingProfile",
+        "id": "funding",
+        "version": "1"
+      },
+      {
+        "kind": "Account",
+        "id": "actual-cash",
+        "version": "1"
+      },
+      {
+        "kind": "FundingSource",
+        "id": "cash",
+        "version": "1"
+      },
+      {
+        "kind": "FundingApproval",
+        "id": "nonbank",
+        "version": "1"
+      },
+      {
+        "kind": "Debt",
+        "id": "existing-loan",
+        "version": "1"
+      },
+      {
+        "kind": "Obligation",
+        "id": "existing-payment",
+        "version": "1"
+      },
+      {
+        "kind": "FinanceApplication",
+        "id": "primary-application",
+        "version": "1"
+      },
+      {
+        "kind": "FinanceOffer",
+        "id": "primary",
+        "version": "1"
+      },
+      {
+        "kind": "PricingRule",
+        "id": "primary-interest",
+        "version": "1"
+      },
+      {
+        "kind": "FeeRule",
+        "id": "primary-fee",
+        "version": "1"
+      },
+      {
+        "kind": "RepaymentRule",
+        "id": "primary-principal",
+        "version": "1"
+      },
+      {
+        "kind": "FinanceApplication",
+        "id": "secondary-application",
+        "version": "1"
+      },
+      {
+        "kind": "FinanceOffer",
+        "id": "secondary",
+        "version": "1"
+      },
+      {
+        "kind": "PricingRule",
+        "id": "secondary-interest",
+        "version": "1"
+      },
+      {
+        "kind": "FeeRule",
+        "id": "secondary-fee",
+        "version": "1"
+      },
+      {
+        "kind": "RepaymentRule",
+        "id": "secondary-principal",
+        "version": "1"
+      },
+      {
+        "kind": "FinanceApplication",
+        "id": "original-application",
+        "version": "1"
+      },
+      {
+        "kind": "FinanceOffer",
+        "id": "original",
+        "version": "1"
+      },
+      {
+        "kind": "PricingRule",
+        "id": "original-interest",
+        "version": "1"
+      },
+      {
+        "kind": "FeeRule",
+        "id": "original-fee",
+        "version": "1"
+      },
+      {
+        "kind": "RepaymentRule",
+        "id": "original-principal",
+        "version": "1"
+      },
+      {
+        "kind": "PartyAcceptance",
+        "id": "borrower-acceptance",
+        "version": "1"
+      },
+      {
+        "kind": "PartyAcceptance",
+        "id": "bank-confirmation",
+        "version": "1"
+      },
+      {
+        "kind": "FinanceArrangement",
+        "id": "existing-arrangement",
+        "version": "1"
+      },
+      {
+        "kind": "FundingPlan",
+        "id": "reduced",
+        "version": "1"
+      },
+      {
+        "kind": "BusinessObject",
+        "id": "offer-subject",
+        "version": "1"
+      },
+      {
+        "kind": "Issue",
+        "id": "price-question",
+        "version": "1"
+      },
+      {
+        "kind": "Evidence",
+        "id": "synthetic",
+        "version": "1"
+      },
+      {
+        "kind": "CandidateSet",
+        "id": "v5-application-candidates",
+        "version": "1"
+      }
+    ],
+    "candidate_set_ref": {
+      "kind": "CandidateSet",
+      "id": "v5-application-candidates",
+      "version": "1"
+    },
+    "execution_mode": "offline_fixture"
+  },
+  "execution_path": "deterministic",
+  "action_input": {
+    "scope_ref": {
+      "kind": "assessment_case",
+      "ref": {
+        "kind": "OwnerCase",
+        "id": "case",
+        "version": "1"
+      },
+      "coverage_refs": [
+        {
+          "kind": "WorkScope",
+          "id": "funded-work",
+          "version": "1"
+        }
+      ]
+    },
+    "borrower_id": "owner",
+    "funding_lines": [
+      {
+        "window_ref": {
+          "kind": "TimeWindow",
+          "id": "period",
+          "version": "1"
+        },
+        "source_ref": {
+          "kind": "FundingSource",
+          "id": "cash",
+          "version": "1"
+        },
+        "available": {
+          "state": "known",
+          "value": {
+            "value": "1000",
+            "currency": "HKD",
+            "basis_ref": {
+              "kind": "Evidence",
+              "id": "synthetic",
+              "version": "1"
+            }
+          }
+        },
+        "planned_use": {
+          "state": "known",
+          "value": {
+            "value": "20",
+            "currency": "HKD",
+            "basis_ref": {
+              "kind": "Evidence",
+              "id": "synthetic",
+              "version": "1"
+            }
+          }
+        },
+        "restriction_refs": []
+      }
+    ],
+    "debt_refs": [
+      {
+        "kind": "Debt",
+        "id": "existing-loan",
+        "version": "1"
+      }
+    ],
+    "offers": [],
+    "funding_profile_ref": {
+      "kind": "FundingProfile",
+      "id": "funding",
+      "version": "1"
+    }
+  }
+}

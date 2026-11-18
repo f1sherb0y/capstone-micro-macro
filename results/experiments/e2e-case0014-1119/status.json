@@ -1,0 +1,96 @@
+{
+  "run_id": "e2e-case0014-1119-e",
+  "status": "completed",
+  "phase": "项目已关闭",
+  "current_tick": 42,
+  "settings": {
+    "case_id": "CASE-0014",
+    "mode": "llm",
+    "profile": "smoke",
+    "seed": 42,
+    "ticks": 120,
+    "budget": 150000000,
+    "duration": 24,
+    "plan": true,
+    "procurement_mode": "codedemo_micro"
+  },
+  "created_at": "2026-11-18T16:18:57.993893+00:00",
+  "error": null,
+  "projects": [
+    {
+      "id": "CASE-0014",
+      "name": "氹仔污水厂排放管改道及周边平整工程",
+      "stage": "closed",
+      "progress": 1.0,
+      "contracts": 6,
+      "cost": 155235085.31643653,
+      "delay_days": 7
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "SIM8D6B3127/CASE-0014/design/round-1",
+      "package_id": "CASE-0014/design",
+      "status": "committed",
+      "next_stage": 9,
+      "error": null
+    },
+    {
+      "session_id": "SIM8D6B3127/CASE-0014/cost/round-1",
+      "package_id": "CASE-0014/cost",
+      "status": "committed",
+      "next_stage": 9,
+      "error": null
+    },
+    {
+      "session_id": "SIM8D6B3127/CASE-0014/construction-1/round-1",
+      "package_id": "CASE-0014/construction-1",
+      "status": "committed",
+      "next_stage": 9,
+      "error": null
+    },
+    {
+      "session_id": "SIM8D6B3127/CASE-0014/construction-2/round-1",
+      "package_id": "CASE-0014/construction-2",
+      "status": "committed",
+      "next_stage": 9,
+      "error": null
+    },
+    {
+      "session_id": "SIM8D6B3127/CASE-0014/supply-1/round-1",
+      "package_id": "CASE-0014/supply-1",
+      "status": "committed",
+      "next_stage": 9,
+      "error": null
+    },
+    {
+      "session_id": "SIM8D6B3127/CASE-0014/supply-2/round-1",
+      "package_id": "CASE-0014/supply-2",
+      "status": "committed",
+      "next_stage": 9,
+      "error": null
+    }
+  ],
+  "usage": {
+    "model": "deepseek-flash",
+    "provider": "deepseek",
+    "requests": 498,
+    "cache_hits": 0,
+    "input_tokens": 3752274,
+    "output_tokens": 275269
+  },
+  "updated_at": "2026-11-18T16:35:25.265093+00:00",
+  "live_switches": {
+    "internal_condition_review": true,
+    "organization_mode": "multi",
+    "targeted_repair_retries": 3
+  },
+  "pause_requested": false,
+  "last_model_call": "CONTRACT_ACCEPTANCE",
+  "simulation_id": "SIM8D6B3127",
+  "data_version": "e16aedcfc1379c84b0e0fcae1ff2ac8fbb0ceceaa1027439a704903b4c1c3004",
+  "source_counts": {
+    "projects": 352,
+    "companies": 904
+  }
+}

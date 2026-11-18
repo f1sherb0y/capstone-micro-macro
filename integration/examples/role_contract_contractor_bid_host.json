@@ -1,0 +1,2884 @@
+{
+  "schema_version": "role-contract-host-config.v1",
+  "host_id": "synthetic-v2-contractor-bid-submit-01",
+  "version": "1",
+  "settings": {
+    "action_id": "CONTRACTOR-A02",
+    "source_factory": "integration.contractor_bid_fixture_sources:build_sources",
+    "source_version": "configured-contractor-bid-fixture-sources.v1",
+    "source_settings": {
+      "action_id": "CONTRACTOR-A02",
+      "source_note": "Synthetic Contractor A02 submit input aligned only with the Owner publication fixture run, legal identities, clock, scope and proposed submission window. Native package/round, received design and quantity/price rows are independent assumed registration facts; the Owner action has not been run and no publication or reception is proved. Original pricing/programme/capacity processors must calculate the bid; no bid result, submission, resource reservation or construction release is supplied.",
+      "journal_path": "output/integration/v2-contractor-bid-submit-01/tasks.sqlite",
+      "organization_snapshot": {
+        "schema_version": "organization.v2",
+        "run_id": "synthetic-v2-procurement-publication-01",
+        "organizations": [
+          {
+            "organization_id": "v2-publication-architect",
+            "actor_id": "v2-publication-architect-actor",
+            "source_ids": [
+              "synthetic:synthetic-v2-procurement-publication-01:v2-publication-architect"
+            ],
+            "public_description": "Synthetic Owner A09 first-publication input: independently invented procurement procedure, professional submission/readiness, original quantity permission, authorized budget and invited Contractor eligibility. The input has no existing package, round or bid and requests only a publication draft. No professional delivery, actual publication, native registration, sent invitation, receipt or reservation is asserted.",
+            "public_location": {
+              "state": "unknown",
+              "reason_code": "synthetic_unsupplied",
+              "missing_refs": []
+            },
+            "assignments": [
+              {
+                "role": "Architect",
+                "function_ref": {
+                  "kind": "FunctionAssignment",
+                  "id": "v2-owner-publication-architect-function",
+                  "version": "1"
+                },
+                "configuration_version": "1",
+                "basis_refs": [
+                  {
+                    "kind": "Evidence",
+                    "id": "v2-owner-publication-basis",
+                    "version": "1"
+                  }
+                ]
+              }
+            ],
+            "members": [],
+            "evidence_refs": [
+              {
+                "kind": "Evidence",
+                "id": "v2-owner-publication-basis",
+                "version": "1"
+              }
+            ]
+          },
+          {
+            "organization_id": "v2-publication-contractor",
+            "actor_id": "v2-publication-contractor-actor",
+            "source_ids": [
+              "synthetic:synthetic-v2-procurement-publication-01:v2-publication-contractor"
+            ],
+            "public_description": "Synthetic Owner A09 first-publication input: independently invented procurement procedure, professional submission/readiness, original quantity permission, authorized budget and invited Contractor eligibility. The input has no existing package, round or bid and requests only a publication draft. No professional delivery, actual publication, native registration, sent invitation, receipt or reservation is asserted.",
+            "public_location": {
+              "state": "unknown",
+              "reason_code": "synthetic_unsupplied",
+              "missing_refs": []
+            },
+            "assignments": [
+              {
+                "role": "Contractor",
+                "function_ref": {
+                  "kind": "FunctionAssignment",
+                  "id": "v2-owner-publication-contractor-function",
+                  "version": "1"
+                },
+                "configuration_version": "1",
+                "basis_refs": [
+                  {
+                    "kind": "Evidence",
+                    "id": "v2-owner-publication-basis",
+                    "version": "1"
+                  }
+                ]
+              }
+            ],
+            "members": [],
+            "evidence_refs": [
+              {
+                "kind": "Evidence",
+                "id": "v2-owner-publication-basis",
+                "version": "1"
+              }
+            ]
+          }
+        ],
+        "authorizations": [
+          {
+            "ref": {
+              "kind": "Authorization",
+              "id": "v2-owner-publication-contractor-grant",
+              "version": "1"
+            },
+            "organization_id": "v2-publication-contractor",
+            "actor_id": "v2-publication-contractor-actor",
+            "function_ref": {
+              "kind": "FunctionAssignment",
+              "id": "v2-owner-publication-contractor-function",
+              "version": "1"
+            },
+            "action_ids": [
+              "CONTRACTOR-A02"
+            ],
+            "scopes": [
+              {
+                "kind": "project",
+                "ref": {
+                  "kind": "Project",
+                  "id": "v2-owner-publication-project",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "v2-owner-publication-work",
+                    "version": "1"
+                  }
+                ]
+              }
+            ],
+            "readable_refs": [
+              {
+                "kind": "EligibleBidder",
+                "id": "v2-owner-publication-contractor",
+                "version": "1"
+              },
+              {
+                "kind": "Requirement",
+                "id": "v2-owner-publication-procurement-requirement",
+                "version": "1"
+              },
+              {
+                "kind": "ClockProfile",
+                "id": "v2-owner-publication-clock",
+                "version": "1"
+              },
+              {
+                "kind": "Evidence",
+                "id": "v2-owner-publication-basis",
+                "version": "1"
+              },
+              {
+                "kind": "Project",
+                "id": "v2-owner-publication-project",
+                "version": "1"
+              },
+              {
+                "kind": "WorkScope",
+                "id": "v2-owner-publication-work",
+                "version": "1"
+              },
+              {
+                "kind": "FunctionAssignment",
+                "id": "v2-owner-publication-contractor-function",
+                "version": "1"
+              },
+              {
+                "kind": "Authorization",
+                "id": "v2-owner-publication-contractor-grant",
+                "version": "1"
+              }
+            ],
+            "tool_ids": [],
+            "validity": {
+              "start": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-owner-publication-clock",
+                  "version": "1"
+                },
+                "offset": 0
+              },
+              "end": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-owner-publication-clock",
+                  "version": "1"
+                },
+                "offset": 100
+              },
+              "bounds": "closed_open"
+            },
+            "basis_refs": [
+              {
+                "kind": "Evidence",
+                "id": "v2-owner-publication-basis",
+                "version": "1"
+              }
+            ]
+          },
+          {
+            "ref": {
+              "kind": "Authorization",
+              "id": "v2-owner-publication-contractor-grant",
+              "version": "2"
+            },
+            "organization_id": "v2-publication-contractor",
+            "actor_id": "v2-publication-contractor-actor",
+            "function_ref": {
+              "kind": "FunctionAssignment",
+              "id": "v2-owner-publication-contractor-function",
+              "version": "1"
+            },
+            "action_ids": [
+              "CONTRACTOR-A02"
+            ],
+            "scopes": [
+              {
+                "kind": "project",
+                "ref": {
+                  "kind": "Project",
+                  "id": "v2-owner-publication-project",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "v2-owner-publication-work",
+                    "version": "1"
+                  }
+                ]
+              }
+            ],
+            "readable_refs": [
+              {
+                "kind": "ProcurementPackage",
+                "id": "v2-contractor-bid-package",
+                "version": "1"
+              },
+              {
+                "kind": "TenderRound",
+                "id": "v2-contractor-bid-round",
+                "version": "1"
+              },
+              {
+                "kind": "MeasurementRule",
+                "id": "v2-contractor-bid-measurement-rule",
+                "version": "1"
+              },
+              {
+                "kind": "ContractTerms",
+                "id": "v2-contractor-bid-terms",
+                "version": "1"
+              },
+              {
+                "kind": "ReleasedDeliverable",
+                "id": "v2-contractor-bid-design",
+                "version": "1"
+              },
+              {
+                "kind": "QuantityBasis",
+                "id": "v2-contractor-bid-quantity",
+                "version": "1"
+              },
+              {
+                "kind": "CostBasis",
+                "id": "v2-contractor-bid-cost",
+                "version": "1"
+              },
+              {
+                "kind": "WorkMethod",
+                "id": "v2-contractor-bid-work-method",
+                "version": "1"
+              },
+              {
+                "kind": "ProgrammeProposal",
+                "id": "v2-contractor-bid-programme",
+                "version": "1"
+              },
+              {
+                "kind": "ResourcePool",
+                "id": "v2-contractor-bid-crew",
+                "version": "1"
+              },
+              {
+                "kind": "ResourceCommitment",
+                "id": "v2-contractor-bid-other-project-crew",
+                "version": "1"
+              },
+              {
+                "kind": "ContractorCapacity",
+                "id": "v2-contractor-bid-capacity",
+                "version": "1"
+              },
+              {
+                "kind": "Organization",
+                "id": "v2-publication-contractor",
+                "version": "1"
+              },
+              {
+                "kind": "Qualification",
+                "id": "v2-contractor-bid-general-works",
+                "version": "1"
+              },
+              {
+                "kind": "ContractorPricingProfile",
+                "id": "v2-contractor-bid-pricing",
+                "version": "1"
+              },
+              {
+                "kind": "TimeWindow",
+                "id": "v2-contractor-bid-work-slot",
+                "version": "1"
+              },
+              {
+                "kind": "TimeWindow",
+                "id": "v2-contractor-bid-bid-validity",
+                "version": "1"
+              },
+              {
+                "kind": "TimeWindow",
+                "id": "v2-owner-publication-submission-window",
+                "version": "1"
+              },
+              {
+                "kind": "ClockProfile",
+                "id": "v2-owner-publication-clock",
+                "version": "1"
+              },
+              {
+                "kind": "Project",
+                "id": "v2-owner-publication-project",
+                "version": "1"
+              },
+              {
+                "kind": "WorkScope",
+                "id": "v2-owner-publication-work",
+                "version": "1"
+              },
+              {
+                "kind": "FunctionAssignment",
+                "id": "v2-owner-publication-contractor-function",
+                "version": "1"
+              },
+              {
+                "kind": "FunctionAssignment",
+                "id": "v2-owner-publication-architect-function",
+                "version": "1"
+              },
+              {
+                "kind": "Evidence",
+                "id": "v2-owner-publication-basis",
+                "version": "1"
+              },
+              {
+                "kind": "Project",
+                "id": "v2-contractor-bid-other-project",
+                "version": "1"
+              },
+              {
+                "kind": "WorkScope",
+                "id": "v2-contractor-bid-other-work",
+                "version": "1"
+              },
+              {
+                "kind": "CandidateSet",
+                "id": "v2-contractor-bid-candidates",
+                "version": "1"
+              },
+              {
+                "kind": "Authorization",
+                "id": "v2-owner-publication-contractor-grant",
+                "version": "2"
+              },
+              {
+                "kind": "Authorization",
+                "id": "v2-owner-publication-architect-grant",
+                "version": "1"
+              },
+              {
+                "kind": "Evidence",
+                "id": "v2-contractor-bid-facts",
+                "version": "1"
+              },
+              {
+                "kind": "Method",
+                "id": "micro.supply.declared_cost_markup",
+                "version": "1"
+              }
+            ],
+            "tool_ids": [],
+            "validity": {
+              "start": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-owner-publication-clock",
+                  "version": "1"
+                },
+                "offset": 0
+              },
+              "end": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-owner-publication-clock",
+                  "version": "1"
+                },
+                "offset": 100
+              },
+              "bounds": "closed_open"
+            },
+            "basis_refs": [
+              {
+                "kind": "Evidence",
+                "id": "v2-owner-publication-basis",
+                "version": "1"
+              },
+              {
+                "kind": "Evidence",
+                "id": "v2-contractor-bid-facts",
+                "version": "1"
+              }
+            ]
+          },
+          {
+            "ref": {
+              "kind": "Authorization",
+              "id": "v2-owner-publication-architect-grant",
+              "version": "1"
+            },
+            "organization_id": "v2-publication-architect",
+            "actor_id": "v2-publication-architect-actor",
+            "function_ref": {
+              "kind": "FunctionAssignment",
+              "id": "v2-owner-publication-architect-function",
+              "version": "1"
+            },
+            "action_ids": [
+              "ARCHITECT-A07"
+            ],
+            "scopes": [
+              {
+                "kind": "project",
+                "ref": {
+                  "kind": "Project",
+                  "id": "v2-owner-publication-project",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "v2-owner-publication-work",
+                    "version": "1"
+                  }
+                ]
+              }
+            ],
+            "readable_refs": [
+              {
+                "kind": "DeliverableSubmission",
+                "id": "v2-owner-publication-technical-submission",
+                "version": "1"
+              },
+              {
+                "kind": "QuantityBasis",
+                "id": "v2-owner-publication-quantity",
+                "version": "1"
+              },
+              {
+                "kind": "Requirement",
+                "id": "v2-owner-publication-procurement-requirement",
+                "version": "1"
+              },
+              {
+                "kind": "ClockProfile",
+                "id": "v2-owner-publication-clock",
+                "version": "1"
+              },
+              {
+                "kind": "Evidence",
+                "id": "v2-owner-publication-basis",
+                "version": "1"
+              },
+              {
+                "kind": "Project",
+                "id": "v2-owner-publication-project",
+                "version": "1"
+              },
+              {
+                "kind": "WorkScope",
+                "id": "v2-owner-publication-work",
+                "version": "1"
+              },
+              {
+                "kind": "FunctionAssignment",
+                "id": "v2-owner-publication-architect-function",
+                "version": "1"
+              },
+              {
+                "kind": "Authorization",
+                "id": "v2-owner-publication-architect-grant",
+                "version": "1"
+              }
+            ],
+            "tool_ids": [],
+            "validity": {
+              "start": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-owner-publication-clock",
+                  "version": "1"
+                },
+                "offset": 0
+              },
+              "end": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-owner-publication-clock",
+                  "version": "1"
+                },
+                "offset": 100
+              },
+              "bounds": "closed_open"
+            },
+            "basis_refs": [
+              {
+                "kind": "Evidence",
+                "id": "v2-owner-publication-basis",
+                "version": "1"
+              }
+            ]
+          }
+        ],
+        "inactive_authorization_refs": [
+          {
+            "kind": "Authorization",
+            "id": "v2-owner-publication-contractor-grant",
+            "version": "1"
+          }
+        ]
+      },
+      "source_projection": {
+        "run_id": "synthetic-v2-procurement-publication-01",
+        "macro_version": "synthetic-v2-contractor-bid.v1",
+        "state_version": "synthetic-contractor-bid-read-13",
+        "read_token": "synthetic-v2-procurement-publication-01:contractor-bid-read-13",
+        "business_time": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "v2-owner-publication-clock",
+            "version": "1"
+          },
+          "offset": 13
+        },
+        "organization_id": "v2-publication-contractor",
+        "objects": [
+          {
+            "ref": {
+              "kind": "ProcurementPackage",
+              "id": "v2-contractor-bid-package",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "ProcurementPackage",
+                "id": "v2-contractor-bid-package",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v2-contractor-bid-facts",
+                  "version": "1"
+                }
+              ],
+              "scope": {
+                "kind": "project",
+                "ref": {
+                  "kind": "Project",
+                  "id": "v2-owner-publication-project",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "v2-owner-publication-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-owner-publication-clock",
+                  "version": "1"
+                },
+                "offset": 11
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-owner-publication-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-owner-publication-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              },
+              "round_ref": {
+                "kind": "TenderRound",
+                "id": "v2-contractor-bid-round",
+                "version": "1"
+              },
+              "recipient_organization_ids": [
+                "v2-publication-contractor"
+              ],
+              "status": "open",
+              "submission_window_ref": {
+                "kind": "TimeWindow",
+                "id": "v2-owner-publication-submission-window",
+                "version": "1"
+              },
+              "region_id": "synthetic-HK",
+              "object_type": "synthetic-building",
+              "work_type": "synthetic-works",
+              "special_condition_codes": [],
+              "coverage_keys": [
+                "work"
+              ],
+              "deliverable_refs": [
+                {
+                  "kind": "ReleasedDeliverable",
+                  "id": "v2-contractor-bid-design",
+                  "version": "1"
+                }
+              ],
+              "quantity_refs": [
+                {
+                  "kind": "QuantityBasis",
+                  "id": "v2-contractor-bid-quantity",
+                  "version": "1"
+                }
+              ],
+              "required_qualification_codes": [
+                "synthetic-general-works"
+              ],
+              "permitted_maturities": [
+                "tender_design"
+              ],
+              "allowed_method_refs": [
+                {
+                  "kind": "WorkMethod",
+                  "id": "v2-contractor-bid-work-method",
+                  "version": "1"
+                }
+              ],
+              "allowed_exclusion_refs": [],
+              "allow_limited_bid": false
+            }
+          },
+          {
+            "ref": {
+              "kind": "TenderRound",
+              "id": "v2-contractor-bid-round",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "TenderRound",
+                "id": "v2-contractor-bid-round",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v2-contractor-bid-facts",
+                  "version": "1"
+                }
+              ],
+              "scope": {
+                "kind": "project",
+                "ref": {
+                  "kind": "Project",
+                  "id": "v2-owner-publication-project",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "v2-owner-publication-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-owner-publication-clock",
+                  "version": "1"
+                },
+                "offset": 11
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-owner-publication-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-owner-publication-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              },
+              "package_ref": {
+                "kind": "ProcurementPackage",
+                "id": "v2-contractor-bid-package",
+                "version": "1"
+              },
+              "organization_id": "v2-publication-contractor",
+              "allowed": {
+                "state": "known",
+                "value": true
+              },
+              "excluded_coverage_keys": []
+            }
+          },
+          {
+            "ref": {
+              "kind": "MeasurementRule",
+              "id": "v2-contractor-bid-measurement-rule",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "MeasurementRule",
+                "id": "v2-contractor-bid-measurement-rule",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v2-contractor-bid-facts",
+                  "version": "1"
+                }
+              ],
+              "scope": {
+                "kind": "project",
+                "ref": {
+                  "kind": "Project",
+                  "id": "v2-owner-publication-project",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "v2-owner-publication-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-owner-publication-clock",
+                  "version": "1"
+                },
+                "offset": 11
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-owner-publication-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-owner-publication-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              },
+              "package_ref": {
+                "kind": "ProcurementPackage",
+                "id": "v2-contractor-bid-package",
+                "version": "1"
+              },
+              "organization_id": "v2-publication-contractor",
+              "allowed": {
+                "state": "known",
+                "value": true
+              },
+              "excluded_coverage_keys": []
+            }
+          },
+          {
+            "ref": {
+              "kind": "ContractTerms",
+              "id": "v2-contractor-bid-terms",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "ContractTerms",
+                "id": "v2-contractor-bid-terms",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v2-contractor-bid-facts",
+                  "version": "1"
+                }
+              ],
+              "scope": {
+                "kind": "project",
+                "ref": {
+                  "kind": "Project",
+                  "id": "v2-owner-publication-project",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "v2-owner-publication-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-owner-publication-clock",
+                  "version": "1"
+                },
+                "offset": 11
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-owner-publication-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-owner-publication-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              },
+              "package_ref": {
+                "kind": "ProcurementPackage",
+                "id": "v2-contractor-bid-package",
+                "version": "1"
+              },
+              "organization_id": "v2-publication-contractor",
+              "allowed": {
+                "state": "known",
+                "value": true
+              },
+              "excluded_coverage_keys": []
+            }
+          },
+          {
+            "ref": {
+              "kind": "ReleasedDeliverable",
+              "id": "v2-contractor-bid-design",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "ReleasedDeliverable",
+                "id": "v2-contractor-bid-design",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v2-contractor-bid-facts",
+                  "version": "1"
+                }
+              ],
+              "scope": {
+                "kind": "project",
+                "ref": {
+                  "kind": "Project",
+                  "id": "v2-owner-publication-project",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "v2-owner-publication-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-owner-publication-clock",
+                  "version": "1"
+                },
+                "offset": 11
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-owner-publication-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-owner-publication-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              },
+              "package_ref": {
+                "kind": "ProcurementPackage",
+                "id": "v2-contractor-bid-package",
+                "version": "1"
+              },
+              "allowed_uses": [
+                "procurement"
+              ],
+              "maturity": "tender_design",
+              "author_actor_id": "v2-publication-architect-actor",
+              "author_function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "v2-owner-publication-architect-function",
+                "version": "1"
+              },
+              "author_authority_ref": {
+                "kind": "Authorization",
+                "id": "v2-owner-publication-architect-grant",
+                "version": "1"
+              },
+              "author_action_id": "ARCHITECT-A07"
+            }
+          },
+          {
+            "ref": {
+              "kind": "QuantityBasis",
+              "id": "v2-contractor-bid-quantity",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "QuantityBasis",
+                "id": "v2-contractor-bid-quantity",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v2-contractor-bid-facts",
+                  "version": "1"
+                }
+              ],
+              "scope": {
+                "kind": "project",
+                "ref": {
+                  "kind": "Project",
+                  "id": "v2-owner-publication-project",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "v2-owner-publication-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-owner-publication-clock",
+                  "version": "1"
+                },
+                "offset": 11
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-owner-publication-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-owner-publication-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              },
+              "package_ref": {
+                "kind": "ProcurementPackage",
+                "id": "v2-contractor-bid-package",
+                "version": "1"
+              },
+              "deliverable_refs": [
+                {
+                  "kind": "ReleasedDeliverable",
+                  "id": "v2-contractor-bid-design",
+                  "version": "1"
+                }
+              ],
+              "measurement_rule_ref": {
+                "kind": "MeasurementRule",
+                "id": "v2-contractor-bid-measurement-rule",
+                "version": "1"
+              },
+              "lines": [
+                {
+                  "local_key": "work-quantity-line",
+                  "coverage_keys": [
+                    "work"
+                  ],
+                  "quantity": {
+                    "state": "known",
+                    "value": {
+                      "value": "6",
+                      "unit": "m2",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "v2-contractor-bid-facts",
+                        "version": "1"
+                      }
+                    }
+                  }
+                }
+              ],
+              "status": "ok"
+            }
+          },
+          {
+            "ref": {
+              "kind": "CostBasis",
+              "id": "v2-contractor-bid-cost",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "CostBasis",
+                "id": "v2-contractor-bid-cost",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v2-contractor-bid-facts",
+                  "version": "1"
+                }
+              ],
+              "scope": {
+                "kind": "project",
+                "ref": {
+                  "kind": "Project",
+                  "id": "v2-owner-publication-project",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "v2-owner-publication-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-owner-publication-clock",
+                  "version": "1"
+                },
+                "offset": 11
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-owner-publication-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-owner-publication-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              },
+              "organization_id": "v2-publication-contractor",
+              "package_ref": {
+                "kind": "ProcurementPackage",
+                "id": "v2-contractor-bid-package",
+                "version": "1"
+              },
+              "quantity_basis_ref": {
+                "kind": "QuantityBasis",
+                "id": "v2-contractor-bid-quantity",
+                "version": "1"
+              },
+              "quantity_line_key": "work-quantity-line",
+              "unit_rate": {
+                "state": "known",
+                "value": {
+                  "value": "5",
+                  "currency": "HKD",
+                  "basis_ref": {
+                    "kind": "Evidence",
+                    "id": "v2-contractor-bid-facts",
+                    "version": "1"
+                  }
+                }
+              },
+              "quantity_unit": "m2",
+              "region_id": "synthetic-HK",
+              "coverage_keys": [
+                "work"
+              ],
+              "method_ref": {
+                "kind": "Method",
+                "id": "micro.supply.declared_cost_markup",
+                "version": "1"
+              },
+              "status": "ok",
+              "author_actor_id": "v2-publication-contractor-actor",
+              "author_function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "v2-owner-publication-contractor-function",
+                "version": "1"
+              },
+              "author_authority_ref": {
+                "kind": "Authorization",
+                "id": "v2-owner-publication-contractor-grant",
+                "version": "2"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "WorkMethod",
+              "id": "v2-contractor-bid-work-method",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "WorkMethod",
+                "id": "v2-contractor-bid-work-method",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v2-contractor-bid-facts",
+                  "version": "1"
+                }
+              ],
+              "scope": {
+                "kind": "project",
+                "ref": {
+                  "kind": "Project",
+                  "id": "v2-owner-publication-project",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "v2-owner-publication-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-owner-publication-clock",
+                  "version": "1"
+                },
+                "offset": 11
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-owner-publication-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-owner-publication-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              },
+              "region_ids": [
+                "synthetic-HK"
+              ],
+              "object_types": [
+                "synthetic-building"
+              ],
+              "work_types": [
+                "synthetic-works"
+              ],
+              "special_condition_codes": [],
+              "quantity_unit": "m2",
+              "capacity_unit": "crew",
+              "resource_kind": "crew",
+              "quantity_per_capacity_tick": {
+                "state": "known",
+                "value": "1"
+              },
+              "productivity_basis_ref": {
+                "kind": "Evidence",
+                "id": "v2-contractor-bid-facts",
+                "version": "1"
+              },
+              "output_quantity_basis_refs": [
+                {
+                  "kind": "QuantityBasis",
+                  "id": "v2-contractor-bid-quantity",
+                  "version": "1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "ProgrammeProposal",
+              "id": "v2-contractor-bid-programme",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "ProgrammeProposal",
+                "id": "v2-contractor-bid-programme",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v2-contractor-bid-facts",
+                  "version": "1"
+                }
+              ],
+              "scope": {
+                "kind": "project",
+                "ref": {
+                  "kind": "Project",
+                  "id": "v2-owner-publication-project",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "v2-owner-publication-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-owner-publication-clock",
+                  "version": "1"
+                },
+                "offset": 11
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-owner-publication-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-owner-publication-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              },
+              "organization_id": "v2-publication-contractor",
+              "package_ref": {
+                "kind": "ProcurementPackage",
+                "id": "v2-contractor-bid-package",
+                "version": "1"
+              },
+              "quantity_refs": [
+                {
+                  "kind": "QuantityBasis",
+                  "id": "v2-contractor-bid-quantity",
+                  "version": "1"
+                }
+              ],
+              "tasks": [
+                {
+                  "local_key": "work-task",
+                  "scope_ref": {
+                    "kind": "project",
+                    "ref": {
+                      "kind": "Project",
+                      "id": "v2-owner-publication-project",
+                      "version": "1"
+                    },
+                    "coverage_refs": [
+                      {
+                        "kind": "WorkScope",
+                        "id": "v2-owner-publication-work",
+                        "version": "1"
+                      }
+                    ]
+                  },
+                  "work_method_ref": {
+                    "kind": "WorkMethod",
+                    "id": "v2-contractor-bid-work-method",
+                    "version": "1"
+                  },
+                  "target_quantities": [
+                    {
+                      "value": "6",
+                      "unit": "m2",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "v2-contractor-bid-facts",
+                        "version": "1"
+                      }
+                    }
+                  ],
+                  "dependency_refs": [],
+                  "allocations": [
+                    {
+                      "resource_ref": {
+                        "kind": "ResourcePool",
+                        "id": "v2-contractor-bid-crew",
+                        "version": "1"
+                      },
+                      "task_scope_ref": {
+                        "kind": "project",
+                        "ref": {
+                          "kind": "Project",
+                          "id": "v2-owner-publication-project",
+                          "version": "1"
+                        },
+                        "coverage_refs": [
+                          {
+                            "kind": "WorkScope",
+                            "id": "v2-owner-publication-work",
+                            "version": "1"
+                          }
+                        ]
+                      },
+                      "window_ref": {
+                        "kind": "TimeWindow",
+                        "id": "v2-contractor-bid-work-slot",
+                        "version": "1"
+                      },
+                      "quantity": {
+                        "value": "2",
+                        "unit": "crew",
+                        "basis_ref": {
+                          "kind": "Evidence",
+                          "id": "v2-contractor-bid-facts",
+                          "version": "1"
+                        }
+                      }
+                    }
+                  ],
+                  "window_ref": {
+                    "kind": "TimeWindow",
+                    "id": "v2-contractor-bid-work-slot",
+                    "version": "1"
+                  },
+                  "quantity_sources": [
+                    {
+                      "quantity_basis_ref": {
+                        "kind": "QuantityBasis",
+                        "id": "v2-contractor-bid-quantity",
+                        "version": "1"
+                      },
+                      "quantity_line_key": "work-quantity-line"
+                    }
+                  ]
+                }
+              ],
+              "author_actor_id": "v2-publication-contractor-actor",
+              "author_function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "v2-owner-publication-contractor-function",
+                "version": "1"
+              },
+              "author_authority_ref": {
+                "kind": "Authorization",
+                "id": "v2-owner-publication-contractor-grant",
+                "version": "2"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "ResourcePool",
+              "id": "v2-contractor-bid-crew",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "ResourcePool",
+                "id": "v2-contractor-bid-crew",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v2-contractor-bid-facts",
+                  "version": "1"
+                }
+              ],
+              "scope": {
+                "kind": "project",
+                "ref": {
+                  "kind": "Project",
+                  "id": "v2-owner-publication-project",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "v2-owner-publication-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-owner-publication-clock",
+                  "version": "1"
+                },
+                "offset": 11
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-owner-publication-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-owner-publication-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              },
+              "organization_id": "v2-publication-contractor",
+              "resource_kind": "crew",
+              "region_id": "synthetic-HK",
+              "total": {
+                "value": "10",
+                "unit": "crew",
+                "basis_ref": {
+                  "kind": "Evidence",
+                  "id": "v2-contractor-bid-facts",
+                  "version": "1"
+                }
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "ResourceCommitment",
+              "id": "v2-contractor-bid-other-project-crew",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "ResourceCommitment",
+                "id": "v2-contractor-bid-other-project-crew",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v2-contractor-bid-facts",
+                  "version": "1"
+                }
+              ],
+              "scope": {
+                "kind": "project",
+                "ref": {
+                  "kind": "Project",
+                  "id": "v2-contractor-bid-other-project",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "v2-contractor-bid-other-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-owner-publication-clock",
+                  "version": "1"
+                },
+                "offset": 11
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-owner-publication-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-owner-publication-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              },
+              "organization_id": "v2-publication-contractor",
+              "resource_ref": {
+                "kind": "ResourcePool",
+                "id": "v2-contractor-bid-crew",
+                "version": "1"
+              },
+              "quantity": {
+                "value": "3",
+                "unit": "crew",
+                "basis_ref": {
+                  "kind": "Evidence",
+                  "id": "v2-contractor-bid-facts",
+                  "version": "1"
+                }
+              },
+              "window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-owner-publication-clock",
+                    "version": "1"
+                  },
+                  "offset": 20
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-owner-publication-clock",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "ContractorCapacity",
+              "id": "v2-contractor-bid-capacity",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "ContractorCapacity",
+                "id": "v2-contractor-bid-capacity",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v2-contractor-bid-facts",
+                  "version": "1"
+                }
+              ],
+              "scope": {
+                "kind": "project",
+                "ref": {
+                  "kind": "Project",
+                  "id": "v2-owner-publication-project",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "v2-owner-publication-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-owner-publication-clock",
+                  "version": "1"
+                },
+                "offset": 11
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-owner-publication-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-owner-publication-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              },
+              "organization_id": "v2-publication-contractor",
+              "as_of": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-owner-publication-clock",
+                  "version": "1"
+                },
+                "offset": 13
+              },
+              "coverage": "complete",
+              "qualification_coverage": "complete",
+              "qualification_refs": [
+                {
+                  "kind": "Qualification",
+                  "id": "v2-contractor-bid-general-works",
+                  "version": "1"
+                }
+              ],
+              "resources": [
+                {
+                  "resource_ref": {
+                    "kind": "ResourcePool",
+                    "id": "v2-contractor-bid-crew",
+                    "version": "1"
+                  },
+                  "resource_kind": "crew",
+                  "region_id": "synthetic-HK",
+                  "total": {
+                    "value": "10",
+                    "unit": "crew",
+                    "basis_ref": {
+                      "kind": "Evidence",
+                      "id": "v2-contractor-bid-facts",
+                      "version": "1"
+                    }
+                  },
+                  "effective_window": {
+                    "start": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "v2-owner-publication-clock",
+                        "version": "1"
+                      },
+                      "offset": 0
+                    },
+                    "end": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "v2-owner-publication-clock",
+                        "version": "1"
+                      },
+                      "offset": 100
+                    },
+                    "bounds": "closed_open"
+                  }
+                }
+              ],
+              "commitments": [
+                {
+                  "commitment_ref": {
+                    "kind": "ResourceCommitment",
+                    "id": "v2-contractor-bid-other-project-crew",
+                    "version": "1"
+                  },
+                  "resource_ref": {
+                    "kind": "ResourcePool",
+                    "id": "v2-contractor-bid-crew",
+                    "version": "1"
+                  },
+                  "quantity": {
+                    "value": "3",
+                    "unit": "crew",
+                    "basis_ref": {
+                      "kind": "Evidence",
+                      "id": "v2-contractor-bid-facts",
+                      "version": "1"
+                    }
+                  },
+                  "window": {
+                    "start": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "v2-owner-publication-clock",
+                        "version": "1"
+                      },
+                      "offset": 20
+                    },
+                    "end": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "v2-owner-publication-clock",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "bounds": "closed_open"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "Organization",
+              "id": "v2-publication-contractor",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Organization",
+                "id": "v2-publication-contractor",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v2-contractor-bid-facts",
+                  "version": "1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "Qualification",
+              "id": "v2-contractor-bid-general-works",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Qualification",
+                "id": "v2-contractor-bid-general-works",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v2-contractor-bid-facts",
+                  "version": "1"
+                }
+              ],
+              "organization_ref": {
+                "kind": "Organization",
+                "id": "v2-publication-contractor",
+                "version": "1"
+              },
+              "qualification_code": "synthetic-general-works",
+              "region_ids": [
+                "synthetic-HK"
+              ],
+              "work_types": [
+                "synthetic-works"
+              ],
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-owner-publication-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-owner-publication-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              },
+              "standing": {
+                "state": "known",
+                "value": true
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "ContractorPricingProfile",
+              "id": "v2-contractor-bid-pricing",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "ContractorPricingProfile",
+                "id": "v2-contractor-bid-pricing",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v2-contractor-bid-facts",
+                  "version": "1"
+                }
+              ],
+              "scope": {
+                "kind": "project",
+                "ref": {
+                  "kind": "Project",
+                  "id": "v2-owner-publication-project",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "v2-owner-publication-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-owner-publication-clock",
+                  "version": "1"
+                },
+                "offset": 11
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-owner-publication-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-owner-publication-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              },
+              "organization_id": "v2-publication-contractor",
+              "package_ref": {
+                "kind": "ProcurementPackage",
+                "id": "v2-contractor-bid-package",
+                "version": "1"
+              },
+              "authority_ref": {
+                "kind": "Authorization",
+                "id": "v2-owner-publication-contractor-grant",
+                "version": "2"
+              },
+              "choice": "submit_bid",
+              "currency": "HKD",
+              "markup_fraction": "0.2",
+              "markup_basis_ref": {
+                "kind": "Evidence",
+                "id": "v2-contractor-bid-facts",
+                "version": "1"
+              },
+              "commercial_allowance": {
+                "value": "4",
+                "currency": "HKD",
+                "basis_ref": {
+                  "kind": "Evidence",
+                  "id": "v2-contractor-bid-facts",
+                  "version": "1"
+                }
+              },
+              "programme_ref": {
+                "kind": "ProgrammeProposal",
+                "id": "v2-contractor-bid-programme",
+                "version": "1"
+              },
+              "terms_ref": {
+                "kind": "ContractTerms",
+                "id": "v2-contractor-bid-terms",
+                "version": "1"
+              },
+              "validity_ref": {
+                "kind": "TimeWindow",
+                "id": "v2-contractor-bid-bid-validity",
+                "version": "1"
+              },
+              "exclusion_refs": [],
+              "decline_reason": "Not selected in this explicit synthetic submit input."
+            }
+          },
+          {
+            "ref": {
+              "kind": "TimeWindow",
+              "id": "v2-contractor-bid-work-slot",
+              "version": "1"
+            },
+            "value": {
+              "start": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-owner-publication-clock",
+                  "version": "1"
+                },
+                "offset": 20
+              },
+              "end": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-owner-publication-clock",
+                  "version": "1"
+                },
+                "offset": 23
+              },
+              "bounds": "closed_open"
+            }
+          },
+          {
+            "ref": {
+              "kind": "TimeWindow",
+              "id": "v2-contractor-bid-bid-validity",
+              "version": "1"
+            },
+            "value": {
+              "start": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-owner-publication-clock",
+                  "version": "1"
+                },
+                "offset": 13
+              },
+              "end": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-owner-publication-clock",
+                  "version": "1"
+                },
+                "offset": 50
+              },
+              "bounds": "closed_open"
+            }
+          },
+          {
+            "ref": {
+              "kind": "TimeWindow",
+              "id": "v2-owner-publication-submission-window",
+              "version": "1"
+            },
+            "value": {
+              "start": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-owner-publication-clock",
+                  "version": "1"
+                },
+                "offset": 12
+              },
+              "end": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-owner-publication-clock",
+                  "version": "1"
+                },
+                "offset": 18
+              },
+              "bounds": "closed_open"
+            }
+          },
+          {
+            "ref": {
+              "kind": "ClockProfile",
+              "id": "v2-owner-publication-clock",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "ClockProfile",
+                "id": "v2-owner-publication-clock",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v2-owner-publication-basis",
+                  "version": "1"
+                }
+              ],
+              "tick_unit": "synthetic-tick"
+            }
+          },
+          {
+            "ref": {
+              "kind": "Project",
+              "id": "v2-owner-publication-project",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Project",
+                "id": "v2-owner-publication-project",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v2-owner-publication-basis",
+                  "version": "1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "WorkScope",
+              "id": "v2-owner-publication-work",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "WorkScope",
+                "id": "v2-owner-publication-work",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v2-owner-publication-basis",
+                  "version": "1"
+                }
+              ],
+              "parent_ref": {
+                "kind": "Project",
+                "id": "v2-owner-publication-project",
+                "version": "1"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "FunctionAssignment",
+              "id": "v2-owner-publication-contractor-function",
+              "version": "1"
+            },
+            "value": {
+              "role": "Contractor",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "v2-owner-publication-contractor-function",
+                "version": "1"
+              },
+              "configuration_version": "1",
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v2-owner-publication-basis",
+                  "version": "1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "FunctionAssignment",
+              "id": "v2-owner-publication-architect-function",
+              "version": "1"
+            },
+            "value": {
+              "role": "Architect",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "v2-owner-publication-architect-function",
+                "version": "1"
+              },
+              "configuration_version": "1",
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v2-owner-publication-basis",
+                  "version": "1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "Evidence",
+              "id": "v2-owner-publication-basis",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Evidence",
+                "id": "v2-owner-publication-basis",
+                "version": "1"
+              },
+              "source_kind": "synthetic",
+              "basis_kind": "assumed",
+              "locator": "integration/examples/role_contract_owner_tender_publication_origin.json",
+              "content_hash": "730be3153f691db69c81ad43b092c39de93501040391ff799980a166a0eb3bb2",
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-owner-publication-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-owner-publication-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "Project",
+              "id": "v2-contractor-bid-other-project",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Project",
+                "id": "v2-contractor-bid-other-project",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v2-contractor-bid-facts",
+                  "version": "1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "WorkScope",
+              "id": "v2-contractor-bid-other-work",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "WorkScope",
+                "id": "v2-contractor-bid-other-work",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v2-contractor-bid-facts",
+                  "version": "1"
+                }
+              ],
+              "parent_ref": {
+                "kind": "Project",
+                "id": "v2-contractor-bid-other-project",
+                "version": "1"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "CandidateSet",
+              "id": "v2-contractor-bid-candidates",
+              "version": "1"
+            },
+            "value": {
+              "operation_id": "v2-contractor-bid-submit-01",
+              "scope": {
+                "kind": "project",
+                "ref": {
+                  "kind": "Project",
+                  "id": "v2-owner-publication-project",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "v2-owner-publication-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "as_of": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-owner-publication-clock",
+                  "version": "1"
+                },
+                "offset": 13
+              },
+              "candidates": [
+                {
+                  "ref": {
+                    "kind": "ProcurementPackage",
+                    "id": "v2-contractor-bid-package",
+                    "version": "1"
+                  },
+                  "permitted_choices": [
+                    "submit_bid"
+                  ]
+                },
+                {
+                  "ref": {
+                    "kind": "CostBasis",
+                    "id": "v2-contractor-bid-cost",
+                    "version": "1"
+                  },
+                  "permitted_choices": [
+                    "submit_bid"
+                  ]
+                },
+                {
+                  "ref": {
+                    "kind": "ProgrammeProposal",
+                    "id": "v2-contractor-bid-programme",
+                    "version": "1"
+                  },
+                  "permitted_choices": [
+                    "submit_bid"
+                  ]
+                },
+                {
+                  "ref": {
+                    "kind": "ContractTerms",
+                    "id": "v2-contractor-bid-terms",
+                    "version": "1"
+                  },
+                  "permitted_choices": [
+                    "submit_bid"
+                  ]
+                },
+                {
+                  "ref": {
+                    "kind": "TimeWindow",
+                    "id": "v2-contractor-bid-bid-validity",
+                    "version": "1"
+                  },
+                  "permitted_choices": [
+                    "submit_bid"
+                  ]
+                },
+                {
+                  "ref": {
+                    "kind": "ResourcePool",
+                    "id": "v2-contractor-bid-crew",
+                    "version": "1"
+                  },
+                  "permitted_choices": [
+                    "submit_bid"
+                  ]
+                },
+                {
+                  "ref": {
+                    "kind": "TimeWindow",
+                    "id": "v2-contractor-bid-work-slot",
+                    "version": "1"
+                  },
+                  "permitted_choices": [
+                    "submit_bid"
+                  ]
+                },
+                {
+                  "ref": {
+                    "kind": "WorkMethod",
+                    "id": "v2-contractor-bid-work-method",
+                    "version": "1"
+                  },
+                  "permitted_choices": [
+                    "submit_bid"
+                  ]
+                },
+                {
+                  "ref": {
+                    "kind": "QuantityBasis",
+                    "id": "v2-contractor-bid-quantity",
+                    "version": "1"
+                  },
+                  "permitted_choices": [
+                    "submit_bid"
+                  ]
+                },
+                {
+                  "ref": {
+                    "kind": "ReleasedDeliverable",
+                    "id": "v2-contractor-bid-design",
+                    "version": "1"
+                  },
+                  "permitted_choices": [
+                    "submit_bid"
+                  ]
+                },
+                {
+                  "ref": {
+                    "kind": "Project",
+                    "id": "v2-owner-publication-project",
+                    "version": "1"
+                  },
+                  "permitted_choices": [
+                    "submit_bid"
+                  ]
+                },
+                {
+                  "ref": {
+                    "kind": "WorkScope",
+                    "id": "v2-owner-publication-work",
+                    "version": "1"
+                  },
+                  "permitted_choices": [
+                    "submit_bid"
+                  ]
+                },
+                {
+                  "ref": {
+                    "kind": "Evidence",
+                    "id": "v2-contractor-bid-facts",
+                    "version": "1"
+                  },
+                  "permitted_choices": [
+                    "submit_bid"
+                  ]
+                }
+              ],
+              "search_profile_ref": {
+                "kind": "Profile",
+                "id": "v2-contractor-bid-declared-bid",
+                "version": "1"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "Authorization",
+              "id": "v2-owner-publication-contractor-grant",
+              "version": "2"
+            },
+            "value": {
+              "ref": {
+                "kind": "Authorization",
+                "id": "v2-owner-publication-contractor-grant",
+                "version": "2"
+              },
+              "organization_id": "v2-publication-contractor",
+              "actor_id": "v2-publication-contractor-actor",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "v2-owner-publication-contractor-function",
+                "version": "1"
+              },
+              "action_ids": [
+                "CONTRACTOR-A02"
+              ],
+              "scopes": [
+                {
+                  "kind": "project",
+                  "ref": {
+                    "kind": "Project",
+                    "id": "v2-owner-publication-project",
+                    "version": "1"
+                  },
+                  "coverage_refs": [
+                    {
+                      "kind": "WorkScope",
+                      "id": "v2-owner-publication-work",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "readable_refs": [
+                {
+                  "kind": "ProcurementPackage",
+                  "id": "v2-contractor-bid-package",
+                  "version": "1"
+                },
+                {
+                  "kind": "TenderRound",
+                  "id": "v2-contractor-bid-round",
+                  "version": "1"
+                },
+                {
+                  "kind": "MeasurementRule",
+                  "id": "v2-contractor-bid-measurement-rule",
+                  "version": "1"
+                },
+                {
+                  "kind": "ContractTerms",
+                  "id": "v2-contractor-bid-terms",
+                  "version": "1"
+                },
+                {
+                  "kind": "ReleasedDeliverable",
+                  "id": "v2-contractor-bid-design",
+                  "version": "1"
+                },
+                {
+                  "kind": "QuantityBasis",
+                  "id": "v2-contractor-bid-quantity",
+                  "version": "1"
+                },
+                {
+                  "kind": "CostBasis",
+                  "id": "v2-contractor-bid-cost",
+                  "version": "1"
+                },
+                {
+                  "kind": "WorkMethod",
+                  "id": "v2-contractor-bid-work-method",
+                  "version": "1"
+                },
+                {
+                  "kind": "ProgrammeProposal",
+                  "id": "v2-contractor-bid-programme",
+                  "version": "1"
+                },
+                {
+                  "kind": "ResourcePool",
+                  "id": "v2-contractor-bid-crew",
+                  "version": "1"
+                },
+                {
+                  "kind": "ResourceCommitment",
+                  "id": "v2-contractor-bid-other-project-crew",
+                  "version": "1"
+                },
+                {
+                  "kind": "ContractorCapacity",
+                  "id": "v2-contractor-bid-capacity",
+                  "version": "1"
+                },
+                {
+                  "kind": "Organization",
+                  "id": "v2-publication-contractor",
+                  "version": "1"
+                },
+                {
+                  "kind": "Qualification",
+                  "id": "v2-contractor-bid-general-works",
+                  "version": "1"
+                },
+                {
+                  "kind": "ContractorPricingProfile",
+                  "id": "v2-contractor-bid-pricing",
+                  "version": "1"
+                },
+                {
+                  "kind": "TimeWindow",
+                  "id": "v2-contractor-bid-work-slot",
+                  "version": "1"
+                },
+                {
+                  "kind": "TimeWindow",
+                  "id": "v2-contractor-bid-bid-validity",
+                  "version": "1"
+                },
+                {
+                  "kind": "TimeWindow",
+                  "id": "v2-owner-publication-submission-window",
+                  "version": "1"
+                },
+                {
+                  "kind": "ClockProfile",
+                  "id": "v2-owner-publication-clock",
+                  "version": "1"
+                },
+                {
+                  "kind": "Project",
+                  "id": "v2-owner-publication-project",
+                  "version": "1"
+                },
+                {
+                  "kind": "WorkScope",
+                  "id": "v2-owner-publication-work",
+                  "version": "1"
+                },
+                {
+                  "kind": "FunctionAssignment",
+                  "id": "v2-owner-publication-contractor-function",
+                  "version": "1"
+                },
+                {
+                  "kind": "FunctionAssignment",
+                  "id": "v2-owner-publication-architect-function",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "v2-owner-publication-basis",
+                  "version": "1"
+                },
+                {
+                  "kind": "Project",
+                  "id": "v2-contractor-bid-other-project",
+                  "version": "1"
+                },
+                {
+                  "kind": "WorkScope",
+                  "id": "v2-contractor-bid-other-work",
+                  "version": "1"
+                },
+                {
+                  "kind": "CandidateSet",
+                  "id": "v2-contractor-bid-candidates",
+                  "version": "1"
+                },
+                {
+                  "kind": "Authorization",
+                  "id": "v2-owner-publication-contractor-grant",
+                  "version": "2"
+                },
+                {
+                  "kind": "Authorization",
+                  "id": "v2-owner-publication-architect-grant",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "v2-contractor-bid-facts",
+                  "version": "1"
+                },
+                {
+                  "kind": "Method",
+                  "id": "micro.supply.declared_cost_markup",
+                  "version": "1"
+                }
+              ],
+              "tool_ids": [],
+              "validity": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-owner-publication-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-owner-publication-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              },
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v2-owner-publication-basis",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "v2-contractor-bid-facts",
+                  "version": "1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "Authorization",
+              "id": "v2-owner-publication-architect-grant",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Authorization",
+                "id": "v2-owner-publication-architect-grant",
+                "version": "1"
+              },
+              "organization_id": "v2-publication-architect",
+              "actor_id": "v2-publication-architect-actor",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "v2-owner-publication-architect-function",
+                "version": "1"
+              },
+              "action_ids": [
+                "ARCHITECT-A07"
+              ],
+              "scopes": [
+                {
+                  "kind": "project",
+                  "ref": {
+                    "kind": "Project",
+                    "id": "v2-owner-publication-project",
+                    "version": "1"
+                  },
+                  "coverage_refs": [
+                    {
+                      "kind": "WorkScope",
+                      "id": "v2-owner-publication-work",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "readable_refs": [
+                {
+                  "kind": "DeliverableSubmission",
+                  "id": "v2-owner-publication-technical-submission",
+                  "version": "1"
+                },
+                {
+                  "kind": "QuantityBasis",
+                  "id": "v2-owner-publication-quantity",
+                  "version": "1"
+                },
+                {
+                  "kind": "Requirement",
+                  "id": "v2-owner-publication-procurement-requirement",
+                  "version": "1"
+                },
+                {
+                  "kind": "ClockProfile",
+                  "id": "v2-owner-publication-clock",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "v2-owner-publication-basis",
+                  "version": "1"
+                },
+                {
+                  "kind": "Project",
+                  "id": "v2-owner-publication-project",
+                  "version": "1"
+                },
+                {
+                  "kind": "WorkScope",
+                  "id": "v2-owner-publication-work",
+                  "version": "1"
+                },
+                {
+                  "kind": "FunctionAssignment",
+                  "id": "v2-owner-publication-architect-function",
+                  "version": "1"
+                },
+                {
+                  "kind": "Authorization",
+                  "id": "v2-owner-publication-architect-grant",
+                  "version": "1"
+                }
+              ],
+              "tool_ids": [],
+              "validity": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-owner-publication-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-owner-publication-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              },
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v2-owner-publication-basis",
+                  "version": "1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "Evidence",
+              "id": "v2-contractor-bid-facts",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Evidence",
+                "id": "v2-contractor-bid-facts",
+                "version": "1"
+              },
+              "source_kind": "synthetic",
+              "basis_kind": "assumed",
+              "locator": "integration/examples/role_contract_contractor_bid_origin.json",
+              "content_hash": "59a7f9c25341ed4ba04050dd243a2ab526334fc41c430d353bc06024279586de",
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-owner-publication-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-owner-publication-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "Method",
+              "id": "micro.supply.declared_cost_markup",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Method",
+                "id": "micro.supply.declared_cost_markup",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v2-contractor-bid-facts",
+                  "version": "1"
+                }
+              ],
+              "scope": {
+                "kind": "project",
+                "ref": {
+                  "kind": "Project",
+                  "id": "v2-owner-publication-project",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "v2-owner-publication-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v2-owner-publication-clock",
+                  "version": "1"
+                },
+                "offset": 11
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-owner-publication-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v2-owner-publication-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              },
+              "package_ref": {
+                "kind": "ProcurementPackage",
+                "id": "v2-contractor-bid-package",
+                "version": "1"
+              },
+              "organization_id": "v2-publication-contractor",
+              "allowed": {
+                "state": "known",
+                "value": true
+              },
+              "excluded_coverage_keys": []
+            }
+          }
+        ]
+      },
+      "allow_saved_recovery": false
+    },
+    "macro_version": "synthetic-v2-contractor-bid.v1",
+    "client_version": "synthetic-contractor-bid-client.v1",
+    "policy_version": "synthetic-contractor-bid-policy.v1",
+    "model_version": "offline-no-model.v1"
+  }
+}

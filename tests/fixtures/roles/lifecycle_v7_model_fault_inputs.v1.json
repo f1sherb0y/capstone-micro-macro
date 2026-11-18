@@ -1,0 +1,67 @@
+{
+  "schema_version": "lifecycle-input-case.v1",
+  "scenario_id": "V7",
+  "origin": "synthetic",
+  "source_declaration": "Explicit local fault scripts for the existing SingleAgentActionStrategy. No endpoint, credentials, real model calls or business facts are supplied.",
+  "steps": [
+    {
+      "step_id": "v7-owner-payment-model-timeout",
+      "action_id": "OWN-A06",
+      "client_factory": "integration.scripted_model_fault_client:build_scripted_model_fault_client",
+      "client_settings": {
+        "schema_version": "scripted-model-fault-settings.v1",
+        "origin": "synthetic",
+        "case_id": "v7-owner-payment-model-timeout",
+        "fault": "timeout",
+        "response": null
+      },
+      "expected_kind": "technical_error",
+      "expected_error_code": "action_model_selection_failed",
+      "expected_error_type": "TimeoutError",
+      "expected_script_calls": 1,
+      "expected_network_requests": 0,
+      "automatic_retry": false
+    },
+    {
+      "step_id": "v7-owner-payment-invalid-model-json",
+      "action_id": "OWN-A06",
+      "client_factory": "integration.scripted_model_fault_client:build_scripted_model_fault_client",
+      "client_settings": {
+        "schema_version": "scripted-model-fault-settings.v1",
+        "origin": "synthetic",
+        "case_id": "v7-owner-payment-invalid-model-json",
+        "fault": "invalid_json",
+        "response": "{\"option_id\":"
+      },
+      "expected_kind": "technical_error",
+      "expected_error_code": "action_model_selection_failed",
+      "expected_error_type": "JSONDecodeError",
+      "expected_script_calls": 1,
+      "expected_network_requests": 0,
+      "automatic_retry": false
+    }
+  ],
+  "predecessor_requirements": [
+    "Separately supplied authorized synthetic Owner A06 input, source projections, strict action contract, original processor and Skill.",
+    "Explicitly configured single_agent strategy with at least two distinct valid host-authored options; the normal strategy bypasses model selection for a sole option.",
+    "Fresh run, operation, task, source token and durable call budget for each fault case; keep facts and authorization unchanged during the attempted selection."
+  ],
+  "remaining_requirements": [
+    "Supply a complete lifecycle-v7-model-fault-input.v1 configuration with actual original fixture sources and independently approved distinct action inputs; the new entry binds these to the original Runner/Skill/processor and durable single-call model host.",
+    "Inspect the original task/audit/call budget to prove technical failure, no formed business output, no submit/receipt and no repeated call."
+  ],
+  "limitations": [
+    "Input prepared only; neither script nor strategy nor worker has been executed.",
+    "These local synthetic faults do not prove real provider timeout behavior, real model quality or successful payment.",
+    "This file supplies fault scripts and expectations; it is not a complete executable business input chain.",
+    "Owner A06 has a fixed payment authorization; these scripts do not establish that it has two legitimate alternatives. The configured action must actually support independently valid alternatives; duplicate inputs or invented choices are rejected, never forced into the model path."
+  ],
+  "execution_configuration": {
+    "entrypoint": "integration.lifecycle_v7_model_fault:run_v7_model_fault",
+    "input_schema": "integration/examples/lifecycle_v7_model_fault_input.schema.json",
+    "default_mode": "plan_only",
+    "execute_flag": "--execute",
+    "source_factory_result": "integration.lifecycle_v7_model_fault.ModelFaultSources",
+    "configuration_status": "independent_complete_business_input_pending"
+  }
+}

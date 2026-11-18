@@ -1,0 +1,10 @@
+{
+  "role": "Engineer", "version": "1", "strategy": "organization_discussion",
+  "source": "zwtnew/04_roles/04_roles/engineer.md",
+  "members": [
+    {"member_id": "discipline", "name": "Discipline Reviewer", "functions": ["engineering_assessment"], "responsibilities": ["Check professional domain and applicable method evidence"]},
+    {"member_id": "independence", "name": "Independence Reviewer", "functions": ["independence_review"], "responsibilities": ["Check qualification, independence and signing basis separately"]},
+    {"member_id": "services", "name": "Service Reviewer", "functions": ["appointment_review"], "responsibilities": ["Review scope, capacity, service terms and residual professional duties"]}
+  ],
+  "tool_ids": []
+}

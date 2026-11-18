@@ -1,0 +1,8 @@
+{
+  "schema_version": "closeout-chain.v1",
+  "run_id": "goal3i-closeout-monthly-feedback",
+  "ticks": 3,
+  "max_prior_final_accounts": 1,
+  "bank_monthly_max_prior_reviews": 1,
+  "source_note": "Existing shared builder initial final-account case and independent private disputed positions; actual room communication, settlement and later decisions must be produced by the original runtime. Detailed debt clearance, handover and ongoing-obligation release are not inferred."
+}

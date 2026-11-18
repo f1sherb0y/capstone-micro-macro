@@ -1,0 +1,9 @@
+{
+  "schema_version": "capstone-database-asset.v1",
+  "archive": "agent_database.sqlite.gz",
+  "archive_sha256": "57b07888b60b8e6a2097d1f02ac528b50e85b9c20e1d059c83a2678c2d62c8e0",
+  "archive_bytes": 161847096,
+  "destination": "agent_database.sqlite",
+  "uncompressed_sha256": "6c8d6e4fb64180305a0d5ec4ea3c2ab0add5dd3993779ac9289575dfb5794040",
+  "uncompressed_bytes": 2086227968
+}

@@ -1,0 +1,23 @@
+{
+  "skill_id": "CONTRACTOR-A07.scoped-work-inputs",
+  "skill_version": "7",
+  "action_id": "CONTRACTOR-A07",
+  "role": "Contractor",
+  "status": "implemented",
+  "spec_source": "zwtnew/04_roles/04_roles/contractor.md",
+  "spec_source_sha256": "7b1175592c21601ddfa6aedb7859fe46e6bba3285502c285b483a502632f803e",
+  "skill_path": "skills/actions/contractor/CONTRACTOR-A07/SKILL.md",
+  "skill_sha256": "26138ad369e85fb5241f88e1502cd1e81e7de39996a16ec8462ca8c03f377df8",
+  "input_schema_id": "role-contract.v1:CONTRACTOR-A07:input",
+  "output_schema_id": "role-contract.v1:CONTRACTOR-A07:payload",
+  "processor_id": "contractor.scoped_work_inputs.v1",
+  "tool_ids": [],
+  "shared_refs": [
+    "skills/shared/decision-basics.md"
+  ],
+  "shared_sha256s": {
+    "skills/shared/decision-basics.md": "77da3d2fc1683068353888daccecfabe25278bf180b593747e39505fea987e60"
+  },
+  "prompt_sha256": "26138ad369e85fb5241f88e1502cd1e81e7de39996a16ec8462ca8c03f377df8",
+  "method_refs": []
+}

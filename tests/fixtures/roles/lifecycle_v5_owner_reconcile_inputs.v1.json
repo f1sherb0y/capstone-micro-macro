@@ -1,0 +1,1720 @@
+{
+  "schema_version": "lifecycle-v5-owner-reconcile-input-case.v1",
+  "scenario_id": "V5",
+  "origin": "synthetic",
+  "run_id": "synthetic-v5-financing-application",
+  "source_declaration": {
+    "owner_draw_case_path": "tests/fixtures/roles/lifecycle_v5_owner_draw_inputs.v1.json",
+    "owner_draw_case_sha256": "043b5eafdd52c926fe1f170ad07d6622b58c3db4c65396241408edaf3b55c483",
+    "bank_reconcile_case_path": "tests/fixtures/roles/lifecycle_v5_reconcile_inputs.v1.json",
+    "bank_reconcile_case_sha256": "bede09a9c35610322a34b832ba750b0e4ae673ec98e8266cede470a4009223d9",
+    "original_owner_scope": {
+      "scope": {
+        "kind": "assessment_case",
+        "ref": {
+          "kind": "OwnerCase",
+          "id": "case",
+          "version": "1"
+        },
+        "coverage_refs": [
+          {
+            "kind": "WorkScope",
+            "id": "funded-work",
+            "version": "1"
+          }
+        ]
+      },
+      "available_at": {
+        "clock_ref": {
+          "kind": "ClockProfile",
+          "id": "business",
+          "version": "1"
+        },
+        "offset": 20
+      },
+      "effective_window": {
+        "start": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 20
+        },
+        "end": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 22
+        },
+        "bounds": "closed_open"
+      },
+      "evidence_refs": [
+        {
+          "kind": "Evidence",
+          "id": "v5-owner-draw-assumptions",
+          "version": "1"
+        }
+      ],
+      "ref": {
+        "kind": "OwnerCase",
+        "id": "case",
+        "version": "1"
+      },
+      "organization_id": "owner",
+      "payment_authorization_ref": {
+        "kind": "PaymentAuthorization",
+        "id": "v5-owner-draw",
+        "version": "1"
+      }
+    },
+    "current_scope": {
+      "scope": {
+        "kind": "assessment_case",
+        "ref": {
+          "kind": "OwnerCase",
+          "id": "case",
+          "version": "1"
+        },
+        "coverage_refs": [
+          {
+            "kind": "WorkScope",
+            "id": "funded-work",
+            "version": "1"
+          }
+        ]
+      },
+      "available_at": {
+        "clock_ref": {
+          "kind": "ClockProfile",
+          "id": "business",
+          "version": "1"
+        },
+        "offset": 24
+      },
+      "effective_window": {
+        "start": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 24
+        },
+        "end": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 30
+        },
+        "bounds": "closed_open"
+      },
+      "evidence_refs": [
+        {
+          "kind": "Evidence",
+          "id": "v5-owner-reconcile-assumptions",
+          "version": "1"
+        }
+      ],
+      "ref": {
+        "kind": "OwnerCase",
+        "id": "case",
+        "version": "1"
+      },
+      "organization_id": "owner",
+      "payment_authorization_ref": {
+        "kind": "PaymentAuthorization",
+        "id": "v5-owner-reconcile",
+        "version": "1"
+      }
+    },
+    "assumptions": {
+      "schema_version": "v5-owner-reconcile-assumptions.v1",
+      "input": {
+        "scope_ref": {
+          "kind": "assessment_case",
+          "ref": {
+            "kind": "OwnerCase",
+            "id": "case",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "funded-work",
+              "version": "1"
+            }
+          ]
+        },
+        "account_refs": [],
+        "arrangement_refs": [],
+        "due_refs": [],
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "v5-owner-reconcile-assumptions",
+            "version": "1"
+          }
+        ],
+        "pending_execution_refs": [
+          {
+            "kind": "PaymentExecution",
+            "id": "v5-owner-first-draw-execution",
+            "version": "1"
+          }
+        ]
+      },
+      "payment_authorization": {
+        "scope": {
+          "kind": "assessment_case",
+          "ref": {
+            "kind": "OwnerCase",
+            "id": "case",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "funded-work",
+              "version": "1"
+            }
+          ]
+        },
+        "available_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 24
+        },
+        "effective_window": {
+          "start": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 24
+          },
+          "end": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 30
+          },
+          "bounds": "closed_open"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "v5-owner-reconcile-assumptions",
+            "version": "1"
+          }
+        ],
+        "ref": {
+          "kind": "PaymentAuthorization",
+          "id": "v5-owner-reconcile",
+          "version": "1"
+        },
+        "organization_id": "owner",
+        "actor_id": "owner-actor",
+        "function_ref": {
+          "kind": "FunctionAssignment",
+          "id": "owner-function",
+          "version": "1"
+        },
+        "authority_ref": {
+          "kind": "Authorization",
+          "id": "v5-owner-reconcile-grant",
+          "version": "1"
+        },
+        "choice": "reconcile",
+        "account_ref": null,
+        "lines": [],
+        "allow_partial": false,
+        "draw_authorization_ref": null,
+        "obligation_refs": [],
+        "execution_refs": [
+          {
+            "kind": "PaymentExecution",
+            "id": "v5-owner-first-draw-execution",
+            "version": "1"
+          }
+        ],
+        "note": "Inspect independently observed original draw execution; preserve partial/unknown/failure and original authorization."
+      },
+      "current_scope": {
+        "scope": {
+          "kind": "assessment_case",
+          "ref": {
+            "kind": "OwnerCase",
+            "id": "case",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "funded-work",
+              "version": "1"
+            }
+          ]
+        },
+        "available_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 24
+        },
+        "effective_window": {
+          "start": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 24
+          },
+          "end": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 30
+          },
+          "bounds": "closed_open"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "v5-owner-reconcile-assumptions",
+            "version": "1"
+          }
+        ],
+        "ref": {
+          "kind": "OwnerCase",
+          "id": "case",
+          "version": "1"
+        },
+        "organization_id": "owner",
+        "payment_authorization_ref": {
+          "kind": "PaymentAuthorization",
+          "id": "v5-owner-reconcile",
+          "version": "1"
+        }
+      },
+      "reception_ref": {
+        "kind": "BankExecutionReception",
+        "id": "v5-owner-first-draw-reception",
+        "version": "1"
+      }
+    },
+    "reception_ref": {
+      "kind": "BankExecutionReception",
+      "id": "v5-owner-first-draw-reception",
+      "version": "1"
+    },
+    "owner_execution_ref": {
+      "kind": "PaymentExecution",
+      "id": "v5-owner-first-draw-execution",
+      "version": "1"
+    },
+    "owner_policy_version": "role-contract-owner-fixture.v1"
+  },
+  "steps": [
+    {
+      "step_id": "v5-owner-reconcile",
+      "action_id": "OWN-A06",
+      "operation_id": "v5-owner-reconcile-24",
+      "expected_kind": "completed",
+      "allowed_choices": [
+        "draw_request",
+        "pay",
+        "repay",
+        "dispute",
+        "negotiate",
+        "reconcile"
+      ],
+      "input_fixture": {
+        "source_kind": "synthetic",
+        "organization_id": "owner",
+        "actor_id": "owner-actor",
+        "business_time": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 24
+        },
+        "input": {
+          "scope_ref": {
+            "kind": "assessment_case",
+            "ref": {
+              "kind": "OwnerCase",
+              "id": "case",
+              "version": "1"
+            },
+            "coverage_refs": [
+              {
+                "kind": "WorkScope",
+                "id": "funded-work",
+                "version": "1"
+              }
+            ]
+          },
+          "account_refs": [],
+          "arrangement_refs": [],
+          "due_refs": [],
+          "evidence_refs": [
+            {
+              "kind": "Evidence",
+              "id": "v5-owner-reconcile-assumptions",
+              "version": "1"
+            }
+          ],
+          "pending_execution_refs": [
+            {
+              "kind": "PaymentExecution",
+              "id": "v5-owner-first-draw-execution",
+              "version": "1"
+            }
+          ]
+        },
+        "objects": [
+          {
+            "ref": {
+              "kind": "FunctionAssignment",
+              "id": "owner-function",
+              "version": "1"
+            },
+            "value": {
+              "role": "Owner",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "owner-function",
+                "version": "1"
+              },
+              "configuration_version": "1",
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "synthetic",
+                  "version": "1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "WorkScope",
+              "id": "funded-work",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "WorkScope",
+                "id": "funded-work",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "synthetic",
+                  "version": "1"
+                }
+              ],
+              "parent_ref": {
+                "kind": "OwnerCase",
+                "id": "case",
+                "version": "1"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "Evidence",
+              "id": "synthetic",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Evidence",
+                "id": "synthetic",
+                "version": "1"
+              },
+              "source_kind": "synthetic",
+              "basis_kind": "assumed",
+              "locator": "tests/fixtures/roles/lifecycle_v5_application_inputs.v1.json#source_declaration",
+              "content_hash": "e684fb52330350cba5ce837b656493c6ac2d44200fa08a329c2a8c663e1b2741",
+              "effective_window": null
+            }
+          },
+          {
+            "ref": {
+              "kind": "OwnerCase",
+              "id": "case",
+              "version": "1"
+            },
+            "value": {
+              "scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "funded-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 24
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 24
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v5-owner-reconcile-assumptions",
+                  "version": "1"
+                }
+              ],
+              "ref": {
+                "kind": "OwnerCase",
+                "id": "case",
+                "version": "1"
+              },
+              "organization_id": "owner",
+              "payment_authorization_ref": {
+                "kind": "PaymentAuthorization",
+                "id": "v5-owner-reconcile",
+                "version": "1"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "PaymentAuthorization",
+              "id": "v5-owner-draw",
+              "version": "1"
+            },
+            "value": {
+              "scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "funded-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 20
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 20
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 22
+                },
+                "bounds": "closed_open"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v5-owner-draw-assumptions",
+                  "version": "1"
+                }
+              ],
+              "ref": {
+                "kind": "PaymentAuthorization",
+                "id": "v5-owner-draw",
+                "version": "1"
+              },
+              "organization_id": "owner",
+              "actor_id": "owner-actor",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "owner-function",
+                "version": "1"
+              },
+              "authority_ref": {
+                "kind": "Authorization",
+                "id": "v5-owner-draw-grant",
+                "version": "1"
+              },
+              "choice": "draw_request",
+              "account_ref": null,
+              "lines": [],
+              "allow_partial": false,
+              "draw_authorization_ref": {
+                "kind": "DrawAuthorization",
+                "id": "v5-owner-draw",
+                "version": "1"
+              },
+              "obligation_refs": [],
+              "execution_refs": [],
+              "note": "Explicit first self-beneficiary draw50 at20; independent native signed facility required."
+            }
+          },
+          {
+            "ref": {
+              "kind": "DrawAuthorization",
+              "id": "v5-owner-draw",
+              "version": "1"
+            },
+            "value": {
+              "scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "funded-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 20
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 20
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 22
+                },
+                "bounds": "closed_open"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v5-owner-draw-assumptions",
+                  "version": "1"
+                }
+              ],
+              "ref": {
+                "kind": "DrawAuthorization",
+                "id": "v5-owner-draw",
+                "version": "1"
+              },
+              "arrangement_ref": {
+                "kind": "FinanceArrangement",
+                "id": "v5-arrangement",
+                "version": "1"
+              },
+              "organization_id": "owner",
+              "amount": {
+                "value": "50",
+                "currency": "HKD",
+                "basis_ref": {
+                  "kind": "Evidence",
+                  "id": "v5-owner-draw-assumptions",
+                  "version": "1"
+                }
+              },
+              "beneficiary_id": "owner",
+              "condition_refs": [],
+              "condition_evidence_refs": [],
+              "direct_payment_obligation_ref": null,
+              "additional_draw": false,
+              "original_execution_ref": null
+            }
+          },
+          {
+            "ref": {
+              "kind": "CandidateSet",
+              "id": "v5-owner-draw-candidates",
+              "version": "1"
+            },
+            "value": {
+              "operation_id": "v5-owner-draw-20",
+              "scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "funded-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "as_of": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 20
+              },
+              "candidates": [
+                {
+                  "ref": {
+                    "kind": "FinanceArrangement",
+                    "id": "v5-arrangement",
+                    "version": "1"
+                  },
+                  "permitted_choices": [
+                    "draw_request"
+                  ]
+                }
+              ],
+              "search_profile_ref": {
+                "kind": "Profile",
+                "id": "v5-explicit-owner-draw-search",
+                "version": "1"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "Evidence",
+              "id": "v5-owner-draw-assumptions",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Evidence",
+                "id": "v5-owner-draw-assumptions",
+                "version": "1"
+              },
+              "source_kind": "synthetic",
+              "basis_kind": "assumed",
+              "locator": "lifecycle-v5-owner-draw-input-case.v1:source_declaration",
+              "content_hash": "fc5ff60bd091f5e99a3d1a8b7ac52daafd89fd25f78a58c1a180aa2843498d80",
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 20
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 22
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "Authorization",
+              "id": "v5-owner-draw-grant",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Authorization",
+                "id": "v5-owner-draw-grant",
+                "version": "1"
+              },
+              "organization_id": "owner",
+              "actor_id": "owner-actor",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "owner-function",
+                "version": "1"
+              },
+              "action_ids": [
+                "OWN-A06"
+              ],
+              "scopes": [
+                {
+                  "kind": "assessment_case",
+                  "ref": {
+                    "kind": "OwnerCase",
+                    "id": "case",
+                    "version": "1"
+                  },
+                  "coverage_refs": [
+                    {
+                      "kind": "WorkScope",
+                      "id": "funded-work",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "readable_refs": [
+                {
+                  "kind": "FunctionAssignment",
+                  "id": "owner-function",
+                  "version": "1"
+                },
+                {
+                  "kind": "WorkScope",
+                  "id": "funded-work",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "synthetic",
+                  "version": "1"
+                },
+                {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                {
+                  "kind": "PaymentAuthorization",
+                  "id": "v5-owner-draw",
+                  "version": "1"
+                },
+                {
+                  "kind": "DrawAuthorization",
+                  "id": "v5-owner-draw",
+                  "version": "1"
+                },
+                {
+                  "kind": "CandidateSet",
+                  "id": "v5-owner-draw-candidates",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "v5-owner-draw-assumptions",
+                  "version": "1"
+                },
+                {
+                  "kind": "Authorization",
+                  "id": "v5-owner-draw-grant",
+                  "version": "1"
+                }
+              ],
+              "tool_ids": [],
+              "validity": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 20
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 22
+                },
+                "bounds": "closed_open"
+              },
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v5-owner-draw-assumptions",
+                  "version": "1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "PaymentAuthorization",
+              "id": "v5-owner-reconcile",
+              "version": "1"
+            },
+            "value": {
+              "scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "funded-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 24
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 24
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v5-owner-reconcile-assumptions",
+                  "version": "1"
+                }
+              ],
+              "ref": {
+                "kind": "PaymentAuthorization",
+                "id": "v5-owner-reconcile",
+                "version": "1"
+              },
+              "organization_id": "owner",
+              "actor_id": "owner-actor",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "owner-function",
+                "version": "1"
+              },
+              "authority_ref": {
+                "kind": "Authorization",
+                "id": "v5-owner-reconcile-grant",
+                "version": "1"
+              },
+              "choice": "reconcile",
+              "account_ref": null,
+              "lines": [],
+              "allow_partial": false,
+              "draw_authorization_ref": null,
+              "obligation_refs": [],
+              "execution_refs": [
+                {
+                  "kind": "PaymentExecution",
+                  "id": "v5-owner-first-draw-execution",
+                  "version": "1"
+                }
+              ],
+              "note": "Inspect independently observed original draw execution; preserve partial/unknown/failure and original authorization."
+            }
+          },
+          {
+            "ref": {
+              "kind": "CandidateSet",
+              "id": "v5-owner-reconcile-candidates",
+              "version": "1"
+            },
+            "value": {
+              "operation_id": "v5-owner-reconcile-24",
+              "scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "funded-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "as_of": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 24
+              },
+              "candidates": [
+                {
+                  "ref": {
+                    "kind": "PaymentExecution",
+                    "id": "v5-owner-first-draw-execution",
+                    "version": "1"
+                  },
+                  "permitted_choices": [
+                    "reconcile"
+                  ]
+                }
+              ],
+              "search_profile_ref": {
+                "kind": "Profile",
+                "id": "v5-explicit-owner-reconcile-search",
+                "version": "1"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "Evidence",
+              "id": "v5-owner-reconcile-assumptions",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Evidence",
+                "id": "v5-owner-reconcile-assumptions",
+                "version": "1"
+              },
+              "source_kind": "synthetic",
+              "basis_kind": "assumed",
+              "locator": "explicit V5 Owner24 reconcile input, original native settlement supplied separately",
+              "content_hash": "68a920175fceb65f6ee080426a1dd64c996585750b775c768505eddb15e4c758",
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 24
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "Authorization",
+              "id": "v5-owner-reconcile-grant",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Authorization",
+                "id": "v5-owner-reconcile-grant",
+                "version": "1"
+              },
+              "organization_id": "owner",
+              "actor_id": "owner-actor",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "owner-function",
+                "version": "1"
+              },
+              "action_ids": [
+                "OWN-A06"
+              ],
+              "scopes": [
+                {
+                  "kind": "assessment_case",
+                  "ref": {
+                    "kind": "OwnerCase",
+                    "id": "case",
+                    "version": "1"
+                  },
+                  "coverage_refs": [
+                    {
+                      "kind": "WorkScope",
+                      "id": "funded-work",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "readable_refs": [
+                {
+                  "kind": "FunctionAssignment",
+                  "id": "owner-function",
+                  "version": "1"
+                },
+                {
+                  "kind": "WorkScope",
+                  "id": "funded-work",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "synthetic",
+                  "version": "1"
+                },
+                {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                {
+                  "kind": "PaymentAuthorization",
+                  "id": "v5-owner-draw",
+                  "version": "1"
+                },
+                {
+                  "kind": "DrawAuthorization",
+                  "id": "v5-owner-draw",
+                  "version": "1"
+                },
+                {
+                  "kind": "CandidateSet",
+                  "id": "v5-owner-draw-candidates",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "v5-owner-draw-assumptions",
+                  "version": "1"
+                },
+                {
+                  "kind": "Authorization",
+                  "id": "v5-owner-draw-grant",
+                  "version": "1"
+                },
+                {
+                  "kind": "PaymentAuthorization",
+                  "id": "v5-owner-reconcile",
+                  "version": "1"
+                },
+                {
+                  "kind": "CandidateSet",
+                  "id": "v5-owner-reconcile-candidates",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "v5-owner-reconcile-assumptions",
+                  "version": "1"
+                },
+                {
+                  "kind": "Authorization",
+                  "id": "v5-owner-reconcile-grant",
+                  "version": "1"
+                },
+                {
+                  "kind": "PaymentExecution",
+                  "id": "v5-owner-first-draw-execution",
+                  "version": "1"
+                },
+                {
+                  "kind": "BankExecutionReception",
+                  "id": "v5-owner-first-draw-reception",
+                  "version": "1"
+                }
+              ],
+              "tool_ids": [],
+              "validity": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 24
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              },
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v5-owner-reconcile-assumptions",
+                  "version": "1"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "offline_binding": {
+        "invocation": {
+          "context": {
+            "run_id": "synthetic-v5-financing-application",
+            "actor_id": "owner-actor",
+            "function_ref": {
+              "kind": "FunctionAssignment",
+              "id": "owner-function",
+              "version": "1"
+            },
+            "authorization_refs": [
+              {
+                "kind": "Authorization",
+                "id": "v5-owner-reconcile-grant",
+                "version": "1"
+              }
+            ],
+            "operation_id": "v5-owner-reconcile-24",
+            "contract_ref": {
+              "kind": "ActionContract",
+              "id": "OWN-A06",
+              "version": "1"
+            },
+            "task_ref": {
+              "kind": "DecisionTask",
+              "id": "v5-owner-reconcile-task",
+              "version": "1"
+            },
+            "scope": {
+              "kind": "assessment_case",
+              "ref": {
+                "kind": "OwnerCase",
+                "id": "case",
+                "version": "1"
+              },
+              "coverage_refs": [
+                {
+                  "kind": "WorkScope",
+                  "id": "funded-work",
+                  "version": "1"
+                }
+              ]
+            },
+            "business_time": {
+              "clock_ref": {
+                "kind": "ClockProfile",
+                "id": "business",
+                "version": "1"
+              },
+              "offset": 24
+            },
+            "read_token": "synthetic-v5-financing-application:v5-owner-reconcile-24:read:1",
+            "visible_refs": [
+              {
+                "kind": "FunctionAssignment",
+                "id": "owner-function",
+                "version": "1"
+              },
+              {
+                "kind": "WorkScope",
+                "id": "funded-work",
+                "version": "1"
+              },
+              {
+                "kind": "Evidence",
+                "id": "synthetic",
+                "version": "1"
+              },
+              {
+                "kind": "OwnerCase",
+                "id": "case",
+                "version": "1"
+              },
+              {
+                "kind": "PaymentAuthorization",
+                "id": "v5-owner-draw",
+                "version": "1"
+              },
+              {
+                "kind": "DrawAuthorization",
+                "id": "v5-owner-draw",
+                "version": "1"
+              },
+              {
+                "kind": "CandidateSet",
+                "id": "v5-owner-draw-candidates",
+                "version": "1"
+              },
+              {
+                "kind": "Evidence",
+                "id": "v5-owner-draw-assumptions",
+                "version": "1"
+              },
+              {
+                "kind": "Authorization",
+                "id": "v5-owner-draw-grant",
+                "version": "1"
+              },
+              {
+                "kind": "PaymentAuthorization",
+                "id": "v5-owner-reconcile",
+                "version": "1"
+              },
+              {
+                "kind": "CandidateSet",
+                "id": "v5-owner-reconcile-candidates",
+                "version": "1"
+              },
+              {
+                "kind": "Evidence",
+                "id": "v5-owner-reconcile-assumptions",
+                "version": "1"
+              },
+              {
+                "kind": "Authorization",
+                "id": "v5-owner-reconcile-grant",
+                "version": "1"
+              }
+            ],
+            "candidate_set_ref": {
+              "kind": "CandidateSet",
+              "id": "v5-owner-reconcile-candidates",
+              "version": "1"
+            },
+            "execution_mode": "offline_fixture"
+          },
+          "action_input": {
+            "scope_ref": {
+              "kind": "assessment_case",
+              "ref": {
+                "kind": "OwnerCase",
+                "id": "case",
+                "version": "1"
+              },
+              "coverage_refs": [
+                {
+                  "kind": "WorkScope",
+                  "id": "funded-work",
+                  "version": "1"
+                }
+              ]
+            },
+            "account_refs": [],
+            "arrangement_refs": [],
+            "due_refs": [],
+            "evidence_refs": [
+              {
+                "kind": "Evidence",
+                "id": "v5-owner-reconcile-assumptions",
+                "version": "1"
+              }
+            ],
+            "pending_execution_refs": [
+              {
+                "kind": "PaymentExecution",
+                "id": "v5-owner-first-draw-execution",
+                "version": "1"
+              }
+            ]
+          },
+          "execution_path": "deterministic"
+        },
+        "organization_snapshot": {
+          "schema_version": "organization.v2",
+          "run_id": "synthetic-v5-financing-application",
+          "organizations": [
+            {
+              "organization_id": "owner",
+              "actor_id": "owner-actor",
+              "source_ids": [
+                "synthetic:v5-owner-draw"
+              ],
+              "public_description": "Explicit synthetic Owner first draw instruction; actual signed Bank reception independently supplied.",
+              "public_location": {
+                "state": "unknown",
+                "reason_code": "synthetic_unsupplied",
+                "missing_refs": []
+              },
+              "members": [],
+              "assignments": [
+                {
+                  "role": "Owner",
+                  "function_ref": {
+                    "kind": "FunctionAssignment",
+                    "id": "owner-function",
+                    "version": "1"
+                  },
+                  "configuration_version": "1",
+                  "basis_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "synthetic",
+                  "version": "1"
+                }
+              ]
+            }
+          ],
+          "authorizations": [
+            {
+              "ref": {
+                "kind": "Authorization",
+                "id": "v5-owner-draw-grant",
+                "version": "1"
+              },
+              "organization_id": "owner",
+              "actor_id": "owner-actor",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "owner-function",
+                "version": "1"
+              },
+              "action_ids": [
+                "OWN-A06"
+              ],
+              "scopes": [
+                {
+                  "kind": "assessment_case",
+                  "ref": {
+                    "kind": "OwnerCase",
+                    "id": "case",
+                    "version": "1"
+                  },
+                  "coverage_refs": [
+                    {
+                      "kind": "WorkScope",
+                      "id": "funded-work",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "readable_refs": [
+                {
+                  "kind": "FunctionAssignment",
+                  "id": "owner-function",
+                  "version": "1"
+                },
+                {
+                  "kind": "WorkScope",
+                  "id": "funded-work",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "synthetic",
+                  "version": "1"
+                },
+                {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                {
+                  "kind": "PaymentAuthorization",
+                  "id": "v5-owner-draw",
+                  "version": "1"
+                },
+                {
+                  "kind": "DrawAuthorization",
+                  "id": "v5-owner-draw",
+                  "version": "1"
+                },
+                {
+                  "kind": "CandidateSet",
+                  "id": "v5-owner-draw-candidates",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "v5-owner-draw-assumptions",
+                  "version": "1"
+                },
+                {
+                  "kind": "Authorization",
+                  "id": "v5-owner-draw-grant",
+                  "version": "1"
+                }
+              ],
+              "tool_ids": [],
+              "validity": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 20
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 22
+                },
+                "bounds": "closed_open"
+              },
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v5-owner-draw-assumptions",
+                  "version": "1"
+                }
+              ]
+            },
+            {
+              "ref": {
+                "kind": "Authorization",
+                "id": "v5-owner-reconcile-grant",
+                "version": "1"
+              },
+              "organization_id": "owner",
+              "actor_id": "owner-actor",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "owner-function",
+                "version": "1"
+              },
+              "action_ids": [
+                "OWN-A06"
+              ],
+              "scopes": [
+                {
+                  "kind": "assessment_case",
+                  "ref": {
+                    "kind": "OwnerCase",
+                    "id": "case",
+                    "version": "1"
+                  },
+                  "coverage_refs": [
+                    {
+                      "kind": "WorkScope",
+                      "id": "funded-work",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "readable_refs": [
+                {
+                  "kind": "FunctionAssignment",
+                  "id": "owner-function",
+                  "version": "1"
+                },
+                {
+                  "kind": "WorkScope",
+                  "id": "funded-work",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "synthetic",
+                  "version": "1"
+                },
+                {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                {
+                  "kind": "PaymentAuthorization",
+                  "id": "v5-owner-draw",
+                  "version": "1"
+                },
+                {
+                  "kind": "DrawAuthorization",
+                  "id": "v5-owner-draw",
+                  "version": "1"
+                },
+                {
+                  "kind": "CandidateSet",
+                  "id": "v5-owner-draw-candidates",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "v5-owner-draw-assumptions",
+                  "version": "1"
+                },
+                {
+                  "kind": "Authorization",
+                  "id": "v5-owner-draw-grant",
+                  "version": "1"
+                },
+                {
+                  "kind": "PaymentAuthorization",
+                  "id": "v5-owner-reconcile",
+                  "version": "1"
+                },
+                {
+                  "kind": "CandidateSet",
+                  "id": "v5-owner-reconcile-candidates",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "v5-owner-reconcile-assumptions",
+                  "version": "1"
+                },
+                {
+                  "kind": "Authorization",
+                  "id": "v5-owner-reconcile-grant",
+                  "version": "1"
+                },
+                {
+                  "kind": "PaymentExecution",
+                  "id": "v5-owner-first-draw-execution",
+                  "version": "1"
+                },
+                {
+                  "kind": "BankExecutionReception",
+                  "id": "v5-owner-first-draw-reception",
+                  "version": "1"
+                }
+              ],
+              "tool_ids": [],
+              "validity": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 24
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              },
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v5-owner-reconcile-assumptions",
+                  "version": "1"
+                }
+              ]
+            }
+          ],
+          "inactive_authorization_refs": []
+        },
+        "source_projection_envelope": {
+          "run_id": "synthetic-v5-financing-application",
+          "macro_version": "synthetic-v5-application.v1",
+          "state_version": "synthetic-v5-owner-reconcile-24.v1",
+          "read_token": "synthetic-v5-financing-application:v5-owner-reconcile-24:read:1",
+          "business_time": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 24
+          },
+          "organization_id": "owner"
+        },
+        "source_note": "Owner24 current reconciliation authority; original draw grant/window and authorization preserved. Native execution/status/receipt/effects and additional current read grants must be supplied independently.",
+        "schema_factory": "src.actions.contracts.owner_payment_objects:owner_payment_schemas"
+      }
+    }
+  ],
+  "predecessor_requirements": [
+    "Original completed Bank reconciliation and original Owner draw results, with separately existing journals.",
+    "Independent complete Bank command/receipt history and actual Owner execution/optional terminal receipt/native financial source effects.",
+    "Explicit Owner24 reconciliation grant, original historical draw authority unchanged, additional current grants for supplied settlement sources."
+  ],
+  "dependent_steps": [
+    "Actual macro cash/debt effects and payment chain consume independently observed settlement sources."
+  ],
+  "remaining_requirements": [
+    "Certification/payment, core cash/debt, multi-command and other native source/transport/feedback wiring.",
+    "Consolidated simple functional verification after coding."
+  ],
+  "limitations": [
+    "Explicit synthetic input only; entry not executed.",
+    "No succeeded state, command, receipt, account balance or debt amount generated.",
+    "Original draw authority expires at22; Owner24 has separate reconciliation authority. All six legal Owner choices remain in scope."
+  ]
+}

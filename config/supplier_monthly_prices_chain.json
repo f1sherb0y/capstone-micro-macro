@@ -1,0 +1,7 @@
+{
+  "schema_version":"supplier-monthly-prices-chain.v1",
+  "run_id":"goal3f-supplier-monthly-prices",
+  "ticks":2,
+  "scenarios":{"high":{"material_price_index":1.2},"low":{"material_price_index":0.8}},
+  "source_note":"Original initial material_price_index only varies. A01 monitors the actual dimensionless index and its own original A03 quote; native monthly execution must be confirmed before a later original A03 adopts the recommended private markup. Product, currency, quantity and independent original unit costs remain fixed. No actual monetary material price is derived from the index; no formal offer publication, order, physical stock change or reliability effect is claimed."
+}

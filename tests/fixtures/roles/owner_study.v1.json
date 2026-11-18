@@ -1,0 +1,833 @@
+{
+  "schema_version": "owner-study-fixture.v1",
+  "origin": "synthetic",
+  "assumptions": "Synthetic bounded preliminary investigation from a registered owner case and question, with explicit staff authority, capacity, study costs, budgets and policy. No real qualification, project, expense, debt settlement or formal commission is asserted.",
+  "organization_id": "owner",
+  "actor_id": "owner-actor",
+  "business_time": {
+    "clock_ref": {
+      "kind": "ClockProfile",
+      "id": "fixture-clock",
+      "version": "1"
+    },
+    "offset": 10
+  },
+  "input": {
+    "case_ref": {
+      "kind": "OwnerCase",
+      "id": "private-case",
+      "version": "1"
+    },
+    "brief_ref": null,
+    "issue_refs": [
+      {
+        "kind": "Issue",
+        "id": "research-question",
+        "version": "1"
+      }
+    ],
+    "service_candidates": [],
+    "study_profile_ref": {
+      "kind": "StudyProfile",
+      "id": "study-profile",
+      "version": "1"
+    },
+    "spending_limit": {
+      "value": "40",
+      "currency": "HKD",
+      "basis_ref": {
+        "kind": "Evidence",
+        "id": "fixture-basis",
+        "version": "1"
+      }
+    }
+  },
+  "objects": [
+    {
+      "ref": {
+        "kind": "Organization",
+        "id": "owner",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "Organization",
+          "id": "owner",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "fixture-basis",
+            "version": "1"
+          }
+        ]
+      }
+    },
+    {
+      "ref": {
+        "kind": "OwnerCase",
+        "id": "private-case",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "OwnerCase",
+          "id": "private-case",
+          "version": "1"
+        },
+        "organization_id": "owner",
+        "region_id": "HK",
+        "objective_ref": {
+          "kind": "OwnerObjective",
+          "id": "objective",
+          "version": "1"
+        },
+        "use_code": "workspace",
+        "observation_refs": [
+          {
+            "kind": "DemandObservation",
+            "id": "need",
+            "version": "1"
+          }
+        ],
+        "opportunity_refs": [],
+        "status": "active",
+        "updated_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "fixture-clock",
+            "version": "1"
+          },
+          "offset": 9
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "fixture-basis",
+            "version": "1"
+          }
+        ],
+        "issue_refs": [
+          {
+            "kind": "Issue",
+            "id": "research-question",
+            "version": "1"
+          }
+        ],
+        "brief_refs": [],
+        "study_refs": [],
+        "linked_project_ref": null
+      }
+    },
+    {
+      "ref": {
+        "kind": "FundingPosition",
+        "id": "funding",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "FundingPosition",
+          "id": "funding",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "fixture-basis",
+            "version": "1"
+          }
+        ],
+        "organization_id": "owner",
+        "as_of": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "fixture-clock",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "coverage": "complete",
+        "actual_cash": {
+          "state": "known",
+          "value": {
+            "value": "100",
+            "currency": "HKD",
+            "basis_ref": {
+              "kind": "Evidence",
+              "id": "fixture-basis",
+              "version": "1"
+            }
+          }
+        },
+        "committed_cash": {
+          "state": "known",
+          "value": {
+            "value": "30",
+            "currency": "HKD",
+            "basis_ref": {
+              "kind": "Evidence",
+              "id": "fixture-basis",
+              "version": "1"
+            }
+          }
+        },
+        "restricted_cash": {
+          "state": "known",
+          "value": {
+            "value": "20",
+            "currency": "HKD",
+            "basis_ref": {
+              "kind": "Evidence",
+              "id": "fixture-basis",
+              "version": "1"
+            }
+          }
+        },
+        "deduction_policy": {
+          "state": "known",
+          "value": "disjoint_committed_and_restricted"
+        }
+      }
+    },
+    {
+      "ref": {
+        "kind": "WorkScope",
+        "id": "research-work",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "WorkScope",
+          "id": "research-work",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "fixture-basis",
+            "version": "1"
+          }
+        ],
+        "case_ref": {
+          "kind": "OwnerCase",
+          "id": "private-case",
+          "version": "1"
+        },
+        "research_permitted": {
+          "state": "known",
+          "value": true
+        },
+        "question_codes": [
+          "ground-condition"
+        ],
+        "effective_window": {
+          "start": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "fixture-clock",
+              "version": "1"
+            },
+            "offset": 0
+          },
+          "end": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "fixture-clock",
+              "version": "1"
+            },
+            "offset": 100
+          },
+          "bounds": "closed_open"
+        }
+      }
+    },
+    {
+      "ref": {
+        "kind": "Issue",
+        "id": "research-question",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "Issue",
+          "id": "research-question",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "fixture-basis",
+            "version": "1"
+          }
+        ],
+        "case_ref": {
+          "kind": "OwnerCase",
+          "id": "private-case",
+          "version": "1"
+        },
+        "scope": {
+          "kind": "assessment_case",
+          "ref": {
+            "kind": "OwnerCase",
+            "id": "private-case",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "research-work",
+              "version": "1"
+            }
+          ]
+        },
+        "question_code": "ground-condition",
+        "status": "unresolved",
+        "available_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "fixture-clock",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "effective_window": {
+          "start": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "fixture-clock",
+              "version": "1"
+            },
+            "offset": 0
+          },
+          "end": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "fixture-clock",
+              "version": "1"
+            },
+            "offset": 100
+          },
+          "bounds": "closed_open"
+        }
+      }
+    },
+    {
+      "ref": {
+        "kind": "FunctionAssignment",
+        "id": "owner-study",
+        "version": "1"
+      },
+      "value": {
+        "role": "Owner",
+        "function_ref": {
+          "kind": "FunctionAssignment",
+          "id": "owner-study",
+          "version": "1"
+        },
+        "configuration_version": "1",
+        "basis_refs": [
+          {
+            "kind": "Evidence",
+            "id": "fixture-basis",
+            "version": "1"
+          }
+        ]
+      }
+    },
+    {
+      "ref": {
+        "kind": "Authorization",
+        "id": "study-grant",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "Authorization",
+          "id": "study-grant",
+          "version": "1"
+        },
+        "organization_id": "owner",
+        "actor_id": "owner-actor",
+        "function_ref": {
+          "kind": "FunctionAssignment",
+          "id": "owner-study",
+          "version": "1"
+        },
+        "action_ids": [
+          "OWN-A02"
+        ],
+        "scopes": [
+          {
+            "kind": "assessment_case",
+            "ref": {
+              "kind": "OwnerCase",
+              "id": "private-case",
+              "version": "1"
+            },
+            "coverage_refs": [
+              {
+                "kind": "WorkScope",
+                "id": "research-work",
+                "version": "1"
+              }
+            ]
+          }
+        ],
+        "readable_refs": [],
+        "tool_ids": [],
+        "validity": {
+          "start": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "fixture-clock",
+              "version": "1"
+            },
+            "offset": 0
+          },
+          "end": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "fixture-clock",
+              "version": "1"
+            },
+            "offset": 100
+          },
+          "bounds": "closed_open"
+        },
+        "basis_refs": [
+          {
+            "kind": "Evidence",
+            "id": "fixture-basis",
+            "version": "1"
+          }
+        ]
+      }
+    },
+    {
+      "ref": {
+        "kind": "TimeWindow",
+        "id": "study-window",
+        "version": "1"
+      },
+      "value": {
+        "start": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "fixture-clock",
+            "version": "1"
+          },
+          "offset": 12
+        },
+        "end": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "fixture-clock",
+            "version": "1"
+          },
+          "offset": 18
+        },
+        "bounds": "closed_open"
+      }
+    },
+    {
+      "ref": {
+        "kind": "ResourcePool",
+        "id": "study-team",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "ResourcePool",
+          "id": "study-team",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "fixture-basis",
+            "version": "1"
+          }
+        ],
+        "organization_id": "owner",
+        "authorization_ref": {
+          "kind": "Authorization",
+          "id": "study-grant",
+          "version": "1"
+        },
+        "function_ref": {
+          "kind": "FunctionAssignment",
+          "id": "owner-study",
+          "version": "1"
+        },
+        "supported_question_codes": {
+          "state": "known",
+          "value": [
+            "ground-condition"
+          ]
+        },
+        "qualified": {
+          "state": "known",
+          "value": true
+        },
+        "research_permitted": {
+          "state": "known",
+          "value": true
+        },
+        "total": {
+          "state": "known",
+          "value": {
+            "value": "3",
+            "unit": "analyst",
+            "basis_ref": {
+              "kind": "Evidence",
+              "id": "fixture-basis",
+              "version": "1"
+            }
+          }
+        },
+        "commitments": [
+          {
+            "ref": {
+              "kind": "ResourceCommitment",
+              "id": "existing-study-load",
+              "version": "1"
+            },
+            "quantity": {
+              "value": "2",
+              "unit": "analyst",
+              "basis_ref": {
+                "kind": "Evidence",
+                "id": "fixture-basis",
+                "version": "1"
+              }
+            },
+            "window": {
+              "start": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "fixture-clock",
+                  "version": "1"
+                },
+                "offset": 0
+              },
+              "end": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "fixture-clock",
+                  "version": "1"
+                },
+                "offset": 100
+              },
+              "bounds": "closed_open"
+            }
+          }
+        ],
+        "as_of": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "fixture-clock",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "coverage": "complete",
+        "effective_window": {
+          "start": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "fixture-clock",
+              "version": "1"
+            },
+            "offset": 0
+          },
+          "end": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "fixture-clock",
+              "version": "1"
+            },
+            "offset": 100
+          },
+          "bounds": "closed_open"
+        }
+      }
+    },
+    {
+      "ref": {
+        "kind": "StudyCandidate",
+        "id": "internal",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "StudyCandidate",
+          "id": "internal",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "fixture-basis",
+            "version": "1"
+          }
+        ],
+        "local_key": "internal-task",
+        "organization_id": "owner",
+        "case_ref": {
+          "kind": "OwnerCase",
+          "id": "private-case",
+          "version": "1"
+        },
+        "choice": "internal_study",
+        "task_scope": {
+          "scope_ref": {
+            "kind": "assessment_case",
+            "ref": {
+              "kind": "OwnerCase",
+              "id": "private-case",
+              "version": "1"
+            },
+            "coverage_refs": [
+              {
+                "kind": "WorkScope",
+                "id": "research-work",
+                "version": "1"
+              }
+            ]
+          },
+          "basis_refs": [
+            {
+              "kind": "Evidence",
+              "id": "fixture-basis",
+              "version": "1"
+            }
+          ],
+          "condition_refs": []
+        },
+        "issue_refs": [
+          {
+            "kind": "Issue",
+            "id": "research-question",
+            "version": "1"
+          }
+        ],
+        "expenditure_cap": {
+          "state": "known",
+          "value": {
+            "value": "25",
+            "currency": "HKD",
+            "basis_ref": {
+              "kind": "Evidence",
+              "id": "fixture-basis",
+              "version": "1"
+            }
+          }
+        },
+        "future_cost": {
+          "state": "known",
+          "value": {
+            "value": "20",
+            "currency": "HKD",
+            "basis_ref": {
+              "kind": "Evidence",
+              "id": "fixture-basis",
+              "version": "1"
+            }
+          }
+        },
+        "window_ref": {
+          "kind": "TimeWindow",
+          "id": "study-window",
+          "version": "1"
+        },
+        "allocations": [
+          {
+            "resource_ref": {
+              "kind": "ResourcePool",
+              "id": "study-team",
+              "version": "1"
+            },
+            "window_ref": {
+              "kind": "TimeWindow",
+              "id": "study-window",
+              "version": "1"
+            },
+            "quantity": {
+              "value": "1",
+              "unit": "analyst",
+              "basis_ref": {
+                "kind": "Evidence",
+                "id": "fixture-basis",
+                "version": "1"
+              }
+            },
+            "task_target": {
+              "kind": "proposed",
+              "local_key": "internal-task",
+              "scope_ref": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "private-case",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "research-work",
+                    "version": "1"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "offer_ref": null,
+        "prior_study_ref": null,
+        "reassessment_refs": [],
+        "priority": {
+          "state": "known",
+          "value": 1
+        },
+        "research_permitted": {
+          "state": "known",
+          "value": true
+        },
+        "available_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "fixture-clock",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "effective_window": {
+          "start": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "fixture-clock",
+              "version": "1"
+            },
+            "offset": 0
+          },
+          "end": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "fixture-clock",
+              "version": "1"
+            },
+            "offset": 100
+          },
+          "bounds": "closed_open"
+        }
+      }
+    },
+    {
+      "ref": {
+        "kind": "StudyProfile",
+        "id": "study-profile",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "StudyProfile",
+          "id": "study-profile",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "fixture-basis",
+            "version": "1"
+          }
+        ],
+        "organization_id": "owner",
+        "case_ref": {
+          "kind": "OwnerCase",
+          "id": "private-case",
+          "version": "1"
+        },
+        "permitted_scope": {
+          "kind": "assessment_case",
+          "ref": {
+            "kind": "OwnerCase",
+            "id": "private-case",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "research-work",
+              "version": "1"
+            }
+          ]
+        },
+        "authority_ref": {
+          "kind": "Authorization",
+          "id": "study-grant",
+          "version": "1"
+        },
+        "funding_ref": {
+          "kind": "FundingPosition",
+          "id": "funding",
+          "version": "1"
+        },
+        "algorithm_code": "declared_limited_study_v1",
+        "policy": {
+          "state": "known",
+          "value": "evaluate"
+        },
+        "on_unavailable": {
+          "state": "known",
+          "value": "stop"
+        },
+        "candidate_refs": [
+          {
+            "kind": "StudyCandidate",
+            "id": "internal",
+            "version": "1"
+          }
+        ],
+        "history_refs": [],
+        "history_coverage": "complete",
+        "as_of": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "fixture-clock",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "available_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "fixture-clock",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "effective_window": {
+          "start": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "fixture-clock",
+              "version": "1"
+            },
+            "offset": 0
+          },
+          "end": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "fixture-clock",
+              "version": "1"
+            },
+            "offset": 100
+          },
+          "bounds": "closed_open"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+# CONTRACTOR-A09 处理设计接口、变更与索赔
+
+使用原合同、基准设计版本、具体原指令/接口问题、已发生成本和有权通知/索赔程序。指令核实际作者及独立指令权限，提案不当指令；既有有效工作义务和有权紧急处置保留，不因有争议就全项目等一致同意。
+
+Evidence核精确ref、双端同业务钟、非未来及真实用途有效窗。当前profile/通知程序、接口问题/要求、指令状态/提案状态/受影响任务仍当前；用于新申报的完整合同历史按当前as_of核Evidence。原设计、已发生成本记录及金额、保存估值/估值行、工期报告Evidence按各自真实authored_at，作者grant/function精确匹配并覆盖原动作/完整scope。混合授权basis仅Evidence核作者时点，其他依据保原类型及原可获；非Evidence不进入输出basis_refs。已签成本金额没有独立实际发生字段，不把authored_at/available_at推作发生/到账时间。
+
+原InstructionAuthority按instruction.authored_at核原可获、窗口、Evidence和完整指令scope；当前issued/withdrawn/proposal状态仍独立读取，不把原权限过期当原指令从未获权。原变更作者须有原设计/指令/问题/受影响任务读权且这些来源当时已可获。估值行作者须有原change/task/cost/量价Evidence读权，cost和change/task须签发前已可获；同一Evidence可同时支撑量差与单价，不因重复用途当成两个来源。
+
+保存估值source_refs和量价Evidence按保存报告authored_at，估值行自身量价及记录依据按line.authored_at；原工期method支持/窗口/Evidence按impact.authored_at，原change/source_refs须当时已可获且有权读取。当前量价重算仍走原MethodRegistry当前门，不将保存report当现行方法计算或正式索赔认可。
+
+原指令权限和方法可覆盖比本次工作更广的范围；在有权读取原引用的前提下，核权限完整覆盖instruction.scope、方法覆盖impact.scope且评估覆盖changed_scope，不因范围较广就把原适用权限/方法误当越界决策。
+
+完整原Claim历史核原作者及本企业claimant，未撤回同business沿原记录等待。旧Claim状态没有逐状态时间，record Evidence保历史，原作者授权按真实authored_at；原/当前续办profile/procedure及本时点完整历史Evidence各按调用时点。原首等待仍由原processor重核，当前续办仍完整新决策，native终态须当前非synthetic observed及独立完整业务认证。条件仍v2、claim reader升v3，reader固定实际factory/checker、处理器/原等待helper、注册contract和source schema/validator对象及源码/runtime摘要，terminal同checker模块入口。旧保存条件/配置不自动迁移。
+
+clarify/respond须局部具体问题、原要求/证据及责任未知值。propose_change/submit_claim须可解析原变更说明/实际范围、完整受影响任务与未受影响任务分区，不只填金额；只有受影响版本/范围进入重查，保留其他原任务。未知费用/工期可初始通知/待完善提案，不能当已确定价款/展期。
+
+已发生成本核原实际事件/组件、任务/币种/作者并排重；预估另保存，不能装成实际支出。已知申报金额复核原量差/非负单价的精确算术、完整原行/证据/来源读权/保存摘要；实际成本行绑定独立原支出组件且不能重复使用，预估行不混作实际。使用既有QS数学方法不获得QS认可或权利裁定。工期仅原有权支持的方法评估，保留估计身份，失败technical_error，未建模unsupported。
+
+原完整索赔历史按业务身份核对，已存在沿原Claim续办，不重造。dispute仅引用原存在、同合同/申报人的索赔，不单方改金额/责任/许可。completed只是通知、建议、申报或回应；真实原来源/方法/程序生产者、跨动作投影、正式submit/query、授权变更/权利裁定/反馈仍待集成。本批编码未功能验收。
+
+恢复reader v3在原组件身份与源码声明之外，显式保存各实际检查回调的callable_implementation运行时代码摘要，并沿原配置复核边界重新比较；源码文件摘要不能代替运行代码摘要。 原公共索赔入口、原等待helper和实际_handle_interfaces_and_claims函数体分别固定，避免只核包装函数。 此声明仅核代码；闭包、实例状态与partial参数仍由宿主明确配置和版本化。旧v1/v2配置不自动升级、重放或转换为已验证，新版本仍待集中业务验证。

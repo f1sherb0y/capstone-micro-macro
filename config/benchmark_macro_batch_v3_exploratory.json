@@ -1,0 +1,27 @@
+{
+  "schema_version": "benchmark-macro-batch.v3",
+  "batch_id": "benchmark-macro-v3-exploratory-20261101",
+  "template": "config/case_library_lifecycle_v3_exploratory.json",
+  "source_directory": "data/test_sources/casebank_enterprise_matched",
+  "first_phase_case_ids": [
+    "CASE-0001",
+    "CASE-0003",
+    "CASE-0005",
+    "CASE-0006",
+    "CASE-0007",
+    "CASE-0010",
+    "CASE-0012",
+    "CASE-0014",
+    "CASE-0019"
+  ],
+  "benchmark_role": "施工/总承包",
+  "scope": "Nine supported Macau DBB cases. New versioned batch; no changes to retained October results. No outcome fields enter retrieval or ranking.",
+  "checkpoint_unit": "case",
+  "model_scope": "A02 pricing only; public-text QS score proxy is a declared rule, not a model or capability estimate",
+  "max_paid_attempts_per_case": 14,
+  "metrics": [
+    1,
+    3,
+    5
+  ]
+}

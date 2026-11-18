@@ -1,0 +1,112 @@
+{
+  "source_declaration": "independent_initial_professional_service_inputs",
+  "provider_organization_id": "finance-qs",
+  "currency": "HKD",
+  "fee_amount": {
+    "state": "known",
+    "value": "400000"
+  },
+  "qualified": {
+    "state": "known",
+    "value": true
+  },
+  "research_permitted": {
+    "state": "known",
+    "value": true
+  },
+  "supported_question_codes": {
+    "state": "known",
+    "value": [
+      "investment-feasibility"
+    ]
+  },
+  "minimum_fee_amount": {
+    "state": "known",
+    "value": "300000"
+  },
+  "payment_risk": {
+    "state": "known",
+    "value": "0.1"
+  },
+  "maximum_payment_risk": {
+    "state": "known",
+    "value": "0.5"
+  },
+  "new_work_policy": {
+    "state": "known",
+    "value": "evaluate"
+  },
+  "capacity_by_region": {
+    "Guangzhou": {
+      "state": "known",
+      "value": "2"
+    },
+    "Shenzhen": {
+      "state": "known",
+      "value": "2"
+    },
+    "Hong Kong": {
+      "state": "known",
+      "value": "2"
+    },
+    "Macau": {
+      "state": "known",
+      "value": "2"
+    },
+    "Zhuhai": {
+      "state": "known",
+      "value": "2"
+    },
+    "Foshan": {
+      "state": "known",
+      "value": "2"
+    },
+    "Dongguan": {
+      "state": "known",
+      "value": "2"
+    },
+    "Huizhou": {
+      "state": "known",
+      "value": "2"
+    },
+    "Zhongshan": {
+      "state": "known",
+      "value": "2"
+    },
+    "Jiangmen": {
+      "state": "known",
+      "value": "2"
+    },
+    "Zhaoqing": {
+      "state": "known",
+      "value": "2"
+    }
+  },
+  "resource_commitments": [
+    {
+      "commitment_id": "existing-hk-load",
+      "region_id": "Hong Kong",
+      "start_tick": 0,
+      "end_tick": 4,
+      "capacity": "0.25"
+    }
+  ],
+  "effort_amount": {
+    "state": "known",
+    "value": "0.5"
+  },
+  "effort_per_capacity_tick": "1",
+  "object_types": [
+    "building",
+    "infrastructure",
+    "industrial",
+    "public_facility",
+    "digital_smart"
+  ],
+  "service_code": "preliminary_feasibility_research",
+  "responsibility_code": "quantity_surveying_research",
+  "qualification_code": "independent-initial-research-qualification",
+  "available_until_tick": 100,
+  "conflict_status": "clear",
+  "conflict_codes": []
+}

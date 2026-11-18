@@ -1,0 +1,29 @@
+{
+  "skill_id": "CONTRACTOR-A09.scoped-change-claim",
+  "skill_version": "3",
+  "action_id": "CONTRACTOR-A09",
+  "role": "Contractor",
+  "status": "implemented",
+  "spec_source": "zwtnew/04_roles/04_roles/contractor.md",
+  "spec_source_sha256": "7b1175592c21601ddfa6aedb7859fe46e6bba3285502c285b483a502632f803e",
+  "skill_path": "skills/actions/contractor/CONTRACTOR-A09/SKILL.md",
+  "skill_sha256": "24ebd52d8c8382b1fb190c5a695cbba42f9032430fd910000f8b910d487a560e",
+  "input_schema_id": "role-contract.v1:CONTRACTOR-A09:input",
+  "output_schema_id": "role-contract.v1:CONTRACTOR-A09:payload",
+  "processor_id": "contractor.scoped_change_claim.v1",
+  "tool_ids": [],
+  "shared_refs": [
+    "skills/shared/decision-basics.md"
+  ],
+  "shared_sha256s": {
+    "skills/shared/decision-basics.md": "77da3d2fc1683068353888daccecfabe25278bf180b593747e39505fea987e60"
+  },
+  "prompt_sha256": "24ebd52d8c8382b1fb190c5a695cbba42f9032430fd910000f8b910d487a560e",
+  "method_refs": [
+    {
+      "kind": "Method",
+      "id": "micro.qs.sourced_change_valuation",
+      "version": "1"
+    }
+  ]
+}

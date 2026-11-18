@@ -1,0 +1,18 @@
+{
+  "schema_version": "professional-chain-acceptance.v1",
+  "run_id": "goal3c-professional-chain",
+  "bundle_options": {
+    "with_owner": true,
+    "with_confirmation": true,
+    "with_opportunity": true,
+    "with_feedback": true
+  },
+  "expected": {
+    "ticks": 2,
+    "projects": 2,
+    "intake_requests": 8,
+    "owner_decisions": 6,
+    "selected_private_confirmations": 5,
+    "private_feedback_actions": 13
+  }
+}

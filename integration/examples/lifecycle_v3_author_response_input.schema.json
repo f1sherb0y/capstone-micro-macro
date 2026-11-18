@@ -1,0 +1,294 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "V3 original reviewer opinion to independently authorized A08 author response",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "scenario_id",
+    "run_id",
+    "author_organization_id",
+    "source_mode",
+    "reviewer_opinion",
+    "request",
+    "configuration"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "lifecycle-v3-author-response-input.v1"
+    },
+    "scenario_id": {
+      "const": "V3"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "source_mode": {
+      "const": "formal"
+    },
+    "assembly_sources": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["author_input", "receipt"],
+      "description": "Original author input and actual opinion receipt retained and frozen by assembly; execution must consume the same receipt projection.",
+      "properties": {
+        "author_input": {"$ref": "#/$defs/assembly_source"},
+        "receipt": {"$ref": "#/$defs/assembly_source"}
+      }
+    },
+    "request": {
+      "type": "object",
+      "description": "Distinct formal A08 author invocation with complete independently received comments and author task. Completion can only be respond/propose_revision, never the original reviewer decision."
+    },
+    "configuration": {
+      "type": "object",
+      "description": "Architect RoleContractHostConfiguration with received_opinion_inputs selecting exactly reviewer_opinion.selection. Actual source reader/independent history/current/receipt mapping validators remain application-owned."
+    },
+    "author_organization_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "reviewer_opinion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "result_path",
+        "result_file_sha256",
+        "identity",
+        "record_sha256",
+        "result_sha256",
+        "reading_sha256",
+        "selection"
+      ],
+      "properties": {
+        "result_path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S",
+          "description": "Original formal role-contract Architect A08 review result.json, absolute or relative to this input file."
+        },
+        "result_file_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "identity": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "run_id",
+            "organization_id",
+            "role",
+            "action_id",
+            "request_id",
+            "purpose",
+            "input_sha256",
+            "context_sha256",
+            "versions"
+          ],
+          "properties": {
+            "run_id": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "organization_id": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "role": {
+              "const": "Architect"
+            },
+            "action_id": {
+              "const": "ARCHITECT-A08"
+            },
+            "request_id": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "purpose": {
+              "const": "action"
+            },
+            "input_sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "context_sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "versions": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "client",
+                "skill",
+                "prompt",
+                "contract",
+                "method",
+                "model",
+                "strategy"
+              ],
+              "properties": {
+                "client": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "skill": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "prompt": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "contract": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "method": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "model": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "strategy": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                }
+              }
+            }
+          }
+        },
+        "record_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "result_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "reading_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "selection": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "source_task_sha256",
+            "receipt_ref",
+            "native_evidence_ref",
+            "native_source_sha256",
+            "relation_evidence_refs"
+          ],
+          "properties": {
+            "source_task_sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "receipt_ref": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "kind",
+                "id",
+                "version"
+              ],
+              "properties": {
+                "kind": {
+                  "const": "ArchitectReviewOpinionReceipt"
+                },
+                "id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "version": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "native_evidence_ref": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "kind",
+                "id",
+                "version"
+              ],
+              "properties": {
+                "kind": {
+                  "const": "Evidence"
+                },
+                "id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "version": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "native_source_sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "relation_evidence_refs": {
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "kind",
+                  "id",
+                  "version"
+                ],
+                "properties": {
+                  "kind": {
+                    "const": "Evidence"
+                  },
+                  "id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "version": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "assembly_source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "file_sha256"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "file_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    }
+  }
+}

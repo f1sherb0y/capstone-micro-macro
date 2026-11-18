@@ -1,0 +1,25 @@
+{
+  "test_source_dir": "data/test_sources/casebank_enterprise_matched",
+  "run": {
+    "scope": "single",
+    "single_case_id": "CASE-0005",
+    "max_cases": 0
+  },
+  "default_case_id": "CASE-0005",
+  "batch_case_ids": [
+    "CASE-0001",
+    "CASE-0002",
+    "CASE-0003",
+    "CASE-0005"
+  ],
+  "candidate_pool": {
+    "max_companies": 30,
+    "role_targets": {
+      "designer": 6,
+      "supplier": 5,
+      "contractor": 9,
+      "supervisor": 8
+    },
+    "include_benchmark_companies": true
+  }
+}

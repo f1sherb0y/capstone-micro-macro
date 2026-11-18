@@ -1,0 +1,598 @@
+{
+  "$defs": {
+    "LifecycleActionRequirement": {
+      "additionalProperties": false,
+      "properties": {
+        "action_id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Action Id",
+          "type": "string"
+        },
+        "source_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Source Sha256",
+          "type": "string"
+        },
+        "required_choices": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Required Choices",
+          "type": "array"
+        },
+        "required_checks": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Required Checks",
+          "type": "array"
+        },
+        "fixture_candidates": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "title": "Fixture Candidates",
+          "type": "array"
+        }
+      },
+      "required": [
+        "action_id",
+        "source_sha256",
+        "required_choices",
+        "required_checks",
+        "fixture_candidates"
+      ],
+      "title": "LifecycleActionRequirement",
+      "type": "object"
+    },
+    "LifecycleChronologicalInputs": {
+      "additionalProperties": false,
+      "properties": {
+        "origin": {
+          "const": "synthetic",
+          "title": "Origin",
+          "type": "string"
+        },
+        "status": {
+          "const": "input_prepared_execution_pending",
+          "title": "Status",
+          "type": "string"
+        },
+        "production": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Production",
+          "type": "string"
+        },
+        "quality": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Quality",
+          "type": "string"
+        },
+        "logistics": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Logistics",
+          "type": "string"
+        },
+        "receiving": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Receiving",
+          "type": "string"
+        },
+        "quality_seed": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Quality Seed",
+          "type": "string"
+        },
+        "logistics_seed": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Logistics Seed",
+          "type": "string"
+        },
+        "material_seed": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Material Seed",
+          "type": "string"
+        },
+        "production_receipt_seed": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Production Receipt Seed",
+          "type": "string"
+        },
+        "timeline": {
+          "patternProperties": {
+            "\\S": {
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "propertyNames": {
+            "minLength": 1
+          },
+          "title": "Timeline",
+          "type": "object"
+        }
+      },
+      "required": [
+        "origin",
+        "status",
+        "production",
+        "quality",
+        "logistics",
+        "receiving",
+        "quality_seed",
+        "logistics_seed",
+        "material_seed",
+        "production_receipt_seed",
+        "timeline"
+      ],
+      "title": "LifecycleChronologicalInputs",
+      "type": "object"
+    },
+    "LifecycleEntryLink": {
+      "additionalProperties": false,
+      "properties": {
+        "module": {
+          "pattern": "^integration\\.[A-Za-z_][A-Za-z0-9_]*(\\.[A-Za-z_][A-Za-z0-9_]*)*$",
+          "title": "Module",
+          "type": "string"
+        },
+        "callable": {
+          "pattern": "^[A-Za-z_][A-Za-z0-9_]*$",
+          "title": "Callable",
+          "type": "string"
+        },
+        "status": {
+          "const": "implemented_unverified",
+          "title": "Status",
+          "type": "string"
+        },
+        "action_id": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Action Id"
+        },
+        "choice": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Choice"
+        },
+        "input": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Input"
+        },
+        "inputs": {
+          "patternProperties": {
+            "\\S": {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            }
+          },
+          "propertyNames": {
+            "minLength": 1
+          },
+          "title": "Inputs",
+          "type": "object"
+        },
+        "seed": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Seed"
+        },
+        "order_seed": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Order Seed"
+        },
+        "planning_seed": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Planning Seed"
+        },
+        "production_seed": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Production Seed"
+        },
+        "purchase_seed": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Purchase Seed"
+        },
+        "quality_seed": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Quality Seed"
+        },
+        "logistics_seed": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Logistics Seed"
+        },
+        "pending_production_input": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Pending Production Input"
+        },
+        "pending_purchase_input": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Pending Purchase Input"
+        },
+        "default_mode": {
+          "anyOf": [
+            {
+              "const": "plan_only",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Default Mode"
+        },
+        "mode": {
+          "anyOf": [
+            {
+              "enum": [
+                "configuration_only",
+                "binding_only"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Mode"
+        },
+        "seed_status": {
+          "anyOf": [
+            {
+              "const": "input_prepared_execution_pending",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Seed Status"
+        },
+        "requires": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "title": "Requires",
+          "type": "array"
+        },
+        "scope": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Scope"
+        }
+      },
+      "required": [
+        "module",
+        "callable",
+        "status"
+      ],
+      "title": "LifecycleEntryLink",
+      "type": "object"
+    },
+    "LifecycleScenario": {
+      "additionalProperties": false,
+      "properties": {
+        "scenario_id": {
+          "enum": [
+            "V1",
+            "V2",
+            "V3",
+            "V4",
+            "V5",
+            "V6",
+            "V7"
+          ],
+          "title": "Scenario Id",
+          "type": "string"
+        },
+        "title": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Title",
+          "type": "string"
+        },
+        "requirements": {
+          "items": {
+            "$ref": "#/$defs/LifecycleActionRequirement"
+          },
+          "minItems": 1,
+          "title": "Requirements",
+          "type": "array"
+        },
+        "acceptance_behaviors": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Acceptance Behaviors",
+          "type": "array"
+        },
+        "input_cases": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "title": "Input Cases",
+          "type": "array"
+        },
+        "limitations": {
+          "title": "Limitations",
+          "type": "string"
+        },
+        "entry_links": {
+          "patternProperties": {
+            "\\S": {
+              "$ref": "#/$defs/LifecycleEntryLink"
+            }
+          },
+          "propertyNames": {
+            "minLength": 1
+          },
+          "title": "Entry Links",
+          "type": "object"
+        },
+        "source_links": {
+          "patternProperties": {
+            "\\S": {
+              "$ref": "#/$defs/LifecycleSourceLink"
+            }
+          },
+          "propertyNames": {
+            "minLength": 1
+          },
+          "title": "Source Links",
+          "type": "object"
+        },
+        "connection_seeds": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "title": "Connection Seeds",
+          "type": "array"
+        },
+        "chronological_input_set": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/LifecycleChronologicalInputs"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "scenario_id",
+        "title",
+        "requirements",
+        "acceptance_behaviors",
+        "limitations"
+      ],
+      "title": "LifecycleScenario",
+      "type": "object"
+    },
+    "LifecycleSourceLink": {
+      "additionalProperties": false,
+      "properties": {
+        "factory": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Factory",
+          "type": "string"
+        },
+        "version": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Version",
+          "type": "string"
+        },
+        "status": {
+          "const": "implemented_unverified",
+          "title": "Status",
+          "type": "string"
+        },
+        "requires": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "title": "Requires",
+          "type": "array"
+        }
+      },
+      "required": [
+        "factory",
+        "version",
+        "status"
+      ],
+      "title": "LifecycleSourceLink",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "plan-lifecycle-scenarios.v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "status": {
+      "const": "configured_unverified",
+      "title": "Status",
+      "type": "string"
+    },
+    "scenarios": {
+      "items": {
+        "$ref": "#/$defs/LifecycleScenario"
+      },
+      "maxItems": 7,
+      "minItems": 7,
+      "title": "Scenarios",
+      "type": "array"
+    }
+  },
+  "required": [
+    "schema_version",
+    "status",
+    "scenarios"
+  ],
+  "title": "LifecycleScenarioCatalogue",
+  "type": "object"
+}

@@ -1,0 +1,27 @@
+{
+  "skill_id": "GOV-A08.scoped-permit-conditions",
+  "skill_version": "1",
+  "action_id": "GOV-A08",
+  "role": "Government",
+  "status": "implemented",
+  "spec_source": "zwtnew/04_roles/04_roles/government.md",
+  "spec_source_sha256": "6537100fbde0572ae49d557969df531ffe40ee74c010ee442f59f75da0a1f3de",
+  "skill_path": "skills/actions/government/GOV-A08/SKILL.md",
+  "skill_sha256": "33d182e9097ebdb756d74b776aedd21bba08e758194b83b2f2286b2defe23cf9",
+  "input_schema_id": "role-contract.v1:GOV-A08:input",
+  "output_schema_id": "role-contract.v1:GOV-A08:payload",
+  "processor_id": "government.scoped_permit_conditions.v1",
+  "tool_ids": [],
+  "shared_refs": [
+    "skills/shared/decision-basics.md"
+  ],
+  "shared_sha256s": {"skills/shared/decision-basics.md": "77da3d2fc1683068353888daccecfabe25278bf180b593747e39505fea987e60"},
+  "prompt_sha256": "33d182e9097ebdb756d74b776aedd21bba08e758194b83b2f2286b2defe23cf9",
+  "method_refs": [
+    {
+      "kind": "Method",
+      "id": "micro.government.declared_rule_check",
+      "version": "1"
+    }
+  ]
+}

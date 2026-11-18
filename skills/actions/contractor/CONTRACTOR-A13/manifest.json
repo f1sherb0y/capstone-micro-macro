@@ -1,0 +1,27 @@
+{
+  "skill_id": "CONTRACTOR-A13.finite-constructability-advice",
+  "skill_version": "1",
+  "action_id": "CONTRACTOR-A13",
+  "role": "Contractor",
+  "status": "implemented",
+  "spec_source": "zwtnew/04_roles/04_roles/contractor.md",
+  "spec_source_sha256": "7b1175592c21601ddfa6aedb7859fe46e6bba3285502c285b483a502632f803e",
+  "skill_path": "skills/actions/contractor/CONTRACTOR-A13/SKILL.md",
+  "skill_sha256": "8d1564e887e6c1610e86bf394b6e4bb26172e6d8bb8901613b934160a4cb1cfa",
+  "input_schema_id": "role-contract.v1:CONTRACTOR-A13:input",
+  "output_schema_id": "role-contract.v1:CONTRACTOR-A13:payload",
+  "processor_id": "contractor.finite_constructability_advice.v1",
+  "tool_ids": [],
+  "shared_refs": [
+    "skills/shared/decision-basics.md"
+  ],
+  "shared_sha256s": {"skills/shared/decision-basics.md": "77da3d2fc1683068353888daccecfabe25278bf180b593747e39505fea987e60"},
+  "prompt_sha256": "8d1564e887e6c1610e86bf394b6e4bb26172e6d8bb8901613b934160a4cb1cfa",
+  "method_refs": [
+    {
+      "kind": "Method",
+      "id": "micro.contractor.declared_duration_bounds",
+      "version": "1"
+    }
+  ]
+}

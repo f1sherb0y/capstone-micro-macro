@@ -1,0 +1,9 @@
+{
+  "schema_version": "owner-monthly-pipeline-chain.v1",
+  "run_id": "goal3i-owner-pipeline",
+  "ticks": 2,
+  "scenarios": {
+    "review_after_one": {"maximum_prior_screens_before_portfolio_review": 1},
+    "review_after_two": {"maximum_prior_screens_before_portfolio_review": 2}
+  }
+}

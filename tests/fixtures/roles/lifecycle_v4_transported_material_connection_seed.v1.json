@@ -1,0 +1,2675 @@
+{
+  "schema_version": "lifecycle-v4-material-connection-seed.v1",
+  "scenario_id": "V4",
+  "origin": "synthetic",
+  "status": "awaiting_original_supplier_result",
+  "supplier_input_path": "tests/fixtures/roles/lifecycle_v4_supplier_transported_receiving_inputs.v1.json",
+  "supplier_input_sha256": "0221095a6f37bb9484819ea3eb244922b8710c5045d4fcc241d4d3845ccdbc3d",
+  "contractor": {
+    "run_id": "synthetic-v4-material-connection",
+    "contractor_organization_id": "buyer-contractor-org",
+    "request": {
+      "schema_version": "role-contract-invocation.v1",
+      "context": {
+        "run_id": "synthetic-v4-material-connection",
+        "actor_id": "buyer-contractor-actor",
+        "function_ref": {
+          "kind": "FunctionAssignment",
+          "id": "buyer-receiving-function",
+          "version": "1"
+        },
+        "authorization_refs": [
+          {
+            "kind": "Authorization",
+            "id": "buyer-receiving-grant",
+            "version": "1"
+          }
+        ],
+        "operation_id": "v4-contractor-execution-1",
+        "contract_ref": {
+          "kind": "ActionContract",
+          "id": "CONTRACTOR-A07",
+          "version": "1"
+        },
+        "task_ref": {
+          "kind": "DecisionTask",
+          "id": "v4-contractor-execution-1-task",
+          "version": "1"
+        },
+        "scope": {
+          "kind": "project",
+          "ref": {
+            "kind": "Project",
+            "id": "buyer-project",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "receiving-line-1",
+              "version": "1"
+            }
+          ]
+        },
+        "business_time": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "synthetic-clock",
+            "version": "1"
+          },
+          "offset": 9
+        },
+        "read_token": "synthetic-v4-material-connection:contractor:read:1",
+        "visible_refs": [
+          {
+            "kind": "Task",
+            "id": "installation-task",
+            "version": "1"
+          },
+          {
+            "kind": "WorkExecutionProfile",
+            "id": "installation-profile",
+            "version": "1"
+          },
+          {
+            "kind": "Contract",
+            "id": "construction-mandate",
+            "version": "1"
+          },
+          {
+            "kind": "ActionDefinition",
+            "id": "panel-installation",
+            "version": "1"
+          },
+          {
+            "kind": "TaskRelease",
+            "id": "installation-release",
+            "version": "1"
+          },
+          {
+            "kind": "ExecutionGateSnapshot",
+            "id": "installation-gate",
+            "version": "1"
+          },
+          {
+            "kind": "Requirement",
+            "id": "installation-gate-requirement",
+            "version": "1"
+          },
+          {
+            "kind": "WorkMethod",
+            "id": "synthetic-installation",
+            "version": "1"
+          },
+          {
+            "kind": "ProductionRule",
+            "id": "synthetic-work-consequence",
+            "version": "1"
+          },
+          {
+            "kind": "ResourcePool",
+            "id": "installation-crew",
+            "version": "1"
+          },
+          {
+            "kind": "ResourceAllocation",
+            "id": "crew-allocation",
+            "version": "1"
+          },
+          {
+            "kind": "ReadinessAllocationFact",
+            "id": "crew-reservation",
+            "version": "1"
+          },
+          {
+            "kind": "InventoryPosition",
+            "id": "usable-panels",
+            "version": "1"
+          },
+          {
+            "kind": "MaterialBatch",
+            "id": "usable-panel-batch",
+            "version": "1"
+          },
+          {
+            "kind": "InventoryAllocation",
+            "id": "panel-task-allocation",
+            "version": "1"
+          },
+          {
+            "kind": "TimeWindow",
+            "id": "installation-window",
+            "version": "1"
+          },
+          {
+            "kind": "Evidence",
+            "id": "synthetic-work-basis",
+            "version": "1"
+          },
+          {
+            "kind": "Evidence",
+            "id": "synthetic-input-observation",
+            "version": "1"
+          },
+          {
+            "kind": "ClockProfile",
+            "id": "synthetic-clock",
+            "version": "1"
+          },
+          {
+            "kind": "Project",
+            "id": "buyer-project",
+            "version": "1"
+          },
+          {
+            "kind": "WorkScope",
+            "id": "receiving-line-1",
+            "version": "1"
+          },
+          {
+            "kind": "FunctionAssignment",
+            "id": "buyer-receiving-function",
+            "version": "1"
+          },
+          {
+            "kind": "CandidateSet",
+            "id": "v4-contractor-execution-candidates",
+            "version": "1"
+          },
+          {
+            "kind": "Authorization",
+            "id": "buyer-receiving-grant",
+            "version": "1"
+          },
+          {
+            "kind": "Evidence",
+            "id": "synthetic-receiver-stock-mapping",
+            "version": "1"
+          },
+          {
+            "kind": "ReceivedMaterialBasis",
+            "id": "two-panel-receiver-stock-basis",
+            "version": "1"
+          }
+        ],
+        "candidate_set_ref": {
+          "kind": "CandidateSet",
+          "id": "v4-contractor-execution-candidates",
+          "version": "1"
+        },
+        "execution_mode": "offline_fixture"
+      },
+      "action_input": {
+        "scope_ref": {
+          "kind": "project",
+          "ref": {
+            "kind": "Project",
+            "id": "buyer-project",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "receiving-line-1",
+              "version": "1"
+            }
+          ]
+        },
+        "execution_context": {
+          "kind": "ready",
+          "task_ref": {
+            "kind": "Task",
+            "id": "installation-task",
+            "version": "1"
+          },
+          "release_ref": {
+            "kind": "TaskRelease",
+            "id": "installation-release",
+            "version": "1"
+          },
+          "work_method_ref": {
+            "kind": "WorkMethod",
+            "id": "synthetic-installation",
+            "version": "1"
+          },
+          "available_input_refs": [
+            {
+              "kind": "ResourceAllocation",
+              "id": "crew-allocation",
+              "version": "1"
+            }
+          ],
+          "inventory_refs": [
+            {
+              "kind": "InventoryPosition",
+              "id": "usable-panels",
+              "version": "1"
+            }
+          ],
+          "condition_refs": [],
+          "execution_window_ref": {
+            "kind": "TimeWindow",
+            "id": "installation-window",
+            "version": "1"
+          },
+          "prior_execution_refs": []
+        }
+      },
+      "execution_path": "deterministic"
+    },
+    "configuration": {
+      "schema_version": "role-contract-host-config.v1",
+      "host_id": "v4-contractor-material-connected",
+      "version": "1",
+      "settings": {
+        "action_id": "CONTRACTOR-A07",
+        "source_factory": "integration.contractor_execution_fixture_sources:build_sources",
+        "source_version": "configured-contractor-execution-fixture-sources.v1",
+        "macro_version": "synthetic-v4-material-connection.v1",
+        "client_version": "role-contract-contractor-execution-fixture.v1",
+        "policy_version": "role-contract-contractor-execution-fixture.v1",
+        "model_version": "offline-fixture-no-model.v1",
+        "source_settings": {
+          "action_id": "CONTRACTOR-A07",
+          "source_note": "Independent synthetic Contractor receiver maps only the two inspected/use-released panels into accepted stock; provenance awaits actual saved Supplier A09 result.",
+          "journal_path": "output/integration/v4_contractor_transported_material_pending_01/journal.sqlite",
+          "organization_snapshot": {
+            "schema_version": "organization.v2",
+            "run_id": "synthetic-v4-material-connection",
+            "organizations": [
+              {
+                "organization_id": "buyer-contractor-org",
+                "actor_id": "buyer-contractor-actor",
+                "source_ids": [
+                  "synthetic:v4-material-connection:buyer-contractor-org"
+                ],
+                "public_description": "Synthetic Contractor input participant.",
+                "public_location": {
+                  "state": "unknown",
+                  "reason_code": "synthetic_unsupplied",
+                  "missing_refs": []
+                },
+                "members": [],
+                "assignments": [
+                  {
+                    "role": "Contractor",
+                    "function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "buyer-receiving-function",
+                      "version": "1"
+                    },
+                    "configuration_version": "1",
+                    "basis_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "synthetic-work-basis",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                ],
+                "evidence_refs": [
+                  {
+                    "kind": "Evidence",
+                    "id": "synthetic-work-basis",
+                    "version": "1"
+                  }
+                ]
+              }
+            ],
+            "authorizations": [
+              {
+                "ref": {
+                  "kind": "Authorization",
+                  "id": "buyer-receiving-grant",
+                  "version": "1"
+                },
+                "organization_id": "buyer-contractor-org",
+                "actor_id": "buyer-contractor-actor",
+                "function_ref": {
+                  "kind": "FunctionAssignment",
+                  "id": "buyer-receiving-function",
+                  "version": "1"
+                },
+                "action_ids": [
+                  "CONTRACTOR-A07"
+                ],
+                "scopes": [
+                  {
+                    "kind": "project",
+                    "ref": {
+                      "kind": "Project",
+                      "id": "buyer-project",
+                      "version": "1"
+                    },
+                    "coverage_refs": [
+                      {
+                        "kind": "WorkScope",
+                        "id": "receiving-line-1",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                ],
+                "readable_refs": [
+                  {
+                    "kind": "Task",
+                    "id": "installation-task",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "WorkExecutionProfile",
+                    "id": "installation-profile",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "Contract",
+                    "id": "construction-mandate",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "ActionDefinition",
+                    "id": "panel-installation",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "TaskRelease",
+                    "id": "installation-release",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "ExecutionGateSnapshot",
+                    "id": "installation-gate",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "Requirement",
+                    "id": "installation-gate-requirement",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "WorkMethod",
+                    "id": "synthetic-installation",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "ProductionRule",
+                    "id": "synthetic-work-consequence",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "ResourcePool",
+                    "id": "installation-crew",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "ResourceAllocation",
+                    "id": "crew-allocation",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "ReadinessAllocationFact",
+                    "id": "crew-reservation",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "InventoryPosition",
+                    "id": "usable-panels",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "MaterialBatch",
+                    "id": "usable-panel-batch",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "InventoryAllocation",
+                    "id": "panel-task-allocation",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "TimeWindow",
+                    "id": "installation-window",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "Evidence",
+                    "id": "synthetic-work-basis",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "Evidence",
+                    "id": "synthetic-input-observation",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "ClockProfile",
+                    "id": "synthetic-clock",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "Project",
+                    "id": "buyer-project",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "WorkScope",
+                    "id": "receiving-line-1",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "FunctionAssignment",
+                    "id": "buyer-receiving-function",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "CandidateSet",
+                    "id": "v4-contractor-execution-candidates",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "Authorization",
+                    "id": "buyer-receiving-grant",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "Evidence",
+                    "id": "synthetic-receiver-stock-mapping",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "ReceivedMaterialBasis",
+                    "id": "two-panel-receiver-stock-basis",
+                    "version": "1"
+                  }
+                ],
+                "tool_ids": [],
+                "validity": {
+                  "start": {
+                    "clock_ref": {
+                      "kind": "ClockProfile",
+                      "id": "synthetic-clock",
+                      "version": "1"
+                    },
+                    "offset": 0
+                  },
+                  "end": {
+                    "clock_ref": {
+                      "kind": "ClockProfile",
+                      "id": "synthetic-clock",
+                      "version": "1"
+                    },
+                    "offset": 20
+                  },
+                  "bounds": "closed_open"
+                },
+                "basis_refs": [
+                  {
+                    "kind": "Evidence",
+                    "id": "synthetic-work-basis",
+                    "version": "1"
+                  }
+                ]
+              }
+            ],
+            "inactive_authorization_refs": []
+          },
+          "source_projection": {
+            "run_id": "synthetic-v4-material-connection",
+            "macro_version": "synthetic-v4-material-connection.v1",
+            "state_version": "synthetic-v4-material-connection-contractor.v1",
+            "read_token": "synthetic-v4-material-connection:contractor:read:1",
+            "business_time": {
+              "clock_ref": {
+                "kind": "ClockProfile",
+                "id": "synthetic-clock",
+                "version": "1"
+              },
+              "offset": 9
+            },
+            "organization_id": "buyer-contractor-org",
+            "objects": [
+              {
+                "ref": {
+                  "kind": "Task",
+                  "id": "installation-task",
+                  "version": "1"
+                },
+                "value": {
+                  "ref": {
+                    "kind": "Task",
+                    "id": "installation-task",
+                    "version": "1"
+                  },
+                  "evidence_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-work-basis",
+                      "version": "1"
+                    }
+                  ],
+                  "scope": {
+                    "kind": "project",
+                    "ref": {
+                      "kind": "Project",
+                      "id": "buyer-project",
+                      "version": "1"
+                    },
+                    "coverage_refs": [
+                      {
+                        "kind": "WorkScope",
+                        "id": "receiving-line-1",
+                        "version": "1"
+                      }
+                    ]
+                  },
+                  "available_at": {
+                    "clock_ref": {
+                      "kind": "ClockProfile",
+                      "id": "synthetic-clock",
+                      "version": "1"
+                    },
+                    "offset": 9
+                  },
+                  "effective_window": {
+                    "start": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 0
+                    },
+                    "end": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 20
+                    },
+                    "bounds": "closed_open"
+                  },
+                  "organization_id": "buyer-contractor-org",
+                  "mandate_ref": {
+                    "kind": "Contract",
+                    "id": "construction-mandate",
+                    "version": "1"
+                  },
+                  "purpose": "construction",
+                  "action_ref": {
+                    "kind": "ActionDefinition",
+                    "id": "panel-installation",
+                    "version": "1"
+                  },
+                  "readiness_profile_ref": {
+                    "kind": "ReadinessProfile",
+                    "id": "source-readiness",
+                    "version": "1"
+                  },
+                  "requirement_refs": [
+                    {
+                      "kind": "Requirement",
+                      "id": "installation-gate-requirement",
+                      "version": "1"
+                    }
+                  ],
+                  "predecessor_task_refs": [],
+                  "execution_window": {
+                    "start": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 8
+                    },
+                    "end": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 10
+                    },
+                    "bounds": "closed_open"
+                  },
+                  "state": "released",
+                  "history_coverage": "complete",
+                  "as_of": {
+                    "clock_ref": {
+                      "kind": "ClockProfile",
+                      "id": "synthetic-clock",
+                      "version": "1"
+                    },
+                    "offset": 9
+                  },
+                  "work_method_ref": {
+                    "kind": "WorkMethod",
+                    "id": "synthetic-installation",
+                    "version": "1"
+                  },
+                  "execution_profile_ref": {
+                    "kind": "WorkExecutionProfile",
+                    "id": "installation-profile",
+                    "version": "1"
+                  },
+                  "prior_execution_refs": [],
+                  "inventory_refs": [
+                    {
+                      "kind": "InventoryPosition",
+                      "id": "usable-panels",
+                      "version": "1"
+                    }
+                  ],
+                  "condition_refs": []
+                }
+              },
+              {
+                "ref": {
+                  "kind": "WorkExecutionProfile",
+                  "id": "installation-profile",
+                  "version": "1"
+                },
+                "value": {
+                  "ref": {
+                    "kind": "WorkExecutionProfile",
+                    "id": "installation-profile",
+                    "version": "1"
+                  },
+                  "evidence_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-work-basis",
+                      "version": "1"
+                    }
+                  ],
+                  "scope": {
+                    "kind": "project",
+                    "ref": {
+                      "kind": "Project",
+                      "id": "buyer-project",
+                      "version": "1"
+                    },
+                    "coverage_refs": [
+                      {
+                        "kind": "WorkScope",
+                        "id": "receiving-line-1",
+                        "version": "1"
+                      }
+                    ]
+                  },
+                  "available_at": {
+                    "clock_ref": {
+                      "kind": "ClockProfile",
+                      "id": "synthetic-clock",
+                      "version": "1"
+                    },
+                    "offset": 9
+                  },
+                  "effective_window": {
+                    "start": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 0
+                    },
+                    "end": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 20
+                    },
+                    "bounds": "closed_open"
+                  },
+                  "organization_id": "buyer-contractor-org",
+                  "task_ref": {
+                    "kind": "Task",
+                    "id": "installation-task",
+                    "version": "1"
+                  },
+                  "authority_ref": {
+                    "kind": "Authorization",
+                    "id": "buyer-receiving-grant",
+                    "version": "1"
+                  },
+                  "choice": "execute",
+                  "allocations": [
+                    {
+                      "resource_ref": {
+                        "kind": "ResourcePool",
+                        "id": "installation-crew",
+                        "version": "1"
+                      },
+                      "task_scope_ref": {
+                        "kind": "project",
+                        "ref": {
+                          "kind": "Project",
+                          "id": "buyer-project",
+                          "version": "1"
+                        },
+                        "coverage_refs": [
+                          {
+                            "kind": "WorkScope",
+                            "id": "receiving-line-1",
+                            "version": "1"
+                          }
+                        ]
+                      },
+                      "window_ref": {
+                        "kind": "TimeWindow",
+                        "id": "installation-window",
+                        "version": "1"
+                      },
+                      "quantity": {
+                        "value": "2",
+                        "unit": "crew-hour",
+                        "basis_ref": {
+                          "kind": "Evidence",
+                          "id": "synthetic-work-basis",
+                          "version": "1"
+                        }
+                      }
+                    }
+                  ],
+                  "materials": [
+                    {
+                      "batch_ref": {
+                        "kind": "MaterialBatch",
+                        "id": "usable-panel-batch",
+                        "version": "1"
+                      },
+                      "allocation_ref": {
+                        "kind": "InventoryAllocation",
+                        "id": "panel-task-allocation",
+                        "version": "1"
+                      },
+                      "quantity": {
+                        "value": "2",
+                        "unit": "panel",
+                        "basis_ref": {
+                          "kind": "Evidence",
+                          "id": "synthetic-work-basis",
+                          "version": "1"
+                        }
+                      },
+                      "task_ref": {
+                        "kind": "Task",
+                        "id": "installation-task",
+                        "version": "1"
+                      }
+                    }
+                  ],
+                  "reported_status": "working",
+                  "requested_requirement_refs": [],
+                  "note": "Request original two-panel inputs and exclusive crew allocation; no actual work or consumption is declared."
+                }
+              },
+              {
+                "ref": {
+                  "kind": "Contract",
+                  "id": "construction-mandate",
+                  "version": "1"
+                },
+                "value": {
+                  "ref": {
+                    "kind": "Contract",
+                    "id": "construction-mandate",
+                    "version": "1"
+                  },
+                  "evidence_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-work-basis",
+                      "version": "1"
+                    }
+                  ],
+                  "scope": {
+                    "kind": "project",
+                    "ref": {
+                      "kind": "Project",
+                      "id": "buyer-project",
+                      "version": "1"
+                    },
+                    "coverage_refs": [
+                      {
+                        "kind": "WorkScope",
+                        "id": "receiving-line-1",
+                        "version": "1"
+                      }
+                    ]
+                  },
+                  "available_at": {
+                    "clock_ref": {
+                      "kind": "ClockProfile",
+                      "id": "synthetic-clock",
+                      "version": "1"
+                    },
+                    "offset": 9
+                  },
+                  "effective_window": {
+                    "start": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 0
+                    },
+                    "end": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 20
+                    },
+                    "bounds": "closed_open"
+                  },
+                  "organization_id": "buyer-contractor-org",
+                  "mandate_kind": "contract",
+                  "effective": {
+                    "state": "known",
+                    "value": true
+                  },
+                  "planning_profile_ref": {
+                    "kind": "WorkPlanningProfile",
+                    "id": "source-plan",
+                    "version": "1"
+                  },
+                  "allowed_task_purposes": [
+                    "construction"
+                  ],
+                  "allow_quote": {
+                    "state": "known",
+                    "value": false
+                  },
+                  "allow_supply_acceptance": {
+                    "state": "known",
+                    "value": false
+                  },
+                  "procurement_limit": {
+                    "state": "unknown",
+                    "reason_code": "synthetic_unsupplied",
+                    "missing_refs": []
+                  },
+                  "procurement_used": {
+                    "state": "unknown",
+                    "reason_code": "synthetic_unsupplied",
+                    "missing_refs": []
+                  },
+                  "procurement_history_refs": [],
+                  "procurement_history_complete": true,
+                  "region_id": "synthetic-region",
+                  "object_type": "building",
+                  "work_type": "panel-installation",
+                  "special_condition_codes": [],
+                  "required_qualification_codes": [],
+                  "dependency_refs": [],
+                  "design_refs": [],
+                  "method_refs": [
+                    {
+                      "kind": "WorkMethod",
+                      "id": "synthetic-installation",
+                      "version": "1"
+                    }
+                  ]
+                }
+              },
+              {
+                "ref": {
+                  "kind": "ActionDefinition",
+                  "id": "panel-installation",
+                  "version": "1"
+                },
+                "value": {
+                  "ref": {
+                    "kind": "ActionDefinition",
+                    "id": "panel-installation",
+                    "version": "1"
+                  },
+                  "evidence_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-work-basis",
+                      "version": "1"
+                    }
+                  ],
+                  "scope": {
+                    "kind": "project",
+                    "ref": {
+                      "kind": "Project",
+                      "id": "buyer-project",
+                      "version": "1"
+                    },
+                    "coverage_refs": [
+                      {
+                        "kind": "WorkScope",
+                        "id": "receiving-line-1",
+                        "version": "1"
+                      }
+                    ]
+                  },
+                  "available_at": {
+                    "clock_ref": {
+                      "kind": "ClockProfile",
+                      "id": "synthetic-clock",
+                      "version": "1"
+                    },
+                    "offset": 9
+                  },
+                  "effective_window": {
+                    "start": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 0
+                    },
+                    "end": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 20
+                    },
+                    "bounds": "closed_open"
+                  },
+                  "mandate_ref": {
+                    "kind": "Contract",
+                    "id": "construction-mandate",
+                    "version": "1"
+                  },
+                  "purpose": "construction"
+                }
+              },
+              {
+                "ref": {
+                  "kind": "TaskRelease",
+                  "id": "installation-release",
+                  "version": "1"
+                },
+                "value": {
+                  "ref": {
+                    "kind": "TaskRelease",
+                    "id": "installation-release",
+                    "version": "1"
+                  },
+                  "evidence_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-work-basis",
+                      "version": "1"
+                    }
+                  ],
+                  "scope": {
+                    "kind": "project",
+                    "ref": {
+                      "kind": "Project",
+                      "id": "buyer-project",
+                      "version": "1"
+                    },
+                    "coverage_refs": [
+                      {
+                        "kind": "WorkScope",
+                        "id": "receiving-line-1",
+                        "version": "1"
+                      }
+                    ]
+                  },
+                  "available_at": {
+                    "clock_ref": {
+                      "kind": "ClockProfile",
+                      "id": "synthetic-clock",
+                      "version": "1"
+                    },
+                    "offset": 9
+                  },
+                  "effective_window": {
+                    "start": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 0
+                    },
+                    "end": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 20
+                    },
+                    "bounds": "closed_open"
+                  },
+                  "organization_id": "buyer-contractor-org",
+                  "task_ref": {
+                    "kind": "Task",
+                    "id": "installation-task",
+                    "version": "1"
+                  },
+                  "action_ref": {
+                    "kind": "ActionDefinition",
+                    "id": "panel-installation",
+                    "version": "1"
+                  },
+                  "work_method_ref": {
+                    "kind": "WorkMethod",
+                    "id": "synthetic-installation",
+                    "version": "1"
+                  },
+                  "current_gate_ref": {
+                    "kind": "ExecutionGateSnapshot",
+                    "id": "installation-gate",
+                    "version": "1"
+                  },
+                  "core_event_id": "synthetic-work-release-event",
+                  "status": "released"
+                }
+              },
+              {
+                "ref": {
+                  "kind": "ExecutionGateSnapshot",
+                  "id": "installation-gate",
+                  "version": "1"
+                },
+                "value": {
+                  "ref": {
+                    "kind": "ExecutionGateSnapshot",
+                    "id": "installation-gate",
+                    "version": "1"
+                  },
+                  "evidence_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-work-basis",
+                      "version": "1"
+                    }
+                  ],
+                  "scope": {
+                    "kind": "project",
+                    "ref": {
+                      "kind": "Project",
+                      "id": "buyer-project",
+                      "version": "1"
+                    },
+                    "coverage_refs": [
+                      {
+                        "kind": "WorkScope",
+                        "id": "receiving-line-1",
+                        "version": "1"
+                      }
+                    ]
+                  },
+                  "available_at": {
+                    "clock_ref": {
+                      "kind": "ClockProfile",
+                      "id": "synthetic-clock",
+                      "version": "1"
+                    },
+                    "offset": 9
+                  },
+                  "effective_window": {
+                    "start": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 0
+                    },
+                    "end": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 20
+                    },
+                    "bounds": "closed_open"
+                  },
+                  "task_ref": {
+                    "kind": "Task",
+                    "id": "installation-task",
+                    "version": "1"
+                  },
+                  "release_ref": {
+                    "kind": "TaskRelease",
+                    "id": "installation-release",
+                    "version": "1"
+                  },
+                  "requirement_refs": [
+                    {
+                      "kind": "Requirement",
+                      "id": "installation-gate-requirement",
+                      "version": "1"
+                    }
+                  ],
+                  "satisfied": {
+                    "state": "known",
+                    "value": true
+                  },
+                  "coverage": "complete",
+                  "as_of": {
+                    "clock_ref": {
+                      "kind": "ClockProfile",
+                      "id": "synthetic-clock",
+                      "version": "1"
+                    },
+                    "offset": 9
+                  },
+                  "producer": "core"
+                }
+              },
+              {
+                "ref": {
+                  "kind": "Requirement",
+                  "id": "installation-gate-requirement",
+                  "version": "1"
+                },
+                "value": {
+                  "ref": {
+                    "kind": "Requirement",
+                    "id": "installation-gate-requirement",
+                    "version": "1"
+                  },
+                  "evidence_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-work-basis",
+                      "version": "1"
+                    }
+                  ],
+                  "scope": {
+                    "kind": "project",
+                    "ref": {
+                      "kind": "Project",
+                      "id": "buyer-project",
+                      "version": "1"
+                    },
+                    "coverage_refs": [
+                      {
+                        "kind": "WorkScope",
+                        "id": "receiving-line-1",
+                        "version": "1"
+                      }
+                    ]
+                  },
+                  "available_at": {
+                    "clock_ref": {
+                      "kind": "ClockProfile",
+                      "id": "synthetic-clock",
+                      "version": "1"
+                    },
+                    "offset": 9
+                  },
+                  "effective_window": {
+                    "start": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 0
+                    },
+                    "end": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 20
+                    },
+                    "bounds": "closed_open"
+                  },
+                  "task_ref": {
+                    "kind": "Task",
+                    "id": "installation-task",
+                    "version": "1"
+                  },
+                  "responsible": {
+                    "state": "unknown",
+                    "reason_code": "synthetic_unsupplied",
+                    "missing_refs": []
+                  },
+                  "disposition": "investigate"
+                }
+              },
+              {
+                "ref": {
+                  "kind": "WorkMethod",
+                  "id": "synthetic-installation",
+                  "version": "1"
+                },
+                "value": {
+                  "ref": {
+                    "kind": "WorkMethod",
+                    "id": "synthetic-installation",
+                    "version": "1"
+                  },
+                  "evidence_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-work-basis",
+                      "version": "1"
+                    }
+                  ],
+                  "scope": {
+                    "kind": "project",
+                    "ref": {
+                      "kind": "Project",
+                      "id": "buyer-project",
+                      "version": "1"
+                    },
+                    "coverage_refs": [
+                      {
+                        "kind": "WorkScope",
+                        "id": "receiving-line-1",
+                        "version": "1"
+                      }
+                    ]
+                  },
+                  "available_at": {
+                    "clock_ref": {
+                      "kind": "ClockProfile",
+                      "id": "synthetic-clock",
+                      "version": "1"
+                    },
+                    "offset": 9
+                  },
+                  "effective_window": {
+                    "start": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 0
+                    },
+                    "end": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 20
+                    },
+                    "bounds": "closed_open"
+                  },
+                  "region_ids": [
+                    "synthetic-region"
+                  ],
+                  "object_types": [
+                    "building"
+                  ],
+                  "work_types": [
+                    "panel-installation"
+                  ],
+                  "special_condition_codes": [],
+                  "quantity_unit": "panel",
+                  "capacity_unit": "crew-hour",
+                  "resource_kind": "crew",
+                  "quantity_per_capacity_tick": {
+                    "state": "known",
+                    "value": "1"
+                  },
+                  "productivity_basis_ref": {
+                    "kind": "Evidence",
+                    "id": "synthetic-work-basis",
+                    "version": "1"
+                  },
+                  "output_quantity_basis_refs": [],
+                  "minimum_resource_quantity": {
+                    "value": "1",
+                    "unit": "crew-hour",
+                    "basis_ref": {
+                      "kind": "Evidence",
+                      "id": "synthetic-work-basis",
+                      "version": "1"
+                    }
+                  },
+                  "minimum_material_quantity": {
+                    "value": "1",
+                    "unit": "panel",
+                    "basis_ref": {
+                      "kind": "Evidence",
+                      "id": "synthetic-work-basis",
+                      "version": "1"
+                    }
+                  },
+                  "material_product_ref": {
+                    "kind": "ProductSpecification",
+                    "id": "panel-spec",
+                    "version": "1"
+                  },
+                  "required_condition_codes": [],
+                  "accelerated": false,
+                  "consequence_rule_ref": {
+                    "kind": "ProductionRule",
+                    "id": "synthetic-work-consequence",
+                    "version": "1"
+                  }
+                }
+              },
+              {
+                "ref": {
+                  "kind": "ProductionRule",
+                  "id": "synthetic-work-consequence",
+                  "version": "1"
+                },
+                "value": {
+                  "ref": {
+                    "kind": "ProductionRule",
+                    "id": "synthetic-work-consequence",
+                    "version": "1"
+                  },
+                  "evidence_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-work-basis",
+                      "version": "1"
+                    }
+                  ],
+                  "scope": {
+                    "kind": "project",
+                    "ref": {
+                      "kind": "Project",
+                      "id": "buyer-project",
+                      "version": "1"
+                    },
+                    "coverage_refs": [
+                      {
+                        "kind": "WorkScope",
+                        "id": "receiving-line-1",
+                        "version": "1"
+                      }
+                    ]
+                  },
+                  "available_at": {
+                    "clock_ref": {
+                      "kind": "ClockProfile",
+                      "id": "synthetic-clock",
+                      "version": "1"
+                    },
+                    "offset": 9
+                  },
+                  "effective_window": {
+                    "start": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 0
+                    },
+                    "end": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 20
+                    },
+                    "bounds": "closed_open"
+                  },
+                  "work_method_ref": {
+                    "kind": "WorkMethod",
+                    "id": "synthetic-installation",
+                    "version": "1"
+                  },
+                  "supported": {
+                    "state": "known",
+                    "value": true
+                  },
+                  "acceleration_modeled": {
+                    "state": "known",
+                    "value": false
+                  },
+                  "throughput_basis_ref": {
+                    "kind": "Evidence",
+                    "id": "synthetic-work-basis",
+                    "version": "1"
+                  },
+                  "cost_basis_ref": {
+                    "kind": "Evidence",
+                    "id": "synthetic-work-basis",
+                    "version": "1"
+                  },
+                  "quality_basis_ref": {
+                    "kind": "Evidence",
+                    "id": "synthetic-work-basis",
+                    "version": "1"
+                  }
+                }
+              },
+              {
+                "ref": {
+                  "kind": "ResourcePool",
+                  "id": "installation-crew",
+                  "version": "1"
+                },
+                "value": {
+                  "ref": {
+                    "kind": "ResourcePool",
+                    "id": "installation-crew",
+                    "version": "1"
+                  },
+                  "evidence_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-work-basis",
+                      "version": "1"
+                    }
+                  ],
+                  "scope": {
+                    "kind": "project",
+                    "ref": {
+                      "kind": "Project",
+                      "id": "buyer-project",
+                      "version": "1"
+                    },
+                    "coverage_refs": [
+                      {
+                        "kind": "WorkScope",
+                        "id": "receiving-line-1",
+                        "version": "1"
+                      }
+                    ]
+                  },
+                  "available_at": {
+                    "clock_ref": {
+                      "kind": "ClockProfile",
+                      "id": "synthetic-clock",
+                      "version": "1"
+                    },
+                    "offset": 9
+                  },
+                  "effective_window": {
+                    "start": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 0
+                    },
+                    "end": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 20
+                    },
+                    "bounds": "closed_open"
+                  },
+                  "organization_id": "buyer-contractor-org",
+                  "actual_available": {
+                    "state": "known",
+                    "value": {
+                      "value": "2",
+                      "unit": "crew-hour",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "synthetic-input-observation",
+                        "version": "1"
+                      }
+                    }
+                  },
+                  "allocations": [
+                    {
+                      "kind": "ReadinessAllocationFact",
+                      "id": "crew-reservation",
+                      "version": "1"
+                    }
+                  ],
+                  "accepted": {
+                    "state": "known",
+                    "value": true
+                  },
+                  "history_coverage": "complete",
+                  "as_of": {
+                    "clock_ref": {
+                      "kind": "ClockProfile",
+                      "id": "synthetic-clock",
+                      "version": "1"
+                    },
+                    "offset": 9
+                  },
+                  "region_id": "synthetic-region",
+                  "resource_kind": "crew",
+                  "actually_present": {
+                    "state": "known",
+                    "value": true
+                  }
+                }
+              },
+              {
+                "ref": {
+                  "kind": "ResourceAllocation",
+                  "id": "crew-allocation",
+                  "version": "1"
+                },
+                "value": {
+                  "ref": {
+                    "kind": "ResourceAllocation",
+                    "id": "crew-allocation",
+                    "version": "1"
+                  },
+                  "evidence_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-work-basis",
+                      "version": "1"
+                    }
+                  ],
+                  "scope": {
+                    "kind": "project",
+                    "ref": {
+                      "kind": "Project",
+                      "id": "buyer-project",
+                      "version": "1"
+                    },
+                    "coverage_refs": [
+                      {
+                        "kind": "WorkScope",
+                        "id": "receiving-line-1",
+                        "version": "1"
+                      }
+                    ]
+                  },
+                  "available_at": {
+                    "clock_ref": {
+                      "kind": "ClockProfile",
+                      "id": "synthetic-clock",
+                      "version": "1"
+                    },
+                    "offset": 9
+                  },
+                  "effective_window": {
+                    "start": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 0
+                    },
+                    "end": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 20
+                    },
+                    "bounds": "closed_open"
+                  },
+                  "task_ref": {
+                    "kind": "Task",
+                    "id": "installation-task",
+                    "version": "1"
+                  },
+                  "organization_id": "buyer-contractor-org",
+                  "resource_ref": {
+                    "kind": "ResourcePool",
+                    "id": "installation-crew",
+                    "version": "1"
+                  },
+                  "resource_kind": "resource",
+                  "commitment_ref": {
+                    "kind": "ReadinessAllocationFact",
+                    "id": "crew-reservation",
+                    "version": "1"
+                  },
+                  "quantity": {
+                    "value": "2",
+                    "unit": "crew-hour",
+                    "basis_ref": {
+                      "kind": "Evidence",
+                      "id": "synthetic-work-basis",
+                      "version": "1"
+                    }
+                  },
+                  "execution_window": {
+                    "start": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 8
+                    },
+                    "end": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 10
+                    },
+                    "bounds": "closed_open"
+                  },
+                  "status": "reserved",
+                  "as_of": {
+                    "clock_ref": {
+                      "kind": "ClockProfile",
+                      "id": "synthetic-clock",
+                      "version": "1"
+                    },
+                    "offset": 9
+                  }
+                }
+              },
+              {
+                "ref": {
+                  "kind": "ReadinessAllocationFact",
+                  "id": "crew-reservation",
+                  "version": "1"
+                },
+                "value": {
+                  "ref": {
+                    "kind": "ReadinessAllocationFact",
+                    "id": "crew-reservation",
+                    "version": "1"
+                  },
+                  "evidence_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-work-basis",
+                      "version": "1"
+                    }
+                  ],
+                  "scope": {
+                    "kind": "project",
+                    "ref": {
+                      "kind": "Project",
+                      "id": "buyer-project",
+                      "version": "1"
+                    },
+                    "coverage_refs": [
+                      {
+                        "kind": "WorkScope",
+                        "id": "receiving-line-1",
+                        "version": "1"
+                      }
+                    ]
+                  },
+                  "available_at": {
+                    "clock_ref": {
+                      "kind": "ClockProfile",
+                      "id": "synthetic-clock",
+                      "version": "1"
+                    },
+                    "offset": 9
+                  },
+                  "effective_window": {
+                    "start": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 0
+                    },
+                    "end": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 20
+                    },
+                    "bounds": "closed_open"
+                  },
+                  "resource_ref": {
+                    "kind": "ResourcePool",
+                    "id": "installation-crew",
+                    "version": "1"
+                  },
+                  "task_ref": {
+                    "kind": "Task",
+                    "id": "installation-task",
+                    "version": "1"
+                  },
+                  "allocation_ref": {
+                    "kind": "ResourceAllocation",
+                    "id": "crew-allocation",
+                    "version": "1"
+                  },
+                  "quantity": {
+                    "value": "2",
+                    "unit": "crew-hour",
+                    "basis_ref": {
+                      "kind": "Evidence",
+                      "id": "synthetic-work-basis",
+                      "version": "1"
+                    }
+                  },
+                  "execution_window": {
+                    "start": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 8
+                    },
+                    "end": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 10
+                    },
+                    "bounds": "closed_open"
+                  },
+                  "core_event_id": "synthetic-crew-reservation-event",
+                  "status": "reserved"
+                }
+              },
+              {
+                "ref": {
+                  "kind": "InventoryPosition",
+                  "id": "usable-panels",
+                  "version": "1"
+                },
+                "value": {
+                  "ref": {
+                    "kind": "InventoryPosition",
+                    "id": "usable-panels",
+                    "version": "1"
+                  },
+                  "evidence_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-work-basis",
+                      "version": "1"
+                    }
+                  ],
+                  "scope": {
+                    "kind": "project",
+                    "ref": {
+                      "kind": "Project",
+                      "id": "buyer-project",
+                      "version": "1"
+                    },
+                    "coverage_refs": [
+                      {
+                        "kind": "WorkScope",
+                        "id": "receiving-line-1",
+                        "version": "1"
+                      }
+                    ]
+                  },
+                  "available_at": {
+                    "clock_ref": {
+                      "kind": "ClockProfile",
+                      "id": "synthetic-clock",
+                      "version": "1"
+                    },
+                    "offset": 9
+                  },
+                  "effective_window": {
+                    "start": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 0
+                    },
+                    "end": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 20
+                    },
+                    "bounds": "closed_open"
+                  },
+                  "organization_id": "buyer-contractor-org",
+                  "batch_ref": {
+                    "kind": "MaterialBatch",
+                    "id": "usable-panel-batch",
+                    "version": "1"
+                  },
+                  "product_ref": {
+                    "kind": "ProductSpecification",
+                    "id": "panel-spec",
+                    "version": "1"
+                  },
+                  "usable": {
+                    "state": "known",
+                    "value": {
+                      "value": "2",
+                      "unit": "panel",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "synthetic-input-observation",
+                        "version": "1"
+                      }
+                    }
+                  },
+                  "allocation_refs": [
+                    {
+                      "kind": "InventoryAllocation",
+                      "id": "panel-task-allocation",
+                      "version": "1"
+                    }
+                  ],
+                  "coverage": "complete",
+                  "as_of": {
+                    "clock_ref": {
+                      "kind": "ClockProfile",
+                      "id": "synthetic-clock",
+                      "version": "1"
+                    },
+                    "offset": 9
+                  }
+                }
+              },
+              {
+                "ref": {
+                  "kind": "MaterialBatch",
+                  "id": "usable-panel-batch",
+                  "version": "1"
+                },
+                "value": {
+                  "ref": {
+                    "kind": "MaterialBatch",
+                    "id": "usable-panel-batch",
+                    "version": "1"
+                  },
+                  "evidence_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-work-basis",
+                      "version": "1"
+                    }
+                  ],
+                  "scope": {
+                    "kind": "project",
+                    "ref": {
+                      "kind": "Project",
+                      "id": "buyer-project",
+                      "version": "1"
+                    },
+                    "coverage_refs": [
+                      {
+                        "kind": "WorkScope",
+                        "id": "receiving-line-1",
+                        "version": "1"
+                      }
+                    ]
+                  },
+                  "available_at": {
+                    "clock_ref": {
+                      "kind": "ClockProfile",
+                      "id": "synthetic-clock",
+                      "version": "1"
+                    },
+                    "offset": 9
+                  },
+                  "effective_window": {
+                    "start": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 0
+                    },
+                    "end": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 20
+                    },
+                    "bounds": "closed_open"
+                  },
+                  "organization_id": "buyer-contractor-org",
+                  "actual_available": {
+                    "state": "known",
+                    "value": {
+                      "value": "2",
+                      "unit": "panel",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "synthetic-input-observation",
+                        "version": "1"
+                      }
+                    }
+                  },
+                  "allocations": [],
+                  "accepted": {
+                    "state": "known",
+                    "value": true
+                  },
+                  "history_coverage": "complete",
+                  "as_of": {
+                    "clock_ref": {
+                      "kind": "ClockProfile",
+                      "id": "synthetic-clock",
+                      "version": "1"
+                    },
+                    "offset": 9
+                  }
+                }
+              },
+              {
+                "ref": {
+                  "kind": "InventoryAllocation",
+                  "id": "panel-task-allocation",
+                  "version": "1"
+                },
+                "value": {
+                  "ref": {
+                    "kind": "InventoryAllocation",
+                    "id": "panel-task-allocation",
+                    "version": "1"
+                  },
+                  "evidence_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-work-basis",
+                      "version": "1"
+                    }
+                  ],
+                  "scope": {
+                    "kind": "project",
+                    "ref": {
+                      "kind": "Project",
+                      "id": "buyer-project",
+                      "version": "1"
+                    },
+                    "coverage_refs": [
+                      {
+                        "kind": "WorkScope",
+                        "id": "receiving-line-1",
+                        "version": "1"
+                      }
+                    ]
+                  },
+                  "available_at": {
+                    "clock_ref": {
+                      "kind": "ClockProfile",
+                      "id": "synthetic-clock",
+                      "version": "1"
+                    },
+                    "offset": 9
+                  },
+                  "effective_window": {
+                    "start": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 0
+                    },
+                    "end": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 20
+                    },
+                    "bounds": "closed_open"
+                  },
+                  "inventory_ref": {
+                    "kind": "InventoryPosition",
+                    "id": "usable-panels",
+                    "version": "1"
+                  },
+                  "batch_ref": {
+                    "kind": "MaterialBatch",
+                    "id": "usable-panel-batch",
+                    "version": "1"
+                  },
+                  "task_ref": {
+                    "kind": "Task",
+                    "id": "installation-task",
+                    "version": "1"
+                  },
+                  "quantity": {
+                    "value": "2",
+                    "unit": "panel",
+                    "basis_ref": {
+                      "kind": "Evidence",
+                      "id": "synthetic-work-basis",
+                      "version": "1"
+                    }
+                  },
+                  "already_consumed": {
+                    "value": "0",
+                    "unit": "panel",
+                    "basis_ref": {
+                      "kind": "Evidence",
+                      "id": "synthetic-work-basis",
+                      "version": "1"
+                    }
+                  },
+                  "status": "allocated",
+                  "core_event_id": "synthetic-panel-allocation-event"
+                }
+              },
+              {
+                "ref": {
+                  "kind": "TimeWindow",
+                  "id": "installation-window",
+                  "version": "1"
+                },
+                "value": {
+                  "start": {
+                    "clock_ref": {
+                      "kind": "ClockProfile",
+                      "id": "synthetic-clock",
+                      "version": "1"
+                    },
+                    "offset": 8
+                  },
+                  "end": {
+                    "clock_ref": {
+                      "kind": "ClockProfile",
+                      "id": "synthetic-clock",
+                      "version": "1"
+                    },
+                    "offset": 10
+                  },
+                  "bounds": "closed_open"
+                }
+              },
+              {
+                "ref": {
+                  "kind": "Evidence",
+                  "id": "synthetic-work-basis",
+                  "version": "1"
+                },
+                "value": {
+                  "ref": {
+                    "kind": "Evidence",
+                    "id": "synthetic-work-basis",
+                    "version": "1"
+                  },
+                  "source_kind": "synthetic",
+                  "basis_kind": "assumed",
+                  "locator": "synthetic:v4-contractor-execution:method-assumptions",
+                  "content_hash": "073efd269246ae19ff02b3fd4017234d9ae40e5ef9a9536d8f6f2a256775f714",
+                  "effective_window": {
+                    "start": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 0
+                    },
+                    "end": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 20
+                    },
+                    "bounds": "closed_open"
+                  }
+                }
+              },
+              {
+                "ref": {
+                  "kind": "Evidence",
+                  "id": "synthetic-input-observation",
+                  "version": "1"
+                },
+                "value": {
+                  "ref": {
+                    "kind": "Evidence",
+                    "id": "synthetic-input-observation",
+                    "version": "1"
+                  },
+                  "source_kind": "synthetic",
+                  "basis_kind": "observed",
+                  "locator": "synthetic:v4-contractor-execution:simulated-source-observation",
+                  "content_hash": "17ec218a52b7800beb5dda76fbd8c3453c492499484e238e3eac526477b460c0",
+                  "effective_window": {
+                    "start": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 0
+                    },
+                    "end": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 20
+                    },
+                    "bounds": "closed_open"
+                  }
+                }
+              },
+              {
+                "ref": {
+                  "kind": "ClockProfile",
+                  "id": "synthetic-clock",
+                  "version": "1"
+                },
+                "value": {
+                  "ref": {
+                    "kind": "ClockProfile",
+                    "id": "synthetic-clock",
+                    "version": "1"
+                  },
+                  "tick_unit": "synthetic-tick",
+                  "evidence_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-work-basis",
+                      "version": "1"
+                    }
+                  ]
+                }
+              },
+              {
+                "ref": {
+                  "kind": "Project",
+                  "id": "buyer-project",
+                  "version": "1"
+                },
+                "value": {
+                  "ref": {
+                    "kind": "Project",
+                    "id": "buyer-project",
+                    "version": "1"
+                  },
+                  "evidence_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-work-basis",
+                      "version": "1"
+                    }
+                  ]
+                }
+              },
+              {
+                "ref": {
+                  "kind": "WorkScope",
+                  "id": "receiving-line-1",
+                  "version": "1"
+                },
+                "value": {
+                  "ref": {
+                    "kind": "WorkScope",
+                    "id": "receiving-line-1",
+                    "version": "1"
+                  },
+                  "parent_ref": {
+                    "kind": "Project",
+                    "id": "buyer-project",
+                    "version": "1"
+                  },
+                  "evidence_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-work-basis",
+                      "version": "1"
+                    }
+                  ]
+                }
+              },
+              {
+                "ref": {
+                  "kind": "FunctionAssignment",
+                  "id": "buyer-receiving-function",
+                  "version": "1"
+                },
+                "value": {
+                  "role": "Contractor",
+                  "function_ref": {
+                    "kind": "FunctionAssignment",
+                    "id": "buyer-receiving-function",
+                    "version": "1"
+                  },
+                  "configuration_version": "1",
+                  "basis_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-work-basis",
+                      "version": "1"
+                    }
+                  ]
+                }
+              },
+              {
+                "ref": {
+                  "kind": "CandidateSet",
+                  "id": "v4-contractor-execution-candidates",
+                  "version": "1"
+                },
+                "value": {
+                  "operation_id": "v4-contractor-execution-1",
+                  "scope": {
+                    "kind": "project",
+                    "ref": {
+                      "kind": "Project",
+                      "id": "buyer-project",
+                      "version": "1"
+                    },
+                    "coverage_refs": [
+                      {
+                        "kind": "WorkScope",
+                        "id": "receiving-line-1",
+                        "version": "1"
+                      }
+                    ]
+                  },
+                  "as_of": {
+                    "clock_ref": {
+                      "kind": "ClockProfile",
+                      "id": "synthetic-clock",
+                      "version": "1"
+                    },
+                    "offset": 9
+                  },
+                  "candidates": [
+                    {
+                      "ref": {
+                        "kind": "Task",
+                        "id": "installation-task",
+                        "version": "1"
+                      },
+                      "permitted_choices": [
+                        "execute",
+                        "rebalance"
+                      ]
+                    }
+                  ],
+                  "search_profile_ref": {
+                    "kind": "Profile",
+                    "id": "execution-search",
+                    "version": "1"
+                  }
+                }
+              },
+              {
+                "ref": {
+                  "kind": "Authorization",
+                  "id": "buyer-receiving-grant",
+                  "version": "1"
+                },
+                "value": {
+                  "ref": {
+                    "kind": "Authorization",
+                    "id": "buyer-receiving-grant",
+                    "version": "1"
+                  },
+                  "organization_id": "buyer-contractor-org",
+                  "actor_id": "buyer-contractor-actor",
+                  "function_ref": {
+                    "kind": "FunctionAssignment",
+                    "id": "buyer-receiving-function",
+                    "version": "1"
+                  },
+                  "action_ids": [
+                    "CONTRACTOR-A07"
+                  ],
+                  "scopes": [
+                    {
+                      "kind": "project",
+                      "ref": {
+                        "kind": "Project",
+                        "id": "buyer-project",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "receiving-line-1",
+                          "version": "1"
+                        }
+                      ]
+                    }
+                  ],
+                  "readable_refs": [
+                    {
+                      "kind": "Task",
+                      "id": "installation-task",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "WorkExecutionProfile",
+                      "id": "installation-profile",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Contract",
+                      "id": "construction-mandate",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ActionDefinition",
+                      "id": "panel-installation",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "TaskRelease",
+                      "id": "installation-release",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ExecutionGateSnapshot",
+                      "id": "installation-gate",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Requirement",
+                      "id": "installation-gate-requirement",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "WorkMethod",
+                      "id": "synthetic-installation",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ProductionRule",
+                      "id": "synthetic-work-consequence",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ResourcePool",
+                      "id": "installation-crew",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ResourceAllocation",
+                      "id": "crew-allocation",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ReadinessAllocationFact",
+                      "id": "crew-reservation",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "InventoryPosition",
+                      "id": "usable-panels",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "MaterialBatch",
+                      "id": "usable-panel-batch",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "InventoryAllocation",
+                      "id": "panel-task-allocation",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "TimeWindow",
+                      "id": "installation-window",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-work-basis",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-input-observation",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ClockProfile",
+                      "id": "synthetic-clock",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Project",
+                      "id": "buyer-project",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "WorkScope",
+                      "id": "receiving-line-1",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "FunctionAssignment",
+                      "id": "buyer-receiving-function",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "CandidateSet",
+                      "id": "v4-contractor-execution-candidates",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Authorization",
+                      "id": "buyer-receiving-grant",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-receiver-stock-mapping",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ReceivedMaterialBasis",
+                      "id": "two-panel-receiver-stock-basis",
+                      "version": "1"
+                    }
+                  ],
+                  "tool_ids": [],
+                  "validity": {
+                    "start": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 0
+                    },
+                    "end": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 20
+                    },
+                    "bounds": "closed_open"
+                  },
+                  "basis_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic-work-basis",
+                      "version": "1"
+                    }
+                  ]
+                }
+              },
+              {
+                "ref": {
+                  "kind": "Evidence",
+                  "id": "synthetic-receiver-stock-mapping",
+                  "version": "1"
+                },
+                "value": {
+                  "ref": {
+                    "kind": "Evidence",
+                    "id": "synthetic-receiver-stock-mapping",
+                    "version": "1"
+                  },
+                  "source_kind": "synthetic",
+                  "basis_kind": "observed",
+                  "locator": "synthetic:v4-material-connection:independent-receiver-stock-declaration",
+                  "content_hash": "144ea45d2f995a12248e2fbbcdbbfd5083c10d2f81f925c93a30f1fecb6f101d",
+                  "effective_window": {
+                    "start": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 0
+                    },
+                    "end": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "synthetic-clock",
+                        "version": "1"
+                      },
+                      "offset": 20
+                    },
+                    "bounds": "closed_open"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "mapping": {
+    "ref": {
+      "kind": "ReceivedMaterialBasis",
+      "id": "two-panel-receiver-stock-basis",
+      "version": "1"
+    },
+    "registration_id": "synthetic-two-panel-receiver-registration",
+    "receipt_ref": {
+      "kind": "GoodsReceipt",
+      "id": "buyer-receipt",
+      "version": "1"
+    },
+    "component_ref": {
+      "kind": "ReceiptComponent",
+      "id": "short-damaged-component",
+      "version": "1"
+    },
+    "physical_slice_key": "synthetic-received-three-panel-slice",
+    "use_release_refs": [
+      {
+        "kind": "GoodsUseRelease",
+        "id": "two-panel-installation-release",
+        "version": "1"
+      }
+    ],
+    "use_code": "panel_installation",
+    "inventory_ref": {
+      "kind": "InventoryPosition",
+      "id": "usable-panels",
+      "version": "1"
+    },
+    "batch_ref": {
+      "kind": "MaterialBatch",
+      "id": "usable-panel-batch",
+      "version": "1"
+    },
+    "native_evidence_ref": {
+      "kind": "Evidence",
+      "id": "synthetic-receiver-stock-mapping",
+      "version": "1"
+    },
+    "received_at": {
+      "clock_ref": {
+        "kind": "ClockProfile",
+        "id": "synthetic-clock",
+        "version": "1"
+      },
+      "offset": 8
+    },
+    "scope": {
+      "kind": "project",
+      "ref": {
+        "kind": "Project",
+        "id": "buyer-project",
+        "version": "1"
+      },
+      "coverage_refs": [
+        {
+          "kind": "WorkScope",
+          "id": "receiving-line-1",
+          "version": "1"
+        }
+      ]
+    },
+    "sharing_authorized": true,
+    "native_record": {
+      "schema_version": "contractor-material-stock-mapping.v1",
+      "run_id": "synthetic-v4-material-connection",
+      "organization_id": "buyer-contractor-org",
+      "receipt_ref": {
+        "kind": "GoodsReceipt",
+        "id": "buyer-receipt",
+        "version": "1"
+      },
+      "component_ref": {
+        "kind": "ReceiptComponent",
+        "id": "short-damaged-component",
+        "version": "1"
+      },
+      "physical_slice_key": "synthetic-received-three-panel-slice",
+      "use_release_refs": [
+        {
+          "kind": "GoodsUseRelease",
+          "id": "two-panel-installation-release",
+          "version": "1"
+        }
+      ],
+      "use_code": "panel_installation",
+      "inventory_ref": {
+        "kind": "InventoryPosition",
+        "id": "usable-panels",
+        "version": "1"
+      },
+      "inventory_sha256": "c997e76707304d0445f3ba27b632bc20138e467a9da54bdea495ef9bc0046c25",
+      "batch_ref": {
+        "kind": "MaterialBatch",
+        "id": "usable-panel-batch",
+        "version": "1"
+      },
+      "batch_sha256": "b325960c6b5c1a49f5dd1dccdb4695b5127aa3469e0438e2b89e5b7275b7bd0b",
+      "received_at": {
+        "clock_ref": {
+          "kind": "ClockProfile",
+          "id": "synthetic-clock",
+          "version": "1"
+        },
+        "offset": 8
+      }
+    }
+  },
+  "assumptions": [
+    "Independent receiver synthetic stock declaration for the same run as the supplied A09 partial-use input. Only the 2 inspected/use-released panels map into usable Contractor inventory; damaged/quarantined/missing quantities remain outside the mapping.",
+    "Contractor crew/reservation, original construction release/gates and engineering method retain explicit synthetic assumptions from the A07 fixture. Observed stock/native evidence denotes simulated receiver observations only; no real native stock effect or professional approval is claimed.",
+    "Supplier response time 8, declared receiver mapping time 8, Contractor current read time 9 within original [8,10) work window. Independent receiver actor/function/authorization match the original buyer party.",
+    "Explicit sharing_authorized permits the original Supplier saved source witness when available. No SavedSupplier result, journal or source-task/record/result/reading provenance hashes are invented in this seed.",
+    "One pending ReceivedMaterialBasis ref is explicitly readable but its projection is absent until bound to the original saved A09 result by lifecycle_v4_material_registration. This seed is not a directly executable Contractor source snapshot.",
+    "Requested 2 crew-hours and 2 panels do not create MaterialUse, consumption, installed work, cost or quality. Full upstream production/quality/logistics/transport lineage and remaining PLAN branches stay pending.",
+    "Derived from tests/fixtures/roles/lifecycle_v4_material_connection_seed.v1.json at SHA256 ce5cfa2ad059432ad1f683848dde1712d7d2865775cf0a8d858dee2970a9a17a. This seed uses the separate transported receiving input and new stage journals; original seed and history are preserved."
+  ]
+}

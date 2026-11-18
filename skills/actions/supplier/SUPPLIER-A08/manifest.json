@@ -1,0 +1,23 @@
+{
+  "skill_id": "SUPPLIER-A08.physical-transport-planning",
+  "skill_version": "5",
+  "action_id": "SUPPLIER-A08",
+  "role": "Supplier",
+  "status": "implemented",
+  "spec_source": "zwtnew/04_roles/04_roles/supplier.md",
+  "spec_source_sha256": "6c2220cf090c8dfd10b2407ad8edebd11f2c2257a45b36b3e91db0fd26677ce4",
+  "skill_path": "skills/actions/supplier/SUPPLIER-A08/SKILL.md",
+  "skill_sha256": "58c4dcff88d6a59b7b2f526d93aad6d9e08aa6e008ea6297a91ab8f2a0486206",
+  "shared_sha256s": {
+    "skills/shared/decision-basics.md": "77da3d2fc1683068353888daccecfabe25278bf180b593747e39505fea987e60"
+  },
+  "prompt_sha256": "58c4dcff88d6a59b7b2f526d93aad6d9e08aa6e008ea6297a91ab8f2a0486206",
+  "input_schema_id": "role-contract.v1:SUPPLIER-A08:input",
+  "output_schema_id": "role-contract.v1:SUPPLIER-A08:payload",
+  "processor_id": "supplier.physical_transport_planning.v1",
+  "tool_ids": [],
+  "method_refs": [],
+  "shared_refs": [
+    "skills/shared/decision-basics.md"
+  ]
+}

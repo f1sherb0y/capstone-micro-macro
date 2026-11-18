@@ -1,0 +1,30 @@
+{
+  "schema_version": "origin-lifecycle-case.v1",
+  "run_id": "origin-model-lifecycle-20261025",
+  "ticks": 48,
+  "mode": "model",
+  "tender_open_tick": 12,
+  "design_approval_tick": 9,
+  "contract_duration": 24,
+  "late_money_scale": "1000000",
+  "completion_earliest_tick": 40,
+  "completion_latest_tick": 44,
+  "review_ticks": [42,43,44,45,46,47,48],
+  "contractor_profile": {
+    "qualification_level": 1,
+    "technical_capability": 1,
+    "construction_capability": 1,
+    "safety_management_capability": 1,
+    "quality_management_capability": 1
+  },
+  "model_options": {
+    "strategy": "single_agent",
+    "provider": "deepseek",
+    "model": "deepseek-v4-flash",
+    "alternate_markup_fraction": "0.2",
+    "max_calls": 4,
+    "max_prompt_chars": 300000
+  },
+  "api_budget": "Independent new origin case, at most four attempts. No automatic retries or offline fallback. Previous tender-start batch remains sealed.",
+  "scope": "Empty initial projects. Original opportunity through aggregate settlement and rule-based later Owner judgment. Only Contractor A02 pricing calls the model. Two initial own markup policies and matching agreements are declared before execution; no bid, winner or receipt is prefilled. Prior offline origin case is an engineering reference, not a matched-input strategy benchmark."
+}

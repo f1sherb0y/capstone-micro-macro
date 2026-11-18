@@ -1,0 +1,7 @@
+{
+  "schema_version": "bank-monthly-risk-chain.v1",
+  "run_id": "goal3b-monthly-risk",
+  "ticks": 3,
+  "scenarios": {"supported": {"financing_condition_index": 1.2}, "stressed": {"financing_condition_index": 0.4}},
+  "source_note": "Original initial financing_condition_index only varies. Native financing requests supply actual received project-risk and borrower-capacity estimates. BANK-A01 combines those historical own case estimates with the actual current financing index under an independently predeclared risk policy. Earlier actual monthly monitoring count bounds repeated monitoring. Selection is not a loan, drawdown, payment, default or contractual covenant fact; detailed BANK-A08 remains blocked."
+}

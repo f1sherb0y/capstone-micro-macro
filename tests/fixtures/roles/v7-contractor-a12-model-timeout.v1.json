@@ -1,0 +1,1424 @@
+{
+  "schema_version": "lifecycle-v7-model-fault-input.v1",
+  "scenario_id": "V7",
+  "origin": "synthetic",
+  "request": {
+    "schema_version": "role-contract-invocation.v1",
+    "context": {
+      "run_id": "synthetic-v7-contractor-a12-model-timeout",
+      "actor_id": "v7-contractor-actor",
+      "function_ref": {
+        "kind": "FunctionAssignment",
+        "id": "v7-continuation-function",
+        "version": "1"
+      },
+      "authorization_refs": [
+        {
+          "kind": "Authorization",
+          "id": "v7-contractor-a12-model-timeout-grant",
+          "version": "1"
+        }
+      ],
+      "operation_id": "v7-contractor-a12-model-timeout",
+      "contract_ref": {
+        "kind": "ActionContract",
+        "id": "CONTRACTOR-A12",
+        "version": "1"
+      },
+      "task_ref": {
+        "kind": "DecisionTask",
+        "id": "v7-contractor-a12-model-timeout-task",
+        "version": "1"
+      },
+      "scope": {
+        "kind": "organization",
+        "ref": {
+          "kind": "Organization",
+          "id": "v7-contractor",
+          "version": "1"
+        },
+        "coverage_refs": []
+      },
+      "business_time": {
+        "clock_ref": {
+          "kind": "ClockProfile",
+          "id": "v7-contractor-a12-model-timeout-clock",
+          "version": "1"
+        },
+        "offset": 10
+      },
+      "read_token": "synthetic-v7-contractor-a12-model-timeout:read",
+      "visible_refs": [
+        {
+          "kind": "Evidence",
+          "id": "v7-contractor-a12-model-timeout-assumptions",
+          "version": "1"
+        },
+        {
+          "kind": "Organization",
+          "id": "v7-contractor",
+          "version": "1"
+        },
+        {
+          "kind": "ClockProfile",
+          "id": "v7-contractor-a12-model-timeout-clock",
+          "version": "1"
+        },
+        {
+          "kind": "FunctionAssignment",
+          "id": "v7-continuation-function",
+          "version": "1"
+        },
+        {
+          "kind": "Authorization",
+          "id": "v7-contractor-a12-model-timeout-grant",
+          "version": "1"
+        },
+        {
+          "kind": "ContinuationState",
+          "id": "v7-contractor-a12-model-timeout-state",
+          "version": "1"
+        },
+        {
+          "kind": "Contract",
+          "id": "v7-contractor-a12-model-timeout-contract",
+          "version": "1"
+        },
+        {
+          "kind": "MaterialDispositionPlan",
+          "id": "v7-contractor-a12-model-timeout-custody",
+          "version": "1"
+        },
+        {
+          "kind": "ProtectionTask",
+          "id": "v7-contractor-a12-model-timeout-protection",
+          "version": "1"
+        },
+        {
+          "kind": "ContinuationBasis",
+          "id": "v7-contractor-a12-model-timeout-rights",
+          "version": "1"
+        },
+        {
+          "kind": "ContinuationProfile",
+          "id": "v7-contractor-a12-model-timeout-protect",
+          "version": "1"
+        },
+        {
+          "kind": "ContinuationProfile",
+          "id": "v7-contractor-a12-model-timeout-suspend",
+          "version": "1"
+        },
+        {
+          "kind": "CandidateSet",
+          "id": "v7-contractor-a12-model-timeout-alternatives",
+          "version": "1"
+        }
+      ],
+      "candidate_set_ref": {
+        "kind": "CandidateSet",
+        "id": "v7-contractor-a12-model-timeout-alternatives",
+        "version": "1"
+      },
+      "execution_mode": "offline_fixture"
+    },
+    "action_input": {
+      "scope_ref": {
+        "kind": "organization",
+        "ref": {
+          "kind": "Organization",
+          "id": "v7-contractor",
+          "version": "1"
+        },
+        "coverage_refs": []
+      },
+      "authority_basis_refs": [
+        {
+          "kind": "Evidence",
+          "id": "v7-contractor-a12-model-timeout-assumptions",
+          "version": "1"
+        }
+      ],
+      "resource_commitment_refs": [],
+      "material_position_refs": [],
+      "obligation_refs": [],
+      "continuation_profile_ref": {
+        "kind": "ContinuationProfile",
+        "id": "v7-contractor-a12-model-timeout-protect",
+        "version": "1"
+      },
+      "observation_refs": []
+    },
+    "execution_path": "single_agent"
+  },
+  "identity": {
+    "run_id": "synthetic-v7-contractor-a12-model-timeout",
+    "organization_id": "v7-contractor",
+    "role": "Contractor",
+    "action_id": "CONTRACTOR-A12",
+    "request_id": "v7-contractor-a12-model-timeout",
+    "purpose": "action",
+    "input_sha256": "f8bebe324851e632d50a28d38ce878d9214df057df0caf6b4f3a7781aeff2d27",
+    "context_sha256": "259818332fa03387fd7bc6b7a47899f473fc048cf455009670f7c83a7de2359b",
+    "versions": {
+      "client": "v7-local-commercial-fixture.v1",
+      "skill": "b6794c82280f8ec316d5904809f163e49ba4db117fd8c86dc48bd4bec84aabeb",
+      "prompt": "b6794c82280f8ec316d5904809f163e49ba4db117fd8c86dc48bd4bec84aabeb",
+      "contract": "7b1175592c21601ddfa6aedb7859fe46e6bba3285502c285b483a502632f803e",
+      "method": "commercial-proposals-no-method.v1",
+      "model": "synthetic-local-model-fault.v1",
+      "strategy": "single_agent:actions.single_agent.validated_options:1"
+    }
+  },
+  "client_settings": {
+    "schema_version": "scripted-model-fault-settings.v1",
+    "origin": "synthetic",
+    "case_id": "v7-contractor-a12-model-timeout",
+    "fault": "timeout",
+    "response": null
+  },
+  "model_configuration": {
+    "host_id": "v7-contractor-a12-model-timeout-host",
+    "budget_id": "v7-contractor-a12-model-timeout-budget",
+    "max_calls": 1,
+    "action_ids": [
+      "CONTRACTOR-A12"
+    ],
+    "max_options": 2,
+    "max_prompt_chars": 200000,
+    "max_response_chars": 4096
+  },
+  "options": [
+    {
+      "option_id": "profile:8333c817dc5b9c4b62b05880a240f56371e9144e81e8c623c257cbe0cf03785a",
+      "action_input": {
+        "scope_ref": {
+          "kind": "organization",
+          "ref": {
+            "kind": "Organization",
+            "id": "v7-contractor",
+            "version": "1"
+          },
+          "coverage_refs": []
+        },
+        "authority_basis_refs": [
+          {
+            "kind": "Evidence",
+            "id": "v7-contractor-a12-model-timeout-assumptions",
+            "version": "1"
+          }
+        ],
+        "resource_commitment_refs": [],
+        "material_position_refs": [],
+        "obligation_refs": [],
+        "continuation_profile_ref": {
+          "kind": "ContinuationProfile",
+          "id": "v7-contractor-a12-model-timeout-protect",
+          "version": "1"
+        },
+        "observation_refs": []
+      }
+    },
+    {
+      "option_id": "profile:b8fce69f404bd2563dd54a7819dd1beba5ccb72778006f83ba63c91652c86864",
+      "action_input": {
+        "scope_ref": {
+          "kind": "organization",
+          "ref": {
+            "kind": "Organization",
+            "id": "v7-contractor",
+            "version": "1"
+          },
+          "coverage_refs": []
+        },
+        "authority_basis_refs": [
+          {
+            "kind": "Evidence",
+            "id": "v7-contractor-a12-model-timeout-assumptions",
+            "version": "1"
+          }
+        ],
+        "resource_commitment_refs": [],
+        "material_position_refs": [],
+        "obligation_refs": [],
+        "continuation_profile_ref": {
+          "kind": "ContinuationProfile",
+          "id": "v7-contractor-a12-model-timeout-suspend",
+          "version": "1"
+        },
+        "observation_refs": []
+      }
+    }
+  ],
+  "sources": {
+    "factory": "integration.v7_commercial_model_fault_fixture_sources:build_sources",
+    "settings": {
+      "schema_version": "v7-commercial-model-fault-fixture-sources.v1",
+      "organization_snapshot": {
+        "schema_version": "organization.v2",
+        "run_id": "synthetic-v7-contractor-a12-model-timeout",
+        "organizations": [
+          {
+            "organization_id": "v7-contractor",
+            "actor_id": "v7-contractor-actor",
+            "source_ids": [
+              "synthetic:v7-contractor-a12-model-timeout"
+            ],
+            "public_description": "Explicit isolated synthetic Contractor A12 sources for local fault injection.",
+            "public_location": {
+              "state": "unknown",
+              "reason_code": "synthetic_private_location_not_required_for_proposal",
+              "missing_refs": []
+            },
+            "assignments": [
+              {
+                "role": "Contractor",
+                "function_ref": {
+                  "kind": "FunctionAssignment",
+                  "id": "v7-continuation-function",
+                  "version": "1"
+                },
+                "configuration_version": "1",
+                "basis_refs": [
+                  {
+                    "kind": "Evidence",
+                    "id": "v7-contractor-a12-model-timeout-assumptions",
+                    "version": "1"
+                  }
+                ]
+              }
+            ],
+            "members": [],
+            "evidence_refs": [
+              {
+                "kind": "Evidence",
+                "id": "v7-contractor-a12-model-timeout-assumptions",
+                "version": "1"
+              }
+            ]
+          }
+        ],
+        "authorizations": [
+          {
+            "ref": {
+              "kind": "Authorization",
+              "id": "v7-contractor-a12-model-timeout-grant",
+              "version": "1"
+            },
+            "organization_id": "v7-contractor",
+            "actor_id": "v7-contractor-actor",
+            "function_ref": {
+              "kind": "FunctionAssignment",
+              "id": "v7-continuation-function",
+              "version": "1"
+            },
+            "action_ids": [
+              "CONTRACTOR-A12"
+            ],
+            "scopes": [
+              {
+                "kind": "organization",
+                "ref": {
+                  "kind": "Organization",
+                  "id": "v7-contractor",
+                  "version": "1"
+                },
+                "coverage_refs": []
+              }
+            ],
+            "readable_refs": [
+              {
+                "kind": "Evidence",
+                "id": "v7-contractor-a12-model-timeout-assumptions",
+                "version": "1"
+              },
+              {
+                "kind": "Organization",
+                "id": "v7-contractor",
+                "version": "1"
+              },
+              {
+                "kind": "ClockProfile",
+                "id": "v7-contractor-a12-model-timeout-clock",
+                "version": "1"
+              },
+              {
+                "kind": "FunctionAssignment",
+                "id": "v7-continuation-function",
+                "version": "1"
+              },
+              {
+                "kind": "Authorization",
+                "id": "v7-contractor-a12-model-timeout-grant",
+                "version": "1"
+              },
+              {
+                "kind": "ContinuationState",
+                "id": "v7-contractor-a12-model-timeout-state",
+                "version": "1"
+              },
+              {
+                "kind": "Contract",
+                "id": "v7-contractor-a12-model-timeout-contract",
+                "version": "1"
+              },
+              {
+                "kind": "MaterialDispositionPlan",
+                "id": "v7-contractor-a12-model-timeout-custody",
+                "version": "1"
+              },
+              {
+                "kind": "ProtectionTask",
+                "id": "v7-contractor-a12-model-timeout-protection",
+                "version": "1"
+              },
+              {
+                "kind": "ContinuationBasis",
+                "id": "v7-contractor-a12-model-timeout-rights",
+                "version": "1"
+              },
+              {
+                "kind": "ContinuationProfile",
+                "id": "v7-contractor-a12-model-timeout-protect",
+                "version": "1"
+              },
+              {
+                "kind": "ContinuationProfile",
+                "id": "v7-contractor-a12-model-timeout-suspend",
+                "version": "1"
+              },
+              {
+                "kind": "CandidateSet",
+                "id": "v7-contractor-a12-model-timeout-alternatives",
+                "version": "1"
+              }
+            ],
+            "tool_ids": [],
+            "validity": {
+              "start": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v7-contractor-a12-model-timeout-clock",
+                  "version": "1"
+                },
+                "offset": 0
+              },
+              "end": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v7-contractor-a12-model-timeout-clock",
+                  "version": "1"
+                },
+                "offset": 20
+              },
+              "bounds": "closed_open"
+            },
+            "basis_refs": [
+              {
+                "kind": "Evidence",
+                "id": "v7-contractor-a12-model-timeout-assumptions",
+                "version": "1"
+              }
+            ]
+          }
+        ],
+        "inactive_authorization_refs": []
+      },
+      "source_projection": {
+        "run_id": "synthetic-v7-contractor-a12-model-timeout",
+        "macro_version": "v7-local-commercial-fixture.v1",
+        "state_version": "v7-contractor-a12-model-timeout-state-v1",
+        "read_token": "synthetic-v7-contractor-a12-model-timeout:read",
+        "business_time": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "v7-contractor-a12-model-timeout-clock",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "organization_id": "v7-contractor",
+        "objects": [
+          {
+            "ref": {
+              "kind": "Evidence",
+              "id": "v7-contractor-a12-model-timeout-assumptions",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Evidence",
+                "id": "v7-contractor-a12-model-timeout-assumptions",
+                "version": "1"
+              },
+              "source_kind": "synthetic",
+              "basis_kind": "assumed",
+              "locator": "tests/fixtures/roles/v7-contractor-a12-model-timeout.v1.json",
+              "content_hash": "22d394cddaaa674e3443614cf07f4e02276a95dae8e6df9c1aecae2a0f8e087f",
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v7-contractor-a12-model-timeout-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v7-contractor-a12-model-timeout-clock",
+                    "version": "1"
+                  },
+                  "offset": 20
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "Organization",
+              "id": "v7-contractor",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Organization",
+                "id": "v7-contractor",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v7-contractor-a12-model-timeout-assumptions",
+                  "version": "1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "ClockProfile",
+              "id": "v7-contractor-a12-model-timeout-clock",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "ClockProfile",
+                "id": "v7-contractor-a12-model-timeout-clock",
+                "version": "1"
+              },
+              "tick_unit": "day",
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v7-contractor-a12-model-timeout-assumptions",
+                  "version": "1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "FunctionAssignment",
+              "id": "v7-continuation-function",
+              "version": "1"
+            },
+            "value": {
+              "role": "Contractor",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "v7-continuation-function",
+                "version": "1"
+              },
+              "configuration_version": "1",
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v7-contractor-a12-model-timeout-assumptions",
+                  "version": "1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "Authorization",
+              "id": "v7-contractor-a12-model-timeout-grant",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Authorization",
+                "id": "v7-contractor-a12-model-timeout-grant",
+                "version": "1"
+              },
+              "organization_id": "v7-contractor",
+              "actor_id": "v7-contractor-actor",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "v7-continuation-function",
+                "version": "1"
+              },
+              "action_ids": [
+                "CONTRACTOR-A12"
+              ],
+              "scopes": [
+                {
+                  "kind": "organization",
+                  "ref": {
+                    "kind": "Organization",
+                    "id": "v7-contractor",
+                    "version": "1"
+                  },
+                  "coverage_refs": []
+                }
+              ],
+              "readable_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v7-contractor-a12-model-timeout-assumptions",
+                  "version": "1"
+                },
+                {
+                  "kind": "Organization",
+                  "id": "v7-contractor",
+                  "version": "1"
+                },
+                {
+                  "kind": "ClockProfile",
+                  "id": "v7-contractor-a12-model-timeout-clock",
+                  "version": "1"
+                },
+                {
+                  "kind": "FunctionAssignment",
+                  "id": "v7-continuation-function",
+                  "version": "1"
+                },
+                {
+                  "kind": "Authorization",
+                  "id": "v7-contractor-a12-model-timeout-grant",
+                  "version": "1"
+                },
+                {
+                  "kind": "ContinuationState",
+                  "id": "v7-contractor-a12-model-timeout-state",
+                  "version": "1"
+                },
+                {
+                  "kind": "Contract",
+                  "id": "v7-contractor-a12-model-timeout-contract",
+                  "version": "1"
+                },
+                {
+                  "kind": "MaterialDispositionPlan",
+                  "id": "v7-contractor-a12-model-timeout-custody",
+                  "version": "1"
+                },
+                {
+                  "kind": "ProtectionTask",
+                  "id": "v7-contractor-a12-model-timeout-protection",
+                  "version": "1"
+                },
+                {
+                  "kind": "ContinuationBasis",
+                  "id": "v7-contractor-a12-model-timeout-rights",
+                  "version": "1"
+                },
+                {
+                  "kind": "ContinuationProfile",
+                  "id": "v7-contractor-a12-model-timeout-protect",
+                  "version": "1"
+                },
+                {
+                  "kind": "ContinuationProfile",
+                  "id": "v7-contractor-a12-model-timeout-suspend",
+                  "version": "1"
+                },
+                {
+                  "kind": "CandidateSet",
+                  "id": "v7-contractor-a12-model-timeout-alternatives",
+                  "version": "1"
+                }
+              ],
+              "tool_ids": [],
+              "validity": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v7-contractor-a12-model-timeout-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v7-contractor-a12-model-timeout-clock",
+                    "version": "1"
+                  },
+                  "offset": 20
+                },
+                "bounds": "closed_open"
+              },
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v7-contractor-a12-model-timeout-assumptions",
+                  "version": "1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "ContinuationState",
+              "id": "v7-contractor-a12-model-timeout-state",
+              "version": "1"
+            },
+            "value": {
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v7-contractor-a12-model-timeout-assumptions",
+                  "version": "1"
+                }
+              ],
+              "scope": {
+                "kind": "organization",
+                "ref": {
+                  "kind": "Organization",
+                  "id": "v7-contractor",
+                  "version": "1"
+                },
+                "coverage_refs": []
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v7-contractor-a12-model-timeout-clock",
+                  "version": "1"
+                },
+                "offset": 1
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v7-contractor-a12-model-timeout-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v7-contractor-a12-model-timeout-clock",
+                    "version": "1"
+                  },
+                  "offset": 20
+                },
+                "bounds": "closed_open"
+              },
+              "ref": {
+                "kind": "ContinuationState",
+                "id": "v7-contractor-a12-model-timeout-state",
+                "version": "1"
+              },
+              "organization_id": "v7-contractor",
+              "run_id": "synthetic-v7-contractor-a12-model-timeout",
+              "contract_refs": [
+                {
+                  "kind": "Contract",
+                  "id": "v7-contractor-a12-model-timeout-contract",
+                  "version": "1"
+                }
+              ],
+              "commitment_refs": [],
+              "resource_calendar_ref": null,
+              "material_refs": [],
+              "obligation_refs": [],
+              "observation_refs": [],
+              "work_record_refs": [],
+              "document_refs": [],
+              "responsibility_refs": [],
+              "execution_refs": [],
+              "applied_observation_refs": [],
+              "coverage": "complete",
+              "as_of": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v7-contractor-a12-model-timeout-clock",
+                  "version": "1"
+                },
+                "offset": 10
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "Contract",
+              "id": "v7-contractor-a12-model-timeout-contract",
+              "version": "1"
+            },
+            "value": {
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v7-contractor-a12-model-timeout-assumptions",
+                  "version": "1"
+                }
+              ],
+              "scope": {
+                "kind": "organization",
+                "ref": {
+                  "kind": "Organization",
+                  "id": "v7-contractor",
+                  "version": "1"
+                },
+                "coverage_refs": []
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v7-contractor-a12-model-timeout-clock",
+                  "version": "1"
+                },
+                "offset": 1
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v7-contractor-a12-model-timeout-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v7-contractor-a12-model-timeout-clock",
+                    "version": "1"
+                  },
+                  "offset": 20
+                },
+                "bounds": "closed_open"
+              },
+              "author_actor_id": "v7-contractor-actor",
+              "author_organization_id": "v7-contractor",
+              "author_function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "v7-continuation-function",
+                "version": "1"
+              },
+              "author_authority_ref": {
+                "kind": "Authorization",
+                "id": "v7-contractor-a12-model-timeout-grant",
+                "version": "1"
+              },
+              "author_action_id": "CONTRACTOR-A12",
+              "authored_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v7-contractor-a12-model-timeout-clock",
+                  "version": "1"
+                },
+                "offset": 1
+              },
+              "ref": {
+                "kind": "Contract",
+                "id": "v7-contractor-a12-model-timeout-contract",
+                "version": "1"
+              },
+              "party_organization_ids": [
+                "v7-contractor",
+                "v7-owner"
+              ],
+              "transition_basis_refs": [
+                {
+                  "kind": "ContinuationBasis",
+                  "id": "v7-contractor-a12-model-timeout-rights",
+                  "version": "1"
+                }
+              ],
+              "status": "effective"
+            }
+          },
+          {
+            "ref": {
+              "kind": "MaterialDispositionPlan",
+              "id": "v7-contractor-a12-model-timeout-custody",
+              "version": "1"
+            },
+            "value": {
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v7-contractor-a12-model-timeout-assumptions",
+                  "version": "1"
+                }
+              ],
+              "scope": {
+                "kind": "organization",
+                "ref": {
+                  "kind": "Organization",
+                  "id": "v7-contractor",
+                  "version": "1"
+                },
+                "coverage_refs": []
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v7-contractor-a12-model-timeout-clock",
+                  "version": "1"
+                },
+                "offset": 1
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v7-contractor-a12-model-timeout-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v7-contractor-a12-model-timeout-clock",
+                    "version": "1"
+                  },
+                  "offset": 20
+                },
+                "bounds": "closed_open"
+              },
+              "author_actor_id": "v7-contractor-actor",
+              "author_organization_id": "v7-contractor",
+              "author_function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "v7-continuation-function",
+                "version": "1"
+              },
+              "author_authority_ref": {
+                "kind": "Authorization",
+                "id": "v7-contractor-a12-model-timeout-grant",
+                "version": "1"
+              },
+              "author_action_id": "CONTRACTOR-A12",
+              "authored_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v7-contractor-a12-model-timeout-clock",
+                  "version": "1"
+                },
+                "offset": 1
+              },
+              "ref": {
+                "kind": "MaterialDispositionPlan",
+                "id": "v7-contractor-a12-model-timeout-custody",
+                "version": "1"
+              },
+              "organization_id": "v7-contractor",
+              "state_ref": {
+                "kind": "ContinuationState",
+                "id": "v7-contractor-a12-model-timeout-state",
+                "version": "1"
+              },
+              "items": []
+            }
+          },
+          {
+            "ref": {
+              "kind": "ProtectionTask",
+              "id": "v7-contractor-a12-model-timeout-protection",
+              "version": "1"
+            },
+            "value": {
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v7-contractor-a12-model-timeout-assumptions",
+                  "version": "1"
+                }
+              ],
+              "scope": {
+                "kind": "organization",
+                "ref": {
+                  "kind": "Organization",
+                  "id": "v7-contractor",
+                  "version": "1"
+                },
+                "coverage_refs": []
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v7-contractor-a12-model-timeout-clock",
+                  "version": "1"
+                },
+                "offset": 1
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v7-contractor-a12-model-timeout-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v7-contractor-a12-model-timeout-clock",
+                    "version": "1"
+                  },
+                  "offset": 20
+                },
+                "bounds": "closed_open"
+              },
+              "author_actor_id": "v7-contractor-actor",
+              "author_organization_id": "v7-contractor",
+              "author_function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "v7-continuation-function",
+                "version": "1"
+              },
+              "author_authority_ref": {
+                "kind": "Authorization",
+                "id": "v7-contractor-a12-model-timeout-grant",
+                "version": "1"
+              },
+              "author_action_id": "CONTRACTOR-A12",
+              "authored_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v7-contractor-a12-model-timeout-clock",
+                  "version": "1"
+                },
+                "offset": 1
+              },
+              "ref": {
+                "kind": "ProtectionTask",
+                "id": "v7-contractor-a12-model-timeout-protection",
+                "version": "1"
+              },
+              "organization_id": "v7-contractor",
+              "state_ref": {
+                "kind": "ContinuationState",
+                "id": "v7-contractor-a12-model-timeout-state",
+                "version": "1"
+              },
+              "purpose": "site_protection",
+              "required_commitment_refs": [],
+              "permitted": {
+                "state": "known",
+                "value": true
+              },
+              "status": "required"
+            }
+          },
+          {
+            "ref": {
+              "kind": "ContinuationBasis",
+              "id": "v7-contractor-a12-model-timeout-rights",
+              "version": "1"
+            },
+            "value": {
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v7-contractor-a12-model-timeout-assumptions",
+                  "version": "1"
+                }
+              ],
+              "scope": {
+                "kind": "organization",
+                "ref": {
+                  "kind": "Organization",
+                  "id": "v7-contractor",
+                  "version": "1"
+                },
+                "coverage_refs": []
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v7-contractor-a12-model-timeout-clock",
+                  "version": "1"
+                },
+                "offset": 1
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v7-contractor-a12-model-timeout-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v7-contractor-a12-model-timeout-clock",
+                    "version": "1"
+                  },
+                  "offset": 20
+                },
+                "bounds": "closed_open"
+              },
+              "author_actor_id": "v7-contractor-actor",
+              "author_organization_id": "v7-contractor",
+              "author_function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "v7-continuation-function",
+                "version": "1"
+              },
+              "author_authority_ref": {
+                "kind": "Authorization",
+                "id": "v7-contractor-a12-model-timeout-grant",
+                "version": "1"
+              },
+              "author_action_id": "CONTRACTOR-A12",
+              "authored_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v7-contractor-a12-model-timeout-clock",
+                  "version": "1"
+                },
+                "offset": 1
+              },
+              "ref": {
+                "kind": "ContinuationBasis",
+                "id": "v7-contractor-a12-model-timeout-rights",
+                "version": "1"
+              },
+              "organization_id": "v7-contractor",
+              "state_ref": {
+                "kind": "ContinuationState",
+                "id": "v7-contractor-a12-model-timeout-state",
+                "version": "1"
+              },
+              "permitted": {
+                "state": "known",
+                "value": true
+              },
+              "allowed_choices": [
+                "protect",
+                "suspend"
+              ],
+              "contract_refs": [
+                {
+                  "kind": "Contract",
+                  "id": "v7-contractor-a12-model-timeout-contract",
+                  "version": "1"
+                }
+              ],
+              "protection_task_refs": [
+                {
+                  "kind": "ProtectionTask",
+                  "id": "v7-contractor-a12-model-timeout-protection",
+                  "version": "1"
+                }
+              ],
+              "material_plan_ref": {
+                "kind": "MaterialDispositionPlan",
+                "id": "v7-contractor-a12-model-timeout-custody",
+                "version": "1"
+              },
+              "effect": "proposal_then_actual_core_transition"
+            }
+          },
+          {
+            "ref": {
+              "kind": "ContinuationProfile",
+              "id": "v7-contractor-a12-model-timeout-protect",
+              "version": "1"
+            },
+            "value": {
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v7-contractor-a12-model-timeout-assumptions",
+                  "version": "1"
+                }
+              ],
+              "scope": {
+                "kind": "organization",
+                "ref": {
+                  "kind": "Organization",
+                  "id": "v7-contractor",
+                  "version": "1"
+                },
+                "coverage_refs": []
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v7-contractor-a12-model-timeout-clock",
+                  "version": "1"
+                },
+                "offset": 1
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v7-contractor-a12-model-timeout-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v7-contractor-a12-model-timeout-clock",
+                    "version": "1"
+                  },
+                  "offset": 20
+                },
+                "bounds": "closed_open"
+              },
+              "author_actor_id": "v7-contractor-actor",
+              "author_organization_id": "v7-contractor",
+              "author_function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "v7-continuation-function",
+                "version": "1"
+              },
+              "author_authority_ref": {
+                "kind": "Authorization",
+                "id": "v7-contractor-a12-model-timeout-grant",
+                "version": "1"
+              },
+              "author_action_id": "CONTRACTOR-A12",
+              "authored_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v7-contractor-a12-model-timeout-clock",
+                  "version": "1"
+                },
+                "offset": 1
+              },
+              "ref": {
+                "kind": "ContinuationProfile",
+                "id": "v7-contractor-a12-model-timeout-protect",
+                "version": "1"
+              },
+              "organization_id": "v7-contractor",
+              "state_ref": {
+                "kind": "ContinuationState",
+                "id": "v7-contractor-a12-model-timeout-state",
+                "version": "1"
+              },
+              "actor_id": "v7-contractor-actor",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "v7-continuation-function",
+                "version": "1"
+              },
+              "authority_ref": {
+                "kind": "Authorization",
+                "id": "v7-contractor-a12-model-timeout-grant",
+                "version": "1"
+              },
+              "basis_ref": {
+                "kind": "ContinuationBasis",
+                "id": "v7-contractor-a12-model-timeout-rights",
+                "version": "1"
+              },
+              "business_key": "v7-contractor-a12-model-timeout-protect",
+              "choice": "protect",
+              "retain_resource_refs": [],
+              "release_candidate_refs": [],
+              "readiness_refs": [],
+              "transfer_plan_ref": null,
+              "successor_acceptance_ref": null,
+              "party_consent_refs": null,
+              "source_refs": [],
+              "learning_method_ref": null,
+              "lesson_assessment_ref": null,
+              "note": "Explicit synthetic authorized protect proposal; original contract rights and site protection remain."
+            }
+          },
+          {
+            "ref": {
+              "kind": "ContinuationProfile",
+              "id": "v7-contractor-a12-model-timeout-suspend",
+              "version": "1"
+            },
+            "value": {
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v7-contractor-a12-model-timeout-assumptions",
+                  "version": "1"
+                }
+              ],
+              "scope": {
+                "kind": "organization",
+                "ref": {
+                  "kind": "Organization",
+                  "id": "v7-contractor",
+                  "version": "1"
+                },
+                "coverage_refs": []
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v7-contractor-a12-model-timeout-clock",
+                  "version": "1"
+                },
+                "offset": 1
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v7-contractor-a12-model-timeout-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "v7-contractor-a12-model-timeout-clock",
+                    "version": "1"
+                  },
+                  "offset": 20
+                },
+                "bounds": "closed_open"
+              },
+              "author_actor_id": "v7-contractor-actor",
+              "author_organization_id": "v7-contractor",
+              "author_function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "v7-continuation-function",
+                "version": "1"
+              },
+              "author_authority_ref": {
+                "kind": "Authorization",
+                "id": "v7-contractor-a12-model-timeout-grant",
+                "version": "1"
+              },
+              "author_action_id": "CONTRACTOR-A12",
+              "authored_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v7-contractor-a12-model-timeout-clock",
+                  "version": "1"
+                },
+                "offset": 1
+              },
+              "ref": {
+                "kind": "ContinuationProfile",
+                "id": "v7-contractor-a12-model-timeout-suspend",
+                "version": "1"
+              },
+              "organization_id": "v7-contractor",
+              "state_ref": {
+                "kind": "ContinuationState",
+                "id": "v7-contractor-a12-model-timeout-state",
+                "version": "1"
+              },
+              "actor_id": "v7-contractor-actor",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "v7-continuation-function",
+                "version": "1"
+              },
+              "authority_ref": {
+                "kind": "Authorization",
+                "id": "v7-contractor-a12-model-timeout-grant",
+                "version": "1"
+              },
+              "basis_ref": {
+                "kind": "ContinuationBasis",
+                "id": "v7-contractor-a12-model-timeout-rights",
+                "version": "1"
+              },
+              "business_key": "v7-contractor-a12-model-timeout-suspend",
+              "choice": "suspend",
+              "retain_resource_refs": [],
+              "release_candidate_refs": [],
+              "readiness_refs": [],
+              "transfer_plan_ref": null,
+              "successor_acceptance_ref": null,
+              "party_consent_refs": null,
+              "source_refs": [],
+              "learning_method_ref": null,
+              "lesson_assessment_ref": null,
+              "note": "Explicit synthetic authorized suspend proposal; original contract rights and site protection remain."
+            }
+          },
+          {
+            "ref": {
+              "kind": "CandidateSet",
+              "id": "v7-contractor-a12-model-timeout-alternatives",
+              "version": "1"
+            },
+            "value": {
+              "operation_id": "v7-contractor-a12-model-timeout",
+              "scope": {
+                "kind": "organization",
+                "ref": {
+                  "kind": "Organization",
+                  "id": "v7-contractor",
+                  "version": "1"
+                },
+                "coverage_refs": []
+              },
+              "as_of": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "v7-contractor-a12-model-timeout-clock",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "candidates": [
+                {
+                  "ref": {
+                    "kind": "ContinuationProfile",
+                    "id": "v7-contractor-a12-model-timeout-protect",
+                    "version": "1"
+                  },
+                  "permitted_choices": [
+                    "protect",
+                    "suspend"
+                  ]
+                },
+                {
+                  "ref": {
+                    "kind": "ContinuationProfile",
+                    "id": "v7-contractor-a12-model-timeout-suspend",
+                    "version": "1"
+                  },
+                  "permitted_choices": [
+                    "protect",
+                    "suspend"
+                  ]
+                }
+              ],
+              "search_profile_ref": {
+                "kind": "Profile",
+                "id": "v7-contractor-a12-model-timeout-declared-alternatives",
+                "version": "1"
+              }
+            }
+          }
+        ]
+      },
+      "assumption_text": "Explicit synthetic Contractor A12 local fault case: one effective two-party contract permits proposing protect or suspend under the same original rights. Complete current inventory, resource commitments, work history, obligations and observations are empty. Site protection remains required and is not claimed complete. No actual transition, release, settlement or formal receipt is asserted.",
+      "source_configuration_sha256": "0d1acf75918f3dfbc8e91c6d63b6a0f1d6286dd6382affbe626c3d92fcfdb974"
+    },
+    "journal_path": "output/integration/v7-contractor-a12-model-timeout_verification_01/tasks.sqlite"
+  }
+}

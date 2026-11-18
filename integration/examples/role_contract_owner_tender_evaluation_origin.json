@@ -1,0 +1,42 @@
+{
+  "schema_version": "role-contract-fixture-origin.v1",
+  "origin": "synthetic",
+  "scenario_id": "V2",
+  "case_id": "v2-owner-tender-evaluation",
+  "action_id": "OWN-A09",
+  "run_id": "synthetic-v2-procurement-publication-01",
+  "functional_status": "unverified",
+  "source_note": "Independent synthetic Owner A09 evaluation input aligned with prior publication/A02 run, scope, legal actors and package/round identifiers. Package registration, bid receipt, compliance and price 40 are assumed; no Contractor action or actual reception is proved. Original ranking method must run; risk is explicitly unknown and comparison is price-only. No ranking, selection, award, acceptance or contract is supplied.",
+  "expected_result": {
+    "kind": "completed",
+    "choice": "evaluate"
+  },
+  "expected_output_refs": {
+    "ranked_bid_refs": [
+      {
+        "kind": "Bid",
+        "id": "v2-contractor-bid-submitted",
+        "version": "1"
+      }
+    ],
+    "rejected_bid_refs": []
+  },
+  "basis_sha256": "473f1646ec6ed162e7f3cf6eab316e99c847fb775320e50cf2c5bd758bc1eb67",
+  "basis_hash_recipe": "Canonical task_digest(action_input, objects_without_evidence, source_note).",
+  "artifact_sha256": {
+    "role_contract_owner_tender_evaluation_invocation.json": "5c2329f5937b10f459caf46d0d9d65d6716eafd53e9e399f892d0816e61e29ac",
+    "role_contract_owner_tender_evaluation_host.json": "88dbff45aac4923a80267012a3a594feee495a54abd8bc3f5933600fe0298469"
+  },
+  "source_artifacts": {
+    "integration/examples/role_contract_owner_tender_publication_invocation.json": "0c3b047c9060facee752ab0275137023880584b7b98fd85f918f4e3f35c4cfd0",
+    "integration/examples/role_contract_owner_tender_publication_host.json": "b7de30180e008c3a1e2e34cfeb15e769810393b5e2999983ce4eae927e56a451",
+    "integration/examples/role_contract_owner_tender_publication_origin.json": "b08864dac4bb6c41d1f753b9b23c05822c270db9ed2c7063327e1a44cdc72fb9",
+    "integration/examples/role_contract_contractor_bid_host.json": "6a30df092f46bdcc8c4a313cdcce42ba67573932b7c3f8f5600989879e958827"
+  },
+  "limitations": [
+    "Independent assumed native package/round/bid and compliance/price input, not actual publication or received Contractor bid.",
+    "received_contractor_bid_inputs is not configured; source factory and configuration entry for actual reception already exist but require original journal and independent registration.",
+    "Ranking processor/method and input schemas have not run; expected ranked refs are metadata only.",
+    "No independent award choice, consent, contract, resource effect or complete V2/PLAN acceptance."
+  ]
+}

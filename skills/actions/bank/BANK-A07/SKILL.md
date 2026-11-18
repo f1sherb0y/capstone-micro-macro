@@ -1,0 +1,25 @@
+# BANK-A07 资金执行与原回执核对
+
+initiate只对原有效DrawApproval与FinanceArrangement发出execute草稿：逐原付款行绑定批准/路径/目的账户/币种/受益人及用途义务，核对本行独立执行权限、原批准者权限、实际现金/限制/全部占用、执行窗及条件。已有原PaymentExecution返回deferred转existing查询，不自动重付；缺实际同币种路径资金可延期。
+
+原DrawApproval须显式提供实际approved_at，与当前/可获时点同业务时钟且不晚于available_at及当前时点；不把资料送达available_at当作批准发生时间。原A06批准者授权及授权/职能依据按approved_at核验，新执行和历史核对共用；不以后来授权追认旧批准，历史读取也不跳过原时点依据。A06交接须与原已保存决定业务时点完全相等，后续接收及资金不足恢复保原批准时点和作者/权限身份。缺原字段的旧来源不能推算补值或自动迁移，宿主须提供真实原批准记录。
+
+原批准记录依据、批准金额、原transfer.requested及六项付款/本金/费用分量的依据也按approved_at核验，新执行汇总所需bank_debit时保持该原时点，不再先用now检查原批准依据。原批准者授权覆盖完整批准scope、职能ref精确一致；grant/function的Evidence按原批准时点核，非Evidence保原种类有权解析。当前执行授权、原批准/安排使用有效窗及实际资金账户/限制/占用/路径/费用/义务仍独立按当前状态核验，历史回执的无显式时点读取语义保持。
+
+A06→A07交接按approved_at核原批准及全部金额行依据、按registered_at核实际原生登记依据、按authored_at核后续独立关系及作者依据，当前安排依据仍用now。共享引用分别满足各用途，原批准者授权/职能的basis内容须与原已保存source_reading完全一致；非Evidence不跳过。关系作者须能读取原批准/安排及所用依据，原生observed/摘要、独立关系、完整原transfer和实际宿主认证保持，不以关联证明生成正式批准或执行。
+
+资金不足续办条件同样按原approved_at检查批准记录/总额/六项付款行及原transfer.requested依据，核原批准时点不晚于可获/当前、正本金/总额与现金费用分量一致；实际账户、限制、占用和路径仍按当前时点，actual observed与独立宿主关系认证保持。条件profile升v3，旧配置不静默迁移；ready仅唤醒新决策，不派发资金或重记旧执行。
+
+existing沿原执行内保存的批准/条款/路径核对，不要求当前批准或报价仍有效。原execution/command/business key/approval/path/受益人身份保持不变，完整收到的原回执逐event与sequence去重；增量累加、累计不得倒退，各本金/现金/费用分项不得超原批准。未知回执不能当失败重付或当零实际；已知部分只认已知量，未知余量保留原身份和占用。
+
+原命令/回执接收与Bank→Owner结果交接共用六项金额关系校验，原批准行及每次实际回执均须满足本金/现金/费用/扣款关系。接收按PaymentExecution/PaymentReceipt的kind/id拒同一物理对象跨version重复；不同物理回执的同一event只有完整业务内容一致才排重。回执observed_at≤available_at≤实际核对时点，原命令也须当时可获且同业务钟；Owner接收按原Bank核对时点，不用后来received_at追认当时未获资料。成功/部分成功回执的已知confirmed_unexecuted_amount须同币种、非负且不超过截至该序号尚未执行的原本金；未知/失败仍不形成实际现金或已证实可重付余量。当前批准与原保存批准的完整scope保持一致，正式native认证仍由独立宿主提供。
+
+同次existing选择的多条原命令按批准物理kind/id共同累计六项已知实付分量，每个原付款行的合计不得超过同一原批准分配；不同命令标识不增加批准额度。同一批准跨version仍须保原主体/安排/条款/批次/金额/付款行/实际批准时间/作者权限/范围；允许原执行历史、状态与覆盖更新。不同批准各自核算，未知余量不加入已知实付，也不据此释放占用或重付。
+
+cancel_unexecuted只请求取消原cancel_line_keys内有独立派发证据、已证实未派发且未付款的完整原行，原confirmed_unexecuted_amount须精确匹配，路径须允许且不得与已核证回执余量冲突。未知行不能取消。公开payload仅含原execution_refs，核心必须继续读取原逐行范围，不能整执行取消。reconcile不依赖取消资格。
+
+当前支持单币种精确口径：principal=beneficiary_cash+withheld_fee+capitalized_fee，bank_debit=beneficiary_cash+separate_fee_cash；不支持的币种/费用口径保持unsupported，不猜测转换。直付第三方绑定原真实未清义务，不重复增加借款人现金。
+
+新执行在整份原批准的所有付款行间按Obligation的kind/id排重，同一义务的不同version不能通过不同目的账户重复使用未清金额。原借款人/债权人/payable/币种/未清金额仍按完整原ref/version读取；existing查询及取消沿原已保存执行历史处理，不把历史问题变成重新派发，也不据当前义务版本改写实际回执。
+
+completed仅表示本行执行/核对请求，不记录实际支付、债务或费用。核心须按原命令原子提交/查询，并对有效回执分别提交实际后果；原执行/回执生产者、跨动作投影兼容、正式submit/query、原子占用与反馈仍待集成。CHECK-BANK-009/010/025/026/027/044/046待集中测试。

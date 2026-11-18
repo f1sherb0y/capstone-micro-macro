@@ -1,0 +1,907 @@
+{
+  "schema_version": "goal3-delivery-index.v1",
+  "overall_goal3_complete": true,
+  "full_goal_preserved": true,
+  "operation_contracts": [
+    {
+      "role": "Architect",
+      "operation": "consider_appointment",
+      "batch": "3C",
+      "macro_input": [
+        "project",
+        "policy",
+        "macro_environment",
+        "required_resource",
+        "prior_fit"
+      ],
+      "micro_handler": "integration/professional_intake_native.py",
+      "micro_processing": "Original ARCHITECT-A01 received opportunity then A02 exact service acceptance/refusal, current native project/region/type and own earlier actual appointments/A03/A12",
+      "return_to_macro": "Original role-specific acceptance/refusal proposal and final architect_appointment_acceptance; same micro result and native scope",
+      "feedback_consumer": "Actual appointment_decision -> own A12; accepted terms -> original OWN-A04; selected team -> own A03/A12 and later own A02",
+      "status": "executed_current_professional_chain",
+      "evidence": "output/integration/goal3c_professional_20261018_01/checks.json",
+      "boundary": "Native normalized resource does not supply personnel/fees. Private detailed sources are declared synthetic inputs; received selection is not a detailed relationship activation."
+    },
+    {
+      "role": "Engineer",
+      "operation": "consider_appointment",
+      "batch": "3C",
+      "macro_input": [
+        "project",
+        "required_resource",
+        "prior_fit"
+      ],
+      "micro_handler": "integration/professional_intake_native.py",
+      "micro_processing": "Original ENGINEER-A01 received opportunity then A02 exact service acceptance/refusal, current native project/region/type and own earlier actual appointments/A03/A12",
+      "return_to_macro": "Original role-specific acceptance/refusal proposal and final engineer_appointment_acceptance; same micro result and native scope",
+      "feedback_consumer": "Actual appointment_decision -> own A12; accepted terms -> original OWN-A04; selected team -> own A03/A12 and later own A02",
+      "status": "executed_current_professional_chain",
+      "evidence": "output/integration/goal3c_professional_20261018_01/checks.json",
+      "boundary": "Native normalized resource does not supply personnel/fees. Private detailed sources are declared synthetic inputs; received selection is not a detailed relationship activation."
+    },
+    {
+      "role": "QS",
+      "operation": "consider_appointment",
+      "batch": "3C",
+      "macro_input": [
+        "project",
+        "policy",
+        "macro_environment",
+        "required_resource",
+        "prior_fit"
+      ],
+      "micro_handler": "integration/professional_intake_native.py",
+      "micro_processing": "Original QS-A01 received opportunity then A02 exact service acceptance/refusal, current native project/region/type and own earlier actual appointments/A03/A12",
+      "return_to_macro": "Original role-specific acceptance/refusal proposal and final qs_appointment_acceptance; same micro result and native scope",
+      "feedback_consumer": "Actual appointment_decision -> own A12; accepted terms -> original OWN-A04; selected team -> own A03/A12 and later own A02",
+      "status": "executed_current_professional_chain",
+      "evidence": "output/integration/goal3c_professional_20261018_01/checks.json",
+      "boundary": "Native normalized resource does not supply personnel/fees. Private detailed sources are declared synthetic inputs; received selection is not a detailed relationship activation."
+    },
+    {
+      "role": "Bank",
+      "operation": "consider_financing",
+      "batch": "3B",
+      "macro_input": [
+        "requested_amount",
+        "borrower_financial_capacity",
+        "project_risk",
+        "financing_condition_index"
+      ],
+      "micro_handler": "integration/bank_financing_native.py",
+      "micro_processing": "Original BANK-A01 own selection strategy, BANK-A02 intake, BANK-A03 credit review, BANK-A04 offer/refusal; actual requested_amount binds FinanceApplication.requested",
+      "return_to_macro": "Original approve/reject proposal and final bank_project_financing; authenticated micro task/result SHA",
+      "feedback_consumer": "bank_financing_decision -> original OWN-A05 disclosed offer; earlier project_financing_selected -> own original BANK-A01/A04",
+      "status": "executed_current_fixed_financing_chain",
+      "evidence": "output/integration/goal3b_financing_20261018_01/checks.json"
+    },
+    {
+      "role": "Government",
+      "operation": "consider_review_assignment",
+      "batch": "3D",
+      "macro_input": [
+        "project",
+        "required_resource"
+      ],
+      "micro_handler": "integration/government_intake_native.py",
+      "micro_processing": "Original GOV-A02 consumes actual native project region and independent jurisdiction/authority assumptions, with strictly earlier own actual review outcomes.",
+      "return_to_macro": "Exact original micro result bound to original proposal and final government_review_assignment; native accepted/deferred regulatory_review_decision.",
+      "feedback_consumer": "Actual own regulatory_review_decision -> later own GOV-A02 and authorized GOV-A04/A07 assignment source.",
+      "status": "executed_current_accept_decline_intake",
+      "evidence": "output/integration/goal3d_regulatory_20261018_01/checks.json",
+      "boundary": "Acceptance willingness is not formal filing; referral/correction/acknowledgment require equivalent supported native interfaces."
+    },
+    {
+      "role": "Supplier",
+      "operation": "consider_supply_order",
+      "batch": "3E",
+      "macro_input": [
+        "project",
+        "contractor_id",
+        "required_resource",
+        "prior_fit"
+      ],
+      "micro_handler": "integration/supplier_order_native.py",
+      "micro_processing": "Original Supplier A01 screening -> A02 compatible product -> A03 actual pricing/capacity -> A04 exact full independent commercial acceptance. Complete-demand declines may end upstream. Exact current actual request, same authorized parties and strictly earlier own outcomes.",
+      "return_to_macro": "Same original result bound to consider_supply_order proposal and final supplier_order_acceptance; native supplier_order_decision accepted/declined.",
+      "feedback_consumer": "Own actual supplier_order_decision/supplier_selected -> later Supplier A01-A04; actual quote refusal changes later original A01 policy under declared threshold. Current actual contract_awarded consumed by all four stages.",
+      "status": "executed_current_bounded_a01_a04_supply_willingness",
+      "evidence": "output/integration/goal3e_procurement_20261018_01/checks.json",
+      "boundary": "Independent synthetic quantity/cost/cash/capacity/initial assent inputs; no conversion from native normalized resources. No detailed registered order, stock/cash reservation or physical work. Partial/revised/unresolved results remain unresolved."
+    },
+    {
+      "role": "Contractor",
+      "operation": "consider_tender",
+      "batch": "3A",
+      "macro_input": [
+        "project",
+        "policy",
+        "macro_environment",
+        "attractiveness"
+      ],
+      "micro_handler": "integration/contractor_tender_request_trigger.py",
+      "micro_processing": "CONTRACTOR-A01/A02 and original capacity/cost/quantity methods",
+      "return_to_macro": "proposal and final tender_decision",
+      "feedback_consumer": "bid_submitted/bid_declined -> later original A01/A02; A04 uses actual selected bid",
+      "status": "executed_normal_3A",
+      "evidence": "output/integration/goal3a_20261018_05/checks.json"
+    },
+    {
+      "role": "Government",
+      "operation": "decide_approval",
+      "batch": "3D",
+      "macro_input": [
+        "project",
+        "policy"
+      ],
+      "micro_handler": "integration/government_approval_native.py",
+      "micro_processing": "Original GOV-A04 DocumentRuleMethod computes findings; actual scoped authored finding handed to original GOV-A07, after own A12 actual-history reflection.",
+      "return_to_macro": "Original government_design_approval or government_completion_approval approve/request_revision, bound to same A07 result and exact proposal.",
+      "feedback_consumer": "Actual approval_approved / quality_issue / project_completed -> strictly later own A12 -> A04/A07 private Evidence; agent-free completion requires actual assignment/final/engagement authority.",
+      "status": "executed_current_bounded_design_completion_opinions",
+      "evidence": "output/integration/goal3d_regulatory_20261018_01/checks.json",
+      "boundary": "Synthetic independent case/mandate/signing assumptions; A07 remains not_submitted with no official decision. Native aggregate outcome is not signed decision, notification, permit or physical inspection. Other original outcomes remain blocked."
+    },
+    {
+      "role": "Owner",
+      "operation": "decide_contract_award",
+      "batch": "3A",
+      "macro_input": [
+        "project",
+        "preferred_bid"
+      ],
+      "micro_handler": "integration/owner_award_native.py",
+      "micro_processing": "OWN-A10",
+      "return_to_macro": "proposal and final owner_contract_award",
+      "feedback_consumer": "owner_contract_award_decision -> native signature and later own A10 history",
+      "status": "executed_normal_3A",
+      "evidence": "output/integration/goal3a_20261018_05/checks.json"
+    },
+    {
+      "role": "Contractor",
+      "operation": "decide_contract_terms",
+      "batch": "3A",
+      "macro_input": [
+        "project",
+        "preferred_bid"
+      ],
+      "micro_handler": "integration/contractor_formation_native.py",
+      "micro_processing": "CONTRACTOR-A04",
+      "return_to_macro": "proposal and final contract_negotiation",
+      "feedback_consumer": "contract_negotiation_recommendation -> original Owner A10; later own A04 history",
+      "status": "executed_normal_3A",
+      "evidence": "output/integration/goal3a_20261018_05/checks.json"
+    },
+    {
+      "role": "Architect",
+      "operation": "decide_monthly_operation",
+      "batch": "3C-Architect-client-relationship",
+      "macro_input": [
+        "macro_environment"
+      ],
+      "micro_handler": "integration/architect_portfolio_native.py",
+      "micro_processing": "Original A01 outreach and original A12 method review, private selected-project portfolio, and private client/consultant follow-up records have separate accepted scenarios.",
+      "return_to_macro": "Original bounded proposal/final participation and actual corresponding native monthly operation.",
+      "feedback_consumer": "Later own original A01/A12 reads same earlier native event and exact private result; portfolio entries are adopted only after original execution.",
+      "status": "executed_all_four_bounded_monthly_subactions_in_separate_fixed_scenarios",
+      "evidence": "output/integration/goal3c_portfolio_20261018_01/checks.json",
+      "boundary": "All four bounded Architect monthly subactions have separate accepted original micro/native/later-consumption evidence. Internal client records have a responsible actor, confirmed own selected parties, private agenda and due review time; they do not establish sent contact, client consent, detailed service activation, satisfaction, publicity, reputation or capability improvement.",
+      "monthly_inventory": "config/gba_v1_monthly_business_wiring.json"
+    },
+    {
+      "role": "Bank",
+      "operation": "decide_monthly_operation",
+      "batch": "3I",
+      "macro_input": [
+        "macro_environment"
+      ],
+      "micro_handler": "integration/bank_monthly_native.py",
+      "micro_processing": "See each scoped original monthly subaction, existing handler and missing inputs in the monthly inventory; native-only execution is not micro judgment.",
+      "return_to_macro": "Each executed monthly subaction has original micro/proposal/final and actual own agent_operation evidence in the per-subaction inventory.",
+      "feedback_consumer": "Actual strictly earlier own monthly results enter later original micro judgments; see per-subaction evidence. No formal credential/stock/legal/cash effect is inferred.",
+      "status": "executed_all_bounded_monthly_subactions_in_separate_verified_scenarios",
+      "evidence": "config/gba_v1_monthly_business_wiring.json",
+      "boundary": "Existing bounded monthly evidence only. No new execution or formal detailed effect from scope calibration.",
+      "monthly_inventory": "config/gba_v1_monthly_business_wiring.json"
+    },
+    {
+      "role": "Contractor",
+      "operation": "decide_monthly_operation",
+      "batch": "3A-monthly",
+      "macro_input": [
+        "macro_environment"
+      ],
+      "micro_handler": "integration/contractor_monthly_native.py",
+      "micro_processing": "Original qualification, work-method, physical resource/commitment capacity and private policy checks; optional sourced demand/own-outreach constraint runs inside the original A01 processor",
+      "return_to_macro": "Legal original candidate proposal then original final decision carries actual A01 participate/decline; original scheduler executes scan or maintain_operations",
+      "feedback_consumer": "Later own original A01 consumes exact earlier original monthly event and counts actual scan, excluding maintenance and other organizations",
+      "status": "executed_all_five_bounded_monthly_subactions_in_separate_fixed_scenarios",
+      "evidence": "output/integration/goal3a_monthly_20261018_03/checks.json",
+      "boundary": "All five bounded Contractor monthly subactions now have separate accepted original micro/native/feedback scenarios. This does not prove formal bid/entry/JV/relationship commitments, sent contact, spending or physical improvements. Original normalized capability mechanics remain macro-owned.",
+      "monthly_inventory": "config/gba_v1_monthly_business_wiring.json"
+    },
+    {
+      "role": "Engineer",
+      "operation": "decide_monthly_operation",
+      "batch": "3C-monthly",
+      "macro_input": [
+        "macro_environment"
+      ],
+      "micro_handler": "integration/professional_monthly_native.py",
+      "micro_processing": "Existing ENGINEER-A01 technical-market review and ENGINEER-A12 engineering-method/qualification-knowledge upkeep in separate fixed scenarios.",
+      "return_to_macro": "Original scoped micro results drive original bounded monthly proposal/final and actual native activity.",
+      "feedback_consumer": "Later own A01/A12 consumes same authenticated earlier actual operation; N03 A12 applies prior upkeep count to suppress repetition.",
+      "status": "executed_all_three_bounded_monthly_subactions_in_separate_fixed_scenarios",
+      "evidence": "output/integration/goal3c_monthly_20261018_07/verification.json",
+      "boundary": "Background review of professional obligations and regional compliance knowledge only. No issued, renewed, verified or applied credential is produced. Formal qualifications and private training history remain unknown. Native capability updates are original random mechanics and not credential evidence.",
+      "monthly_inventory": "config/gba_v1_monthly_business_wiring.json"
+    },
+    {
+      "role": "Government",
+      "operation": "decide_monthly_operation",
+      "batch": "3I",
+      "macro_input": [
+        "macro_environment"
+      ],
+      "micro_handler": "integration/government_monthly_native.py",
+      "micro_processing": "See each scoped original monthly subaction, existing handler and missing inputs in the monthly inventory; native-only execution is not micro judgment.",
+      "return_to_macro": "Each executed monthly subaction has original micro/proposal/final and actual own agent_operation evidence in the per-subaction inventory.",
+      "feedback_consumer": "Actual strictly earlier own monthly results enter later original micro judgments; see per-subaction evidence. No formal credential/stock/legal/cash effect is inferred.",
+      "status": "executed_all_bounded_monthly_subactions_in_separate_verified_scenarios",
+      "evidence": "config/gba_v1_monthly_business_wiring.json",
+      "boundary": "Existing bounded monthly evidence only. No new execution or formal detailed effect from scope calibration.",
+      "monthly_inventory": "config/gba_v1_monthly_business_wiring.json"
+    },
+    {
+      "role": "Owner",
+      "operation": "decide_monthly_operation",
+      "batch": "3I-Owner-pipeline",
+      "macro_input": [
+        "macro_environment"
+      ],
+      "micro_handler": "integration/owner_monthly_strategy.py",
+      "micro_processing": "Separate accepted fixed scenarios: original A01 demand, A16 private scope, A05 complete private cash-calendar review, A15 future preference selection, and actual original candidate/A03 review with typed monthly pipeline gate",
+      "return_to_macro": "Each delivered own contact returns through original monthly proposal/final and actual own agent_operation; other detailed formal interfaces remain separately blocked.",
+      "feedback_consumer": "Exact own earlier actual event and original micro output are consumed by the next scoped processor. Pipeline feedback gates next original A03 private appetite; strategy feedback supplies actual adopted comparison criteria.",
+      "status": "executed_bounded_monthly_contacts_in_separate_verified_scenarios",
+      "evidence": "output/integration/goal3i_owner_pipeline_20261018_05/checks.json",
+      "boundary": "All five bounded Owner monthly contacts verified in separate accepted scenarios, not one unified all-business run. Formal financing/investment registration, money and other detailed interface gaps remain blocked.",
+      "monthly_inventory": "config/gba_v1_monthly_business_wiring.json"
+    },
+    {
+      "role": "QS",
+      "operation": "decide_monthly_operation",
+      "batch": "3C-QS-estimation",
+      "macro_input": [
+        "macro_environment"
+      ],
+      "micro_handler": "integration/qs_monthly_estimation.py",
+      "micro_processing": "Original QS-A01 outreach, original QS-A01 authorized native index registration/market review, and original QS-A12 optional bounded index-sensitivity review over own planned-cost evidence; separate accepted scenarios",
+      "return_to_macro": "Original legal proposals and final responses carry exact micro participation; original monthly scheduler executes each bounded operation or maintain_operations",
+      "feedback_consumer": "Later own source constraints, market analysis and estimation review consume the same actually executed prior own contact",
+      "status": "executed_all_four_bounded_monthly_subactions_in_separate_fixed_scenarios",
+      "evidence": [
+        "output/integration/goal3c_monthly_20261018_07/verification.json",
+        "output/integration/goal3c_qs_cost_market_20261018_03/checks.json",
+        "output/integration/goal3c_qs_estimation_20261018_03/checks.json"
+      ],
+      "boundary": "Bounded QS monthly private index-sensitivity review and original improve_cost_estimation activity only. The own initial QS mandate and access permission are declared scenario inputs. Original design planned_cost is a reference estimate, not incurred cost or a frozen independent forecast. The indicative estimate is a private sensitivity calculation in abstract native model units; it does not overwrite the macro estimate or establish regional prices, improved accuracy, calibrated error, final cost, payment or issued training. A private index assumption is treated as accepted only after the exact micro proposal, final decision and own native activity are confirmed. Original random capability updates remain native mechanics, not causal evidence of improvement.",
+      "monthly_inventory": "config/gba_v1_monthly_business_wiring.json"
+    },
+    {
+      "role": "Supplier",
+      "operation": "decide_monthly_operation",
+      "batch": "3I",
+      "macro_input": [
+        "macro_environment"
+      ],
+      "micro_handler": "See per-subaction original hosts in config/gba_v1_monthly_business_wiring.json",
+      "micro_processing": "Original A01 outreach, A01/A03 private price monitoring and original A05 private backup review have their own accepted runs; stock adjustment remains blocked.",
+      "return_to_macro": "For executed entries only, exact original proposal/final hash plus actual own agent_operation; all other mappings remain blocked.",
+      "feedback_consumer": "Each executed subaction consumes strictly earlier own authenticated actual monthly history and its original private result.",
+      "status": "executed_all_four_bounded_monthly_subactions_in_separate_verified_scenarios",
+      "evidence": "config/gba_v1_monthly_business_wiring.json",
+      "boundary": "Three of four Supplier monthly subactions have distinct actual micro/native/feedback evidence. They are separate fixed scenarios; no physical stock or delivery improvement is inferred.",
+      "monthly_inventory": "config/gba_v1_monthly_business_wiring.json"
+    },
+    {
+      "role": "QS",
+      "operation": "evaluate_bid",
+      "batch": "3A",
+      "macro_input": [
+        "bid",
+        "contractor",
+        "project",
+        "policy",
+        "prior_fit"
+      ],
+      "micro_handler": "integration/qs_bid_native.py",
+      "micro_processing": "QS-A06 same-round comparison",
+      "return_to_macro": "evaluation_score and final per-bid approval",
+      "feedback_consumer": "actual evaluated bid -> Owner review; evaluation outcome -> QS-A12",
+      "status": "executed_normal_3A",
+      "evidence": "output/integration/goal3a_20261018_05/checks.json"
+    },
+    {
+      "role": "Owner",
+      "operation": "evaluate_project_opportunity",
+      "batch": "3I-Owner-pipeline",
+      "macro_input": [
+        "opportunity",
+        "macro_environment",
+        "policy",
+        "active_project_count",
+        "target_pressure"
+      ],
+      "micro_handler": "integration.owner_monthly_pipeline:OwnerMonthlyPipelineApplication",
+      "micro_processing": "Original OWN-A03 evaluates actually received original candidates. Independent post-screen portfolio-review limit is applied only after confirmed earlier own actual native screen; original methods and existing private portfolio sources remain in use.",
+      "return_to_macro": "Actual original A03 invest/reject returns through unchanged original proposal/final. Original core selects and creates actual projects; positive individual candidates are not all treated as created.",
+      "feedback_consumer": "Actual original candidate evaluations feed monthly internal pipeline review. Its confirmed original native execution gates the next original A03 private appetite.",
+      "status": "executed_original_A03_native_initiation_and_pipeline_feedback",
+      "evidence": "output/integration/goal3i_owner_pipeline_20261018_05/checks.json"
+    },
+    {
+      "role": "Owner",
+      "operation": "select_appointment",
+      "batch": "3C",
+      "macro_input": [
+        "candidates",
+        "purpose"
+      ],
+      "micro_handler": "integration/owner_commission_native.py",
+      "micro_processing": "Original OWN-A04 compares current independently accepted exact provider terms, authorized management/fee sources and own previous commission preference",
+      "return_to_macro": "Original select_architect/qs/engineer proposal plus final owner_select_* selected_agent_id; reject_all retains no selection",
+      "feedback_consumer": "Native consultant_team_appointed and selected_* -> selected provider A03/A12; own later OWN-A04 exact history",
+      "status": "executed_current_professional_chain",
+      "evidence": "output/integration/goal3c_professional_20261018_01/checks.json",
+      "boundary": "Native core alone creates team/ACTIVE normalized engagement. No detailed signed service contract, personnel allocation or fee/cash receipt."
+    },
+    {
+      "role": "Owner",
+      "operation": "select_financing_offer",
+      "batch": "3B",
+      "macro_input": [
+        "offers"
+      ],
+      "micro_handler": "integration/owner_financing_native.py",
+      "micro_processing": "Original OWN-A05 computes cash feasibility from declared initial cash/restrictions, existing unpaid debt and actual native requested financing amount.",
+      "return_to_macro": "Explicit owner_equity / null selected_bank_id is a valid accepted native choice despite actual Bank candidates.",
+      "feedback_consumer": "Real project_financing_selected owner_equity -> strictly later own original OWN-A05; no cash transfer inferred. Same EVT000003 / EVT000007 refusal -> next-tick own original OWN-A05, prior refusal count 1 and actual offer priorities 1/2 + 2 = 3/4.",
+      "status": "executed_bank_equity_and_no_finance_with_actual_later_consumers",
+      "evidence": "output/integration/goal3_macro_minfix_20261022_01/interface-closure-final-checks.json",
+      "boundary": "Aggregate bank choice, equity and no-finance refusal/wait only; no signed finance registration, drawdown or cash. Refused projects wait; later own opportunities consume prior refusal. No same-project automatic retry is added.",
+      "historical_pre_native_fix": {
+        "role": "Owner",
+        "operation": "select_financing_offer",
+        "batch": "3B",
+        "macro_input": [
+          "offers"
+        ],
+        "micro_handler": "integration/owner_financing_native.py",
+        "micro_processing": "Original OWN-A05 consumes actual authorized BANK-A04 offers, current native requested_amount funding line, independent Owner funding sources and own earlier selection preference",
+        "return_to_macro": "Original select_project_finance proposal and final owner_financing_selection; native project owns selected_bank_id",
+        "feedback_consumer": "project_financing_selected -> selected Bank original A05 private conditions; own later OWN-A05 history; selected Bank later A01/A04",
+        "status": "executed_bank_selection_with_equity_and_no_finance_boundaries",
+        "evidence": "output/integration/goal3b_financing_20261018_01/checks.json",
+        "boundary": "No_finance has no native action; equity with nonempty Bank candidates retains owner_equity but native accepted=False. Private A05 is not formal finance registration or cash."
+      }
+    },
+    {
+      "role": "Owner",
+      "operation": "select_preferred_bid",
+      "batch": "3A",
+      "macro_input": [
+        "evaluated_bids",
+        "agents"
+      ],
+      "micro_handler": "integration/owner_selection_review.py",
+      "micro_processing": "Original OWN-A09 admissibility/comparison plus explicitly declared lowest eligible actual price and organization-ID tie policy; original macro proposal selected b, micro final selected a.",
+      "return_to_macro": "Bounded final selected_contractor_id crosses shared proposal/final guards; macro commits actual candidate and actual bid price.",
+      "feedback_consumer": "Same EVT000030 bid_evaluation_completed -> strictly later original Contractor A04 and native bilateral signature.",
+      "status": "executed_bounded_micro_bid_choice_native_commitment_and_later_consumption",
+      "evidence": "output/integration/goal3_macro_minfix_20261022_01/selection/checks.json",
+      "historical_pre_native_fix": {
+        "role": "Owner",
+        "operation": "select_preferred_bid",
+        "batch": "3A",
+        "macro_input": [
+          "evaluated_bids",
+          "agents"
+        ],
+        "micro_handler": "integration/owner_selection_review.py",
+        "micro_processing": "OWN-A09 evaluate/budget review; original macro chooses candidate",
+        "return_to_macro": "Boolean final owner_preferred_bidder_selection; no replacement winner",
+        "feedback_consumer": "bid_evaluation_completed -> original Contractor A04; refusal -> native deferral",
+        "status": "executed_boolean_review_and_refusal_micro_winner_override_blocked",
+        "evidence": "output/integration/goal3a_20261018_05/checks.json"
+      }
+    },
+    {
+      "role": "Contractor",
+      "operation": "select_supplier",
+      "batch": "3E",
+      "macro_input": [
+        "offers"
+      ],
+      "micro_handler": "integration/contractor_supply_native.py",
+      "micro_processing": "Actual accepted native Supplier outcomes constrain candidates; exact original A03/A04 results support independently received commercial views; explicit prior-selection priority penalty -> original Contractor A05 verifies authorized terms and limit. With zero accepted suppliers, optional original A05 observation validates all current actual refusals and own earlier committed failures, producing a specific dependency wait.",
+      "return_to_macro": "Same selected_supplier_id in original select_supplier proposal and contractor_supplier_selection final; original engine stores selection/flag/ACTIVE normalized engagement. Mobilization and construction transition occur in a later native call. N05 specific wait maps to accepted=false/final=false; native engine records actual failed selection and 15-day delay, without a supplier.",
+      "feedback_consumer": "Actual supplier_selected -> own later A05; earlier actual selection adjusts A priority 0+2*1=2 vs B=1 and changes selection. Same actual contract_awarded also consumed by current A05. Same negative A05/native outcome -> existing private failure follow-up and next-tick original A05 repeated-failure dependency judgment.",
+      "status": "executed_positive_and_no_accepted_micro_selection_with_actual_feedback",
+      "evidence": "output/integration/goal3e_closeout_20261019_01/accepted/checks.json",
+      "boundary": "No inquiry delivery, supplier appointment, formal order, reservation, cash or physical work from the private follow-up. Three micro waits remain pending rather than being relabeled as successful procurement. Partial acceptance, revised terms and generic unresolved/missing outcomes are not translated; original detailed interface gaps remain blocked."
+    },
+    {
+      "role": "Owner",
+      "operation": "select_tender_invitees",
+      "batch": "3A",
+      "macro_input": [
+        "candidates",
+        "project",
+        "policy",
+        "macro_environment",
+        "limit"
+      ],
+      "micro_handler": "integration/owner_invitation_native.py",
+      "micro_processing": "OWN-A09 invite",
+      "return_to_macro": "selected_agent_ids in proposal and final decision",
+      "feedback_consumer": "tender_opened -> original Contractor A01/A02",
+      "status": "executed_normal_3A",
+      "evidence": "output/integration/goal3a_20261018_05/checks.json"
+    }
+  ],
+  "operation_inventory_exactly_matches_original_25_contracts": true,
+  "monthly_inventory": "config/gba_v1_monthly_business_wiring.json",
+  "monthly_subaction_count": 32,
+  "lifecycle_business_families": [
+    {
+      "family": "opportunity",
+      "macro_input_and_result": "Original Owner evaluation, initiation/decline and pipeline adoption",
+      "micro_handler": "integration/owner_opportunity_native.py",
+      "feedback_consumer": "Owner A03 / monthly pipeline and strategy consumers",
+      "configuration": "config/owner_monthly_pipeline_chain.json",
+      "evidence": "output/integration/goal3i_owner_pipeline_20261018_05/checks.json",
+      "scope": "Representative supported original native family; individual detailed micro branches and rare log variants are not newly claimed executed."
+    },
+    {
+      "family": "financing",
+      "macro_input_and_result": "Actual Bank offers and original Owner choice",
+      "micro_handler": "integration/owner_financing_native.py",
+      "feedback_consumer": "Actual bank/equity/refusal outcomes -> own later original A05; selected-bank A01/A04/A05 links retained from prior evidence.",
+      "configuration": "config/goal3_minimal_native_fix.json",
+      "evidence": "output/integration/goal3_macro_minfix_20261022_01/interface-closure-final-checks.json",
+      "scope": "Representative supported original native family; individual detailed micro branches and rare log variants are not newly claimed executed.",
+      "historical_pre_native_fix": {
+        "family": "financing",
+        "macro_input_and_result": "Actual Bank offers and original Owner choice",
+        "micro_handler": "integration/owner_financing_native.py",
+        "feedback_consumer": "Own Bank A05 and later A01/A04; later Owner A05; N02/N12 blocked",
+        "configuration": "config/financing_chain.json",
+        "evidence": "output/integration/goal3b_financing_20261018_01/checks.json",
+        "scope": "Representative supported original native family; individual detailed micro branches and rare log variants are not newly claimed executed."
+      }
+    },
+    {
+      "family": "professional_appointment",
+      "macro_input_and_result": "Actual independent acceptance, selected team and own confirmation",
+      "micro_handler": "integration/professional_intake_feedback.py",
+      "feedback_consumer": "Own original A03/A12 and later A02",
+      "configuration": "config/professional_chain.json",
+      "evidence": "output/integration/goal3c_professional_20261018_01/checks.json",
+      "scope": "Representative supported original native family; individual detailed micro branches and rare log variants are not newly claimed executed."
+    },
+    {
+      "family": "design",
+      "macro_input_and_result": "Original design/information quality and estimated cost; completed coordination archive",
+      "micro_handler": "integration/professional_design_feedback.py",
+      "feedback_consumer": "Own original professional A12; archive remains macro mechanism",
+      "configuration": "config/professional_design_feedback.json",
+      "evidence": "output/integration/goal3c_design_20261019_01/verified/checks.json",
+      "scope": "Representative supported original native family; individual detailed micro branches and rare log variants are not newly claimed executed."
+    },
+    {
+      "family": "regulatory",
+      "macro_input_and_result": "Original intake, approval/revision and completion/quality outcomes",
+      "micro_handler": "integration/government_native_outcome_query.py",
+      "feedback_consumer": "Own original regulatory feedback and later original decisions; no formal permit",
+      "configuration": "config/regulatory_chain.json",
+      "evidence": "output/integration/goal3d_regulatory_20261018_01/checks.json",
+      "scope": "Representative supported original native family; individual detailed micro branches and rare log variants are not newly claimed executed."
+    },
+    {
+      "family": "tender_clarification",
+      "macro_input_and_result": "Actual invitation, request/reply, new version and later screening",
+      "micro_handler": "integration/bindings/gba_v1_tender_clarification.py",
+      "feedback_consumer": "Original Contractor A01/A02 and QS authorized clarification evaluation",
+      "configuration": "config/tender_clarification_loop.json",
+      "evidence": "output/integration/goal3a_remaining_20261018_01/checks.json",
+      "scope": "Representative supported original native family; individual detailed micro branches and rare log variants are not newly claimed executed."
+    },
+    {
+      "family": "bid_evaluation_award_signature",
+      "macro_input_and_result": "Actual evaluation, negotiation, owner award and contract signature",
+      "micro_handler": "integration/owner_selection_review.py",
+      "feedback_consumer": "Actual bounded micro selection -> native commitment and original Contractor A04; prior QS/Owner A10/signature-to-supply links retained.",
+      "configuration": "config/goal3_minimal_native_fix.json",
+      "evidence": "output/integration/goal3_macro_minfix_20261022_01/selection/checks.json",
+      "scope": "Representative supported original native family; individual detailed micro branches and rare log variants are not newly claimed executed.",
+      "historical_pre_native_fix": {
+        "family": "bid_evaluation_award_signature",
+        "macro_input_and_result": "Actual evaluation, negotiation, owner award and contract signature",
+        "micro_handler": "integration/owner_selection_review.py",
+        "feedback_consumer": "Original QS A12, Contractor A04 / Owner A10 and signature-to-supply; N01 blocked",
+        "configuration": "config/tender_award_review.json",
+        "evidence": "output/integration/goal3a_remaining_20261018_01/reused-award-signature-feedback.json",
+        "scope": "Representative supported original native family; individual detailed micro branches and rare log variants are not newly claimed executed."
+      }
+    },
+    {
+      "family": "procurement",
+      "macro_input_and_result": "Original order willingness, actual Supplier selection or failed selection",
+      "micro_handler": "integration/contractor_supply_native.py",
+      "feedback_consumer": "Own Supplier A01-A04 / Contractor A05 and private failed-selection follow-up",
+      "configuration": "config/procurement_negative_selection.json",
+      "evidence": "output/integration/goal3e_closeout_20261019_01/accepted/checks.json",
+      "scope": "Representative supported original native family; individual detailed micro branches and rare log variants are not newly claimed executed."
+    },
+    {
+      "family": "supply_progress_delay",
+      "macro_input_and_result": "Actual normalized own supply and stochastic delay",
+      "micro_handler": "integration/supplier_monthly_inventory.py",
+      "feedback_consumer": "Own original Supplier A05 and exact later executed monthly review",
+      "configuration": "config/supplier_supply_delay_chain.json",
+      "evidence": "output/integration/goal3_remaining_20261019_01/supply-delay/checks.json",
+      "scope": "Representative supported original native family; individual detailed micro branches and rare log variants are not newly claimed executed."
+    },
+    {
+      "family": "construction_inspection",
+      "macro_input_and_result": "Original progress and actual scheduled passed/failed inspection",
+      "micro_handler": "integration/professional_construction_feedback.py",
+      "feedback_consumer": "Own original Architect/Engineer A12 and subsequent actual monthly result consumer",
+      "configuration": "config/professional_construction_feedback_chain.json",
+      "evidence": "output/integration/goal3_macro_minfix_20261022_01/construction-guard/checks.json",
+      "scope": "Representative supported original native family; individual detailed micro branches and rare log variants are not newly claimed executed.",
+      "historical_evidence": "output/integration/goal3_remaining_20261019_01/construction-feedback-seed2/checks.json"
+    },
+    {
+      "family": "site_safety",
+      "macro_input_and_result": "Original safety_issue and normalized actual risk",
+      "micro_handler": "integration/professional_construction_feedback.py",
+      "feedback_consumer": "Own original A12 safety review threshold and later actual review consumption",
+      "configuration": "config/professional_safety_feedback_chain.json",
+      "evidence": "output/integration/goal3_remaining_20261019_01/safety-feedback/checks.json",
+      "scope": "Representative supported original native family; individual detailed micro branches and rare log variants are not newly claimed executed."
+    },
+    {
+      "family": "variation",
+      "macro_input_and_result": "Actual variation_requested/variation_resolved and native recall/standby",
+      "micro_handler": "integration/professional_construction_feedback.py",
+      "feedback_consumer": "Own original Architect/Engineer A12 open/resolved judgment; no formal change approval",
+      "configuration": "config/professional_construction_feedback_chain.json",
+      "evidence": "output/integration/goal3_remaining_20261019_01/construction-feedback-seed2/checks.json",
+      "scope": "Representative supported original native family; individual detailed micro branches and rare log variants are not newly claimed executed."
+    },
+    {
+      "family": "suspension",
+      "macro_input_and_result": "Actual original construction suspension",
+      "micro_handler": "integration/bindings/gba_v1_construction_suspensions.py",
+      "feedback_consumer": "Later own original Contractor A04 changes acceptance constraint",
+      "configuration": "config/construction_chain.json",
+      "evidence": "output/integration/goal3g_construction_20261018_01/checks.json",
+      "scope": "Representative supported original native family; individual detailed micro branches and rare log variants are not newly claimed executed."
+    },
+    {
+      "family": "payment",
+      "macro_input_and_result": "Original aggregate payment_requested/payment_delayed",
+      "micro_handler": "integration/bindings/gba_v1_progress_payments.py",
+      "feedback_consumer": "Existing own private payment review and later original Contractor terms; no cash receipt",
+      "configuration": "config/payment_chain.json",
+      "evidence": "output/integration/goal3h_payment_20261018_01/checks.json",
+      "scope": "Representative supported original native family; individual detailed micro branches and rare log variants are not newly claimed executed."
+    },
+    {
+      "family": "final_account",
+      "macro_input_and_result": "Actual aggregate settlement/closure and private communication",
+      "micro_handler": "integration/native_lifecycle_actions.py",
+      "feedback_consumer": "Original QS feedback and later Owner private communication; no obligation discharge",
+      "configuration": "config/closeout_chain.json",
+      "evidence": "output/integration/goal3i_closeout_20261018_01/checks.json",
+      "scope": "Representative supported original native family; individual detailed micro branches and rare log variants are not newly claimed executed."
+    }
+  ],
+  "original_representative_validation_actions": [
+    {
+      "stage": "initiation",
+      "role": "Owner",
+      "actual_representative_action": "evaluate_market_opportunity",
+      "status": "shared_local_guard_corrected_pure_macro_mechanism_not_physical_work"
+    },
+    {
+      "stage": "design",
+      "role": "Owner",
+      "actual_representative_action": "approve_concept_design",
+      "status": "shared_local_guard_corrected_pure_macro_mechanism_not_physical_work"
+    },
+    {
+      "stage": "design",
+      "role": "Architect",
+      "actual_representative_action": "prepare_concept_design",
+      "status": "shared_local_guard_corrected_pure_macro_mechanism_not_physical_work"
+    },
+    {
+      "stage": "design",
+      "role": "QS",
+      "actual_representative_action": "prepare_cost_plan",
+      "status": "shared_local_guard_corrected_pure_macro_mechanism_not_physical_work"
+    },
+    {
+      "stage": "approval",
+      "role": "Owner",
+      "actual_representative_action": "submit_approval_application",
+      "status": "shared_local_guard_corrected_pure_macro_mechanism_not_physical_work"
+    },
+    {
+      "stage": "approval",
+      "role": "Architect",
+      "actual_representative_action": "prepare_approval_documents",
+      "status": "shared_local_guard_corrected_pure_macro_mechanism_not_physical_work"
+    },
+    {
+      "stage": "approval",
+      "role": "Government",
+      "actual_representative_action": "review_submission",
+      "status": "shared_local_guard_corrected_pure_macro_mechanism_not_physical_work"
+    },
+    {
+      "stage": "tender_preparation",
+      "role": "Owner",
+      "actual_representative_action": "approve_tender_documents",
+      "status": "shared_local_guard_corrected_pure_macro_mechanism_not_physical_work"
+    },
+    {
+      "stage": "tender_preparation",
+      "role": "QS",
+      "actual_representative_action": "prepare_tender_documents",
+      "status": "shared_local_guard_corrected_pure_macro_mechanism_not_physical_work"
+    },
+    {
+      "stage": "tendering",
+      "role": "Owner",
+      "actual_representative_action": "publish_tender",
+      "status": "shared_local_guard_corrected_pure_macro_mechanism_not_physical_work"
+    },
+    {
+      "stage": "tendering",
+      "role": "QS",
+      "actual_representative_action": "answer_tender_queries",
+      "status": "shared_local_guard_corrected_pure_macro_mechanism_not_physical_work"
+    },
+    {
+      "stage": "tendering",
+      "role": "Contractor",
+      "actual_representative_action": "evaluate_tender",
+      "status": "shared_local_guard_corrected_pure_macro_mechanism_not_physical_work"
+    },
+    {
+      "stage": "bid_evaluation",
+      "role": "Owner",
+      "actual_representative_action": "evaluate_technical_fit",
+      "status": "shared_local_guard_corrected_pure_macro_mechanism_not_physical_work"
+    },
+    {
+      "stage": "bid_evaluation",
+      "role": "QS",
+      "actual_representative_action": "evaluate_bid_price",
+      "status": "shared_local_guard_corrected_pure_macro_mechanism_not_physical_work"
+    },
+    {
+      "stage": "bid_evaluation",
+      "role": "Contractor",
+      "actual_representative_action": "provide_clarification",
+      "status": "shared_local_guard_corrected_pure_macro_mechanism_not_physical_work"
+    },
+    {
+      "stage": "contract_award",
+      "role": "Owner",
+      "actual_representative_action": "award_contract",
+      "status": "shared_local_guard_corrected_pure_macro_mechanism_not_physical_work"
+    },
+    {
+      "stage": "contract_award",
+      "role": "Contractor",
+      "actual_representative_action": "accept_contract",
+      "status": "shared_local_guard_corrected_pure_macro_mechanism_not_physical_work"
+    },
+    {
+      "stage": "contract_award",
+      "role": "QS",
+      "actual_representative_action": "finalize_contract_sum",
+      "status": "shared_local_guard_corrected_pure_macro_mechanism_not_physical_work"
+    },
+    {
+      "stage": "construction",
+      "role": "Owner",
+      "actual_representative_action": "issue_variation",
+      "status": "shared_local_guard_corrected_pure_macro_mechanism_not_physical_work"
+    },
+    {
+      "stage": "construction",
+      "role": "Contractor",
+      "actual_representative_action": "execute_work",
+      "status": "shared_local_guard_corrected_pure_macro_mechanism_not_physical_work"
+    },
+    {
+      "stage": "construction",
+      "role": "Supplier",
+      "actual_representative_action": "deliver_materials",
+      "status": "shared_local_guard_corrected_pure_macro_mechanism_not_physical_work"
+    },
+    {
+      "stage": "completion",
+      "role": "Owner",
+      "actual_representative_action": "accept_project",
+      "status": "shared_local_guard_corrected_pure_macro_mechanism_not_physical_work"
+    },
+    {
+      "stage": "completion",
+      "role": "Contractor",
+      "actual_representative_action": "submit_completion_application",
+      "status": "shared_local_guard_corrected_pure_macro_mechanism_not_physical_work"
+    },
+    {
+      "stage": "completion",
+      "role": "Government",
+      "actual_representative_action": "conduct_final_inspection",
+      "status": "shared_local_guard_corrected_pure_macro_mechanism_not_physical_work"
+    },
+    {
+      "stage": "final_account",
+      "role": "Owner",
+      "actual_representative_action": "approve_final_account",
+      "status": "shared_local_guard_corrected_pure_macro_mechanism_not_physical_work"
+    },
+    {
+      "stage": "final_account",
+      "role": "Contractor",
+      "actual_representative_action": "submit_final_account",
+      "status": "shared_local_guard_corrected_pure_macro_mechanism_not_physical_work"
+    },
+    {
+      "stage": "final_account",
+      "role": "QS",
+      "actual_representative_action": "prepare_final_account",
+      "status": "shared_local_guard_corrected_pure_macro_mechanism_not_physical_work"
+    }
+  ],
+  "pure_macro_mechanisms": [
+    "ActionApplier locks and callback serialization",
+    "original material/progress/cost/quality/safety random equations",
+    "completed design_coordination_task archive",
+    "engagement assignment/standby/recall/release mechanics",
+    "stage transitions, mobilization bookkeeping, aggregate metric and diagnostic events"
+  ],
+  "pure_macro_boundary": "No separate micro decision is added for mechanism/logging internals. Their actual business outputs are handled by the associated family above. validation_only diagnostics remain failures under N11; stage-rule vocabulary alone is not a list of executed micro commands.",
+  "preserved_detailed_source_records": 38,
+  "history_preservation": "output/integration/goal3_remaining_20261019_01/preservation.json",
+  "coverage_count_boundary": "25 operation identities, 32 monthly subactions, 15 lifecycle families and 12 residual contacts overlap. They must not be added or used as a completion percentage. Detailed micro branches and combined validation remain outside GOAL 3 completion.",
+  "historical_blocked_required_contacts": [
+    {
+      "id": "N01",
+      "batch": "3A",
+      "status": "blocked_native_contract_proposal_only",
+      "records": [
+        "B01"
+      ],
+      "macro_input": "Owner.select_preferred_bid: actual QS-evaluated bids/current candidate IDs",
+      "micro_processing": "Existing owner selection review; a bounded micro choice of another current bidder is still blocked",
+      "return_to_macro": "Original proposal then owner_preferred_bidder_selection; macro alone commits selection, ranked bids, contract sum and event",
+      "feedback_consumer": "Later own tender/formation consumers must use the same bid_evaluation_completed outcome after the fix",
+      "next": "Review docs/GOAL3宏观最小修复与接线收尾.md; no native source modification is authorized",
+      "complete": false
+    },
+    {
+      "id": "N02",
+      "batch": "3B",
+      "status": "blocked_native_equity_choice_contract",
+      "records": [
+        "B03"
+      ],
+      "macro_input": "Actual bank candidates and Owner equity decision",
+      "micro_processing": "Existing OWN-A05 financing comparison",
+      "return_to_macro": "owner_financing_selection with equity/null bank must have coherent acceptance semantics",
+      "feedback_consumer": "Original financing-result consumers must preserve the actual refusal until corrected",
+      "next": "Separate bounded financing interface repair; do not modify macro in 3A",
+      "complete": false
+    },
+    {
+      "id": "N11",
+      "batch": "3G",
+      "status": "blocked_frozen_native_validation_contract",
+      "records": [
+        "B24"
+      ],
+      "macro_input": "Original validation_only execute_work action containing engagement_status",
+      "micro_processing": "Native role-action contract must be coherent before treating it as successful; current diagnostic is failure",
+      "return_to_macro": "Original action validator/execute_work; separate aggregate updater still runs",
+      "feedback_consumer": "Failure/invalid_action may be consumed as failure, never as WorkExecution receipt",
+      "next": "Prepare a separate bounded correction proposal or bind an already existing equivalent path; no native change authorized here",
+      "complete": false
+    },
+    {
+      "id": "N12",
+      "batch": "3B",
+      "status": "blocked_native_caller_ignores_final_refusal_semantics",
+      "records": [
+        "B02"
+      ],
+      "macro_input": "Actual OWN-A05 no_finance outcome under original funding inputs",
+      "micro_processing": "Reuse authentic historical OWN-A05 no_finance result; original final false adapter contract is structurally supported, but is not a safe native execution mapping.",
+      "return_to_macro": "Blocked: native registry retains proposal selection on final false and native financing caller unconditionally commits selected bank / emits owner-financed selection.",
+      "feedback_consumer": "No honest native refusal/wait outcome exists on this call path, so a same-outcome later business consumer is blocked. Existing monthly no_finance analysis cannot substitute this selection result.",
+      "next": "Minimal native fix: accepted guard plus explicit refusal/defer feedback and downstream wait/retry. Existing final false can be reused; a new macro action name is not inherently required. Macro frozen in this delivery.",
+      "complete": false,
+      "evidence": "output/integration/goal3_remaining_20261019_01/financing-refusal-boundary.json"
+    }
+  ],
+  "blocked_required_contacts": [],
+  "resolved_required_contacts": [
+    {
+      "id": "N01",
+      "status": "executed_bounded_micro_bid_choice_native_commitment_and_later_consumption",
+      "micro_processing": "Original OWN-A09 admissibility/comparison plus explicitly declared lowest eligible actual price and organization-ID tie policy; original macro proposal selected b, micro final selected a.",
+      "return_to_macro": "Bounded final selected_contractor_id crosses shared proposal/final guards; macro commits actual candidate and actual bid price.",
+      "feedback_consumer": "Same EVT000030 bid_evaluation_completed -> strictly later original Contractor A04 and native bilateral signature.",
+      "evidence": "output/integration/goal3_macro_minfix_20261022_01/selection/checks.json",
+      "complete": true,
+      "next": "Delivered; cross-batch combinations remain GOAL 4, detailed branch work remains PLAN."
+    },
+    {
+      "id": "N02",
+      "status": "executed_micro_equity_with_accepted_bank_candidates_and_later_own_consumption",
+      "micro_processing": "Original OWN-A05 computes cash feasibility from declared initial cash/restrictions, existing unpaid debt and actual native requested financing amount.",
+      "return_to_macro": "Explicit owner_equity / null selected_bank_id is a valid accepted native choice despite actual Bank candidates.",
+      "feedback_consumer": "Real project_financing_selected owner_equity -> strictly later own original OWN-A05; no cash transfer inferred.",
+      "evidence": "output/integration/goal3_macro_minfix_20261022_01/interface-closure-final-checks.json",
+      "complete": true,
+      "next": "Delivered; cross-batch combinations remain GOAL 4, detailed branch work remains PLAN."
+    },
+    {
+      "id": "N11",
+      "status": "resolved_shared_native_validation_guard_with_actual_construction_feedback",
+      "micro_processing": "Pure native validation_only diagnostic, not a separate micro decision or physical WorkExecution. Shared constructor covers 27 original stage/role action names.",
+      "return_to_macro": "Remove redundant engagement_status from diagnostic payload; original actual engagement, role, status and resource guards remain authoritative. Native execute_work local guard returns True.",
+      "feedback_consumer": "Diagnostic remains a macro mechanism. Actual current construction progress/inspection/variation -> original later A12 -> macro monthly execution -> later A12 consumption; no diagnostic receipt substituted for work.",
+      "evidence": [
+        "output/integration/goal3_macro_minfix_20261022_01/final-focused/test_shared_representative_con0/representative-validation.json",
+        "output/integration/goal3_macro_minfix_20261022_01/construction-guard/checks.json"
+      ],
+      "complete": true,
+      "next": "Delivered; cross-batch combinations remain GOAL 4, detailed branch work remains PLAN."
+    },
+    {
+      "id": "N12",
+      "status": "executed_original_no_finance_native_defer_wait_and_later_own_consumption",
+      "micro_processing": "Original OWN-A05 actually returns no_finance under a supported initial cash disclosure. Later same-Owner A05 reads that exact actual refusal and applies an independently declared prior-refusal priority penalty.",
+      "return_to_macro": "Existing select_project_finance action has a negative proposal pair and final false. Macro emits project_financing_deferred, commits no bank/equity and holds the original project in initiation.",
+      "feedback_consumer": "Same EVT000003 / EVT000007 refusal -> next-tick own original OWN-A05, prior refusal count 1 and actual offer priorities 1/2 + 2 = 3/4.",
+      "evidence": "output/integration/goal3_macro_minfix_20261022_01/interface-closure-final-checks.json",
+      "complete": true,
+      "next": "Delivered; cross-batch combinations remain GOAL 4, detailed branch work remains PLAN."
+    }
+  ],
+  "goal4_started": false,
+  "latest_delivery": {
+    "date": "2026-10-22",
+    "configuration": "config/goal3_minimal_native_fix.json",
+    "evidence": "output/integration/goal3_macro_minfix_20261022_01/interface-closure-final-checks.json",
+    "documentation": "docs/GOAL3宏观最小修复与接线收尾.md",
+    "accepted_contact_ids": [
+      "N01",
+      "N02",
+      "N11",
+      "N12"
+    ],
+    "goal4_started": false
+  },
+  "macro_change_policy": "Five explicitly listed native files modified with authorization; global forbidden-state guard unchanged; new baseline freezes after this delivery."
+}

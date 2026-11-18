@@ -1,0 +1,286 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "V6 original Contractor handover to current Owner reception input",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "scenario_id",
+    "run_id",
+    "owner_organization_id",
+    "source_mode",
+    "contractor_handover",
+    "request",
+    "configuration"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "lifecycle-v6-owner-handover-input.v1"
+    },
+    "scenario_id": {
+      "const": "V6"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "owner_organization_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "source_mode": {
+      "enum": [
+        "fixture",
+        "formal"
+      ]
+    },
+    "contractor_handover": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "result_path",
+        "result_file_sha256",
+        "identity",
+        "record_sha256",
+        "result_sha256",
+        "reading_sha256",
+        "handover_ref",
+        "native_evidence_ref"
+      ],
+      "properties": {
+        "result_path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S",
+          "description": "Original role-contract Contractor A11 result.json, absolute or relative to this input file."
+        },
+        "result_file_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "identity": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "run_id",
+            "organization_id",
+            "role",
+            "action_id",
+            "request_id",
+            "purpose",
+            "input_sha256",
+            "context_sha256",
+            "versions"
+          ],
+          "properties": {
+            "run_id": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "organization_id": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "role": {
+              "const": "Contractor"
+            },
+            "action_id": {
+              "const": "CONTRACTOR-A11"
+            },
+            "request_id": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "purpose": {
+              "const": "action"
+            },
+            "input_sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "context_sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "versions": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "client",
+                "skill",
+                "prompt",
+                "contract",
+                "method",
+                "model",
+                "strategy"
+              ],
+              "properties": {
+                "client": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "skill": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "prompt": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "contract": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "method": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "model": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "strategy": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                }
+              }
+            }
+          }
+        },
+        "record_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "result_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "reading_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "handover_ref": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "kind",
+            "id",
+            "version"
+          ],
+          "properties": {
+            "kind": {
+              "const": "HandoverSubmission"
+            },
+            "id": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "version": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            }
+          }
+        },
+        "native_evidence_ref": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "kind",
+            "id",
+            "version"
+          ],
+          "properties": {
+            "kind": {
+              "const": "Evidence"
+            },
+            "id": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "version": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "request": {
+      "type": "object",
+      "description": "Explicit current Owner A12 RoleContractInvocation. fixture requires offline_fixture, formal requires llm; no source facts or permissions are inferred."
+    },
+    "configuration": {
+      "type": "object",
+      "description": "Existing Owner RoleContractHostConfiguration with handover_inputs selecting this original task, handover_ref and native_evidence_ref. Actual or independently declared synthetic source factory supplies received objects and validates complete residual-duty mapping."
+    },
+    "sources": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "owner_input",
+        "native_reception"
+      ],
+      "description": "Optional original retained files from three-file assembly; execution pins the complete native reception payload digest.",
+      "properties": {
+        "owner_input": {
+          "$ref": "#/$defs/sourceFile"
+        },
+        "native_reception": {
+          "$ref": "#/$defs/sourceFile",
+          "description": "Original contractor-owner-handover-reception.v1 payload with complete original Contractor lineage/result, registered request, actual Owner submission and as-built configurations."
+        }
+      }
+    }
+  },
+  "$defs": {
+    "sourceFile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "file_sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "file_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "skill_id": "ARCHITECT-A06.scoped-interface-integration",
+  "skill_version": "2",
+  "action_id": "ARCHITECT-A06",
+  "role": "Architect",
+  "status": "implemented",
+  "spec_source": "zwtnew/04_roles/04_roles/architect.md",
+  "spec_source_sha256": "24526795fd91ef6ec733a1889ea474542d9d672c91a9414c1962bf74b9626eea",
+  "skill_path": "skills/actions/architect/ARCHITECT-A06/SKILL.md",
+  "skill_sha256": "8ffaf5cb41734dfda55242b30aede88472d53988796612a4fcea1d90f8c0a4bb",
+  "input_schema_id": "role-contract.v1:ARCHITECT-A06:input",
+  "output_schema_id": "role-contract.v1:ARCHITECT-A06:payload",
+  "processor_id": "architect.scoped_interface_integration.v1",
+  "tool_ids": [],
+  "shared_refs": [
+    "skills/shared/decision-basics.md"
+  ],
+  "shared_sha256s": {
+    "skills/shared/decision-basics.md": "77da3d2fc1683068353888daccecfabe25278bf180b593747e39505fea987e60"
+  },
+  "prompt_sha256": "8ffaf5cb41734dfda55242b30aede88472d53988796612a4fcea1d90f8c0a4bb",
+  "method_refs": [
+    {
+      "kind": "Method",
+      "id": "micro.architect.original_interface_reference_consistency",
+      "version": "1"
+    }
+  ]
+}

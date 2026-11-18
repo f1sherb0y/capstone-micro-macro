@@ -1,0 +1,900 @@
+{
+  "schema_version": "lifecycle-v4-logistics-connection-seed.v1",
+  "scenario_id": "V4",
+  "origin": "synthetic",
+  "status": "awaiting_original_logistics_result",
+  "logistics_input_path": "tests/fixtures/roles/lifecycle_v4_connected_supplier_logistics_inputs.v1.json",
+  "logistics_input_sha256": "9164063ffffa40c1ba3ce914bc3bbaf6f2d308b9286319294efdbcaee0f65963",
+  "receiving_input_path": "tests/fixtures/roles/lifecycle_v4_supplier_logistics_receiving_seed_inputs.v1.json",
+  "receiving_input_sha256": "f23651a1324599351e446937dea5bd6b5262cdc0edbef489fc8d8d877176706b",
+  "registration_id": "synthetic-original-logistics-receiving-registration",
+  "relation": {
+    "scope": {
+      "kind": "project",
+      "ref": {
+        "kind": "Project",
+        "id": "buyer-project",
+        "version": "1"
+      },
+      "coverage_refs": [
+        {
+          "kind": "WorkScope",
+          "id": "receiving-line-1",
+          "version": "1"
+        }
+      ]
+    },
+    "available_at": {
+      "clock_ref": {
+        "kind": "ClockProfile",
+        "id": "synthetic-clock",
+        "version": "1"
+      },
+      "offset": 8
+    },
+    "effective_window": {
+      "start": {
+        "clock_ref": {
+          "kind": "ClockProfile",
+          "id": "synthetic-clock",
+          "version": "1"
+        },
+        "offset": 0
+      },
+      "end": {
+        "clock_ref": {
+          "kind": "ClockProfile",
+          "id": "synthetic-clock",
+          "version": "1"
+        },
+        "offset": 20
+      },
+      "bounds": "closed_open"
+    },
+    "ref": {
+      "kind": "SupplierLogisticsHandoffBasis",
+      "id": "synthetic-original-logistics-to-arrival-relation",
+      "version": "1"
+    },
+    "evidence_refs": [
+      {
+        "kind": "Evidence",
+        "id": "synthetic-independent-logistics-shipment-relation",
+        "version": "1"
+      }
+    ],
+    "run_id": "synthetic-v4-material-connection",
+    "organization_id": "supplier-org",
+    "author_actor_id": "supplier-actor",
+    "author_organization_id": "supplier-org",
+    "author_function_ref": {
+      "kind": "FunctionAssignment",
+      "id": "v4-supplier-receiving-function",
+      "version": "1"
+    },
+    "author_authority_ref": {
+      "kind": "Authorization",
+      "id": "v4-supplier-receiving-grant",
+      "version": "1"
+    },
+    "author_action_id": "SUPPLIER-A09",
+    "authored_at": {
+      "clock_ref": {
+        "kind": "ClockProfile",
+        "id": "synthetic-clock",
+        "version": "1"
+      },
+      "offset": 8
+    },
+    "shipment_links": [
+      {
+        "plan_index": 0,
+        "shipment_ref": {
+          "kind": "Shipment",
+          "id": "arrived-shipment",
+          "version": "1"
+        },
+        "native_record_evidence_ref": {
+          "kind": "Evidence",
+          "id": "synthetic-independent-native-shipment-observation",
+          "version": "1"
+        }
+      }
+    ],
+    "relation_evidence_refs": [
+      {
+        "kind": "Evidence",
+        "id": "synthetic-independent-logistics-shipment-relation",
+        "version": "1"
+      }
+    ]
+  },
+  "observations": [
+    {
+      "shipment": {
+        "ref": {
+          "kind": "Shipment",
+          "id": "arrived-shipment",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic-receiving-basis",
+            "version": "1"
+          }
+        ],
+        "scope": {
+          "kind": "project",
+          "ref": {
+            "kind": "Project",
+            "id": "buyer-project",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "receiving-line-1",
+              "version": "1"
+            }
+          ]
+        },
+        "available_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "synthetic-clock",
+            "version": "1"
+          },
+          "offset": 8
+        },
+        "effective_window": {
+          "start": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "synthetic-clock",
+              "version": "1"
+            },
+            "offset": 0
+          },
+          "end": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "synthetic-clock",
+              "version": "1"
+            },
+            "offset": 20
+          },
+          "bounds": "closed_open"
+        },
+        "order_ref": {
+          "kind": "Order",
+          "id": "receiving-order",
+          "version": "1"
+        },
+        "organization_id": "supplier-org",
+        "run_id": "synthetic-v4-material-connection",
+        "operation_id": "synthetic-original-dispatch-operation",
+        "command_id": "synthetic-original-dispatch-command",
+        "business_key": "synthetic-original-dispatch-business",
+        "physical_batch_key": "synthetic-receiving-physical-batch",
+        "slice_refs": [
+          {
+            "kind": "ShipmentSlice",
+            "id": "source-four-panel-slice",
+            "version": "1"
+          }
+        ],
+        "plan": {
+          "batch_ref": {
+            "kind": "ProductBatch",
+            "id": "source-cargo",
+            "version": "1"
+          },
+          "quantity": {
+            "value": "4",
+            "unit": "panel",
+            "basis_ref": {
+              "kind": "Evidence",
+              "id": "synthetic-receiving-basis",
+              "version": "1"
+            }
+          },
+          "source_ref": {
+            "kind": "Location",
+            "id": "factory",
+            "version": "1"
+          },
+          "destination_ref": {
+            "kind": "Location",
+            "id": "buyer-site",
+            "version": "1"
+          },
+          "route_ref": {
+            "kind": "TransportRoute",
+            "id": "source-route",
+            "version": "1"
+          },
+          "receiving_window_ref": {
+            "kind": "TimeWindow",
+            "id": "source-receiving-time",
+            "version": "1"
+          },
+          "transport_allocation_refs": [
+            {
+              "kind": "ResourceAllocation",
+              "id": "source-transport-allocation",
+              "version": "1"
+            }
+          ],
+          "condition_evidence_refs": [
+            {
+              "kind": "Evidence",
+              "id": "synthetic-receiving-basis",
+              "version": "1"
+            }
+          ]
+        },
+        "request_sha256": "629f2b7a34e4b28798a52135a91ad0e95d0d444e76901975a9ba6b975ec081fe",
+        "status": "arrived",
+        "query_status": "present",
+        "core_event_id": "synthetic-dispatch-event",
+        "dispatched_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "synthetic-clock",
+            "version": "1"
+          },
+          "offset": 2
+        },
+        "current_position_ref": {
+          "kind": "TransportPosition",
+          "id": "source-arrived-position",
+          "version": "1"
+        },
+        "traversal_refs": [
+          {
+            "kind": "TransportTraversal",
+            "id": "synthetic-factory-to-buyer-traversal",
+            "version": "1"
+          }
+        ],
+        "response_profile_ref": {
+          "kind": "DeliveryResponseProfile",
+          "id": "receipt-ack-profile",
+          "version": "1"
+        },
+        "arrival_refs": [
+          {
+            "kind": "ArrivalEvidence",
+            "id": "actual-arrival",
+            "version": "1"
+          }
+        ],
+        "receipt_refs": [
+          {
+            "kind": "GoodsReceipt",
+            "id": "buyer-receipt",
+            "version": "1"
+          }
+        ],
+        "inspection_refs": [
+          {
+            "kind": "InspectionResult",
+            "id": "independent-partial-goods-check",
+            "version": "1"
+          }
+        ],
+        "discrepancy_refs": [
+          {
+            "kind": "DeliveryDiscrepancy",
+            "id": "short-damaged-issue",
+            "version": "1"
+          }
+        ],
+        "receiving_party_refs": [
+          {
+            "kind": "ReceivingParty",
+            "id": "buyer-receiver",
+            "version": "1"
+          }
+        ],
+        "history_coverage": "complete",
+        "as_of": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "synthetic-clock",
+            "version": "1"
+          },
+          "offset": 8
+        }
+      },
+      "native_record": {
+        "schema_version": "supplier-native-shipment-observation.v1",
+        "run_id": "synthetic-v4-material-connection",
+        "shipment": {
+          "ref": {
+            "kind": "Shipment",
+            "id": "arrived-shipment",
+            "version": "1"
+          },
+          "evidence_refs": [
+            {
+              "kind": "Evidence",
+              "id": "synthetic-receiving-basis",
+              "version": "1"
+            }
+          ],
+          "scope": {
+            "kind": "project",
+            "ref": {
+              "kind": "Project",
+              "id": "buyer-project",
+              "version": "1"
+            },
+            "coverage_refs": [
+              {
+                "kind": "WorkScope",
+                "id": "receiving-line-1",
+                "version": "1"
+              }
+            ]
+          },
+          "available_at": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "synthetic-clock",
+              "version": "1"
+            },
+            "offset": 8
+          },
+          "effective_window": {
+            "start": {
+              "clock_ref": {
+                "kind": "ClockProfile",
+                "id": "synthetic-clock",
+                "version": "1"
+              },
+              "offset": 0
+            },
+            "end": {
+              "clock_ref": {
+                "kind": "ClockProfile",
+                "id": "synthetic-clock",
+                "version": "1"
+              },
+              "offset": 20
+            },
+            "bounds": "closed_open"
+          },
+          "order_ref": {
+            "kind": "Order",
+            "id": "receiving-order",
+            "version": "1"
+          },
+          "organization_id": "supplier-org",
+          "run_id": "synthetic-v4-material-connection",
+          "operation_id": "synthetic-original-dispatch-operation",
+          "command_id": "synthetic-original-dispatch-command",
+          "business_key": "synthetic-original-dispatch-business",
+          "physical_batch_key": "synthetic-receiving-physical-batch",
+          "slice_refs": [
+            {
+              "kind": "ShipmentSlice",
+              "id": "source-four-panel-slice",
+              "version": "1"
+            }
+          ],
+          "plan": {
+            "batch_ref": {
+              "kind": "ProductBatch",
+              "id": "source-cargo",
+              "version": "1"
+            },
+            "quantity": {
+              "value": "4",
+              "unit": "panel",
+              "basis_ref": {
+                "kind": "Evidence",
+                "id": "synthetic-receiving-basis",
+                "version": "1"
+              }
+            },
+            "source_ref": {
+              "kind": "Location",
+              "id": "factory",
+              "version": "1"
+            },
+            "destination_ref": {
+              "kind": "Location",
+              "id": "buyer-site",
+              "version": "1"
+            },
+            "route_ref": {
+              "kind": "TransportRoute",
+              "id": "source-route",
+              "version": "1"
+            },
+            "receiving_window_ref": {
+              "kind": "TimeWindow",
+              "id": "source-receiving-time",
+              "version": "1"
+            },
+            "transport_allocation_refs": [
+              {
+                "kind": "ResourceAllocation",
+                "id": "source-transport-allocation",
+                "version": "1"
+              }
+            ],
+            "condition_evidence_refs": [
+              {
+                "kind": "Evidence",
+                "id": "synthetic-receiving-basis",
+                "version": "1"
+              }
+            ]
+          },
+          "request_sha256": "629f2b7a34e4b28798a52135a91ad0e95d0d444e76901975a9ba6b975ec081fe",
+          "status": "arrived",
+          "query_status": "present",
+          "core_event_id": "synthetic-dispatch-event",
+          "dispatched_at": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "synthetic-clock",
+              "version": "1"
+            },
+            "offset": 2
+          },
+          "current_position_ref": {
+            "kind": "TransportPosition",
+            "id": "source-arrived-position",
+            "version": "1"
+          },
+          "traversal_refs": [
+            {
+              "kind": "TransportTraversal",
+              "id": "synthetic-factory-to-buyer-traversal",
+              "version": "1"
+            }
+          ],
+          "response_profile_ref": {
+            "kind": "DeliveryResponseProfile",
+            "id": "receipt-ack-profile",
+            "version": "1"
+          },
+          "arrival_refs": [
+            {
+              "kind": "ArrivalEvidence",
+              "id": "actual-arrival",
+              "version": "1"
+            }
+          ],
+          "receipt_refs": [
+            {
+              "kind": "GoodsReceipt",
+              "id": "buyer-receipt",
+              "version": "1"
+            }
+          ],
+          "inspection_refs": [
+            {
+              "kind": "InspectionResult",
+              "id": "independent-partial-goods-check",
+              "version": "1"
+            }
+          ],
+          "discrepancy_refs": [
+            {
+              "kind": "DeliveryDiscrepancy",
+              "id": "short-damaged-issue",
+              "version": "1"
+            }
+          ],
+          "receiving_party_refs": [
+            {
+              "kind": "ReceivingParty",
+              "id": "buyer-receiver",
+              "version": "1"
+            }
+          ],
+          "history_coverage": "complete",
+          "as_of": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "synthetic-clock",
+              "version": "1"
+            },
+            "offset": 8
+          }
+        }
+      },
+      "transport_sources": [
+        {
+          "ref": {
+            "kind": "TransportMethod",
+            "id": "synthetic-panel-elapsed-transport",
+            "version": "1"
+          },
+          "value": {
+            "ref": {
+              "kind": "TransportMethod",
+              "id": "synthetic-panel-elapsed-transport",
+              "version": "1"
+            },
+            "scope": {
+              "kind": "project",
+              "ref": {
+                "kind": "Project",
+                "id": "buyer-project",
+                "version": "1"
+              },
+              "coverage_refs": [
+                {
+                  "kind": "WorkScope",
+                  "id": "receiving-line-1",
+                  "version": "1"
+                }
+              ]
+            },
+            "available_at": {
+              "clock_ref": {
+                "kind": "ClockProfile",
+                "id": "synthetic-clock",
+                "version": "1"
+              },
+              "offset": 8
+            },
+            "effective_window": {
+              "start": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "synthetic-clock",
+                  "version": "1"
+                },
+                "offset": 0
+              },
+              "end": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "synthetic-clock",
+                  "version": "1"
+                },
+                "offset": 20
+              },
+              "bounds": "closed_open"
+            },
+            "evidence_refs": [
+              {
+                "kind": "Evidence",
+                "id": "synthetic-transport-duration-assumption",
+                "version": "1"
+              }
+            ],
+            "supported": {
+              "state": "known",
+              "value": true
+            },
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "synthetic-clock",
+              "version": "1"
+            },
+            "quantity_unit": "panel",
+            "loading_ticks": 1,
+            "unloading_ticks": 1,
+            "basis_refs": [
+              {
+                "kind": "Evidence",
+                "id": "synthetic-transport-duration-assumption",
+                "version": "1"
+              }
+            ]
+          }
+        },
+        {
+          "ref": {
+            "kind": "TransportRoute",
+            "id": "source-route",
+            "version": "1"
+          },
+          "value": {
+            "ref": {
+              "kind": "TransportRoute",
+              "id": "source-route",
+              "version": "1"
+            },
+            "scope": {
+              "kind": "project",
+              "ref": {
+                "kind": "Project",
+                "id": "buyer-project",
+                "version": "1"
+              },
+              "coverage_refs": [
+                {
+                  "kind": "WorkScope",
+                  "id": "receiving-line-1",
+                  "version": "1"
+                }
+              ]
+            },
+            "available_at": {
+              "clock_ref": {
+                "kind": "ClockProfile",
+                "id": "synthetic-clock",
+                "version": "1"
+              },
+              "offset": 8
+            },
+            "effective_window": {
+              "start": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "synthetic-clock",
+                  "version": "1"
+                },
+                "offset": 0
+              },
+              "end": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "synthetic-clock",
+                  "version": "1"
+                },
+                "offset": 20
+              },
+              "bounds": "closed_open"
+            },
+            "evidence_refs": [
+              {
+                "kind": "Evidence",
+                "id": "synthetic-transport-duration-assumption",
+                "version": "1"
+              }
+            ],
+            "supported": {
+              "state": "known",
+              "value": true
+            },
+            "segments": [
+              {
+                "segment_ref": {
+                  "kind": "TransportSegment",
+                  "id": "synthetic-factory-to-buyer-segment",
+                  "version": "1"
+                },
+                "source_ref": {
+                  "kind": "Location",
+                  "id": "factory",
+                  "version": "1"
+                },
+                "destination_ref": {
+                  "kind": "Location",
+                  "id": "buyer-site",
+                  "version": "1"
+                },
+                "minimum_ticks": 3,
+                "travel_basis_ref": {
+                  "kind": "Evidence",
+                  "id": "synthetic-transport-duration-assumption",
+                  "version": "1"
+                }
+              }
+            ],
+            "requirement_refs": [],
+            "method_ref": {
+              "kind": "TransportMethod",
+              "id": "synthetic-panel-elapsed-transport",
+              "version": "1"
+            }
+          }
+        },
+        {
+          "ref": {
+            "kind": "TransportTraversal",
+            "id": "synthetic-factory-to-buyer-traversal",
+            "version": "1"
+          },
+          "value": {
+            "ref": {
+              "kind": "TransportTraversal",
+              "id": "synthetic-factory-to-buyer-traversal",
+              "version": "1"
+            },
+            "scope": {
+              "kind": "project",
+              "ref": {
+                "kind": "Project",
+                "id": "buyer-project",
+                "version": "1"
+              },
+              "coverage_refs": [
+                {
+                  "kind": "WorkScope",
+                  "id": "receiving-line-1",
+                  "version": "1"
+                }
+              ]
+            },
+            "available_at": {
+              "clock_ref": {
+                "kind": "ClockProfile",
+                "id": "synthetic-clock",
+                "version": "1"
+              },
+              "offset": 8
+            },
+            "effective_window": {
+              "start": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "synthetic-clock",
+                  "version": "1"
+                },
+                "offset": 0
+              },
+              "end": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "synthetic-clock",
+                  "version": "1"
+                },
+                "offset": 20
+              },
+              "bounds": "closed_open"
+            },
+            "evidence_refs": [
+              {
+                "kind": "Evidence",
+                "id": "synthetic-transport-observation",
+                "version": "1"
+              }
+            ],
+            "shipment_ref": {
+              "kind": "Shipment",
+              "id": "arrived-shipment",
+              "version": "1"
+            },
+            "route_ref": {
+              "kind": "TransportRoute",
+              "id": "source-route",
+              "version": "1"
+            },
+            "segment_ref": {
+              "kind": "TransportSegment",
+              "id": "synthetic-factory-to-buyer-segment",
+              "version": "1"
+            },
+            "source_ref": {
+              "kind": "Location",
+              "id": "factory",
+              "version": "1"
+            },
+            "destination_ref": {
+              "kind": "Location",
+              "id": "buyer-site",
+              "version": "1"
+            },
+            "started_at": {
+              "clock_ref": {
+                "kind": "ClockProfile",
+                "id": "synthetic-clock",
+                "version": "1"
+              },
+              "offset": 3
+            },
+            "completed_at": {
+              "clock_ref": {
+                "kind": "ClockProfile",
+                "id": "synthetic-clock",
+                "version": "1"
+              },
+              "offset": 6
+            },
+            "core_event_id": "synthetic-factory-buyer-traversal-event",
+            "producer": "core"
+          }
+        },
+        {
+          "ref": {
+            "kind": "TransportPosition",
+            "id": "source-arrived-position",
+            "version": "1"
+          },
+          "value": {
+            "ref": {
+              "kind": "TransportPosition",
+              "id": "source-arrived-position",
+              "version": "1"
+            },
+            "scope": {
+              "kind": "project",
+              "ref": {
+                "kind": "Project",
+                "id": "buyer-project",
+                "version": "1"
+              },
+              "coverage_refs": [
+                {
+                  "kind": "WorkScope",
+                  "id": "receiving-line-1",
+                  "version": "1"
+                }
+              ]
+            },
+            "available_at": {
+              "clock_ref": {
+                "kind": "ClockProfile",
+                "id": "synthetic-clock",
+                "version": "1"
+              },
+              "offset": 8
+            },
+            "effective_window": {
+              "start": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "synthetic-clock",
+                  "version": "1"
+                },
+                "offset": 0
+              },
+              "end": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "synthetic-clock",
+                  "version": "1"
+                },
+                "offset": 20
+              },
+              "bounds": "closed_open"
+            },
+            "evidence_refs": [
+              {
+                "kind": "Evidence",
+                "id": "synthetic-transport-observation",
+                "version": "1"
+              }
+            ],
+            "shipment_ref": {
+              "kind": "Shipment",
+              "id": "arrived-shipment",
+              "version": "1"
+            },
+            "location_ref": {
+              "kind": "Location",
+              "id": "buyer-site",
+              "version": "1"
+            },
+            "position_kind": "destination",
+            "remaining_quantity": {
+              "value": "4",
+              "unit": "panel",
+              "basis_ref": {
+                "kind": "Evidence",
+                "id": "synthetic-transport-observation",
+                "version": "1"
+              }
+            },
+            "observed_at": {
+              "clock_ref": {
+                "kind": "ClockProfile",
+                "id": "synthetic-clock",
+                "version": "1"
+              },
+              "offset": 7
+            },
+            "core_event_id": "synthetic-arrival-event",
+            "producer": "core"
+          }
+        }
+      ]
+    }
+  ],
+  "assumptions": [
+    "Declared same-run original A08 input and independent synthetic transport/receiving source are frozen by file digests.",
+    "Relation source digests are absent until the actual original A08 result is saved; binder will verify the persisted journal through the configuration assembler.",
+    "No model call, native dispatch/travel/arrival/receipt/stock or upstream production/quality result is generated by this seed."
+  ]
+}

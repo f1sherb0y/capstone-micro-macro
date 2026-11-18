@@ -1,0 +1,10 @@
+{
+  "role": "Government", "version": "1", "strategy": "organization_discussion",
+  "source": "zwtnew/04_roles/04_roles/government.md",
+  "members": [
+    {"member_id": "intake", "name": "Procedural Reviewer", "functions": ["submission_intake"], "responsibilities": ["Check jurisdiction, matter, receipt and completeness separately"]},
+    {"member_id": "technical", "name": "Assessment Reviewer", "functions": ["regulatory_assessment"], "responsibilities": ["Review authorized rules, professional evidence and unresolved items"]},
+    {"member_id": "decision", "name": "Decision Reviewer", "functions": ["decision_review"], "responsibilities": ["Check signing basis, procedure, covered scope and notification recipients"]}
+  ],
+  "tool_ids": []
+}

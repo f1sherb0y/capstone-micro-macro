@@ -1,0 +1,33 @@
+{
+  "schema_version": "lifecycle-input-case.v1",
+  "scenario_id": "V2",
+  "case_id": "v2-contractor-formation-reject",
+  "origin": "synthetic",
+  "run_id": "synthetic-v2-contractor-formation-reject-01",
+  "status": "input_prepared_execution_pending",
+  "steps": [
+    {
+      "step_id": "contractor-formation-reject",
+      "action_id": "CONTRACTOR-A04",
+      "operation_id": "v2-contractor-formation-reject-01",
+      "expected_kind": "completed",
+      "expected_choice": "reject",
+      "host_factory": "integration.contractor_role_contract_host:build_role_host",
+      "invocation_path": "integration/examples/role_contract_contractor_formation_reject_invocation.json",
+      "invocation_file_sha256": "5c743fe998dc3f28e20ad1352dc69979924e2f460e95d796957a0221a8e964b8",
+      "configuration_path": "integration/examples/role_contract_contractor_formation_reject_host.json",
+      "configuration_file_sha256": "d1057e408ac596a9c56ab5c08c074259694df7237f3e4fdcc215d5bc2748a7c7",
+      "origin_path": "integration/examples/role_contract_contractor_formation_reject_origin.json"
+    }
+  ],
+  "remaining_requirements": [
+    "Actual accept/revise/reject verification and complete V2 independent business chain.",
+    "Formal source factories, reception validators and original signing/effectiveness evidence."
+  ],
+  "limitations": [
+    "One synthetic explicit reject branch; no actual processor result yet.",
+    "Owner acceptance and bid submission remain configured synthetic assumptions, not confirmed formal receipts.",
+    "Partial capacity/unknown funding are not inferred into rejection; profile supplies the independent decision.",
+    "Full same-run V2 chain and native reception/signing/effectiveness evidence remain pending."
+  ]
+}

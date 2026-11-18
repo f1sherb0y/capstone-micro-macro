@@ -1,0 +1,11 @@
+{
+  "schema_version": "engineer-qualification-maintenance-chain.v1",
+  "run_id": "goal3c-qualification-upkeep",
+  "ticks": 2,
+  "minimum_pressure": "0.6",
+  "source_note": "Initial synthetic policy and native profiles; only supported initial regulatory_pressure_index differs. Qualification validity and issuance remain unknown; actual observations and prior executions bind at runtime.",
+  "scenarios": {
+    "higher_pressure": 0.9,
+    "lower_pressure": 0.2
+  }
+}

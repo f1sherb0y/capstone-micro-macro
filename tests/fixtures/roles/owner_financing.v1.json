@@ -1,0 +1,4019 @@
+{
+  "schema_version": "synthetic-owner-financing.v1",
+  "organization_id": "owner",
+  "actor_id": "owner-actor",
+  "business_time": {
+    "clock_ref": {
+      "kind": "ClockProfile",
+      "id": "business",
+      "version": "1"
+    },
+    "offset": 10
+  },
+  "assumptions": [
+    "Explicit synthetic fixture, with no real bank, loan, project registration or receipt.",
+    "One borrower account and HKD clock; future nonbank approved release is conditional and not cash.",
+    "Existing debt retains original project, independent decisions and actual unpaid components.",
+    "Finance offers have explicit full-draw schedules and sourced ordinal preference; no interest forecast."
+  ],
+  "input": {
+    "scope_ref": {
+      "kind": "assessment_case",
+      "ref": {
+        "kind": "OwnerCase",
+        "id": "case",
+        "version": "1"
+      },
+      "coverage_refs": [
+        {
+          "kind": "WorkScope",
+          "id": "funded-work",
+          "version": "1"
+        }
+      ]
+    },
+    "borrower_id": "owner",
+    "funding_lines": [
+      {
+        "window_ref": {
+          "kind": "TimeWindow",
+          "id": "period",
+          "version": "1"
+        },
+        "source_ref": {
+          "kind": "FundingSource",
+          "id": "cash",
+          "version": "1"
+        },
+        "available": {
+          "state": "known",
+          "value": {
+            "value": "1000",
+            "currency": "HKD",
+            "basis_ref": {
+              "kind": "Evidence",
+              "id": "synthetic",
+              "version": "1"
+            }
+          }
+        },
+        "planned_use": {
+          "state": "known",
+          "value": {
+            "value": "20",
+            "currency": "HKD",
+            "basis_ref": {
+              "kind": "Evidence",
+              "id": "synthetic",
+              "version": "1"
+            }
+          }
+        },
+        "restriction_refs": []
+      }
+    ],
+    "debt_refs": [
+      {
+        "kind": "Debt",
+        "id": "existing-loan",
+        "version": "1"
+      }
+    ],
+    "offers": [
+      {
+        "kind": "FinanceOffer",
+        "id": "primary",
+        "version": "1"
+      },
+      {
+        "kind": "FinanceOffer",
+        "id": "secondary",
+        "version": "1"
+      }
+    ],
+    "funding_profile_ref": {
+      "kind": "FundingProfile",
+      "id": "funding",
+      "version": "1"
+    }
+  },
+  "objects": [
+    {
+      "ref": {
+        "kind": "FunctionAssignment",
+        "id": "owner-function",
+        "version": "1"
+      },
+      "value": {
+        "role": "Owner",
+        "function_ref": {
+          "kind": "FunctionAssignment",
+          "id": "owner-function",
+          "version": "1"
+        },
+        "configuration_version": "1",
+        "basis_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        ]
+      }
+    },
+    {
+      "ref": {
+        "kind": "FunctionAssignment",
+        "id": "bank-function",
+        "version": "1"
+      },
+      "value": {
+        "role": "Bank",
+        "function_ref": {
+          "kind": "FunctionAssignment",
+          "id": "bank-function",
+          "version": "1"
+        },
+        "configuration_version": "1",
+        "basis_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        ]
+      }
+    },
+    {
+      "ref": {
+        "kind": "FunctionAssignment",
+        "id": "bank-two-function",
+        "version": "1"
+      },
+      "value": {
+        "role": "Bank",
+        "function_ref": {
+          "kind": "FunctionAssignment",
+          "id": "bank-two-function",
+          "version": "1"
+        },
+        "configuration_version": "1",
+        "basis_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        ]
+      }
+    },
+    {
+      "ref": {
+        "kind": "Authorization",
+        "id": "owner-authority",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "Authorization",
+          "id": "owner-authority",
+          "version": "1"
+        },
+        "organization_id": "owner",
+        "actor_id": "owner-actor",
+        "function_ref": {
+          "kind": "FunctionAssignment",
+          "id": "owner-function",
+          "version": "1"
+        },
+        "action_ids": [
+          "OWN-A05"
+        ],
+        "scopes": [
+          {
+            "kind": "assessment_case",
+            "ref": {
+              "kind": "OwnerCase",
+              "id": "case",
+              "version": "1"
+            },
+            "coverage_refs": [
+              {
+                "kind": "WorkScope",
+                "id": "funded-work",
+                "version": "1"
+              }
+            ]
+          },
+          {
+            "kind": "project",
+            "ref": {
+              "kind": "Project",
+              "id": "prior-project",
+              "version": "1"
+            },
+            "coverage_refs": [
+              {
+                "kind": "WorkScope",
+                "id": "prior-work",
+                "version": "1"
+              }
+            ]
+          }
+        ],
+        "readable_refs": [],
+        "tool_ids": [],
+        "validity": {
+          "start": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 10
+          },
+          "end": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 30
+          },
+          "bounds": "closed_open"
+        },
+        "basis_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        ]
+      }
+    },
+    {
+      "ref": {
+        "kind": "Authorization",
+        "id": "bank-authority",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "Authorization",
+          "id": "bank-authority",
+          "version": "1"
+        },
+        "organization_id": "bank",
+        "actor_id": "bank-actor",
+        "function_ref": {
+          "kind": "FunctionAssignment",
+          "id": "bank-function",
+          "version": "1"
+        },
+        "action_ids": [
+          "BANK-A04",
+          "BANK-A05",
+          "BANK-A06"
+        ],
+        "scopes": [
+          {
+            "kind": "assessment_case",
+            "ref": {
+              "kind": "OwnerCase",
+              "id": "case",
+              "version": "1"
+            },
+            "coverage_refs": [
+              {
+                "kind": "WorkScope",
+                "id": "funded-work",
+                "version": "1"
+              }
+            ]
+          },
+          {
+            "kind": "project",
+            "ref": {
+              "kind": "Project",
+              "id": "prior-project",
+              "version": "1"
+            },
+            "coverage_refs": [
+              {
+                "kind": "WorkScope",
+                "id": "prior-work",
+                "version": "1"
+              }
+            ]
+          }
+        ],
+        "readable_refs": [],
+        "tool_ids": [],
+        "validity": {
+          "start": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 10
+          },
+          "end": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 30
+          },
+          "bounds": "closed_open"
+        },
+        "basis_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        ]
+      }
+    },
+    {
+      "ref": {
+        "kind": "Authorization",
+        "id": "bank-two-authority",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "Authorization",
+          "id": "bank-two-authority",
+          "version": "1"
+        },
+        "organization_id": "bank-two",
+        "actor_id": "bank-two-actor",
+        "function_ref": {
+          "kind": "FunctionAssignment",
+          "id": "bank-two-function",
+          "version": "1"
+        },
+        "action_ids": [
+          "BANK-A04",
+          "BANK-A05",
+          "BANK-A06"
+        ],
+        "scopes": [
+          {
+            "kind": "assessment_case",
+            "ref": {
+              "kind": "OwnerCase",
+              "id": "case",
+              "version": "1"
+            },
+            "coverage_refs": [
+              {
+                "kind": "WorkScope",
+                "id": "funded-work",
+                "version": "1"
+              }
+            ]
+          },
+          {
+            "kind": "project",
+            "ref": {
+              "kind": "Project",
+              "id": "prior-project",
+              "version": "1"
+            },
+            "coverage_refs": [
+              {
+                "kind": "WorkScope",
+                "id": "prior-work",
+                "version": "1"
+              }
+            ]
+          }
+        ],
+        "readable_refs": [],
+        "tool_ids": [],
+        "validity": {
+          "start": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 10
+          },
+          "end": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 30
+          },
+          "bounds": "closed_open"
+        },
+        "basis_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        ]
+      }
+    },
+    {
+      "ref": {
+        "kind": "OwnerCase",
+        "id": "case",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "OwnerCase",
+          "id": "case",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        ],
+        "organization_id": "owner",
+        "available_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "status": "active"
+      }
+    },
+    {
+      "ref": {
+        "kind": "Project",
+        "id": "prior-project",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "Project",
+          "id": "prior-project",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        ],
+        "owner_organization_id": "owner",
+        "available_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "status": "active"
+      }
+    },
+    {
+      "ref": {
+        "kind": "WorkScope",
+        "id": "funded-work",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "WorkScope",
+          "id": "funded-work",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        ],
+        "scope_ref": {
+          "kind": "assessment_case",
+          "ref": {
+            "kind": "OwnerCase",
+            "id": "case",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "funded-work",
+              "version": "1"
+            }
+          ]
+        },
+        "organization_id": "owner",
+        "purpose_ref": {
+          "kind": "FundingPurpose",
+          "id": "research",
+          "version": "1"
+        },
+        "available_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "effective_window": {
+          "start": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 10
+          },
+          "end": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 30
+          },
+          "bounds": "closed_open"
+        }
+      }
+    },
+    {
+      "ref": {
+        "kind": "WorkScope",
+        "id": "prior-work",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "WorkScope",
+          "id": "prior-work",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        ],
+        "scope_ref": {
+          "kind": "project",
+          "ref": {
+            "kind": "Project",
+            "id": "prior-project",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "prior-work",
+              "version": "1"
+            }
+          ]
+        },
+        "organization_id": "owner",
+        "purpose_ref": {
+          "kind": "FundingPurpose",
+          "id": "prior-purpose",
+          "version": "1"
+        },
+        "available_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "effective_window": {
+          "start": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 10
+          },
+          "end": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 30
+          },
+          "bounds": "closed_open"
+        }
+      }
+    },
+    {
+      "ref": {
+        "kind": "Organization",
+        "id": "owner",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "Organization",
+          "id": "owner",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        ],
+        "legal_standing": {
+          "state": "known",
+          "value": true
+        },
+        "registration_region_id": {
+          "state": "known",
+          "value": "HK"
+        },
+        "operating_region_ids": {
+          "state": "known",
+          "value": [
+            "HK"
+          ]
+        },
+        "effective_window": {
+          "start": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 10
+          },
+          "end": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 30
+          },
+          "bounds": "closed_open"
+        }
+      }
+    },
+    {
+      "ref": {
+        "kind": "FundingPurpose",
+        "id": "research",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "FundingPurpose",
+          "id": "research",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        ],
+        "borrower_ref": {
+          "kind": "Organization",
+          "id": "owner",
+          "version": "1"
+        },
+        "scope_ref": {
+          "kind": "assessment_case",
+          "ref": {
+            "kind": "OwnerCase",
+            "id": "case",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "funded-work",
+              "version": "1"
+            }
+          ]
+        },
+        "project_region_id": {
+          "state": "known",
+          "value": "HK"
+        },
+        "purpose_code": {
+          "state": "known",
+          "value": "construction"
+        },
+        "stage": {
+          "state": "known",
+          "value": "preparation"
+        },
+        "effective_window": {
+          "start": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 10
+          },
+          "end": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 30
+          },
+          "bounds": "closed_open"
+        }
+      }
+    },
+    {
+      "ref": {
+        "kind": "FundingPurpose",
+        "id": "prior-purpose",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "FundingPurpose",
+          "id": "prior-purpose",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        ],
+        "borrower_ref": {
+          "kind": "Organization",
+          "id": "owner",
+          "version": "1"
+        },
+        "scope_ref": {
+          "kind": "project",
+          "ref": {
+            "kind": "Project",
+            "id": "prior-project",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "prior-work",
+              "version": "1"
+            }
+          ]
+        },
+        "project_region_id": {
+          "state": "known",
+          "value": "HK"
+        },
+        "purpose_code": {
+          "state": "known",
+          "value": "construction"
+        },
+        "stage": {
+          "state": "known",
+          "value": "preparation"
+        },
+        "effective_window": {
+          "start": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 10
+          },
+          "end": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 30
+          },
+          "bounds": "closed_open"
+        }
+      }
+    },
+    {
+      "ref": {
+        "kind": "FinanceProductProfile",
+        "id": "product",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "FinanceProductProfile",
+          "id": "product",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        ],
+        "lender_id": "bank",
+        "effective_window": {
+          "start": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 10
+          },
+          "end": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 30
+          },
+          "bounds": "closed_open"
+        },
+        "allowed_registration_region_ids": {
+          "state": "known",
+          "value": [
+            "HK"
+          ]
+        },
+        "allowed_operating_region_ids": {
+          "state": "known",
+          "value": [
+            "HK"
+          ]
+        },
+        "allowed_project_region_ids": {
+          "state": "known",
+          "value": [
+            "HK"
+          ]
+        },
+        "allowed_purpose_codes": {
+          "state": "known",
+          "value": [
+            "construction"
+          ]
+        },
+        "allowed_stages": {
+          "state": "known",
+          "value": [
+            "preparation"
+          ]
+        },
+        "allowed_currencies": {
+          "state": "known",
+          "value": [
+            "HKD"
+          ]
+        },
+        "minimum_request": {
+          "state": "known",
+          "value": {
+            "value": "1",
+            "currency": "HKD",
+            "basis_ref": {
+              "kind": "Evidence",
+              "id": "synthetic",
+              "version": "1"
+            }
+          }
+        },
+        "maximum_request": {
+          "state": "known",
+          "value": {
+            "value": "200",
+            "currency": "HKD",
+            "basis_ref": {
+              "kind": "Evidence",
+              "id": "synthetic",
+              "version": "1"
+            }
+          }
+        },
+        "required_disclosure_codes": {
+          "state": "known",
+          "value": []
+        },
+        "required_condition_refs": [],
+        "selection_priority": {
+          "state": "known",
+          "value": 1
+        }
+      }
+    },
+    {
+      "ref": {
+        "kind": "FinanceProductProfile",
+        "id": "product-two",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "FinanceProductProfile",
+          "id": "product-two",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        ],
+        "lender_id": "bank-two",
+        "effective_window": {
+          "start": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 10
+          },
+          "end": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 30
+          },
+          "bounds": "closed_open"
+        },
+        "allowed_registration_region_ids": {
+          "state": "known",
+          "value": [
+            "HK"
+          ]
+        },
+        "allowed_operating_region_ids": {
+          "state": "known",
+          "value": [
+            "HK"
+          ]
+        },
+        "allowed_project_region_ids": {
+          "state": "known",
+          "value": [
+            "HK"
+          ]
+        },
+        "allowed_purpose_codes": {
+          "state": "known",
+          "value": [
+            "construction"
+          ]
+        },
+        "allowed_stages": {
+          "state": "known",
+          "value": [
+            "preparation"
+          ]
+        },
+        "allowed_currencies": {
+          "state": "known",
+          "value": [
+            "HKD"
+          ]
+        },
+        "minimum_request": {
+          "state": "known",
+          "value": {
+            "value": "1",
+            "currency": "HKD",
+            "basis_ref": {
+              "kind": "Evidence",
+              "id": "synthetic",
+              "version": "1"
+            }
+          }
+        },
+        "maximum_request": {
+          "state": "known",
+          "value": {
+            "value": "200",
+            "currency": "HKD",
+            "basis_ref": {
+              "kind": "Evidence",
+              "id": "synthetic",
+              "version": "1"
+            }
+          }
+        },
+        "required_disclosure_codes": {
+          "state": "known",
+          "value": []
+        },
+        "required_condition_refs": [],
+        "selection_priority": {
+          "state": "known",
+          "value": 1
+        }
+      }
+    },
+    {
+      "ref": {
+        "kind": "TimeWindow",
+        "id": "period",
+        "version": "1"
+      },
+      "value": {
+        "start": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 12
+        },
+        "end": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 18
+        },
+        "bounds": "closed_open"
+      }
+    },
+    {
+      "ref": {
+        "kind": "TimeWindow",
+        "id": "tenor",
+        "version": "1"
+      },
+      "value": {
+        "start": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 12
+        },
+        "end": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 25
+        },
+        "bounds": "closed_open"
+      }
+    },
+    {
+      "ref": {
+        "kind": "TimeWindow",
+        "id": "validity",
+        "version": "1"
+      },
+      "value": {
+        "start": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "end": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 30
+        },
+        "bounds": "closed_open"
+      }
+    },
+    {
+      "ref": {
+        "kind": "TimeWindow",
+        "id": "revision-period",
+        "version": "1"
+      },
+      "value": {
+        "start": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 13
+        },
+        "end": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 18
+        },
+        "bounds": "closed_open"
+      }
+    },
+    {
+      "ref": {
+        "kind": "FundingProfile",
+        "id": "funding",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "FundingProfile",
+          "id": "funding",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        ],
+        "organization_id": "owner",
+        "borrower_id": "owner",
+        "borrower_ref": {
+          "kind": "Organization",
+          "id": "owner",
+          "version": "1"
+        },
+        "scope_ref": {
+          "kind": "assessment_case",
+          "ref": {
+            "kind": "OwnerCase",
+            "id": "case",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "funded-work",
+              "version": "1"
+            }
+          ]
+        },
+        "purpose_ref": {
+          "kind": "FundingPurpose",
+          "id": "research",
+          "version": "1"
+        },
+        "authority_ref": {
+          "kind": "Authorization",
+          "id": "owner-authority",
+          "version": "1"
+        },
+        "borrower_authority_ref": {
+          "kind": "Authorization",
+          "id": "owner-authority",
+          "version": "1"
+        },
+        "policy": {
+          "state": "known",
+          "value": "evaluate"
+        },
+        "on_unavailable": {
+          "state": "known",
+          "value": "no_finance"
+        },
+        "source_refs": [
+          {
+            "kind": "FundingSource",
+            "id": "cash",
+            "version": "1"
+          }
+        ],
+        "debt_refs": [
+          {
+            "kind": "Debt",
+            "id": "existing-loan",
+            "version": "1"
+          }
+        ],
+        "obligation_refs": [
+          {
+            "kind": "Obligation",
+            "id": "existing-payment",
+            "version": "1"
+          }
+        ],
+        "arrangement_refs": [
+          {
+            "kind": "FinanceArrangement",
+            "id": "existing-arrangement",
+            "version": "1"
+          }
+        ],
+        "selected_offer_ref": null,
+        "application": {
+          "borrower_id": "owner",
+          "lender_id": "bank",
+          "scope_ref": {
+            "kind": "assessment_case",
+            "ref": {
+              "kind": "OwnerCase",
+              "id": "case",
+              "version": "1"
+            },
+            "coverage_refs": [
+              {
+                "kind": "WorkScope",
+                "id": "funded-work",
+                "version": "1"
+              }
+            ]
+          },
+          "requested": {
+            "value": "50",
+            "currency": "HKD",
+            "basis_ref": {
+              "kind": "Evidence",
+              "id": "synthetic",
+              "version": "1"
+            }
+          },
+          "purpose_ref": {
+            "kind": "FundingPurpose",
+            "id": "research",
+            "version": "1"
+          },
+          "product_candidates": [
+            {
+              "kind": "FinanceProductProfile",
+              "id": "product",
+              "version": "1"
+            }
+          ],
+          "disclosure_refs": [
+            {
+              "kind": "Evidence",
+              "id": "synthetic",
+              "version": "1"
+            }
+          ],
+          "applicant_authority_ref": {
+            "kind": "Authorization",
+            "id": "owner-authority",
+            "version": "1"
+          }
+        },
+        "revision_ref": {
+          "kind": "FundingPlan",
+          "id": "reduced",
+          "version": "1"
+        },
+        "question_refs": [
+          {
+            "kind": "Issue",
+            "id": "price-question",
+            "version": "1"
+          }
+        ],
+        "required_condition_refs": [],
+        "currency": "HKD",
+        "funding_lines": [
+          {
+            "window_ref": {
+              "kind": "TimeWindow",
+              "id": "period",
+              "version": "1"
+            },
+            "source_ref": {
+              "kind": "FundingSource",
+              "id": "cash",
+              "version": "1"
+            },
+            "available": {
+              "state": "known",
+              "value": {
+                "value": "1000",
+                "currency": "HKD",
+                "basis_ref": {
+                  "kind": "Evidence",
+                  "id": "synthetic",
+                  "version": "1"
+                }
+              }
+            },
+            "planned_use": {
+              "state": "known",
+              "value": {
+                "value": "20",
+                "currency": "HKD",
+                "basis_ref": {
+                  "kind": "Evidence",
+                  "id": "synthetic",
+                  "version": "1"
+                }
+              }
+            },
+            "restriction_refs": []
+          }
+        ],
+        "financing_cost_cap": {
+          "state": "known",
+          "value": {
+            "value": "10",
+            "currency": "HKD",
+            "basis_ref": {
+              "kind": "Evidence",
+              "id": "synthetic",
+              "version": "1"
+            }
+          }
+        },
+        "cash_method_ref": {
+          "kind": "Method",
+          "id": "micro.owner.financing_cash_calendar",
+          "version": "1"
+        },
+        "selection_method_ref": {
+          "kind": "Method",
+          "id": "micro.owner.declared_financing_selection",
+          "version": "1"
+        },
+        "as_of": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "coverage": "complete",
+        "effective_window": {
+          "start": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 10
+          },
+          "end": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 30
+          },
+          "bounds": "closed_open"
+        }
+      }
+    },
+    {
+      "ref": {
+        "kind": "Account",
+        "id": "actual-cash",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "Account",
+          "id": "actual-cash",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        ],
+        "organization_id": "owner",
+        "source_ref": {
+          "kind": "FundingSource",
+          "id": "cash",
+          "version": "1"
+        },
+        "currency": "HKD",
+        "region_id": "HK",
+        "actual_cash": {
+          "state": "known",
+          "value": {
+            "value": "100",
+            "currency": "HKD",
+            "basis_ref": {
+              "kind": "Evidence",
+              "id": "synthetic",
+              "version": "1"
+            }
+          }
+        },
+        "restricted_cash": {
+          "state": "known",
+          "value": {
+            "value": "10",
+            "currency": "HKD",
+            "basis_ref": {
+              "kind": "Evidence",
+              "id": "synthetic",
+              "version": "1"
+            }
+          }
+        },
+        "debt_refs": [
+          {
+            "kind": "Debt",
+            "id": "existing-loan",
+            "version": "1"
+          }
+        ],
+        "obligation_refs": [
+          {
+            "kind": "Obligation",
+            "id": "existing-payment",
+            "version": "1"
+          }
+        ],
+        "as_of": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "coverage": "complete"
+      }
+    },
+    {
+      "ref": {
+        "kind": "FundingSource",
+        "id": "cash",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "FundingSource",
+          "id": "cash",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        ],
+        "organization_id": "owner",
+        "account_ref": {
+          "kind": "Account",
+          "id": "actual-cash",
+          "version": "1"
+        },
+        "actual_cash": {
+          "state": "known",
+          "value": {
+            "value": "100",
+            "currency": "HKD",
+            "basis_ref": {
+              "kind": "Evidence",
+              "id": "synthetic",
+              "version": "1"
+            }
+          }
+        },
+        "restricted_cash": {
+          "state": "known",
+          "value": {
+            "value": "10",
+            "currency": "HKD",
+            "basis_ref": {
+              "kind": "Evidence",
+              "id": "synthetic",
+              "version": "1"
+            }
+          }
+        },
+        "restriction_refs": [],
+        "releases": [
+          {
+            "ref": {
+              "kind": "FundingRelease",
+              "id": "approved",
+              "version": "1"
+            },
+            "source_ref": {
+              "kind": "FundingSource",
+              "id": "cash",
+              "version": "1"
+            },
+            "time": {
+              "clock_ref": {
+                "kind": "ClockProfile",
+                "id": "business",
+                "version": "1"
+              },
+              "offset": 20
+            },
+            "amount": {
+              "state": "known",
+              "value": {
+                "value": "100",
+                "currency": "HKD",
+                "basis_ref": {
+                  "kind": "Evidence",
+                  "id": "synthetic",
+                  "version": "1"
+                }
+              }
+            },
+            "state": "committed",
+            "approval_ref": {
+              "kind": "FundingApproval",
+              "id": "nonbank",
+              "version": "1"
+            },
+            "condition_refs": [],
+            "available_at": {
+              "clock_ref": {
+                "kind": "ClockProfile",
+                "id": "business",
+                "version": "1"
+              },
+              "offset": 10
+            }
+          }
+        ],
+        "as_of": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "coverage": "complete"
+      }
+    },
+    {
+      "ref": {
+        "kind": "FundingApproval",
+        "id": "nonbank",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "FundingApproval",
+          "id": "nonbank",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        ],
+        "source_ref": {
+          "kind": "FundingSource",
+          "id": "cash",
+          "version": "1"
+        },
+        "organization_id": "owner",
+        "scope_ref": {
+          "kind": "assessment_case",
+          "ref": {
+            "kind": "OwnerCase",
+            "id": "case",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "funded-work",
+              "version": "1"
+            }
+          ]
+        },
+        "purpose_ref": {
+          "kind": "FundingPurpose",
+          "id": "research",
+          "version": "1"
+        },
+        "amount": {
+          "value": "100",
+          "currency": "HKD",
+          "basis_ref": {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        },
+        "release_time": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 20
+        },
+        "approved": {
+          "state": "known",
+          "value": true
+        },
+        "available_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "effective_window": {
+          "start": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 10
+          },
+          "end": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 30
+          },
+          "bounds": "closed_open"
+        }
+      }
+    },
+    {
+      "ref": {
+        "kind": "Debt",
+        "id": "existing-loan",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "Debt",
+          "id": "existing-loan",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        ],
+        "borrower_id": "owner",
+        "lender_id": "bank",
+        "arrangement_ref": {
+          "kind": "FinanceArrangement",
+          "id": "existing-arrangement",
+          "version": "1"
+        },
+        "origin_scope": {
+          "kind": "project",
+          "ref": {
+            "kind": "Project",
+            "id": "prior-project",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "prior-work",
+              "version": "1"
+            }
+          ]
+        },
+        "outstanding_principal": {
+          "state": "known",
+          "value": {
+            "value": "15",
+            "currency": "HKD",
+            "basis_ref": {
+              "kind": "Evidence",
+              "id": "synthetic",
+              "version": "1"
+            }
+          }
+        },
+        "obligation_refs": [
+          {
+            "kind": "Obligation",
+            "id": "existing-payment",
+            "version": "1"
+          }
+        ],
+        "as_of": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "coverage": "complete"
+      }
+    },
+    {
+      "ref": {
+        "kind": "Obligation",
+        "id": "existing-payment",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "Obligation",
+          "id": "existing-payment",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        ],
+        "debtor_id": "owner",
+        "payee_id": "bank",
+        "source_ref": {
+          "kind": "FundingSource",
+          "id": "cash",
+          "version": "1"
+        },
+        "origin_scope": {
+          "kind": "project",
+          "ref": {
+            "kind": "Project",
+            "id": "prior-project",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "prior-work",
+              "version": "1"
+            }
+          ]
+        },
+        "debt_ref": {
+          "kind": "Debt",
+          "id": "existing-loan",
+          "version": "1"
+        },
+        "component_refs": [
+          {
+            "kind": "SettlementComponent",
+            "id": "original-principal",
+            "version": "1"
+          }
+        ],
+        "actual_due": {
+          "state": "known",
+          "value": {
+            "value": "20",
+            "currency": "HKD",
+            "basis_ref": {
+              "kind": "Evidence",
+              "id": "synthetic",
+              "version": "1"
+            }
+          }
+        },
+        "actual_paid": {
+          "state": "known",
+          "value": {
+            "value": "5",
+            "currency": "HKD",
+            "basis_ref": {
+              "kind": "Evidence",
+              "id": "synthetic",
+              "version": "1"
+            }
+          }
+        },
+        "due_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 14
+        },
+        "as_of": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 10
+        }
+      }
+    },
+    {
+      "ref": {
+        "kind": "FinanceApplication",
+        "id": "primary-application",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "FinanceApplication",
+          "id": "primary-application",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        ],
+        "borrower_id": "owner",
+        "lender_id": "bank",
+        "scope_ref": {
+          "kind": "assessment_case",
+          "ref": {
+            "kind": "OwnerCase",
+            "id": "case",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "funded-work",
+              "version": "1"
+            }
+          ]
+        },
+        "requested": {
+          "value": "50",
+          "currency": "HKD",
+          "basis_ref": {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        },
+        "purpose_ref": {
+          "kind": "FundingPurpose",
+          "id": "research",
+          "version": "1"
+        },
+        "product_candidates": [
+          {
+            "kind": "FinanceProductProfile",
+            "id": "product",
+            "version": "1"
+          }
+        ],
+        "disclosure_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        ],
+        "applicant_authority_ref": {
+          "kind": "Authorization",
+          "id": "owner-authority",
+          "version": "1"
+        },
+        "borrower_ref": {
+          "kind": "Organization",
+          "id": "owner",
+          "version": "1"
+        },
+        "disclosures": [],
+        "applicant_actor_id": "owner-actor",
+        "applicant_function_ref": {
+          "kind": "FunctionAssignment",
+          "id": "owner-function",
+          "version": "1"
+        },
+        "originating_action_id": "OWN-A05",
+        "submitted_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "status": "submitted"
+      }
+    },
+    {
+      "ref": {
+        "kind": "FinanceOffer",
+        "id": "primary",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "FinanceOffer",
+          "id": "primary",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        ],
+        "lender_id": "bank",
+        "application_ref": {
+          "kind": "FinanceApplication",
+          "id": "primary-application",
+          "version": "1"
+        },
+        "scope_ref": {
+          "kind": "assessment_case",
+          "ref": {
+            "kind": "OwnerCase",
+            "id": "case",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "funded-work",
+              "version": "1"
+            }
+          ]
+        },
+        "author_actor_id": "bank-actor",
+        "author_function_ref": {
+          "kind": "FunctionAssignment",
+          "id": "bank-function",
+          "version": "1"
+        },
+        "authority_ref": {
+          "kind": "Authorization",
+          "id": "bank-authority",
+          "version": "1"
+        },
+        "originating_action_id": "BANK-A04",
+        "terms": {
+          "borrower_id": "owner",
+          "product_ref": {
+            "kind": "FinanceProductProfile",
+            "id": "product",
+            "version": "1"
+          },
+          "principal_limit": {
+            "value": "50",
+            "currency": "HKD",
+            "basis_ref": {
+              "kind": "Evidence",
+              "id": "synthetic",
+              "version": "1"
+            }
+          },
+          "purpose_ref": {
+            "kind": "FundingPurpose",
+            "id": "research",
+            "version": "1"
+          },
+          "tenor_ref": {
+            "kind": "TimeWindow",
+            "id": "tenor",
+            "version": "1"
+          },
+          "pricing_ref": {
+            "kind": "PricingRule",
+            "id": "primary-interest",
+            "version": "1"
+          },
+          "fee_rule_refs": [
+            {
+              "kind": "FeeRule",
+              "id": "primary-fee",
+              "version": "1"
+            }
+          ],
+          "repayment_rule_ref": {
+            "kind": "RepaymentRule",
+            "id": "primary-principal",
+            "version": "1"
+          },
+          "validity_ref": {
+            "kind": "TimeWindow",
+            "id": "validity",
+            "version": "1"
+          },
+          "condition_refs": []
+        },
+        "priority": {
+          "state": "known",
+          "value": 1
+        },
+        "status": "offered",
+        "issued_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "available_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "effective_window": {
+          "start": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 10
+          },
+          "end": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 30
+          },
+          "bounds": "closed_open"
+        },
+        "proposed_releases": [
+          {
+            "local_key": "draw",
+            "source_ref": {
+              "kind": "FundingSource",
+              "id": "cash",
+              "version": "1"
+            },
+            "time": {
+              "clock_ref": {
+                "kind": "ClockProfile",
+                "id": "business",
+                "version": "1"
+              },
+              "offset": 12
+            },
+            "amount": {
+              "value": "50",
+              "currency": "HKD",
+              "basis_ref": {
+                "kind": "Evidence",
+                "id": "synthetic",
+                "version": "1"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "ref": {
+        "kind": "PricingRule",
+        "id": "primary-interest",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "PricingRule",
+          "id": "primary-interest",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        ],
+        "offer_ref": {
+          "kind": "FinanceOffer",
+          "id": "primary",
+          "version": "1"
+        },
+        "borrower_id": "owner",
+        "lender_id": "bank",
+        "scope_ref": {
+          "kind": "assessment_case",
+          "ref": {
+            "kind": "OwnerCase",
+            "id": "case",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "funded-work",
+              "version": "1"
+            }
+          ]
+        },
+        "schedule": {
+          "state": "known",
+          "value": [
+            {
+              "local_key": "interest",
+              "source_ref": {
+                "kind": "FundingSource",
+                "id": "cash",
+                "version": "1"
+              },
+              "time": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 22
+              },
+              "amount": {
+                "value": "5",
+                "currency": "HKD",
+                "basis_ref": {
+                  "kind": "Evidence",
+                  "id": "synthetic",
+                  "version": "1"
+                }
+              }
+            }
+          ]
+        },
+        "coverage": "complete",
+        "available_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "effective_window": {
+          "start": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 10
+          },
+          "end": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 30
+          },
+          "bounds": "closed_open"
+        }
+      }
+    },
+    {
+      "ref": {
+        "kind": "FeeRule",
+        "id": "primary-fee",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "FeeRule",
+          "id": "primary-fee",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        ],
+        "offer_ref": {
+          "kind": "FinanceOffer",
+          "id": "primary",
+          "version": "1"
+        },
+        "borrower_id": "owner",
+        "lender_id": "bank",
+        "scope_ref": {
+          "kind": "assessment_case",
+          "ref": {
+            "kind": "OwnerCase",
+            "id": "case",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "funded-work",
+              "version": "1"
+            }
+          ]
+        },
+        "schedule": {
+          "state": "known",
+          "value": [
+            {
+              "local_key": "fee",
+              "source_ref": {
+                "kind": "FundingSource",
+                "id": "cash",
+                "version": "1"
+              },
+              "time": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 12
+              },
+              "amount": {
+                "value": "2",
+                "currency": "HKD",
+                "basis_ref": {
+                  "kind": "Evidence",
+                  "id": "synthetic",
+                  "version": "1"
+                }
+              }
+            }
+          ]
+        },
+        "coverage": "complete",
+        "available_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "effective_window": {
+          "start": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 10
+          },
+          "end": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 30
+          },
+          "bounds": "closed_open"
+        }
+      }
+    },
+    {
+      "ref": {
+        "kind": "RepaymentRule",
+        "id": "primary-principal",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "RepaymentRule",
+          "id": "primary-principal",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        ],
+        "offer_ref": {
+          "kind": "FinanceOffer",
+          "id": "primary",
+          "version": "1"
+        },
+        "borrower_id": "owner",
+        "lender_id": "bank",
+        "scope_ref": {
+          "kind": "assessment_case",
+          "ref": {
+            "kind": "OwnerCase",
+            "id": "case",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "funded-work",
+              "version": "1"
+            }
+          ]
+        },
+        "schedule": {
+          "state": "known",
+          "value": [
+            {
+              "local_key": "principal",
+              "source_ref": {
+                "kind": "FundingSource",
+                "id": "cash",
+                "version": "1"
+              },
+              "time": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 22
+              },
+              "amount": {
+                "value": "50",
+                "currency": "HKD",
+                "basis_ref": {
+                  "kind": "Evidence",
+                  "id": "synthetic",
+                  "version": "1"
+                }
+              }
+            }
+          ]
+        },
+        "coverage": "complete",
+        "available_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "effective_window": {
+          "start": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 10
+          },
+          "end": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 30
+          },
+          "bounds": "closed_open"
+        }
+      }
+    },
+    {
+      "ref": {
+        "kind": "FinanceApplication",
+        "id": "secondary-application",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "FinanceApplication",
+          "id": "secondary-application",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        ],
+        "borrower_id": "owner",
+        "lender_id": "bank-two",
+        "scope_ref": {
+          "kind": "assessment_case",
+          "ref": {
+            "kind": "OwnerCase",
+            "id": "case",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "funded-work",
+              "version": "1"
+            }
+          ]
+        },
+        "requested": {
+          "value": "50",
+          "currency": "HKD",
+          "basis_ref": {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        },
+        "purpose_ref": {
+          "kind": "FundingPurpose",
+          "id": "research",
+          "version": "1"
+        },
+        "product_candidates": [
+          {
+            "kind": "FinanceProductProfile",
+            "id": "product-two",
+            "version": "1"
+          }
+        ],
+        "disclosure_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        ],
+        "applicant_authority_ref": {
+          "kind": "Authorization",
+          "id": "owner-authority",
+          "version": "1"
+        },
+        "borrower_ref": {
+          "kind": "Organization",
+          "id": "owner",
+          "version": "1"
+        },
+        "disclosures": [],
+        "applicant_actor_id": "owner-actor",
+        "applicant_function_ref": {
+          "kind": "FunctionAssignment",
+          "id": "owner-function",
+          "version": "1"
+        },
+        "originating_action_id": "OWN-A05",
+        "submitted_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "status": "submitted"
+      }
+    },
+    {
+      "ref": {
+        "kind": "FinanceOffer",
+        "id": "secondary",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "FinanceOffer",
+          "id": "secondary",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        ],
+        "lender_id": "bank-two",
+        "application_ref": {
+          "kind": "FinanceApplication",
+          "id": "secondary-application",
+          "version": "1"
+        },
+        "scope_ref": {
+          "kind": "assessment_case",
+          "ref": {
+            "kind": "OwnerCase",
+            "id": "case",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "funded-work",
+              "version": "1"
+            }
+          ]
+        },
+        "author_actor_id": "bank-two-actor",
+        "author_function_ref": {
+          "kind": "FunctionAssignment",
+          "id": "bank-two-function",
+          "version": "1"
+        },
+        "authority_ref": {
+          "kind": "Authorization",
+          "id": "bank-two-authority",
+          "version": "1"
+        },
+        "originating_action_id": "BANK-A04",
+        "terms": {
+          "borrower_id": "owner",
+          "product_ref": {
+            "kind": "FinanceProductProfile",
+            "id": "product-two",
+            "version": "1"
+          },
+          "principal_limit": {
+            "value": "50",
+            "currency": "HKD",
+            "basis_ref": {
+              "kind": "Evidence",
+              "id": "synthetic",
+              "version": "1"
+            }
+          },
+          "purpose_ref": {
+            "kind": "FundingPurpose",
+            "id": "research",
+            "version": "1"
+          },
+          "tenor_ref": {
+            "kind": "TimeWindow",
+            "id": "tenor",
+            "version": "1"
+          },
+          "pricing_ref": {
+            "kind": "PricingRule",
+            "id": "secondary-interest",
+            "version": "1"
+          },
+          "fee_rule_refs": [
+            {
+              "kind": "FeeRule",
+              "id": "secondary-fee",
+              "version": "1"
+            }
+          ],
+          "repayment_rule_ref": {
+            "kind": "RepaymentRule",
+            "id": "secondary-principal",
+            "version": "1"
+          },
+          "validity_ref": {
+            "kind": "TimeWindow",
+            "id": "validity",
+            "version": "1"
+          },
+          "condition_refs": []
+        },
+        "priority": {
+          "state": "known",
+          "value": 2
+        },
+        "status": "offered",
+        "issued_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "available_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "effective_window": {
+          "start": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 10
+          },
+          "end": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 30
+          },
+          "bounds": "closed_open"
+        },
+        "proposed_releases": [
+          {
+            "local_key": "draw",
+            "source_ref": {
+              "kind": "FundingSource",
+              "id": "cash",
+              "version": "1"
+            },
+            "time": {
+              "clock_ref": {
+                "kind": "ClockProfile",
+                "id": "business",
+                "version": "1"
+              },
+              "offset": 12
+            },
+            "amount": {
+              "value": "50",
+              "currency": "HKD",
+              "basis_ref": {
+                "kind": "Evidence",
+                "id": "synthetic",
+                "version": "1"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "ref": {
+        "kind": "PricingRule",
+        "id": "secondary-interest",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "PricingRule",
+          "id": "secondary-interest",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        ],
+        "offer_ref": {
+          "kind": "FinanceOffer",
+          "id": "secondary",
+          "version": "1"
+        },
+        "borrower_id": "owner",
+        "lender_id": "bank-two",
+        "scope_ref": {
+          "kind": "assessment_case",
+          "ref": {
+            "kind": "OwnerCase",
+            "id": "case",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "funded-work",
+              "version": "1"
+            }
+          ]
+        },
+        "schedule": {
+          "state": "known",
+          "value": [
+            {
+              "local_key": "interest",
+              "source_ref": {
+                "kind": "FundingSource",
+                "id": "cash",
+                "version": "1"
+              },
+              "time": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 22
+              },
+              "amount": {
+                "value": "5",
+                "currency": "HKD",
+                "basis_ref": {
+                  "kind": "Evidence",
+                  "id": "synthetic",
+                  "version": "1"
+                }
+              }
+            }
+          ]
+        },
+        "coverage": "complete",
+        "available_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "effective_window": {
+          "start": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 10
+          },
+          "end": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 30
+          },
+          "bounds": "closed_open"
+        }
+      }
+    },
+    {
+      "ref": {
+        "kind": "FeeRule",
+        "id": "secondary-fee",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "FeeRule",
+          "id": "secondary-fee",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        ],
+        "offer_ref": {
+          "kind": "FinanceOffer",
+          "id": "secondary",
+          "version": "1"
+        },
+        "borrower_id": "owner",
+        "lender_id": "bank-two",
+        "scope_ref": {
+          "kind": "assessment_case",
+          "ref": {
+            "kind": "OwnerCase",
+            "id": "case",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "funded-work",
+              "version": "1"
+            }
+          ]
+        },
+        "schedule": {
+          "state": "known",
+          "value": [
+            {
+              "local_key": "fee",
+              "source_ref": {
+                "kind": "FundingSource",
+                "id": "cash",
+                "version": "1"
+              },
+              "time": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 12
+              },
+              "amount": {
+                "value": "2",
+                "currency": "HKD",
+                "basis_ref": {
+                  "kind": "Evidence",
+                  "id": "synthetic",
+                  "version": "1"
+                }
+              }
+            }
+          ]
+        },
+        "coverage": "complete",
+        "available_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "effective_window": {
+          "start": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 10
+          },
+          "end": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 30
+          },
+          "bounds": "closed_open"
+        }
+      }
+    },
+    {
+      "ref": {
+        "kind": "RepaymentRule",
+        "id": "secondary-principal",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "RepaymentRule",
+          "id": "secondary-principal",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        ],
+        "offer_ref": {
+          "kind": "FinanceOffer",
+          "id": "secondary",
+          "version": "1"
+        },
+        "borrower_id": "owner",
+        "lender_id": "bank-two",
+        "scope_ref": {
+          "kind": "assessment_case",
+          "ref": {
+            "kind": "OwnerCase",
+            "id": "case",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "funded-work",
+              "version": "1"
+            }
+          ]
+        },
+        "schedule": {
+          "state": "known",
+          "value": [
+            {
+              "local_key": "principal",
+              "source_ref": {
+                "kind": "FundingSource",
+                "id": "cash",
+                "version": "1"
+              },
+              "time": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 22
+              },
+              "amount": {
+                "value": "50",
+                "currency": "HKD",
+                "basis_ref": {
+                  "kind": "Evidence",
+                  "id": "synthetic",
+                  "version": "1"
+                }
+              }
+            }
+          ]
+        },
+        "coverage": "complete",
+        "available_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "effective_window": {
+          "start": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 10
+          },
+          "end": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 30
+          },
+          "bounds": "closed_open"
+        }
+      }
+    },
+    {
+      "ref": {
+        "kind": "FinanceApplication",
+        "id": "original-application",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "FinanceApplication",
+          "id": "original-application",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        ],
+        "borrower_id": "owner",
+        "lender_id": "bank",
+        "scope_ref": {
+          "kind": "project",
+          "ref": {
+            "kind": "Project",
+            "id": "prior-project",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "prior-work",
+              "version": "1"
+            }
+          ]
+        },
+        "requested": {
+          "value": "20",
+          "currency": "HKD",
+          "basis_ref": {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        },
+        "purpose_ref": {
+          "kind": "FundingPurpose",
+          "id": "prior-purpose",
+          "version": "1"
+        },
+        "product_candidates": [
+          {
+            "kind": "FinanceProductProfile",
+            "id": "product",
+            "version": "1"
+          }
+        ],
+        "disclosure_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        ],
+        "applicant_authority_ref": {
+          "kind": "Authorization",
+          "id": "owner-authority",
+          "version": "1"
+        },
+        "borrower_ref": {
+          "kind": "Organization",
+          "id": "owner",
+          "version": "1"
+        },
+        "disclosures": [],
+        "applicant_actor_id": "owner-actor",
+        "applicant_function_ref": {
+          "kind": "FunctionAssignment",
+          "id": "owner-function",
+          "version": "1"
+        },
+        "originating_action_id": "OWN-A05",
+        "submitted_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "status": "submitted"
+      }
+    },
+    {
+      "ref": {
+        "kind": "FinanceOffer",
+        "id": "original",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "FinanceOffer",
+          "id": "original",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        ],
+        "lender_id": "bank",
+        "application_ref": {
+          "kind": "FinanceApplication",
+          "id": "original-application",
+          "version": "1"
+        },
+        "scope_ref": {
+          "kind": "project",
+          "ref": {
+            "kind": "Project",
+            "id": "prior-project",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "prior-work",
+              "version": "1"
+            }
+          ]
+        },
+        "author_actor_id": "bank-actor",
+        "author_function_ref": {
+          "kind": "FunctionAssignment",
+          "id": "bank-function",
+          "version": "1"
+        },
+        "authority_ref": {
+          "kind": "Authorization",
+          "id": "bank-authority",
+          "version": "1"
+        },
+        "originating_action_id": "BANK-A04",
+        "terms": {
+          "borrower_id": "owner",
+          "product_ref": {
+            "kind": "FinanceProductProfile",
+            "id": "product",
+            "version": "1"
+          },
+          "principal_limit": {
+            "value": "20",
+            "currency": "HKD",
+            "basis_ref": {
+              "kind": "Evidence",
+              "id": "synthetic",
+              "version": "1"
+            }
+          },
+          "purpose_ref": {
+            "kind": "FundingPurpose",
+            "id": "prior-purpose",
+            "version": "1"
+          },
+          "tenor_ref": {
+            "kind": "TimeWindow",
+            "id": "tenor",
+            "version": "1"
+          },
+          "pricing_ref": {
+            "kind": "PricingRule",
+            "id": "original-interest",
+            "version": "1"
+          },
+          "fee_rule_refs": [
+            {
+              "kind": "FeeRule",
+              "id": "original-fee",
+              "version": "1"
+            }
+          ],
+          "repayment_rule_ref": {
+            "kind": "RepaymentRule",
+            "id": "original-principal",
+            "version": "1"
+          },
+          "validity_ref": {
+            "kind": "TimeWindow",
+            "id": "validity",
+            "version": "1"
+          },
+          "condition_refs": []
+        },
+        "priority": {
+          "state": "known",
+          "value": 1
+        },
+        "status": "offered",
+        "issued_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "available_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "effective_window": {
+          "start": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 10
+          },
+          "end": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 30
+          },
+          "bounds": "closed_open"
+        },
+        "proposed_releases": [
+          {
+            "local_key": "draw",
+            "source_ref": {
+              "kind": "FundingSource",
+              "id": "cash",
+              "version": "1"
+            },
+            "time": {
+              "clock_ref": {
+                "kind": "ClockProfile",
+                "id": "business",
+                "version": "1"
+              },
+              "offset": 12
+            },
+            "amount": {
+              "value": "20",
+              "currency": "HKD",
+              "basis_ref": {
+                "kind": "Evidence",
+                "id": "synthetic",
+                "version": "1"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "ref": {
+        "kind": "PricingRule",
+        "id": "original-interest",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "PricingRule",
+          "id": "original-interest",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        ],
+        "offer_ref": {
+          "kind": "FinanceOffer",
+          "id": "original",
+          "version": "1"
+        },
+        "borrower_id": "owner",
+        "lender_id": "bank",
+        "scope_ref": {
+          "kind": "project",
+          "ref": {
+            "kind": "Project",
+            "id": "prior-project",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "prior-work",
+              "version": "1"
+            }
+          ]
+        },
+        "schedule": {
+          "state": "known",
+          "value": [
+            {
+              "local_key": "interest",
+              "source_ref": {
+                "kind": "FundingSource",
+                "id": "cash",
+                "version": "1"
+              },
+              "time": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 22
+              },
+              "amount": {
+                "value": "5",
+                "currency": "HKD",
+                "basis_ref": {
+                  "kind": "Evidence",
+                  "id": "synthetic",
+                  "version": "1"
+                }
+              }
+            }
+          ]
+        },
+        "coverage": "complete",
+        "available_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "effective_window": {
+          "start": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 10
+          },
+          "end": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 30
+          },
+          "bounds": "closed_open"
+        }
+      }
+    },
+    {
+      "ref": {
+        "kind": "FeeRule",
+        "id": "original-fee",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "FeeRule",
+          "id": "original-fee",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        ],
+        "offer_ref": {
+          "kind": "FinanceOffer",
+          "id": "original",
+          "version": "1"
+        },
+        "borrower_id": "owner",
+        "lender_id": "bank",
+        "scope_ref": {
+          "kind": "project",
+          "ref": {
+            "kind": "Project",
+            "id": "prior-project",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "prior-work",
+              "version": "1"
+            }
+          ]
+        },
+        "schedule": {
+          "state": "known",
+          "value": [
+            {
+              "local_key": "fee",
+              "source_ref": {
+                "kind": "FundingSource",
+                "id": "cash",
+                "version": "1"
+              },
+              "time": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 12
+              },
+              "amount": {
+                "value": "2",
+                "currency": "HKD",
+                "basis_ref": {
+                  "kind": "Evidence",
+                  "id": "synthetic",
+                  "version": "1"
+                }
+              }
+            }
+          ]
+        },
+        "coverage": "complete",
+        "available_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "effective_window": {
+          "start": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 10
+          },
+          "end": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 30
+          },
+          "bounds": "closed_open"
+        }
+      }
+    },
+    {
+      "ref": {
+        "kind": "RepaymentRule",
+        "id": "original-principal",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "RepaymentRule",
+          "id": "original-principal",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        ],
+        "offer_ref": {
+          "kind": "FinanceOffer",
+          "id": "original",
+          "version": "1"
+        },
+        "borrower_id": "owner",
+        "lender_id": "bank",
+        "scope_ref": {
+          "kind": "project",
+          "ref": {
+            "kind": "Project",
+            "id": "prior-project",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "prior-work",
+              "version": "1"
+            }
+          ]
+        },
+        "schedule": {
+          "state": "known",
+          "value": [
+            {
+              "local_key": "principal",
+              "source_ref": {
+                "kind": "FundingSource",
+                "id": "cash",
+                "version": "1"
+              },
+              "time": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 22
+              },
+              "amount": {
+                "value": "20",
+                "currency": "HKD",
+                "basis_ref": {
+                  "kind": "Evidence",
+                  "id": "synthetic",
+                  "version": "1"
+                }
+              }
+            }
+          ]
+        },
+        "coverage": "complete",
+        "available_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "effective_window": {
+          "start": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 10
+          },
+          "end": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 30
+          },
+          "bounds": "closed_open"
+        }
+      }
+    },
+    {
+      "ref": {
+        "kind": "PartyAcceptance",
+        "id": "borrower-acceptance",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "PartyAcceptance",
+          "id": "borrower-acceptance",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        ],
+        "offer_ref": {
+          "kind": "FinanceOffer",
+          "id": "original",
+          "version": "1"
+        },
+        "scope_ref": {
+          "kind": "project",
+          "ref": {
+            "kind": "Project",
+            "id": "prior-project",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "prior-work",
+              "version": "1"
+            }
+          ]
+        },
+        "organization_id": "owner",
+        "actor_id": "owner-actor",
+        "function_ref": {
+          "kind": "FunctionAssignment",
+          "id": "owner-function",
+          "version": "1"
+        },
+        "authority_ref": {
+          "kind": "Authorization",
+          "id": "owner-authority",
+          "version": "1"
+        },
+        "action_id": "OWN-A05",
+        "decision": "accept",
+        "accepted_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 10
+        }
+      }
+    },
+    {
+      "ref": {
+        "kind": "PartyAcceptance",
+        "id": "bank-confirmation",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "PartyAcceptance",
+          "id": "bank-confirmation",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        ],
+        "offer_ref": {
+          "kind": "FinanceOffer",
+          "id": "original",
+          "version": "1"
+        },
+        "scope_ref": {
+          "kind": "project",
+          "ref": {
+            "kind": "Project",
+            "id": "prior-project",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "prior-work",
+              "version": "1"
+            }
+          ]
+        },
+        "organization_id": "bank",
+        "actor_id": "bank-actor",
+        "function_ref": {
+          "kind": "FunctionAssignment",
+          "id": "bank-function",
+          "version": "1"
+        },
+        "authority_ref": {
+          "kind": "Authorization",
+          "id": "bank-authority",
+          "version": "1"
+        },
+        "action_id": "BANK-A05",
+        "decision": "accept",
+        "accepted_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 10
+        }
+      }
+    },
+    {
+      "ref": {
+        "kind": "FinanceArrangement",
+        "id": "existing-arrangement",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "FinanceArrangement",
+          "id": "existing-arrangement",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        ],
+        "offer_ref": {
+          "kind": "FinanceOffer",
+          "id": "original",
+          "version": "1"
+        },
+        "borrower_id": "owner",
+        "lender_id": "bank",
+        "scope_ref": {
+          "kind": "project",
+          "ref": {
+            "kind": "Project",
+            "id": "prior-project",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "prior-work",
+              "version": "1"
+            }
+          ]
+        },
+        "source_ref": {
+          "kind": "FundingSource",
+          "id": "cash",
+          "version": "1"
+        },
+        "borrower_acceptance_ref": {
+          "kind": "PartyAcceptance",
+          "id": "borrower-acceptance",
+          "version": "1"
+        },
+        "lender_confirmation_ref": {
+          "kind": "PartyAcceptance",
+          "id": "bank-confirmation",
+          "version": "1"
+        },
+        "undrawn_amount": {
+          "state": "known",
+          "value": {
+            "value": "0",
+            "currency": "HKD",
+            "basis_ref": {
+              "kind": "Evidence",
+              "id": "synthetic",
+              "version": "1"
+            }
+          }
+        },
+        "condition_refs": [],
+        "status": "active",
+        "available_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "effective_window": {
+          "start": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 10
+          },
+          "end": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 30
+          },
+          "bounds": "closed_open"
+        }
+      }
+    },
+    {
+      "ref": {
+        "kind": "FundingPlan",
+        "id": "reduced",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "FundingPlan",
+          "id": "reduced",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        ],
+        "organization_id": "owner",
+        "borrower_id": "owner",
+        "prior_profile_ref": {
+          "kind": "FundingProfile",
+          "id": "funding",
+          "version": "1"
+        },
+        "revised_lines": [
+          {
+            "window_ref": {
+              "kind": "TimeWindow",
+              "id": "revision-period",
+              "version": "1"
+            },
+            "source_ref": {
+              "kind": "FundingSource",
+              "id": "cash",
+              "version": "1"
+            },
+            "available": {
+              "state": "known",
+              "value": {
+                "value": "1000",
+                "currency": "HKD",
+                "basis_ref": {
+                  "kind": "Evidence",
+                  "id": "synthetic",
+                  "version": "1"
+                }
+              }
+            },
+            "planned_use": {
+              "state": "known",
+              "value": {
+                "value": "5",
+                "currency": "HKD",
+                "basis_ref": {
+                  "kind": "Evidence",
+                  "id": "synthetic",
+                  "version": "1"
+                }
+              }
+            },
+            "restriction_refs": []
+          }
+        ],
+        "change_scope": {
+          "scope_ref": {
+            "kind": "assessment_case",
+            "ref": {
+              "kind": "OwnerCase",
+              "id": "case",
+              "version": "1"
+            },
+            "coverage_refs": [
+              {
+                "kind": "WorkScope",
+                "id": "funded-work",
+                "version": "1"
+              }
+            ]
+          },
+          "basis_refs": [
+            {
+              "kind": "Evidence",
+              "id": "synthetic",
+              "version": "1"
+            }
+          ],
+          "condition_refs": []
+        },
+        "authority_ref": {
+          "kind": "Authorization",
+          "id": "owner-authority",
+          "version": "1"
+        },
+        "available_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "effective_window": {
+          "start": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 10
+          },
+          "end": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 30
+          },
+          "bounds": "closed_open"
+        }
+      }
+    },
+    {
+      "ref": {
+        "kind": "BusinessObject",
+        "id": "offer-subject",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "BusinessObject",
+          "id": "offer-subject",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        ],
+        "offer_ref": {
+          "kind": "FinanceOffer",
+          "id": "primary",
+          "version": "1"
+        },
+        "scope_ref": {
+          "kind": "assessment_case",
+          "ref": {
+            "kind": "OwnerCase",
+            "id": "case",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "funded-work",
+              "version": "1"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ref": {
+        "kind": "Issue",
+        "id": "price-question",
+        "version": "1"
+      },
+      "value": {
+        "ref": {
+          "kind": "Issue",
+          "id": "price-question",
+          "version": "1"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic",
+            "version": "1"
+          }
+        ],
+        "profile_ref": {
+          "kind": "FundingProfile",
+          "id": "funding",
+          "version": "1"
+        },
+        "offer_ref": {
+          "kind": "FinanceOffer",
+          "id": "primary",
+          "version": "1"
+        },
+        "subject_ref": {
+          "kind": "BusinessObject",
+          "id": "offer-subject",
+          "version": "1"
+        },
+        "scope_ref": {
+          "kind": "assessment_case",
+          "ref": {
+            "kind": "OwnerCase",
+            "id": "case",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "funded-work",
+              "version": "1"
+            }
+          ]
+        },
+        "local_key": "price",
+        "request": "Please clarify the quoted fixed interest schedule.",
+        "requirement_refs": [],
+        "status": "unresolved",
+        "available_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "effective_window": {
+          "start": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 10
+          },
+          "end": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 30
+          },
+          "bounds": "closed_open"
+        }
+      }
+    }
+  ]
+}

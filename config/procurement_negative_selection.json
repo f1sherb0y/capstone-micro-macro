@@ -1,0 +1,9 @@
+{
+  "schema_version": "procurement-negative-selection-chain.v1",
+  "run_id": "goal3e-negative-selection",
+  "scenarios": {
+    "all_refused": {"decline_all_quotes": true},
+    "accepted_control": {"decline_all_quotes": false}
+  },
+  "boundary": "Only initial supported quote-policy inputs differ. Actual own A05 no-accepted wait drives original negative selection/delay; later A05 consumes that same actual failure. No detailed inquiry delivery, order, inventory or payment is inferred."
+}

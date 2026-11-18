@@ -1,0 +1,21 @@
+{
+  "schema_version": "case0005-payment-continuation.v1",
+  "source_directory": "output/integration/case0005_model_lifecycle_20261026_08",
+  "readiness": "output/integration/case0005_payment_continuation_20261026_01/readiness.json",
+  "source_journal_sha256": "124c7087c26c731bb923c8df2c87f832ed845622bc83b8f5050638acc71ac02c",
+  "source_declaration": "explicit_scenario_assumptions_not_historic_cash",
+  "phase": "supplemental-payment-phase-not-restored-macro-session",
+  "project_id": "CASE-0005",
+  "owner_id": "OWNER-4048bdd520aa7f",
+  "contractor_id": "COMP-0191",
+  "currency": "HKD",
+  "start_tick": 49,
+  "owner_initial_cash": "50000000",
+  "contractor_initial_cash": "0",
+  "opening_paid_for_selected_obligations": "0",
+  "payment_basis": "Scenario supplemental agreement: only the two archived delayed requests are payable at tick 49; no certification issuance or historical transfer is asserted.",
+  "history_coverage": "Complete from this supplemental ledger inception for exactly these two selected obligations; excludes other requests, final-account payment and all real-world cash history.",
+  "request_event_ids": ["EVT000370", "EVT000591"],
+  "per_request_amount": "22000000",
+  "allowed_new_api_attempts": 0
+}

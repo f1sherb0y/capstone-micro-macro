@@ -1,0 +1,30 @@
+{
+  "experiment_id": "micro-org-1118",
+  "source_run": "runs/micro-org-1118",
+  "files_in_archive": 4144,
+  "archive": {
+    "name": "full_run.zip",
+    "bytes": 28438932,
+    "sha256": "616e9a4d43b5b73755eb0a917ee14bc2f04a11590b4e401dd6fa60bd4163eaf7"
+  },
+  "kept_files_sha256": {
+    "experiment.json": "0535d2879d60b2ae5e105575d970fd5f4f371f1f087b1c6fa86acad1175556e0",
+    "REPORT.md": "c01cb93a7e702104eacac4ccfdea099054958db5ecad1cace788f1b51445597d",
+    "summary.json": "289a3ff4252200cd854ed6be85305e0db13994ef384ac27ffd6b1196e270b087",
+    "human_calibration_sheet.csv": "cb305f1f55549a88ce0924c6ea4ec3defa2c152ad956c6b4543c7e725cbe55f0",
+    "human_calibration_key.json": "8729ed6645e90bcd77ca1a5b2b2ad31534f75599bdcd626e6c1d1eecb0f78455"
+  },
+  "excluded_names": [],
+  "code_sha256": {
+    "src/agent_runtime.py": "d2fd3838162122e77080592969aafe928bbf02a1b10be2b8aeb4002fd40687bd",
+    "src/condition_review.py": "96349f2f192b582611e804d778c7dd8daf8587a02d632d8c44d11cf83d7a47c6",
+    "src/verification.py": "be2a261668bff4f00669b2ee8ce061c5017a74c1470e57882f49c95ce5879faa",
+    "src/stages/bid_documents.py": "07a12451cf1e58de1db6f6b02517d3d3c9b07aa6795ce93e45e61600d98bb069",
+    "integration/sessions.py": "5f683c91aba6eff53a8d8b8b7cce02e6cd29fc24a113c7559aff1fe7b89fe6a8",
+    "integration/planning.py": "8903e9ac642652ee20e71778d4e31803eea5fea3a39a52f6093757b147fa9b33",
+    "scripts/micro_org_experiment.py": "da0a14452efc4ff906a6352721d99be3118586ee8b8cd41b0c52d34b55f6a6a2",
+    "scripts/micro_org_judge.py": "66de20b70ec03fd7020de6ad076af76d466c16e33b3d321359d7cf3dbb18b959",
+    "scripts/run_e2e_case.py": "3075d7c3c0f0b010da49779884bc53fed1dc2a0b5e1db377157e5b6b2f5516e6",
+    "config/micro_org_rubric.json": "d7f5da41e60d693bf5a20b3303bc87be896749e49421ebdd2964d177fc2151a5"
+  }
+}

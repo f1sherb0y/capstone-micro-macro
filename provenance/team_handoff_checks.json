@@ -1,0 +1,86 @@
+{
+  "date": "2026-11-15",
+  "tested_code_commit": "6d34bff8d86d9d28ab70e972678d35d07cc50d56",
+  "independent_complete_checkout_tests": {
+    "passed": 512,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "environment": "independently installed Python 3.12 environment; external network blocked during tests"
+  },
+  "fresh_github_clone": {
+    "lfs_objects_downloaded": 10,
+    "lfs_bytes": 487840688,
+    "before_lfs_doctor_rejected_pointer": true,
+    "doctor": {
+      "python": "3.12.13",
+      "missing": [],
+      "asset_errors": [],
+      "independent_root": true,
+      "network_used": false,
+      "resource_note": "Complete collaboration checkout requires Git LFS objects; credentials and temporary runs remain local."
+    },
+    "data_counts": {
+      "hidden_benchmark_project_enterprises.csv": 499,
+      "match_report.csv": 499,
+      "simulation_input_enterprises.csv": 904,
+      "simulation_input_projects.csv": 352
+    },
+    "payload_manifest_entries": 15635,
+    "payload_hash_errors": [],
+    "unavailable_result_entries": [],
+    "steps": [
+      {
+        "step": "doctor",
+        "exit_code": 0,
+        "seconds": 8.44,
+        "stdout": "doctor.log"
+      },
+      {
+        "step": "data",
+        "exit_code": 0,
+        "seconds": 0.08,
+        "stdout": "data.log"
+      },
+      {
+        "step": "tree_integrity",
+        "exit_code": 0,
+        "seconds": 10.69,
+        "stdout": "tree_integrity.log"
+      },
+      {
+        "step": "micro_demo",
+        "exit_code": 0,
+        "seconds": 5.45,
+        "stdout": "micro_demo.log"
+      },
+      {
+        "step": "macro_demo",
+        "exit_code": 0,
+        "seconds": 143.19,
+        "stdout": "macro_demo.log"
+      }
+    ],
+    "micro": {
+      "discussion_messages": 336,
+      "bid_documents": 28,
+      "award_packages": 4
+    },
+    "macro": {
+      "executed_ticks": 1,
+      "checkpoint_created": true,
+      "full_48_tick_rerun": false
+    }
+  },
+  "database": {
+    "schema_version": "capstone-database-asset.v1",
+    "archive": "agent_database.sqlite.gz",
+    "archive_sha256": "57b07888b60b8e6a2097d1f02ac528b50e85b9c20e1d059c83a2678c2d62c8e0",
+    "archive_bytes": 161847096,
+    "destination": "agent_database.sqlite",
+    "uncompressed_sha256": "6c8d6e4fb64180305a0d5ec4ea3c2ab0add5dd3993779ac9289575dfb5794040",
+    "uncompressed_bytes": 2086227968,
+    "retained_database_sha256_after_demos": "6c8d6e4fb64180305a0d5ec4ea3c2ab0add5dd3993779ac9289575dfb5794040"
+  },
+  "research_performance_result": false
+}

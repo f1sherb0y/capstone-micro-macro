@@ -1,0 +1,1781 @@
+{
+  "schema_version": "lifecycle-input-case.v1",
+  "scenario_id": "V3",
+  "case_id": "v3-design-intake-inputs",
+  "origin": "synthetic",
+  "run_id": "synthetic-v3-design-intake",
+  "status": "independent_intake_input_prepared_chain_binding_pending",
+  "source_shapes": [
+    {
+      "path": "tests/test_government_intake.py",
+      "usage": "Source text only; fixture/build_run were not imported or executed."
+    }
+  ],
+  "steps": [
+    {
+      "step_id": "government-procedural-intake",
+      "action_id": "GOV-A02",
+      "operation_id": "v3-intake-11",
+      "input_fixture": {
+        "fixture_version": "synthetic-v3-government-intake.v1",
+        "source_kind": "synthetic",
+        "organization_id": "government",
+        "actor_id": "government-actor",
+        "business_time": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 11
+        },
+        "assumptions": [
+          "All jurisdiction, procedure, eligibility, signatures and materials are explicitly synthetic.",
+          "Received Submission is an independent authored intake input, not generated from an A07 result or native receipt.",
+          "Completeness acceptance is procedural only; actual A07 publication, subsequent technical review, permits and use release remain pending."
+        ],
+        "input": {
+          "scope": {
+            "kind": "assessment_case",
+            "ref": {
+              "kind": "OwnerCase",
+              "id": "v3-design-case",
+              "version": "1"
+            },
+            "coverage_refs": []
+          },
+          "submission_ref": {
+            "kind": "Submission",
+            "id": "v3-design-submission",
+            "version": "1"
+          },
+          "applicant_id": "owner-actor",
+          "agency_authority_ref": null,
+          "matter_ref": {
+            "kind": "RegulatoryMatter",
+            "id": "v3-building",
+            "version": "1"
+          },
+          "jurisdiction_ref": {
+            "kind": "Jurisdiction",
+            "id": "v3-hk",
+            "version": "1"
+          },
+          "procedure_ref": {
+            "kind": "Procedure",
+            "id": "v3-completeness",
+            "version": "1"
+          },
+          "prior_case_ref": null
+        },
+        "objects": [
+          {
+            "ref": {
+              "kind": "Submission",
+              "id": "v3-design-submission",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Submission",
+                "id": "v3-design-submission",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v3-intake-assumptions",
+                  "version": "1"
+                }
+              ],
+              "scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "v3-design-case",
+                  "version": "1"
+                },
+                "coverage_refs": []
+              },
+              "applicant_id": "owner-actor",
+              "agency_authority_ref": null,
+              "matter_ref": {
+                "kind": "RegulatoryMatter",
+                "id": "v3-building",
+                "version": "1"
+              },
+              "jurisdiction_ref": {
+                "kind": "Jurisdiction",
+                "id": "v3-hk",
+                "version": "1"
+              },
+              "procedure_ref": {
+                "kind": "Procedure",
+                "id": "v3-completeness",
+                "version": "1"
+              },
+              "prior_case_ref": null,
+              "submitter_id": "owner-actor",
+              "recipient_organization_id": "government",
+              "project_region_id": {
+                "state": "known",
+                "value": "HK"
+              },
+              "applicant_registration_region_id": {
+                "state": "known",
+                "value": "HK"
+              },
+              "applicant_operating_region_ids": {
+                "state": "known",
+                "value": [
+                  "HK"
+                ]
+              },
+              "submitted_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "receipt_status": "received",
+              "status": "active",
+              "signed": {
+                "state": "known",
+                "value": true
+              },
+              "applicant_eligible": {
+                "state": "known",
+                "value": true
+              },
+              "materials": [
+                {
+                  "requirement_ref": {
+                    "kind": "InformationRequirement",
+                    "id": "v3-design-document",
+                    "version": "1"
+                  },
+                  "evidence_ref": {
+                    "kind": "Evidence",
+                    "id": "v3-declared-design-material",
+                    "version": "1"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "RegulatoryMatter",
+              "id": "v3-building",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "RegulatoryMatter",
+                "id": "v3-building",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v3-intake-assumptions",
+                  "version": "1"
+                }
+              ],
+              "scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "v3-design-case",
+                  "version": "1"
+                },
+                "coverage_refs": []
+              },
+              "matter_code": "building",
+              "project_region_id": {
+                "state": "known",
+                "value": "HK"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "Jurisdiction",
+              "id": "v3-hk",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Jurisdiction",
+                "id": "v3-hk",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v3-intake-assumptions",
+                  "version": "1"
+                }
+              ],
+              "organization_id": "government",
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 10
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              },
+              "covered_matter_codes": {
+                "state": "known",
+                "value": [
+                  "building"
+                ]
+              },
+              "covered_project_region_ids": {
+                "state": "known",
+                "value": [
+                  "HK"
+                ]
+              },
+              "covered_scopes": [
+                {
+                  "kind": "assessment_case",
+                  "ref": {
+                    "kind": "OwnerCase",
+                    "id": "v3-design-case",
+                    "version": "1"
+                  },
+                  "coverage_refs": []
+                }
+              ],
+              "referral": null,
+              "outside_coverage_rule_ref": {
+                "kind": "Rule",
+                "id": "v3-outside",
+                "version": "1"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "Procedure",
+              "id": "v3-completeness",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Procedure",
+                "id": "v3-completeness",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v3-intake-assumptions",
+                  "version": "1"
+                }
+              ],
+              "matter_ref": {
+                "kind": "RegulatoryMatter",
+                "id": "v3-building",
+                "version": "1"
+              },
+              "jurisdiction_ref": {
+                "kind": "Jurisdiction",
+                "id": "v3-hk",
+                "version": "1"
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 10
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              },
+              "intake_mode": {
+                "state": "known",
+                "value": "completeness"
+              },
+              "requirement_refs": [
+                {
+                  "kind": "InformationRequirement",
+                  "id": "v3-signature",
+                  "version": "1"
+                },
+                {
+                  "kind": "InformationRequirement",
+                  "id": "v3-eligibility",
+                  "version": "1"
+                },
+                {
+                  "kind": "InformationRequirement",
+                  "id": "v3-design-document",
+                  "version": "1"
+                }
+              ],
+              "ineligible_decline_rule_ref": {
+                "kind": "Rule",
+                "id": "v3-ineligible",
+                "version": "1"
+              },
+              "withdrawal_rule_ref": {
+                "kind": "Rule",
+                "id": "v3-withdrawn",
+                "version": "1"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "Rule",
+              "id": "v3-correction",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Rule",
+                "id": "v3-correction",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v3-intake-assumptions",
+                  "version": "1"
+                }
+              ],
+              "scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "v3-design-case",
+                  "version": "1"
+                },
+                "coverage_refs": []
+              },
+              "organization_id": "government",
+              "matter_ref": {
+                "kind": "RegulatoryMatter",
+                "id": "v3-building",
+                "version": "1"
+              },
+              "procedure_ref": {
+                "kind": "Procedure",
+                "id": "v3-completeness",
+                "version": "1"
+              },
+              "purpose": "correction",
+              "recipient_id": null,
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 10
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "Rule",
+              "id": "v3-outside",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Rule",
+                "id": "v3-outside",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v3-intake-assumptions",
+                  "version": "1"
+                }
+              ],
+              "scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "v3-design-case",
+                  "version": "1"
+                },
+                "coverage_refs": []
+              },
+              "organization_id": "government",
+              "matter_ref": {
+                "kind": "RegulatoryMatter",
+                "id": "v3-building",
+                "version": "1"
+              },
+              "procedure_ref": {
+                "kind": "Procedure",
+                "id": "v3-completeness",
+                "version": "1"
+              },
+              "purpose": "decline_outside_coverage",
+              "recipient_id": null,
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 10
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "Rule",
+              "id": "v3-ineligible",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Rule",
+                "id": "v3-ineligible",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v3-intake-assumptions",
+                  "version": "1"
+                }
+              ],
+              "scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "v3-design-case",
+                  "version": "1"
+                },
+                "coverage_refs": []
+              },
+              "organization_id": "government",
+              "matter_ref": {
+                "kind": "RegulatoryMatter",
+                "id": "v3-building",
+                "version": "1"
+              },
+              "procedure_ref": {
+                "kind": "Procedure",
+                "id": "v3-completeness",
+                "version": "1"
+              },
+              "purpose": "decline_ineligible",
+              "recipient_id": null,
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 10
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "Rule",
+              "id": "v3-withdrawn",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Rule",
+                "id": "v3-withdrawn",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v3-intake-assumptions",
+                  "version": "1"
+                }
+              ],
+              "scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "v3-design-case",
+                  "version": "1"
+                },
+                "coverage_refs": []
+              },
+              "organization_id": "government",
+              "matter_ref": {
+                "kind": "RegulatoryMatter",
+                "id": "v3-building",
+                "version": "1"
+              },
+              "procedure_ref": {
+                "kind": "Procedure",
+                "id": "v3-completeness",
+                "version": "1"
+              },
+              "purpose": "withdrawal",
+              "recipient_id": null,
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 10
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "EvidenceTarget",
+              "id": "v3-submitted-material",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "EvidenceTarget",
+                "id": "v3-submitted-material",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v3-intake-assumptions",
+                  "version": "1"
+                }
+              ],
+              "submission_ref": {
+                "kind": "Submission",
+                "id": "v3-design-submission",
+                "version": "1"
+              },
+              "scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "v3-design-case",
+                  "version": "1"
+                },
+                "coverage_refs": []
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "RegulatoryRecipient",
+              "id": "v3-applicant",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "RegulatoryRecipient",
+                "id": "v3-applicant",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v3-intake-assumptions",
+                  "version": "1"
+                }
+              ],
+              "actor_id": "owner-actor",
+              "scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "v3-design-case",
+                  "version": "1"
+                },
+                "coverage_refs": []
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "ResponseRequirement",
+              "id": "v3-response",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "ResponseRequirement",
+                "id": "v3-response",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v3-intake-assumptions",
+                  "version": "1"
+                }
+              ],
+              "rule_ref": {
+                "kind": "Rule",
+                "id": "v3-correction",
+                "version": "1"
+              },
+              "scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "v3-design-case",
+                  "version": "1"
+                },
+                "coverage_refs": []
+              },
+              "description": "Explicit synthetic requirement to correct submitted design material."
+            }
+          },
+          {
+            "ref": {
+              "kind": "InformationRequirement",
+              "id": "v3-signature",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "InformationRequirement",
+                "id": "v3-signature",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v3-intake-assumptions",
+                  "version": "1"
+                }
+              ],
+              "procedure_ref": {
+                "kind": "Procedure",
+                "id": "v3-completeness",
+                "version": "1"
+              },
+              "scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "v3-design-case",
+                  "version": "1"
+                },
+                "coverage_refs": []
+              },
+              "check_kind": "signature",
+              "correction_question": {
+                "scope": {
+                  "kind": "assessment_case",
+                  "ref": {
+                    "kind": "OwnerCase",
+                    "id": "v3-design-case",
+                    "version": "1"
+                  },
+                  "coverage_refs": []
+                },
+                "target_refs": [
+                  {
+                    "kind": "EvidenceTarget",
+                    "id": "v3-submitted-material",
+                    "version": "1"
+                  }
+                ],
+                "question": "Supply the original signature requirement.",
+                "recipient_refs": [
+                  {
+                    "kind": "RegulatoryRecipient",
+                    "id": "v3-applicant",
+                    "version": "1"
+                  }
+                ],
+                "requirement_ref": {
+                  "kind": "Rule",
+                  "id": "v3-correction",
+                  "version": "1"
+                },
+                "response_requirement_ref": {
+                  "kind": "ResponseRequirement",
+                  "id": "v3-response",
+                  "version": "1"
+                },
+                "evidence_refs": [
+                  {
+                    "kind": "Evidence",
+                    "id": "v3-intake-assumptions",
+                    "version": "1"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "InformationRequirement",
+              "id": "v3-eligibility",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "InformationRequirement",
+                "id": "v3-eligibility",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v3-intake-assumptions",
+                  "version": "1"
+                }
+              ],
+              "procedure_ref": {
+                "kind": "Procedure",
+                "id": "v3-completeness",
+                "version": "1"
+              },
+              "scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "v3-design-case",
+                  "version": "1"
+                },
+                "coverage_refs": []
+              },
+              "check_kind": "applicant_eligibility",
+              "correction_question": {
+                "scope": {
+                  "kind": "assessment_case",
+                  "ref": {
+                    "kind": "OwnerCase",
+                    "id": "v3-design-case",
+                    "version": "1"
+                  },
+                  "coverage_refs": []
+                },
+                "target_refs": [
+                  {
+                    "kind": "EvidenceTarget",
+                    "id": "v3-submitted-material",
+                    "version": "1"
+                  }
+                ],
+                "question": "Supply the original applicant_eligibility requirement.",
+                "recipient_refs": [
+                  {
+                    "kind": "RegulatoryRecipient",
+                    "id": "v3-applicant",
+                    "version": "1"
+                  }
+                ],
+                "requirement_ref": {
+                  "kind": "Rule",
+                  "id": "v3-correction",
+                  "version": "1"
+                },
+                "response_requirement_ref": {
+                  "kind": "ResponseRequirement",
+                  "id": "v3-response",
+                  "version": "1"
+                },
+                "evidence_refs": [
+                  {
+                    "kind": "Evidence",
+                    "id": "v3-intake-assumptions",
+                    "version": "1"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "InformationRequirement",
+              "id": "v3-design-document",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "InformationRequirement",
+                "id": "v3-design-document",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v3-intake-assumptions",
+                  "version": "1"
+                }
+              ],
+              "procedure_ref": {
+                "kind": "Procedure",
+                "id": "v3-completeness",
+                "version": "1"
+              },
+              "scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "v3-design-case",
+                  "version": "1"
+                },
+                "coverage_refs": []
+              },
+              "check_kind": "document",
+              "correction_question": {
+                "scope": {
+                  "kind": "assessment_case",
+                  "ref": {
+                    "kind": "OwnerCase",
+                    "id": "v3-design-case",
+                    "version": "1"
+                  },
+                  "coverage_refs": []
+                },
+                "target_refs": [
+                  {
+                    "kind": "EvidenceTarget",
+                    "id": "v3-submitted-material",
+                    "version": "1"
+                  }
+                ],
+                "question": "Supply the original document requirement.",
+                "recipient_refs": [
+                  {
+                    "kind": "RegulatoryRecipient",
+                    "id": "v3-applicant",
+                    "version": "1"
+                  }
+                ],
+                "requirement_ref": {
+                  "kind": "Rule",
+                  "id": "v3-correction",
+                  "version": "1"
+                },
+                "response_requirement_ref": {
+                  "kind": "ResponseRequirement",
+                  "id": "v3-response",
+                  "version": "1"
+                },
+                "evidence_refs": [
+                  {
+                    "kind": "Evidence",
+                    "id": "v3-intake-assumptions",
+                    "version": "1"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "OwnerCase",
+              "id": "v3-design-case",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "OwnerCase",
+                "id": "v3-design-case",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v3-intake-assumptions",
+                  "version": "1"
+                }
+              ],
+              "organization_id": "owner"
+            }
+          },
+          {
+            "ref": {
+              "kind": "Organization",
+              "id": "government",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Organization",
+                "id": "government",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v3-intake-assumptions",
+                  "version": "1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "FunctionAssignment",
+              "id": "government-intake",
+              "version": "1"
+            },
+            "value": {
+              "role": "Government",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "government-intake",
+                "version": "1"
+              },
+              "configuration_version": "1",
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v3-intake-assumptions",
+                  "version": "1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "Evidence",
+              "id": "v3-declared-design-material",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Evidence",
+                "id": "v3-declared-design-material",
+                "version": "1"
+              },
+              "source_kind": "synthetic",
+              "basis_kind": "assumed",
+              "locator": "tests/fixtures/roles/lifecycle_v3_intake_inputs.v1.json#v3-declared-design-material",
+              "content_hash": "23ac4a8282d93a45e05543f7aa2af4c22b0e5b0f642641b08c3fce5242105219",
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 10
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "Evidence",
+              "id": "v3-intake-assumptions",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Evidence",
+                "id": "v3-intake-assumptions",
+                "version": "1"
+              },
+              "source_kind": "synthetic",
+              "basis_kind": "assumed",
+              "locator": "tests/fixtures/roles/lifecycle_v3_intake_inputs.v1.json#v3-intake-assumptions",
+              "content_hash": "296575b277b69b2ecf126f8580cf5b3a1811523a3e1a5c8f5931feb2358b0e64",
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 10
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "Authorization",
+              "id": "v3-government-intake-grant",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Authorization",
+                "id": "v3-government-intake-grant",
+                "version": "1"
+              },
+              "organization_id": "government",
+              "actor_id": "government-actor",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "government-intake",
+                "version": "1"
+              },
+              "action_ids": [
+                "GOV-A02"
+              ],
+              "scopes": [
+                {
+                  "kind": "assessment_case",
+                  "ref": {
+                    "kind": "OwnerCase",
+                    "id": "v3-design-case",
+                    "version": "1"
+                  },
+                  "coverage_refs": []
+                }
+              ],
+              "readable_refs": [
+                {
+                  "kind": "Submission",
+                  "id": "v3-design-submission",
+                  "version": "1"
+                },
+                {
+                  "kind": "RegulatoryMatter",
+                  "id": "v3-building",
+                  "version": "1"
+                },
+                {
+                  "kind": "Jurisdiction",
+                  "id": "v3-hk",
+                  "version": "1"
+                },
+                {
+                  "kind": "Procedure",
+                  "id": "v3-completeness",
+                  "version": "1"
+                },
+                {
+                  "kind": "Rule",
+                  "id": "v3-correction",
+                  "version": "1"
+                },
+                {
+                  "kind": "Rule",
+                  "id": "v3-outside",
+                  "version": "1"
+                },
+                {
+                  "kind": "Rule",
+                  "id": "v3-ineligible",
+                  "version": "1"
+                },
+                {
+                  "kind": "Rule",
+                  "id": "v3-withdrawn",
+                  "version": "1"
+                },
+                {
+                  "kind": "EvidenceTarget",
+                  "id": "v3-submitted-material",
+                  "version": "1"
+                },
+                {
+                  "kind": "RegulatoryRecipient",
+                  "id": "v3-applicant",
+                  "version": "1"
+                },
+                {
+                  "kind": "ResponseRequirement",
+                  "id": "v3-response",
+                  "version": "1"
+                },
+                {
+                  "kind": "InformationRequirement",
+                  "id": "v3-signature",
+                  "version": "1"
+                },
+                {
+                  "kind": "InformationRequirement",
+                  "id": "v3-eligibility",
+                  "version": "1"
+                },
+                {
+                  "kind": "InformationRequirement",
+                  "id": "v3-design-document",
+                  "version": "1"
+                },
+                {
+                  "kind": "OwnerCase",
+                  "id": "v3-design-case",
+                  "version": "1"
+                },
+                {
+                  "kind": "Organization",
+                  "id": "government",
+                  "version": "1"
+                },
+                {
+                  "kind": "FunctionAssignment",
+                  "id": "government-intake",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "v3-declared-design-material",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "v3-intake-assumptions",
+                  "version": "1"
+                },
+                {
+                  "kind": "Authorization",
+                  "id": "v3-government-intake-grant",
+                  "version": "1"
+                },
+                {
+                  "kind": "CandidateSet",
+                  "id": "v3-intake-candidates",
+                  "version": "1"
+                }
+              ],
+              "tool_ids": [],
+              "validity": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 10
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              },
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v3-intake-assumptions",
+                  "version": "1"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "offline_binding": {
+        "schema_factory": "src.actions.contracts.government_objects:government_intake_schemas",
+        "source_note": "Independent authored synthetic GOV-A02 completeness input; actual A07 publication reception binding pending.",
+        "invocation": {
+          "schema_version": "role-contract-invocation.v1",
+          "context": {
+            "run_id": "synthetic-v3-design-intake",
+            "actor_id": "government-actor",
+            "function_ref": {
+              "kind": "FunctionAssignment",
+              "id": "government-intake",
+              "version": "1"
+            },
+            "authorization_refs": [
+              {
+                "kind": "Authorization",
+                "id": "v3-government-intake-grant",
+                "version": "1"
+              }
+            ],
+            "operation_id": "v3-intake-11",
+            "contract_ref": {
+              "kind": "ActionContract",
+              "id": "GOV-A02",
+              "version": "1"
+            },
+            "task_ref": {
+              "kind": "DecisionTask",
+              "id": "v3-intake-task",
+              "version": "1"
+            },
+            "scope": {
+              "kind": "assessment_case",
+              "ref": {
+                "kind": "OwnerCase",
+                "id": "v3-design-case",
+                "version": "1"
+              },
+              "coverage_refs": []
+            },
+            "business_time": {
+              "clock_ref": {
+                "kind": "ClockProfile",
+                "id": "business",
+                "version": "1"
+              },
+              "offset": 11
+            },
+            "read_token": "synthetic-v3-design-intake:intake:read:1",
+            "visible_refs": [
+              {
+                "kind": "Submission",
+                "id": "v3-design-submission",
+                "version": "1"
+              },
+              {
+                "kind": "RegulatoryMatter",
+                "id": "v3-building",
+                "version": "1"
+              },
+              {
+                "kind": "Jurisdiction",
+                "id": "v3-hk",
+                "version": "1"
+              },
+              {
+                "kind": "Procedure",
+                "id": "v3-completeness",
+                "version": "1"
+              },
+              {
+                "kind": "Rule",
+                "id": "v3-correction",
+                "version": "1"
+              },
+              {
+                "kind": "Rule",
+                "id": "v3-outside",
+                "version": "1"
+              },
+              {
+                "kind": "Rule",
+                "id": "v3-ineligible",
+                "version": "1"
+              },
+              {
+                "kind": "Rule",
+                "id": "v3-withdrawn",
+                "version": "1"
+              },
+              {
+                "kind": "EvidenceTarget",
+                "id": "v3-submitted-material",
+                "version": "1"
+              },
+              {
+                "kind": "RegulatoryRecipient",
+                "id": "v3-applicant",
+                "version": "1"
+              },
+              {
+                "kind": "ResponseRequirement",
+                "id": "v3-response",
+                "version": "1"
+              },
+              {
+                "kind": "InformationRequirement",
+                "id": "v3-signature",
+                "version": "1"
+              },
+              {
+                "kind": "InformationRequirement",
+                "id": "v3-eligibility",
+                "version": "1"
+              },
+              {
+                "kind": "InformationRequirement",
+                "id": "v3-design-document",
+                "version": "1"
+              },
+              {
+                "kind": "OwnerCase",
+                "id": "v3-design-case",
+                "version": "1"
+              },
+              {
+                "kind": "Organization",
+                "id": "government",
+                "version": "1"
+              },
+              {
+                "kind": "FunctionAssignment",
+                "id": "government-intake",
+                "version": "1"
+              },
+              {
+                "kind": "Evidence",
+                "id": "v3-declared-design-material",
+                "version": "1"
+              },
+              {
+                "kind": "Evidence",
+                "id": "v3-intake-assumptions",
+                "version": "1"
+              },
+              {
+                "kind": "Authorization",
+                "id": "v3-government-intake-grant",
+                "version": "1"
+              },
+              {
+                "kind": "CandidateSet",
+                "id": "v3-intake-candidates",
+                "version": "1"
+              }
+            ],
+            "candidate_set_ref": {
+              "kind": "CandidateSet",
+              "id": "v3-intake-candidates",
+              "version": "1"
+            },
+            "execution_mode": "offline_fixture"
+          },
+          "execution_path": "deterministic"
+        },
+        "organization_snapshot": {
+          "schema_version": "organization.v2",
+          "run_id": "synthetic-v3-design-intake",
+          "organizations": [
+            {
+              "organization_id": "government",
+              "actor_id": "government-actor",
+              "source_ids": [
+                "synthetic:v3-intake"
+              ],
+              "public_description": "Synthetic V3 procedural intake facts.",
+              "public_location": {
+                "state": "unknown",
+                "reason_code": "synthetic_unsupplied",
+                "missing_refs": []
+              },
+              "members": [],
+              "assignments": [
+                {
+                  "role": "Government",
+                  "function_ref": {
+                    "kind": "FunctionAssignment",
+                    "id": "government-intake",
+                    "version": "1"
+                  },
+                  "configuration_version": "1",
+                  "basis_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "v3-intake-assumptions",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v3-intake-assumptions",
+                  "version": "1"
+                }
+              ]
+            }
+          ],
+          "authorizations": [
+            {
+              "ref": {
+                "kind": "Authorization",
+                "id": "v3-government-intake-grant",
+                "version": "1"
+              },
+              "organization_id": "government",
+              "actor_id": "government-actor",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "government-intake",
+                "version": "1"
+              },
+              "action_ids": [
+                "GOV-A02"
+              ],
+              "scopes": [
+                {
+                  "kind": "assessment_case",
+                  "ref": {
+                    "kind": "OwnerCase",
+                    "id": "v3-design-case",
+                    "version": "1"
+                  },
+                  "coverage_refs": []
+                }
+              ],
+              "readable_refs": [
+                {
+                  "kind": "Submission",
+                  "id": "v3-design-submission",
+                  "version": "1"
+                },
+                {
+                  "kind": "RegulatoryMatter",
+                  "id": "v3-building",
+                  "version": "1"
+                },
+                {
+                  "kind": "Jurisdiction",
+                  "id": "v3-hk",
+                  "version": "1"
+                },
+                {
+                  "kind": "Procedure",
+                  "id": "v3-completeness",
+                  "version": "1"
+                },
+                {
+                  "kind": "Rule",
+                  "id": "v3-correction",
+                  "version": "1"
+                },
+                {
+                  "kind": "Rule",
+                  "id": "v3-outside",
+                  "version": "1"
+                },
+                {
+                  "kind": "Rule",
+                  "id": "v3-ineligible",
+                  "version": "1"
+                },
+                {
+                  "kind": "Rule",
+                  "id": "v3-withdrawn",
+                  "version": "1"
+                },
+                {
+                  "kind": "EvidenceTarget",
+                  "id": "v3-submitted-material",
+                  "version": "1"
+                },
+                {
+                  "kind": "RegulatoryRecipient",
+                  "id": "v3-applicant",
+                  "version": "1"
+                },
+                {
+                  "kind": "ResponseRequirement",
+                  "id": "v3-response",
+                  "version": "1"
+                },
+                {
+                  "kind": "InformationRequirement",
+                  "id": "v3-signature",
+                  "version": "1"
+                },
+                {
+                  "kind": "InformationRequirement",
+                  "id": "v3-eligibility",
+                  "version": "1"
+                },
+                {
+                  "kind": "InformationRequirement",
+                  "id": "v3-design-document",
+                  "version": "1"
+                },
+                {
+                  "kind": "OwnerCase",
+                  "id": "v3-design-case",
+                  "version": "1"
+                },
+                {
+                  "kind": "Organization",
+                  "id": "government",
+                  "version": "1"
+                },
+                {
+                  "kind": "FunctionAssignment",
+                  "id": "government-intake",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "v3-declared-design-material",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "v3-intake-assumptions",
+                  "version": "1"
+                },
+                {
+                  "kind": "Authorization",
+                  "id": "v3-government-intake-grant",
+                  "version": "1"
+                },
+                {
+                  "kind": "CandidateSet",
+                  "id": "v3-intake-candidates",
+                  "version": "1"
+                }
+              ],
+              "tool_ids": [],
+              "validity": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 10
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              },
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v3-intake-assumptions",
+                  "version": "1"
+                }
+              ]
+            }
+          ],
+          "inactive_authorization_refs": []
+        },
+        "source_projection_envelope": {
+          "run_id": "synthetic-v3-design-intake",
+          "macro_version": "synthetic-v3-intake.v1",
+          "state_version": "intake:1",
+          "read_token": "synthetic-v3-design-intake:intake:read:1",
+          "business_time": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 11
+          },
+          "organization_id": "government"
+        },
+        "supplemental_objects": [
+          {
+            "ref": {
+              "kind": "CandidateSet",
+              "id": "v3-intake-candidates",
+              "version": "1"
+            },
+            "value": {
+              "operation_id": "v3-intake-11",
+              "scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "v3-design-case",
+                  "version": "1"
+                },
+                "coverage_refs": []
+              },
+              "as_of": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 11
+              },
+              "candidates": [
+                {
+                  "ref": {
+                    "kind": "Submission",
+                    "id": "v3-design-submission",
+                    "version": "1"
+                  },
+                  "permitted_choices": [
+                    "acknowledge",
+                    "accept_for_processing",
+                    "request_correction",
+                    "decline_processing",
+                    "refer"
+                  ]
+                }
+              ],
+              "search_profile_ref": {
+                "kind": "Profile",
+                "id": "v3-intake-space",
+                "version": "1"
+              }
+            }
+          }
+        ]
+      },
+      "expected_kind": "completed",
+      "expected_choice": "accept_for_processing"
+    }
+  ],
+  "predecessor_requirements": [
+    {
+      "action_id": "ARCHITECT-A07",
+      "status": "actual_publication_and_reception_pending",
+      "requires": [
+        "Original SavedArchitectDeliverable and confirmed accepted publication read_receipt envelope.",
+        "Actual ArchitectDeliverableReceipt mapping exact A07 content/use to Submission material.",
+        "Independent application read_architect_publication and validate_architect_reception callbacks."
+      ],
+      "note": "Assumed document evidence supplied here cannot satisfy the observed native material reception handoff."
+    }
+  ],
+  "dependent_steps": [
+    {
+      "action_id": "ARCHITECT-A05",
+      "required_choices": [
+        "produce",
+        "compare",
+        "request_inputs"
+      ],
+      "status": "original_continuous_inputs_pending"
+    },
+    {
+      "action_id": "ARCHITECT-A07",
+      "required_choices": [
+        "submit",
+        "request_review",
+        "release_for_use"
+      ],
+      "status": "original_continuous_inputs_pending"
+    },
+    {
+      "action_id": "ARCHITECT-A08",
+      "required_choices": [
+        "review",
+        "respond",
+        "propose_revision"
+      ],
+      "status": "original_continuous_inputs_pending"
+    },
+    {
+      "action_id": "ENGINEER-A06",
+      "required_choices": [
+        "assess",
+        "request_evidence",
+        "request_coordination"
+      ],
+      "status": "original_continuous_inputs_pending"
+    },
+    {
+      "action_id": "ENGINEER-A07",
+      "required_choices": [
+        "submit",
+        "sign",
+        "release_for_use"
+      ],
+      "status": "original_continuous_inputs_pending"
+    },
+    {
+      "action_id": "GOV-A06",
+      "required_choices": [
+        "request_supplement",
+        "verify_response",
+        "process_delay"
+      ],
+      "status": "original_continuous_inputs_pending"
+    },
+    {
+      "action_id": "GOV-A08",
+      "required_choices": [
+        "verify",
+        "request_evidence",
+        "request_condition_change"
+      ],
+      "status": "original_continuous_inputs_pending"
+    }
+  ],
+  "remaining_requirements": [
+    "Original design/engineering production and publication with actual authorized inputs.",
+    "Replace independent declared material with legitimately received same-version content using the original A07→GOV-A02 binding.",
+    "Government scheduling/review/supplement/permit inputs, professional opinions and actual delivery/response.",
+    "Native publication/feedback, all original V3 choices and final consolidated verification."
+  ],
+  "limitations": "Inputs and expectation only. No result, original Saved object, native publication receipt, technical approval, registered case or use permission generated."
+}

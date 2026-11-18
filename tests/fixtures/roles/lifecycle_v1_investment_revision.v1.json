@@ -1,0 +1,5073 @@
+{
+  "schema_version": "lifecycle-input-case.v1",
+  "scenario_id": "V1",
+  "case_id": "v1-investment-revision",
+  "origin": "synthetic",
+  "run_id": "synthetic-v1-investment-revision",
+  "status": "input_prepared_execution_pending",
+  "source_fixtures": [
+    {
+      "path": "tests/fixtures/roles/lifecycle_v1_stop_reject.v1.json",
+      "sha256": "a4d5ed6ebee60d1638747a08db6cdb5d474a5d85e844e8aece52656c37534a67"
+    }
+  ],
+  "steps": [
+    {
+      "step_id": "investment-revision",
+      "action_id": "OWN-A03",
+      "operation_id": "v1-investment-revision",
+      "input_fixture": {
+        "schema_version": "synthetic-owner-investment.v1",
+        "origin": "synthetic",
+        "organization_id": "owner",
+        "actor_id": "owner-actor",
+        "business_time": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "fixture-clock",
+            "version": "1"
+          },
+          "offset": 11
+        },
+        "assumptions": [
+          "All forecast intervals, explicit utility weights, professional qualifications, investment/rights conditions, accounts, existing debt and management loads are synthetic host facts.",
+          "A03 only returns a bounded local proposal; it creates no project, budget authorization, received funding, contract, spending or resource reservation.",
+          "Synthetic V1 refusal-path input: same physical private case, action-specific projection/version; independently supplied investment comparison is not a result of stopped research. No execution, new expense, resource reservation, project registration or completed professional research is asserted.",
+          "Current portfolio/funding observations are independently supplied at offset 11; original analysis availability remains offset 10.",
+          "Independent synthetic case: an unresolved whole-comparison issue requires revision. It is not a QS report, author response or investment approval."
+        ],
+        "input": {
+          "case_ref": {
+            "kind": "OwnerCase",
+            "id": "v1-limited-investment-case",
+            "version": "2"
+          },
+          "comparison_ref": {
+            "kind": "OptionComparison",
+            "id": "comparison",
+            "version": "1"
+          },
+          "objective_ref": {
+            "kind": "OwnerObjective",
+            "id": "objective",
+            "version": "1"
+          },
+          "funding_lines": [
+            {
+              "window_ref": {
+                "kind": "TimeWindow",
+                "id": "planned-period",
+                "version": "1"
+              },
+              "source_ref": {
+                "kind": "FundingSource",
+                "id": "actual-account",
+                "version": "1"
+              },
+              "available": {
+                "state": "known",
+                "value": {
+                  "value": "45",
+                  "currency": "HKD",
+                  "basis_ref": {
+                    "kind": "Evidence",
+                    "id": "v1-investment-source",
+                    "version": "1"
+                  }
+                }
+              },
+              "planned_use": {
+                "state": "known",
+                "value": {
+                  "value": "30",
+                  "currency": "HKD",
+                  "basis_ref": {
+                    "kind": "Evidence",
+                    "id": "v1-investment-source",
+                    "version": "1"
+                  }
+                }
+              },
+              "restriction_refs": []
+            }
+          ],
+          "portfolio_ref": {
+            "kind": "OwnerPortfolio",
+            "id": "portfolio",
+            "version": "1"
+          },
+          "registration_profile_ref": {
+            "kind": "ProjectRegistrationProfile",
+            "id": "registration",
+            "version": "1"
+          }
+        },
+        "objects": [
+          {
+            "ref": {
+              "kind": "TimeWindow",
+              "id": "planned-period",
+              "version": "1"
+            },
+            "value": {
+              "start": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "fixture-clock",
+                  "version": "1"
+                },
+                "offset": 12
+              },
+              "end": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "fixture-clock",
+                  "version": "1"
+                },
+                "offset": 18
+              },
+              "bounds": "closed_open"
+            }
+          },
+          {
+            "ref": {
+              "kind": "TimeWindow",
+              "id": "long-period",
+              "version": "1"
+            },
+            "value": {
+              "start": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "fixture-clock",
+                  "version": "1"
+                },
+                "offset": 18
+              },
+              "end": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "fixture-clock",
+                  "version": "1"
+                },
+                "offset": 30
+              },
+              "bounds": "closed_open"
+            }
+          },
+          {
+            "ref": {
+              "kind": "FunctionAssignment",
+              "id": "owner-investment",
+              "version": "1"
+            },
+            "value": {
+              "role": "Owner",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "owner-investment",
+                "version": "1"
+              },
+              "configuration_version": "1",
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "Authorization",
+              "id": "owner-grant",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Authorization",
+                "id": "owner-grant",
+                "version": "1"
+              },
+              "organization_id": "owner",
+              "actor_id": "owner-actor",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "owner-investment",
+                "version": "1"
+              },
+              "action_ids": [
+                "OWN-A03"
+              ],
+              "scopes": [
+                {
+                  "kind": "assessment_case",
+                  "ref": {
+                    "kind": "OwnerCase",
+                    "id": "v1-limited-investment-case",
+                    "version": "2"
+                  },
+                  "coverage_refs": [
+                    {
+                      "kind": "WorkScope",
+                      "id": "build-preparation",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "WorkScope",
+                      "id": "build-investment",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "WorkScope",
+                      "id": "baseline-preparation",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "WorkScope",
+                      "id": "baseline-investment",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "readable_refs": [
+                {
+                  "kind": "TimeWindow",
+                  "id": "planned-period",
+                  "version": "1"
+                },
+                {
+                  "kind": "TimeWindow",
+                  "id": "long-period",
+                  "version": "1"
+                },
+                {
+                  "kind": "FunctionAssignment",
+                  "id": "owner-investment",
+                  "version": "1"
+                },
+                {
+                  "kind": "Authorization",
+                  "id": "owner-grant",
+                  "version": "1"
+                },
+                {
+                  "kind": "FunctionAssignment",
+                  "id": "cost-function",
+                  "version": "1"
+                },
+                {
+                  "kind": "Authorization",
+                  "id": "cost-grant",
+                  "version": "1"
+                },
+                {
+                  "kind": "FunctionAssignment",
+                  "id": "schedule-function",
+                  "version": "1"
+                },
+                {
+                  "kind": "Authorization",
+                  "id": "schedule-grant",
+                  "version": "1"
+                },
+                {
+                  "kind": "OwnerObjective",
+                  "id": "objective",
+                  "version": "1"
+                },
+                {
+                  "kind": "OwnerBrief",
+                  "id": "build-brief",
+                  "version": "1"
+                },
+                {
+                  "kind": "Requirement",
+                  "id": "build-investment_authority",
+                  "version": "1"
+                },
+                {
+                  "kind": "Requirement",
+                  "id": "build-rights",
+                  "version": "1"
+                },
+                {
+                  "kind": "Requirement",
+                  "id": "build-project_registration",
+                  "version": "1"
+                },
+                {
+                  "kind": "OptionAnalysis",
+                  "id": "build-cost",
+                  "version": "1"
+                },
+                {
+                  "kind": "OptionAnalysis",
+                  "id": "build-schedule",
+                  "version": "1"
+                },
+                {
+                  "kind": "OptionAnalysis",
+                  "id": "build-outcome",
+                  "version": "1"
+                },
+                {
+                  "kind": "WorkScope",
+                  "id": "build-investment",
+                  "version": "1"
+                },
+                {
+                  "kind": "InvestmentPlan",
+                  "id": "build-investment",
+                  "version": "1"
+                },
+                {
+                  "kind": "WorkScope",
+                  "id": "build-preparation",
+                  "version": "1"
+                },
+                {
+                  "kind": "InvestmentPlan",
+                  "id": "build-preparation",
+                  "version": "1"
+                },
+                {
+                  "kind": "ProjectOption",
+                  "id": "build",
+                  "version": "1"
+                },
+                {
+                  "kind": "OwnerBrief",
+                  "id": "baseline-brief",
+                  "version": "1"
+                },
+                {
+                  "kind": "Requirement",
+                  "id": "baseline-investment_authority",
+                  "version": "1"
+                },
+                {
+                  "kind": "Requirement",
+                  "id": "baseline-rights",
+                  "version": "1"
+                },
+                {
+                  "kind": "Requirement",
+                  "id": "baseline-project_registration",
+                  "version": "1"
+                },
+                {
+                  "kind": "OptionAnalysis",
+                  "id": "baseline-cost",
+                  "version": "1"
+                },
+                {
+                  "kind": "OptionAnalysis",
+                  "id": "baseline-schedule",
+                  "version": "1"
+                },
+                {
+                  "kind": "OptionAnalysis",
+                  "id": "baseline-outcome",
+                  "version": "1"
+                },
+                {
+                  "kind": "WorkScope",
+                  "id": "baseline-investment",
+                  "version": "1"
+                },
+                {
+                  "kind": "InvestmentPlan",
+                  "id": "baseline-investment",
+                  "version": "1"
+                },
+                {
+                  "kind": "WorkScope",
+                  "id": "baseline-preparation",
+                  "version": "1"
+                },
+                {
+                  "kind": "InvestmentPlan",
+                  "id": "baseline-preparation",
+                  "version": "1"
+                },
+                {
+                  "kind": "ProjectOption",
+                  "id": "baseline",
+                  "version": "1"
+                },
+                {
+                  "kind": "OwnerCase",
+                  "id": "v1-limited-investment-case",
+                  "version": "2"
+                },
+                {
+                  "kind": "OptionComparison",
+                  "id": "comparison",
+                  "version": "1"
+                },
+                {
+                  "kind": "ProjectRegistrationProfile",
+                  "id": "registration",
+                  "version": "1"
+                },
+                {
+                  "kind": "FundingSource",
+                  "id": "actual-account",
+                  "version": "1"
+                },
+                {
+                  "kind": "Obligation",
+                  "id": "existing-other-project-fee",
+                  "version": "1"
+                },
+                {
+                  "kind": "ResourcePool",
+                  "id": "management-pool",
+                  "version": "1"
+                },
+                {
+                  "kind": "OwnerPortfolio",
+                  "id": "portfolio",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                },
+                {
+                  "kind": "CandidateSet",
+                  "id": "investment-reject-candidates",
+                  "version": "1"
+                },
+                {
+                  "kind": "Issue",
+                  "id": "v1-comparison-revision-required",
+                  "version": "1"
+                }
+              ],
+              "tool_ids": [],
+              "validity": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              },
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "FunctionAssignment",
+              "id": "cost-function",
+              "version": "1"
+            },
+            "value": {
+              "role": "QS",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "cost-function",
+                "version": "1"
+              },
+              "configuration_version": "1",
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "Authorization",
+              "id": "cost-grant",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Authorization",
+                "id": "cost-grant",
+                "version": "1"
+              },
+              "organization_id": "cost-consultant",
+              "actor_id": "cost-author",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "cost-function",
+                "version": "1"
+              },
+              "action_ids": [
+                "QS-A03"
+              ],
+              "scopes": [
+                {
+                  "kind": "assessment_case",
+                  "ref": {
+                    "kind": "OwnerCase",
+                    "id": "v1-limited-investment-case",
+                    "version": "2"
+                  },
+                  "coverage_refs": [
+                    {
+                      "kind": "WorkScope",
+                      "id": "build-preparation",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "WorkScope",
+                      "id": "build-investment",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "WorkScope",
+                      "id": "baseline-preparation",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "WorkScope",
+                      "id": "baseline-investment",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "readable_refs": [],
+              "tool_ids": [],
+              "validity": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              },
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "FunctionAssignment",
+              "id": "schedule-function",
+              "version": "1"
+            },
+            "value": {
+              "role": "Architect",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "schedule-function",
+                "version": "1"
+              },
+              "configuration_version": "1",
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "Authorization",
+              "id": "schedule-grant",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Authorization",
+                "id": "schedule-grant",
+                "version": "1"
+              },
+              "organization_id": "schedule-consultant",
+              "actor_id": "schedule-author",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "schedule-function",
+                "version": "1"
+              },
+              "action_ids": [
+                "ARCHITECT-A03"
+              ],
+              "scopes": [
+                {
+                  "kind": "assessment_case",
+                  "ref": {
+                    "kind": "OwnerCase",
+                    "id": "v1-limited-investment-case",
+                    "version": "2"
+                  },
+                  "coverage_refs": [
+                    {
+                      "kind": "WorkScope",
+                      "id": "build-preparation",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "WorkScope",
+                      "id": "build-investment",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "WorkScope",
+                      "id": "baseline-preparation",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "WorkScope",
+                      "id": "baseline-investment",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "readable_refs": [],
+              "tool_ids": [],
+              "validity": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              },
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "OwnerObjective",
+              "id": "objective",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "OwnerObjective",
+                "id": "objective",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ],
+              "organization_id": "owner",
+              "template": "investment_return",
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              },
+              "allowed_region_ids": {
+                "state": "known",
+                "value": [
+                  "HK"
+                ]
+              },
+              "allowed_use_codes": {
+                "state": "known",
+                "value": [
+                  "housing"
+                ]
+              },
+              "signal_rules": {
+                "state": "known",
+                "value": []
+              },
+              "maximum_observation_age": {
+                "state": "known",
+                "value": 30
+              },
+              "new_signal_choice": {
+                "state": "known",
+                "value": "create_case"
+              },
+              "allow_reopen": {
+                "state": "known",
+                "value": false
+              },
+              "criteria": {
+                "state": "known",
+                "value": [
+                  {
+                    "code": "expected_return",
+                    "direction": "maximize",
+                    "weight": "1",
+                    "scale": {
+                      "value": "100",
+                      "unit": "HKD",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "v1-investment-source",
+                        "version": "1"
+                      }
+                    }
+                  },
+                  {
+                    "code": "lifecycle_cost",
+                    "direction": "minimize",
+                    "weight": "1",
+                    "scale": {
+                      "value": "100",
+                      "unit": "HKD",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "v1-investment-source",
+                        "version": "1"
+                      }
+                    }
+                  },
+                  {
+                    "code": "delivery_delay",
+                    "direction": "minimize",
+                    "weight": "1",
+                    "scale": {
+                      "value": "10",
+                      "unit": "ticks",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "v1-investment-source",
+                        "version": "1"
+                      }
+                    }
+                  },
+                  {
+                    "code": "risk",
+                    "direction": "minimize",
+                    "weight": "1",
+                    "scale": {
+                      "value": "1",
+                      "unit": "ratio",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "v1-investment-source",
+                        "version": "1"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "OwnerBrief",
+              "id": "build-brief",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "OwnerBrief",
+                "id": "build-brief",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ],
+              "organization_id": "owner",
+              "case_ref": {
+                "kind": "OwnerCase",
+                "id": "v1-limited-investment-case",
+                "version": "2"
+              },
+              "objective_ref": {
+                "kind": "OwnerObjective",
+                "id": "objective",
+                "version": "1"
+              },
+              "brief": {
+                "purpose_ref": {
+                  "kind": "PurposeProfile",
+                  "id": "purpose",
+                  "version": "1"
+                },
+                "region_ids": [
+                  "HK"
+                ],
+                "intervention": "new_build",
+                "scale": {
+                  "lower": {
+                    "state": "known",
+                    "value": {
+                      "value": "100",
+                      "unit": "m2",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "v1-investment-source",
+                        "version": "1"
+                      }
+                    }
+                  },
+                  "upper": {
+                    "state": "known",
+                    "value": {
+                      "value": "200",
+                      "unit": "m2",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "v1-investment-source",
+                        "version": "1"
+                      }
+                    }
+                  },
+                  "basis_ref": {
+                    "kind": "ScaleMethod",
+                    "id": "scale",
+                    "version": "1"
+                  }
+                },
+                "delivery_window_ref": {
+                  "kind": "TimeWindow",
+                  "id": "delivery",
+                  "version": "1"
+                },
+                "alternatives": [],
+                "rights_refs": [],
+                "unresolved_refs": []
+              },
+              "status": "active",
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "fixture-clock",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "Requirement",
+              "id": "build-investment_authority",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Requirement",
+                "id": "build-investment_authority",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ],
+              "organization_id": "owner",
+              "responsible_id": "owner",
+              "case_ref": {
+                "kind": "OwnerCase",
+                "id": "v1-limited-investment-case",
+                "version": "2"
+              },
+              "option_ref": {
+                "kind": "ProjectOption",
+                "id": "build",
+                "version": "1"
+              },
+              "scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "v1-limited-investment-case",
+                  "version": "2"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "build-preparation",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "WorkScope",
+                    "id": "build-investment",
+                    "version": "1"
+                  }
+                ]
+              },
+              "condition_code": "investment_authority",
+              "verification": "met",
+              "verification_evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ],
+              "verifier_actor_id": "owner-actor",
+              "verifier_function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "owner-investment",
+                "version": "1"
+              },
+              "verifier_authority_ref": {
+                "kind": "Authorization",
+                "id": "owner-grant",
+                "version": "1"
+              },
+              "verifier_action_id": "OWN-A03",
+              "verified_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "fixture-clock",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "Requirement",
+              "id": "build-rights",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Requirement",
+                "id": "build-rights",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ],
+              "organization_id": "owner",
+              "responsible_id": "owner",
+              "case_ref": {
+                "kind": "OwnerCase",
+                "id": "v1-limited-investment-case",
+                "version": "2"
+              },
+              "option_ref": {
+                "kind": "ProjectOption",
+                "id": "build",
+                "version": "1"
+              },
+              "scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "v1-limited-investment-case",
+                  "version": "2"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "build-preparation",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "WorkScope",
+                    "id": "build-investment",
+                    "version": "1"
+                  }
+                ]
+              },
+              "condition_code": "rights",
+              "verification": "met",
+              "verification_evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ],
+              "verifier_actor_id": "owner-actor",
+              "verifier_function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "owner-investment",
+                "version": "1"
+              },
+              "verifier_authority_ref": {
+                "kind": "Authorization",
+                "id": "owner-grant",
+                "version": "1"
+              },
+              "verifier_action_id": "OWN-A03",
+              "verified_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "fixture-clock",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "Requirement",
+              "id": "build-project_registration",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Requirement",
+                "id": "build-project_registration",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ],
+              "organization_id": "owner",
+              "responsible_id": "owner",
+              "case_ref": {
+                "kind": "OwnerCase",
+                "id": "v1-limited-investment-case",
+                "version": "2"
+              },
+              "option_ref": {
+                "kind": "ProjectOption",
+                "id": "build",
+                "version": "1"
+              },
+              "scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "v1-limited-investment-case",
+                  "version": "2"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "build-preparation",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "WorkScope",
+                    "id": "build-investment",
+                    "version": "1"
+                  }
+                ]
+              },
+              "condition_code": "project_registration",
+              "verification": "met",
+              "verification_evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ],
+              "verifier_actor_id": "owner-actor",
+              "verifier_function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "owner-investment",
+                "version": "1"
+              },
+              "verifier_authority_ref": {
+                "kind": "Authorization",
+                "id": "owner-grant",
+                "version": "1"
+              },
+              "verifier_action_id": "OWN-A03",
+              "verified_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "fixture-clock",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "OptionAnalysis",
+              "id": "build-cost",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "OptionAnalysis",
+                "id": "build-cost",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ],
+              "organization_id": "cost-consultant",
+              "author_actor_id": "cost-author",
+              "author_function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "cost-function",
+                "version": "1"
+              },
+              "authority_ref": {
+                "kind": "Authorization",
+                "id": "cost-grant",
+                "version": "1"
+              },
+              "authority_action_id": "QS-A03",
+              "qualified": {
+                "state": "known",
+                "value": true
+              },
+              "option_ref": {
+                "kind": "ProjectOption",
+                "id": "build",
+                "version": "1"
+              },
+              "brief_ref": {
+                "kind": "OwnerBrief",
+                "id": "build-brief",
+                "version": "1"
+              },
+              "objective_ref": {
+                "kind": "OwnerObjective",
+                "id": "objective",
+                "version": "1"
+              },
+              "analysis_code": "cost",
+              "metrics": [
+                {
+                  "code": "lifecycle_cost",
+                  "value": {
+                    "state": "known",
+                    "value": {
+                      "lower": {
+                        "value": "30",
+                        "unit": "HKD",
+                        "basis_ref": {
+                          "kind": "Evidence",
+                          "id": "v1-investment-source",
+                          "version": "1"
+                        }
+                      },
+                      "upper": {
+                        "value": "30",
+                        "unit": "HKD",
+                        "basis_ref": {
+                          "kind": "Evidence",
+                          "id": "v1-investment-source",
+                          "version": "1"
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              "status": "final",
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "fixture-clock",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "OptionAnalysis",
+              "id": "build-schedule",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "OptionAnalysis",
+                "id": "build-schedule",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ],
+              "organization_id": "schedule-consultant",
+              "author_actor_id": "schedule-author",
+              "author_function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "schedule-function",
+                "version": "1"
+              },
+              "authority_ref": {
+                "kind": "Authorization",
+                "id": "schedule-grant",
+                "version": "1"
+              },
+              "authority_action_id": "ARCHITECT-A03",
+              "qualified": {
+                "state": "known",
+                "value": true
+              },
+              "option_ref": {
+                "kind": "ProjectOption",
+                "id": "build",
+                "version": "1"
+              },
+              "brief_ref": {
+                "kind": "OwnerBrief",
+                "id": "build-brief",
+                "version": "1"
+              },
+              "objective_ref": {
+                "kind": "OwnerObjective",
+                "id": "objective",
+                "version": "1"
+              },
+              "analysis_code": "schedule",
+              "metrics": [
+                {
+                  "code": "delivery_delay",
+                  "value": {
+                    "state": "known",
+                    "value": {
+                      "lower": {
+                        "value": "2",
+                        "unit": "ticks",
+                        "basis_ref": {
+                          "kind": "Evidence",
+                          "id": "v1-investment-source",
+                          "version": "1"
+                        }
+                      },
+                      "upper": {
+                        "value": "2",
+                        "unit": "ticks",
+                        "basis_ref": {
+                          "kind": "Evidence",
+                          "id": "v1-investment-source",
+                          "version": "1"
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              "status": "final",
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "fixture-clock",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "OptionAnalysis",
+              "id": "build-outcome",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "OptionAnalysis",
+                "id": "build-outcome",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ],
+              "organization_id": "owner",
+              "author_actor_id": "owner-actor",
+              "author_function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "owner-investment",
+                "version": "1"
+              },
+              "authority_ref": {
+                "kind": "Authorization",
+                "id": "owner-grant",
+                "version": "1"
+              },
+              "authority_action_id": "OWN-A03",
+              "qualified": {
+                "state": "known",
+                "value": true
+              },
+              "option_ref": {
+                "kind": "ProjectOption",
+                "id": "build",
+                "version": "1"
+              },
+              "brief_ref": {
+                "kind": "OwnerBrief",
+                "id": "build-brief",
+                "version": "1"
+              },
+              "objective_ref": {
+                "kind": "OwnerObjective",
+                "id": "objective",
+                "version": "1"
+              },
+              "analysis_code": "outcome",
+              "metrics": [
+                {
+                  "code": "expected_return",
+                  "value": {
+                    "state": "known",
+                    "value": {
+                      "lower": {
+                        "value": "100",
+                        "unit": "HKD",
+                        "basis_ref": {
+                          "kind": "Evidence",
+                          "id": "v1-investment-source",
+                          "version": "1"
+                        }
+                      },
+                      "upper": {
+                        "value": "100",
+                        "unit": "HKD",
+                        "basis_ref": {
+                          "kind": "Evidence",
+                          "id": "v1-investment-source",
+                          "version": "1"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "code": "risk",
+                  "value": {
+                    "state": "known",
+                    "value": {
+                      "lower": {
+                        "value": "0.1",
+                        "unit": "ratio",
+                        "basis_ref": {
+                          "kind": "Evidence",
+                          "id": "v1-investment-source",
+                          "version": "1"
+                        }
+                      },
+                      "upper": {
+                        "value": "0.1",
+                        "unit": "ratio",
+                        "basis_ref": {
+                          "kind": "Evidence",
+                          "id": "v1-investment-source",
+                          "version": "1"
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              "status": "final",
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "fixture-clock",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "WorkScope",
+              "id": "build-investment",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "WorkScope",
+                "id": "build-investment",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ],
+              "case_ref": {
+                "kind": "OwnerCase",
+                "id": "v1-limited-investment-case",
+                "version": "2"
+              },
+              "option_ref": {
+                "kind": "ProjectOption",
+                "id": "build",
+                "version": "1"
+              },
+              "permitted_choices": [
+                "invest"
+              ],
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "InvestmentPlan",
+              "id": "build-investment",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "InvestmentPlan",
+                "id": "build-investment",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ],
+              "organization_id": "owner",
+              "case_ref": {
+                "kind": "OwnerCase",
+                "id": "v1-limited-investment-case",
+                "version": "2"
+              },
+              "option_ref": {
+                "kind": "ProjectOption",
+                "id": "build",
+                "version": "1"
+              },
+              "choice": "invest",
+              "scope": {
+                "scope_ref": {
+                  "kind": "assessment_case",
+                  "ref": {
+                    "kind": "OwnerCase",
+                    "id": "v1-limited-investment-case",
+                    "version": "2"
+                  },
+                  "coverage_refs": [
+                    {
+                      "kind": "WorkScope",
+                      "id": "build-investment",
+                      "version": "1"
+                    }
+                  ]
+                },
+                "basis_refs": [
+                  {
+                    "kind": "Evidence",
+                    "id": "v1-investment-source",
+                    "version": "1"
+                  }
+                ],
+                "condition_refs": [
+                  {
+                    "kind": "Requirement",
+                    "id": "build-investment_authority",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "Requirement",
+                    "id": "build-rights",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "Requirement",
+                    "id": "build-project_registration",
+                    "version": "1"
+                  }
+                ]
+              },
+              "cash_uses": [
+                {
+                  "local_key": "build-investment-cost",
+                  "source_ref": {
+                    "kind": "FundingSource",
+                    "id": "actual-account",
+                    "version": "1"
+                  },
+                  "window_ref": {
+                    "kind": "TimeWindow",
+                    "id": "planned-period",
+                    "version": "1"
+                  },
+                  "amount": {
+                    "state": "known",
+                    "value": {
+                      "value": "30",
+                      "currency": "HKD",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "v1-investment-source",
+                        "version": "1"
+                      }
+                    }
+                  }
+                }
+              ],
+              "cost_analysis_ref": {
+                "kind": "OptionAnalysis",
+                "id": "build-cost",
+                "version": "1"
+              },
+              "incurred_cost": {
+                "state": "known",
+                "value": {
+                  "value": "0",
+                  "currency": "HKD",
+                  "basis_ref": {
+                    "kind": "Evidence",
+                    "id": "v1-investment-source",
+                    "version": "1"
+                  }
+                }
+              },
+              "expenditure_cap": {
+                "state": "known",
+                "value": {
+                  "value": "30",
+                  "currency": "HKD",
+                  "basis_ref": {
+                    "kind": "Evidence",
+                    "id": "v1-investment-source",
+                    "version": "1"
+                  }
+                }
+              },
+              "allocations": [
+                {
+                  "resource_ref": {
+                    "kind": "ResourcePool",
+                    "id": "management-pool",
+                    "version": "1"
+                  },
+                  "window_ref": {
+                    "kind": "TimeWindow",
+                    "id": "planned-period",
+                    "version": "1"
+                  },
+                  "quantity": {
+                    "state": "known",
+                    "value": {
+                      "value": "1",
+                      "unit": "manager",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "v1-investment-source",
+                        "version": "1"
+                      }
+                    }
+                  }
+                }
+              ],
+              "required_condition_refs": [
+                {
+                  "kind": "Requirement",
+                  "id": "build-investment_authority",
+                  "version": "1"
+                },
+                {
+                  "kind": "Requirement",
+                  "id": "build-rights",
+                  "version": "1"
+                },
+                {
+                  "kind": "Requirement",
+                  "id": "build-project_registration",
+                  "version": "1"
+                }
+              ],
+              "authority_ref": {
+                "kind": "Authorization",
+                "id": "owner-grant",
+                "version": "1"
+              },
+              "permitted": {
+                "state": "known",
+                "value": true
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "fixture-clock",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "WorkScope",
+              "id": "build-preparation",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "WorkScope",
+                "id": "build-preparation",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ],
+              "case_ref": {
+                "kind": "OwnerCase",
+                "id": "v1-limited-investment-case",
+                "version": "2"
+              },
+              "option_ref": {
+                "kind": "ProjectOption",
+                "id": "build",
+                "version": "1"
+              },
+              "permitted_choices": [
+                "authorize_preparation"
+              ],
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "InvestmentPlan",
+              "id": "build-preparation",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "InvestmentPlan",
+                "id": "build-preparation",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ],
+              "organization_id": "owner",
+              "case_ref": {
+                "kind": "OwnerCase",
+                "id": "v1-limited-investment-case",
+                "version": "2"
+              },
+              "option_ref": {
+                "kind": "ProjectOption",
+                "id": "build",
+                "version": "1"
+              },
+              "choice": "authorize_preparation",
+              "scope": {
+                "scope_ref": {
+                  "kind": "assessment_case",
+                  "ref": {
+                    "kind": "OwnerCase",
+                    "id": "v1-limited-investment-case",
+                    "version": "2"
+                  },
+                  "coverage_refs": [
+                    {
+                      "kind": "WorkScope",
+                      "id": "build-preparation",
+                      "version": "1"
+                    }
+                  ]
+                },
+                "basis_refs": [
+                  {
+                    "kind": "Evidence",
+                    "id": "v1-investment-source",
+                    "version": "1"
+                  }
+                ],
+                "condition_refs": [
+                  {
+                    "kind": "Requirement",
+                    "id": "build-investment_authority",
+                    "version": "1"
+                  }
+                ]
+              },
+              "cash_uses": [
+                {
+                  "local_key": "build-preparation-cost",
+                  "source_ref": {
+                    "kind": "FundingSource",
+                    "id": "actual-account",
+                    "version": "1"
+                  },
+                  "window_ref": {
+                    "kind": "TimeWindow",
+                    "id": "planned-period",
+                    "version": "1"
+                  },
+                  "amount": {
+                    "state": "known",
+                    "value": {
+                      "value": "2",
+                      "currency": "HKD",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "v1-investment-source",
+                        "version": "1"
+                      }
+                    }
+                  }
+                }
+              ],
+              "cost_analysis_ref": {
+                "kind": "OptionAnalysis",
+                "id": "build-cost",
+                "version": "1"
+              },
+              "incurred_cost": {
+                "state": "known",
+                "value": {
+                  "value": "0",
+                  "currency": "HKD",
+                  "basis_ref": {
+                    "kind": "Evidence",
+                    "id": "v1-investment-source",
+                    "version": "1"
+                  }
+                }
+              },
+              "expenditure_cap": {
+                "state": "known",
+                "value": {
+                  "value": "30",
+                  "currency": "HKD",
+                  "basis_ref": {
+                    "kind": "Evidence",
+                    "id": "v1-investment-source",
+                    "version": "1"
+                  }
+                }
+              },
+              "allocations": [
+                {
+                  "resource_ref": {
+                    "kind": "ResourcePool",
+                    "id": "management-pool",
+                    "version": "1"
+                  },
+                  "window_ref": {
+                    "kind": "TimeWindow",
+                    "id": "planned-period",
+                    "version": "1"
+                  },
+                  "quantity": {
+                    "state": "known",
+                    "value": {
+                      "value": "1",
+                      "unit": "manager",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "v1-investment-source",
+                        "version": "1"
+                      }
+                    }
+                  }
+                }
+              ],
+              "required_condition_refs": [
+                {
+                  "kind": "Requirement",
+                  "id": "build-investment_authority",
+                  "version": "1"
+                }
+              ],
+              "authority_ref": {
+                "kind": "Authorization",
+                "id": "owner-grant",
+                "version": "1"
+              },
+              "permitted": {
+                "state": "known",
+                "value": true
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "fixture-clock",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "ProjectOption",
+              "id": "build",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "ProjectOption",
+                "id": "build",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ],
+              "organization_id": "owner",
+              "case_ref": {
+                "kind": "OwnerCase",
+                "id": "v1-limited-investment-case",
+                "version": "2"
+              },
+              "comparison_ref": {
+                "kind": "OptionComparison",
+                "id": "comparison",
+                "version": "1"
+              },
+              "objective_ref": {
+                "kind": "OwnerObjective",
+                "id": "objective",
+                "version": "1"
+              },
+              "brief_ref": {
+                "kind": "OwnerBrief",
+                "id": "build-brief",
+                "version": "1"
+              },
+              "intervention": "new_build",
+              "analysis_refs": [
+                {
+                  "kind": "OptionAnalysis",
+                  "id": "build-cost",
+                  "version": "1"
+                },
+                {
+                  "kind": "OptionAnalysis",
+                  "id": "build-schedule",
+                  "version": "1"
+                },
+                {
+                  "kind": "OptionAnalysis",
+                  "id": "build-outcome",
+                  "version": "1"
+                }
+              ],
+              "condition_refs": [
+                {
+                  "kind": "Requirement",
+                  "id": "build-investment_authority",
+                  "version": "1"
+                },
+                {
+                  "kind": "Requirement",
+                  "id": "build-rights",
+                  "version": "1"
+                },
+                {
+                  "kind": "Requirement",
+                  "id": "build-project_registration",
+                  "version": "1"
+                }
+              ],
+              "issue_refs": [],
+              "preparation_plan_ref": {
+                "kind": "InvestmentPlan",
+                "id": "build-preparation",
+                "version": "1"
+              },
+              "investment_plan_ref": {
+                "kind": "InvestmentPlan",
+                "id": "build-investment",
+                "version": "1"
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "fixture-clock",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "OwnerBrief",
+              "id": "baseline-brief",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "OwnerBrief",
+                "id": "baseline-brief",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ],
+              "organization_id": "owner",
+              "case_ref": {
+                "kind": "OwnerCase",
+                "id": "v1-limited-investment-case",
+                "version": "2"
+              },
+              "objective_ref": {
+                "kind": "OwnerObjective",
+                "id": "objective",
+                "version": "1"
+              },
+              "brief": {
+                "purpose_ref": {
+                  "kind": "PurposeProfile",
+                  "id": "purpose",
+                  "version": "1"
+                },
+                "region_ids": [
+                  "HK"
+                ],
+                "intervention": "non_build",
+                "scale": {
+                  "lower": {
+                    "state": "known",
+                    "value": {
+                      "value": "100",
+                      "unit": "m2",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "v1-investment-source",
+                        "version": "1"
+                      }
+                    }
+                  },
+                  "upper": {
+                    "state": "known",
+                    "value": {
+                      "value": "200",
+                      "unit": "m2",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "v1-investment-source",
+                        "version": "1"
+                      }
+                    }
+                  },
+                  "basis_ref": {
+                    "kind": "ScaleMethod",
+                    "id": "scale",
+                    "version": "1"
+                  }
+                },
+                "delivery_window_ref": {
+                  "kind": "TimeWindow",
+                  "id": "delivery",
+                  "version": "1"
+                },
+                "alternatives": [],
+                "rights_refs": [],
+                "unresolved_refs": []
+              },
+              "status": "active",
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "fixture-clock",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "Requirement",
+              "id": "baseline-investment_authority",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Requirement",
+                "id": "baseline-investment_authority",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ],
+              "organization_id": "owner",
+              "responsible_id": "owner",
+              "case_ref": {
+                "kind": "OwnerCase",
+                "id": "v1-limited-investment-case",
+                "version": "2"
+              },
+              "option_ref": {
+                "kind": "ProjectOption",
+                "id": "baseline",
+                "version": "1"
+              },
+              "scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "v1-limited-investment-case",
+                  "version": "2"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "baseline-preparation",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "WorkScope",
+                    "id": "baseline-investment",
+                    "version": "1"
+                  }
+                ]
+              },
+              "condition_code": "investment_authority",
+              "verification": "met",
+              "verification_evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ],
+              "verifier_actor_id": "owner-actor",
+              "verifier_function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "owner-investment",
+                "version": "1"
+              },
+              "verifier_authority_ref": {
+                "kind": "Authorization",
+                "id": "owner-grant",
+                "version": "1"
+              },
+              "verifier_action_id": "OWN-A03",
+              "verified_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "fixture-clock",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "Requirement",
+              "id": "baseline-rights",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Requirement",
+                "id": "baseline-rights",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ],
+              "organization_id": "owner",
+              "responsible_id": "owner",
+              "case_ref": {
+                "kind": "OwnerCase",
+                "id": "v1-limited-investment-case",
+                "version": "2"
+              },
+              "option_ref": {
+                "kind": "ProjectOption",
+                "id": "baseline",
+                "version": "1"
+              },
+              "scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "v1-limited-investment-case",
+                  "version": "2"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "baseline-preparation",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "WorkScope",
+                    "id": "baseline-investment",
+                    "version": "1"
+                  }
+                ]
+              },
+              "condition_code": "rights",
+              "verification": "met",
+              "verification_evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ],
+              "verifier_actor_id": "owner-actor",
+              "verifier_function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "owner-investment",
+                "version": "1"
+              },
+              "verifier_authority_ref": {
+                "kind": "Authorization",
+                "id": "owner-grant",
+                "version": "1"
+              },
+              "verifier_action_id": "OWN-A03",
+              "verified_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "fixture-clock",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "Requirement",
+              "id": "baseline-project_registration",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Requirement",
+                "id": "baseline-project_registration",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ],
+              "organization_id": "owner",
+              "responsible_id": "owner",
+              "case_ref": {
+                "kind": "OwnerCase",
+                "id": "v1-limited-investment-case",
+                "version": "2"
+              },
+              "option_ref": {
+                "kind": "ProjectOption",
+                "id": "baseline",
+                "version": "1"
+              },
+              "scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "v1-limited-investment-case",
+                  "version": "2"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "baseline-preparation",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "WorkScope",
+                    "id": "baseline-investment",
+                    "version": "1"
+                  }
+                ]
+              },
+              "condition_code": "project_registration",
+              "verification": "met",
+              "verification_evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ],
+              "verifier_actor_id": "owner-actor",
+              "verifier_function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "owner-investment",
+                "version": "1"
+              },
+              "verifier_authority_ref": {
+                "kind": "Authorization",
+                "id": "owner-grant",
+                "version": "1"
+              },
+              "verifier_action_id": "OWN-A03",
+              "verified_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "fixture-clock",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "OptionAnalysis",
+              "id": "baseline-cost",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "OptionAnalysis",
+                "id": "baseline-cost",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ],
+              "organization_id": "cost-consultant",
+              "author_actor_id": "cost-author",
+              "author_function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "cost-function",
+                "version": "1"
+              },
+              "authority_ref": {
+                "kind": "Authorization",
+                "id": "cost-grant",
+                "version": "1"
+              },
+              "authority_action_id": "QS-A03",
+              "qualified": {
+                "state": "known",
+                "value": true
+              },
+              "option_ref": {
+                "kind": "ProjectOption",
+                "id": "baseline",
+                "version": "1"
+              },
+              "brief_ref": {
+                "kind": "OwnerBrief",
+                "id": "baseline-brief",
+                "version": "1"
+              },
+              "objective_ref": {
+                "kind": "OwnerObjective",
+                "id": "objective",
+                "version": "1"
+              },
+              "analysis_code": "cost",
+              "metrics": [
+                {
+                  "code": "lifecycle_cost",
+                  "value": {
+                    "state": "known",
+                    "value": {
+                      "lower": {
+                        "value": "20",
+                        "unit": "HKD",
+                        "basis_ref": {
+                          "kind": "Evidence",
+                          "id": "v1-investment-source",
+                          "version": "1"
+                        }
+                      },
+                      "upper": {
+                        "value": "20",
+                        "unit": "HKD",
+                        "basis_ref": {
+                          "kind": "Evidence",
+                          "id": "v1-investment-source",
+                          "version": "1"
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              "status": "final",
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "fixture-clock",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "OptionAnalysis",
+              "id": "baseline-schedule",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "OptionAnalysis",
+                "id": "baseline-schedule",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ],
+              "organization_id": "schedule-consultant",
+              "author_actor_id": "schedule-author",
+              "author_function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "schedule-function",
+                "version": "1"
+              },
+              "authority_ref": {
+                "kind": "Authorization",
+                "id": "schedule-grant",
+                "version": "1"
+              },
+              "authority_action_id": "ARCHITECT-A03",
+              "qualified": {
+                "state": "known",
+                "value": true
+              },
+              "option_ref": {
+                "kind": "ProjectOption",
+                "id": "baseline",
+                "version": "1"
+              },
+              "brief_ref": {
+                "kind": "OwnerBrief",
+                "id": "baseline-brief",
+                "version": "1"
+              },
+              "objective_ref": {
+                "kind": "OwnerObjective",
+                "id": "objective",
+                "version": "1"
+              },
+              "analysis_code": "schedule",
+              "metrics": [
+                {
+                  "code": "delivery_delay",
+                  "value": {
+                    "state": "known",
+                    "value": {
+                      "lower": {
+                        "value": "3",
+                        "unit": "ticks",
+                        "basis_ref": {
+                          "kind": "Evidence",
+                          "id": "v1-investment-source",
+                          "version": "1"
+                        }
+                      },
+                      "upper": {
+                        "value": "3",
+                        "unit": "ticks",
+                        "basis_ref": {
+                          "kind": "Evidence",
+                          "id": "v1-investment-source",
+                          "version": "1"
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              "status": "final",
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "fixture-clock",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "OptionAnalysis",
+              "id": "baseline-outcome",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "OptionAnalysis",
+                "id": "baseline-outcome",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ],
+              "organization_id": "owner",
+              "author_actor_id": "owner-actor",
+              "author_function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "owner-investment",
+                "version": "1"
+              },
+              "authority_ref": {
+                "kind": "Authorization",
+                "id": "owner-grant",
+                "version": "1"
+              },
+              "authority_action_id": "OWN-A03",
+              "qualified": {
+                "state": "known",
+                "value": true
+              },
+              "option_ref": {
+                "kind": "ProjectOption",
+                "id": "baseline",
+                "version": "1"
+              },
+              "brief_ref": {
+                "kind": "OwnerBrief",
+                "id": "baseline-brief",
+                "version": "1"
+              },
+              "objective_ref": {
+                "kind": "OwnerObjective",
+                "id": "objective",
+                "version": "1"
+              },
+              "analysis_code": "outcome",
+              "metrics": [
+                {
+                  "code": "expected_return",
+                  "value": {
+                    "state": "known",
+                    "value": {
+                      "lower": {
+                        "value": "5",
+                        "unit": "HKD",
+                        "basis_ref": {
+                          "kind": "Evidence",
+                          "id": "v1-investment-source",
+                          "version": "1"
+                        }
+                      },
+                      "upper": {
+                        "value": "5",
+                        "unit": "HKD",
+                        "basis_ref": {
+                          "kind": "Evidence",
+                          "id": "v1-investment-source",
+                          "version": "1"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "code": "risk",
+                  "value": {
+                    "state": "known",
+                    "value": {
+                      "lower": {
+                        "value": "0.1",
+                        "unit": "ratio",
+                        "basis_ref": {
+                          "kind": "Evidence",
+                          "id": "v1-investment-source",
+                          "version": "1"
+                        }
+                      },
+                      "upper": {
+                        "value": "0.1",
+                        "unit": "ratio",
+                        "basis_ref": {
+                          "kind": "Evidence",
+                          "id": "v1-investment-source",
+                          "version": "1"
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              "status": "final",
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "fixture-clock",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "WorkScope",
+              "id": "baseline-investment",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "WorkScope",
+                "id": "baseline-investment",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ],
+              "case_ref": {
+                "kind": "OwnerCase",
+                "id": "v1-limited-investment-case",
+                "version": "2"
+              },
+              "option_ref": {
+                "kind": "ProjectOption",
+                "id": "baseline",
+                "version": "1"
+              },
+              "permitted_choices": [
+                "invest"
+              ],
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "InvestmentPlan",
+              "id": "baseline-investment",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "InvestmentPlan",
+                "id": "baseline-investment",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ],
+              "organization_id": "owner",
+              "case_ref": {
+                "kind": "OwnerCase",
+                "id": "v1-limited-investment-case",
+                "version": "2"
+              },
+              "option_ref": {
+                "kind": "ProjectOption",
+                "id": "baseline",
+                "version": "1"
+              },
+              "choice": "invest",
+              "scope": {
+                "scope_ref": {
+                  "kind": "assessment_case",
+                  "ref": {
+                    "kind": "OwnerCase",
+                    "id": "v1-limited-investment-case",
+                    "version": "2"
+                  },
+                  "coverage_refs": [
+                    {
+                      "kind": "WorkScope",
+                      "id": "baseline-investment",
+                      "version": "1"
+                    }
+                  ]
+                },
+                "basis_refs": [
+                  {
+                    "kind": "Evidence",
+                    "id": "v1-investment-source",
+                    "version": "1"
+                  }
+                ],
+                "condition_refs": [
+                  {
+                    "kind": "Requirement",
+                    "id": "baseline-investment_authority",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "Requirement",
+                    "id": "baseline-rights",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "Requirement",
+                    "id": "baseline-project_registration",
+                    "version": "1"
+                  }
+                ]
+              },
+              "cash_uses": [
+                {
+                  "local_key": "baseline-investment-cost",
+                  "source_ref": {
+                    "kind": "FundingSource",
+                    "id": "actual-account",
+                    "version": "1"
+                  },
+                  "window_ref": {
+                    "kind": "TimeWindow",
+                    "id": "planned-period",
+                    "version": "1"
+                  },
+                  "amount": {
+                    "state": "known",
+                    "value": {
+                      "value": "20",
+                      "currency": "HKD",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "v1-investment-source",
+                        "version": "1"
+                      }
+                    }
+                  }
+                }
+              ],
+              "cost_analysis_ref": {
+                "kind": "OptionAnalysis",
+                "id": "baseline-cost",
+                "version": "1"
+              },
+              "incurred_cost": {
+                "state": "known",
+                "value": {
+                  "value": "0",
+                  "currency": "HKD",
+                  "basis_ref": {
+                    "kind": "Evidence",
+                    "id": "v1-investment-source",
+                    "version": "1"
+                  }
+                }
+              },
+              "expenditure_cap": {
+                "state": "known",
+                "value": {
+                  "value": "20",
+                  "currency": "HKD",
+                  "basis_ref": {
+                    "kind": "Evidence",
+                    "id": "v1-investment-source",
+                    "version": "1"
+                  }
+                }
+              },
+              "allocations": [
+                {
+                  "resource_ref": {
+                    "kind": "ResourcePool",
+                    "id": "management-pool",
+                    "version": "1"
+                  },
+                  "window_ref": {
+                    "kind": "TimeWindow",
+                    "id": "planned-period",
+                    "version": "1"
+                  },
+                  "quantity": {
+                    "state": "known",
+                    "value": {
+                      "value": "1",
+                      "unit": "manager",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "v1-investment-source",
+                        "version": "1"
+                      }
+                    }
+                  }
+                }
+              ],
+              "required_condition_refs": [
+                {
+                  "kind": "Requirement",
+                  "id": "baseline-investment_authority",
+                  "version": "1"
+                },
+                {
+                  "kind": "Requirement",
+                  "id": "baseline-rights",
+                  "version": "1"
+                },
+                {
+                  "kind": "Requirement",
+                  "id": "baseline-project_registration",
+                  "version": "1"
+                }
+              ],
+              "authority_ref": {
+                "kind": "Authorization",
+                "id": "owner-grant",
+                "version": "1"
+              },
+              "permitted": {
+                "state": "known",
+                "value": true
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "fixture-clock",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "WorkScope",
+              "id": "baseline-preparation",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "WorkScope",
+                "id": "baseline-preparation",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ],
+              "case_ref": {
+                "kind": "OwnerCase",
+                "id": "v1-limited-investment-case",
+                "version": "2"
+              },
+              "option_ref": {
+                "kind": "ProjectOption",
+                "id": "baseline",
+                "version": "1"
+              },
+              "permitted_choices": [
+                "authorize_preparation"
+              ],
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "InvestmentPlan",
+              "id": "baseline-preparation",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "InvestmentPlan",
+                "id": "baseline-preparation",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ],
+              "organization_id": "owner",
+              "case_ref": {
+                "kind": "OwnerCase",
+                "id": "v1-limited-investment-case",
+                "version": "2"
+              },
+              "option_ref": {
+                "kind": "ProjectOption",
+                "id": "baseline",
+                "version": "1"
+              },
+              "choice": "authorize_preparation",
+              "scope": {
+                "scope_ref": {
+                  "kind": "assessment_case",
+                  "ref": {
+                    "kind": "OwnerCase",
+                    "id": "v1-limited-investment-case",
+                    "version": "2"
+                  },
+                  "coverage_refs": [
+                    {
+                      "kind": "WorkScope",
+                      "id": "baseline-preparation",
+                      "version": "1"
+                    }
+                  ]
+                },
+                "basis_refs": [
+                  {
+                    "kind": "Evidence",
+                    "id": "v1-investment-source",
+                    "version": "1"
+                  }
+                ],
+                "condition_refs": [
+                  {
+                    "kind": "Requirement",
+                    "id": "baseline-investment_authority",
+                    "version": "1"
+                  }
+                ]
+              },
+              "cash_uses": [
+                {
+                  "local_key": "baseline-preparation-cost",
+                  "source_ref": {
+                    "kind": "FundingSource",
+                    "id": "actual-account",
+                    "version": "1"
+                  },
+                  "window_ref": {
+                    "kind": "TimeWindow",
+                    "id": "planned-period",
+                    "version": "1"
+                  },
+                  "amount": {
+                    "state": "known",
+                    "value": {
+                      "value": "2",
+                      "currency": "HKD",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "v1-investment-source",
+                        "version": "1"
+                      }
+                    }
+                  }
+                }
+              ],
+              "cost_analysis_ref": {
+                "kind": "OptionAnalysis",
+                "id": "baseline-cost",
+                "version": "1"
+              },
+              "incurred_cost": {
+                "state": "known",
+                "value": {
+                  "value": "0",
+                  "currency": "HKD",
+                  "basis_ref": {
+                    "kind": "Evidence",
+                    "id": "v1-investment-source",
+                    "version": "1"
+                  }
+                }
+              },
+              "expenditure_cap": {
+                "state": "known",
+                "value": {
+                  "value": "20",
+                  "currency": "HKD",
+                  "basis_ref": {
+                    "kind": "Evidence",
+                    "id": "v1-investment-source",
+                    "version": "1"
+                  }
+                }
+              },
+              "allocations": [
+                {
+                  "resource_ref": {
+                    "kind": "ResourcePool",
+                    "id": "management-pool",
+                    "version": "1"
+                  },
+                  "window_ref": {
+                    "kind": "TimeWindow",
+                    "id": "planned-period",
+                    "version": "1"
+                  },
+                  "quantity": {
+                    "state": "known",
+                    "value": {
+                      "value": "1",
+                      "unit": "manager",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "v1-investment-source",
+                        "version": "1"
+                      }
+                    }
+                  }
+                }
+              ],
+              "required_condition_refs": [
+                {
+                  "kind": "Requirement",
+                  "id": "baseline-investment_authority",
+                  "version": "1"
+                }
+              ],
+              "authority_ref": {
+                "kind": "Authorization",
+                "id": "owner-grant",
+                "version": "1"
+              },
+              "permitted": {
+                "state": "known",
+                "value": true
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "fixture-clock",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "ProjectOption",
+              "id": "baseline",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "ProjectOption",
+                "id": "baseline",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ],
+              "organization_id": "owner",
+              "case_ref": {
+                "kind": "OwnerCase",
+                "id": "v1-limited-investment-case",
+                "version": "2"
+              },
+              "comparison_ref": {
+                "kind": "OptionComparison",
+                "id": "comparison",
+                "version": "1"
+              },
+              "objective_ref": {
+                "kind": "OwnerObjective",
+                "id": "objective",
+                "version": "1"
+              },
+              "brief_ref": {
+                "kind": "OwnerBrief",
+                "id": "baseline-brief",
+                "version": "1"
+              },
+              "intervention": "non_build",
+              "analysis_refs": [
+                {
+                  "kind": "OptionAnalysis",
+                  "id": "baseline-cost",
+                  "version": "1"
+                },
+                {
+                  "kind": "OptionAnalysis",
+                  "id": "baseline-schedule",
+                  "version": "1"
+                },
+                {
+                  "kind": "OptionAnalysis",
+                  "id": "baseline-outcome",
+                  "version": "1"
+                }
+              ],
+              "condition_refs": [
+                {
+                  "kind": "Requirement",
+                  "id": "baseline-investment_authority",
+                  "version": "1"
+                },
+                {
+                  "kind": "Requirement",
+                  "id": "baseline-rights",
+                  "version": "1"
+                },
+                {
+                  "kind": "Requirement",
+                  "id": "baseline-project_registration",
+                  "version": "1"
+                }
+              ],
+              "issue_refs": [],
+              "preparation_plan_ref": {
+                "kind": "InvestmentPlan",
+                "id": "baseline-preparation",
+                "version": "1"
+              },
+              "investment_plan_ref": {
+                "kind": "InvestmentPlan",
+                "id": "baseline-investment",
+                "version": "1"
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "fixture-clock",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "OwnerCase",
+              "id": "v1-limited-investment-case",
+              "version": "2"
+            },
+            "value": {
+              "ref": {
+                "kind": "OwnerCase",
+                "id": "v1-limited-investment-case",
+                "version": "2"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ],
+              "organization_id": "owner",
+              "objective_ref": {
+                "kind": "OwnerObjective",
+                "id": "objective",
+                "version": "1"
+              },
+              "region_id": "HK",
+              "use_code": "housing",
+              "observation_refs": [],
+              "opportunity_refs": [],
+              "status": "active",
+              "updated_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "fixture-clock",
+                  "version": "1"
+                },
+                "offset": 11
+              },
+              "comparison_refs": [
+                {
+                  "kind": "OptionComparison",
+                  "id": "comparison",
+                  "version": "1"
+                }
+              ],
+              "brief_refs": [
+                {
+                  "kind": "OwnerBrief",
+                  "id": "build-brief",
+                  "version": "1"
+                },
+                {
+                  "kind": "OwnerBrief",
+                  "id": "baseline-brief",
+                  "version": "1"
+                }
+              ],
+              "issue_refs": [
+                {
+                  "kind": "Issue",
+                  "id": "v1-comparison-revision-required",
+                  "version": "1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "OptionComparison",
+              "id": "comparison",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "OptionComparison",
+                "id": "comparison",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ],
+              "organization_id": "owner",
+              "case_ref": {
+                "kind": "OwnerCase",
+                "id": "v1-limited-investment-case",
+                "version": "2"
+              },
+              "objective_ref": {
+                "kind": "OwnerObjective",
+                "id": "objective",
+                "version": "1"
+              },
+              "scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "v1-limited-investment-case",
+                  "version": "2"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "build-preparation",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "WorkScope",
+                    "id": "build-investment",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "WorkScope",
+                    "id": "baseline-preparation",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "WorkScope",
+                    "id": "baseline-investment",
+                    "version": "1"
+                  }
+                ]
+              },
+              "option_refs": [
+                {
+                  "kind": "ProjectOption",
+                  "id": "build",
+                  "version": "1"
+                },
+                {
+                  "kind": "ProjectOption",
+                  "id": "baseline",
+                  "version": "1"
+                }
+              ],
+              "non_build_option_refs": [
+                {
+                  "kind": "ProjectOption",
+                  "id": "baseline",
+                  "version": "1"
+                }
+              ],
+              "issue_refs": [
+                {
+                  "kind": "Issue",
+                  "id": "v1-comparison-revision-required",
+                  "version": "1"
+                }
+              ],
+              "required_analysis_codes": [
+                "cost",
+                "schedule",
+                "outcome"
+              ],
+              "status": "comparable",
+              "algorithm_code": "declared_conservative_intervals_v1",
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "fixture-clock",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "ProjectRegistrationProfile",
+              "id": "registration",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "ProjectRegistrationProfile",
+                "id": "registration",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ],
+              "organization_id": "owner",
+              "case_ref": {
+                "kind": "OwnerCase",
+                "id": "v1-limited-investment-case",
+                "version": "2"
+              },
+              "comparison_ref": {
+                "kind": "OptionComparison",
+                "id": "comparison",
+                "version": "1"
+              },
+              "policy": {
+                "state": "known",
+                "value": "revise"
+              },
+              "on_infeasible": {
+                "state": "known",
+                "value": "reject"
+              },
+              "followup_issue_refs": [
+                {
+                  "kind": "Issue",
+                  "id": "v1-comparison-revision-required",
+                  "version": "1"
+                }
+              ],
+              "followup_option_refs": [],
+              "permitted_scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "v1-limited-investment-case",
+                  "version": "2"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "build-preparation",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "WorkScope",
+                    "id": "build-investment",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "WorkScope",
+                    "id": "baseline-preparation",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "WorkScope",
+                    "id": "baseline-investment",
+                    "version": "1"
+                  }
+                ]
+              },
+              "registration_code": "declared_construction_project_v1",
+              "required_investment_condition_codes": [
+                "investment_authority",
+                "rights",
+                "project_registration"
+              ],
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "fixture-clock",
+                  "version": "1"
+                },
+                "offset": 10
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "FundingSource",
+              "id": "actual-account",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "FundingSource",
+                "id": "actual-account",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ],
+              "organization_id": "owner",
+              "actual_cash": {
+                "state": "known",
+                "value": {
+                  "value": "50",
+                  "currency": "HKD",
+                  "basis_ref": {
+                    "kind": "Evidence",
+                    "id": "v1-investment-source",
+                    "version": "1"
+                  }
+                }
+              },
+              "restricted_cash": {
+                "state": "known",
+                "value": {
+                  "value": "5",
+                  "currency": "HKD",
+                  "basis_ref": {
+                    "kind": "Evidence",
+                    "id": "v1-investment-source",
+                    "version": "1"
+                  }
+                }
+              },
+              "deduction_policy": {
+                "state": "known",
+                "value": "actual_less_restrictions_only"
+              },
+              "releases": [],
+              "as_of": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "fixture-clock",
+                  "version": "1"
+                },
+                "offset": 11
+              },
+              "coverage": "complete"
+            }
+          },
+          {
+            "ref": {
+              "kind": "Obligation",
+              "id": "existing-other-project-fee",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Obligation",
+                "id": "existing-other-project-fee",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ],
+              "debtor_organization_id": "owner",
+              "source_ref": {
+                "kind": "FundingSource",
+                "id": "actual-account",
+                "version": "1"
+              },
+              "origin_ref": {
+                "kind": "OwnerCase",
+                "id": "other-case",
+                "version": "1"
+              },
+              "actual_due": {
+                "state": "known",
+                "value": {
+                  "value": "5",
+                  "currency": "HKD",
+                  "basis_ref": {
+                    "kind": "Evidence",
+                    "id": "v1-investment-source",
+                    "version": "1"
+                  }
+                }
+              },
+              "actual_paid": {
+                "state": "known",
+                "value": {
+                  "value": "0",
+                  "currency": "HKD",
+                  "basis_ref": {
+                    "kind": "Evidence",
+                    "id": "v1-investment-source",
+                    "version": "1"
+                  }
+                }
+              },
+              "due_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "fixture-clock",
+                  "version": "1"
+                },
+                "offset": 8
+              },
+              "as_of": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "fixture-clock",
+                  "version": "1"
+                },
+                "offset": 11
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "ResourcePool",
+              "id": "management-pool",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "ResourcePool",
+                "id": "management-pool",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ],
+              "organization_id": "owner",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "owner-investment",
+                "version": "1"
+              },
+              "authority_ref": {
+                "kind": "Authorization",
+                "id": "owner-grant",
+                "version": "1"
+              },
+              "total": {
+                "state": "known",
+                "value": {
+                  "value": "2",
+                  "unit": "manager",
+                  "basis_ref": {
+                    "kind": "Evidence",
+                    "id": "v1-investment-source",
+                    "version": "1"
+                  }
+                }
+              },
+              "commitments": [
+                {
+                  "ref": {
+                    "kind": "ResourceCommitment",
+                    "id": "other-project-load",
+                    "version": "1"
+                  },
+                  "quantity": {
+                    "value": "1",
+                    "unit": "manager",
+                    "basis_ref": {
+                      "kind": "Evidence",
+                      "id": "v1-investment-source",
+                      "version": "1"
+                    }
+                  },
+                  "window": {
+                    "start": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "fixture-clock",
+                        "version": "1"
+                      },
+                      "offset": 5
+                    },
+                    "end": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "fixture-clock",
+                        "version": "1"
+                      },
+                      "offset": 25
+                    },
+                    "bounds": "closed_open"
+                  }
+                }
+              ],
+              "as_of": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "fixture-clock",
+                  "version": "1"
+                },
+                "offset": 11
+              },
+              "coverage": "complete",
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "OwnerPortfolio",
+              "id": "portfolio",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "OwnerPortfolio",
+                "id": "portfolio",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ],
+              "organization_id": "owner",
+              "source_refs": [
+                {
+                  "kind": "FundingSource",
+                  "id": "actual-account",
+                  "version": "1"
+                }
+              ],
+              "obligation_refs": [
+                {
+                  "kind": "Obligation",
+                  "id": "existing-other-project-fee",
+                  "version": "1"
+                }
+              ],
+              "funding_lines": [
+                {
+                  "window_ref": {
+                    "kind": "TimeWindow",
+                    "id": "planned-period",
+                    "version": "1"
+                  },
+                  "source_ref": {
+                    "kind": "FundingSource",
+                    "id": "actual-account",
+                    "version": "1"
+                  },
+                  "available": {
+                    "state": "known",
+                    "value": {
+                      "value": "45",
+                      "currency": "HKD",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "v1-investment-source",
+                        "version": "1"
+                      }
+                    }
+                  },
+                  "planned_use": {
+                    "state": "known",
+                    "value": {
+                      "value": "30",
+                      "currency": "HKD",
+                      "basis_ref": {
+                        "kind": "Evidence",
+                        "id": "v1-investment-source",
+                        "version": "1"
+                      }
+                    }
+                  },
+                  "restriction_refs": []
+                }
+              ],
+              "resource_refs": [
+                {
+                  "kind": "ResourcePool",
+                  "id": "management-pool",
+                  "version": "1"
+                }
+              ],
+              "as_of": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "fixture-clock",
+                  "version": "1"
+                },
+                "offset": 11
+              },
+              "coverage": "complete"
+            }
+          },
+          {
+            "ref": {
+              "kind": "Issue",
+              "id": "v1-comparison-revision-required",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Issue",
+                "id": "v1-comparison-revision-required",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ],
+              "case_ref": {
+                "kind": "OwnerCase",
+                "id": "v1-limited-investment-case",
+                "version": "2"
+              },
+              "comparison_ref": {
+                "kind": "OptionComparison",
+                "id": "comparison",
+                "version": "1"
+              },
+              "option_refs": [],
+              "scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "v1-limited-investment-case",
+                  "version": "2"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "build-preparation",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "WorkScope",
+                    "id": "build-investment",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "WorkScope",
+                    "id": "baseline-preparation",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "WorkScope",
+                    "id": "baseline-investment",
+                    "version": "1"
+                  }
+                ]
+              },
+              "remedy": "revise",
+              "status": "unresolved",
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "fixture-clock",
+                  "version": "1"
+                },
+                "offset": 11
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              }
+            }
+          }
+        ]
+      },
+      "expected_kind": "completed",
+      "expected_choice": "revise",
+      "offline_binding": {
+        "schema_factory": "src.actions.contracts.owner_investment_objects:owner_investment_schemas",
+        "source_note": "Explicit synthetic unresolved comparison issue; revise proposes followup only, without editing any option or authorizing investment.",
+        "invocation": {
+          "schema_version": "role-contract-invocation.v1",
+          "context": {
+            "run_id": "synthetic-v1-investment-revision",
+            "actor_id": "owner-actor",
+            "function_ref": {
+              "kind": "FunctionAssignment",
+              "id": "owner-investment",
+              "version": "1"
+            },
+            "authorization_refs": [
+              {
+                "kind": "Authorization",
+                "id": "owner-grant",
+                "version": "1"
+              }
+            ],
+            "operation_id": "v1-investment-revision",
+            "contract_ref": {
+              "kind": "ActionContract",
+              "id": "OWN-A03",
+              "version": "1"
+            },
+            "task_ref": {
+              "kind": "DecisionTask",
+              "id": "v1-investment-revision-task",
+              "version": "1"
+            },
+            "scope": {
+              "kind": "assessment_case",
+              "ref": {
+                "kind": "OwnerCase",
+                "id": "v1-limited-investment-case",
+                "version": "2"
+              },
+              "coverage_refs": [
+                {
+                  "kind": "WorkScope",
+                  "id": "build-preparation",
+                  "version": "1"
+                },
+                {
+                  "kind": "WorkScope",
+                  "id": "build-investment",
+                  "version": "1"
+                },
+                {
+                  "kind": "WorkScope",
+                  "id": "baseline-preparation",
+                  "version": "1"
+                },
+                {
+                  "kind": "WorkScope",
+                  "id": "baseline-investment",
+                  "version": "1"
+                }
+              ]
+            },
+            "business_time": {
+              "clock_ref": {
+                "kind": "ClockProfile",
+                "id": "fixture-clock",
+                "version": "1"
+              },
+              "offset": 11
+            },
+            "read_token": "synthetic-v1-investment-revision:read:1",
+            "visible_refs": [
+              {
+                "kind": "TimeWindow",
+                "id": "planned-period",
+                "version": "1"
+              },
+              {
+                "kind": "TimeWindow",
+                "id": "long-period",
+                "version": "1"
+              },
+              {
+                "kind": "FunctionAssignment",
+                "id": "owner-investment",
+                "version": "1"
+              },
+              {
+                "kind": "Authorization",
+                "id": "owner-grant",
+                "version": "1"
+              },
+              {
+                "kind": "FunctionAssignment",
+                "id": "cost-function",
+                "version": "1"
+              },
+              {
+                "kind": "Authorization",
+                "id": "cost-grant",
+                "version": "1"
+              },
+              {
+                "kind": "FunctionAssignment",
+                "id": "schedule-function",
+                "version": "1"
+              },
+              {
+                "kind": "Authorization",
+                "id": "schedule-grant",
+                "version": "1"
+              },
+              {
+                "kind": "OwnerObjective",
+                "id": "objective",
+                "version": "1"
+              },
+              {
+                "kind": "OwnerBrief",
+                "id": "build-brief",
+                "version": "1"
+              },
+              {
+                "kind": "Requirement",
+                "id": "build-investment_authority",
+                "version": "1"
+              },
+              {
+                "kind": "Requirement",
+                "id": "build-rights",
+                "version": "1"
+              },
+              {
+                "kind": "Requirement",
+                "id": "build-project_registration",
+                "version": "1"
+              },
+              {
+                "kind": "OptionAnalysis",
+                "id": "build-cost",
+                "version": "1"
+              },
+              {
+                "kind": "OptionAnalysis",
+                "id": "build-schedule",
+                "version": "1"
+              },
+              {
+                "kind": "OptionAnalysis",
+                "id": "build-outcome",
+                "version": "1"
+              },
+              {
+                "kind": "WorkScope",
+                "id": "build-investment",
+                "version": "1"
+              },
+              {
+                "kind": "InvestmentPlan",
+                "id": "build-investment",
+                "version": "1"
+              },
+              {
+                "kind": "WorkScope",
+                "id": "build-preparation",
+                "version": "1"
+              },
+              {
+                "kind": "InvestmentPlan",
+                "id": "build-preparation",
+                "version": "1"
+              },
+              {
+                "kind": "ProjectOption",
+                "id": "build",
+                "version": "1"
+              },
+              {
+                "kind": "OwnerBrief",
+                "id": "baseline-brief",
+                "version": "1"
+              },
+              {
+                "kind": "Requirement",
+                "id": "baseline-investment_authority",
+                "version": "1"
+              },
+              {
+                "kind": "Requirement",
+                "id": "baseline-rights",
+                "version": "1"
+              },
+              {
+                "kind": "Requirement",
+                "id": "baseline-project_registration",
+                "version": "1"
+              },
+              {
+                "kind": "OptionAnalysis",
+                "id": "baseline-cost",
+                "version": "1"
+              },
+              {
+                "kind": "OptionAnalysis",
+                "id": "baseline-schedule",
+                "version": "1"
+              },
+              {
+                "kind": "OptionAnalysis",
+                "id": "baseline-outcome",
+                "version": "1"
+              },
+              {
+                "kind": "WorkScope",
+                "id": "baseline-investment",
+                "version": "1"
+              },
+              {
+                "kind": "InvestmentPlan",
+                "id": "baseline-investment",
+                "version": "1"
+              },
+              {
+                "kind": "WorkScope",
+                "id": "baseline-preparation",
+                "version": "1"
+              },
+              {
+                "kind": "InvestmentPlan",
+                "id": "baseline-preparation",
+                "version": "1"
+              },
+              {
+                "kind": "ProjectOption",
+                "id": "baseline",
+                "version": "1"
+              },
+              {
+                "kind": "OwnerCase",
+                "id": "v1-limited-investment-case",
+                "version": "2"
+              },
+              {
+                "kind": "OptionComparison",
+                "id": "comparison",
+                "version": "1"
+              },
+              {
+                "kind": "ProjectRegistrationProfile",
+                "id": "registration",
+                "version": "1"
+              },
+              {
+                "kind": "FundingSource",
+                "id": "actual-account",
+                "version": "1"
+              },
+              {
+                "kind": "Obligation",
+                "id": "existing-other-project-fee",
+                "version": "1"
+              },
+              {
+                "kind": "ResourcePool",
+                "id": "management-pool",
+                "version": "1"
+              },
+              {
+                "kind": "OwnerPortfolio",
+                "id": "portfolio",
+                "version": "1"
+              },
+              {
+                "kind": "Evidence",
+                "id": "v1-investment-source",
+                "version": "1"
+              },
+              {
+                "kind": "CandidateSet",
+                "id": "investment-reject-candidates",
+                "version": "1"
+              },
+              {
+                "kind": "Issue",
+                "id": "v1-comparison-revision-required",
+                "version": "1"
+              }
+            ],
+            "candidate_set_ref": {
+              "kind": "CandidateSet",
+              "id": "investment-reject-candidates",
+              "version": "1"
+            },
+            "execution_mode": "offline_fixture"
+          },
+          "execution_path": "deterministic"
+        },
+        "organization_snapshot": {
+          "schema_version": "organization.v2",
+          "run_id": "synthetic-v1-investment-revision",
+          "organizations": [
+            {
+              "organization_id": "owner",
+              "actor_id": "owner-actor",
+              "source_ids": [
+                "synthetic:v1-stop-reject"
+              ],
+              "public_description": "Synthetic owner for V1 refusal inputs only.",
+              "public_location": {
+                "state": "unknown",
+                "reason_code": "synthetic_unsupplied",
+                "missing_refs": []
+              },
+              "assignments": [
+                {
+                  "role": "Owner",
+                  "function_ref": {
+                    "kind": "FunctionAssignment",
+                    "id": "owner-investment",
+                    "version": "1"
+                  },
+                  "configuration_version": "1",
+                  "basis_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "v1-investment-source",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "members": [],
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ]
+            }
+          ],
+          "authorizations": [
+            {
+              "ref": {
+                "kind": "Authorization",
+                "id": "owner-grant",
+                "version": "1"
+              },
+              "organization_id": "owner",
+              "actor_id": "owner-actor",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "owner-investment",
+                "version": "1"
+              },
+              "action_ids": [
+                "OWN-A03"
+              ],
+              "scopes": [
+                {
+                  "kind": "assessment_case",
+                  "ref": {
+                    "kind": "OwnerCase",
+                    "id": "v1-limited-investment-case",
+                    "version": "2"
+                  },
+                  "coverage_refs": [
+                    {
+                      "kind": "WorkScope",
+                      "id": "build-preparation",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "WorkScope",
+                      "id": "build-investment",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "WorkScope",
+                      "id": "baseline-preparation",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "WorkScope",
+                      "id": "baseline-investment",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "readable_refs": [
+                {
+                  "kind": "TimeWindow",
+                  "id": "planned-period",
+                  "version": "1"
+                },
+                {
+                  "kind": "TimeWindow",
+                  "id": "long-period",
+                  "version": "1"
+                },
+                {
+                  "kind": "FunctionAssignment",
+                  "id": "owner-investment",
+                  "version": "1"
+                },
+                {
+                  "kind": "Authorization",
+                  "id": "owner-grant",
+                  "version": "1"
+                },
+                {
+                  "kind": "FunctionAssignment",
+                  "id": "cost-function",
+                  "version": "1"
+                },
+                {
+                  "kind": "Authorization",
+                  "id": "cost-grant",
+                  "version": "1"
+                },
+                {
+                  "kind": "FunctionAssignment",
+                  "id": "schedule-function",
+                  "version": "1"
+                },
+                {
+                  "kind": "Authorization",
+                  "id": "schedule-grant",
+                  "version": "1"
+                },
+                {
+                  "kind": "OwnerObjective",
+                  "id": "objective",
+                  "version": "1"
+                },
+                {
+                  "kind": "OwnerBrief",
+                  "id": "build-brief",
+                  "version": "1"
+                },
+                {
+                  "kind": "Requirement",
+                  "id": "build-investment_authority",
+                  "version": "1"
+                },
+                {
+                  "kind": "Requirement",
+                  "id": "build-rights",
+                  "version": "1"
+                },
+                {
+                  "kind": "Requirement",
+                  "id": "build-project_registration",
+                  "version": "1"
+                },
+                {
+                  "kind": "OptionAnalysis",
+                  "id": "build-cost",
+                  "version": "1"
+                },
+                {
+                  "kind": "OptionAnalysis",
+                  "id": "build-schedule",
+                  "version": "1"
+                },
+                {
+                  "kind": "OptionAnalysis",
+                  "id": "build-outcome",
+                  "version": "1"
+                },
+                {
+                  "kind": "WorkScope",
+                  "id": "build-investment",
+                  "version": "1"
+                },
+                {
+                  "kind": "InvestmentPlan",
+                  "id": "build-investment",
+                  "version": "1"
+                },
+                {
+                  "kind": "WorkScope",
+                  "id": "build-preparation",
+                  "version": "1"
+                },
+                {
+                  "kind": "InvestmentPlan",
+                  "id": "build-preparation",
+                  "version": "1"
+                },
+                {
+                  "kind": "ProjectOption",
+                  "id": "build",
+                  "version": "1"
+                },
+                {
+                  "kind": "OwnerBrief",
+                  "id": "baseline-brief",
+                  "version": "1"
+                },
+                {
+                  "kind": "Requirement",
+                  "id": "baseline-investment_authority",
+                  "version": "1"
+                },
+                {
+                  "kind": "Requirement",
+                  "id": "baseline-rights",
+                  "version": "1"
+                },
+                {
+                  "kind": "Requirement",
+                  "id": "baseline-project_registration",
+                  "version": "1"
+                },
+                {
+                  "kind": "OptionAnalysis",
+                  "id": "baseline-cost",
+                  "version": "1"
+                },
+                {
+                  "kind": "OptionAnalysis",
+                  "id": "baseline-schedule",
+                  "version": "1"
+                },
+                {
+                  "kind": "OptionAnalysis",
+                  "id": "baseline-outcome",
+                  "version": "1"
+                },
+                {
+                  "kind": "WorkScope",
+                  "id": "baseline-investment",
+                  "version": "1"
+                },
+                {
+                  "kind": "InvestmentPlan",
+                  "id": "baseline-investment",
+                  "version": "1"
+                },
+                {
+                  "kind": "WorkScope",
+                  "id": "baseline-preparation",
+                  "version": "1"
+                },
+                {
+                  "kind": "InvestmentPlan",
+                  "id": "baseline-preparation",
+                  "version": "1"
+                },
+                {
+                  "kind": "ProjectOption",
+                  "id": "baseline",
+                  "version": "1"
+                },
+                {
+                  "kind": "OwnerCase",
+                  "id": "v1-limited-investment-case",
+                  "version": "2"
+                },
+                {
+                  "kind": "OptionComparison",
+                  "id": "comparison",
+                  "version": "1"
+                },
+                {
+                  "kind": "ProjectRegistrationProfile",
+                  "id": "registration",
+                  "version": "1"
+                },
+                {
+                  "kind": "FundingSource",
+                  "id": "actual-account",
+                  "version": "1"
+                },
+                {
+                  "kind": "Obligation",
+                  "id": "existing-other-project-fee",
+                  "version": "1"
+                },
+                {
+                  "kind": "ResourcePool",
+                  "id": "management-pool",
+                  "version": "1"
+                },
+                {
+                  "kind": "OwnerPortfolio",
+                  "id": "portfolio",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                },
+                {
+                  "kind": "CandidateSet",
+                  "id": "investment-reject-candidates",
+                  "version": "1"
+                },
+                {
+                  "kind": "Issue",
+                  "id": "v1-comparison-revision-required",
+                  "version": "1"
+                }
+              ],
+              "tool_ids": [],
+              "validity": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 0
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "fixture-clock",
+                    "version": "1"
+                  },
+                  "offset": 100
+                },
+                "bounds": "closed_open"
+              },
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v1-investment-source",
+                  "version": "1"
+                }
+              ]
+            }
+          ],
+          "inactive_authorization_refs": []
+        },
+        "source_projection_envelope": {
+          "run_id": "synthetic-v1-investment-revision",
+          "macro_version": "synthetic-v1-refusal.v1",
+          "state_version": "investment-reject:1",
+          "read_token": "synthetic-v1-investment-revision:read:1",
+          "business_time": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "fixture-clock",
+              "version": "1"
+            },
+            "offset": 11
+          },
+          "organization_id": "owner"
+        },
+        "supplemental_objects": [
+          {
+            "ref": {
+              "kind": "Evidence",
+              "id": "v1-investment-source",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Evidence",
+                "id": "v1-investment-source",
+                "version": "1"
+              },
+              "source_kind": "synthetic",
+              "basis_kind": "assumed",
+              "locator": "tests/fixtures/roles/lifecycle_v1_investment_revision.v1.json#/steps/0/input_fixture",
+              "content_hash": "b86de68219adae8013c910efb59dbf046d9ad8a2d73b355af6d70780422bb832",
+              "effective_window": null
+            }
+          },
+          {
+            "ref": {
+              "kind": "CandidateSet",
+              "id": "investment-reject-candidates",
+              "version": "1"
+            },
+            "value": {
+              "operation_id": "v1-investment-revision",
+              "scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "v1-limited-investment-case",
+                  "version": "2"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "build-preparation",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "WorkScope",
+                    "id": "build-investment",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "WorkScope",
+                    "id": "baseline-preparation",
+                    "version": "1"
+                  },
+                  {
+                    "kind": "WorkScope",
+                    "id": "baseline-investment",
+                    "version": "1"
+                  }
+                ]
+              },
+              "as_of": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "fixture-clock",
+                  "version": "1"
+                },
+                "offset": 11
+              },
+              "candidates": [],
+              "search_profile_ref": {
+                "kind": "Profile",
+                "id": "investment-reject-space",
+                "version": "1"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "transition": {
+    "kind": "standalone_unresolved_comparison",
+    "previous_result_effect": "none",
+    "note": "Independent fixture; no result from another run is consumed and no option is actually revised."
+  },
+  "invariants": [
+    "Exact original Owner A03 input and role authorization.",
+    "Revise requires an unresolved issue registered in case, comparison and profile.",
+    "No project, cash movement, option edit or native receipt."
+  ],
+  "remaining_requirements": [
+    "V1 original QS research delegation/comparison/reception chain.",
+    "Missing-information input and final simple functional validation."
+  ],
+  "limitations": "Synthetic revision input only; no execution or full lifecycle acceptance evidence."
+}

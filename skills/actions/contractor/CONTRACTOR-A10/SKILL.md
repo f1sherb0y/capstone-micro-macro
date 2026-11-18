@@ -1,0 +1,25 @@
+# CONTRACTOR-A10 申请计量、收款并支付下游
+
+计量期TimeWindow是无内嵌ref的严格值对象，依原有权resolver按实际引用关联，不要求不存在的身份字段；具ref/function_ref的来源仍精确核身份。原计量窗边界、双端时钟及真实工程发生在期内的规则独立保持，不推造发生时间。
+
+读取原合同、实际工程记录、原计量申请、付款证书、义务、实际自有账户与原付款执行。依据独立结算程序和当前本企业授权形成六分支请求。首次计量不需要已有证书或结算组成；融资仅生成本企业申请草稿交Bank A02，不要求银行已受理。
+
+当前Evidence须精确ref、同业务钟、非未来且当前有效；当前contract/rule/procedure、计价依据、新申请量、义务核验证据与金额、证书及自有现金/限制款/预留依据核now。当前grant/function须精确匹配、动作/完整scope有效；混合basis只有Evidence按now核有效窗，其他依据保原类型及原可获。原无发生/签发时点的付款执行/回执金额、旧申请状态/已申报量与工程量历史依据保历史，不因当前证据过期而清除已付或未决占用。
+
+A10内部WorkRecord投影使用ContractorMeasurementWorkRecordView，额外接收来源明确提供的occurred_at与occurrence_evidence_refs；缺省null/空列表只表示未知，不补造时间。新计量须原真实发生时点同钟、≤原available_at并处于measurement_window，发生Evidence须observed且当时有效，formal不得synthetic，gross/net量据同按实际发生时点核。available_at仅表示资料可获，不能用它、执行录入时间或当前时点替代工程发生时间。允许真实发生在计量期内而资料较晚送达；缺发生时间/原观察依据返回需补资料。共享A07/A08/A11原WorkRecord schema不变，来源生产者须显式供应这两个A10字段，旧保存快照不自动补值或迁移。
+
+续办原contract/rule/procedure/计价依据/新申报量及授权Evidence按原调用时点重核，当前调用单独核当前；原工作发生时点/观察依据和净量约束同原processor，旧申请状态Evidence保历史。终态仍须当前非synthetic observed的native查询和独立完整原业务/核证/债务/现金认证。条件升v3、measurement reader升v4，固定实际condition factory/checker、注册processor/contract和source schema/validator的原对象及源码/runtime摘要；旧保存条件/配置不自动迁移。
+
+apply_measurement核原有效合同、计量窗口/范围、计价依据与实际净量，返工不新增净量；保存完整原申请历史与业务身份，原申请续办，按物理工程切片累计已申报量。部分计量用单切片行；多切片局部申报须先明确分配，不能靠遍历顺序分配。request_payment仅既有可请款、未清现金组成，核相应原有效证书，核证金额不当实际到账。
+
+authorize_payment只能用本企业实际自有账户支付本企业真实到期下游义务；核完整当前资金源、限制款、原资金预留和待执行，不能使用Owner余额或上游预计到账。原未知/待定执行先按原ID核对；已存在业务付款续办，原命令/回执身份匹配。各行须独立明确优先级和组成金额，部分付款须明确授权，现金不足返回需改分配，不自行按遍历顺序支付。原组成到期、实际现金清偿、非现金抵扣分别核对；预付款抵扣不再次扣现金。
+
+汇总原义务时，完整component_refs不得重复同一物理组成，也不得以不同版本重复计数。每项组成须保原义务、合同、债务人、收款人、资金源及完全一致的debt_ref；双方无借款关联时均为null，有关联时须同一Debt原版本。不能把其他借款的本金、利息或费用混入本次应收/应付，金额合计一致不能替代身份核验。
+
+输入execution_refs保留完整原合同执行历史；同一自有账户还声明其他项目待核命令时，可额外显式供应该原执行，但必须位于本次account_refs中某一精确原账户的pending_execution_refs，并由本企业作为原付款主体。待核列表按物理执行排重，同一命令不得归入多个账户；他方来款、无account_ref或其他账户/版本不能替代本账户待核占用。查询仍只返回本次显式输入中的原执行ID；未决占用及已终态但尚待账本核对的记录保留，不因查询或合同范围变化释放现金。
+
+reconcile仅原执行，重复回执/命令不新增现金；dispute仅原义务与具体未解决问题。上游迟付不免下游债务；申请、核证、到期、实际到账分开。completed只形成请求/草稿，不登记计量、贷款、现金、清偿或减免。真实原生产者、跨动作投影、submit/query、核心原子结算与反馈仍待集成。本批编码未功能验收。
+
+恢复reader v4在原组件身份与源码声明之外，显式保存各实际检查回调的callable_implementation运行时代码摘要，并沿原配置复核边界重新比较；源码文件摘要不能代替运行代码摘要。 实际request_measurement_and_cash角色函数与registry注册processor分别固定。 此声明仅核代码；闭包、实例状态与partial参数仍由宿主明确配置和版本化。旧v1/v2/v3配置不自动升级、重放或转换为已验证，新版本仍待集中业务验证。
+
+同一次实际WorkExecution可产生多个不同物理WorkRecord切片，允许这些切片共用core_event_id；计量仍按记录/物理切片排重，不把同事件直接当重复工程。processor与原等待checker共用实际事件validator，跨完整草稿核event→物理execution及execution→event对应一致，同事件不能混入其他执行，同执行不能换事件。各切片仍独立核实际发生/observed量据、计量期和净量，既有申请累计覆盖不放宽。reader v4固定该实际validator源码/runtime，条件v3，静态检查不证明计量业务已验收。

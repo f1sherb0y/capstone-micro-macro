@@ -1,0 +1,1349 @@
+{
+  "$defs": {
+    "ActionContext": {
+      "additionalProperties": false,
+      "properties": {
+        "run_id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Run Id",
+          "type": "string"
+        },
+        "actor_id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Actor Id",
+          "type": "string"
+        },
+        "function_ref": {
+          "$ref": "#/$defs/FunctionAssignmentRef"
+        },
+        "authorization_refs": {
+          "items": {
+            "$ref": "#/$defs/AuthorizationRef"
+          },
+          "title": "Authorization Refs",
+          "type": "array"
+        },
+        "operation_id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Operation Id",
+          "type": "string"
+        },
+        "contract_ref": {
+          "$ref": "#/$defs/ActionContractRef"
+        },
+        "task_ref": {
+          "$ref": "#/$defs/DecisionTaskRef"
+        },
+        "scope": {
+          "discriminator": {
+            "mapping": {
+              "assessment_case": "#/$defs/AssessmentScope",
+              "organization": "#/$defs/OrganizationScope",
+              "project": "#/$defs/ProjectScope"
+            },
+            "propertyName": "kind"
+          },
+          "oneOf": [
+            {
+              "$ref": "#/$defs/OrganizationScope"
+            },
+            {
+              "$ref": "#/$defs/AssessmentScope"
+            },
+            {
+              "$ref": "#/$defs/ProjectScope"
+            }
+          ],
+          "title": "Scope"
+        },
+        "business_time": {
+          "$ref": "#/$defs/TimePoint"
+        },
+        "read_token": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Read Token",
+          "type": "string"
+        },
+        "visible_refs": {
+          "items": {
+            "$ref": "#/$defs/Reference"
+          },
+          "title": "Visible Refs",
+          "type": "array"
+        },
+        "candidate_set_ref": {
+          "$ref": "#/$defs/CandidateSetRef"
+        },
+        "execution_mode": {
+          "enum": [
+            "llm",
+            "rule",
+            "routine",
+            "offline_fixture"
+          ],
+          "title": "Execution Mode",
+          "type": "string"
+        }
+      },
+      "required": [
+        "run_id",
+        "actor_id",
+        "function_ref",
+        "authorization_refs",
+        "operation_id",
+        "contract_ref",
+        "task_ref",
+        "scope",
+        "business_time",
+        "read_token",
+        "visible_refs",
+        "candidate_set_ref",
+        "execution_mode"
+      ],
+      "title": "ActionContext",
+      "type": "object"
+    },
+    "ActionContractRef": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "ActionContract",
+          "title": "Kind",
+          "type": "string"
+        },
+        "id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Id",
+          "type": "string"
+        },
+        "version": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "integer"
+            }
+          ],
+          "title": "Version"
+        }
+      },
+      "required": [
+        "kind",
+        "id",
+        "version"
+      ],
+      "title": "ActionContractRef",
+      "type": "object"
+    },
+    "AssessmentScope": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "assessment_case",
+          "title": "Kind",
+          "type": "string"
+        },
+        "ref": {
+          "$ref": "#/$defs/OwnerCaseRef"
+        },
+        "coverage_refs": {
+          "items": {
+            "$ref": "#/$defs/WorkScopeRef"
+          },
+          "title": "Coverage Refs",
+          "type": "array"
+        }
+      },
+      "required": [
+        "kind",
+        "ref",
+        "coverage_refs"
+      ],
+      "title": "AssessmentScope",
+      "type": "object"
+    },
+    "AuthorizationRef": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "Authorization",
+          "title": "Kind",
+          "type": "string"
+        },
+        "id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Id",
+          "type": "string"
+        },
+        "version": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "integer"
+            }
+          ],
+          "title": "Version"
+        }
+      },
+      "required": [
+        "kind",
+        "id",
+        "version"
+      ],
+      "title": "AuthorizationRef",
+      "type": "object"
+    },
+    "CandidateSetRef": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "CandidateSet",
+          "title": "Kind",
+          "type": "string"
+        },
+        "id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Id",
+          "type": "string"
+        },
+        "version": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "integer"
+            }
+          ],
+          "title": "Version"
+        }
+      },
+      "required": [
+        "kind",
+        "id",
+        "version"
+      ],
+      "title": "CandidateSetRef",
+      "type": "object"
+    },
+    "ClockProfileRef": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "ClockProfile",
+          "title": "Kind",
+          "type": "string"
+        },
+        "id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Id",
+          "type": "string"
+        },
+        "version": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "integer"
+            }
+          ],
+          "title": "Version"
+        }
+      },
+      "required": [
+        "kind",
+        "id",
+        "version"
+      ],
+      "title": "ClockProfileRef",
+      "type": "object"
+    },
+    "ContractorFinalAccountHistory": {
+      "additionalProperties": false,
+      "description": "A retained own original proposal, not a formal settlement receipt.",
+      "properties": {
+        "plan_id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Plan Id",
+          "type": "string"
+        },
+        "final_account_ref": {
+          "$ref": "#/$defs/FinalAccountRef"
+        }
+      },
+      "required": [
+        "plan_id",
+        "final_account_ref"
+      ],
+      "title": "ContractorFinalAccountHistory",
+      "type": "object"
+    },
+    "DecisionTaskRef": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "DecisionTask",
+          "title": "Kind",
+          "type": "string"
+        },
+        "id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Id",
+          "type": "string"
+        },
+        "version": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "integer"
+            }
+          ],
+          "title": "Version"
+        }
+      },
+      "required": [
+        "kind",
+        "id",
+        "version"
+      ],
+      "title": "DecisionTaskRef",
+      "type": "object"
+    },
+    "EvidenceRef": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "Evidence",
+          "title": "Kind",
+          "type": "string"
+        },
+        "id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Id",
+          "type": "string"
+        },
+        "version": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "integer"
+            }
+          ],
+          "title": "Version"
+        }
+      },
+      "required": [
+        "kind",
+        "id",
+        "version"
+      ],
+      "title": "EvidenceRef",
+      "type": "object"
+    },
+    "EvidenceTargetRef": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "EvidenceTarget",
+          "title": "Kind",
+          "type": "string"
+        },
+        "id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Id",
+          "type": "string"
+        },
+        "version": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "integer"
+            }
+          ],
+          "title": "Version"
+        }
+      },
+      "required": [
+        "kind",
+        "id",
+        "version"
+      ],
+      "title": "EvidenceTargetRef",
+      "type": "object"
+    },
+    "FeedbackRef": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "Feedback",
+          "title": "Kind",
+          "type": "string"
+        },
+        "id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Id",
+          "type": "string"
+        },
+        "version": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "integer"
+            }
+          ],
+          "title": "Version"
+        }
+      },
+      "required": [
+        "kind",
+        "id",
+        "version"
+      ],
+      "title": "FeedbackRef",
+      "type": "object"
+    },
+    "FinalAccountDisclosure": {
+      "additionalProperties": false,
+      "properties": {
+        "recipient_ids": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Recipient Ids",
+          "type": "array"
+        },
+        "fields": {
+          "const": "choice_and_note",
+          "title": "Fields",
+          "type": "string"
+        }
+      },
+      "required": [
+        "recipient_ids",
+        "fields"
+      ],
+      "title": "FinalAccountDisclosure",
+      "type": "object"
+    },
+    "FinalAccountOwnerReception": {
+      "additionalProperties": false,
+      "description": "Owner handles an actually received QS question through original A06.",
+      "properties": {
+        "message_tick": {
+          "minimum": 1,
+          "title": "Message Tick",
+          "type": "integer"
+        },
+        "evidence_ref": {
+          "$ref": "#/$defs/EvidenceRef"
+        },
+        "decision_ref": {
+          "$ref": "#/$defs/PaymentAuthorizationRef"
+        }
+      },
+      "required": [
+        "message_tick",
+        "evidence_ref",
+        "decision_ref"
+      ],
+      "title": "FinalAccountOwnerReception",
+      "type": "object"
+    },
+    "FinalAccountPositionReception": {
+      "additionalProperties": false,
+      "description": "Contractor consumes an actual Owner communication in its own A11 note.",
+      "properties": {
+        "message_tick": {
+          "minimum": 1,
+          "title": "Message Tick",
+          "type": "integer"
+        },
+        "evidence_ref": {
+          "$ref": "#/$defs/EvidenceRef"
+        },
+        "profile_ref": {
+          "$ref": "#/$defs/HandoverProfileRef"
+        }
+      },
+      "required": [
+        "message_tick",
+        "evidence_ref",
+        "profile_ref"
+      ],
+      "title": "FinalAccountPositionReception",
+      "type": "object"
+    },
+    "FinalAccountQuestionReception": {
+      "additionalProperties": false,
+      "description": "Explicit QS policy: append received Owner communication to one question.",
+      "properties": {
+        "message_tick": {
+          "minimum": 1,
+          "title": "Message Tick",
+          "type": "integer"
+        },
+        "message_index": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Message Index"
+        },
+        "evidence_ref": {
+          "$ref": "#/$defs/EvidenceRef"
+        },
+        "question_ref": {
+          "$ref": "#/$defs/EvidenceTargetRef"
+        },
+        "publish_question_text": {
+          "default": false,
+          "title": "Publish Question Text",
+          "type": "boolean"
+        },
+        "contractor_message_tick": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Contractor Message Tick"
+        },
+        "contractor_evidence_ref": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/EvidenceRef"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "contractor_message_index": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Contractor Message Index"
+        }
+      },
+      "required": [
+        "message_tick",
+        "evidence_ref",
+        "question_ref"
+      ],
+      "title": "FinalAccountQuestionReception",
+      "type": "object"
+    },
+    "FinalAccountRef": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "FinalAccount",
+          "title": "Kind",
+          "type": "string"
+        },
+        "id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Id",
+          "type": "string"
+        },
+        "version": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "integer"
+            }
+          ],
+          "title": "Version"
+        }
+      },
+      "required": [
+        "kind",
+        "id",
+        "version"
+      ],
+      "title": "FinalAccountRef",
+      "type": "object"
+    },
+    "FunctionAssignmentRef": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "FunctionAssignment",
+          "title": "Kind",
+          "type": "string"
+        },
+        "id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Id",
+          "type": "string"
+        },
+        "version": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "integer"
+            }
+          ],
+          "title": "Version"
+        }
+      },
+      "required": [
+        "kind",
+        "id",
+        "version"
+      ],
+      "title": "FunctionAssignmentRef",
+      "type": "object"
+    },
+    "HandoverProfileRef": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "HandoverProfile",
+          "title": "Kind",
+          "type": "string"
+        },
+        "id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Id",
+          "type": "string"
+        },
+        "version": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "integer"
+            }
+          ],
+          "title": "Version"
+        }
+      },
+      "required": [
+        "kind",
+        "id",
+        "version"
+      ],
+      "title": "HandoverProfileRef",
+      "type": "object"
+    },
+    "JudgmentDimensionRef": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "JudgmentDimension",
+          "title": "Kind",
+          "type": "string"
+        },
+        "id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Id",
+          "type": "string"
+        },
+        "version": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "integer"
+            }
+          ],
+          "title": "Version"
+        }
+      },
+      "required": [
+        "kind",
+        "id",
+        "version"
+      ],
+      "title": "JudgmentDimensionRef",
+      "type": "object"
+    },
+    "JudgmentValueRef": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "JudgmentValue",
+          "title": "Kind",
+          "type": "string"
+        },
+        "id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Id",
+          "type": "string"
+        },
+        "version": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "integer"
+            }
+          ],
+          "title": "Version"
+        }
+      },
+      "required": [
+        "kind",
+        "id",
+        "version"
+      ],
+      "title": "JudgmentValueRef",
+      "type": "object"
+    },
+    "LearningProfileRef": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "LearningProfile",
+          "title": "Kind",
+          "type": "string"
+        },
+        "id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Id",
+          "type": "string"
+        },
+        "version": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "integer"
+            }
+          ],
+          "title": "Version"
+        }
+      },
+      "required": [
+        "kind",
+        "id",
+        "version"
+      ],
+      "title": "LearningProfileRef",
+      "type": "object"
+    },
+    "NativeLifecyclePlan": {
+      "additionalProperties": false,
+      "properties": {
+        "plan_id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Plan Id",
+          "type": "string"
+        },
+        "organization_id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Organization Id",
+          "type": "string"
+        },
+        "project_id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Project Id",
+          "type": "string"
+        },
+        "tick": {
+          "minimum": 1,
+          "title": "Tick",
+          "type": "integer"
+        },
+        "event_type": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Event Type",
+          "type": "string"
+        },
+        "context": {
+          "$ref": "#/$defs/ActionContext"
+        },
+        "action_input": {
+          "additionalProperties": true,
+          "title": "Action Input",
+          "type": "object"
+        },
+        "objects": {
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "title": "Objects",
+          "type": "array"
+        },
+        "native_evidence_ref": {
+          "$ref": "#/$defs/EvidenceRef"
+        },
+        "depends_on": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "title": "Depends On",
+          "type": "array"
+        },
+        "dependency_evidence_ref": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/EvidenceRef"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "appointment_feedback_ref": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/FeedbackRef"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "settlement_feedback_ref": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/FeedbackRef"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "private_intake_judgment": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/NativePrivateIntakeJudgment"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "final_account_disclosure": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/FinalAccountDisclosure"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "final_account_question_reception": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/FinalAccountQuestionReception"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "final_account_position_reception": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/FinalAccountPositionReception"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "final_account_owner_reception": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/FinalAccountOwnerReception"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "contractor_final_account_history": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ContractorFinalAccountHistory"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "plan_id",
+        "organization_id",
+        "project_id",
+        "tick",
+        "event_type",
+        "context",
+        "action_input",
+        "objects",
+        "native_evidence_ref"
+      ],
+      "title": "NativeLifecyclePlan",
+      "type": "object"
+    },
+    "NativePrivateIntakeJudgment": {
+      "additionalProperties": false,
+      "properties": {
+        "effect": {
+          "const": "simulation_private_intake_recommendation_only",
+          "title": "Effect",
+          "type": "string"
+        },
+        "learning_profile_ref": {
+          "$ref": "#/$defs/LearningProfileRef"
+        },
+        "dimension_ref": {
+          "$ref": "#/$defs/JudgmentDimensionRef"
+        },
+        "evaluate_value_ref": {
+          "$ref": "#/$defs/JudgmentValueRef"
+        },
+        "pause_value_ref": {
+          "$ref": "#/$defs/JudgmentValueRef"
+        },
+        "assessment_ref": {
+          "$ref": "#/$defs/Reference"
+        }
+      },
+      "required": [
+        "effect",
+        "learning_profile_ref",
+        "dimension_ref",
+        "evaluate_value_ref",
+        "pause_value_ref",
+        "assessment_ref"
+      ],
+      "title": "NativePrivateIntakeJudgment",
+      "type": "object"
+    },
+    "OrganizationRef": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "Organization",
+          "title": "Kind",
+          "type": "string"
+        },
+        "id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Id",
+          "type": "string"
+        },
+        "version": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "integer"
+            }
+          ],
+          "title": "Version"
+        }
+      },
+      "required": [
+        "kind",
+        "id",
+        "version"
+      ],
+      "title": "OrganizationRef",
+      "type": "object"
+    },
+    "OrganizationScope": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "organization",
+          "title": "Kind",
+          "type": "string"
+        },
+        "ref": {
+          "$ref": "#/$defs/OrganizationRef"
+        },
+        "coverage_refs": {
+          "items": {
+            "$ref": "#/$defs/WorkScopeRef"
+          },
+          "title": "Coverage Refs",
+          "type": "array"
+        }
+      },
+      "required": [
+        "kind",
+        "ref",
+        "coverage_refs"
+      ],
+      "title": "OrganizationScope",
+      "type": "object"
+    },
+    "OwnerCaseRef": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "OwnerCase",
+          "title": "Kind",
+          "type": "string"
+        },
+        "id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Id",
+          "type": "string"
+        },
+        "version": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "integer"
+            }
+          ],
+          "title": "Version"
+        }
+      },
+      "required": [
+        "kind",
+        "id",
+        "version"
+      ],
+      "title": "OwnerCaseRef",
+      "type": "object"
+    },
+    "PaymentAuthorizationRef": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "PaymentAuthorization",
+          "title": "Kind",
+          "type": "string"
+        },
+        "id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Id",
+          "type": "string"
+        },
+        "version": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "integer"
+            }
+          ],
+          "title": "Version"
+        }
+      },
+      "required": [
+        "kind",
+        "id",
+        "version"
+      ],
+      "title": "PaymentAuthorizationRef",
+      "type": "object"
+    },
+    "ProjectRef": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "Project",
+          "title": "Kind",
+          "type": "string"
+        },
+        "id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Id",
+          "type": "string"
+        },
+        "version": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "integer"
+            }
+          ],
+          "title": "Version"
+        }
+      },
+      "required": [
+        "kind",
+        "id",
+        "version"
+      ],
+      "title": "ProjectRef",
+      "type": "object"
+    },
+    "ProjectScope": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "project",
+          "title": "Kind",
+          "type": "string"
+        },
+        "ref": {
+          "$ref": "#/$defs/ProjectRef"
+        },
+        "coverage_refs": {
+          "items": {
+            "$ref": "#/$defs/WorkScopeRef"
+          },
+          "title": "Coverage Refs",
+          "type": "array"
+        }
+      },
+      "required": [
+        "kind",
+        "ref",
+        "coverage_refs"
+      ],
+      "title": "ProjectScope",
+      "type": "object"
+    },
+    "Reference": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Kind",
+          "type": "string"
+        },
+        "id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Id",
+          "type": "string"
+        },
+        "version": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "integer"
+            }
+          ],
+          "title": "Version"
+        }
+      },
+      "required": [
+        "kind",
+        "id",
+        "version"
+      ],
+      "title": "Reference",
+      "type": "object"
+    },
+    "TimePoint": {
+      "additionalProperties": false,
+      "properties": {
+        "clock_ref": {
+          "$ref": "#/$defs/ClockProfileRef"
+        },
+        "offset": {
+          "title": "Offset",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "clock_ref",
+        "offset"
+      ],
+      "title": "TimePoint",
+      "type": "object"
+    },
+    "WorkScopeRef": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "WorkScope",
+          "title": "Kind",
+          "type": "string"
+        },
+        "id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Id",
+          "type": "string"
+        },
+        "version": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "integer"
+            }
+          ],
+          "title": "Version"
+        }
+      },
+      "required": [
+        "kind",
+        "id",
+        "version"
+      ],
+      "title": "WorkScopeRef",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "native-lifecycle-actions-input.v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "run_id": {
+      "minLength": 1,
+      "pattern": "\\S",
+      "title": "Run Id",
+      "type": "string"
+    },
+    "source_declaration": {
+      "const": "independent_inputs_not_native_execution_proof",
+      "title": "Source Declaration",
+      "type": "string"
+    },
+    "plans": {
+      "items": {
+        "$ref": "#/$defs/NativeLifecyclePlan"
+      },
+      "minItems": 1,
+      "title": "Plans",
+      "type": "array"
+    }
+  },
+  "required": [
+    "schema_version",
+    "run_id",
+    "source_declaration",
+    "plans"
+  ],
+  "title": "NativeLifecycleInput",
+  "type": "object"
+}

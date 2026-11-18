@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Original reviewer request/configuration for V3 review-task assembly",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["run_id", "reviewer_organization_id", "request", "configuration"],
+  "properties": {
+    "run_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "reviewer_organization_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "request": {
+      "type": "object",
+      "description": "Distinct current formal Architect A08 reviewer invocation with actual target and separately delegated reviewer authority."
+    },
+    "configuration": {
+      "type": "object",
+      "description": "Original Architect RoleContractHostConfiguration including received_review_task_inputs selecting the original A07 task, actual registration and independent native/relation evidence."
+    }
+  }
+}

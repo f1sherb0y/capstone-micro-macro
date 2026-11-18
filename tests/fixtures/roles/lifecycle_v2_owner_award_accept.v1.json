@@ -1,0 +1,33 @@
+{
+  "schema_version": "lifecycle-input-case.v1",
+  "scenario_id": "V2",
+  "case_id": "v2-owner-award-accept",
+  "origin": "synthetic",
+  "run_id": "synthetic-v2-procurement-publication-01",
+  "status": "input_prepared_execution_pending",
+  "steps": [
+    {
+      "action_id": "OWN-A10",
+      "operation_id": "v2-owner-award-accept-01",
+      "expected_kind": "completed",
+      "expected_choice": "accept",
+      "host_factory": "integration.owner_role_contract_host:build_role_host",
+      "invocation_path": "integration/examples/role_contract_owner_award_invocation.json",
+      "invocation_file_sha256": "37a1e77af0aca70e6d1c31e33fdd0ed1993052a588c3fe81bea863d644eb1aa6",
+      "configuration_path": "integration/examples/role_contract_owner_award_host.json",
+      "configuration_file_sha256": "96274c6edf585c1d41e103038c167fcce8aed1218dd21c6903b1d1b1f6e52b8f",
+      "origin_path": "integration/examples/role_contract_owner_award_origin.json"
+    }
+  ],
+  "remaining_requirements": [
+    "Original evaluation and independent native selection mapping.",
+    "A10 entry routing/execution, capacity verification and actual Owner acceptance evidence.",
+    "Contractor complete same-run agreement intake and remaining PLAN."
+  ],
+  "limitations": [
+    "Independent native selection/Offer/terms and budget/capacity declarations are synthetic assumed inputs, not original evaluation or registration evidence.",
+    "No Contractor acceptance exists in this input; Owner acceptance retains pending party and capacity conditions and does not form a contract.",
+    "tender_evaluation_inputs is not configured yet; actual selection requires the original saved evaluation and independent native mapping.",
+    "Input schemas, A10 processor/capacity method and host have not run; expected output refs are validation metadata only."
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "skill_id": "CONTRACTOR-A06.task-readiness",
+  "skill_version": "4",
+  "action_id": "CONTRACTOR-A06",
+  "role": "Contractor",
+  "status": "implemented",
+  "spec_source": "zwtnew/04_roles/04_roles/contractor.md",
+  "spec_source_sha256": "7b1175592c21601ddfa6aedb7859fe46e6bba3285502c285b483a502632f803e",
+  "skill_path": "skills/actions/contractor/CONTRACTOR-A06/SKILL.md",
+  "skill_sha256": "634d13f96791d6a78d2f6861afee880791c8eb893b045f9ada301182b532004b",
+  "input_schema_id": "role-contract.v1:CONTRACTOR-A06:input",
+  "output_schema_id": "role-contract.v1:CONTRACTOR-A06:payload",
+  "processor_id": "contractor.task_readiness.v1",
+  "tool_ids": [],
+  "shared_refs": [
+    "skills/shared/decision-basics.md"
+  ],
+  "shared_sha256s": {
+    "skills/shared/decision-basics.md": "77da3d2fc1683068353888daccecfabe25278bf180b593747e39505fea987e60"
+  },
+  "prompt_sha256": "634d13f96791d6a78d2f6861afee880791c8eb893b045f9ada301182b532004b",
+  "method_refs": []
+}

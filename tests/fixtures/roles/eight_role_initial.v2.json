@@ -1,0 +1,1916 @@
+{
+  "schema_version": "scenario.v2",
+  "run_id": "synthetic-eight-role-v1",
+  "fixture": true,
+  "manifest": {
+    "data_version": "eight-role-fixture.v1",
+    "schema_version": "scenario.v2",
+    "macro_version": "unbound",
+    "method_versions": {},
+    "skill_versions": {},
+    "prompt_versions": {},
+    "model_provider": "offline_fixture",
+    "model_name": "none",
+    "model_configuration_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "seed": 42,
+    "mode": "role_contract",
+    "identity_mapping": {
+      "synthetic:Owner": "fixture-owner",
+      "synthetic:Bank": "fixture-bank",
+      "synthetic:Architect": "fixture-architect",
+      "synthetic:Engineer": "fixture-engineer",
+      "synthetic:QS": "fixture-qs",
+      "synthetic:Government": "fixture-government",
+      "synthetic:Contractor": "fixture-contractor",
+      "synthetic:Supplier": "fixture-supplier"
+    },
+    "source_hashes": {}
+  },
+  "organizations": [
+    {
+      "organization_id": "fixture-owner",
+      "actor_id": "fixture-owner-actor",
+      "source_ids": [
+        "synthetic:Owner"
+      ],
+      "public_description": "Owner fixture: Synthetic test institution",
+      "public_location": {
+        "state": "unknown",
+        "reason_code": "source_location_not_supplied",
+        "missing_refs": []
+      },
+      "assignments": [
+        {
+          "role": "Owner",
+          "function_ref": {
+            "kind": "FunctionAssignment",
+            "id": "fixture-owner/Owner",
+            "version": "1"
+          },
+          "configuration_version": "1",
+          "basis_refs": [
+            {
+              "kind": "Evidence",
+              "id": "evidence-304d5b1093aee8081287ed99",
+              "version": "1"
+            }
+          ]
+        }
+      ],
+      "members": [],
+      "evidence_refs": [
+        {
+          "kind": "Evidence",
+          "id": "evidence-c501da0acb7e48d9c66aa5e0",
+          "version": "1"
+        },
+        {
+          "kind": "Evidence",
+          "id": "evidence-304d5b1093aee8081287ed99",
+          "version": "1"
+        },
+        {
+          "kind": "Evidence",
+          "id": "evidence-3e85da3bd521dbdfa19c57f4",
+          "version": "1"
+        }
+      ]
+    },
+    {
+      "organization_id": "fixture-bank",
+      "actor_id": "fixture-bank-actor",
+      "source_ids": [
+        "synthetic:Bank"
+      ],
+      "public_description": "Bank fixture: Synthetic test institution",
+      "public_location": {
+        "state": "unknown",
+        "reason_code": "source_location_not_supplied",
+        "missing_refs": []
+      },
+      "assignments": [
+        {
+          "role": "Bank",
+          "function_ref": {
+            "kind": "FunctionAssignment",
+            "id": "fixture-bank/Bank",
+            "version": "1"
+          },
+          "configuration_version": "1",
+          "basis_refs": [
+            {
+              "kind": "Evidence",
+              "id": "evidence-d237ca1cd37446a5cb63e562",
+              "version": "1"
+            }
+          ]
+        }
+      ],
+      "members": [],
+      "evidence_refs": [
+        {
+          "kind": "Evidence",
+          "id": "evidence-104ed6c969be8b27d7f0232e",
+          "version": "1"
+        },
+        {
+          "kind": "Evidence",
+          "id": "evidence-d237ca1cd37446a5cb63e562",
+          "version": "1"
+        },
+        {
+          "kind": "Evidence",
+          "id": "evidence-e25bbdf21dfdbb998c434ac6",
+          "version": "1"
+        }
+      ]
+    },
+    {
+      "organization_id": "fixture-architect",
+      "actor_id": "fixture-architect-actor",
+      "source_ids": [
+        "synthetic:Architect"
+      ],
+      "public_description": "Architect fixture: Synthetic test institution",
+      "public_location": {
+        "state": "unknown",
+        "reason_code": "source_location_not_supplied",
+        "missing_refs": []
+      },
+      "assignments": [
+        {
+          "role": "Architect",
+          "function_ref": {
+            "kind": "FunctionAssignment",
+            "id": "fixture-architect/Architect",
+            "version": "1"
+          },
+          "configuration_version": "1",
+          "basis_refs": [
+            {
+              "kind": "Evidence",
+              "id": "evidence-ef711bba1af71b8b8d033a1d",
+              "version": "1"
+            }
+          ]
+        }
+      ],
+      "members": [],
+      "evidence_refs": [
+        {
+          "kind": "Evidence",
+          "id": "evidence-9b73c819ff9d95d8c35fa3eb",
+          "version": "1"
+        },
+        {
+          "kind": "Evidence",
+          "id": "evidence-ef711bba1af71b8b8d033a1d",
+          "version": "1"
+        },
+        {
+          "kind": "Evidence",
+          "id": "evidence-072dd9f695236cb254fbf861",
+          "version": "1"
+        }
+      ]
+    },
+    {
+      "organization_id": "fixture-engineer",
+      "actor_id": "fixture-engineer-actor",
+      "source_ids": [
+        "synthetic:Engineer"
+      ],
+      "public_description": "Engineer fixture: Synthetic test institution",
+      "public_location": {
+        "state": "unknown",
+        "reason_code": "source_location_not_supplied",
+        "missing_refs": []
+      },
+      "assignments": [
+        {
+          "role": "Engineer",
+          "function_ref": {
+            "kind": "FunctionAssignment",
+            "id": "fixture-engineer/Engineer",
+            "version": "1"
+          },
+          "configuration_version": "1",
+          "basis_refs": [
+            {
+              "kind": "Evidence",
+              "id": "evidence-566a0807c52953094462c2a8",
+              "version": "1"
+            }
+          ]
+        }
+      ],
+      "members": [],
+      "evidence_refs": [
+        {
+          "kind": "Evidence",
+          "id": "evidence-9c7d02cc97a97c235e69e769",
+          "version": "1"
+        },
+        {
+          "kind": "Evidence",
+          "id": "evidence-566a0807c52953094462c2a8",
+          "version": "1"
+        },
+        {
+          "kind": "Evidence",
+          "id": "evidence-d219f1ee77125533ef52331b",
+          "version": "1"
+        }
+      ]
+    },
+    {
+      "organization_id": "fixture-qs",
+      "actor_id": "fixture-qs-actor",
+      "source_ids": [
+        "synthetic:QS"
+      ],
+      "public_description": "QS fixture: Synthetic test institution",
+      "public_location": {
+        "state": "unknown",
+        "reason_code": "source_location_not_supplied",
+        "missing_refs": []
+      },
+      "assignments": [
+        {
+          "role": "QS",
+          "function_ref": {
+            "kind": "FunctionAssignment",
+            "id": "fixture-qs/QS",
+            "version": "1"
+          },
+          "configuration_version": "1",
+          "basis_refs": [
+            {
+              "kind": "Evidence",
+              "id": "evidence-e127eab6f1bbda4cc8caf942",
+              "version": "1"
+            }
+          ]
+        }
+      ],
+      "members": [],
+      "evidence_refs": [
+        {
+          "kind": "Evidence",
+          "id": "evidence-253f5a2414c934f67962d630",
+          "version": "1"
+        },
+        {
+          "kind": "Evidence",
+          "id": "evidence-e127eab6f1bbda4cc8caf942",
+          "version": "1"
+        },
+        {
+          "kind": "Evidence",
+          "id": "evidence-3f47464b67c5c959dedeb878",
+          "version": "1"
+        }
+      ]
+    },
+    {
+      "organization_id": "fixture-government",
+      "actor_id": "fixture-government-actor",
+      "source_ids": [
+        "synthetic:Government"
+      ],
+      "public_description": "Government fixture: Synthetic test institution",
+      "public_location": {
+        "state": "unknown",
+        "reason_code": "source_location_not_supplied",
+        "missing_refs": []
+      },
+      "assignments": [
+        {
+          "role": "Government",
+          "function_ref": {
+            "kind": "FunctionAssignment",
+            "id": "fixture-government/Government",
+            "version": "1"
+          },
+          "configuration_version": "1",
+          "basis_refs": [
+            {
+              "kind": "Evidence",
+              "id": "evidence-99ba5c69c474ea2ed0d4cbb7",
+              "version": "1"
+            }
+          ]
+        }
+      ],
+      "members": [],
+      "evidence_refs": [
+        {
+          "kind": "Evidence",
+          "id": "evidence-0598a5d5b4da359e5e6acbfd",
+          "version": "1"
+        },
+        {
+          "kind": "Evidence",
+          "id": "evidence-99ba5c69c474ea2ed0d4cbb7",
+          "version": "1"
+        },
+        {
+          "kind": "Evidence",
+          "id": "evidence-0f107b959a83b16160b4b227",
+          "version": "1"
+        }
+      ]
+    },
+    {
+      "organization_id": "fixture-contractor",
+      "actor_id": "fixture-contractor-actor",
+      "source_ids": [
+        "synthetic:Contractor"
+      ],
+      "public_description": "Contractor fixture: Synthetic test institution",
+      "public_location": {
+        "state": "unknown",
+        "reason_code": "source_location_not_supplied",
+        "missing_refs": []
+      },
+      "assignments": [
+        {
+          "role": "Contractor",
+          "function_ref": {
+            "kind": "FunctionAssignment",
+            "id": "fixture-contractor/Contractor",
+            "version": "1"
+          },
+          "configuration_version": "1",
+          "basis_refs": [
+            {
+              "kind": "Evidence",
+              "id": "evidence-2d15a89629c6c999bb261e20",
+              "version": "1"
+            }
+          ]
+        }
+      ],
+      "members": [],
+      "evidence_refs": [
+        {
+          "kind": "Evidence",
+          "id": "evidence-9712d77ac37659e87a913ac0",
+          "version": "1"
+        },
+        {
+          "kind": "Evidence",
+          "id": "evidence-2d15a89629c6c999bb261e20",
+          "version": "1"
+        },
+        {
+          "kind": "Evidence",
+          "id": "evidence-6f4e84a1e3b955b628006905",
+          "version": "1"
+        }
+      ]
+    },
+    {
+      "organization_id": "fixture-supplier",
+      "actor_id": "fixture-supplier-actor",
+      "source_ids": [
+        "synthetic:Supplier"
+      ],
+      "public_description": "Supplier fixture: Synthetic test institution",
+      "public_location": {
+        "state": "unknown",
+        "reason_code": "source_location_not_supplied",
+        "missing_refs": []
+      },
+      "assignments": [
+        {
+          "role": "Supplier",
+          "function_ref": {
+            "kind": "FunctionAssignment",
+            "id": "fixture-supplier/Supplier",
+            "version": "1"
+          },
+          "configuration_version": "1",
+          "basis_refs": [
+            {
+              "kind": "Evidence",
+              "id": "evidence-b2f288d84a3145f0e9118dbb",
+              "version": "1"
+            }
+          ]
+        }
+      ],
+      "members": [],
+      "evidence_refs": [
+        {
+          "kind": "Evidence",
+          "id": "evidence-ac0bc22a6a218122a33e7de9",
+          "version": "1"
+        },
+        {
+          "kind": "Evidence",
+          "id": "evidence-b2f288d84a3145f0e9118dbb",
+          "version": "1"
+        },
+        {
+          "kind": "Evidence",
+          "id": "evidence-bd430f97b6a8bda250056b9f",
+          "version": "1"
+        }
+      ]
+    }
+  ],
+  "assessments": [],
+  "proposals": [],
+  "projects": [],
+  "initial_parameters": [
+    {
+      "parameter_id": "fixture-owner/initial_cash",
+      "owner_id": "fixture-owner",
+      "version": "1",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-52cb6c3459bb91c0089c5759",
+        "version": "1"
+      },
+      "effective_window": null,
+      "kind": "initial_cash",
+      "value": {
+        "state": "unknown",
+        "reason_code": "initial_value_not_supplied",
+        "missing_refs": []
+      }
+    },
+    {
+      "parameter_id": "fixture-owner/resource",
+      "owner_id": "fixture-owner",
+      "version": "1",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-e29c00d495b93767382de0e7",
+        "version": "1"
+      },
+      "effective_window": null,
+      "kind": "resource",
+      "resource_type_ref": null,
+      "value": {
+        "state": "unknown",
+        "reason_code": "initial_value_not_supplied",
+        "missing_refs": []
+      }
+    },
+    {
+      "parameter_id": "fixture-owner/inventory",
+      "owner_id": "fixture-owner",
+      "version": "1",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-c33e114da5cfb997735609ad",
+        "version": "1"
+      },
+      "effective_window": null,
+      "kind": "inventory",
+      "resource_type_ref": null,
+      "value": {
+        "state": "unknown",
+        "reason_code": "initial_value_not_supplied",
+        "missing_refs": []
+      }
+    },
+    {
+      "parameter_id": "fixture-bank/initial_cash",
+      "owner_id": "fixture-bank",
+      "version": "1",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-2a804107f6bf467056c5fe41",
+        "version": "1"
+      },
+      "effective_window": null,
+      "kind": "initial_cash",
+      "value": {
+        "state": "unknown",
+        "reason_code": "initial_value_not_supplied",
+        "missing_refs": []
+      }
+    },
+    {
+      "parameter_id": "fixture-bank/resource",
+      "owner_id": "fixture-bank",
+      "version": "1",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-a5a074c59dcf8190b55c7bed",
+        "version": "1"
+      },
+      "effective_window": null,
+      "kind": "resource",
+      "resource_type_ref": null,
+      "value": {
+        "state": "unknown",
+        "reason_code": "initial_value_not_supplied",
+        "missing_refs": []
+      }
+    },
+    {
+      "parameter_id": "fixture-bank/inventory",
+      "owner_id": "fixture-bank",
+      "version": "1",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-fa6363725ace7fdaad8a1393",
+        "version": "1"
+      },
+      "effective_window": null,
+      "kind": "inventory",
+      "resource_type_ref": null,
+      "value": {
+        "state": "unknown",
+        "reason_code": "initial_value_not_supplied",
+        "missing_refs": []
+      }
+    },
+    {
+      "parameter_id": "fixture-architect/initial_cash",
+      "owner_id": "fixture-architect",
+      "version": "1",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-176f65c652fb4e3619d4675d",
+        "version": "1"
+      },
+      "effective_window": null,
+      "kind": "initial_cash",
+      "value": {
+        "state": "unknown",
+        "reason_code": "initial_value_not_supplied",
+        "missing_refs": []
+      }
+    },
+    {
+      "parameter_id": "fixture-architect/resource",
+      "owner_id": "fixture-architect",
+      "version": "1",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-2f54040c24a279b9baee3f8f",
+        "version": "1"
+      },
+      "effective_window": null,
+      "kind": "resource",
+      "resource_type_ref": null,
+      "value": {
+        "state": "unknown",
+        "reason_code": "initial_value_not_supplied",
+        "missing_refs": []
+      }
+    },
+    {
+      "parameter_id": "fixture-architect/inventory",
+      "owner_id": "fixture-architect",
+      "version": "1",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-d1b45791b5a9071f6988212d",
+        "version": "1"
+      },
+      "effective_window": null,
+      "kind": "inventory",
+      "resource_type_ref": null,
+      "value": {
+        "state": "unknown",
+        "reason_code": "initial_value_not_supplied",
+        "missing_refs": []
+      }
+    },
+    {
+      "parameter_id": "fixture-engineer/initial_cash",
+      "owner_id": "fixture-engineer",
+      "version": "1",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-e88f7cb5e024fbe0ec220366",
+        "version": "1"
+      },
+      "effective_window": null,
+      "kind": "initial_cash",
+      "value": {
+        "state": "unknown",
+        "reason_code": "initial_value_not_supplied",
+        "missing_refs": []
+      }
+    },
+    {
+      "parameter_id": "fixture-engineer/resource",
+      "owner_id": "fixture-engineer",
+      "version": "1",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-0287314735cdf6562e461415",
+        "version": "1"
+      },
+      "effective_window": null,
+      "kind": "resource",
+      "resource_type_ref": null,
+      "value": {
+        "state": "unknown",
+        "reason_code": "initial_value_not_supplied",
+        "missing_refs": []
+      }
+    },
+    {
+      "parameter_id": "fixture-engineer/inventory",
+      "owner_id": "fixture-engineer",
+      "version": "1",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-75bf9a3f6da8760ecc5348e3",
+        "version": "1"
+      },
+      "effective_window": null,
+      "kind": "inventory",
+      "resource_type_ref": null,
+      "value": {
+        "state": "unknown",
+        "reason_code": "initial_value_not_supplied",
+        "missing_refs": []
+      }
+    },
+    {
+      "parameter_id": "fixture-qs/initial_cash",
+      "owner_id": "fixture-qs",
+      "version": "1",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-5281a06eb9a06748fcc4156a",
+        "version": "1"
+      },
+      "effective_window": null,
+      "kind": "initial_cash",
+      "value": {
+        "state": "unknown",
+        "reason_code": "initial_value_not_supplied",
+        "missing_refs": []
+      }
+    },
+    {
+      "parameter_id": "fixture-qs/resource",
+      "owner_id": "fixture-qs",
+      "version": "1",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-970c2a6ea5498f46f15ecd0f",
+        "version": "1"
+      },
+      "effective_window": null,
+      "kind": "resource",
+      "resource_type_ref": null,
+      "value": {
+        "state": "unknown",
+        "reason_code": "initial_value_not_supplied",
+        "missing_refs": []
+      }
+    },
+    {
+      "parameter_id": "fixture-qs/inventory",
+      "owner_id": "fixture-qs",
+      "version": "1",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-690e09809e302d01c89d39d1",
+        "version": "1"
+      },
+      "effective_window": null,
+      "kind": "inventory",
+      "resource_type_ref": null,
+      "value": {
+        "state": "unknown",
+        "reason_code": "initial_value_not_supplied",
+        "missing_refs": []
+      }
+    },
+    {
+      "parameter_id": "fixture-government/initial_cash",
+      "owner_id": "fixture-government",
+      "version": "1",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-f02ea498cb3b2a6c5169a788",
+        "version": "1"
+      },
+      "effective_window": null,
+      "kind": "initial_cash",
+      "value": {
+        "state": "unknown",
+        "reason_code": "initial_value_not_supplied",
+        "missing_refs": []
+      }
+    },
+    {
+      "parameter_id": "fixture-government/resource",
+      "owner_id": "fixture-government",
+      "version": "1",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-bceea31b3a351bd8139b3860",
+        "version": "1"
+      },
+      "effective_window": null,
+      "kind": "resource",
+      "resource_type_ref": null,
+      "value": {
+        "state": "unknown",
+        "reason_code": "initial_value_not_supplied",
+        "missing_refs": []
+      }
+    },
+    {
+      "parameter_id": "fixture-government/inventory",
+      "owner_id": "fixture-government",
+      "version": "1",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-763f6c4999049c232ea41513",
+        "version": "1"
+      },
+      "effective_window": null,
+      "kind": "inventory",
+      "resource_type_ref": null,
+      "value": {
+        "state": "unknown",
+        "reason_code": "initial_value_not_supplied",
+        "missing_refs": []
+      }
+    },
+    {
+      "parameter_id": "fixture-contractor/initial_cash",
+      "owner_id": "fixture-contractor",
+      "version": "1",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-d5359632209ff15338f10d92",
+        "version": "1"
+      },
+      "effective_window": null,
+      "kind": "initial_cash",
+      "value": {
+        "state": "unknown",
+        "reason_code": "initial_value_not_supplied",
+        "missing_refs": []
+      }
+    },
+    {
+      "parameter_id": "fixture-contractor/resource",
+      "owner_id": "fixture-contractor",
+      "version": "1",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-e214349e8d6fccfda3ade309",
+        "version": "1"
+      },
+      "effective_window": null,
+      "kind": "resource",
+      "resource_type_ref": null,
+      "value": {
+        "state": "unknown",
+        "reason_code": "initial_value_not_supplied",
+        "missing_refs": []
+      }
+    },
+    {
+      "parameter_id": "fixture-contractor/inventory",
+      "owner_id": "fixture-contractor",
+      "version": "1",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-d6146a11a3a2417142ae12f0",
+        "version": "1"
+      },
+      "effective_window": null,
+      "kind": "inventory",
+      "resource_type_ref": null,
+      "value": {
+        "state": "unknown",
+        "reason_code": "initial_value_not_supplied",
+        "missing_refs": []
+      }
+    },
+    {
+      "parameter_id": "fixture-supplier/initial_cash",
+      "owner_id": "fixture-supplier",
+      "version": "1",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-acb1d8fb4793e396cfc7e5cc",
+        "version": "1"
+      },
+      "effective_window": null,
+      "kind": "initial_cash",
+      "value": {
+        "state": "unknown",
+        "reason_code": "initial_value_not_supplied",
+        "missing_refs": []
+      }
+    },
+    {
+      "parameter_id": "fixture-supplier/resource",
+      "owner_id": "fixture-supplier",
+      "version": "1",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-1369d164db69a117383e70db",
+        "version": "1"
+      },
+      "effective_window": null,
+      "kind": "resource",
+      "resource_type_ref": null,
+      "value": {
+        "state": "unknown",
+        "reason_code": "initial_value_not_supplied",
+        "missing_refs": []
+      }
+    },
+    {
+      "parameter_id": "fixture-supplier/inventory",
+      "owner_id": "fixture-supplier",
+      "version": "1",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-0868194db24799e4684b01f0",
+        "version": "1"
+      },
+      "effective_window": null,
+      "kind": "inventory",
+      "resource_type_ref": null,
+      "value": {
+        "state": "unknown",
+        "reason_code": "initial_value_not_supplied",
+        "missing_refs": []
+      }
+    }
+  ],
+  "numeric_profile": {
+    "currencies": [],
+    "units": []
+  },
+  "evidence": [
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-c501da0acb7e48d9c66aa5e0",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "synthetic:role-fixtures/company_name",
+      "content_hash": "3e8431d0e29a7819ed7e0cc99b69b8cc68732a9bd5d81e74de6ac437bd1285fe",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-304d5b1093aee8081287ed99",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "selection/identities/synthetic:Owner",
+      "content_hash": "d15a5b488a915b8af6c065b2029d9b4027d0c91be458e3a7d7b2552b93804e05",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-3e85da3bd521dbdfa19c57f4",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "synthetic:role-fixtures/office_location",
+      "content_hash": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-104ed6c969be8b27d7f0232e",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "synthetic:role-fixtures/company_name",
+      "content_hash": "d252213d2136314c90e758f7e4fc13c2d6e3a9b505060c2bbfd049c6ae0bda3e",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-d237ca1cd37446a5cb63e562",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "selection/identities/synthetic:Bank",
+      "content_hash": "f6c8cc7ebcb8a88930ed161b42775c753af2691cf4d89eee061f96365edd5dd2",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-e25bbdf21dfdbb998c434ac6",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "synthetic:role-fixtures/office_location",
+      "content_hash": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-9b73c819ff9d95d8c35fa3eb",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "synthetic:role-fixtures/company_name",
+      "content_hash": "16226775259b8952ba0695aaf827187b50b432c5918aac38944e5be09b61972d",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-ef711bba1af71b8b8d033a1d",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "selection/identities/synthetic:Architect",
+      "content_hash": "862a2f7b19b4f78402f3ec129d6635df184973fd8eceabe5882c27dee6a397e6",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-072dd9f695236cb254fbf861",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "synthetic:role-fixtures/office_location",
+      "content_hash": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-9c7d02cc97a97c235e69e769",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "synthetic:role-fixtures/company_name",
+      "content_hash": "09c9132c3d4c788622b4480977917454cd1e36c71279183f64b0b30b0f2d9ee9",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-566a0807c52953094462c2a8",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "selection/identities/synthetic:Engineer",
+      "content_hash": "f53540105c9e21779e516fc09d3c11a7e3b2709b2a3eabf692486d9e71c90aec",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-d219f1ee77125533ef52331b",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "synthetic:role-fixtures/office_location",
+      "content_hash": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-253f5a2414c934f67962d630",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "synthetic:role-fixtures/company_name",
+      "content_hash": "f59efa637e50466728a9ef1d6d447b2a0a3a2e65078be7276fa9b2d663c2748e",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-e127eab6f1bbda4cc8caf942",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "selection/identities/synthetic:QS",
+      "content_hash": "9312fbadfc85f43d2cd2a9aa4f1c3050984bcdc81ee1203b1cde984f10fafea0",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-3f47464b67c5c959dedeb878",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "synthetic:role-fixtures/office_location",
+      "content_hash": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-0598a5d5b4da359e5e6acbfd",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "synthetic:role-fixtures/company_name",
+      "content_hash": "963b51d0eb2748288911bba4d3321f507ab42da83541e1752b8ddadba9a76354",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-99ba5c69c474ea2ed0d4cbb7",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "selection/identities/synthetic:Government",
+      "content_hash": "8d9bd0e73cc3aa0dcd9c81398a2af8e5987d77959667202708f082e1f9e3bd15",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-0f107b959a83b16160b4b227",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "synthetic:role-fixtures/office_location",
+      "content_hash": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-9712d77ac37659e87a913ac0",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "synthetic:role-fixtures/company_name",
+      "content_hash": "a4cc9be7026970abf32c383eda09424cbb6cf08a7e3fbb3247c4f422ae3a67ec",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-2d15a89629c6c999bb261e20",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "selection/identities/synthetic:Contractor",
+      "content_hash": "26d43ac509d9a6b4153c926c294db59ae2c8595f663ce6d7c3c03fd8133a55ec",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-6f4e84a1e3b955b628006905",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "synthetic:role-fixtures/office_location",
+      "content_hash": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-ac0bc22a6a218122a33e7de9",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "synthetic:role-fixtures/company_name",
+      "content_hash": "2634c3ada30988561f2bb29fb71be55ff2af9f9fea7bf54e6d9fa224f6d8f8fb",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-b2f288d84a3145f0e9118dbb",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "selection/identities/synthetic:Supplier",
+      "content_hash": "799b31b4b816d1b5222c66dacaf8c3ec9b80517a83fd9537e5659ef4da3b6d30",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-bd430f97b6a8bda250056b9f",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "synthetic:role-fixtures/office_location",
+      "content_hash": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-52cb6c3459bb91c0089c5759",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "migration:initial_parameters/fixture-owner/initial_cash",
+      "content_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-e29c00d495b93767382de0e7",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "migration:initial_parameters/fixture-owner/resource",
+      "content_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-c33e114da5cfb997735609ad",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "migration:initial_parameters/fixture-owner/inventory",
+      "content_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-2a804107f6bf467056c5fe41",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "migration:initial_parameters/fixture-bank/initial_cash",
+      "content_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-a5a074c59dcf8190b55c7bed",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "migration:initial_parameters/fixture-bank/resource",
+      "content_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-fa6363725ace7fdaad8a1393",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "migration:initial_parameters/fixture-bank/inventory",
+      "content_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-176f65c652fb4e3619d4675d",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "migration:initial_parameters/fixture-architect/initial_cash",
+      "content_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-2f54040c24a279b9baee3f8f",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "migration:initial_parameters/fixture-architect/resource",
+      "content_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-d1b45791b5a9071f6988212d",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "migration:initial_parameters/fixture-architect/inventory",
+      "content_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-e88f7cb5e024fbe0ec220366",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "migration:initial_parameters/fixture-engineer/initial_cash",
+      "content_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-0287314735cdf6562e461415",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "migration:initial_parameters/fixture-engineer/resource",
+      "content_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-75bf9a3f6da8760ecc5348e3",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "migration:initial_parameters/fixture-engineer/inventory",
+      "content_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-5281a06eb9a06748fcc4156a",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "migration:initial_parameters/fixture-qs/initial_cash",
+      "content_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-970c2a6ea5498f46f15ecd0f",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "migration:initial_parameters/fixture-qs/resource",
+      "content_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-690e09809e302d01c89d39d1",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "migration:initial_parameters/fixture-qs/inventory",
+      "content_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-f02ea498cb3b2a6c5169a788",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "migration:initial_parameters/fixture-government/initial_cash",
+      "content_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-bceea31b3a351bd8139b3860",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "migration:initial_parameters/fixture-government/resource",
+      "content_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-763f6c4999049c232ea41513",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "migration:initial_parameters/fixture-government/inventory",
+      "content_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-d5359632209ff15338f10d92",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "migration:initial_parameters/fixture-contractor/initial_cash",
+      "content_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-e214349e8d6fccfda3ade309",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "migration:initial_parameters/fixture-contractor/resource",
+      "content_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-d6146a11a3a2417142ae12f0",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "migration:initial_parameters/fixture-contractor/inventory",
+      "content_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-acb1d8fb4793e396cfc7e5cc",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "migration:initial_parameters/fixture-supplier/initial_cash",
+      "content_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-1369d164db69a117383e70db",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "migration:initial_parameters/fixture-supplier/resource",
+      "content_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "effective_window": null
+    },
+    {
+      "ref": {
+        "kind": "Evidence",
+        "id": "evidence-0868194db24799e4684b01f0",
+        "version": "1"
+      },
+      "source_kind": "synthetic",
+      "basis_kind": "assumed",
+      "locator": "migration:initial_parameters/fixture-supplier/inventory",
+      "content_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "effective_window": null
+    }
+  ],
+  "field_sources": [
+    {
+      "field_path": "organizations/fixture-owner/public_description",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-c501da0acb7e48d9c66aa5e0",
+        "version": "1"
+      },
+      "transformation": "identity",
+      "source_path": "synthetic:role-fixtures/company_name"
+    },
+    {
+      "field_path": "organizations/fixture-owner/assignments",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-304d5b1093aee8081287ed99",
+        "version": "1"
+      },
+      "transformation": "assumption",
+      "source_path": "selection/identities/synthetic:Owner"
+    },
+    {
+      "field_path": "organizations/fixture-owner/public_location",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-3e85da3bd521dbdfa19c57f4",
+        "version": "1"
+      },
+      "transformation": "missing",
+      "source_path": "synthetic:role-fixtures/office_location"
+    },
+    {
+      "field_path": "organizations/fixture-bank/public_description",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-104ed6c969be8b27d7f0232e",
+        "version": "1"
+      },
+      "transformation": "identity",
+      "source_path": "synthetic:role-fixtures/company_name"
+    },
+    {
+      "field_path": "organizations/fixture-bank/assignments",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-d237ca1cd37446a5cb63e562",
+        "version": "1"
+      },
+      "transformation": "assumption",
+      "source_path": "selection/identities/synthetic:Bank"
+    },
+    {
+      "field_path": "organizations/fixture-bank/public_location",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-e25bbdf21dfdbb998c434ac6",
+        "version": "1"
+      },
+      "transformation": "missing",
+      "source_path": "synthetic:role-fixtures/office_location"
+    },
+    {
+      "field_path": "organizations/fixture-architect/public_description",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-9b73c819ff9d95d8c35fa3eb",
+        "version": "1"
+      },
+      "transformation": "identity",
+      "source_path": "synthetic:role-fixtures/company_name"
+    },
+    {
+      "field_path": "organizations/fixture-architect/assignments",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-ef711bba1af71b8b8d033a1d",
+        "version": "1"
+      },
+      "transformation": "assumption",
+      "source_path": "selection/identities/synthetic:Architect"
+    },
+    {
+      "field_path": "organizations/fixture-architect/public_location",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-072dd9f695236cb254fbf861",
+        "version": "1"
+      },
+      "transformation": "missing",
+      "source_path": "synthetic:role-fixtures/office_location"
+    },
+    {
+      "field_path": "organizations/fixture-engineer/public_description",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-9c7d02cc97a97c235e69e769",
+        "version": "1"
+      },
+      "transformation": "identity",
+      "source_path": "synthetic:role-fixtures/company_name"
+    },
+    {
+      "field_path": "organizations/fixture-engineer/assignments",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-566a0807c52953094462c2a8",
+        "version": "1"
+      },
+      "transformation": "assumption",
+      "source_path": "selection/identities/synthetic:Engineer"
+    },
+    {
+      "field_path": "organizations/fixture-engineer/public_location",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-d219f1ee77125533ef52331b",
+        "version": "1"
+      },
+      "transformation": "missing",
+      "source_path": "synthetic:role-fixtures/office_location"
+    },
+    {
+      "field_path": "organizations/fixture-qs/public_description",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-253f5a2414c934f67962d630",
+        "version": "1"
+      },
+      "transformation": "identity",
+      "source_path": "synthetic:role-fixtures/company_name"
+    },
+    {
+      "field_path": "organizations/fixture-qs/assignments",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-e127eab6f1bbda4cc8caf942",
+        "version": "1"
+      },
+      "transformation": "assumption",
+      "source_path": "selection/identities/synthetic:QS"
+    },
+    {
+      "field_path": "organizations/fixture-qs/public_location",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-3f47464b67c5c959dedeb878",
+        "version": "1"
+      },
+      "transformation": "missing",
+      "source_path": "synthetic:role-fixtures/office_location"
+    },
+    {
+      "field_path": "organizations/fixture-government/public_description",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-0598a5d5b4da359e5e6acbfd",
+        "version": "1"
+      },
+      "transformation": "identity",
+      "source_path": "synthetic:role-fixtures/company_name"
+    },
+    {
+      "field_path": "organizations/fixture-government/assignments",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-99ba5c69c474ea2ed0d4cbb7",
+        "version": "1"
+      },
+      "transformation": "assumption",
+      "source_path": "selection/identities/synthetic:Government"
+    },
+    {
+      "field_path": "organizations/fixture-government/public_location",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-0f107b959a83b16160b4b227",
+        "version": "1"
+      },
+      "transformation": "missing",
+      "source_path": "synthetic:role-fixtures/office_location"
+    },
+    {
+      "field_path": "organizations/fixture-contractor/public_description",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-9712d77ac37659e87a913ac0",
+        "version": "1"
+      },
+      "transformation": "identity",
+      "source_path": "synthetic:role-fixtures/company_name"
+    },
+    {
+      "field_path": "organizations/fixture-contractor/assignments",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-2d15a89629c6c999bb261e20",
+        "version": "1"
+      },
+      "transformation": "assumption",
+      "source_path": "selection/identities/synthetic:Contractor"
+    },
+    {
+      "field_path": "organizations/fixture-contractor/public_location",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-6f4e84a1e3b955b628006905",
+        "version": "1"
+      },
+      "transformation": "missing",
+      "source_path": "synthetic:role-fixtures/office_location"
+    },
+    {
+      "field_path": "organizations/fixture-supplier/public_description",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-ac0bc22a6a218122a33e7de9",
+        "version": "1"
+      },
+      "transformation": "identity",
+      "source_path": "synthetic:role-fixtures/company_name"
+    },
+    {
+      "field_path": "organizations/fixture-supplier/assignments",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-b2f288d84a3145f0e9118dbb",
+        "version": "1"
+      },
+      "transformation": "assumption",
+      "source_path": "selection/identities/synthetic:Supplier"
+    },
+    {
+      "field_path": "organizations/fixture-supplier/public_location",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-bd430f97b6a8bda250056b9f",
+        "version": "1"
+      },
+      "transformation": "missing",
+      "source_path": "synthetic:role-fixtures/office_location"
+    },
+    {
+      "field_path": "initial_parameters/fixture-owner/initial_cash",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-52cb6c3459bb91c0089c5759",
+        "version": "1"
+      },
+      "transformation": "missing",
+      "source_path": null
+    },
+    {
+      "field_path": "initial_parameters/fixture-owner/resource",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-e29c00d495b93767382de0e7",
+        "version": "1"
+      },
+      "transformation": "missing",
+      "source_path": null
+    },
+    {
+      "field_path": "initial_parameters/fixture-owner/inventory",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-c33e114da5cfb997735609ad",
+        "version": "1"
+      },
+      "transformation": "missing",
+      "source_path": null
+    },
+    {
+      "field_path": "initial_parameters/fixture-bank/initial_cash",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-2a804107f6bf467056c5fe41",
+        "version": "1"
+      },
+      "transformation": "missing",
+      "source_path": null
+    },
+    {
+      "field_path": "initial_parameters/fixture-bank/resource",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-a5a074c59dcf8190b55c7bed",
+        "version": "1"
+      },
+      "transformation": "missing",
+      "source_path": null
+    },
+    {
+      "field_path": "initial_parameters/fixture-bank/inventory",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-fa6363725ace7fdaad8a1393",
+        "version": "1"
+      },
+      "transformation": "missing",
+      "source_path": null
+    },
+    {
+      "field_path": "initial_parameters/fixture-architect/initial_cash",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-176f65c652fb4e3619d4675d",
+        "version": "1"
+      },
+      "transformation": "missing",
+      "source_path": null
+    },
+    {
+      "field_path": "initial_parameters/fixture-architect/resource",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-2f54040c24a279b9baee3f8f",
+        "version": "1"
+      },
+      "transformation": "missing",
+      "source_path": null
+    },
+    {
+      "field_path": "initial_parameters/fixture-architect/inventory",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-d1b45791b5a9071f6988212d",
+        "version": "1"
+      },
+      "transformation": "missing",
+      "source_path": null
+    },
+    {
+      "field_path": "initial_parameters/fixture-engineer/initial_cash",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-e88f7cb5e024fbe0ec220366",
+        "version": "1"
+      },
+      "transformation": "missing",
+      "source_path": null
+    },
+    {
+      "field_path": "initial_parameters/fixture-engineer/resource",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-0287314735cdf6562e461415",
+        "version": "1"
+      },
+      "transformation": "missing",
+      "source_path": null
+    },
+    {
+      "field_path": "initial_parameters/fixture-engineer/inventory",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-75bf9a3f6da8760ecc5348e3",
+        "version": "1"
+      },
+      "transformation": "missing",
+      "source_path": null
+    },
+    {
+      "field_path": "initial_parameters/fixture-qs/initial_cash",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-5281a06eb9a06748fcc4156a",
+        "version": "1"
+      },
+      "transformation": "missing",
+      "source_path": null
+    },
+    {
+      "field_path": "initial_parameters/fixture-qs/resource",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-970c2a6ea5498f46f15ecd0f",
+        "version": "1"
+      },
+      "transformation": "missing",
+      "source_path": null
+    },
+    {
+      "field_path": "initial_parameters/fixture-qs/inventory",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-690e09809e302d01c89d39d1",
+        "version": "1"
+      },
+      "transformation": "missing",
+      "source_path": null
+    },
+    {
+      "field_path": "initial_parameters/fixture-government/initial_cash",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-f02ea498cb3b2a6c5169a788",
+        "version": "1"
+      },
+      "transformation": "missing",
+      "source_path": null
+    },
+    {
+      "field_path": "initial_parameters/fixture-government/resource",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-bceea31b3a351bd8139b3860",
+        "version": "1"
+      },
+      "transformation": "missing",
+      "source_path": null
+    },
+    {
+      "field_path": "initial_parameters/fixture-government/inventory",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-763f6c4999049c232ea41513",
+        "version": "1"
+      },
+      "transformation": "missing",
+      "source_path": null
+    },
+    {
+      "field_path": "initial_parameters/fixture-contractor/initial_cash",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-d5359632209ff15338f10d92",
+        "version": "1"
+      },
+      "transformation": "missing",
+      "source_path": null
+    },
+    {
+      "field_path": "initial_parameters/fixture-contractor/resource",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-e214349e8d6fccfda3ade309",
+        "version": "1"
+      },
+      "transformation": "missing",
+      "source_path": null
+    },
+    {
+      "field_path": "initial_parameters/fixture-contractor/inventory",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-d6146a11a3a2417142ae12f0",
+        "version": "1"
+      },
+      "transformation": "missing",
+      "source_path": null
+    },
+    {
+      "field_path": "initial_parameters/fixture-supplier/initial_cash",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-acb1d8fb4793e396cfc7e5cc",
+        "version": "1"
+      },
+      "transformation": "missing",
+      "source_path": null
+    },
+    {
+      "field_path": "initial_parameters/fixture-supplier/resource",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-1369d164db69a117383e70db",
+        "version": "1"
+      },
+      "transformation": "missing",
+      "source_path": null
+    },
+    {
+      "field_path": "initial_parameters/fixture-supplier/inventory",
+      "evidence_ref": {
+        "kind": "Evidence",
+        "id": "evidence-0868194db24799e4684b01f0",
+        "version": "1"
+      },
+      "transformation": "missing",
+      "source_path": null
+    }
+  ]
+}

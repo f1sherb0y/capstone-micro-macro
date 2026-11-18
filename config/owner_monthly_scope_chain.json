@@ -1,0 +1,10 @@
+{
+  "schema_version": "owner-monthly-private-scope-chain.v1",
+  "run_id": "goal3i-owner-private-scope",
+  "ticks": 2,
+  "scenarios": {
+    "high": {"market_demand_index": 1.2},
+    "low": {"market_demand_index": 0.8}
+  },
+  "boundary": "Only the original configured global demand differs. Actual original A16 private drafting and actual native monthly preparation precede later original A16 comparison with the same confirmed prior brief. No formal project scope, rights, expenditure or detailed project execution is inferred."
+}

@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Original Bank credit review and actual recorded assessment for formal quotation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "scenario_id",
+    "run_id",
+    "bank_organization_id",
+    "request",
+    "configuration",
+    "sources"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "lifecycle-v5-bank-credit-quote-input.v1"
+    },
+    "scenario_id": {
+      "const": "V5"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "request": {
+      "type": "object",
+      "description": "Formal current Bank A04 quotation invocation selecting exact original application, product and independently recorded assessment."
+    },
+    "configuration": {
+      "type": "object",
+      "description": "BankRoleContractSettings with credit_inputs selecting original same-Bank A03 TaskIdentity and BankCreditHandoffBasis reference; actual same-store credit worker and independent history/handoff validators required."
+    },
+    "sources": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "credit_result",
+        "bank_input",
+        "credit_basis",
+        "assessment",
+        "recorded_review"
+      ],
+      "properties": {
+        "credit_result": {
+          "$ref": "#/$defs/sourceFile"
+        },
+        "bank_input": {
+          "$ref": "#/$defs/sourceFile"
+        },
+        "credit_basis": {
+          "$ref": "#/$defs/sourceFile"
+        },
+        "assessment": {
+          "$ref": "#/$defs/sourceFile"
+        },
+        "recorded_review": {
+          "$ref": "#/$defs/sourceFile"
+        }
+      }
+    },
+    "bank_organization_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    }
+  },
+  "$defs": {
+    "sourceFile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "file_sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "file_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    }
+  }
+}

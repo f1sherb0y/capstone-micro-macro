@@ -1,0 +1,35 @@
+{
+  "created_local": "2026-11-15 01:38:43",
+  "network_mode": "external network blocked; loopback allowed for Windows event loop",
+  "micro": {
+    "status": "passed",
+    "case": "CASE-0014",
+    "client": "local deterministic mock",
+    "discussion_messages": 336,
+    "bid_documents": 28,
+    "award_packages": 4
+  },
+  "macro": {
+    "status": "passed",
+    "executed_ticks": 1,
+    "input_horizon_ticks": 48,
+    "project_status": {
+      "PGEN0001": "initiation"
+    },
+    "full_lifecycle_rerun": false,
+    "working_database": "runs\\macro-20261115-013431\\agent_database.sqlite"
+  },
+  "research_performance_result": false,
+  "local_evidence": [
+    {
+      "path": "runs/macro-20261115-013431/runtime/result.json",
+      "bytes": 1304824,
+      "sha256": "b7efe3bf0945b5280d923f5889af3e027b1bbc6745b7fa4da633c27dabcaec7a"
+    },
+    {
+      "path": "runs/macro-20261115-013431/smoke-checkpoint.json",
+      "bytes": 2308990,
+      "sha256": "e6bd94a2c60f735f27d7415ff0d591625c1da56af1fc471165a3bfb085f1a9f6"
+    }
+  ]
+}

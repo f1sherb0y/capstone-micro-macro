@@ -1,0 +1,909 @@
+{
+  "schema_version": "lifecycle-v5-qs-payment-calculation-input-case.v1",
+  "scenario_id": "V5",
+  "origin": "synthetic",
+  "run_id": "synthetic-v5-financing-application",
+  "source_declaration": {
+    "owner_reconcile_case_path": "tests/fixtures/roles/lifecycle_v5_owner_reconcile_inputs.v1.json",
+    "owner_reconcile_case_sha256": "1bf05376b5be1f3b04c9e39b9fa43d2aba3bd98da411c8d10f7a85047e9b2f71",
+    "assumptions": {
+      "schema_version": "v5-qs-payment-calculation-assumptions.v1",
+      "input": {
+        "scope": {
+          "kind": "assessment_case",
+          "ref": {
+            "kind": "OwnerCase",
+            "id": "case",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "funded-work",
+              "version": "1"
+            }
+          ]
+        },
+        "application_ref": {
+          "kind": "PaymentApplication",
+          "id": "v5-works-application",
+          "version": "1"
+        },
+        "contract_ref": {
+          "kind": "Contract",
+          "id": "v5-works-contract",
+          "version": "1"
+        },
+        "performed_work_refs": [
+          {
+            "kind": "WorkFact",
+            "id": "v5-works-measured",
+            "version": "1"
+          }
+        ],
+        "prior_certificate_refs": [],
+        "payment_receipt_refs": [],
+        "measurement_result_refs": [],
+        "certification_authority_ref": null
+      },
+      "result_targets": {
+        "valuation": {
+          "kind": "MethodResult",
+          "id": "v5-works-valuation",
+          "version": "1"
+        }
+      },
+      "required_native_values": {
+        "quantity": "10",
+        "unit": "unit",
+        "rate": "10",
+        "currency": "HKD",
+        "eligible": true,
+        "retention_fraction": "0",
+        "prior_certificates": 0,
+        "certified_cash_visibility": "complete"
+      }
+    },
+    "result_targets": {
+      "valuation": {
+        "kind": "MethodResult",
+        "id": "v5-works-valuation",
+        "version": "1"
+      }
+    },
+    "author_authority_ref": {
+      "kind": "Authorization",
+      "id": "v5-qs-calculation-grant",
+      "version": "1"
+    },
+    "policy_version": "role-contract-qs-fixture.v1",
+    "expected_net_period_delta": {
+      "value": "100",
+      "currency": "HKD"
+    }
+  },
+  "steps": [
+    {
+      "step_id": "v5-qs-payment-calculation",
+      "action_id": "QS-A08",
+      "operation_id": "v5-qs-payment-calculation-24",
+      "expected_kind": "prepared",
+      "input_fixture": {
+        "source_kind": "synthetic",
+        "organization_id": "qs",
+        "actor_id": "qs-actor",
+        "business_time": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 24
+        },
+        "input": {
+          "scope": {
+            "kind": "assessment_case",
+            "ref": {
+              "kind": "OwnerCase",
+              "id": "case",
+              "version": "1"
+            },
+            "coverage_refs": [
+              {
+                "kind": "WorkScope",
+                "id": "funded-work",
+                "version": "1"
+              }
+            ]
+          },
+          "application_ref": {
+            "kind": "PaymentApplication",
+            "id": "v5-works-application",
+            "version": "1"
+          },
+          "contract_ref": {
+            "kind": "Contract",
+            "id": "v5-works-contract",
+            "version": "1"
+          },
+          "performed_work_refs": [
+            {
+              "kind": "WorkFact",
+              "id": "v5-works-measured",
+              "version": "1"
+            }
+          ],
+          "prior_certificate_refs": [],
+          "payment_receipt_refs": [],
+          "measurement_result_refs": [],
+          "certification_authority_ref": null
+        },
+        "objects": [
+          {
+            "ref": {
+              "kind": "FunctionAssignment",
+              "id": "v5-qs-payment-function",
+              "version": "1"
+            },
+            "value": {
+              "role": "QS",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "v5-qs-payment-function",
+                "version": "1"
+              },
+              "configuration_version": "1",
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v5-qs-calculation-assumptions",
+                  "version": "1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "OwnerCase",
+              "id": "case",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "OwnerCase",
+                "id": "case",
+                "version": "1"
+              },
+              "organization_id": "owner",
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v5-qs-calculation-assumptions",
+                  "version": "1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "WorkScope",
+              "id": "funded-work",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "WorkScope",
+                "id": "funded-work",
+                "version": "1"
+              },
+              "parent_ref": {
+                "kind": "OwnerCase",
+                "id": "case",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v5-qs-calculation-assumptions",
+                  "version": "1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "CandidateSet",
+              "id": "v5-qs-calculation-candidates",
+              "version": "1"
+            },
+            "value": {
+              "operation_id": "v5-qs-payment-calculation-24",
+              "scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "funded-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "as_of": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 24
+              },
+              "candidates": [
+                {
+                  "ref": {
+                    "kind": "PaymentApplication",
+                    "id": "v5-works-application",
+                    "version": "1"
+                  },
+                  "permitted_choices": [
+                    "verify"
+                  ]
+                }
+              ],
+              "search_profile_ref": {
+                "kind": "Profile",
+                "id": "v5-qs-calculation-search",
+                "version": "1"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "Evidence",
+              "id": "v5-qs-calculation-assumptions",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Evidence",
+                "id": "v5-qs-calculation-assumptions",
+                "version": "1"
+              },
+              "source_kind": "synthetic",
+              "basis_kind": "assumed",
+              "locator": "Explicit QS24 work valuation input; independent observed work/rate/condition and original author records required",
+              "content_hash": "d09443d05b75a8f67f36bf11ccd2ac082ffd6ea95a83e4133b0b88cede13a402",
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 24
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "Authorization",
+              "id": "v5-qs-calculation-grant",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Authorization",
+                "id": "v5-qs-calculation-grant",
+                "version": "1"
+              },
+              "organization_id": "qs",
+              "actor_id": "qs-actor",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "v5-qs-payment-function",
+                "version": "1"
+              },
+              "action_ids": [
+                "QS-A08"
+              ],
+              "scopes": [
+                {
+                  "kind": "assessment_case",
+                  "ref": {
+                    "kind": "OwnerCase",
+                    "id": "case",
+                    "version": "1"
+                  },
+                  "coverage_refs": [
+                    {
+                      "kind": "WorkScope",
+                      "id": "funded-work",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "readable_refs": [
+                {
+                  "kind": "FunctionAssignment",
+                  "id": "v5-qs-payment-function",
+                  "version": "1"
+                },
+                {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                {
+                  "kind": "WorkScope",
+                  "id": "funded-work",
+                  "version": "1"
+                },
+                {
+                  "kind": "CandidateSet",
+                  "id": "v5-qs-calculation-candidates",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "v5-qs-calculation-assumptions",
+                  "version": "1"
+                },
+                {
+                  "kind": "Authorization",
+                  "id": "v5-qs-calculation-grant",
+                  "version": "1"
+                },
+                {
+                  "kind": "PaymentApplication",
+                  "id": "v5-works-application",
+                  "version": "1"
+                },
+                {
+                  "kind": "Contract",
+                  "id": "v5-works-contract",
+                  "version": "1"
+                },
+                {
+                  "kind": "WorkFact",
+                  "id": "v5-works-measured",
+                  "version": "1"
+                },
+                {
+                  "kind": "ContractRate",
+                  "id": "v5-works-rate",
+                  "version": "1"
+                },
+                {
+                  "kind": "PaymentCondition",
+                  "id": "v5-works-eligible",
+                  "version": "1"
+                },
+                {
+                  "kind": "MethodResult",
+                  "id": "v5-works-valuation",
+                  "version": "1"
+                }
+              ],
+              "tool_ids": [],
+              "validity": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 24
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              },
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v5-qs-calculation-assumptions",
+                  "version": "1"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "offline_binding": {
+        "invocation": {
+          "context": {
+            "run_id": "synthetic-v5-financing-application",
+            "actor_id": "qs-actor",
+            "function_ref": {
+              "kind": "FunctionAssignment",
+              "id": "v5-qs-payment-function",
+              "version": "1"
+            },
+            "authorization_refs": [
+              {
+                "kind": "Authorization",
+                "id": "v5-qs-calculation-grant",
+                "version": "1"
+              }
+            ],
+            "operation_id": "v5-qs-payment-calculation-24",
+            "contract_ref": {
+              "kind": "ActionContract",
+              "id": "QS-A08",
+              "version": "1"
+            },
+            "task_ref": {
+              "kind": "DecisionTask",
+              "id": "v5-qs-payment-calculation-task",
+              "version": "1"
+            },
+            "scope": {
+              "kind": "assessment_case",
+              "ref": {
+                "kind": "OwnerCase",
+                "id": "case",
+                "version": "1"
+              },
+              "coverage_refs": [
+                {
+                  "kind": "WorkScope",
+                  "id": "funded-work",
+                  "version": "1"
+                }
+              ]
+            },
+            "business_time": {
+              "clock_ref": {
+                "kind": "ClockProfile",
+                "id": "business",
+                "version": "1"
+              },
+              "offset": 24
+            },
+            "read_token": "synthetic-v5-financing-application:v5-qs-payment-calculation-24:read:1",
+            "visible_refs": [
+              {
+                "kind": "FunctionAssignment",
+                "id": "v5-qs-payment-function",
+                "version": "1"
+              },
+              {
+                "kind": "OwnerCase",
+                "id": "case",
+                "version": "1"
+              },
+              {
+                "kind": "WorkScope",
+                "id": "funded-work",
+                "version": "1"
+              },
+              {
+                "kind": "CandidateSet",
+                "id": "v5-qs-calculation-candidates",
+                "version": "1"
+              },
+              {
+                "kind": "Evidence",
+                "id": "v5-qs-calculation-assumptions",
+                "version": "1"
+              },
+              {
+                "kind": "Authorization",
+                "id": "v5-qs-calculation-grant",
+                "version": "1"
+              },
+              {
+                "kind": "MethodResult",
+                "id": "v5-works-valuation",
+                "version": "1"
+              }
+            ],
+            "candidate_set_ref": {
+              "kind": "CandidateSet",
+              "id": "v5-qs-calculation-candidates",
+              "version": "1"
+            },
+            "execution_mode": "offline_fixture"
+          },
+          "action_input": {
+            "scope": {
+              "kind": "assessment_case",
+              "ref": {
+                "kind": "OwnerCase",
+                "id": "case",
+                "version": "1"
+              },
+              "coverage_refs": [
+                {
+                  "kind": "WorkScope",
+                  "id": "funded-work",
+                  "version": "1"
+                }
+              ]
+            },
+            "application_ref": {
+              "kind": "PaymentApplication",
+              "id": "v5-works-application",
+              "version": "1"
+            },
+            "contract_ref": {
+              "kind": "Contract",
+              "id": "v5-works-contract",
+              "version": "1"
+            },
+            "performed_work_refs": [
+              {
+                "kind": "WorkFact",
+                "id": "v5-works-measured",
+                "version": "1"
+              }
+            ],
+            "prior_certificate_refs": [],
+            "payment_receipt_refs": [],
+            "measurement_result_refs": [],
+            "certification_authority_ref": null
+          },
+          "execution_path": "deterministic"
+        },
+        "publication_invocation": {
+          "context": {
+            "run_id": "synthetic-v5-financing-application",
+            "actor_id": "qs-actor",
+            "function_ref": {
+              "kind": "FunctionAssignment",
+              "id": "v5-qs-payment-function",
+              "version": "1"
+            },
+            "authorization_refs": [
+              {
+                "kind": "Authorization",
+                "id": "v5-qs-calculation-grant",
+                "version": "1"
+              }
+            ],
+            "operation_id": "v5-qs-payment-calculation-24",
+            "contract_ref": {
+              "kind": "ActionContract",
+              "id": "QS-A08",
+              "version": "1"
+            },
+            "task_ref": {
+              "kind": "DecisionTask",
+              "id": "v5-qs-payment-calculation-task",
+              "version": "1"
+            },
+            "scope": {
+              "kind": "assessment_case",
+              "ref": {
+                "kind": "OwnerCase",
+                "id": "case",
+                "version": "1"
+              },
+              "coverage_refs": [
+                {
+                  "kind": "WorkScope",
+                  "id": "funded-work",
+                  "version": "1"
+                }
+              ]
+            },
+            "business_time": {
+              "clock_ref": {
+                "kind": "ClockProfile",
+                "id": "business",
+                "version": "1"
+              },
+              "offset": 24
+            },
+            "read_token": "synthetic-v5-financing-application:v5-qs-payment-calculation-24:read:2",
+            "visible_refs": [
+              {
+                "kind": "FunctionAssignment",
+                "id": "v5-qs-payment-function",
+                "version": "1"
+              },
+              {
+                "kind": "OwnerCase",
+                "id": "case",
+                "version": "1"
+              },
+              {
+                "kind": "WorkScope",
+                "id": "funded-work",
+                "version": "1"
+              },
+              {
+                "kind": "CandidateSet",
+                "id": "v5-qs-calculation-candidates",
+                "version": "1"
+              },
+              {
+                "kind": "Evidence",
+                "id": "v5-qs-calculation-assumptions",
+                "version": "1"
+              },
+              {
+                "kind": "Authorization",
+                "id": "v5-qs-calculation-grant",
+                "version": "1"
+              },
+              {
+                "kind": "MethodResult",
+                "id": "v5-works-valuation",
+                "version": "1"
+              }
+            ],
+            "candidate_set_ref": {
+              "kind": "CandidateSet",
+              "id": "v5-qs-calculation-candidates",
+              "version": "1"
+            },
+            "execution_mode": "offline_fixture"
+          },
+          "action_input": {
+            "scope": {
+              "kind": "assessment_case",
+              "ref": {
+                "kind": "OwnerCase",
+                "id": "case",
+                "version": "1"
+              },
+              "coverage_refs": [
+                {
+                  "kind": "WorkScope",
+                  "id": "funded-work",
+                  "version": "1"
+                }
+              ]
+            },
+            "application_ref": {
+              "kind": "PaymentApplication",
+              "id": "v5-works-application",
+              "version": "1"
+            },
+            "contract_ref": {
+              "kind": "Contract",
+              "id": "v5-works-contract",
+              "version": "1"
+            },
+            "performed_work_refs": [
+              {
+                "kind": "WorkFact",
+                "id": "v5-works-measured",
+                "version": "1"
+              }
+            ],
+            "prior_certificate_refs": [],
+            "payment_receipt_refs": [],
+            "measurement_result_refs": [],
+            "certification_authority_ref": null
+          },
+          "execution_path": "deterministic"
+        },
+        "organization_snapshot": {
+          "schema_version": "organization.v2",
+          "run_id": "synthetic-v5-financing-application",
+          "organizations": [
+            {
+              "organization_id": "qs",
+              "actor_id": "qs-actor",
+              "source_ids": [
+                "synthetic:v5-qs-payment-calculation"
+              ],
+              "public_description": "Explicit QS24 payment calculation only; independent original work and authority supplied separately.",
+              "public_location": {
+                "state": "unknown",
+                "reason_code": "synthetic_unsupplied",
+                "missing_refs": []
+              },
+              "members": [],
+              "assignments": [
+                {
+                  "role": "QS",
+                  "function_ref": {
+                    "kind": "FunctionAssignment",
+                    "id": "v5-qs-payment-function",
+                    "version": "1"
+                  },
+                  "configuration_version": "1",
+                  "basis_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "v5-qs-calculation-assumptions",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v5-qs-calculation-assumptions",
+                  "version": "1"
+                }
+              ]
+            }
+          ],
+          "authorizations": [
+            {
+              "ref": {
+                "kind": "Authorization",
+                "id": "v5-qs-calculation-grant",
+                "version": "1"
+              },
+              "organization_id": "qs",
+              "actor_id": "qs-actor",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "v5-qs-payment-function",
+                "version": "1"
+              },
+              "action_ids": [
+                "QS-A08"
+              ],
+              "scopes": [
+                {
+                  "kind": "assessment_case",
+                  "ref": {
+                    "kind": "OwnerCase",
+                    "id": "case",
+                    "version": "1"
+                  },
+                  "coverage_refs": [
+                    {
+                      "kind": "WorkScope",
+                      "id": "funded-work",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "readable_refs": [
+                {
+                  "kind": "FunctionAssignment",
+                  "id": "v5-qs-payment-function",
+                  "version": "1"
+                },
+                {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                {
+                  "kind": "WorkScope",
+                  "id": "funded-work",
+                  "version": "1"
+                },
+                {
+                  "kind": "CandidateSet",
+                  "id": "v5-qs-calculation-candidates",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "v5-qs-calculation-assumptions",
+                  "version": "1"
+                },
+                {
+                  "kind": "Authorization",
+                  "id": "v5-qs-calculation-grant",
+                  "version": "1"
+                },
+                {
+                  "kind": "PaymentApplication",
+                  "id": "v5-works-application",
+                  "version": "1"
+                },
+                {
+                  "kind": "Contract",
+                  "id": "v5-works-contract",
+                  "version": "1"
+                },
+                {
+                  "kind": "WorkFact",
+                  "id": "v5-works-measured",
+                  "version": "1"
+                },
+                {
+                  "kind": "ContractRate",
+                  "id": "v5-works-rate",
+                  "version": "1"
+                },
+                {
+                  "kind": "PaymentCondition",
+                  "id": "v5-works-eligible",
+                  "version": "1"
+                },
+                {
+                  "kind": "MethodResult",
+                  "id": "v5-works-valuation",
+                  "version": "1"
+                }
+              ],
+              "tool_ids": [],
+              "validity": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 24
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 30
+                },
+                "bounds": "closed_open"
+              },
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v5-qs-calculation-assumptions",
+                  "version": "1"
+                }
+              ]
+            }
+          ],
+          "inactive_authorization_refs": []
+        },
+        "schema_factory": "src.actions.contracts.qs_payment_objects:qs_payment_schemas",
+        "source_projection_envelope": {
+          "run_id": "synthetic-v5-financing-application",
+          "macro_version": "synthetic-v5-application.v1",
+          "state_version": "synthetic-v5-qs-payment-calculation-24.v1",
+          "read_token": "synthetic-v5-financing-application:v5-qs-payment-calculation-24:read:1",
+          "business_time": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 24
+          },
+          "organization_id": "qs"
+        }
+      }
+    }
+  ],
+  "predecessor_requirements": [
+    "Original Owner24 reconciliation result in same run.",
+    "Independent original appointed QS contract, beneficiary application, observed performed work/rate/eligibility and original authors/current grants; complete certificate/receipt/credit/deduction history."
+  ],
+  "dependent_steps": [
+    "Original QS24 measurement verification/certification and actual native issued certificate reception by Owner25."
+  ],
+  "remaining_requirements": [
+    "Actual certificate issuance and complete supplier/contractor payment chain.",
+    "Native payment submission/receipts, core cash/debt, multi-command and final simple verification."
+  ],
+  "limitations": [
+    "Explicit input only; no observed work, successful calculation, certificate or cash generated.",
+    "Future MethodResult target is visible/authorized but absent before actual original calculation.",
+    "All original calculation/correction/history branches remain in scope."
+  ]
+}

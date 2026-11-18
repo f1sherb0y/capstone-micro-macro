@@ -1,0 +1,6 @@
+{
+  "schema_version":"contractor-jv-review-chain.v1",
+  "run_id":"goal3a-contractor-jv-review",
+  "scenarios":{"low":{"regional_friction":0.15},"high":{"regional_friction":0.65}},
+  "source_note":"Independent initial synthetic target-region eligibility, nonempty physical commitment dossier and two public partner candidates. Private review weight/own effort: A 0.6/0.1, B 0.2/0.05. These are review hypotheses, not promised risk transfer, committed partner capacity or quoted money. Only original initial regional_friction_matrix changes. Runtime observations and later execution feedback remain unbound; no outreach, JV or actual risk mitigation is inferred."
+}

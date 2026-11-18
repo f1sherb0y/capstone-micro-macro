@@ -1,0 +1,18 @@
+{
+  "skill_id": "OWN-A01.opportunity-observation",
+  "skill_version": "2",
+  "action_id": "OWN-A01",
+  "role": "Owner",
+  "status": "implemented",
+  "spec_source": "zwtnew/04_roles/04_roles/owner.md",
+  "spec_source_sha256": "addcb91c7a5b83caa31f5876a4eb347689847105500775b6fd1b88c87dcfd9c8",
+  "skill_path": "skills/actions/owner/OWN-A01/SKILL.md",
+  "skill_sha256": "526e2856a2a919d2dd4288002023f7e8faefa349b850265aef7d2958adf26bef",
+  "input_schema_id": "role-contract.v1:OWN-A01:input",
+  "output_schema_id": "role-contract.v1:OWN-A01:payload",
+  "processor_id": "owner.opportunity_observation.v2",
+  "tool_ids": [],
+  "shared_refs": ["skills/shared/decision-basics.md"],
+  "shared_sha256s": {"skills/shared/decision-basics.md": "77da3d2fc1683068353888daccecfabe25278bf180b593747e39505fea987e60"},
+  "prompt_sha256": "526e2856a2a919d2dd4288002023f7e8faefa349b850265aef7d2958adf26bef"
+}

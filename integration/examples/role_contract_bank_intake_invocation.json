@@ -1,0 +1,143 @@
+{
+  "schema_version": "role-contract-invocation.v1",
+  "context": {
+    "run_id": "synthetic-role-contract-bank-intake-01",
+    "actor_id": "fixture-bank-actor",
+    "function_ref": {
+      "kind": "FunctionAssignment",
+      "id": "bank-intake-example-function",
+      "version": "1"
+    },
+    "authorization_refs": [
+      {
+        "kind": "Authorization",
+        "id": "bank-intake-example-grant",
+        "version": "1"
+      }
+    ],
+    "operation_id": "bank-intake-example-1",
+    "contract_ref": {
+      "kind": "ActionContract",
+      "id": "BANK-A02",
+      "version": "1"
+    },
+    "task_ref": {
+      "kind": "DecisionTask",
+      "id": "bank-intake-example-task",
+      "version": "1"
+    },
+    "scope": {
+      "kind": "assessment_case",
+      "ref": {
+        "kind": "OwnerCase",
+        "id": "case",
+        "version": "1"
+      },
+      "coverage_refs": []
+    },
+    "business_time": {
+      "clock_ref": {
+        "kind": "ClockProfile",
+        "id": "fixture-clock",
+        "version": "1"
+      },
+      "offset": 2
+    },
+    "read_token": "synthetic-role-contract-bank-intake-01:read-1",
+    "visible_refs": [
+      {
+        "kind": "FinanceApplication",
+        "id": "application",
+        "version": "1"
+      },
+      {
+        "kind": "Organization",
+        "id": "fixture-borrower",
+        "version": "1"
+      },
+      {
+        "kind": "Authorization",
+        "id": "borrower-authority",
+        "version": "1"
+      },
+      {
+        "kind": "FundingPurpose",
+        "id": "purpose",
+        "version": "1"
+      },
+      {
+        "kind": "FinanceProductProfile",
+        "id": "product",
+        "version": "1"
+      },
+      {
+        "kind": "Requirement",
+        "id": "review-condition",
+        "version": "1"
+      },
+      {
+        "kind": "Evidence",
+        "id": "synthetic-basis",
+        "version": "1"
+      },
+      {
+        "kind": "Evidence",
+        "id": "identity-disclosure",
+        "version": "1"
+      },
+      {
+        "kind": "CandidateSet",
+        "id": "bank-intake-example-candidates",
+        "version": "1"
+      }
+    ],
+    "candidate_set_ref": {
+      "kind": "CandidateSet",
+      "id": "bank-intake-example-candidates",
+      "version": "1"
+    },
+    "execution_mode": "offline_fixture"
+  },
+  "action_input": {
+    "application_ref": {
+      "kind": "FinanceApplication",
+      "id": "application",
+      "version": "1"
+    },
+    "borrower_id": "fixture-borrower",
+    "applicant_authority_ref": {
+      "kind": "Authorization",
+      "id": "borrower-authority",
+      "version": "1"
+    },
+    "requested": {
+      "value": "100",
+      "currency": "HKD",
+      "basis_ref": {
+        "kind": "Evidence",
+        "id": "synthetic-basis",
+        "version": "1"
+      }
+    },
+    "purpose_ref": {
+      "kind": "FundingPurpose",
+      "id": "purpose",
+      "version": "1"
+    },
+    "product_candidates": [
+      {
+        "kind": "FinanceProductProfile",
+        "id": "product",
+        "version": "1"
+      }
+    ],
+    "disclosure_refs": [
+      {
+        "kind": "Evidence",
+        "id": "identity-disclosure",
+        "version": "1"
+      }
+    ]
+  },
+  "execution_path": "deterministic"
+}

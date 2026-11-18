@@ -1,0 +1,44 @@
+{
+  "skill_id": "QS-A12.immutable-forecast-experience",
+  "skill_version": "3",
+  "action_id": "QS-A12",
+  "role": "QS",
+  "status": "implemented",
+  "spec_source": "zwtnew/04_roles/04_roles/qs.md",
+  "spec_source_sha256": "ffbfdc7c23b4677567ee66b9af02156c2fb81b40e36954f75d1e0f84b2c99634",
+  "skill_path": "skills/actions/qs/QS-A12/SKILL.md",
+  "skill_sha256": "81cad91a9843e1deb5860d87d43b6d898eb5728190d890a9c496663a2b7146b2",
+  "input_schema_id": "role-contract.v1:QS-A12:input",
+  "output_schema_id": "role-contract.v1:QS-A12:payload",
+  "processor_id": "qs.immutable_forecast_experience.v1",
+  "tool_ids": [],
+  "shared_refs": [
+    "skills/shared/decision-basics.md"
+  ],
+  "shared_sha256s": {
+    "skills/shared/decision-basics.md": "77da3d2fc1683068353888daccecfabe25278bf180b593747e39505fea987e60"
+  },
+  "prompt_sha256": "81cad91a9843e1deb5860d87d43b6d898eb5728190d890a9c496663a2b7146b2",
+  "method_refs": [
+    {
+      "kind": "Method",
+      "id": "micro.qs.original_forecast_comparability",
+      "version": "1"
+    },
+    {
+      "kind": "Method",
+      "id": "micro.qs.comparable_forecast_error",
+      "version": "1"
+    },
+    {
+      "kind": "Method",
+      "id": "micro.architect.declared_feedback_rules",
+      "version": "1"
+    },
+    {
+      "kind": "Method",
+      "id": "micro.architect.declared_training_estimate",
+      "version": "1"
+    }
+  ]
+}

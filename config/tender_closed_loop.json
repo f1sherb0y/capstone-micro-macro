@@ -1,0 +1,10 @@
+{
+  "schema_version": "tender-closed-loop-acceptance.v1",
+  "source_note": "Synthetic initial projects, qualifications, quantities, prices, future calendar and private feedback policy; native requests, submission events and consumption are produced during execution.",
+  "run_id": "goal1-tender-closed-loop",
+  "varied_organization_id": "dev-contractor-a",
+  "scenarios": [
+    {"name": "baseline", "total_resource_capacity": 1.0},
+    {"name": "lower_capacity", "total_resource_capacity": 0.8}
+  ]
+}

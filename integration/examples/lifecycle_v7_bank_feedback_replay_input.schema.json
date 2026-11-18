@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "V7 delayed duplicate of original persisted Bank execution feedback",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "scenario_id",
+    "run_id",
+    "source_mode",
+    "original_feedback",
+    "redelivered_observation",
+    "replay"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "lifecycle-v7-bank-feedback-replay-input.v1"
+    },
+    "scenario_id": {
+      "const": "V7"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "source_mode": {
+      "const": "formal"
+    },
+    "original_feedback": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "record_path",
+        "record_file_sha256",
+        "record_sha256"
+      ],
+      "properties": {
+        "record_path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S",
+          "description": "Original full persisted BankSubmissionFeedback record, absolute or relative to this input file."
+        },
+        "record_file_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "record_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    },
+    "redelivered_observation": {
+      "type": "object",
+      "description": "Exact original BankFeedbackObservation, validated by its closed typed contract; all fields and digests must match persisted observation."
+    },
+    "replay": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "factory",
+        "settings",
+        "journal_path",
+        "inbox_path",
+        "feedback_configuration_sha256",
+        "context_sha256"
+      ],
+      "properties": {
+        "factory": {
+          "type": "string",
+          "pattern": "^[^:]+:[^:]+$",
+          "description": "Returns BankFeedbackReplaySources with original feedback persistence, distinct later current history reading/guard and application cleanup. No native transport or recreation."
+        },
+        "settings": {
+          "type": "object"
+        },
+        "journal_path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "inbox_path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "feedback_configuration_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "context_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    }
+  }
+}

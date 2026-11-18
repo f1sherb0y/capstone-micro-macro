@@ -1,0 +1,27 @@
+# CONTRACTOR-A07 安排施工、报告进展并调整投入
+
+严格按execution_context：ready只execute/rebalance，report只report，existing只reconcile。当前施工门控与历史核对分开；已暂停许可/关闭任务/没有新材料不阻止读取历史事实。只使用原task/范围/配置，不从LLM回复写实际进度、完成量或成本。
+
+TimeWindow是无内嵌ref的严格值对象，由原有权resolver按实际引用读取；不要求不存在的ref字段。具ref或function_ref的原记录仍精确核引用身份，窗口的边界、范围和双端时钟另核，不从值对象补造新引用。
+
+Evidence精确引用并核双端同业务时钟、非未来和实际用途有效窗；当前门控/资源/库存与数量依据按now。原进展观察和现场条件签发依据按真实authored_at，现场条件用于当前执行另核now；精确RoleAssignment.function_ref/原角色/动作/完整scope，授权Evidence按真实授权用途，其他basis保原类型有权读取且不晚于原用途可获。观察作者原本须有task/所用Evidence/要求读权，task和要求须原签发前可获；实际进展依据须observed，formal拒synthetic，fixture合成不变真实事实。
+
+execute/rebalance核原当前完整执行历史，未知提交先查询原请求，旧operation不再提交或复用不确定投入。原核心TaskRelease、当前全部门控快照、有效合同/准备目的、实际动作和执行窗必须一致。工作方法限明确对象/地点/专业域；赶工须明确生产率/成本/质量后果模型，不凭提速文字推断产出。
+
+核原非零实际到位队伍/设备、完整原核心预留账/执行窗、同池共享占用、方法必要输入下限。材料按原已验可用批次/产品/库存、唯一原分配、已消耗与所有未消耗分配核对；零材料/必要设备不虚报执行，未验/假设/报价库存不当可用。仅提交己方原计划范围内投入意图，核心再核并计算完成量/实际配置/消耗/成本。
+
+工作方法与后果规则可有合法较广适用范围，linked有权读取后须覆盖完整原task；不扩本次决策scope。执行窗、方法/规则/授权窗和全部占用窗均核双端同钟。当前实际可用资源、批次和库存量须observed依据，原分配量与整份库存分配/已消耗数量依据均消费，不只核本次选中数量；历史预留及历史工程量无独立发生时点，保历史来源，不以登记/可获时间代替物理发生。
+
+每条库存分配均核0≤已消耗量≤原分配量，不能用负消耗或负分配放大可领用余量；检查覆盖整份原库存分配账，不只本次选中的分配。allocated和unknown分配的未消耗余量共同保留占用，未知状态不当成已释放；本次只选择已明确allocated的原分配。其他已知无重叠库存不因这份分配的不确定性被自动停止，不释放资源、不重发旧执行或恢复已消耗材料。
+
+report用原实际观察和原工程记录说明working/blocked/awaiting_check，可以没有已完成执行；问题/责任未知保留，不添加实际进度/成本。reconcile保持原run/task/operation/business/request摘要/核心事件，已记录事实不重造，未执行或未知不填产出；返工须原物理工程记录，保留新增投入，净工程量不重复计入。
+
+历史工程及原返工对象的工程量/Evidence须实际observed且formal非synthetic，原签发/发生时点不存在时仅历史读取，不强求现在有效，也不追造发生。回执recorded_at只表示核心登记，须原请求已可获；未执行/未知不得携带recorded_at或产出。原等待条件升v4：当前query的native observed依据仍须当前有效，旧工程/请求依据保历史；原已知终态/事件/登记时点/工程身份不可被新版本改写，独立native关系核验仍必需。reader v5固定实际条件factory、processor、注册契约和原source validator/schema实现；旧配置不自动迁移或重放施工。
+
+completed只交输入、报告或核对引用；真实执行/库存/门控/工程规则生产者、跨动作投影、正式submit/query、原子投入和实际后果/反馈仍待集成。本批编码未功能验收，不证明现实生产率或质量方法有效。
+
+恢复reader v5在原组件身份与源码声明之外，显式保存各实际检查回调的callable_implementation运行时代码摘要，并沿原配置复核边界重新比较；源码文件摘要不能代替运行代码摘要。 此声明仅核代码；闭包、实例状态与partial参数仍由宿主明确配置和版本化。旧v1/v2/v3/v4配置不自动升级、重放或转换为已验证，新版本仍待集中业务验证。
+
+已登记原执行的每条已知WorkRecord均须与当前查询中的同物理记录配对，原/当前列表不能重复物理身份。共享实际validator精确核各自原执行关联，固定scope、physical_work_key、work_kind、gross/net完整Measured及返工原记录引用，不能只保record id而改写数量或来源。condition对旧记录及量据按历史actual observed读取，当前查询及新增实际记录仍独立native认证；新增事实不能覆盖旧事实。reader升v5、三等待条件升v4，旧持久配置与条件不自动迁移或重放。仅静态检查，历史连续性与恢复行为待集中验证。
+
+WorkRecord保留其原execution_ref，不随WorkExecution查询版本改绑。processor、来源装配和condition从当前有权来源读取该精确原命令，实际共享validator核同物理执行及相同run/组织/task/operation/business/request-ref/request-SHA/scope、同钟和原可获时序；原failed/not_executed不变成工程，已知recorded事件/登记时点不改写。原submitted_unknown只作为原命令身份依据，实际执行仍须当前recorded及完整真实工程/独立native核验。缺原来源明确失败，不造原命令。既有工程before/after精确原命令引用保持，reader v5固定实际两个validator；未运行行为验证。

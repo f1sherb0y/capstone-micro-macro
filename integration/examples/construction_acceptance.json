@@ -1,0 +1,501 @@
+{
+  "schema_version": "1.0",
+  "companies": [
+    {
+      "company_id": "owner_001",
+      "company_name": "合成企业 owner_001",
+      "company_role": "owner",
+      "profile": "Fictional enterprise for engineering acceptance only. Owns and manages this small standard-building development and funds the declared fixed-price contract framework.",
+      "strengths": [
+        "Owns and manages this small standard-building development and funds the declared fixed-price contract framework."
+      ],
+      "weaknesses": [],
+      "qualifications": [
+        "Assumed eligible for the declared synthetic role; not a real-world credential claim"
+      ],
+      "past_project_experience": [],
+      "capacity": "Use the numerical normalized capacity in the authorized own_state; it is not headcount.",
+      "risk_signals": [],
+      "eligible_packages": []
+    },
+    {
+      "company_id": "designer_001",
+      "company_name": "合成企业 designer_001",
+      "company_role": "designer",
+      "profile": "Fictional enterprise for engineering acceptance only. Designs small standard steel-framed buildings with an in-house design lead, discipline engineers and a separate internal reviewer. The stated two-shed scope is within its synthetic capability; no specialist traffic or port expertise is required.",
+      "strengths": [
+        "Designs small standard steel-framed buildings with an in-house design lead, discipline engineers and a separate internal reviewer. The stated two-shed scope is within its synthetic capability; no specialist traffic or port expertise is required."
+      ],
+      "weaknesses": [],
+      "qualifications": [
+        "Assumed eligible for the declared synthetic role; not a real-world credential claim"
+      ],
+      "past_project_experience": [],
+      "capacity": "Use the numerical normalized capacity in the authorized own_state; it is not headcount.",
+      "risk_signals": [],
+      "eligible_packages": []
+    },
+    {
+      "company_id": "designer_002",
+      "company_name": "合成企业 designer_002",
+      "company_role": "designer",
+      "profile": "Fictional enterprise for engineering acceptance only. Designs small standard steel-framed buildings with an in-house design lead, discipline engineers and a separate internal reviewer. The stated two-shed scope is within its synthetic capability; no specialist traffic or port expertise is required.",
+      "strengths": [
+        "Designs small standard steel-framed buildings with an in-house design lead, discipline engineers and a separate internal reviewer. The stated two-shed scope is within its synthetic capability; no specialist traffic or port expertise is required."
+      ],
+      "weaknesses": [],
+      "qualifications": [
+        "Assumed eligible for the declared synthetic role; not a real-world credential claim"
+      ],
+      "past_project_experience": [],
+      "capacity": "Use the numerical normalized capacity in the authorized own_state; it is not headcount.",
+      "risk_signals": [],
+      "eligible_packages": []
+    },
+    {
+      "company_id": "supervisor_001",
+      "company_name": "合成企业 supervisor_001",
+      "company_role": "supervisor",
+      "profile": "Fictional enterprise for engineering acceptance only. Provides independent QS cost advice for small buildings, monthly payment reviews, change pricing and final account review, with no connection to the bidding construction firms in this synthetic scenario.",
+      "strengths": [
+        "Provides independent QS cost advice for small buildings, monthly payment reviews, change pricing and final account review, with no connection to the bidding construction firms in this synthetic scenario."
+      ],
+      "weaknesses": [],
+      "qualifications": [
+        "Assumed eligible for the declared synthetic role; not a real-world credential claim"
+      ],
+      "past_project_experience": [],
+      "capacity": "Use the numerical normalized capacity in the authorized own_state; it is not headcount.",
+      "risk_signals": [],
+      "eligible_packages": []
+    },
+    {
+      "company_id": "supervisor_002",
+      "company_name": "合成企业 supervisor_002",
+      "company_role": "supervisor",
+      "profile": "Fictional enterprise for engineering acceptance only. Provides independent QS cost advice for small buildings, monthly payment reviews, change pricing and final account review, with no connection to the bidding construction firms in this synthetic scenario.",
+      "strengths": [
+        "Provides independent QS cost advice for small buildings, monthly payment reviews, change pricing and final account review, with no connection to the bidding construction firms in this synthetic scenario."
+      ],
+      "weaknesses": [],
+      "qualifications": [
+        "Assumed eligible for the declared synthetic role; not a real-world credential claim"
+      ],
+      "past_project_experience": [],
+      "capacity": "Use the numerical normalized capacity in the authorized own_state; it is not headcount.",
+      "risk_signals": [],
+      "eligible_packages": []
+    },
+    {
+      "company_id": "contractor_001",
+      "company_name": "合成企业 contractor_001",
+      "company_role": "contractor",
+      "profile": "Fictional enterprise for engineering acceptance only. Can deliver ordinary small steel-framed buildings with foundation, frame, envelope and MEP trade coordination. A subcontracted specialist remains under its accountability. It must assess resource availability and choose its bid structure independently.",
+      "strengths": [
+        "Can deliver ordinary small steel-framed buildings with foundation, frame, envelope and MEP trade coordination. A subcontracted specialist remains under its accountability. It must assess resource availability and choose its bid structure independently.",
+        "Efficient foundations, steel-frame erection and site coordination."
+      ],
+      "weaknesses": [],
+      "qualifications": [
+        "Assumed eligible for the declared synthetic role; not a real-world credential claim"
+      ],
+      "past_project_experience": [],
+      "capacity": "Use the numerical normalized capacity in the authorized own_state; it is not headcount.",
+      "risk_signals": [],
+      "eligible_packages": []
+    },
+    {
+      "company_id": "contractor_002",
+      "company_name": "合成企业 contractor_002",
+      "company_role": "contractor",
+      "profile": "Fictional enterprise for engineering acceptance only. Can deliver ordinary small steel-framed buildings with foundation, frame, envelope and MEP trade coordination. A subcontracted specialist remains under its accountability. It must assess resource availability and choose its bid structure independently.",
+      "strengths": [
+        "Can deliver ordinary small steel-framed buildings with foundation, frame, envelope and MEP trade coordination. A subcontracted specialist remains under its accountability. It must assess resource availability and choose its bid structure independently.",
+        "Efficient envelope, electrical/drainage coordination and quality records; can complement a structural specialist."
+      ],
+      "weaknesses": [],
+      "qualifications": [
+        "Assumed eligible for the declared synthetic role; not a real-world credential claim"
+      ],
+      "past_project_experience": [],
+      "capacity": "Use the numerical normalized capacity in the authorized own_state; it is not headcount.",
+      "risk_signals": [],
+      "eligible_packages": []
+    },
+    {
+      "company_id": "contractor_003",
+      "company_name": "合成企业 contractor_003",
+      "company_role": "contractor",
+      "profile": "Fictional enterprise for engineering acceptance only. Can deliver ordinary small steel-framed buildings with foundation, frame, envelope and MEP trade coordination. A subcontracted specialist remains under its accountability. It must assess resource availability and choose its bid structure independently.",
+      "strengths": [
+        "Can deliver ordinary small steel-framed buildings with foundation, frame, envelope and MEP trade coordination. A subcontracted specialist remains under its accountability. It must assess resource availability and choose its bid structure independently."
+      ],
+      "weaknesses": [],
+      "qualifications": [
+        "Assumed eligible for the declared synthetic role; not a real-world credential claim"
+      ],
+      "past_project_experience": [],
+      "capacity": "Use the numerical normalized capacity in the authorized own_state; it is not headcount.",
+      "risk_signals": [],
+      "eligible_packages": []
+    },
+    {
+      "company_id": "supplier_001",
+      "company_name": "合成企业 supplier_001",
+      "company_role": "supplier",
+      "profile": "Fictional enterprise for engineering acceptance only. Provides standard steel, cladding, concrete and building service materials from synthetic local stocks, with delivery/inspection records and defined defect support; it does not install the materials.",
+      "strengths": [
+        "Provides standard steel, cladding, concrete and building service materials from synthetic local stocks, with delivery/inspection records and defined defect support; it does not install the materials."
+      ],
+      "weaknesses": [],
+      "qualifications": [
+        "Assumed eligible for the declared synthetic role; not a real-world credential claim"
+      ],
+      "past_project_experience": [],
+      "capacity": "Use the numerical normalized capacity in the authorized own_state; it is not headcount.",
+      "risk_signals": [],
+      "eligible_packages": []
+    },
+    {
+      "company_id": "supplier_002",
+      "company_name": "合成企业 supplier_002",
+      "company_role": "supplier",
+      "profile": "Fictional enterprise for engineering acceptance only. Provides standard steel, cladding, concrete and building service materials from synthetic local stocks, with delivery/inspection records and defined defect support; it does not install the materials.",
+      "strengths": [
+        "Provides standard steel, cladding, concrete and building service materials from synthetic local stocks, with delivery/inspection records and defined defect support; it does not install the materials."
+      ],
+      "weaknesses": [],
+      "qualifications": [
+        "Assumed eligible for the declared synthetic role; not a real-world credential claim"
+      ],
+      "past_project_experience": [],
+      "capacity": "Use the numerical normalized capacity in the authorized own_state; it is not headcount.",
+      "risk_signals": [],
+      "eligible_packages": []
+    }
+  ],
+  "projects": [
+    {
+      "project_id": "PRJ01",
+      "name": "合成施工验收：两栋独立标准仓库",
+      "owner_id": "owner_001",
+      "region": "Macau",
+      "project_type": "building",
+      "scope": "Synthetic engineering acceptance scenario only. Two identical independent single-storey 300 m2 storage sheds, A and B, on a cleared level site. Each includes a simple steel frame, insulated roof/walls, ground slab, local drainage and basic electrical lighting. No public transport, heritage, operating port, occupied building or live-traffic interfaces. This is not a real project and is not evidence of real engineering feasibility.",
+      "budget": 15000000,
+      "currency": "MOP",
+      "duration_months": 18,
+      "delivery_mode": "DBB"
+    }
+  ],
+  "packages": [
+    {
+      "package_id": "PRJ01/design_package",
+      "project_id": "PRJ01",
+      "kind": "design",
+      "buyer_id": "owner_001",
+      "name": "两栋仓库设计服务",
+      "scope": "Detailed design of both independent standard sheds, coordinated drawings, boundary register, independent internal review, and fixed-fee 18-month site design support under the declared contract framework.",
+      "budget": 1000000,
+      "currency": "MOP",
+      "resource_required": 0.4,
+      "candidate_ids": [
+        "designer_001",
+        "designer_002"
+      ],
+      "depends_on": [],
+      "cost_inclusion": "owner_additional",
+      "parent_package_id": null
+    },
+    {
+      "package_id": "PRJ01/supervision_package",
+      "project_id": "PRJ01",
+      "kind": "cost_consulting",
+      "buyer_id": "owner_001",
+      "name": "两栋仓库造价咨询",
+      "scope": "Cost baseline for the two sheds, monthly cost/progress payment review, priced change review, and final account advice for 18 months. This is QS cost advice, not a government approval or a site-supervision contract.",
+      "budget": 500000,
+      "currency": "MOP",
+      "resource_required": 0.3,
+      "candidate_ids": [
+        "supervisor_001",
+        "supervisor_002"
+      ],
+      "depends_on": [],
+      "cost_inclusion": "owner_additional",
+      "parent_package_id": null
+    },
+    {
+      "package_id": "PRJ01/contractor_package_A",
+      "project_id": "PRJ01",
+      "kind": "construction",
+      "buyer_id": "owner_001",
+      "name": "A栋仓库施工",
+      "scope": "Complete construction of one independent standard 300 m2 shed, including foundation, steel frame, envelope, slab, local drainage and lighting. Ordinary interface coordination, quality records, installation and correction of own defects are included; physical scope is independent from the other shed. This package concerns shed A only.",
+      "budget": 6000000,
+      "currency": "MOP",
+      "resource_required": 0.8,
+      "candidate_ids": [
+        "contractor_001",
+        "contractor_002",
+        "contractor_003"
+      ],
+      "depends_on": [
+        "PRJ01/design_package",
+        "PRJ01/supervision_package"
+      ],
+      "cost_inclusion": "owner_additional",
+      "parent_package_id": null
+    },
+    {
+      "package_id": "PRJ01/supplier_package_A",
+      "project_id": "PRJ01",
+      "kind": "supply",
+      "buyer_id": "$construction_lead",
+      "name": "A栋仓库材料供应",
+      "scope": "Supply of specified steel, panels, concrete and ordinary electrical/drainage materials for the parent shed; material schedule, delivery, inspection records and defect documentation included. Installation belongs to the parent contractor, and this supply cost is already included in that construction contract. This package concerns shed A only.",
+      "budget": 1500000,
+      "currency": "MOP",
+      "resource_required": 0.3,
+      "candidate_ids": [
+        "supplier_001",
+        "supplier_002"
+      ],
+      "depends_on": [
+        "PRJ01/contractor_package_A"
+      ],
+      "cost_inclusion": "included_in_parent",
+      "parent_package_id": "PRJ01/contractor_package_A"
+    },
+    {
+      "package_id": "PRJ01/contractor_package_B",
+      "project_id": "PRJ01",
+      "kind": "construction",
+      "buyer_id": "owner_001",
+      "name": "B栋仓库施工",
+      "scope": "Complete construction of one independent standard 300 m2 shed, including foundation, steel frame, envelope, slab, local drainage and lighting. Ordinary interface coordination, quality records, installation and correction of own defects are included; physical scope is independent from the other shed. This package concerns shed B only.",
+      "budget": 6000000,
+      "currency": "MOP",
+      "resource_required": 0.8,
+      "candidate_ids": [
+        "contractor_001",
+        "contractor_002",
+        "contractor_003"
+      ],
+      "depends_on": [
+        "PRJ01/design_package",
+        "PRJ01/supervision_package"
+      ],
+      "cost_inclusion": "owner_additional",
+      "parent_package_id": null
+    },
+    {
+      "package_id": "PRJ01/supplier_package_B",
+      "project_id": "PRJ01",
+      "kind": "supply",
+      "buyer_id": "$construction_lead",
+      "name": "B栋仓库材料供应",
+      "scope": "Supply of specified steel, panels, concrete and ordinary electrical/drainage materials for the parent shed; material schedule, delivery, inspection records and defect documentation included. Installation belongs to the parent contractor, and this supply cost is already included in that construction contract. This package concerns shed B only.",
+      "budget": 1500000,
+      "currency": "MOP",
+      "resource_required": 0.3,
+      "candidate_ids": [
+        "supplier_001",
+        "supplier_002"
+      ],
+      "depends_on": [
+        "PRJ01/contractor_package_B"
+      ],
+      "cost_inclusion": "included_in_parent",
+      "parent_package_id": "PRJ01/contractor_package_B"
+    }
+  ],
+  "assumptions": {
+    "version": "synthetic-construction-acceptance-v1",
+    "source_note": "Entirely synthetic engineering acceptance input. Budgets, duration, capacities, skills and contract framework are test assumptions, not empirical project/company facts. DeepSeek makes all participation, bidding, consortium, evaluation and signature decisions. No winner or accepted outcome is prescribed.",
+    "enterprise_parameters": {
+      "owner_001": {
+        "total_resource_capacity": 3.0,
+        "financial_capacity": 0.8,
+        "technical_capability": 0.8,
+        "management_capability": 0.8,
+        "design_capability": 0.8,
+        "cost_estimation_capability": 0.8,
+        "construction_capability": 0.8,
+        "quality_management_capability": 0.8,
+        "safety_management_capability": 0.8,
+        "supply_reliability": 0.8,
+        "material_quality": 0.8,
+        "policy_adaptability": 0.8
+      },
+      "designer_001": {
+        "total_resource_capacity": 3.0,
+        "financial_capacity": 0.8,
+        "technical_capability": 0.8,
+        "management_capability": 0.8,
+        "design_capability": 0.8,
+        "cost_estimation_capability": 0.8,
+        "construction_capability": 0.8,
+        "quality_management_capability": 0.8,
+        "safety_management_capability": 0.8,
+        "supply_reliability": 0.8,
+        "material_quality": 0.8,
+        "policy_adaptability": 0.8
+      },
+      "designer_002": {
+        "total_resource_capacity": 3.0,
+        "financial_capacity": 0.8,
+        "technical_capability": 0.8,
+        "management_capability": 0.8,
+        "design_capability": 0.8,
+        "cost_estimation_capability": 0.8,
+        "construction_capability": 0.8,
+        "quality_management_capability": 0.8,
+        "safety_management_capability": 0.8,
+        "supply_reliability": 0.8,
+        "material_quality": 0.8,
+        "policy_adaptability": 0.8
+      },
+      "supervisor_001": {
+        "total_resource_capacity": 3.0,
+        "financial_capacity": 0.8,
+        "technical_capability": 0.8,
+        "management_capability": 0.8,
+        "design_capability": 0.8,
+        "cost_estimation_capability": 0.8,
+        "construction_capability": 0.8,
+        "quality_management_capability": 0.8,
+        "safety_management_capability": 0.8,
+        "supply_reliability": 0.8,
+        "material_quality": 0.8,
+        "policy_adaptability": 0.8
+      },
+      "supervisor_002": {
+        "total_resource_capacity": 3.0,
+        "financial_capacity": 0.8,
+        "technical_capability": 0.8,
+        "management_capability": 0.8,
+        "design_capability": 0.8,
+        "cost_estimation_capability": 0.8,
+        "construction_capability": 0.8,
+        "quality_management_capability": 0.8,
+        "safety_management_capability": 0.8,
+        "supply_reliability": 0.8,
+        "material_quality": 0.8,
+        "policy_adaptability": 0.8
+      },
+      "contractor_001": {
+        "total_resource_capacity": 3.0,
+        "financial_capacity": 0.8,
+        "technical_capability": 0.8,
+        "management_capability": 0.8,
+        "design_capability": 0.8,
+        "cost_estimation_capability": 0.8,
+        "construction_capability": 0.8,
+        "quality_management_capability": 0.8,
+        "safety_management_capability": 0.8,
+        "supply_reliability": 0.8,
+        "material_quality": 0.8,
+        "policy_adaptability": 0.8
+      },
+      "contractor_002": {
+        "total_resource_capacity": 3.0,
+        "financial_capacity": 0.8,
+        "technical_capability": 0.8,
+        "management_capability": 0.8,
+        "design_capability": 0.8,
+        "cost_estimation_capability": 0.8,
+        "construction_capability": 0.8,
+        "quality_management_capability": 0.8,
+        "safety_management_capability": 0.8,
+        "supply_reliability": 0.8,
+        "material_quality": 0.8,
+        "policy_adaptability": 0.8
+      },
+      "contractor_003": {
+        "total_resource_capacity": 3.0,
+        "financial_capacity": 0.8,
+        "technical_capability": 0.8,
+        "management_capability": 0.8,
+        "design_capability": 0.8,
+        "cost_estimation_capability": 0.8,
+        "construction_capability": 0.8,
+        "quality_management_capability": 0.8,
+        "safety_management_capability": 0.8,
+        "supply_reliability": 0.8,
+        "material_quality": 0.8,
+        "policy_adaptability": 0.8
+      },
+      "supplier_001": {
+        "total_resource_capacity": 3.0,
+        "financial_capacity": 0.8,
+        "technical_capability": 0.8,
+        "management_capability": 0.8,
+        "design_capability": 0.8,
+        "cost_estimation_capability": 0.8,
+        "construction_capability": 0.8,
+        "quality_management_capability": 0.8,
+        "safety_management_capability": 0.8,
+        "supply_reliability": 0.8,
+        "material_quality": 0.8,
+        "policy_adaptability": 0.8
+      },
+      "supplier_002": {
+        "total_resource_capacity": 3.0,
+        "financial_capacity": 0.8,
+        "technical_capability": 0.8,
+        "management_capability": 0.8,
+        "design_capability": 0.8,
+        "cost_estimation_capability": 0.8,
+        "construction_capability": 0.8,
+        "quality_management_capability": 0.8,
+        "safety_management_capability": 0.8,
+        "supply_reliability": 0.8,
+        "material_quality": 0.8,
+        "policy_adaptability": 0.8
+      }
+    },
+    "enterprise_regions": {
+      "owner_001": "Macau",
+      "designer_001": "Macau",
+      "designer_002": "Macau",
+      "supervisor_001": "Macau",
+      "supervisor_002": "Macau",
+      "contractor_001": "Macau",
+      "contractor_002": "Macau",
+      "contractor_003": "Macau",
+      "supplier_001": "Macau",
+      "supplier_002": "Macau"
+    },
+    "support_agents": [
+      {
+        "agent_id": "government_001",
+        "name": "Scenario regulator",
+        "role": "Government",
+        "region": "Macau",
+        "enterprise_type": "scenario_support",
+        "total_resource_capacity": 3.0,
+        "policy_adaptability": 0.9
+      }
+    ],
+    "contract_framework": {
+      "provenance": "Synthetic owner-issued contract rules for an engineering integration test, declared before any model decision. No actual enterprise facts, historical winners or observed cost estimates.",
+      "input_baseline": "Within this synthetic world, the owner supplies the two plot boundaries, level-site baseline, adequate assumed ground-bearing condition, and utility connection locations at contract effectiveness. Each shed has independent structural and utility boundaries. The design organization is responsible for detailed design and review; no future drawing or approval is claimed to be already completed.",
+      "fixed_price": "The numeric quotation is a firm all-inclusive price for the authorized package scope. All named activities, ordinary coordination, review corrections and stated service duration are included. No open-ended price adjustment, undefined extra fee or unpriced service cap is allowed for that scope. Out-of-scope changes require a separately authorized macro change process and do not silently alter this contract.",
+      "risk_allowance": "Risk/contingency items in a bidder cost breakdown are internal fixed-price cost reserves, not a reimbursable owner provisional sum. The bidder manages those reserves at its own cost risk; no separate owner drawdown approval or unspent-balance rebate applies. They cannot justify a payment above the signed price.",
+      "payment_basis": "Contract payment milestones are binding simulation terms within the signed total price. Design: 30% accepted concept/interface register, 40% accepted coordinated drawings, 30% completed construction-stage design support. Cost advice: 20% accepted cost baseline, 60% distributed over accepted monthly reports, 20% accepted final account review. Construction: 10% accepted mobilization, 80% against accepted measured progress, 10% accepted completion. Supply: 20% accepted material schedule, 70% accepted delivery/inspection, 10% accepted defect documentation. No double counting: supply costs are included in the parent construction price. The existing macro cost equations remain the accounting implementation; milestone text is not a new payment engine.",
+      "design_responsibility": "By month 1 the design lead delivers the concept, A/B boundary register and coordination schedule; by month 2 the discipline leads deliver coordinated drawings. A different internal reviewer checks each submission before owner review. The design coordinator answers ordinary site queries within 3 working days and urgent safety-interface queries within 1 working day during the 18-month support period. Normal clarifications and correction of own errors are included in the fixed fee without an unpriced hour cap. These are future enforceable simulation obligations, not claims of completed engineering documents.",
+      "review_authority": "The owner project manager reviews submissions within 5 working days, records reasons for any rejection and verifies correction. Owner reviewers assess the supplied simulation contract, price, resources, capability and responsibilities; statutory approval and real-world credential verification remain outside this contract-signature event and in the original macro lifecycle.",
+      "joint_bids": "Consortia are optional. A lead coordinates the bid and each member approves its work/resource share and the exact contract. A single company can bid only for commitments within its available capacity. Combining complementary methods or resources is allowed; no bidder or winner is predetermined.",
+      "signature_effect": "The framework and accepted negotiated clauses are binding parts of the proposed simulation contract on signature. Future deliverables are obligations subject to review, not missing pre-existing evidence. Contradictory bid reservations must be resolved explicitly; each party remains free to revise or reject. Canonical price/currency/scope/members/resources cannot be changed by narrative text."
+    },
+    "units": "Capacity is normalized enterprise capacity, not persons; all money uses MOP."
+  },
+  "environment": {
+    "material_price_index": 1.0,
+    "labor_price_index": 1.0
+  },
+  "policy": {
+    "approval_success_prob": 0.95
+  }
+}

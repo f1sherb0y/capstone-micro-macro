@@ -1,0 +1,18 @@
+{
+  "schema_version": "regulatory-chain-acceptance.v1",
+  "run_id": "goal3d-regulatory-chain",
+  "scenarios": {
+    "design": {
+      "with_approval": true,
+      "with_feedback": true,
+      "with_monthly_feedback": true
+    },
+    "completion_revision": {
+      "with_approval": true,
+      "with_feedback": true,
+      "with_monthly_feedback": true,
+      "completion": true,
+      "revision_first": true
+    }
+  }
+}

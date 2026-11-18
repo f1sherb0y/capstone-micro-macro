@@ -1,0 +1,23 @@
+{
+  "skill_id": "CONTRACTOR-A11.actual-closeout",
+  "skill_version": "6",
+  "action_id": "CONTRACTOR-A11",
+  "role": "Contractor",
+  "status": "implemented",
+  "spec_source": "zwtnew/04_roles/04_roles/contractor.md",
+  "spec_source_sha256": "7b1175592c21601ddfa6aedb7859fe46e6bba3285502c285b483a502632f803e",
+  "skill_path": "skills/actions/contractor/CONTRACTOR-A11/SKILL.md",
+  "skill_sha256": "396e3c30201cd99539f47e9d9173487226eee370952d812375ecaae740d814ff",
+  "input_schema_id": "role-contract.v1:CONTRACTOR-A11:input",
+  "output_schema_id": "role-contract.v1:CONTRACTOR-A11:payload",
+  "processor_id": "contractor.actual_closeout.v1",
+  "tool_ids": [],
+  "shared_refs": [
+    "skills/shared/decision-basics.md"
+  ],
+  "shared_sha256s": {
+    "skills/shared/decision-basics.md": "77da3d2fc1683068353888daccecfabe25278bf180b593747e39505fea987e60"
+  },
+  "prompt_sha256": "396e3c30201cd99539f47e9d9173487226eee370952d812375ecaae740d814ff",
+  "method_refs": []
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": "lifecycle-input-case.v1",
+  "scenario_id": "V2",
+  "case_id": "v2-contractor-bid-submit",
+  "origin": "synthetic",
+  "run_id": "synthetic-v2-procurement-publication-01",
+  "status": "input_prepared_execution_pending",
+  "steps": [
+    {
+      "step_id": "contractor-bid-submit",
+      "action_id": "CONTRACTOR-A02",
+      "operation_id": "v2-contractor-bid-submit-01",
+      "expected_kind": "completed",
+      "expected_choice": "submit_bid",
+      "host_factory": "integration.contractor_role_contract_host:build_role_host",
+      "invocation_path": "integration/examples/role_contract_contractor_bid_invocation.json",
+      "invocation_file_sha256": "5b6a5a6f1eba10911c5a58a6b8cdc378600a4292569300eb8e97f9d4550711ea",
+      "configuration_path": "integration/examples/role_contract_contractor_bid_host.json",
+      "configuration_file_sha256": "6a30df092f46bdcc8c4a313cdcce42ba67573932b7c3f8f5600989879e958827",
+      "origin_path": "integration/examples/role_contract_contractor_bid_origin.json"
+    }
+  ],
+  "remaining_requirements": [
+    "Actual Owner saved publication/native package registration/reception binding.",
+    "Bid case execution entry and original worker/method verification; actual bid submission receipt.",
+    "Same-run evaluation/award/formation chain and remaining V2/PLAN branches."
+  ],
+  "limitations": [
+    "Aligned identity/scope/time inputs do not prove an executed Owner publication or actual Contractor intake.",
+    "Package/round/design/quantity/price/current capacity are explicitly synthetic assumed facts, not observed publication registration.",
+    "No received_tender_inputs or original Owner journal reader/native reception validator is configured yet.",
+    "Pricing/capacity methods and processor have not run; expected numeric price is validation metadata only.",
+    "No actual bid submission, reservation, construction release or complete V2 chain is asserted."
+  ]
+}

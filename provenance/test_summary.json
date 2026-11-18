@@ -1,0 +1,9 @@
+{
+  "tests_collected": 512,
+  "initial_passed": 508,
+  "initial_missing_fixture_failures": 4,
+  "dependency_recheck_passed": 4,
+  "effective_passed": 512,
+  "unresolved": [],
+  "note": "Initial full retained suite plus targeted recheck after copying four missing review excerpts. No test assertions were weakened."
+}

@@ -1,0 +1,23 @@
+{
+  "skill_id": "OWN-A07.design-choices",
+  "skill_version": "2",
+  "action_id": "OWN-A07",
+  "role": "Owner",
+  "status": "implemented",
+  "spec_source": "zwtnew/04_roles/04_roles/owner.md",
+  "spec_source_sha256": "addcb91c7a5b83caa31f5876a4eb347689847105500775b6fd1b88c87dcfd9c8",
+  "skill_path": "skills/actions/owner/OWN-A07/SKILL.md",
+  "skill_sha256": "e96a69f2ea6934506d75d3058a32bd7a02efd0ad840a3c15ea17e4a1d102885e",
+  "input_schema_id": "role-contract.v1:OWN-A07:input",
+  "output_schema_id": "role-contract.v1:OWN-A07:payload",
+  "processor_id": "owner.design_choices.v1",
+  "tool_ids": [],
+  "shared_refs": [
+    "skills/shared/decision-basics.md"
+  ],
+  "shared_sha256s": {
+    "skills/shared/decision-basics.md": "77da3d2fc1683068353888daccecfabe25278bf180b593747e39505fea987e60"
+  },
+  "prompt_sha256": "e96a69f2ea6934506d75d3058a32bd7a02efd0ad840a3c15ea17e4a1d102885e",
+  "method_refs": []
+}

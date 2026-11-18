@@ -1,0 +1,14 @@
+{
+  "schema_version": "goal4-integration.v1",
+  "macro_baseline_delivery": "output/integration/goal3_macro_minfix_20261022_01",
+  "tender": {
+    "run_id": "goal4-tender-full",
+    "with_owner_award": true,
+    "with_government_completion": true,
+    "authorization_read_until_tick": 25
+  },
+  "financing_config": "config/financing_chain.json",
+  "financing_controls": "config/goal3_minimal_native_fix.json",
+  "construction_config": "config/professional_construction_feedback_chain.json",
+  "scope": "One real tender-to-settlement project and later Owner consumption; separate financing and existing-project professional construction scenarios. Historical monthly and other applicable action evidence is reused explicitly. No synthetic concatenation of projects, physical execution receipts, cash clearance or full PLAN completion is claimed."
+}

@@ -1,0 +1,6 @@
+{
+  "schema_version":"architect-portfolio-chain.v1",
+  "run_id":"goal3c-architect-portfolio",
+  "scenarios":{"high":{"market_demand_index":1.2},"low":{"market_demand_index":0.6}},
+  "source_note":"Explicit synthetic initial professional terms, qualifications, calendars and private portfolio mandate. Native selections, original A03 confirmations and monthly outcomes are produced in the same run. Only initial macro market demand differs. No fabricated project delivery, client praise, public portfolio publication, cross-region success or credential event."
+}

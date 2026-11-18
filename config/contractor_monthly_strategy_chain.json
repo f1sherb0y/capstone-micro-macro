@@ -1,0 +1,7 @@
+{
+  "schema_version": "contractor-monthly-strategy-chain.v1",
+  "run_id": "goal3a-contractor-monthly-strategy",
+  "ticks": 2,
+  "source_note": "Actual original material index selects an independently authorized future private bid markup. A12 retains a rule judgment, original macro executes adjustment, then next original A02 calculates a private benchmark proposal. No empirical bid success, formal tender publication, submission or complete commercial ledger is inferred.",
+  "scenarios": {"high": {"material_price_index": 1.2}, "low": {"material_price_index": 0.8}}
+}

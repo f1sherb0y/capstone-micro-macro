@@ -1,0 +1,13 @@
+{
+  "schema_version": "supplier-inventory-planning-chain.v1",
+  "run_id": "goal3-remaining-supply-delay",
+  "scenarios": {
+    "delay_feedback": {
+      "material_price_index": 0.8,
+      "supply_profile": {"supply_reliability": 0.0, "material_quality": 0.9},
+      "ticks": 8,
+      "random_seed": 1
+    }
+  },
+  "source_note": "An additional bounded ordinary native window for the stochastic 8% supply delay. Initial seed/window/normalized Supplier profile use the supported SimulationCreateRequest only. No actual delay, Supplier choice, historical event or private stock is prefilled. Reuse the existing inventory-planning consumer; do not rerun earlier accepted price/control cases."
+}

@@ -1,0 +1,10 @@
+{
+  "role": "Owner", "version": "1", "strategy": "organization_discussion",
+  "source": "zwtnew/04_roles/04_roles/owner.md",
+  "members": [
+    {"member_id": "investment", "name": "Investment Lead", "functions": ["investment_comparison", "proposal_review"], "responsibilities": ["Compare objectives, alternatives and investment conditions"]},
+    {"member_id": "finance", "name": "Finance Reviewer", "functions": ["funding_plan", "obligation_review"], "responsibilities": ["Review authorized funding evidence and unsettled obligations"]},
+    {"member_id": "delivery", "name": "Delivery Reviewer", "functions": ["procurement_review", "handover_review"], "responsibilities": ["Review scope, procurement dependencies and remaining responsibilities"]}
+  ],
+  "tool_ids": []
+}

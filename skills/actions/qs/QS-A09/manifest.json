@@ -1,0 +1,29 @@
+{
+  "skill_id": "QS-A09.original-final-account",
+  "skill_version": "2",
+  "action_id": "QS-A09",
+  "role": "QS",
+  "status": "implemented",
+  "spec_source": "zwtnew/04_roles/04_roles/qs.md",
+  "spec_source_sha256": "ffbfdc7c23b4677567ee66b9af02156c2fb81b40e36954f75d1e0f84b2c99634",
+  "skill_path": "skills/actions/qs/QS-A09/SKILL.md",
+  "skill_sha256": "266982d668cde88459fdd1c2bd8a88cf996321c0943b2abc9e889e3ec553bda8",
+  "input_schema_id": "role-contract.v1:QS-A09:input",
+  "output_schema_id": "role-contract.v1:QS-A09:payload",
+  "processor_id": "qs.original_final_account.v1",
+  "tool_ids": [],
+  "shared_refs": [
+    "skills/shared/decision-basics.md"
+  ],
+  "shared_sha256s": {
+    "skills/shared/decision-basics.md": "77da3d2fc1683068353888daccecfabe25278bf180b593747e39505fea987e60"
+  },
+  "prompt_sha256": "266982d668cde88459fdd1c2bd8a88cf996321c0943b2abc9e889e3ec553bda8",
+  "method_refs": [
+    {
+      "kind": "Method",
+      "id": "micro.qs.original_final_account",
+      "version": "1"
+    }
+  ]
+}

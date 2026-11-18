@@ -1,0 +1,11 @@
+{
+  "schema_version": "owner-monthly-capacity-chain.v1",
+  "run_id": "goal3b-owner-capacity",
+  "ticks": 2,
+  "scenarios": {
+    "normal": {"financing_condition_index": 1.2, "actual_cash": "100"},
+    "environment_watch": {"financing_condition_index": 0.7, "actual_cash": "100"},
+    "cash_shortfall": {"financing_condition_index": 1.2, "actual_cash": "30"}
+  },
+  "boundary": "Actual native environment index is separate from independently declared initial private cash/debt/obligation inputs. Original A05 cash calendar and authentic earlier actual monthly review are reused. No financing or money execution is inferred."
+}

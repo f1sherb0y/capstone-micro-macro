@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Actual Bank arrangement confirmation received by Owner",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "scenario_id",
+    "run_id",
+    "owner_organization_id",
+    "request",
+    "configuration",
+    "sources"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "lifecycle-v5-bank-arrangement-owner-input.v1"
+    },
+    "scenario_id": {
+      "const": "V5"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "owner_organization_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "request": {
+      "type": "object",
+      "description": "Formal current Owner A06 RoleContractInvocation."
+    },
+    "configuration": {
+      "type": "object",
+      "description": "Original OwnerRoleContractSettings with payment_arrangement_inputs selecting Bank A05 confirm task, receipt_ref and receipt_sha256 of the actual typed OwnerPaymentArrangementReceiptView."
+    },
+    "sources": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "bank_result",
+        "owner_input",
+        "reception"
+      ],
+      "properties": {
+        "bank_result": {
+          "$ref": "#/$defs/sourceFile"
+        },
+        "owner_input": {
+          "$ref": "#/$defs/sourceFile"
+        },
+        "reception": {
+          "$ref": "#/$defs/sourceFile"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "sourceFile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "file_sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "file_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    }
+  }
+}

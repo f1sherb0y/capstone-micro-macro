@@ -1,0 +1,34 @@
+{
+  "schema_version": "lifecycle-input-case.v1",
+  "scenario_id": "V2",
+  "case_id": "v2-contractor-formation-revision",
+  "origin": "synthetic",
+  "run_id": "synthetic-v2-contractor-formation-revision-01",
+  "status": "input_prepared_execution_pending",
+  "steps": [
+    {
+      "step_id": "contractor-formation-revision",
+      "action_id": "CONTRACTOR-A04",
+      "operation_id": "v2-contractor-formation-revision-01",
+      "expected_kind": "completed",
+      "expected_choice": "revise",
+      "host_factory": "integration.contractor_role_contract_host:build_role_host",
+      "invocation_path": "integration/examples/role_contract_contractor_formation_invocation.json",
+      "invocation_file_sha256": "8fd34f4d3641539eff96af0968ff3075cdd3f0062ceeb65bfcd8774885b4a016",
+      "configuration_path": "integration/examples/role_contract_contractor_formation_host.json",
+      "configuration_file_sha256": "b0094b77694758d7fcdd94d2529839341df362b10eee0a031505a701522b514b",
+      "origin_path": "integration/examples/role_contract_contractor_formation_origin.json"
+    }
+  ],
+  "remaining_requirements": [
+    "Contractor accept/reject and actual final-agreement submission/signing evidence.",
+    "Full V2 Owner tender, Contractor bid, Owner evaluation/award and independent Contractor chain.",
+    "Capacity and original funding plan must be completed for an acceptance case; these inputs retain unknown facts."
+  ],
+  "limitations": [
+    "One independent synthetic revision branch, not the complete V2 tender-to-signature chain.",
+    "Partial capacity, unknown funding and empty programme/cost sources cannot prove accept readiness.",
+    "Synthetic Owner acceptance and bid submission are configured assumptions, not saved formal results or confirmed receipts.",
+    "Expected result is validation metadata only and is not passed to the host or processor."
+  ]
+}

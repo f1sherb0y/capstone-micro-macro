@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Original QS result and actual Owner receipt file selections",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "certificates"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "lifecycle-v5-certificate-observation-files.v1"
+    },
+    "certificates": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "qs_result",
+          "receipt"
+        ],
+        "properties": {
+          "qs_result": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "receipt": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,3653 @@
+{
+  "schema_version": "plan-remaining-work-inventory.v1",
+  "as_of": "2026-10-10",
+  "status": "static_inventory_not_completion_audit",
+  "scope": "106动作覆盖状态及本地assembler公开入口索引；仅选定工程师参数链静态核对，不是全部代码缺口审计",
+  "historical_gap_counts": {
+    "binding": 106,
+    "validation": 7,
+    "method": 22,
+    "feedback": 22,
+    "business_effect_or_mixed": 14
+  },
+  "historical_gap_record_count": 171,
+  "distinct_linked_implementation_manifests": 201,
+  "missing_linked_manifests": [],
+  "action_status_counts": {
+    "binding": {
+      "unverified": 106
+    },
+    "feedback": {
+      "pending": 106
+    },
+    "validation": {
+      "partial_local_verified": 25,
+      "pending": 81
+    }
+  },
+  "exact_remaining_code_gap_count": null,
+  "count_limitation": "原gaps是历史未验收记录，implementation_evidence证明编码批次但不证明实际端点/反馈通过；未逐项审计的代码缺口数量未知。没有核销原gaps或提高验证计数。",
+  "recent_code_gaps": [
+    {
+      "id": "ARCHITECT-A08-opinion-to-author",
+      "state": "coded_unverified",
+      "evidence": [
+        "output/integration/plan_20261010_architect_review_opinion_reception_code_01/manifest.json",
+        "output/integration/plan_20261010_architect_author_review_response_source_code_01/manifest.json",
+        "output/integration/plan_20261010_architect_author_review_handoff_wiring_code_01/manifest.json"
+      ],
+      "remaining": "实际服务/provider、跨组织合法读、集中功能验证"
+    }
+  ],
+  "confirmed_next_code_gap": {
+    "id": "ENGINEER-A05-parameter-result-production",
+    "action_ids": [
+      "ENGINEER-A05"
+    ],
+    "state": "local_production_wiring_missing",
+    "related_files": [
+      "integration/engineer_design_actions.py",
+      "integration/engineer_formal_application.py",
+      "src/actions/roles/engineer_design.py",
+      "src/actions/contracts/engineer_design_objects.py",
+      "skills/actions/engineer/ENGINEER-A05/SKILL.md"
+    ],
+    "evidence": "当前design assembler只有build；processor与投影消费原任务/参数/目录/值/来源绑定的保存EngineerParameterResultView。integration中参数结果相关符号只见消费校验，无本地producer/publication或formal参数链配置。此结论不推断外部应用是否有自定义生产者。",
+    "next_batch": "先补独立参数执行输入准备，复用原任务/授权/目录/参数/实际投入校验，隔离未来MethodResult，不执行方法或生成专业安全结论。",
+    "follow_up": "后续补单次方法生产、持久保存/发布和具体来源/formal接线；最后集中简单验证。"
+  },
+  "actions": [
+    {
+      "action_id": "OWN-A01",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "partial_local_verified",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        },
+        {
+          "kind": "validation_partial",
+          "detail": "CHECK-OWN-001/020/044 local decision boundaries tested; CHECK-OWN-026 verifies supplied original-case association only. Stable case registration, persistence, triggers, A16/A02 continuation and authorized feedback remain open"
+        },
+        {
+          "kind": "method_domain_limited",
+          "detail": "Scene thresholds are synthetic assumptions; no real demand/valuation calibration, signal aggregation, unit conversion, cross-clock comparison or general model-budget handling"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261010_migration_captured_source_bytes_code_01/manifest.json",
+        "output/integration/plan_20261010_projection_content_run_isolation_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json",
+        "output/integration/plan_20261010_formal_entry_strict_json_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/owner_observation_actions.py",
+          "class": "OwnerObservationActionAssembler",
+          "method": "build",
+          "line": 64
+        },
+        {
+          "file": "integration/owner_observation_actions.py",
+          "class": "OwnerObservationActionAssembler",
+          "method": "build_result_reading",
+          "line": 130
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "OWN-A16",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "partial_local_verified",
+      "original_gaps": [
+        {
+          "kind": "formal_binding",
+          "detail": "Actual authorized case/need/candidate producers and private record submit/query unbound"
+        },
+        {
+          "kind": "feedback_recovery",
+          "detail": "Private draft registration, A02/A03 continuation, receipts and recovery unbound"
+        },
+        {
+          "kind": "real_method_calibration",
+          "detail": "Need, engineering scale, ordinal preferences and point-in-time budgets are synthetic"
+        },
+        {
+          "kind": "exclusive_rights_and_commitments",
+          "detail": "No actual rights granting, formal resource reservation, financing or investment validation"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/owner_proposal_actions.py",
+          "class": "OwnerProposalActionAssembler",
+          "method": "build",
+          "line": 29
+        },
+        {
+          "file": "integration/owner_proposal_actions.py",
+          "class": "OwnerProposalActionAssembler",
+          "method": "build_from_observation",
+          "line": 42
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "OWN-A02",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "partial_local_verified",
+      "original_gaps": [
+        {
+          "kind": "formal_binding",
+          "detail": "Actual authorized case/question/history/fee producers and limited task/commission submit/query unbound"
+        },
+        {
+          "kind": "feedback_recovery",
+          "detail": "Formal study registration, independent provider acceptance, investment continuation, receipts and recovery unbound"
+        },
+        {
+          "kind": "real_method_calibration",
+          "detail": "Professional qualification, staff capacity, review costs, reassessment triggers and funding are synthetic"
+        },
+        {
+          "kind": "actual_fees_and_debt_lineage",
+          "detail": "No actual fee creation/payment, task reservation or debt inheritance across formal project formation verified"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/owner_study_actions.py",
+          "class": "OwnerStudyActionAssembler",
+          "method": "build",
+          "line": 29
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "OWN-A03",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "partial_local_verified",
+      "original_gaps": [
+        {
+          "kind": "formal_binding",
+          "detail": "Actual option/registration/finance/public-budget producers and formal submit/query unbound"
+        },
+        {
+          "kind": "feedback_recovery",
+          "detail": "Formal project, transaction, receipt, acceptance and recovery remain unbound"
+        },
+        {
+          "kind": "real_method_calibration",
+          "detail": "Forecasts, rights, budget, cash and management pools are synthetic"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/owner_investment_actions.py",
+          "class": "OwnerInvestmentActionAssembler",
+          "method": "build",
+          "line": 29
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "OWN-A04",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "partial_local_verified",
+      "original_gaps": [
+        {
+          "kind": "formal_binding",
+          "detail": "Actual professional procurement, appointment and task input producers and submit/query remain unbound"
+        },
+        {
+          "kind": "feedback_recovery",
+          "detail": "Independent acceptance, obligations, commitments, receipts and feedback recovery remain unbound"
+        },
+        {
+          "kind": "real_method_calibration",
+          "detail": "Professional qualifications, prices, methods, productivity and pools are synthetic"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/owner_commission_actions.py",
+          "class": "OwnerCommissionActionAssembler",
+          "method": "build",
+          "line": 32
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "OWN-A05",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "partial_local_verified",
+      "original_gaps": [
+        {
+          "kind": "formal_binding",
+          "detail": "Actual funding input producers, application registration, independent Bank A02/A05, arrangement submit/query remain unbound"
+        },
+        {
+          "kind": "feedback_recovery",
+          "detail": "Formal independent acceptance, principal, cash, payment, receipt and feedback recovery remain unbound"
+        },
+        {
+          "kind": "real_method_calibration",
+          "detail": "Bank schedules, approved releases, source preferences and currency/region paths are synthetic or unsupported"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/owner_financing_actions.py",
+          "class": "OwnerFinancingActionAssembler",
+          "method": "build",
+          "line": 31
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "OWN-A06",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261008_owner_a06_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/owner_payment_actions.py",
+          "class": "OwnerPaymentActionAssembler",
+          "method": "build",
+          "line": 29
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "OWN-A07",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261008_owner_a07_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/owner_design_actions.py",
+          "class": "OwnerDesignActionAssembler",
+          "method": "build",
+          "line": 31
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "OWN-A08",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261008_owner_a08_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/owner_regulatory_actions.py",
+          "class": "OwnerRegulatoryActionAssembler",
+          "method": "build",
+          "line": 30
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "OWN-A09",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261008_owner_a09_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/owner_tender_actions.py",
+          "class": "OwnerTenderActionAssembler",
+          "method": "build",
+          "line": 29
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "OWN-A10",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261008_owner_a10_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/owner_award_actions.py",
+          "class": "OwnerAwardActionAssembler",
+          "method": "build",
+          "line": 32
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "OWN-A11",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261008_owner_a11_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/owner_contract_actions.py",
+          "class": "OwnerContractActionAssembler",
+          "method": "build",
+          "line": 34
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "OWN-A12",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261009_owner_a12_code_01/manifest.json",
+        "output/integration/plan_20261010_observation_gap_return_fix_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/owner_closeout_actions.py",
+          "class": "OwnerCloseoutActionAssembler",
+          "method": "build",
+          "line": 33
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "OWN-A13",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261009_owner_a13_code_01/manifest.json",
+        "output/integration/plan_20261010_observation_gap_return_fix_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/owner_continuation_actions.py",
+          "class": "OwnerContinuationActionAssembler",
+          "method": "build",
+          "line": 32
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "OWN-A14",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261009_owner_a14_code_01/manifest.json",
+        "output/integration/plan_20261010_observation_gap_return_fix_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/owner_asset_actions.py",
+          "class": "OwnerAssetActionAssembler",
+          "method": "build",
+          "line": 33
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "OWN-A15",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261009_owner_a15_code_01/manifest.json",
+        "output/integration/plan_20261010_observation_gap_return_fix_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/owner_operating_actions.py",
+          "class": "OwnerOperatingActionAssembler",
+          "method": "build",
+          "line": 34
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "BANK-A01",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "partial_local_verified",
+      "original_gaps": [
+        {
+          "kind": "formal_binding",
+          "detail": "Formal portfolio/strategy producers, strategy submission/query and receipts remain unbound"
+        },
+        {
+          "kind": "feedback_recovery",
+          "detail": "Formal portfolio/policy feedback and dedicated continuation remain incomplete"
+        },
+        {
+          "kind": "method_scope",
+          "detail": "Deterministic declared policy checks only; no empirical strategy modelling or real calibration verified"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/bank_strategy_actions.py",
+          "class": "BankStrategyActionAssembler",
+          "method": "build",
+          "line": 50
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "BANK-A02",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "partial_local_verified",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        },
+        {
+          "kind": "validation_partial",
+          "detail": "Local intake and versioned supplementation verified; CHECK-BANK-033 formal application/intake/review-task persistence, retained review work and feedback remain open"
+        },
+        {
+          "kind": "method_domain_limited",
+          "detail": "No currency conversion, cross-clock comparison, real regulatory eligibility calibration or general model-budget handling"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261010_model_budget_binding_guard_code_01/manifest.json",
+        "output/integration/plan_20261010_projection_content_run_isolation_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json",
+        "output/integration/plan_20261010_formal_entry_strict_json_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/bank_intake_actions.py",
+          "class": "BankIntakeActionAssembler",
+          "method": "build",
+          "line": 50
+        },
+        {
+          "file": "integration/bank_intake_actions.py",
+          "class": "BankIntakeActionAssembler",
+          "method": "build_result_reading",
+          "line": 140
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "BANK-A03",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "partial_local_verified",
+      "original_gaps": [
+        {
+          "kind": "formal_binding",
+          "detail": "Actual producers, professional work/resource registration, approval/commitment submit/query and final capacity competition remain unbound"
+        },
+        {
+          "kind": "feedback_recovery",
+          "detail": "Formal review task/results, receipts and feedback recovery remain unbound"
+        },
+        {
+          "kind": "real_method_calibration",
+          "detail": "Thresholds, complete disclosures, account paths, bank limits, loan factors and forecasts are synthetic"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/bank_credit_actions.py",
+          "class": "BankCreditActionAssembler",
+          "method": "build",
+          "line": 25
+        },
+        {
+          "file": "integration/bank_credit_actions.py",
+          "class": "BankCreditActionAssembler",
+          "method": "build_from_intake",
+          "line": 81
+        },
+        {
+          "file": "integration/bank_credit_actions.py",
+          "class": "BankCreditActionAssembler",
+          "method": "build_from_submitted_intake",
+          "line": 102
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "BANK-A04",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "partial_local_verified",
+      "original_gaps": [
+        {
+          "kind": "formal_binding",
+          "detail": "CreditAssessment producer and prepare_offer/submit/query/receipts remain unbound"
+        },
+        {
+          "kind": "reservation_competition",
+          "detail": "Atomic capacity reservation, conversion and expiry release require the formal service"
+        },
+        {
+          "kind": "feedback_recovery",
+          "detail": "Formal quote/acceptance/reservation feedback and dedicated continuation profiles pending"
+        },
+        {
+          "kind": "support_domain",
+          "detail": "Direct payments, floating/revolving/partial draws and real method calibration need further capability"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/bank_quote_actions.py",
+          "class": "BankQuoteActionAssembler",
+          "method": "build",
+          "line": 52
+        },
+        {
+          "file": "integration/bank_quote_actions.py",
+          "class": "BankQuoteActionAssembler",
+          "method": "build_from_credit",
+          "line": 101
+        },
+        {
+          "file": "integration/bank_quote_actions.py",
+          "class": "BankQuoteActionAssembler",
+          "method": "build_from_submitted_credit",
+          "line": 119
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "BANK-A05",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "partial_local_verified",
+      "original_gaps": [
+        {
+          "kind": "formal_binding",
+          "detail": "Formal offer/acceptance producers and PartyAcceptance to both RecordedDecision mapping, prepare_arrangement/submit/query remain unbound"
+        },
+        {
+          "kind": "capacity_competition",
+          "detail": "Atomic reservation conversion, signature/effectiveness timestamps and formal receipts require the actual host service"
+        },
+        {
+          "kind": "feedback_recovery",
+          "detail": "Formal arrangement/condition/commitment feedback and dedicated continuation remain incomplete"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/bank_arrangement_actions.py",
+          "class": "BankArrangementActionAssembler",
+          "method": "build",
+          "line": 54
+        },
+        {
+          "file": "integration/bank_arrangement_actions.py",
+          "class": "BankArrangementActionAssembler",
+          "method": "build_from_quote",
+          "line": 67
+        },
+        {
+          "file": "integration/bank_arrangement_actions.py",
+          "class": "BankArrangementActionAssembler",
+          "method": "build_from_submitted_quote",
+          "line": 87
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "BANK-A06",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261008_bank_a06_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/bank_draw_actions.py",
+          "class": "BankDrawActionAssembler",
+          "method": "build",
+          "line": 58
+        },
+        {
+          "file": "integration/bank_draw_actions.py",
+          "class": "BankDrawActionAssembler",
+          "method": "build_from_arrangement",
+          "line": 73
+        },
+        {
+          "file": "integration/bank_draw_actions.py",
+          "class": "BankDrawActionAssembler",
+          "method": "build_from_submitted_arrangement",
+          "line": 93
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "BANK-A07",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261008_bank_a07_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/bank_execution_actions.py",
+          "class": "BankExecutionActionAssembler",
+          "method": "build",
+          "line": 65
+        },
+        {
+          "file": "integration/bank_execution_actions.py",
+          "class": "BankExecutionActionAssembler",
+          "method": "build_from_draw",
+          "line": 75
+        },
+        {
+          "file": "integration/bank_execution_actions.py",
+          "class": "BankExecutionActionAssembler",
+          "method": "build_from_submitted_draw",
+          "line": 99
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "BANK-A08",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261008_bank_a08_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/bank_monitoring_actions.py",
+          "class": "BankMonitoringActionAssembler",
+          "method": "build",
+          "line": 50
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "BANK-A09",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261008_bank_a09_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/bank_debt_actions.py",
+          "class": "BankDebtActionAssembler",
+          "method": "build",
+          "line": 53
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "BANK-A10",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261009_bank_a10_code_01/manifest.json",
+        "output/integration/plan_20261010_observation_gap_return_fix_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/bank_resolution_actions.py",
+          "class": "BankResolutionActionAssembler",
+          "method": "build",
+          "line": 51
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "BANK-A11",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261009_bank_a11_code_01/manifest.json",
+        "output/integration/plan_20261010_observation_gap_return_fix_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/bank_closeout_actions.py",
+          "class": "BankCloseoutActionAssembler",
+          "method": "build",
+          "line": 52
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "BANK-A12",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261009_bank_a12_code_01/manifest.json",
+        "output/integration/plan_20261010_observation_gap_return_fix_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/bank_learning_actions.py",
+          "class": "BankLearningActionAssembler",
+          "method": "build",
+          "line": 54
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "BANK-A13",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "partial_local_verified",
+      "original_gaps": [
+        {
+          "kind": "formal_binding",
+          "detail": "Actual brief/forecast/advisory producers, versioned consultation/opinion submission and query/receipts remain unbound"
+        },
+        {
+          "kind": "work_and_feedback",
+          "detail": "Formal advisory task/resource consumption, Owner/QS reception and targeted update/recovery remain incomplete"
+        },
+        {
+          "kind": "method_scope",
+          "detail": "Existing exact interval and scenario cash methods only; product eligibility/maturity thresholds are supplied assumptions, without real calibration"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/bank_advice_actions.py",
+          "class": "BankAdviceActionAssembler",
+          "method": "build",
+          "line": 53
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "ARCHITECT-A01",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261008_architect_a01_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/architect_opportunity_actions.py",
+          "class": "ArchitectOpportunityActionAssembler",
+          "method": "build",
+          "line": 71
+        },
+        {
+          "file": "integration/architect_opportunity_actions.py",
+          "class": "ArchitectOpportunityActionAssembler",
+          "method": "build_result_reading",
+          "line": 123
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "ARCHITECT-A02",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "partial_local_verified",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        },
+        {
+          "kind": "methods_and_formal_effects_unverified",
+          "detail": "Four branches run locally through authorized projections; professional/fee method calibration, appointment, capacity reservation, persistence, feedback and receipts remain unverified. CHECK-ARCHITECT-002/003 have local evidence only."
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261010_projection_content_run_isolation_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json",
+        "output/integration/plan_20261010_formal_entry_strict_json_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/architect_intake_actions.py",
+          "class": "ArchitectIntakeActionAssembler",
+          "method": "build",
+          "line": 32
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "ARCHITECT-A03",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "partial_local_verified",
+      "original_gaps": [
+        {
+          "kind": "formal_binding",
+          "detail": "Actual appointment and submitted independent acceptance producers, relationship registration/submit/query remain unbound"
+        },
+        {
+          "kind": "atomic_conversion",
+          "detail": "Formal resource reservation conversion, concurrent capacity validation and receipts require host services"
+        },
+        {
+          "kind": "feedback_recovery",
+          "detail": "A04 task handoff, formal amendment/reconciliation and receipt feedback remain incomplete"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/architect_appointment_actions.py",
+          "class": "ArchitectAppointmentActionAssembler",
+          "method": "build",
+          "line": 36
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "ARCHITECT-A04",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261008_architect_a04_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/architect_planning_actions.py",
+          "class": "ArchitectPlanningActionAssembler",
+          "method": "build",
+          "line": 35
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "ARCHITECT-A05",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261008_architect_a05_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json",
+        "output/integration/plan_20261010_architect_area_input_preparation_code_01/manifest.json",
+        "output/integration/plan_20261010_architect_area_production_code_01/manifest.json",
+        "output/integration/plan_20261010_architect_area_publication_code_01/manifest.json",
+        "output/integration/plan_20261010_architect_area_source_validation_code_01/manifest.json",
+        "output/integration/plan_20261010_architect_area_formal_wiring_code_01/manifest.json",
+        "output/integration/plan_20261010_architect_design_registration_handoff_code_01/manifest.json",
+        "output/integration/plan_20261010_architect_interface_consistency_publication_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/architect_design_actions.py",
+          "class": "ArchitectDesignActionAssembler",
+          "method": "prepare_area_calculation",
+          "line": 41
+        },
+        {
+          "file": "integration/architect_design_actions.py",
+          "class": "ArchitectDesignActionAssembler",
+          "method": "save_area_calculation",
+          "line": 55
+        },
+        {
+          "file": "integration/architect_design_actions.py",
+          "class": "ArchitectDesignActionAssembler",
+          "method": "build",
+          "line": 113
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "ARCHITECT-A06",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261008_architect_a06_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json",
+        "output/integration/plan_20261010_architect_design_registration_handoff_code_01/manifest.json",
+        "output/integration/plan_20261010_architect_interface_consistency_input_code_01/manifest.json",
+        "output/integration/plan_20261010_architect_interface_consistency_method_code_01/manifest.json",
+        "output/integration/plan_20261010_architect_interface_consistency_production_code_01/manifest.json",
+        "output/integration/plan_20261010_architect_interface_consistency_publication_code_01/manifest.json",
+        "output/integration/plan_20261010_architect_interface_consistency_source_validation_code_01/manifest.json",
+        "output/integration/plan_20261010_architect_interface_consistency_formal_wiring_code_01/manifest.json",
+        "output/integration/plan_20261010_architect_integration_registration_handoff_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/architect_integration_actions.py",
+          "class": "ArchitectIntegrationActionAssembler",
+          "method": "prepare_consistency_calculation",
+          "line": 39
+        },
+        {
+          "file": "integration/architect_integration_actions.py",
+          "class": "ArchitectIntegrationActionAssembler",
+          "method": "save_consistency_calculation",
+          "line": 92
+        },
+        {
+          "file": "integration/architect_integration_actions.py",
+          "class": "ArchitectIntegrationActionAssembler",
+          "method": "build_from_registered_design",
+          "line": 113
+        },
+        {
+          "file": "integration/architect_integration_actions.py",
+          "class": "ArchitectIntegrationActionAssembler",
+          "method": "build",
+          "line": 177
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "ARCHITECT-A07",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261008_architect_a07_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json",
+        "output/integration/plan_20261010_architect_integration_registration_handoff_code_01/manifest.json",
+        "output/integration/plan_20261010_architect_review_task_handoff_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/architect_deliverable_actions.py",
+          "class": "ArchitectDeliverableActionAssembler",
+          "method": "build_from_registered_integration",
+          "line": 35
+        },
+        {
+          "file": "integration/architect_deliverable_actions.py",
+          "class": "ArchitectDeliverableActionAssembler",
+          "method": "build",
+          "line": 102
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "ARCHITECT-A08",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261008_architect_a08_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json",
+        "output/integration/plan_20261010_architect_review_task_handoff_code_01/manifest.json",
+        "output/integration/plan_20261010_architect_review_opinion_reception_code_01/manifest.json",
+        "output/integration/plan_20261010_architect_author_review_response_source_code_01/manifest.json",
+        "output/integration/plan_20261010_architect_author_review_handoff_wiring_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/architect_review_actions.py",
+          "class": "ArchitectReviewActionAssembler",
+          "method": "read_received_opinion",
+          "line": 36
+        },
+        {
+          "file": "integration/architect_review_actions.py",
+          "class": "ArchitectReviewActionAssembler",
+          "method": "build_from_received_opinion",
+          "line": 40
+        },
+        {
+          "file": "integration/architect_review_actions.py",
+          "class": "ArchitectReviewActionAssembler",
+          "method": "build_from_review_task",
+          "line": 134
+        },
+        {
+          "file": "integration/architect_review_actions.py",
+          "class": "ArchitectReviewActionAssembler",
+          "method": "build",
+          "line": 201
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "ARCHITECT-A09",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261008_architect_a09_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/architect_change_actions.py",
+          "class": "ArchitectChangeActionAssembler",
+          "method": "build",
+          "line": 32
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "ARCHITECT-A10",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261008_architect_a10_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/architect_billing_actions.py",
+          "class": "ArchitectBillingActionAssembler",
+          "method": "build",
+          "line": 31
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "ARCHITECT-A11",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261009_architect_a11_code_01/manifest.json",
+        "output/integration/plan_20261010_observation_gap_return_fix_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/architect_transition_actions.py",
+          "class": "ArchitectTransitionActionAssembler",
+          "method": "build",
+          "line": 33
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "ARCHITECT-A12",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261009_architect_a12_code_01/manifest.json",
+        "output/integration/plan_20261010_observation_gap_return_fix_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json",
+        "output/integration/plan_20261010_architect_learning_assessment_production_code_01/manifest.json",
+        "output/integration/plan_20261010_architect_learning_assessment_publication_code_01/manifest.json",
+        "output/integration/plan_20261010_architect_learning_assessment_source_validation_code_01/manifest.json",
+        "output/integration/plan_20261010_architect_learning_assessment_formal_wiring_code_01/manifest.json",
+        "output/integration/plan_20261010_architect_training_estimate_production_code_01/manifest.json",
+        "output/integration/plan_20261010_architect_training_estimate_publication_code_01/manifest.json",
+        "output/integration/plan_20261010_architect_training_estimate_source_validation_code_01/manifest.json",
+        "output/integration/plan_20261010_architect_training_estimate_formal_wiring_code_01/manifest.json",
+        "output/integration/plan_20261010_architect_training_task_handoff_code_01/manifest.json",
+        "output/integration/plan_20261010_architect_learning_application_handoff_code_01/manifest.json",
+        "output/integration/plan_20261010_engineer_learning_assessment_production_code_01/manifest.json",
+        "output/integration/plan_20261010_engineer_learning_assessment_source_validation_code_01/manifest.json",
+        "output/integration/plan_20261010_engineer_training_estimate_production_code_01/manifest.json",
+        "output/integration/plan_20261010_engineer_training_task_handoff_code_01/manifest.json",
+        "output/integration/plan_20261010_engineer_learning_application_handoff_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/architect_learning_actions.py",
+          "class": "ArchitectLearningActionAssembler",
+          "method": "prepare_training_estimate",
+          "line": 34
+        },
+        {
+          "file": "integration/architect_learning_actions.py",
+          "class": "ArchitectLearningActionAssembler",
+          "method": "save_training_estimate",
+          "line": 44
+        },
+        {
+          "file": "integration/architect_learning_actions.py",
+          "class": "ArchitectLearningActionAssembler",
+          "method": "prepare_assessment",
+          "line": 65
+        },
+        {
+          "file": "integration/architect_learning_actions.py",
+          "class": "ArchitectLearningActionAssembler",
+          "method": "save_assessment",
+          "line": 75
+        },
+        {
+          "file": "integration/architect_learning_actions.py",
+          "class": "ArchitectLearningActionAssembler",
+          "method": "build_from_applied_judgment",
+          "line": 96
+        },
+        {
+          "file": "integration/architect_learning_actions.py",
+          "class": "ArchitectLearningActionAssembler",
+          "method": "build_from_training_task",
+          "line": 140
+        },
+        {
+          "file": "integration/architect_learning_actions.py",
+          "class": "ArchitectLearningActionAssembler",
+          "method": "build",
+          "line": 184
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "ARCHITECT-A13",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261008_architect_a13_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/architect_research_actions.py",
+          "class": "ArchitectResearchActionAssembler",
+          "method": "build",
+          "line": 36
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "ENGINEER-A01",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261008_engineer_a01_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/engineer_opportunity_actions.py",
+          "class": "EngineerOpportunityActionAssembler",
+          "method": "build",
+          "line": 71
+        },
+        {
+          "file": "integration/engineer_opportunity_actions.py",
+          "class": "EngineerOpportunityActionAssembler",
+          "method": "build_result_reading",
+          "line": 123
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "ENGINEER-A02",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "partial_local_verified",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        },
+        {
+          "kind": "validation_partial",
+          "detail": "CHECK-ENGINEER-002/003/037 have authorized local evidence: professional boundaries, no residual acceptance, and actor renaming cannot remove author organization/personnel relationships. Formal appointment, signing, reservation, feedback and receipts remain unbound"
+        },
+        {
+          "kind": "method_domain_limited",
+          "detail": "All facts and professional/fee method results are synthetic assumptions. Supports fixed region, same units, one clock, half-open windows and constant productivity. Counted resources cover all requested disciplines; specialized-team work decomposition, other independence templates and real method calibration remain open"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261010_projection_content_run_isolation_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json",
+        "output/integration/plan_20261010_formal_entry_strict_json_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/engineer_intake_actions.py",
+          "class": "EngineerIntakeActionAssembler",
+          "method": "build",
+          "line": 36
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "ENGINEER-A03",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "partial_local_verified",
+      "original_gaps": [
+        {
+          "kind": "formal_binding",
+          "detail": "Actual appointment, submitted independent acceptance and independence/conflict producers, relationship registration/submit/query remain unbound"
+        },
+        {
+          "kind": "atomic_conversion",
+          "detail": "Formal resource reservation conversion, concurrent capacity validation and receipts require host services"
+        },
+        {
+          "kind": "feedback_recovery",
+          "detail": "A04 task handoff, formal amendment/reconciliation and receipt feedback remain incomplete"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/engineer_appointment_actions.py",
+          "class": "EngineerAppointmentActionAssembler",
+          "method": "build",
+          "line": 38
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "ENGINEER-A04",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261008_engineer_a04_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/engineer_planning_actions.py",
+          "class": "EngineerPlanningActionAssembler",
+          "method": "build",
+          "line": 37
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "ENGINEER-A05",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261008_engineer_a05_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/engineer_design_actions.py",
+          "class": "EngineerDesignActionAssembler",
+          "method": "build",
+          "line": 40
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "ENGINEER-A06",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261008_engineer_a06_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/engineer_review_actions.py",
+          "class": "EngineerReviewActionAssembler",
+          "method": "build",
+          "line": 35
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "ENGINEER-A07",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261008_engineer_a07_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/engineer_deliverable_actions.py",
+          "class": "EngineerDeliverableActionAssembler",
+          "method": "build",
+          "line": 32
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "ENGINEER-A08",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261008_engineer_a08_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/engineer_inspection_actions.py",
+          "class": "EngineerInspectionActionAssembler",
+          "method": "build",
+          "line": 37
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "ENGINEER-A09",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261008_engineer_a09_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/engineer_change_actions.py",
+          "class": "EngineerChangeActionAssembler",
+          "method": "build",
+          "line": 36
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "ENGINEER-A10",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261008_engineer_a10_code_01/manifest.json",
+        "output/integration/plan_20261010_service_fee_receipt_completeness_fix_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_billing_calculation_producer_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/engineer_billing_actions.py",
+          "class": "EngineerBillingActionAssembler",
+          "method": "build",
+          "line": 31
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "ENGINEER-A11",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261009_engineer_a11_code_01/manifest.json",
+        "output/integration/plan_20261010_observation_gap_return_fix_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/engineer_transition_actions.py",
+          "class": "EngineerTransitionActionAssembler",
+          "method": "build",
+          "line": 38
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "ENGINEER-A12",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261009_engineer_a12_code_01/manifest.json",
+        "output/integration/plan_20261010_observation_gap_return_fix_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json",
+        "output/integration/plan_20261010_engineer_learning_assessment_production_code_01/manifest.json",
+        "output/integration/plan_20261010_engineer_learning_assessment_publication_code_01/manifest.json",
+        "output/integration/plan_20261010_engineer_learning_assessment_source_validation_code_01/manifest.json",
+        "output/integration/plan_20261010_engineer_learning_assessment_formal_wiring_code_01/manifest.json",
+        "output/integration/plan_20261010_engineer_training_estimate_production_code_01/manifest.json",
+        "output/integration/plan_20261010_engineer_training_estimate_publication_code_01/manifest.json",
+        "output/integration/plan_20261010_engineer_training_estimate_source_validation_code_01/manifest.json",
+        "output/integration/plan_20261010_engineer_training_estimate_formal_wiring_code_01/manifest.json",
+        "output/integration/plan_20261010_engineer_training_task_handoff_code_01/manifest.json",
+        "output/integration/plan_20261010_engineer_learning_application_handoff_code_01/manifest.json",
+        "output/integration/plan_20261010_engineer_qualification_verification_handoff_code_01/manifest.json",
+        "output/integration/plan_20261010_engineer_qualification_application_handoff_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/engineer_learning_actions.py",
+          "class": "EngineerLearningActionAssembler",
+          "method": "prepare_training_estimate",
+          "line": 38
+        },
+        {
+          "file": "integration/engineer_learning_actions.py",
+          "class": "EngineerLearningActionAssembler",
+          "method": "save_training_estimate",
+          "line": 48
+        },
+        {
+          "file": "integration/engineer_learning_actions.py",
+          "class": "EngineerLearningActionAssembler",
+          "method": "prepare_assessment",
+          "line": 69
+        },
+        {
+          "file": "integration/engineer_learning_actions.py",
+          "class": "EngineerLearningActionAssembler",
+          "method": "save_assessment",
+          "line": 79
+        },
+        {
+          "file": "integration/engineer_learning_actions.py",
+          "class": "EngineerLearningActionAssembler",
+          "method": "build_from_applied_judgment",
+          "line": 100
+        },
+        {
+          "file": "integration/engineer_learning_actions.py",
+          "class": "EngineerLearningActionAssembler",
+          "method": "build_from_training_task",
+          "line": 144
+        },
+        {
+          "file": "integration/engineer_learning_actions.py",
+          "class": "EngineerLearningActionAssembler",
+          "method": "build_from_qualification_verification",
+          "line": 188
+        },
+        {
+          "file": "integration/engineer_learning_actions.py",
+          "class": "EngineerLearningActionAssembler",
+          "method": "build_from_applied_qualification",
+          "line": 232
+        },
+        {
+          "file": "integration/engineer_learning_actions.py",
+          "class": "EngineerLearningActionAssembler",
+          "method": "build",
+          "line": 283
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "ENGINEER-A13",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261008_engineer_a13_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/engineer_research_actions.py",
+          "class": "EngineerResearchActionAssembler",
+          "method": "build",
+          "line": 36
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "QS-A01",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261008_qs_a01_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/qs_market_actions.py",
+          "class": "QSMarketActionAssembler",
+          "method": "build",
+          "line": 69
+        },
+        {
+          "file": "integration/qs_market_actions.py",
+          "class": "QSMarketActionAssembler",
+          "method": "build_result_reading",
+          "line": 121
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "QS-A02",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "partial_local_verified",
+      "original_gaps": [
+        {
+          "kind": "formal_binding",
+          "detail": "Actual authorized projection producer and formal intake/acceptance service remain unbound"
+        },
+        {
+          "kind": "feedback_recovery",
+          "detail": "Stable formal identity, deduplicated submission, receipt query and feedback require actual macro services"
+        },
+        {
+          "kind": "real_method_calibration",
+          "detail": "All business, authority, conflict and professional policy facts are synthetic; no regulatory/QS calibration or model quality evidence"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261010_projection_content_run_isolation_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json",
+        "output/integration/plan_20261010_formal_entry_strict_json_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/qs_intake_actions.py",
+          "class": "QSIntakeActionAssembler",
+          "method": "build",
+          "line": 33
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "QS-A03",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "partial_local_verified",
+      "original_gaps": [
+        {
+          "kind": "formal_binding",
+          "detail": "Actual QS appointment, task and allocation producers, separate relationship/assignment commands and submit/query remain unbound"
+        },
+        {
+          "kind": "atomic_conversion",
+          "detail": "Formal resource reservation conversion, concurrent capacity validation and receipts require host services"
+        },
+        {
+          "kind": "feedback_recovery",
+          "detail": "Formal allocation receipts, actual work recording, amendment/reconciliation and feedback remain incomplete"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/qs_appointment_actions.py",
+          "class": "QSAppointmentActionAssembler",
+          "method": "build",
+          "line": 37
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "QS-A04",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "partial_local_verified",
+      "original_gaps": [
+        {
+          "kind": "formal_binding",
+          "detail": "Actual Brief/DesignOption/quantity/price/execution producers and cost-plan submit/query remain unbound"
+        },
+        {
+          "kind": "method_domain",
+          "detail": "Real quantity measurement, proxy calibration, price data and conversions require separately supported methods; declared arithmetic is mathematically verified only"
+        },
+        {
+          "kind": "feedback_recovery",
+          "detail": "Formal cost-plan receipts, actual work, authorized client acceptance and feedback remain incomplete"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261010_qs_cost_calculation_producer_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_cost_calculation_publication_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_cost_calculation_source_validation_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_cost_formal_wiring_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json",
+        "output/integration/plan_20261010_architect_learning_assessment_publication_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/qs_cost_actions.py",
+          "class": "QSCostActionAssembler",
+          "method": "build",
+          "line": 32
+        },
+        {
+          "file": "integration/qs_cost_actions.py",
+          "class": "QSCostActionAssembler",
+          "method": "prepare_calculation",
+          "line": 41
+        },
+        {
+          "file": "integration/qs_cost_actions.py",
+          "class": "QSCostActionAssembler",
+          "method": "publish_calculation",
+          "line": 50
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "QS-A05",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "validation_pending",
+          "detail": "Implementation not accepted; per user instruction final tests deferred until PLAN coding is complete"
+        },
+        {
+          "kind": "formal_binding",
+          "detail": "Actual quantities/rules and procurement cost-result save/publication submit/query remain unbound"
+        },
+        {
+          "kind": "feedback_recovery",
+          "detail": "Formal publication receipts, actual work, buyer acceptance and feedback remain incomplete"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261008_qs_a05_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_procurement_saved_document_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_procurement_document_publication_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_procurement_document_source_validation_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_procurement_document_formal_wiring_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/qs_procurement_actions.py",
+          "class": "QSProcurementActionAssembler",
+          "method": "build",
+          "line": 33
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "QS-A06",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "validation_pending",
+          "detail": "Per user instruction no development tests; final acceptance deferred until PLAN coding is complete"
+        },
+        {
+          "kind": "method_calibration",
+          "detail": "Explicit conversion coefficients, adjustments, eligibility and risk require original producers and real calibration; local methods check declared arithmetic only"
+        },
+        {
+          "kind": "formal_binding",
+          "detail": "Evaluation submit/query, independent exclusion commands, receipts and award handoff remain unbound"
+        },
+        {
+          "kind": "feedback_recovery",
+          "detail": "Formal exclusion/award receipts, actual work and downstream feedback remain incomplete"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261008_qs_a06_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_bid_normalization_producer_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_bid_normalization_publication_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_bid_normalization_source_validation_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_bid_normalization_formal_wiring_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_bid_ranking_producer_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_bid_ranking_publication_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_bid_ranking_source_validation_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_bid_ranking_formal_wiring_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/qs_bid_actions.py",
+          "class": "QSBidActionAssembler",
+          "method": "build",
+          "line": 33
+        },
+        {
+          "file": "integration/qs_bid_actions.py",
+          "class": "QSBidActionAssembler",
+          "method": "prepare_normalization",
+          "line": 43
+        },
+        {
+          "file": "integration/qs_bid_actions.py",
+          "class": "QSBidActionAssembler",
+          "method": "prepare_ranking",
+          "line": 53
+        },
+        {
+          "file": "integration/qs_bid_actions.py",
+          "class": "QSBidActionAssembler",
+          "method": "save_normalization",
+          "line": 63
+        },
+        {
+          "file": "integration/qs_bid_actions.py",
+          "class": "QSBidActionAssembler",
+          "method": "save_ranking",
+          "line": 85
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "QS-A07",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261008_qs_a07_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_change_calculation_producer_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_change_calculation_publication_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_change_calculation_source_validation_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_change_formal_wiring_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json",
+        "output/integration/plan_20261010_architect_learning_assessment_publication_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/qs_change_actions.py",
+          "class": "QSChangeActionAssembler",
+          "method": "build",
+          "line": 31
+        },
+        {
+          "file": "integration/qs_change_actions.py",
+          "class": "QSChangeActionAssembler",
+          "method": "prepare_calculation",
+          "line": 40
+        },
+        {
+          "file": "integration/qs_change_actions.py",
+          "class": "QSChangeActionAssembler",
+          "method": "publish_calculation",
+          "line": 50
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "QS-A08",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261008_qs_a08_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_payment_calculation_producer_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_payment_calculation_publication_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_payment_calculation_source_validation_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_payment_formal_wiring_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json",
+        "output/integration/plan_20261010_architect_learning_assessment_publication_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/qs_payment_actions.py",
+          "class": "QSPaymentActionAssembler",
+          "method": "build",
+          "line": 34
+        },
+        {
+          "file": "integration/qs_payment_actions.py",
+          "class": "QSPaymentActionAssembler",
+          "method": "prepare_calculations",
+          "line": 44
+        },
+        {
+          "file": "integration/qs_payment_actions.py",
+          "class": "QSPaymentActionAssembler",
+          "method": "publish_calculations",
+          "line": 52
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "QS-A09",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261009_qs_a09_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_final_account_calculation_producer_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_final_account_calculation_publication_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_final_account_calculation_source_validation_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_final_account_formal_wiring_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_final_certificate_sequence_fix_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json",
+        "output/integration/plan_20261010_architect_learning_assessment_publication_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/qs_final_account_actions.py",
+          "class": "QSFinalAccountActionAssembler",
+          "method": "build",
+          "line": 36
+        },
+        {
+          "file": "integration/qs_final_account_actions.py",
+          "class": "QSFinalAccountActionAssembler",
+          "method": "prepare_reconciliation",
+          "line": 46
+        },
+        {
+          "file": "integration/qs_final_account_actions.py",
+          "class": "QSFinalAccountActionAssembler",
+          "method": "publish_reconciliation",
+          "line": 56
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "QS-A10",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261008_qs_a10_code_01/manifest.json",
+        "output/integration/plan_20261010_service_fee_receipt_completeness_fix_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_billing_calculation_producer_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_billing_calculation_publication_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_billing_calculation_source_validation_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_billing_calculation_formal_wiring_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_reconciliation_transport_fix_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_billing_claim_handoff_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json",
+        "output/integration/plan_20261010_architect_learning_assessment_publication_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/qs_billing_actions.py",
+          "class": "QSBillingActionAssembler",
+          "method": "build",
+          "line": 32
+        },
+        {
+          "file": "integration/qs_billing_actions.py",
+          "class": "QSBillingActionAssembler",
+          "method": "prepare_calculation",
+          "line": 41
+        },
+        {
+          "file": "integration/qs_billing_actions.py",
+          "class": "QSBillingActionAssembler",
+          "method": "save_calculation",
+          "line": 52
+        },
+        {
+          "file": "integration/qs_billing_actions.py",
+          "class": "QSBillingActionAssembler",
+          "method": "build_from_submitted_claim",
+          "line": 73
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "QS-A11",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261009_qs_a11_code_01/manifest.json",
+        "output/integration/plan_20261010_observation_gap_return_fix_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_transition_support_task_fix_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_transition_execution_handoff_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/qs_transition_actions.py",
+          "class": "QSTransitionActionAssembler",
+          "method": "build",
+          "line": 40
+        },
+        {
+          "file": "integration/qs_transition_actions.py",
+          "class": "QSTransitionActionAssembler",
+          "method": "build_from_submitted_transition",
+          "line": 48
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "QS-A12",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261009_qs_a12_code_01/manifest.json",
+        "output/integration/plan_20261010_observation_gap_return_fix_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_learning_comparability_producer_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_learning_comparability_publication_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_learning_comparability_source_validation_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_learning_comparability_formal_wiring_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_learning_error_producer_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_learning_error_publication_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_learning_error_source_validation_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_learning_error_formal_wiring_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_learning_cost_feedback_guard_fix_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_learning_application_handoff_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_learning_assessment_producer_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_learning_assessment_publication_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_learning_assessment_source_validation_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_learning_assessment_formal_wiring_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_learning_assessment_reserved_target_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_learning_error_reserved_target_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_training_estimate_production_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_training_estimate_publication_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_training_estimate_source_validation_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_training_estimate_formal_wiring_code_01/manifest.json",
+        "output/integration/plan_20261010_qs_training_task_handoff_code_01/manifest.json",
+        "output/integration/plan_20261010_architect_learning_assessment_production_code_01/manifest.json",
+        "output/integration/plan_20261010_architect_learning_assessment_publication_code_01/manifest.json",
+        "output/integration/plan_20261010_architect_learning_assessment_source_validation_code_01/manifest.json",
+        "output/integration/plan_20261010_architect_training_estimate_production_code_01/manifest.json",
+        "output/integration/plan_20261010_architect_training_estimate_source_validation_code_01/manifest.json",
+        "output/integration/plan_20261010_architect_training_task_handoff_code_01/manifest.json",
+        "output/integration/plan_20261010_architect_learning_application_handoff_code_01/manifest.json",
+        "output/integration/plan_20261010_engineer_learning_assessment_production_code_01/manifest.json",
+        "output/integration/plan_20261010_engineer_training_estimate_production_code_01/manifest.json",
+        "output/integration/plan_20261010_engineer_training_task_handoff_code_01/manifest.json",
+        "output/integration/plan_20261010_engineer_learning_application_handoff_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/qs_learning_actions.py",
+          "class": "QSLearningActionAssembler",
+          "method": "build",
+          "line": 39
+        },
+        {
+          "file": "integration/qs_learning_actions.py",
+          "class": "QSLearningActionAssembler",
+          "method": "prepare_comparability",
+          "line": 47
+        },
+        {
+          "file": "integration/qs_learning_actions.py",
+          "class": "QSLearningActionAssembler",
+          "method": "prepare_assessment",
+          "line": 57
+        },
+        {
+          "file": "integration/qs_learning_actions.py",
+          "class": "QSLearningActionAssembler",
+          "method": "prepare_training_estimate",
+          "line": 67
+        },
+        {
+          "file": "integration/qs_learning_actions.py",
+          "class": "QSLearningActionAssembler",
+          "method": "save_assessment",
+          "line": 77
+        },
+        {
+          "file": "integration/qs_learning_actions.py",
+          "class": "QSLearningActionAssembler",
+          "method": "save_training_estimate",
+          "line": 97
+        },
+        {
+          "file": "integration/qs_learning_actions.py",
+          "class": "QSLearningActionAssembler",
+          "method": "save_comparability",
+          "line": 120
+        },
+        {
+          "file": "integration/qs_learning_actions.py",
+          "class": "QSLearningActionAssembler",
+          "method": "build_from_applied_judgment",
+          "line": 141
+        },
+        {
+          "file": "integration/qs_learning_actions.py",
+          "class": "QSLearningActionAssembler",
+          "method": "build_from_training_task",
+          "line": 185
+        },
+        {
+          "file": "integration/qs_learning_actions.py",
+          "class": "QSLearningActionAssembler",
+          "method": "prepare_error",
+          "line": 229
+        },
+        {
+          "file": "integration/qs_learning_actions.py",
+          "class": "QSLearningActionAssembler",
+          "method": "save_error",
+          "line": 239
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "QS-A13",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "validation_pending",
+          "detail": "Final tests deferred until PLAN coding is complete per user instruction"
+        },
+        {
+          "kind": "method_calibration",
+          "detail": "Real quantity/price validity, scope/FX adjustments, uncertainty and research work estimates require original producers and calibration"
+        },
+        {
+          "kind": "formal_binding",
+          "detail": "Research/cost/expense producers, comparison submission and client acceptance/receipts remain unbound"
+        },
+        {
+          "kind": "feedback_recovery",
+          "detail": "Actual work, atomic limit enforcement, receipts and feedback remain incomplete"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261008_qs_a13_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/qs_research_actions.py",
+          "class": "QSResearchActionAssembler",
+          "method": "build",
+          "line": 33
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "GOV-A01",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261008_gov_a01_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/government_advice_actions.py",
+          "class": "GovernmentAdviceActionAssembler",
+          "method": "build",
+          "line": 71
+        },
+        {
+          "file": "integration/government_advice_actions.py",
+          "class": "GovernmentAdviceActionAssembler",
+          "method": "build_result_reading",
+          "line": 125
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "GOV-A02",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "partial_local_verified",
+      "original_gaps": [
+        {
+          "kind": "formal_binding",
+          "detail": "Actual authorized projection producer and formal intake/acceptance service remain unbound"
+        },
+        {
+          "kind": "feedback_recovery",
+          "detail": "Stable formal identity, deduplicated submission, receipt query and feedback require actual macro services"
+        },
+        {
+          "kind": "real_method_calibration",
+          "detail": "All business, authority, conflict and professional policy facts are synthetic; no regulatory/QS calibration or model quality evidence"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261010_projection_content_run_isolation_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json",
+        "output/integration/plan_20261010_formal_entry_strict_json_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/government_intake_actions.py",
+          "class": "GovernmentIntakeActionAssembler",
+          "method": "build",
+          "line": 33
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "GOV-A03",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261008_gov_a03_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/government_scheduling_actions.py",
+          "class": "GovernmentSchedulingActionAssembler",
+          "method": "build",
+          "line": 35
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "GOV-A04",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261008_gov_a04_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/government_review_actions.py",
+          "class": "GovernmentReviewActionAssembler",
+          "method": "build",
+          "line": 38
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "GOV-A05",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261008_gov_a05_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/government_consultation_actions.py",
+          "class": "GovernmentConsultationActionAssembler",
+          "method": "build",
+          "line": 38
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "GOV-A06",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261008_gov_a06_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/government_supplement_actions.py",
+          "class": "GovernmentSupplementActionAssembler",
+          "method": "build",
+          "line": 36
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "GOV-A07",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261009_gov_a07_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/government_decision_actions.py",
+          "class": "GovernmentDecisionActionAssembler",
+          "method": "build",
+          "line": 35
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "GOV-A08",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261009_gov_a08_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/government_permit_actions.py",
+          "class": "GovernmentPermitActionAssembler",
+          "method": "build",
+          "line": 34
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "GOV-A09",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261009_gov_a09_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/government_transition_actions.py",
+          "class": "GovernmentTransitionActionAssembler",
+          "method": "build",
+          "line": 36
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "GOV-A10",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261009_gov_a10_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/government_inspection_actions.py",
+          "class": "GovernmentInspectionActionAssembler",
+          "method": "build",
+          "line": 38
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "GOV-A11",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261009_gov_a11_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/government_use_actions.py",
+          "class": "GovernmentUseActionAssembler",
+          "method": "build",
+          "line": 38
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "GOV-A12",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261009_gov_a12_code_01/manifest.json",
+        "output/integration/plan_20261010_observation_gap_return_fix_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/government_feedback_actions.py",
+          "class": "GovernmentFeedbackActionAssembler",
+          "method": "build",
+          "line": 37
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "CONTRACTOR-A01",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "partial_local_verified",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        },
+        {
+          "kind": "validation_partial",
+          "detail": "Local qualification/capability branches only; CHECK-CONTRACTOR-017 action-model budget handling, formal intent registration/query and feedback remain open"
+        },
+        {
+          "kind": "method_domain_limited",
+          "detail": "Registered capacity method is mathematically verified only; no real crew/productivity calibration, relocation, unit conversion or cross-clock comparison"
+        },
+        {
+          "kind": "formal_resource_entry",
+          "detail": "No actual macro resource entry, reservation or shared capacity arbitration is bound"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261010_model_budget_binding_guard_code_01/manifest.json",
+        "output/integration/plan_20261010_migration_captured_source_bytes_code_01/manifest.json",
+        "output/integration/plan_20261010_projection_content_run_isolation_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json",
+        "output/integration/plan_20261010_formal_entry_strict_json_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "CONTRACTOR-A02",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261008_contractor_a02_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "CONTRACTOR-A03",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261008_contractor_a03_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/contractor_amendment_actions.py",
+          "class": "ContractorAmendmentActionAssembler",
+          "method": "build",
+          "line": 72
+        },
+        {
+          "file": "integration/contractor_amendment_actions.py",
+          "class": "ContractorAmendmentActionAssembler",
+          "method": "build_result_reading",
+          "line": 126
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "CONTRACTOR-A04",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261008_contractor_a04_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/contractor_formation_actions.py",
+          "class": "ContractorFormationActionAssembler",
+          "method": "build",
+          "line": 39
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "CONTRACTOR-A05",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261009_contractor_a05_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/contractor_planning_actions.py",
+          "class": "ContractorPlanningActionAssembler",
+          "method": "build",
+          "line": 35
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "CONTRACTOR-A06",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261009_contractor_a06_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/contractor_readiness_actions.py",
+          "class": "ContractorReadinessActionAssembler",
+          "method": "build",
+          "line": 35
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "CONTRACTOR-A07",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261009_contractor_a07_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/contractor_execution_actions.py",
+          "class": "ContractorExecutionActionAssembler",
+          "method": "build",
+          "line": 35
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "CONTRACTOR-A08",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261009_contractor_a08_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/contractor_quality_actions.py",
+          "class": "ContractorQualityActionAssembler",
+          "method": "build",
+          "line": 33
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "CONTRACTOR-A09",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261009_contractor_a09_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/contractor_claim_actions.py",
+          "class": "ContractorClaimActionAssembler",
+          "method": "build",
+          "line": 36
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "CONTRACTOR-A10",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261009_contractor_a10_code_01/manifest.json",
+        "output/integration/plan_20261010_observation_gap_return_fix_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/contractor_payment_actions.py",
+          "class": "ContractorPaymentActionAssembler",
+          "method": "build",
+          "line": 35
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "CONTRACTOR-A11",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261009_contractor_a11_code_01/manifest.json",
+        "output/integration/plan_20261010_observation_gap_return_fix_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/contractor_closeout_actions.py",
+          "class": "ContractorCloseoutActionAssembler",
+          "method": "build",
+          "line": 38
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "CONTRACTOR-A12",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261009_contractor_a12_code_01/manifest.json",
+        "output/integration/plan_20261009_commercial_execution_conditions_code_01/manifest.json",
+        "output/integration/plan_20261009_commercial_resource_conditions_code_01/manifest.json",
+        "output/integration/plan_20261009_commercial_material_conditions_code_01/manifest.json",
+        "output/integration/plan_20261009_commercial_acceptance_conditions_code_01/manifest.json",
+        "output/integration/plan_20261009_commercial_signed_state_code_01/manifest.json",
+        "output/integration/plan_20261009_commercial_readiness_conditions_code_01/manifest.json",
+        "output/integration/plan_20261009_commercial_capacity_conditions_code_01/manifest.json",
+        "output/integration/plan_20261009_commercial_lesson_conditions_code_01/manifest.json",
+        "output/integration/plan_20261009_commercial_input_assembly_code_01/manifest.json",
+        "output/integration/plan_20261009_commercial_continuation_reader_code_01/manifest.json",
+        "output/integration/plan_20261009_commercial_successor_preparation_code_01/manifest.json",
+        "output/integration/plan_20261009_commercial_successor_callbacks_code_01/manifest.json",
+        "output/integration/plan_20261009_invocation_snapshots_code_01/manifest.json",
+        "output/integration/plan_20261009_commercial_worker_code_01/manifest.json",
+        "output/integration/plan_20261009_commercial_root_recovery_code_01/manifest.json",
+        "output/integration/plan_20261009_commercial_runtime_code_01/manifest.json",
+        "output/integration/plan_20261010_observation_gap_return_fix_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "CONTRACTOR-A13",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261008_contractor_a13_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [
+        {
+          "file": "integration/contractor_advice_actions.py",
+          "class": "ContractorAdviceActionAssembler",
+          "method": "build",
+          "line": 34
+        }
+      ],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "SUPPLIER-A01",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "partial_local_verified",
+      "original_gaps": [
+        {
+          "kind": "formal_binding",
+          "detail": "Actual projection producer and versioned inquiry/intent endpoint remain unbound; no formal order, stock or capacity effect"
+        },
+        {
+          "kind": "feedback_recovery",
+          "detail": "Formal receipt/query/feedback/deduplication and unknown submission recovery require macro services"
+        },
+        {
+          "kind": "real_method_calibration",
+          "detail": "Registered capacity method is mathematically verified only; product, production, logistics, productivity and resource policy remain synthetic"
+        },
+        {
+          "kind": "formal_resource_entry",
+          "detail": "No actual macro resource entry, reservation or shared capacity arbitration is bound"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261010_projection_content_run_isolation_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json",
+        "output/integration/plan_20261010_formal_entry_strict_json_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "SUPPLIER-A02",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "partial_local_verified",
+      "original_gaps": [
+        {
+          "kind": "formal_binding",
+          "detail": "Actual authorized product/design/evidence producer and versioned proposal endpoint remain unbound"
+        },
+        {
+          "kind": "feedback_recovery",
+          "detail": "Receipt/query/feedback/deduplication and recovery remain unbound"
+        },
+        {
+          "kind": "real_method_calibration",
+          "detail": "Mathematical declarations only; real product qualification, interface engineering, factory/use evidence and professional authority remain unverified"
+        },
+        {
+          "kind": "formal_approval_and_use",
+          "detail": "Procurement/design acceptance and production/installation gates require macro services"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "SUPPLIER-A03",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "partial_local_verified",
+      "original_gaps": [
+        {
+          "kind": "formal_binding",
+          "detail": "Actual cost/stock/logistics producers and versioned quote submit/query remain unbound"
+        },
+        {
+          "kind": "feedback_recovery",
+          "detail": "Action receipt/query/feedback/deduplication and recovery remain unbound"
+        },
+        {
+          "kind": "real_method_calibration",
+          "detail": "Synthetic costs, payment policy, rates, physical inventory and logistics are uncalibrated"
+        },
+        {
+          "kind": "formal_order_and_resources",
+          "detail": "Buyer acceptance, current commitment conflict checks, inventory/resource effects require macro services"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "SUPPLIER-A04",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "partial_local_verified",
+      "original_gaps": [
+        {
+          "kind": "formal_binding",
+          "detail": "Actual proposal/acceptance/resource producers and formation submit/query remain unbound"
+        },
+        {
+          "kind": "feedback_recovery",
+          "detail": "Action receipts, feedback, deduplication and recovery remain unbound"
+        },
+        {
+          "kind": "real_method_calibration",
+          "detail": "Synthetic authorizations, funding, physical stock, productivity and commercial assumptions uncalibrated"
+        },
+        {
+          "kind": "formal_formation_and_resources",
+          "detail": "Effective orders, same-version partial confirmation and concurrent reservation require real macro core"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "SUPPLIER-A05",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261009_supplier_a05_code_01/manifest.json",
+        "output/integration/plan_20261010_observation_gap_return_fix_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "SUPPLIER-A06",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261009_supplier_a06_code_01/manifest.json",
+        "output/integration/plan_20261010_observation_gap_return_fix_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "SUPPLIER-A07",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261009_supplier_a07_code_01/manifest.json",
+        "output/integration/plan_20261010_observation_gap_return_fix_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "SUPPLIER-A08",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261009_supplier_a08_code_01/manifest.json",
+        "output/integration/plan_20261010_observation_gap_return_fix_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "SUPPLIER-A09",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261009_supplier_a09_code_01/manifest.json",
+        "output/integration/plan_20261010_observation_gap_return_fix_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "SUPPLIER-A10",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261009_supplier_a10_code_01/manifest.json",
+        "output/integration/plan_20261010_observation_gap_return_fix_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "SUPPLIER-A11",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261009_supplier_a11_code_01/manifest.json",
+        "output/integration/plan_20261010_observation_gap_return_fix_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "SUPPLIER-A12",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261009_supplier_a12_code_01/manifest.json",
+        "output/integration/plan_20261009_commercial_execution_conditions_code_01/manifest.json",
+        "output/integration/plan_20261009_commercial_resource_conditions_code_01/manifest.json",
+        "output/integration/plan_20261009_commercial_material_conditions_code_01/manifest.json",
+        "output/integration/plan_20261009_commercial_acceptance_conditions_code_01/manifest.json",
+        "output/integration/plan_20261009_commercial_signed_state_code_01/manifest.json",
+        "output/integration/plan_20261009_commercial_readiness_conditions_code_01/manifest.json",
+        "output/integration/plan_20261009_commercial_capacity_conditions_code_01/manifest.json",
+        "output/integration/plan_20261009_commercial_lesson_conditions_code_01/manifest.json",
+        "output/integration/plan_20261009_commercial_input_assembly_code_01/manifest.json",
+        "output/integration/plan_20261009_commercial_continuation_reader_code_01/manifest.json",
+        "output/integration/plan_20261009_commercial_successor_preparation_code_01/manifest.json",
+        "output/integration/plan_20261009_commercial_successor_callbacks_code_01/manifest.json",
+        "output/integration/plan_20261009_invocation_snapshots_code_01/manifest.json",
+        "output/integration/plan_20261009_commercial_worker_code_01/manifest.json",
+        "output/integration/plan_20261009_commercial_root_recovery_code_01/manifest.json",
+        "output/integration/plan_20261009_commercial_runtime_code_01/manifest.json",
+        "output/integration/plan_20261010_observation_gap_return_fix_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    },
+    {
+      "action_id": "SUPPLIER-A13",
+      "binding": "unverified",
+      "feedback": "pending",
+      "validation": "pending",
+      "original_gaps": [
+        {
+          "kind": "binding_unverified",
+          "detail": "Source specification is not an executable endpoint"
+        }
+      ],
+      "implementation_evidence": [
+        "output/integration/plan_20261008_supplier_a13_code_01/manifest.json",
+        "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json"
+      ],
+      "explicit_local_assembler_entrypoints": [],
+      "entrypoint_limitation": "仅静态索引本文件显式方法；无入口不等于未实现，继承/宿主/其他模块仍需核查。"
+    }
+  ],
+  "source_hashes": {
+    "宏微观衔接方案/新版方案/action_coverage.json": "93e8fe49c9975381bab80212383e77510d72f4cef4660a6450d703defa72100e",
+    "integration/engineer_design_actions.py": "c0c8106705a8be731ee1e1a6781f7fd3f83b4be931965bb2966d3333585cd2e1",
+    "integration/engineer_formal_application.py": "b2b75e714268d142ff45eff8fd84bca5664c713b6581f9270a70c3913e929f3d",
+    "src/actions/roles/engineer_design.py": "0f3eef71a9e47ef56e2b6c85d86d301be5585b048f395ae83a3d41ebb904997e",
+    "src/actions/contracts/engineer_design_objects.py": "8083bd065a61192ef98d80941d06f2527f89800c2702e6080d4362735ab063f0",
+    "skills/actions/engineer/ENGINEER-A05/SKILL.md": "134639e0e01de5b5bccd7222011910cacb14e6b033df4a504929ac4b6debabaf"
+  },
+  "evidence_manifest_hashes": {
+    "output/integration/plan_20261008_architect_a01_code_01/manifest.json": "4c2954d09e6fe997979ca6ebbc4b3923f974eccd85aaf41f357ca84cd7c9746b",
+    "output/integration/plan_20261008_architect_a04_code_01/manifest.json": "537f5dd53ddfdea463cd16cc15e318f2536986fc26e216404e2e1abb9620b149",
+    "output/integration/plan_20261008_architect_a05_code_01/manifest.json": "5398138d924858fdca3450c210256c4f7f1e3fefd79e1d915f28d566ddc33385",
+    "output/integration/plan_20261008_architect_a06_code_01/manifest.json": "98a609a18ccc971975ac2ccee8b70f9bb04017272a78b470cfb2119c41704c7b",
+    "output/integration/plan_20261008_architect_a07_code_01/manifest.json": "de80a02fa7c8739a6a5cd08ea00f20db94556bffe60148144aa7b971838cca6d",
+    "output/integration/plan_20261008_architect_a08_code_01/manifest.json": "ff0625aad2da010de8eed1181db7e055d75ddf812bf08ff6c3b1751994ae156e",
+    "output/integration/plan_20261008_architect_a09_code_01/manifest.json": "bcb0564662bce0be15635ab55e7a275dd12a61aaf514ea87995a201d377e3e90",
+    "output/integration/plan_20261008_architect_a10_code_01/manifest.json": "40198a3e649acef663e2575f76a12bff66902eb6b6c5fafb3ff5b34cd3270877",
+    "output/integration/plan_20261008_architect_a13_code_01/manifest.json": "cebb9bc1060edcd987aa5000451648a0901753b1dc884f071c2020cd896906ea",
+    "output/integration/plan_20261008_bank_a06_code_01/manifest.json": "adf51d41a90dfbd6587f07969fec68cc7b13b42ec7bf94a8afee458047749151",
+    "output/integration/plan_20261008_bank_a07_code_01/manifest.json": "7c53a2accb02bbecc0361bb452b4974ddc1b3316a881f514a3c70c132069b7ca",
+    "output/integration/plan_20261008_bank_a08_code_01/manifest.json": "92ed3ac8559c524043ad5619ba98b806c982d120bbaac999d12c8612bd63f177",
+    "output/integration/plan_20261008_bank_a09_code_01/manifest.json": "2b0e6fb3e6c5bdc78fb10e3230b497d74639b637f7009d419a2ac95610f037a5",
+    "output/integration/plan_20261008_contractor_a02_code_01/manifest.json": "f1670c9a5dc25eb04bb0a1b5ba158abf9315019632282bd7af59af562116b346",
+    "output/integration/plan_20261008_contractor_a03_code_01/manifest.json": "11a828e53e8ebe7453f14af85eea30d4a07a6ef1de41e74d2d47deb747aaf4f5",
+    "output/integration/plan_20261008_contractor_a04_code_01/manifest.json": "2d232677d700b411a3e6e5437a909c221fd361abb15e9706e1304cb89b067410",
+    "output/integration/plan_20261008_contractor_a13_code_01/manifest.json": "5d21761dd2a09e65200f39e1e6a593e6f9ea2ef49279ce9c5c68c17549be986e",
+    "output/integration/plan_20261008_engineer_a01_code_01/manifest.json": "fd750449f25e228b496d13fa6470ccc1dd86cc9fad87fd8d0f53c500dc847300",
+    "output/integration/plan_20261008_engineer_a04_code_01/manifest.json": "c6af0acaf56587227e9561bac49f16e876bf70f7bfb3c8128d7b3976ea72e795",
+    "output/integration/plan_20261008_engineer_a05_code_01/manifest.json": "81ce51404342a4294c012276afab4b5079a884f87163c1282235e758a032ef70",
+    "output/integration/plan_20261008_engineer_a06_code_01/manifest.json": "73bcc8aeb65b6040b04743866d4db4a386543697f3ffc569c0fc351a25b13552",
+    "output/integration/plan_20261008_engineer_a07_code_01/manifest.json": "c22bf4b82be0a0ff198857ed5b365b4bea67cb2f286835e637616461f39b54a1",
+    "output/integration/plan_20261008_engineer_a08_code_01/manifest.json": "de3d614949ef7ea45419b027451751bb73c800a81e13d9a028ca7215493d6765",
+    "output/integration/plan_20261008_engineer_a09_code_01/manifest.json": "75268ae33c3a9df454d483e2a76da1d37edc2d189250d51ec6bf8598d48ea3b0",
+    "output/integration/plan_20261008_engineer_a10_code_01/manifest.json": "28b60ee92bf99ab55e61d2879e35303dbee6fa5a045ae286be02f91429d680e9",
+    "output/integration/plan_20261008_engineer_a13_code_01/manifest.json": "dd94facbc10ff4fa469648ebf7c54c1bfda4c081e72b83672300b752a00e28f7",
+    "output/integration/plan_20261008_gov_a01_code_01/manifest.json": "72f15f42a3e34b5589b44257b1fe6d4814033796715bc62f0d294a40357b66d8",
+    "output/integration/plan_20261008_gov_a03_code_01/manifest.json": "4b08ec3bd10986daa7fcb4788732d641ee56026b13ac573c16da72db4086cbac",
+    "output/integration/plan_20261008_gov_a04_code_01/manifest.json": "7f2982d914cf025065f49bea8931604c18e851f186a581706f3cd8f43e9b3833",
+    "output/integration/plan_20261008_gov_a05_code_01/manifest.json": "28f76166310ea0ba029223da91422ca819b5826f44326d855525dcc457c90f18",
+    "output/integration/plan_20261008_gov_a06_code_01/manifest.json": "4c7f46b7b8adf045eec0b4ffa51a096f99932295c0826bb9783feeecc92e09ee",
+    "output/integration/plan_20261008_owner_a06_code_01/manifest.json": "8cd880c754ccc2deb4c26c71a16f67ace7fd97d4a3cdb424601328b497531c14",
+    "output/integration/plan_20261008_owner_a07_code_01/manifest.json": "8bf969475a9d064900622dd5d0e70e5c8d250fbb8c6b24ed49b1767db0084e27",
+    "output/integration/plan_20261008_owner_a08_code_01/manifest.json": "89d45a18bbef8ef3684ea73e7163e8dd15dfc240e797f87d3b9bfa6dfe72c7a7",
+    "output/integration/plan_20261008_owner_a09_code_01/manifest.json": "90fd7b59a8b7a08d4f1ca6b57f4a3277ff1133e10ceb26496f0081cf1cbf0803",
+    "output/integration/plan_20261008_owner_a10_code_01/manifest.json": "e662772a7db9dabcf19a4b97049c13eaceab48d86a44903f1f3a79cfc9b5190e",
+    "output/integration/plan_20261008_owner_a11_code_01/manifest.json": "81228939c7883867560b840b92d2dfe70a6c462973b70ed96a75d56da78c0d04",
+    "output/integration/plan_20261008_qs_a01_code_01/manifest.json": "db1f96dcb5eef5b333c9727f5f66251bc42583ac10406ac338077e4685cc95a4",
+    "output/integration/plan_20261008_qs_a05_code_01/manifest.json": "d8072bb5af7eb00d066a45fa68ea324347444861062f8399df2fe21974c85965",
+    "output/integration/plan_20261008_qs_a06_code_01/manifest.json": "198f162270ea866f78705b71994ed1248581f03f7c76ce52c263166a4e89cb81",
+    "output/integration/plan_20261008_qs_a07_code_01/manifest.json": "d5bead16902cbd54fbcabc952c14731c73c145f9891b018ddc58c023cdd92a06",
+    "output/integration/plan_20261008_qs_a08_code_01/manifest.json": "e073e0c10d08ccef167f10fd2b2863eea8c5176611dd75fd96bb9a4c50ca381e",
+    "output/integration/plan_20261008_qs_a10_code_01/manifest.json": "f1723900b36f1110e72589a5ef4ebd8180b8e805fe5ae28a5c06a40f9b698b8d",
+    "output/integration/plan_20261008_qs_a13_code_01/manifest.json": "5de061e4e4eb3e4688e300c3798779d7c372f555c283d2dbb7820dcb5a22c8d8",
+    "output/integration/plan_20261008_supplier_a13_code_01/manifest.json": "1f4bf71ba2dff511e76e8a61ec8aba17a200d3be8c897c646321085639408c7a",
+    "output/integration/plan_20261009_architect_a11_code_01/manifest.json": "f1d7da077061b5f480a89826cdb08193a1fb1c75ac29e57e90476a2985c050f9",
+    "output/integration/plan_20261009_architect_a12_code_01/manifest.json": "f877dcc5bdab623adcd02a7ef135f34b0937843e0380b35a1a60d57d8f609e07",
+    "output/integration/plan_20261009_bank_a10_code_01/manifest.json": "874f79018161c01c1dd337f68b9d3b3684aeccc741bb4226138b56f07f0e006c",
+    "output/integration/plan_20261009_bank_a11_code_01/manifest.json": "9dcd76ded724902f9a3069ced6ea5f0006dd82d9235a6e4f1ea166d2b6de9c22",
+    "output/integration/plan_20261009_bank_a12_code_01/manifest.json": "a7faddf569be91335574d1e4974b7eef654450cefff908301d16efe5f75f9540",
+    "output/integration/plan_20261009_commercial_acceptance_conditions_code_01/manifest.json": "2ab445de01193d2281bc6e50a0a9c7acf05a348a8b783e998d6960c7514f1c64",
+    "output/integration/plan_20261009_commercial_capacity_conditions_code_01/manifest.json": "ce3fd5f21c1dab41680edaa5ce7cdaaa8f8aad260d27a4b67a5d2dd2ed1d582a",
+    "output/integration/plan_20261009_commercial_continuation_reader_code_01/manifest.json": "45d82dc2269a0ad439c4c1c8e933fbc1bbb194ab092436b953820acf969a3191",
+    "output/integration/plan_20261009_commercial_execution_conditions_code_01/manifest.json": "c7d34d2c129270ec0e7fb01eb694dbb9c599b4293ce94cdf5d9cecd663be827b",
+    "output/integration/plan_20261009_commercial_input_assembly_code_01/manifest.json": "cd0abf62238a7eb101a3621c0c2d5707065cda82742b206527dbc4dca62e3087",
+    "output/integration/plan_20261009_commercial_lesson_conditions_code_01/manifest.json": "aa5403c94551d4af426a95ce336b12b057cfea95ce43c67df513d66af81d08e3",
+    "output/integration/plan_20261009_commercial_material_conditions_code_01/manifest.json": "8da4c8b94b952f0425cef2a34aeada87041730d04c8e448b429acfab1149c282",
+    "output/integration/plan_20261009_commercial_readiness_conditions_code_01/manifest.json": "53f5969366a1ba7714a6267af6dbe4345323d16d2f542a0f1416054d32d3d2f4",
+    "output/integration/plan_20261009_commercial_resource_conditions_code_01/manifest.json": "fe68dbba927a1703e889cde9ba0227520e53c3d308213959edf765b776f41442",
+    "output/integration/plan_20261009_commercial_root_recovery_code_01/manifest.json": "f57b509bed6055989973f7968e758d752dfbf7d64ed11af367f3a30d26d5c588",
+    "output/integration/plan_20261009_commercial_runtime_code_01/manifest.json": "f91580da60de53d294e5f0c99d3deb5a031a13f493e7765b378da385be4ef602",
+    "output/integration/plan_20261009_commercial_signed_state_code_01/manifest.json": "d5962afec9ef1c4e5b1e1d306e1145ef28e6b6972303fa890160ac865a3927df",
+    "output/integration/plan_20261009_commercial_successor_callbacks_code_01/manifest.json": "94c97e618ced15653d2e0d1bd01e8cd1c20b3170b9ad08a6875986b57d7fa8fd",
+    "output/integration/plan_20261009_commercial_successor_preparation_code_01/manifest.json": "1964fccd0436acc7b10a32431224092ce16133e0eea20784751d244c61528ed3",
+    "output/integration/plan_20261009_commercial_worker_code_01/manifest.json": "ce8e9a6eb396f0032b062da857c992db2629ba551144b94aa75ece4643e1f7ef",
+    "output/integration/plan_20261009_contractor_a05_code_01/manifest.json": "c6922cb3ebdeeb93a7d1e24b391e547e877913d6d26bc40ac5faa85925752dc1",
+    "output/integration/plan_20261009_contractor_a06_code_01/manifest.json": "e0aa163306d169aace0dba2aad5dc08b296c72a52258e63a7696afd25437c30e",
+    "output/integration/plan_20261009_contractor_a07_code_01/manifest.json": "ee7ba3c7b1b9a3e5d9d49b088a5ed02089acfc851e477e930c9a16ada3b64493",
+    "output/integration/plan_20261009_contractor_a08_code_01/manifest.json": "6cc4005c4291be8b57752b6adba6359d5414c6011c11cb4e14031128c6f7cf86",
+    "output/integration/plan_20261009_contractor_a09_code_01/manifest.json": "2d8bfff0ea96a21eeb952cf5636daf75a2edef288759973a89bc066de98c5e65",
+    "output/integration/plan_20261009_contractor_a10_code_01/manifest.json": "167855d9be6eb15e16adf6152a1bcefb718a1dcce36b8d21f503bea33396da23",
+    "output/integration/plan_20261009_contractor_a11_code_01/manifest.json": "10415f747a2e7f1efd0bea08574cf47044eb939008013608772adc8dc4c08da2",
+    "output/integration/plan_20261009_contractor_a12_code_01/manifest.json": "3e75c46178f4c233529f71e92afabf420e736b9bd2e1669822cd37ab68c9a595",
+    "output/integration/plan_20261009_engineer_a11_code_01/manifest.json": "6a3f04266dba97c35c03d27c94aab4f3ad5364d35d17f1f6ee905d1d220e052b",
+    "output/integration/plan_20261009_engineer_a12_code_01/manifest.json": "001d3075a5dfca4c20ad71d1cbf7d2ccff1dace1224b5cdd95823a31b069d709",
+    "output/integration/plan_20261009_gov_a07_code_01/manifest.json": "0b1a399bb6d93058f46e8e61413a68b27452127eaf6782417188f4bd8bd68d9b",
+    "output/integration/plan_20261009_gov_a08_code_01/manifest.json": "e5557b6918d071b1f044d778d4b185ca9948c072af5341a60737080e3686527b",
+    "output/integration/plan_20261009_gov_a09_code_01/manifest.json": "44b8186ecd55c686de82ec7925e744d0f4c7a022ef18aa2d3984f67129b94015",
+    "output/integration/plan_20261009_gov_a10_code_01/manifest.json": "e3034e8c2528f90acbb4e9ec4b08b3ffe7e626d0acf27ff446b82f9759c8b1a3",
+    "output/integration/plan_20261009_gov_a11_code_01/manifest.json": "86e2903816ae3ed5a361589d3e1b8bb617fea4b6007046e88cefdb86aca4a2f0",
+    "output/integration/plan_20261009_gov_a12_code_01/manifest.json": "865dcc75b202a72bf9c7445ccd22b50efc986c8ad6993c46581c06948fdee0b3",
+    "output/integration/plan_20261009_invocation_snapshots_code_01/manifest.json": "5b4aa1b226ae15fc6ae0a111a150499a85665f81f445a3960ca18752281b459d",
+    "output/integration/plan_20261009_owner_a12_code_01/manifest.json": "6d9b7667c870478fb361b8d47b2473a601e1b3fcd5551a49f7760f88f61b679a",
+    "output/integration/plan_20261009_owner_a13_code_01/manifest.json": "f6bbc744159e7a4b3798fe8caef1ed1d4232bac9fb2b5280cde4eac9df942e8c",
+    "output/integration/plan_20261009_owner_a14_code_01/manifest.json": "bcb1fb9ae505f644de661047808e1122e1786173be305694196e3739d3c26c5c",
+    "output/integration/plan_20261009_owner_a15_code_01/manifest.json": "dc5eac28f123d14261111158f3094e8df5cb29d5f8e149ebd5f1a2a8e86e0232",
+    "output/integration/plan_20261009_qs_a09_code_01/manifest.json": "17e02e458c52af4f4836cdc22c24578b326d89180def4ca77179ae6f332f050e",
+    "output/integration/plan_20261009_qs_a11_code_01/manifest.json": "aa78493701f4e17db12cdc0231bd80edb5e98aea31a6122876d8dc88182ea40a",
+    "output/integration/plan_20261009_qs_a12_code_01/manifest.json": "9d0aa27722373a4d65f428b9316c785c3f17f554e748a442576c027b90531776",
+    "output/integration/plan_20261009_supplier_a05_code_01/manifest.json": "bf691f95d4c9a88c741a7619757322276fc6b60a9fe6cbba29bca72f2eaa890d",
+    "output/integration/plan_20261009_supplier_a06_code_01/manifest.json": "0cd47cd5fd7798e90b0da6288512e93fa2f961e27f8e926b32aff0c48e2b2611",
+    "output/integration/plan_20261009_supplier_a07_code_01/manifest.json": "7e96b916923bff6498f3187d332416fda2f0ac9530d08f67a5b48d24216a2bd2",
+    "output/integration/plan_20261009_supplier_a08_code_01/manifest.json": "8107c73f15aef7c1a64dac646b90cd4e813c7c2030a56515bdaeb36946a66536",
+    "output/integration/plan_20261009_supplier_a09_code_01/manifest.json": "bae111c61340a0b48cd3b94c1b8be43436ddd31b6a29b3d1bef8c89c4ac3a099",
+    "output/integration/plan_20261009_supplier_a10_code_01/manifest.json": "1f7ce1918bd5ea79fa110d1f2c27f7aa701eefc2b7a66cac82bda0f6c9f4fd9b",
+    "output/integration/plan_20261009_supplier_a11_code_01/manifest.json": "80449b0d9f0e4899306c03009c3d36c795d9210eb2457ca3a7be5e1a80478aef",
+    "output/integration/plan_20261009_supplier_a12_code_01/manifest.json": "85aa44dca5079a2906903b5ccf0511390b9feb2a65f8d89d65320fea614f7832",
+    "output/integration/plan_20261010_architect_area_formal_wiring_code_01/manifest.json": "eb7dcdd2b0cd1a81f9d4ca4401fb7b79c79c670bd3c6f0c51846687832adb85c",
+    "output/integration/plan_20261010_architect_area_input_preparation_code_01/manifest.json": "b07e091c4dcf905c274036465321dd8af273073e654e238982793203327c428a",
+    "output/integration/plan_20261010_architect_area_production_code_01/manifest.json": "1e0dcf6e2af9facd291275a04fc627d23357114d8345d0326ec1712c51515599",
+    "output/integration/plan_20261010_architect_area_publication_code_01/manifest.json": "6efec338c8900ab31cc0d304d46d4dcb2f3df3998bbbf35e31ed5d6173f08967",
+    "output/integration/plan_20261010_architect_area_source_validation_code_01/manifest.json": "1e46cd3cdcba3b42bcdfb47c0d8fb3fb1dfa9348ab31b023b8c6b093268aff04",
+    "output/integration/plan_20261010_architect_author_review_handoff_wiring_code_01/manifest.json": "5643302c39b96c842073c2f64f6feb8bb65a4f8575bc87e06fb7f02be843d97f",
+    "output/integration/plan_20261010_architect_author_review_response_source_code_01/manifest.json": "b7549fe590d482cc648acdae3647b9257ca367c2d043226589ece587a1821a12",
+    "output/integration/plan_20261010_architect_design_registration_handoff_code_01/manifest.json": "832804808b6f240e9f4077ff6d97380d520a70f7a741f38faff0118e219ab129",
+    "output/integration/plan_20261010_architect_integration_registration_handoff_code_01/manifest.json": "b4ee1c504edd7e9ad95748cd28ebc6f7c1c912821074760806c9f76a0ed77d10",
+    "output/integration/plan_20261010_architect_interface_consistency_formal_wiring_code_01/manifest.json": "cb314f5a61f8bc11e872d2930231b3c47b885e14ade961e83fd19378efb40999",
+    "output/integration/plan_20261010_architect_interface_consistency_input_code_01/manifest.json": "99f6eeed84d43a0e6d828746fa4accc87263b9003488d41ef1d779c48ca59fa7",
+    "output/integration/plan_20261010_architect_interface_consistency_method_code_01/manifest.json": "6c742ee9aad6bb3f21eb551a0a86d9784c7045059cd23501ee43322b4267b762",
+    "output/integration/plan_20261010_architect_interface_consistency_production_code_01/manifest.json": "0c2478761e9c549c58c1b77c08b39718b8edf7af2cb28755b60dd9449c7a447a",
+    "output/integration/plan_20261010_architect_interface_consistency_publication_code_01/manifest.json": "b821b4d37db15356822ba938e5dc3d097baaf0a5dcd005b2254ea2582dd57ffb",
+    "output/integration/plan_20261010_architect_interface_consistency_source_validation_code_01/manifest.json": "d64aac59627dda749b591e2d9876ce2682234a141a3faa45bd554802697b174d",
+    "output/integration/plan_20261010_architect_learning_application_handoff_code_01/manifest.json": "e773728aaa35157ccb0409db145324fcb31262ae60d6fa4eff00b20149ee7c44",
+    "output/integration/plan_20261010_architect_learning_assessment_formal_wiring_code_01/manifest.json": "ae355a309481a5005400f90614b131856c6170aabcb4155a8cabdbb87b37fbee",
+    "output/integration/plan_20261010_architect_learning_assessment_production_code_01/manifest.json": "246da20b7981c64cd26e90403173d07d8647a74b40a7ba209374e81db2ece4f0",
+    "output/integration/plan_20261010_architect_learning_assessment_publication_code_01/manifest.json": "cdc618f7f95d0cab870456d53a4e9d6c5eb56656d398640738d83466176fc6a5",
+    "output/integration/plan_20261010_architect_learning_assessment_source_validation_code_01/manifest.json": "ce73d35045f19c58f41772bdb503d1e3fc2d5a8e1abb352658b3550be31de9e0",
+    "output/integration/plan_20261010_architect_review_opinion_reception_code_01/manifest.json": "8ce813053b67db57e255abcdf5c9be0135e081a110244c616a0a48e7fb837c4a",
+    "output/integration/plan_20261010_architect_review_task_handoff_code_01/manifest.json": "e92dbf6b84a0ed42ccc9e2716a802bade9961c1d518579c59e14055f7a318c88",
+    "output/integration/plan_20261010_architect_training_estimate_formal_wiring_code_01/manifest.json": "370847247cc8b73e62161eca820af9b905f4893c0ff3a2bf328fc7260718957c",
+    "output/integration/plan_20261010_architect_training_estimate_production_code_01/manifest.json": "e3c8eed28843a2ccd169735bdcf24bebceda6d3af34d0f19aa22bb8131129991",
+    "output/integration/plan_20261010_architect_training_estimate_publication_code_01/manifest.json": "d8c2ca22a36c1e31028f2c0473bb1f97ce34eb490eb39604f59add26deaa081e",
+    "output/integration/plan_20261010_architect_training_estimate_source_validation_code_01/manifest.json": "ef61602d04a960694401d073e9c52f52eeea584cc7ddf7c04cdbc7352ac1bcc9",
+    "output/integration/plan_20261010_architect_training_task_handoff_code_01/manifest.json": "f5a36d53ec06e2d2008353e1efbb08103816e908669bd3dc6a6be8cc5eccf960",
+    "output/integration/plan_20261010_engineer_learning_application_handoff_code_01/manifest.json": "cf575fb0fde88e7ad5555f6e08f7eed9d7c41da02b59a4e8335f548be6f8aef0",
+    "output/integration/plan_20261010_engineer_learning_assessment_formal_wiring_code_01/manifest.json": "42f219658ea2aa0b28ba1dd7d23b44f39dfa5567f2acbd747268a35889fcf42b",
+    "output/integration/plan_20261010_engineer_learning_assessment_production_code_01/manifest.json": "20ea54d1ee5c90f961f00c11270c2a16b43e0f3e1db3749b6d9476eff69d8dc8",
+    "output/integration/plan_20261010_engineer_learning_assessment_publication_code_01/manifest.json": "f982fdebab6a6ee30d5f1cd74cdb990dbf32b025fa1cdfa558dbea3e2a794884",
+    "output/integration/plan_20261010_engineer_learning_assessment_source_validation_code_01/manifest.json": "c329d5388685f62d87e312689427b19e88c67ce12e806a8e60995d552d9d6bf4",
+    "output/integration/plan_20261010_engineer_qualification_application_handoff_code_01/manifest.json": "758dacb6e3428e8a6afc1cc51d54022035dae0729ec2086586a4ddb3f3aed03d",
+    "output/integration/plan_20261010_engineer_qualification_verification_handoff_code_01/manifest.json": "a7c93cf229809adf8bf92da00a5a253abfef2856e9097bf4be4a4124de91e1de",
+    "output/integration/plan_20261010_engineer_training_estimate_formal_wiring_code_01/manifest.json": "7da66380d300a21d0e7e52b84e04913366acc91d736e809bdc937de2bb3465ae",
+    "output/integration/plan_20261010_engineer_training_estimate_production_code_01/manifest.json": "d543d1fe08a5aee647a822522d036f00fabb0c549ed9bc8d1a6fde1963a6b74f",
+    "output/integration/plan_20261010_engineer_training_estimate_publication_code_01/manifest.json": "7d066eee0e39a40f386d2106c7cb6dbcd126c36e222c2ec8a03aa0a61a674e20",
+    "output/integration/plan_20261010_engineer_training_estimate_source_validation_code_01/manifest.json": "6347879564e6b03b7c9132df257de413d075492230b23ff9ad8412ad71718378",
+    "output/integration/plan_20261010_engineer_training_task_handoff_code_01/manifest.json": "031046ca2df7515cff09141e5b1377b18b8680b84971b63ef2b982f9953c0bd5",
+    "output/integration/plan_20261010_formal_entry_strict_json_code_01/manifest.json": "d484f0d3367e710a8e7a7125ee4c441cacb4ae6eb791037e4cd2c2681d3b311c",
+    "output/integration/plan_20261010_migration_captured_source_bytes_code_01/manifest.json": "4a5bdfa14c518ab0f7942681880c1c6f812c1771f1cf5aeb9d3611dccc223810",
+    "output/integration/plan_20261010_model_budget_binding_guard_code_01/manifest.json": "1f137fdb1a42b59dce61b4cf19caaef1b0b7a9eb96ad284c56e2ae2e03412387",
+    "output/integration/plan_20261010_observation_gap_return_fix_code_01/manifest.json": "48737aa7cd88259f1b095dfcbbdd6727f676aac4e629a6668b2b2e1570d4a916",
+    "output/integration/plan_20261010_projection_content_run_isolation_code_01/manifest.json": "7dc1c2257ee98766cc1510d2228f2ed28c9b662568824f6e2c11ed363541e5a5",
+    "output/integration/plan_20261010_qs_bid_normalization_formal_wiring_code_01/manifest.json": "f988815e300b195ce9408c33e6b2fd3e20dce4cbac5b6a354b03be22ffdade72",
+    "output/integration/plan_20261010_qs_bid_normalization_producer_code_01/manifest.json": "7679e4bb63050a41bcd584ca33797488a7cc0477a820432da5e0f8c4fba42c70",
+    "output/integration/plan_20261010_qs_bid_normalization_publication_code_01/manifest.json": "c396e0cdd84b3dfa654bbdd7ee1a53c333c3457d56a6127ee6fd0922f9f71a57",
+    "output/integration/plan_20261010_qs_bid_normalization_source_validation_code_01/manifest.json": "b4b8edfc3a7a47138bedb0ac200d57f98333cb41d6b5777c30ed55c19e3d9896",
+    "output/integration/plan_20261010_qs_bid_ranking_formal_wiring_code_01/manifest.json": "dcb9deb709c2064968aaa8247377b6a3dcd4c72b339036608e5543c391fc851a",
+    "output/integration/plan_20261010_qs_bid_ranking_producer_code_01/manifest.json": "83d220d961ef86f910e61ca4ab7348a5f29c8a2da3e7187bd132e0792872b28e",
+    "output/integration/plan_20261010_qs_bid_ranking_publication_code_01/manifest.json": "de6dfd336bf228f9bb025792ec73ea508e6c08fce51cd21ace9ae02d4ed8f459",
+    "output/integration/plan_20261010_qs_bid_ranking_source_validation_code_01/manifest.json": "8b701b8969e74f97c2b57cff412a0a1df2c804b7977f5ed961525ea83eebd37a",
+    "output/integration/plan_20261010_qs_billing_calculation_formal_wiring_code_01/manifest.json": "dfd72eea0151cab545e4d16638a2748f2884594bd1517a23b41f3a9a4b181ada",
+    "output/integration/plan_20261010_qs_billing_calculation_producer_code_01/manifest.json": "8c64589cd47ad4e6cddd4dc98363af8e95ac832fefe9bbcf60c11d25a74843e4",
+    "output/integration/plan_20261010_qs_billing_calculation_publication_code_01/manifest.json": "a20e212f14eeef02556b0095a9e58b95be249cf1e274173a5ed600ed5866d38a",
+    "output/integration/plan_20261010_qs_billing_calculation_source_validation_code_01/manifest.json": "cc1540fc84d32dfc4f65063833bc8586efe432e412c19ee640ab14d0e78488e2",
+    "output/integration/plan_20261010_qs_billing_claim_handoff_code_01/manifest.json": "8c327809ded1473c470712872f57eac69e03313d29722cd3202e015e97cc2267",
+    "output/integration/plan_20261010_qs_change_calculation_producer_code_01/manifest.json": "a8a6445221a3a615b4476001de9570f7b43844873be0849f9cf1c98845bcb3ed",
+    "output/integration/plan_20261010_qs_change_calculation_publication_code_01/manifest.json": "3b0d32bfddf3596859d2c0ddc03df6aa11ac23ec6bff1ed8898268ce9100c0b2",
+    "output/integration/plan_20261010_qs_change_calculation_source_validation_code_01/manifest.json": "f22f525be59007e99db5079c11a8684400d9ef3a15f41fd77a8e7fbe1799a54c",
+    "output/integration/plan_20261010_qs_change_formal_wiring_code_01/manifest.json": "c5f77f80a1f1adaed89d015595b0fab8595be49ac8f447f532e17eb5ad81a683",
+    "output/integration/plan_20261010_qs_cost_calculation_producer_code_01/manifest.json": "08ecf8aba321427c325b07cb5e6aa40500b6c873f5e31cb3a37cc52b61a6e817",
+    "output/integration/plan_20261010_qs_cost_calculation_publication_code_01/manifest.json": "e7109d77b575c4787f01030828231ea4a27a55566c54ad0677404e304c5c6bf1",
+    "output/integration/plan_20261010_qs_cost_calculation_source_validation_code_01/manifest.json": "9e443b803efb6eb18f553a7c1f4a652cee08481811b5de0712c30ff7ccf1da90",
+    "output/integration/plan_20261010_qs_cost_formal_wiring_code_01/manifest.json": "69ebe7c0bd89bb698f508bf0cf120c1a76714ce6aebd799efbc1f925b1cf234e",
+    "output/integration/plan_20261010_qs_final_account_calculation_producer_code_01/manifest.json": "59b97f7b4d77ee685cd9b33394adcdc55a6c11989ae2ec828a9be4cc6b57661c",
+    "output/integration/plan_20261010_qs_final_account_calculation_publication_code_01/manifest.json": "d2f2495b837fd77f72c3af9112b919cfd0fc5e3d962e15b6b8ba9fbba5c6f9a8",
+    "output/integration/plan_20261010_qs_final_account_calculation_source_validation_code_01/manifest.json": "ce2caee997f627447161845c6e631fdbdbaf32add5f55c279db8dd7fefefb308",
+    "output/integration/plan_20261010_qs_final_account_formal_wiring_code_01/manifest.json": "4d62c840fd02da05dc6a3c563697081d6e2a1417f2ebfc4c82f84cd8ba608350",
+    "output/integration/plan_20261010_qs_final_certificate_sequence_fix_code_01/manifest.json": "192da60ae4c303f14434ff3dab1d847810e74715aed6ca0b770800887d66a6f0",
+    "output/integration/plan_20261010_qs_learning_application_handoff_code_01/manifest.json": "c395bab8e9e4c377aa036b03ea9a85f82bc7c68c516c744950a6635d383658a1",
+    "output/integration/plan_20261010_qs_learning_assessment_formal_wiring_code_01/manifest.json": "7a8c84a66a03d15294ff021fce4be679c27a9a59ecbeff27e3f5d309b43eeaf5",
+    "output/integration/plan_20261010_qs_learning_assessment_producer_code_01/manifest.json": "466c7e5f653a8e4c13ddcd3a1e9cb12f4d56eb67cbd62eccad622085d681573f",
+    "output/integration/plan_20261010_qs_learning_assessment_publication_code_01/manifest.json": "65eaba3a6704d28c5ea4f9b11f12154c48e08d5879a7c5a30cd2c9f5e9f40846",
+    "output/integration/plan_20261010_qs_learning_assessment_reserved_target_code_01/manifest.json": "21e5c323e9c5f7f9bb08d40843f19a3401a6683ee5b8ad13cb6f677e08359c5e",
+    "output/integration/plan_20261010_qs_learning_assessment_source_validation_code_01/manifest.json": "91de4c43b722279b01ecdb1210347a30d19fd5db06fe884e14b216bf08d9147e",
+    "output/integration/plan_20261010_qs_learning_comparability_formal_wiring_code_01/manifest.json": "3723692164ee84b5ff70c40eb252ced534c5cc53369ddcd8e12597512431ff62",
+    "output/integration/plan_20261010_qs_learning_comparability_producer_code_01/manifest.json": "ad502c9a79ddf45b23c204772d2780dba4abf4127cf541532196695c70baebbf",
+    "output/integration/plan_20261010_qs_learning_comparability_publication_code_01/manifest.json": "1545ba9b94d15cea4c8104ff14649dc83ce11902dd1902058e8bb41286c5b91f",
+    "output/integration/plan_20261010_qs_learning_comparability_source_validation_code_01/manifest.json": "b23cab266e41d4469c248316507d415c8c392d1ffbf0413c8d1457cc10870e8e",
+    "output/integration/plan_20261010_qs_learning_cost_feedback_guard_fix_code_01/manifest.json": "463cabab7ec90df6f4f55eef375da6084881b65bba0495aa5da38bb91d9428b0",
+    "output/integration/plan_20261010_qs_learning_error_formal_wiring_code_01/manifest.json": "03d9ef0c9a2dc75660f965366e5da2c154df5951513147267be0d6aaf7c96987",
+    "output/integration/plan_20261010_qs_learning_error_producer_code_01/manifest.json": "8637918cbad63e51195a95aba909e675009a4198dc215d71d3924e15ffe6a3d1",
+    "output/integration/plan_20261010_qs_learning_error_publication_code_01/manifest.json": "676c5f59b88b506f03ef69ae6eeb3ba9514a204f4862566e6128684ce612eabd",
+    "output/integration/plan_20261010_qs_learning_error_reserved_target_code_01/manifest.json": "e646f8ece672b5c457407191d715845a086c42de86294387f6e8f040206bb763",
+    "output/integration/plan_20261010_qs_learning_error_source_validation_code_01/manifest.json": "db07dd4de98d7ddbebe9f4365a103264ae2ca66b0500a2c4dd28be6e410da317",
+    "output/integration/plan_20261010_qs_payment_calculation_producer_code_01/manifest.json": "2cf97d07228f959ff7723caa85769db535e9013b52de8fd90b34211f6871d2d7",
+    "output/integration/plan_20261010_qs_payment_calculation_publication_code_01/manifest.json": "578199712f10a934fdcbfe36dc883ecbdb17af31fa4d75ebe0bfbd3428609634",
+    "output/integration/plan_20261010_qs_payment_calculation_source_validation_code_01/manifest.json": "ecf274e077a5439dda4646604a52cda6e3834fce010ba97802f14ed0175f4a0d",
+    "output/integration/plan_20261010_qs_payment_formal_wiring_code_01/manifest.json": "ed9e2770fd158bc2784e99796203dbb95529b46e8587bc784368a22a5dd118a3",
+    "output/integration/plan_20261010_qs_procurement_document_formal_wiring_code_01/manifest.json": "229c4c98096ad30c5c8898d80d1452955d7dfbf32800ebecefe94acbde83d184",
+    "output/integration/plan_20261010_qs_procurement_document_publication_code_01/manifest.json": "1a7bf449bd9448f81c5197cec1dcf7d0e883647c20312f3d9a968a5bbcb72817",
+    "output/integration/plan_20261010_qs_procurement_document_source_validation_code_01/manifest.json": "b2a59a85f6e94f111f8ca9a23ba98e365f5ef4344c3e62ac388e42155ca40067",
+    "output/integration/plan_20261010_qs_procurement_saved_document_code_01/manifest.json": "583dfabe47726bc480d14956964eabb12e3b45ea948abf8c8ca28b6e31ea3f2f",
+    "output/integration/plan_20261010_qs_reconciliation_transport_fix_code_01/manifest.json": "c521299c7cb2c529d5306ec01fd47491c52a7fa35976f9c1d8d3a54ed9e51840",
+    "output/integration/plan_20261010_qs_training_estimate_formal_wiring_code_01/manifest.json": "c6e2f7e79be8733ea198b9321f91ecfca294b339678afc310757eef44783f250",
+    "output/integration/plan_20261010_qs_training_estimate_production_code_01/manifest.json": "f59b59eb0b250e8f49d8574e0a481925db8fdb7f54581d4a7e1a32214c6e8fcd",
+    "output/integration/plan_20261010_qs_training_estimate_publication_code_01/manifest.json": "8486bbbaf77287c47a38cb87ced10f1a67d6952475bfd3fd37475a5f3dfb28b3",
+    "output/integration/plan_20261010_qs_training_estimate_source_validation_code_01/manifest.json": "b6b8cfa1f14fea5a421cd46001bd81623b1327a976636f198bbccd1c6a831042",
+    "output/integration/plan_20261010_qs_training_task_handoff_code_01/manifest.json": "9152d987af709e90fb1bffddc56072f0c2817b79521aa67651a9c8dd21508fef",
+    "output/integration/plan_20261010_qs_transition_execution_handoff_code_01/manifest.json": "57ad13f1bcec48940432c7a31e319b35f54efbbd8d199b73fe6d4986e4001f74",
+    "output/integration/plan_20261010_qs_transition_support_task_fix_code_01/manifest.json": "1a6b035b2028b7be97d02e8fdb94721ad92bcdae9a63112a58e435d0ff6f09a6",
+    "output/integration/plan_20261010_service_fee_receipt_completeness_fix_code_01/manifest.json": "296c03462dedafe29e01797353d2b052ba3deb89d665bd1309061c0bdd851d41",
+    "output/integration/plan_20261010_skill_shared_digest_validation_code_01/manifest.json": "c2d1a475123b61d312a7d2700b4f5464a60fc090e07dfab3d4c00d104ea46786"
+  },
+  "tests_run": 0,
+  "model_calls": 0,
+  "business_calls": 0,
+  "subagents": 0
+}

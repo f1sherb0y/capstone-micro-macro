@@ -1,0 +1,10 @@
+{
+  "role": "Architect", "version": "1", "strategy": "organization_discussion",
+  "source": "zwtnew/04_roles/04_roles/architect.md",
+  "members": [
+    {"member_id": "design", "name": "Design Lead", "functions": ["architectural_comparison"], "responsibilities": ["Review brief, design catalog and supported alternatives"]},
+    {"member_id": "interfaces", "name": "Interface Reviewer", "functions": ["interface_coordination"], "responsibilities": ["Preserve professional authorship and unresolved interfaces"]},
+    {"member_id": "services", "name": "Service Reviewer", "functions": ["appointment_review"], "responsibilities": ["Review service terms, capacity, allowed use and fee evidence"]}
+  ],
+  "tool_ids": []
+}

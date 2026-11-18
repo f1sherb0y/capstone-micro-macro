@@ -1,0 +1,17 @@
+# SUPPLIER-A06 执行生产并管理库存
+
+读取原SupplyTask的manufacture/purchase/rework模式，严格区分production/purchase/reconciliation上下文。核当前本企业授权、原任务/执行历史；历史执行核对不要求当前重新放行，外购核对不要求制造放行。maintenance仅原实际本企业资源观测/未结问题另建任务，不改变产能。
+
+当前产品/规则/资源/库存/数量Evidence须在当前时点有效，精确核原RoleAssignment.function_ref；当前grant/function的Evidence依据核当前窗，其他basis按原类型有权解析并保reading来源。已记录执行及原StockMovement/移动数量依据按真实recorded_at，核同钟且recorded≤available≤当前；维护原实际观测依据按observed_at，不晚于原可获和当前。原请求/分配、未记录执行、外部交货/收货无独立实际发生字段时保历史读取，不以available_at推造提交或收货时点。
+
+历史消耗分配必须属于该次原ProductionExecution.task_ref；跨版本续办先核原/当前任务物理身份、方法与谱系，再按原任务版核各次分配，不将原记录改挂当前版。从A05接续A06时关系及作者Evidence按authored_at，当前真实任务/余量/独立放行依据按当前时点；关系证据与原生注册凭据分别核验，缺真实源不得用微观计划生成任务或放行。
+
+execute/rebalance核当前任务窗口、原核心TaskRelease与完整当前ProductionGateSnapshot及真实就绪条件。原ProductionMethod/ProductionRule需明确支持转换、吞吐、损耗、质量和成本后果；加速须已建模。实际本企业资源/排他核心预留与同窗完整占用核对，零资源不执行；不能以计划容量或已调走设备充实际投入。
+
+制造材料来自当前完整原InventorySnapshot、实际收到批次与原未消耗分配；分配已用/余量、原核心事件和批次完整预留账本分别核对，数量/单位/配方与余量一致。隔离/待检批次不得用作合格制造投入；rework只用原受损待返工批次并保留谱系，不伪装成新制造。请求不计算或登记实际产出、库存/损耗/成本，交给核心原模型执行并交A07检查。
+
+原ProductionExecution按run/task/operation/business/request内容摘要核对；未知或未查询先查原命令，再考虑新操作。失败保留technical_error，只有原效果已明确不存在且有当前新operation恢复授权才允许请求恢复。实际StockMovement按原核心事件/物理移动/批次谱系排重；原各次材料消耗不能超过原分配。核心回执/移动只是来源，不由LLM声明创造库存。
+
+reconcile_upstream核有效独立上游订单/原实际ExternalDelivery与GoodsReceiptRule；不按下单量生成收货或自产。保留部分交货、未检/隔离/拒收身份，部分原收货事件按实际交货量与批次排重，重复回执不能重复增加库存。到货与合格/可用放行分开，wrong product不能作为已认可原规格。
+
+completed仅投入/查询/维护请求。真实原任务/放行/转换规则/资源/库存/上游/回执生产者、跨动作投影、submit/query、原子核心生产/库存后果和反馈待集成；本批编码未功能验收。

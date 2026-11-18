@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Original author request/configuration for V3 received-opinion assembly",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["run_id", "author_organization_id", "request", "configuration"],
+  "properties": {
+    "run_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "author_organization_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "request": {
+      "type": "object",
+      "description": "Distinct current formal Architect A08 author invocation with actual received comments and independently authorized author response task."
+    },
+    "configuration": {
+      "type": "object",
+      "description": "Original Architect RoleContractHostConfiguration including received_opinion_inputs selecting the original reviewer task, actual opinion receipt and separate native/relation evidence."
+    }
+  }
+}

@@ -1,0 +1,1963 @@
+{
+  "schema_version": "lifecycle-v7-bank-shortfall-input-case.v1",
+  "scenario_id": "V7",
+  "origin": "synthetic",
+  "run_id": "synthetic-v5-financing-application",
+  "source_declaration": {
+    "origin": "synthetic",
+    "basis": "assumed",
+    "case": "BANK-A07 source-account cash shortfall with original approved-draw prerequisite retained",
+    "base_input_path": "tests/fixtures/roles/lifecycle_v5_execution_inputs.v1.json",
+    "base_input_sha256": "695ef7f8bb3dc5562fd611467fa64947a69430e0ddb18eb18e9797f8ee61c916",
+    "source_account_cash": "40",
+    "source_account_restricted_cash": "10",
+    "currency": "HKD",
+    "held_reservations": [],
+    "original_approved_cash_request": "50",
+    "note": "New synthetic account/path/policy/authorization/candidate versions. Original V5 file and original approval journal are preserved; no cash, approval, dispatch or debt is generated."
+  },
+  "steps": [
+    {
+      "step_id": "v7-bank-cash-shortfall",
+      "action_id": "BANK-A07",
+      "operation_id": "v7-bank-cash-shortfall-21",
+      "expected_kind": "deferred",
+      "allowed_choices": [
+        "execute",
+        "reconcile",
+        "cancel_unexecuted"
+      ],
+      "input_fixture": {
+        "source_kind": "synthetic",
+        "organization_id": "bank",
+        "actor_id": "bank-actor",
+        "business_time": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "business",
+            "version": "1"
+          },
+          "offset": 21
+        },
+        "input": {
+          "arrangement_ref": {
+            "kind": "FinanceArrangement",
+            "id": "v5-arrangement",
+            "version": "1"
+          },
+          "operation_context": {
+            "kind": "initiate",
+            "draw_approval_ref": {
+              "kind": "DrawApproval",
+              "id": "v5-first-draw-approval",
+              "version": "1"
+            },
+            "funding_account_ref": {
+              "kind": "Account",
+              "id": "v5-bank-funding",
+              "version": "v7-shortfall-1"
+            },
+            "path_ref": {
+              "kind": "FundingPath",
+              "id": "v5-first-draw-path",
+              "version": "v7-shortfall-1"
+            },
+            "lines": [
+              {
+                "obligation_refs": [],
+                "beneficiary_id": "owner",
+                "destination_ref": {
+                  "kind": "Account",
+                  "id": "actual-cash",
+                  "version": "2"
+                },
+                "requested": {
+                  "value": "50",
+                  "currency": "HKD",
+                  "basis_ref": {
+                    "kind": "Evidence",
+                    "id": "v5-owner-draw-assumptions",
+                    "version": "1"
+                  }
+                },
+                "fee_rule_refs": [
+                  {
+                    "kind": "FeeRule",
+                    "id": "v5-fee",
+                    "version": "1"
+                  }
+                ]
+              }
+            ],
+            "prior_execution_refs": []
+          },
+          "receipt_refs": []
+        },
+        "objects": [
+          {
+            "ref": {
+              "kind": "FunctionAssignment",
+              "id": "bank-function",
+              "version": "1"
+            },
+            "value": {
+              "role": "Bank",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "bank-function",
+                "version": "1"
+              },
+              "configuration_version": "1",
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "synthetic",
+                  "version": "1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "Authorization",
+              "id": "v5-bank-draw-grant",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Authorization",
+                "id": "v5-bank-draw-grant",
+                "version": "1"
+              },
+              "organization_id": "bank",
+              "actor_id": "bank-actor",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "bank-function",
+                "version": "1"
+              },
+              "action_ids": [
+                "BANK-A06"
+              ],
+              "scopes": [
+                {
+                  "kind": "assessment_case",
+                  "ref": {
+                    "kind": "OwnerCase",
+                    "id": "case",
+                    "version": "1"
+                  },
+                  "coverage_refs": [
+                    {
+                      "kind": "WorkScope",
+                      "id": "funded-work",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "readable_refs": [
+                {
+                  "kind": "FunctionAssignment",
+                  "id": "bank-function",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "synthetic",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "v5-quote-assumptions",
+                  "version": "1"
+                },
+                {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                {
+                  "kind": "WorkScope",
+                  "id": "funded-work",
+                  "version": "1"
+                },
+                {
+                  "kind": "FundingPurpose",
+                  "id": "research",
+                  "version": "1"
+                },
+                {
+                  "kind": "TimeWindow",
+                  "id": "v5-tenor",
+                  "version": "1"
+                },
+                {
+                  "kind": "FinanceArrangement",
+                  "id": "v5-arrangement",
+                  "version": "1"
+                },
+                {
+                  "kind": "FinanceTerms",
+                  "id": "v5-arrangement-terms",
+                  "version": "1"
+                },
+                {
+                  "kind": "DrawCapacity",
+                  "id": "v5-arrangement-usage",
+                  "version": "1"
+                },
+                {
+                  "kind": "Account",
+                  "id": "actual-cash",
+                  "version": "2"
+                },
+                {
+                  "kind": "FeeRule",
+                  "id": "v5-fee",
+                  "version": "1"
+                },
+                {
+                  "kind": "DrawDecisionProfile",
+                  "id": "v5-bank-draw",
+                  "version": "1"
+                },
+                {
+                  "kind": "CandidateSet",
+                  "id": "v5-bank-draw-candidates",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "v5-bank-draw-assumptions",
+                  "version": "1"
+                },
+                {
+                  "kind": "Authorization",
+                  "id": "v5-bank-draw-grant",
+                  "version": "1"
+                },
+                {
+                  "kind": "DrawRequest",
+                  "id": "v5-owner-draw",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "v5-owner-draw-assumptions",
+                  "version": "1"
+                }
+              ],
+              "tool_ids": [],
+              "validity": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 20
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 22
+                },
+                "bounds": "closed_open"
+              },
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v5-bank-draw-assumptions",
+                  "version": "1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "Evidence",
+              "id": "synthetic",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Evidence",
+                "id": "synthetic",
+                "version": "1"
+              },
+              "source_kind": "synthetic",
+              "basis_kind": "assumed",
+              "locator": "tests/fixtures/roles/lifecycle_v5_application_inputs.v1.json#source_declaration",
+              "content_hash": "e684fb52330350cba5ce837b656493c6ac2d44200fa08a329c2a8c663e1b2741",
+              "effective_window": null
+            }
+          },
+          {
+            "ref": {
+              "kind": "Evidence",
+              "id": "v5-quote-assumptions",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Evidence",
+                "id": "v5-quote-assumptions",
+                "version": "1"
+              },
+              "source_kind": "synthetic",
+              "basis_kind": "assumed",
+              "locator": "tests/fixtures/roles/lifecycle_v5_quote_inputs.v1.json#source_declaration",
+              "content_hash": "2f981d29b0bbcbe119a6c458720786267477e94e8ec7b74c17b33ca37ebf6267",
+              "effective_window": null
+            }
+          },
+          {
+            "ref": {
+              "kind": "Evidence",
+              "id": "v5-bank-draw-assumptions",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Evidence",
+                "id": "v5-bank-draw-assumptions",
+                "version": "1"
+              },
+              "source_kind": "synthetic",
+              "basis_kind": "assumed",
+              "locator": "lifecycle-v5-draw-input-case.v1:source_declaration",
+              "content_hash": "7a792108bdac20e6a207dcb34dad3fd764d63ed067d20c1f4daa360722432320",
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 20
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 22
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "Evidence",
+              "id": "v5-owner-draw-assumptions",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Evidence",
+                "id": "v5-owner-draw-assumptions",
+                "version": "1"
+              },
+              "source_kind": "synthetic",
+              "basis_kind": "assumed",
+              "locator": "lifecycle-v5-owner-draw-input-case.v1:source_declaration",
+              "content_hash": "fc5ff60bd091f5e99a3d1a8b7ac52daafd89fd25f78a58c1a180aa2843498d80",
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 20
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 22
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "OwnerCase",
+              "id": "case",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "OwnerCase",
+                "id": "case",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v5-bank-draw-assumptions",
+                  "version": "1"
+                }
+              ],
+              "organization_id": "owner"
+            }
+          },
+          {
+            "ref": {
+              "kind": "WorkScope",
+              "id": "funded-work",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "WorkScope",
+                "id": "funded-work",
+                "version": "1"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v5-bank-draw-assumptions",
+                  "version": "1"
+                }
+              ],
+              "parent_ref": {
+                "kind": "OwnerCase",
+                "id": "case",
+                "version": "1"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "FinanceArrangement",
+              "id": "v5-arrangement",
+              "version": "1"
+            },
+            "value": {
+              "scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "funded-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 21
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 20
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 22
+                },
+                "bounds": "closed_open"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v5-bank-execution-assumptions",
+                  "version": "1"
+                }
+              ],
+              "ref": {
+                "kind": "FinanceArrangement",
+                "id": "v5-arrangement",
+                "version": "1"
+              },
+              "lender_id": "bank",
+              "borrower_id": "owner",
+              "terms_ref": {
+                "kind": "FinanceTerms",
+                "id": "v5-arrangement-terms",
+                "version": "1"
+              },
+              "execution_profile_ref": {
+                "kind": "FundingExecutionProfile",
+                "id": "v5-first-draw-execution",
+                "version": "v7-shortfall-1"
+              },
+              "status": "active"
+            }
+          },
+          {
+            "ref": {
+              "kind": "FundingExecutionProfile",
+              "id": "v5-first-draw-execution",
+              "version": "v7-shortfall-1"
+            },
+            "value": {
+              "scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "funded-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 21
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 20
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 22
+                },
+                "bounds": "closed_open"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v5-bank-execution-assumptions",
+                  "version": "1"
+                }
+              ],
+              "ref": {
+                "kind": "FundingExecutionProfile",
+                "id": "v5-first-draw-execution",
+                "version": "v7-shortfall-1"
+              },
+              "organization_id": "bank",
+              "arrangement_ref": {
+                "kind": "FinanceArrangement",
+                "id": "v5-arrangement",
+                "version": "1"
+              },
+              "authority_ref": {
+                "kind": "Authorization",
+                "id": "v5-bank-execution-grant",
+                "version": "v7-shortfall-1"
+              },
+              "existing_choice": "reconcile",
+              "note": "Explicit execution policy; original native approval/path/cash and command history required."
+            }
+          },
+          {
+            "ref": {
+              "kind": "FundingPath",
+              "id": "v5-first-draw-path",
+              "version": "v7-shortfall-1"
+            },
+            "value": {
+              "scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "funded-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 21
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 20
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 22
+                },
+                "bounds": "closed_open"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v5-bank-execution-assumptions",
+                  "version": "1"
+                }
+              ],
+              "ref": {
+                "kind": "FundingPath",
+                "id": "v5-first-draw-path",
+                "version": "v7-shortfall-1"
+              },
+              "lender_id": "bank",
+              "arrangement_ref": {
+                "kind": "FinanceArrangement",
+                "id": "v5-arrangement",
+                "version": "1"
+              },
+              "source_account_ref": {
+                "kind": "Account",
+                "id": "v5-bank-funding",
+                "version": "v7-shortfall-1"
+              },
+              "currency": "HKD",
+              "destination_refs": [
+                {
+                  "kind": "Account",
+                  "id": "actual-cash",
+                  "version": "2"
+                }
+              ],
+              "fee_rule_refs": [
+                {
+                  "kind": "FeeRule",
+                  "id": "v5-fee",
+                  "version": "1"
+                }
+              ],
+              "conditions_satisfied": {
+                "state": "known",
+                "value": true
+              },
+              "execution_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 20
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 22
+                },
+                "bounds": "closed_open"
+              },
+              "permits_cancel_undispatched": true,
+              "status": "available"
+            }
+          },
+          {
+            "ref": {
+              "kind": "Account",
+              "id": "v5-bank-funding",
+              "version": "v7-shortfall-1"
+            },
+            "value": {
+              "scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "funded-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 21
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 20
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 22
+                },
+                "bounds": "closed_open"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v5-bank-execution-assumptions",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "v7-bank-cash-shortfall-assumptions",
+                  "version": "1"
+                }
+              ],
+              "ref": {
+                "kind": "Account",
+                "id": "v5-bank-funding",
+                "version": "v7-shortfall-1"
+              },
+              "organization_id": "bank",
+              "currency": "HKD",
+              "as_of": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 21
+              },
+              "actual_cash": {
+                "state": "known",
+                "value": {
+                  "value": "40",
+                  "currency": "HKD",
+                  "basis_ref": {
+                    "kind": "Evidence",
+                    "id": "v7-bank-cash-shortfall-assumptions",
+                    "version": "1"
+                  }
+                }
+              },
+              "restricted_cash": {
+                "state": "known",
+                "value": {
+                  "value": "10",
+                  "currency": "HKD",
+                  "basis_ref": {
+                    "kind": "Evidence",
+                    "id": "v7-bank-cash-shortfall-assumptions",
+                    "version": "1"
+                  }
+                }
+              },
+              "reservation_refs": [],
+              "coverage": "complete",
+              "permitted_path_refs": [
+                {
+                  "kind": "FundingPath",
+                  "id": "v5-first-draw-path",
+                  "version": "v7-shortfall-1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "Account",
+              "id": "actual-cash",
+              "version": "2"
+            },
+            "value": {
+              "scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "funded-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 21
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 20
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 22
+                },
+                "bounds": "closed_open"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v5-bank-execution-assumptions",
+                  "version": "1"
+                }
+              ],
+              "ref": {
+                "kind": "Account",
+                "id": "actual-cash",
+                "version": "2"
+              },
+              "organization_id": "owner",
+              "currency": "HKD",
+              "as_of": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 21
+              },
+              "actual_cash": {
+                "state": "known",
+                "value": {
+                  "value": "100",
+                  "currency": "HKD",
+                  "basis_ref": {
+                    "kind": "Evidence",
+                    "id": "synthetic",
+                    "version": "1"
+                  }
+                }
+              },
+              "restricted_cash": {
+                "state": "known",
+                "value": {
+                  "value": "10",
+                  "currency": "HKD",
+                  "basis_ref": {
+                    "kind": "Evidence",
+                    "id": "synthetic",
+                    "version": "1"
+                  }
+                }
+              },
+              "reservation_refs": [],
+              "coverage": "complete",
+              "permitted_path_refs": [
+                {
+                  "kind": "FundingPath",
+                  "id": "v5-first-draw-path",
+                  "version": "v7-shortfall-1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "FeeRule",
+              "id": "v5-fee",
+              "version": "1"
+            },
+            "value": {
+              "scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "funded-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "available_at": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 21
+              },
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 20
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 22
+                },
+                "bounds": "closed_open"
+              },
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v5-bank-execution-assumptions",
+                  "version": "1"
+                }
+              ],
+              "ref": {
+                "kind": "FeeRule",
+                "id": "v5-fee",
+                "version": "1"
+              },
+              "arrangement_ref": {
+                "kind": "FinanceArrangement",
+                "id": "v5-arrangement",
+                "version": "1"
+              },
+              "approval_ref": {
+                "kind": "DrawApproval",
+                "id": "v5-first-draw-approval",
+                "version": "1"
+              },
+              "destination_ref": {
+                "kind": "Account",
+                "id": "actual-cash",
+                "version": "2"
+              },
+              "withheld_fee": {
+                "value": "0",
+                "currency": "HKD",
+                "basis_ref": {
+                  "kind": "Evidence",
+                  "id": "v5-quote-assumptions",
+                  "version": "1"
+                }
+              },
+              "capitalized_fee": {
+                "value": "0",
+                "currency": "HKD",
+                "basis_ref": {
+                  "kind": "Evidence",
+                  "id": "v5-quote-assumptions",
+                  "version": "1"
+                }
+              },
+              "separate_fee_cash": {
+                "value": "0",
+                "currency": "HKD",
+                "basis_ref": {
+                  "kind": "Evidence",
+                  "id": "v5-quote-assumptions",
+                  "version": "1"
+                }
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "CandidateSet",
+              "id": "v5-bank-execution-candidates",
+              "version": "v7-shortfall-1"
+            },
+            "value": {
+              "operation_id": "v7-bank-cash-shortfall-21",
+              "scope": {
+                "kind": "assessment_case",
+                "ref": {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                "coverage_refs": [
+                  {
+                    "kind": "WorkScope",
+                    "id": "funded-work",
+                    "version": "1"
+                  }
+                ]
+              },
+              "as_of": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 21
+              },
+              "candidates": [
+                {
+                  "ref": {
+                    "kind": "DrawApproval",
+                    "id": "v5-first-draw-approval",
+                    "version": "1"
+                  },
+                  "permitted_choices": [
+                    "execute"
+                  ]
+                }
+              ],
+              "search_profile_ref": {
+                "kind": "Profile",
+                "id": "v5-explicit-bank-execution-search",
+                "version": "1"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "Evidence",
+              "id": "v5-bank-execution-assumptions",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Evidence",
+                "id": "v5-bank-execution-assumptions",
+                "version": "1"
+              },
+              "source_kind": "synthetic",
+              "basis_kind": "assumed",
+              "locator": "lifecycle-v5-execution-input-case.v1:source_declaration",
+              "content_hash": "0cbe76786fea247ac0c7ccbe88239d64c6e5e08e90bb93e0193b9d0d008d1763",
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 20
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 22
+                },
+                "bounds": "closed_open"
+              }
+            }
+          },
+          {
+            "ref": {
+              "kind": "Authorization",
+              "id": "v5-bank-execution-grant",
+              "version": "v7-shortfall-1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Authorization",
+                "id": "v5-bank-execution-grant",
+                "version": "v7-shortfall-1"
+              },
+              "organization_id": "bank",
+              "actor_id": "bank-actor",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "bank-function",
+                "version": "1"
+              },
+              "action_ids": [
+                "BANK-A07"
+              ],
+              "scopes": [
+                {
+                  "kind": "assessment_case",
+                  "ref": {
+                    "kind": "OwnerCase",
+                    "id": "case",
+                    "version": "1"
+                  },
+                  "coverage_refs": [
+                    {
+                      "kind": "WorkScope",
+                      "id": "funded-work",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "readable_refs": [
+                {
+                  "kind": "FunctionAssignment",
+                  "id": "bank-function",
+                  "version": "1"
+                },
+                {
+                  "kind": "Authorization",
+                  "id": "v5-bank-draw-grant",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "synthetic",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "v5-quote-assumptions",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "v5-bank-draw-assumptions",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "v5-owner-draw-assumptions",
+                  "version": "1"
+                },
+                {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                {
+                  "kind": "WorkScope",
+                  "id": "funded-work",
+                  "version": "1"
+                },
+                {
+                  "kind": "FinanceArrangement",
+                  "id": "v5-arrangement",
+                  "version": "1"
+                },
+                {
+                  "kind": "FundingExecutionProfile",
+                  "id": "v5-first-draw-execution",
+                  "version": "v7-shortfall-1"
+                },
+                {
+                  "kind": "FundingPath",
+                  "id": "v5-first-draw-path",
+                  "version": "v7-shortfall-1"
+                },
+                {
+                  "kind": "Account",
+                  "id": "v5-bank-funding",
+                  "version": "v7-shortfall-1"
+                },
+                {
+                  "kind": "Account",
+                  "id": "actual-cash",
+                  "version": "2"
+                },
+                {
+                  "kind": "FeeRule",
+                  "id": "v5-fee",
+                  "version": "1"
+                },
+                {
+                  "kind": "CandidateSet",
+                  "id": "v5-bank-execution-candidates",
+                  "version": "v7-shortfall-1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "v5-bank-execution-assumptions",
+                  "version": "1"
+                },
+                {
+                  "kind": "Authorization",
+                  "id": "v5-bank-execution-grant",
+                  "version": "v7-shortfall-1"
+                },
+                {
+                  "kind": "DrawApproval",
+                  "id": "v5-first-draw-approval",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "v7-bank-cash-shortfall-assumptions",
+                  "version": "1"
+                }
+              ],
+              "tool_ids": [],
+              "validity": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 20
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 22
+                },
+                "bounds": "closed_open"
+              },
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v5-bank-execution-assumptions",
+                  "version": "1"
+                }
+              ]
+            }
+          },
+          {
+            "ref": {
+              "kind": "Evidence",
+              "id": "v7-bank-cash-shortfall-assumptions",
+              "version": "1"
+            },
+            "value": {
+              "ref": {
+                "kind": "Evidence",
+                "id": "v7-bank-cash-shortfall-assumptions",
+                "version": "1"
+              },
+              "source_kind": "synthetic",
+              "basis_kind": "assumed",
+              "locator": "lifecycle-v7-bank-shortfall-input-case.v1:source_declaration",
+              "content_hash": "04b70e8b1a141038efe77fe8299caa5233a5c5e9775daa75b2e8c5a123865843",
+              "effective_window": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 20
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 22
+                },
+                "bounds": "closed_open"
+              }
+            }
+          }
+        ]
+      },
+      "offline_binding": {
+        "invocation": {
+          "context": {
+            "run_id": "synthetic-v5-financing-application",
+            "actor_id": "bank-actor",
+            "function_ref": {
+              "kind": "FunctionAssignment",
+              "id": "bank-function",
+              "version": "1"
+            },
+            "authorization_refs": [
+              {
+                "kind": "Authorization",
+                "id": "v5-bank-execution-grant",
+                "version": "v7-shortfall-1"
+              }
+            ],
+            "operation_id": "v7-bank-cash-shortfall-21",
+            "contract_ref": {
+              "kind": "ActionContract",
+              "id": "BANK-A07",
+              "version": "1"
+            },
+            "task_ref": {
+              "kind": "DecisionTask",
+              "id": "v7-bank-cash-shortfall-task",
+              "version": "1"
+            },
+            "scope": {
+              "kind": "assessment_case",
+              "ref": {
+                "kind": "OwnerCase",
+                "id": "case",
+                "version": "1"
+              },
+              "coverage_refs": [
+                {
+                  "kind": "WorkScope",
+                  "id": "funded-work",
+                  "version": "1"
+                }
+              ]
+            },
+            "business_time": {
+              "clock_ref": {
+                "kind": "ClockProfile",
+                "id": "business",
+                "version": "1"
+              },
+              "offset": 21
+            },
+            "read_token": "synthetic-v5-financing-application:v7-bank-cash-shortfall-21:read:1",
+            "visible_refs": [
+              {
+                "kind": "FunctionAssignment",
+                "id": "bank-function",
+                "version": "1"
+              },
+              {
+                "kind": "Authorization",
+                "id": "v5-bank-draw-grant",
+                "version": "1"
+              },
+              {
+                "kind": "Evidence",
+                "id": "synthetic",
+                "version": "1"
+              },
+              {
+                "kind": "Evidence",
+                "id": "v5-quote-assumptions",
+                "version": "1"
+              },
+              {
+                "kind": "Evidence",
+                "id": "v5-bank-draw-assumptions",
+                "version": "1"
+              },
+              {
+                "kind": "Evidence",
+                "id": "v5-owner-draw-assumptions",
+                "version": "1"
+              },
+              {
+                "kind": "OwnerCase",
+                "id": "case",
+                "version": "1"
+              },
+              {
+                "kind": "WorkScope",
+                "id": "funded-work",
+                "version": "1"
+              },
+              {
+                "kind": "FinanceArrangement",
+                "id": "v5-arrangement",
+                "version": "1"
+              },
+              {
+                "kind": "FundingExecutionProfile",
+                "id": "v5-first-draw-execution",
+                "version": "v7-shortfall-1"
+              },
+              {
+                "kind": "FundingPath",
+                "id": "v5-first-draw-path",
+                "version": "v7-shortfall-1"
+              },
+              {
+                "kind": "Account",
+                "id": "v5-bank-funding",
+                "version": "v7-shortfall-1"
+              },
+              {
+                "kind": "Account",
+                "id": "actual-cash",
+                "version": "2"
+              },
+              {
+                "kind": "FeeRule",
+                "id": "v5-fee",
+                "version": "1"
+              },
+              {
+                "kind": "CandidateSet",
+                "id": "v5-bank-execution-candidates",
+                "version": "v7-shortfall-1"
+              },
+              {
+                "kind": "Evidence",
+                "id": "v5-bank-execution-assumptions",
+                "version": "1"
+              },
+              {
+                "kind": "Authorization",
+                "id": "v5-bank-execution-grant",
+                "version": "v7-shortfall-1"
+              },
+              {
+                "kind": "Evidence",
+                "id": "v7-bank-cash-shortfall-assumptions",
+                "version": "1"
+              }
+            ],
+            "candidate_set_ref": {
+              "kind": "CandidateSet",
+              "id": "v5-bank-execution-candidates",
+              "version": "v7-shortfall-1"
+            },
+            "execution_mode": "offline_fixture"
+          },
+          "action_input": {
+            "arrangement_ref": {
+              "kind": "FinanceArrangement",
+              "id": "v5-arrangement",
+              "version": "1"
+            },
+            "operation_context": {
+              "kind": "initiate",
+              "draw_approval_ref": {
+                "kind": "DrawApproval",
+                "id": "v5-first-draw-approval",
+                "version": "1"
+              },
+              "funding_account_ref": {
+                "kind": "Account",
+                "id": "v5-bank-funding",
+                "version": "v7-shortfall-1"
+              },
+              "path_ref": {
+                "kind": "FundingPath",
+                "id": "v5-first-draw-path",
+                "version": "v7-shortfall-1"
+              },
+              "lines": [
+                {
+                  "obligation_refs": [],
+                  "beneficiary_id": "owner",
+                  "destination_ref": {
+                    "kind": "Account",
+                    "id": "actual-cash",
+                    "version": "2"
+                  },
+                  "requested": {
+                    "value": "50",
+                    "currency": "HKD",
+                    "basis_ref": {
+                      "kind": "Evidence",
+                      "id": "v5-owner-draw-assumptions",
+                      "version": "1"
+                    }
+                  },
+                  "fee_rule_refs": [
+                    {
+                      "kind": "FeeRule",
+                      "id": "v5-fee",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "prior_execution_refs": []
+            },
+            "receipt_refs": []
+          },
+          "execution_path": "deterministic"
+        },
+        "organization_snapshot": {
+          "schema_version": "organization.v2",
+          "run_id": "synthetic-v5-financing-application",
+          "organizations": [
+            {
+              "organization_id": "owner",
+              "actor_id": "owner-actor",
+              "source_ids": [
+                "synthetic:v5-application"
+              ],
+              "public_description": "Explicit synthetic Owner funding application.",
+              "public_location": {
+                "state": "unknown",
+                "reason_code": "synthetic_unsupplied",
+                "missing_refs": []
+              },
+              "members": [],
+              "assignments": [
+                {
+                  "role": "Owner",
+                  "function_ref": {
+                    "kind": "FunctionAssignment",
+                    "id": "owner-function",
+                    "version": "1"
+                  },
+                  "configuration_version": "1",
+                  "basis_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "synthetic",
+                  "version": "1"
+                }
+              ]
+            },
+            {
+              "organization_id": "bank",
+              "actor_id": "bank-actor",
+              "source_ids": [
+                "synthetic:v5-bank-execution"
+              ],
+              "public_description": "Explicit synthetic Bank execution policy/current cash/path; native approval independently received.",
+              "public_location": {
+                "state": "unknown",
+                "reason_code": "synthetic_unsupplied",
+                "missing_refs": []
+              },
+              "members": [],
+              "assignments": [
+                {
+                  "role": "Bank",
+                  "function_ref": {
+                    "kind": "FunctionAssignment",
+                    "id": "bank-function",
+                    "version": "1"
+                  },
+                  "configuration_version": "1",
+                  "basis_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "synthetic",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "evidence_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "synthetic",
+                  "version": "1"
+                }
+              ]
+            }
+          ],
+          "authorizations": [
+            {
+              "ref": {
+                "kind": "Authorization",
+                "id": "v5-bank-draw-grant",
+                "version": "1"
+              },
+              "organization_id": "bank",
+              "actor_id": "bank-actor",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "bank-function",
+                "version": "1"
+              },
+              "action_ids": [
+                "BANK-A06"
+              ],
+              "scopes": [
+                {
+                  "kind": "assessment_case",
+                  "ref": {
+                    "kind": "OwnerCase",
+                    "id": "case",
+                    "version": "1"
+                  },
+                  "coverage_refs": [
+                    {
+                      "kind": "WorkScope",
+                      "id": "funded-work",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "readable_refs": [
+                {
+                  "kind": "FunctionAssignment",
+                  "id": "bank-function",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "synthetic",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "v5-quote-assumptions",
+                  "version": "1"
+                },
+                {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                {
+                  "kind": "WorkScope",
+                  "id": "funded-work",
+                  "version": "1"
+                },
+                {
+                  "kind": "FundingPurpose",
+                  "id": "research",
+                  "version": "1"
+                },
+                {
+                  "kind": "TimeWindow",
+                  "id": "v5-tenor",
+                  "version": "1"
+                },
+                {
+                  "kind": "FinanceArrangement",
+                  "id": "v5-arrangement",
+                  "version": "1"
+                },
+                {
+                  "kind": "FinanceTerms",
+                  "id": "v5-arrangement-terms",
+                  "version": "1"
+                },
+                {
+                  "kind": "DrawCapacity",
+                  "id": "v5-arrangement-usage",
+                  "version": "1"
+                },
+                {
+                  "kind": "Account",
+                  "id": "actual-cash",
+                  "version": "2"
+                },
+                {
+                  "kind": "FeeRule",
+                  "id": "v5-fee",
+                  "version": "1"
+                },
+                {
+                  "kind": "DrawDecisionProfile",
+                  "id": "v5-bank-draw",
+                  "version": "1"
+                },
+                {
+                  "kind": "CandidateSet",
+                  "id": "v5-bank-draw-candidates",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "v5-bank-draw-assumptions",
+                  "version": "1"
+                },
+                {
+                  "kind": "Authorization",
+                  "id": "v5-bank-draw-grant",
+                  "version": "1"
+                },
+                {
+                  "kind": "DrawRequest",
+                  "id": "v5-owner-draw",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "v5-owner-draw-assumptions",
+                  "version": "1"
+                }
+              ],
+              "tool_ids": [],
+              "validity": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 20
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 22
+                },
+                "bounds": "closed_open"
+              },
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v5-bank-draw-assumptions",
+                  "version": "1"
+                }
+              ]
+            },
+            {
+              "ref": {
+                "kind": "Authorization",
+                "id": "v5-bank-execution-grant",
+                "version": "v7-shortfall-1"
+              },
+              "organization_id": "bank",
+              "actor_id": "bank-actor",
+              "function_ref": {
+                "kind": "FunctionAssignment",
+                "id": "bank-function",
+                "version": "1"
+              },
+              "action_ids": [
+                "BANK-A07"
+              ],
+              "scopes": [
+                {
+                  "kind": "assessment_case",
+                  "ref": {
+                    "kind": "OwnerCase",
+                    "id": "case",
+                    "version": "1"
+                  },
+                  "coverage_refs": [
+                    {
+                      "kind": "WorkScope",
+                      "id": "funded-work",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "readable_refs": [
+                {
+                  "kind": "FunctionAssignment",
+                  "id": "bank-function",
+                  "version": "1"
+                },
+                {
+                  "kind": "Authorization",
+                  "id": "v5-bank-draw-grant",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "synthetic",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "v5-quote-assumptions",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "v5-bank-draw-assumptions",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "v5-owner-draw-assumptions",
+                  "version": "1"
+                },
+                {
+                  "kind": "OwnerCase",
+                  "id": "case",
+                  "version": "1"
+                },
+                {
+                  "kind": "WorkScope",
+                  "id": "funded-work",
+                  "version": "1"
+                },
+                {
+                  "kind": "FinanceArrangement",
+                  "id": "v5-arrangement",
+                  "version": "1"
+                },
+                {
+                  "kind": "FundingExecutionProfile",
+                  "id": "v5-first-draw-execution",
+                  "version": "v7-shortfall-1"
+                },
+                {
+                  "kind": "FundingPath",
+                  "id": "v5-first-draw-path",
+                  "version": "v7-shortfall-1"
+                },
+                {
+                  "kind": "Account",
+                  "id": "v5-bank-funding",
+                  "version": "v7-shortfall-1"
+                },
+                {
+                  "kind": "Account",
+                  "id": "actual-cash",
+                  "version": "2"
+                },
+                {
+                  "kind": "FeeRule",
+                  "id": "v5-fee",
+                  "version": "1"
+                },
+                {
+                  "kind": "CandidateSet",
+                  "id": "v5-bank-execution-candidates",
+                  "version": "v7-shortfall-1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "v5-bank-execution-assumptions",
+                  "version": "1"
+                },
+                {
+                  "kind": "Authorization",
+                  "id": "v5-bank-execution-grant",
+                  "version": "v7-shortfall-1"
+                },
+                {
+                  "kind": "DrawApproval",
+                  "id": "v5-first-draw-approval",
+                  "version": "1"
+                },
+                {
+                  "kind": "Evidence",
+                  "id": "v7-bank-cash-shortfall-assumptions",
+                  "version": "1"
+                }
+              ],
+              "tool_ids": [],
+              "validity": {
+                "start": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 20
+                },
+                "end": {
+                  "clock_ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "offset": 22
+                },
+                "bounds": "closed_open"
+              },
+              "basis_refs": [
+                {
+                  "kind": "Evidence",
+                  "id": "v5-bank-execution-assumptions",
+                  "version": "1"
+                }
+              ]
+            }
+          ],
+          "inactive_authorization_refs": []
+        },
+        "source_projection_envelope": {
+          "run_id": "synthetic-v5-financing-application",
+          "macro_version": "synthetic-v5-application.v1",
+          "state_version": "v7-shortfall-1",
+          "read_token": "synthetic-v5-financing-application:v7-bank-cash-shortfall-21:read:1",
+          "business_time": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 21
+          },
+          "organization_id": "bank"
+        },
+        "source_note": "Explicit synthetic V7 cash-shortfall input, preserving original A06 journal/reception prerequisite and using new cash/path/authority versions; no real dispatch, replenishment or successor.",
+        "schema_factory": "integration.bank_draw_handoff:bank_draw_handoff_schemas"
+      },
+      "expected_reason_code": "actual_bank_currency_path_funding_shortfall",
+      "expected_condition_code": "actual_same_currency_path_cash_after_original_reservations_available"
+    }
+  ],
+  "predecessor_requirements": [
+    "Original same-Bank durable A06 approve_draw and journal with full Owner request reception.",
+    "Independently registered actual DrawApproval/line allocations/native evidence and separately authored BankDrawHandoffBasis.",
+    "Complete current funding/destination cash, reservations, permissions/path/fees and explicit approval prior-execution history."
+  ],
+  "dependent_steps": [
+    "Current authorized cash/hold/path revalidation before a fresh action; this input does not invoke the formal continuation profile."
+  ],
+  "remaining_requirements": [
+    "Independent original approved-draw reception for this exact case SHA/current source envelope.",
+    "V7 timeout, invalid output, terms revision, late/duplicate events and formal wait recovery remain separate."
+  ],
+  "limitations": [
+    "Explicit assumed synthetic cash shortfall only; no scenario or business code has been run.",
+    "Original approved-draw journal and independently registered synthetic approval must still be supplied; this fixture creates no approval.",
+    "Distinct operation and current version tokens preserve the original V5 input and history."
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "schema_version": "government-monthly-business-chain.v1",
+  "run_id": "goal3d-monthly-business",
+  "ticks": 4,
+  "scenarios": {"high": {"market_demand_index": 1.2}, "low": {"market_demand_index": 0.6}},
+  "source_note": "Reuse the original regulatory assignment, review, opinion and own-history scenario. Independent predeclared background mandate with threshold 1 and one focus/guidance cap. Actual current monthly request and authenticated own original monthly/approval outcomes remain unbound until execution. Monthly guidance preparation does not prove formal publication, permit, physical inspection or compliance clearance."
+}

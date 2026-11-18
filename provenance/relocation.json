@@ -1,0 +1,13 @@
+{
+  "original_root": "D:\\hkura\\codedemo_v2",
+  "repository_root": ".",
+  "macro_source": "vendor/gba",
+  "adapted_files": [
+    "integration/bootstrap.py",
+    "integration/plan_baseline.py",
+    "output/integration/implementation_20261016_01/macro_baseline.json",
+    "pyproject.toml",
+    "uv.lock"
+  ],
+  "old_absolute_paths": "Historical paths are provenance only. Resolve relative to this repository; never fall back to the old root."
+}

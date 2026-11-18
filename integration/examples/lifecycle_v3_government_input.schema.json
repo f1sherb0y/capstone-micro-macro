@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Original Government request/configuration for V3 material-intake assembly",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["run_id", "government_organization_id", "request", "configuration"],
+  "properties": {
+    "run_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "government_organization_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "request": {
+      "type": "object",
+      "description": "Explicit distinct current formal GOV-A02 invocation with actual submission, authority and scope."
+    },
+    "configuration": {
+      "type": "object",
+      "description": "Original Government RoleContractHostConfiguration with independently supplied source factory and architect_material_inputs selecting the original A07 task, accepted publication receipt hash and actual ArchitectDeliverableReceipt."
+    }
+  }
+}

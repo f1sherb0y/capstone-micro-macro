@@ -1,0 +1,17 @@
+{
+  "created_local": "2026-11-15 01:35:44",
+  "copied_files": 15635,
+  "copied_bytes": 5506336094,
+  "source_and_copy_sha256_mismatches": [],
+  "destination_adaptations": [
+    "integration/bootstrap.py",
+    "integration/plan_baseline.py",
+    "output/integration/implementation_20261016_01/macro_baseline.json",
+    "pyproject.toml",
+    "uv.lock"
+  ],
+  "source_inventory_files_checked": 276222,
+  "source_metadata_changes": [],
+  "note": "Full SHA256 for every selected original and every unadapted copy; metadata comparison for all readable original inventory files. Access-denied old cache folders were not included.",
+  "elapsed_seconds": 22.8
+}

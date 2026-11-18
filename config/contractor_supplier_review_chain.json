@@ -1,0 +1,9 @@
+{
+  "schema_version": "contractor-supplier-review-chain.v1",
+  "run_id": "goal3e-contractor-supplier-review-fixed",
+  "scenarios": {
+    "weak": {"supply_reliability": 0.4},
+    "strong": {"supply_reliability": 0.95}
+  },
+  "source_note": "Independent synthetic future inquiry-preparation authority, one-panel forecast, declared inquiry channels and own private thresholds. Relationships come exclusively from this run's original Supplier A01-A04 / Contractor A05 native supplier selections. Only original initial Supplier reliability varies; normalized reliability and aggregate availability never become physical stock or detailed obligations."
+}

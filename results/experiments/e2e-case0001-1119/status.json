@@ -1,0 +1,96 @@
+{
+  "run_id": "e2e-case0001-1119-a",
+  "status": "completed",
+  "phase": "项目已关闭",
+  "current_tick": 42,
+  "settings": {
+    "case_id": "CASE-0001",
+    "mode": "llm",
+    "profile": "smoke",
+    "seed": 42,
+    "ticks": 120,
+    "budget": 150000000,
+    "duration": 24,
+    "plan": true,
+    "procurement_mode": "codedemo_micro"
+  },
+  "created_at": "2026-11-18T16:36:28.366979+00:00",
+  "error": null,
+  "projects": [
+    {
+      "id": "CASE-0001",
+      "name": "邻近西湾湖景大马路堤围加固工程",
+      "stage": "closed",
+      "progress": 1.0,
+      "contracts": 6,
+      "cost": 145680476.44083592,
+      "delay_days": 7
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "SIMF941C911/CASE-0001/design/round-1",
+      "package_id": "CASE-0001/design",
+      "status": "committed",
+      "next_stage": 9,
+      "error": null
+    },
+    {
+      "session_id": "SIMF941C911/CASE-0001/cost/round-1",
+      "package_id": "CASE-0001/cost",
+      "status": "committed",
+      "next_stage": 9,
+      "error": null
+    },
+    {
+      "session_id": "SIMF941C911/CASE-0001/construction-1/round-1",
+      "package_id": "CASE-0001/construction-1",
+      "status": "committed",
+      "next_stage": 9,
+      "error": null
+    },
+    {
+      "session_id": "SIMF941C911/CASE-0001/construction-2/round-1",
+      "package_id": "CASE-0001/construction-2",
+      "status": "committed",
+      "next_stage": 9,
+      "error": null
+    },
+    {
+      "session_id": "SIMF941C911/CASE-0001/supply-1/round-1",
+      "package_id": "CASE-0001/supply-1",
+      "status": "committed",
+      "next_stage": 9,
+      "error": null
+    },
+    {
+      "session_id": "SIMF941C911/CASE-0001/supply-2/round-1",
+      "package_id": "CASE-0001/supply-2",
+      "status": "committed",
+      "next_stage": 9,
+      "error": null
+    }
+  ],
+  "usage": {
+    "model": "deepseek-flash",
+    "provider": "deepseek",
+    "requests": 437,
+    "cache_hits": 0,
+    "input_tokens": 3074660,
+    "output_tokens": 240208
+  },
+  "updated_at": "2026-11-18T16:50:34.580057+00:00",
+  "live_switches": {
+    "internal_condition_review": true,
+    "organization_mode": "multi",
+    "targeted_repair_retries": 3
+  },
+  "pause_requested": false,
+  "last_model_call": "CONTRACT_ACCEPTANCE",
+  "simulation_id": "SIMF941C911",
+  "data_version": "68f55505f90e813a9a33cdd786492997f133caad3b8b88456c61cc1422d975d6",
+  "source_counts": {
+    "projects": 352,
+    "companies": 904
+  }
+}

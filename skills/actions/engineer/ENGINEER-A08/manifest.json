@@ -1,0 +1,32 @@
+{
+  "skill_id": "ENGINEER-A08.site-inspection-support",
+  "skill_version": "1",
+  "action_id": "ENGINEER-A08",
+  "role": "Engineer",
+  "status": "implemented",
+  "spec_source": "zwtnew/04_roles/04_roles/engineer.md",
+  "spec_source_sha256": "fb22a164aa0032b7c274888ec2db62226c70833e079de764595c16e70829effe",
+  "skill_path": "skills/actions/engineer/ENGINEER-A08/SKILL.md",
+  "skill_sha256": "2f9ba2a98acbcf9768e8743a0491d221f3ef6194d8b430a941d1ce8a24f79155",
+  "input_schema_id": "role-contract.v1:ENGINEER-A08:input",
+  "output_schema_id": "role-contract.v1:ENGINEER-A08:payload",
+  "processor_id": "engineer.site_inspection_support.v1",
+  "tool_ids": [],
+  "shared_refs": [
+    "skills/shared/decision-basics.md"
+  ],
+  "shared_sha256s": {"skills/shared/decision-basics.md": "77da3d2fc1683068353888daccecfabe25278bf180b593747e39505fea987e60"},
+  "prompt_sha256": "2f9ba2a98acbcf9768e8743a0491d221f3ef6194d8b430a941d1ce8a24f79155",
+  "method_refs": [
+    {
+      "kind": "Method",
+      "id": "micro.capacity.fixed_location",
+      "version": "1"
+    },
+    {
+      "kind": "Method",
+      "id": "micro.engineer.declared_interface_code",
+      "version": "1"
+    }
+  ]
+}

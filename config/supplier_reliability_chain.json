@@ -1,0 +1,6 @@
+{
+  "schema_version":"supplier-reliability-review-chain.v1",
+  "run_id":"goal3f-supplier-reliability",
+  "scenarios":{"weak":{"supply_reliability":0.4},"strong":{"supply_reliability":0.95}},
+  "source_note":"Independent initial own-risk speculative six-panel forecast, explicit draft inquiry recipients and background review mandate. Stock and physical capacity remain unknown. Only original initial supplier supply_reliability changes. Native current profiles, original A05 validation/judgment and monthly execution/history are observed during runtime. No customer order, sent inquiry, counterparty consent, physical backup sourcing or actual reliability improvement is prefilled or inferred."
+}

@@ -1,0 +1,10 @@
+{
+  "role": "Supplier", "version": "1", "strategy": "organization_discussion",
+  "source": "zwtnew/04_roles/04_roles/supplier.md",
+  "members": [
+    {"member_id": "commercial", "name": "Supply Reviewer", "functions": ["inquiry_screening", "order_review"], "responsibilities": ["Check requirements, proposed scope and independent order acceptance"]},
+    {"member_id": "production", "name": "Production Reviewer", "functions": ["production_planning"], "responsibilities": ["Review product compatibility, inputs, actual inventory and capacity"]},
+    {"member_id": "logistics", "name": "Logistics Reviewer", "functions": ["delivery_review"], "responsibilities": ["Check transport constraints, receipt evidence and remaining obligations"]}
+  ],
+  "tool_ids": []
+}

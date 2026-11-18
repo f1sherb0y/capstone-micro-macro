@@ -1,0 +1,12 @@
+{
+  "schema_version": "construction-chain.v1",
+  "run_id": "goal3g-construction-feedback",
+  "ticks": 3,
+  "max_prior_accept_terms": 999,
+  "max_prior_construction_suspensions": 1,
+  "scenarios": {
+    "suspended": {"suspension_project_design_quality": 0.0},
+    "healthy": {"suspension_project_design_quality": 1.0}
+  },
+  "source_note": "Existing builder initial quality/contract/engagement inputs only. Actual suspensions and later A04 decisions must be produced by the original runtime. Detailed execution, measurement and certification stay blocked without verified sources/issuers."
+}

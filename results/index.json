@@ -1,0 +1,72 @@
+[
+  {
+    "id": "recommendation",
+    "path": "output/integration/capstone_retrieval_improvement_20261106/summary.json",
+    "purpose": "用于检索支撑，Hit@5为66.05%；与LLM业务回答评价分开",
+    "available": true,
+    "title": "历史角色推荐"
+  },
+  {
+    "id": "business_first",
+    "path": "Capstone报告/验证体系/实验/2026-11-13_总实验收尾/CP01首轮业务结果_001.md",
+    "purpose": "相同题面下原生成与当前生成实现的成对业务评价，保存初始回答",
+    "available": true,
+    "title": "业务首轮比较"
+  },
+  {
+    "id": "business_repairs",
+    "path": "Capstone报告/验证体系/实验/2026-11-13_总实验收尾/CP01修复后业务结果_001.md",
+    "purpose": "95对修正前后回答单列，不替代首轮成绩",
+    "available": true,
+    "title": "定向修正结果"
+  },
+  {
+    "id": "macro_case",
+    "path": "Capstone报告/验证体系/实验/2026-11-13_总实验收尾/宏观首块业务结果_001.md",
+    "purpose": "四种机制在当前来源块的轨迹相同；保留该结果与解释边界",
+    "available": true,
+    "title": "宏观首个固定来源块"
+  },
+  {
+    "id": "readiness",
+    "path": "Capstone报告/验证体系/实验/2026-11-13_总实验收尾/business_readiness_CP08_review_progress_005.json",
+    "purpose": "区分已返回、可读与已复核，避免把请求提交当作实验完成",
+    "available": true,
+    "title": "可读与已评数量"
+  },
+  {
+    "id": "pipeline_pause",
+    "path": "Capstone报告/验证体系/实验/2026-11-13_总实验收尾/serial_pipeline_003/state.json",
+    "purpose": "历史流水线已停止，本记录不构成重新启动指令",
+    "available": true,
+    "title": "停止状态记录"
+  },
+  {
+    "id": "feedback",
+    "path": "output/integration/capstone_validation_20261105/feedback/summary.json",
+    "purpose": "6个窗口、18次条件运行；说明规则应变，不表述为模型学会盈利",
+    "available": true,
+    "title": "确定性反馈对照"
+  },
+  {
+    "id": "micro_org_judge",
+    "path": "results/experiments/micro-org-1118/REPORT.md",
+    "purpose": "6个项目、三种组织方式、353份输出的模型评审分；multi比single六项均值高0.15，主要在风险与权衡；未经人工校准，待验收",
+    "available": true,
+    "title": "单智能体与多智能体微观评分"
+  },
+  {
+    "id": "e2e_case0014",
+    "path": "results/experiments/e2e-case0014-1119/README.md",
+    "purpose": "真实模型微观采购接入宏观生命周期，CASE-0014六个包全部签约、项目关闭；单个案例的运行证据，不是效果评价",
+    "available": true,
+    "title": "真实模型端到端跑通"
+  },
+  {
+    "id": "e2e_case0001",
+    "path": "results/experiments/e2e-case0001-1119/README.md",
+    "purpose": "第二个案例复核：CASE-0001六个包全部签约、项目关闭；单个案例的运行证据，不是效果评价",
+    "available": true,
+    "title": "真实模型端到端跑通（第二案例）"
+  }
+]

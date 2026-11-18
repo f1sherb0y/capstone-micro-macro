@@ -1,0 +1,44 @@
+{
+  "schema_version": "goal3-minimal-native-fix.v1",
+  "source_note": "Explicit synthetic initial cash assumptions and Owner choice policies. No selected bank/contractor, bid outcome or refusal is prefilled. Preserve the same original source builders and independent 15m existing obligation.",
+  "construction_config": "config/professional_construction_feedback_chain.json",
+  "selection": {
+    "run_id": "goal3-native-minfix-selection",
+    "authorized_budget": "1000",
+    "ticks": 8,
+    "selection_mode": "lowest_eligible_price",
+    "selection_tie_break": "organization_id"
+  },
+  "financing": {
+    "normal": {
+      "run_id": "goal3-native-minfix-normal",
+      "bundle_options": {"with_owner":true,"feedback_followup":true,"with_bank_strategy":true,"with_arrangement":false,"prior_refusal_priority_penalty":2}
+    },
+    "equity": {
+      "run_id": "goal3-native-minfix-equity",
+      "bundle_options": {
+        "with_owner": true,
+        "feedback_followup": true,
+        "with_bank_strategy": true,
+        "prior_refusal_priority_penalty": 2,
+        "owner_funding": [
+          {"organization_id":"finance-owner-a","actual_cash":"300000000","restricted_cash":"10000000"},
+          {"organization_id":"finance-owner-b","actual_cash":"300000000","restricted_cash":"10000000"}
+        ]
+      }
+    },
+    "limited_cash": {
+      "run_id": "goal3-native-minfix-limited-cash",
+      "bundle_options": {
+        "with_owner": true,
+        "feedback_followup": true,
+        "with_bank_strategy": true,
+        "prior_refusal_priority_penalty": 2,
+        "owner_funding": [
+          {"organization_id":"finance-owner-a","actual_cash":"15000000","restricted_cash":"0"},
+          {"organization_id":"finance-owner-b","actual_cash":"15000000","restricted_cash":"0"}
+        ]
+      }
+    }
+  }
+}

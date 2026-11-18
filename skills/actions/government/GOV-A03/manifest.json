@@ -1,0 +1,27 @@
+{
+  "skill_id": "GOV-A03.lawful-review-scheduling",
+  "skill_version": "1",
+  "action_id": "GOV-A03",
+  "role": "Government",
+  "status": "implemented",
+  "spec_source": "zwtnew/04_roles/04_roles/government.md",
+  "spec_source_sha256": "6537100fbde0572ae49d557969df531ffe40ee74c010ee442f59f75da0a1f3de",
+  "skill_path": "skills/actions/government/GOV-A03/SKILL.md",
+  "skill_sha256": "aefd74f910779177faf8c8819601f65a064a231cf20158f78eb8d8b7b6a52ec3",
+  "input_schema_id": "role-contract.v1:GOV-A03:input",
+  "output_schema_id": "role-contract.v1:GOV-A03:payload",
+  "processor_id": "government.lawful_review_scheduling.v1",
+  "tool_ids": [],
+  "shared_refs": [
+    "skills/shared/decision-basics.md"
+  ],
+  "shared_sha256s": {"skills/shared/decision-basics.md": "77da3d2fc1683068353888daccecfabe25278bf180b593747e39505fea987e60"},
+  "prompt_sha256": "aefd74f910779177faf8c8819601f65a064a231cf20158f78eb8d8b7b6a52ec3",
+  "method_refs": [
+    {
+      "kind": "Method",
+      "id": "micro.capacity.fixed_location",
+      "version": "1"
+    }
+  ]
+}

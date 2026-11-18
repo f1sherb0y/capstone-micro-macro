@@ -1,0 +1,255 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Actual V5 Contractor payment reconciliation input with retained settlement selection",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "scenario_id",
+    "run_id",
+    "contractor_organization_id",
+    "owner_payment",
+    "request",
+    "configuration",
+    "assembly_sources"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "lifecycle-v5-contractor-payment-formal-input.v2"
+    },
+    "scenario_id": {
+      "const": "V5"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "contractor_organization_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "owner_payment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "identity",
+        "record_sha256",
+        "result_sha256",
+        "reading_sha256",
+        "execution_refs"
+      ],
+      "properties": {
+        "identity": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "run_id",
+            "organization_id",
+            "role",
+            "action_id",
+            "request_id",
+            "purpose",
+            "input_sha256",
+            "context_sha256",
+            "versions"
+          ],
+          "properties": {
+            "run_id": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "organization_id": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "role": {
+              "const": "Owner"
+            },
+            "action_id": {
+              "const": "OWN-A06"
+            },
+            "request_id": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "purpose": {
+              "const": "action"
+            },
+            "input_sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "context_sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "versions": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "client",
+                "skill",
+                "prompt",
+                "contract",
+                "method",
+                "model",
+                "strategy"
+              ],
+              "properties": {
+                "client": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "skill": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "prompt": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "contract": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "method": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "model": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "strategy": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                }
+              }
+            }
+          }
+        },
+        "record_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "result_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "reading_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "execution_refs": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "kind",
+              "id",
+              "version"
+            ],
+            "properties": {
+              "kind": {
+                "const": "PaymentExecution"
+              },
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "version": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  {
+                    "type": "integer"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "request": {
+      "type": "object",
+      "description": "Actual RoleContractInvocation, validated by the existing typed contract; formal Contractor A10 context and actual supplied action_input."
+    },
+    "configuration": {
+      "type": "object",
+      "description": "Actual RoleContractHostConfiguration and ContractorRoleContractSettings; received_payment_inputs must select these original commands for this operation. The source factory supplies authorized native evidence and independent beneficiary-credit validation."
+    },
+    "assembly_sources": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "owner_result",
+        "issued_reception",
+        "contractor_input",
+        "settlement"
+      ],
+      "properties": {
+        "owner_result": {
+          "$ref": "#/$defs/sourceFile"
+        },
+        "issued_reception": {
+          "$ref": "#/$defs/sourceFile"
+        },
+        "contractor_input": {
+          "$ref": "#/$defs/sourceFile"
+        },
+        "settlement": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/sourceFile"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Original OwnerPaymentSettlementReconciler.query file for a fully final complete command group, otherwise null. Its embedded issued_reception must equal the retained issued file."
+        }
+      }
+    }
+  },
+  "$defs": {
+    "sourceFile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "file_sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "file_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    }
+  }
+}

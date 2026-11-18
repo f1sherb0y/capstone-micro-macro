@@ -1,0 +1,1221 @@
+{
+  "schema_version": "lifecycle-v4-production-connection-seed.v1",
+  "scenario_id": "V4",
+  "origin": "synthetic",
+  "status": "awaiting_original_production_result",
+  "production_input_path": "tests/fixtures/roles/lifecycle_v4_chronological_production.v1.json",
+  "production_input_sha256": "6917e181aabbf3dc671afb5ea46b8bc6003b48843587c3cf3726479d3230936b",
+  "quality_input_path": "tests/fixtures/roles/lifecycle_v4_chronological_production_pending_quality.v1.json",
+  "quality_input_sha256": "9af6cb4110b3e0bb5e51594a7408ce8cc89d0d5b043e0b6a90be1ffa7d7d7e47",
+  "registration_id": "synthetic-original-six-panel-production-quality-registration",
+  "relation": {
+    "scope": {
+      "kind": "project",
+      "ref": {
+        "kind": "Project",
+        "id": "buyer-project",
+        "version": "1"
+      },
+      "coverage_refs": [
+        {
+          "kind": "WorkScope",
+          "id": "receiving-line-1",
+          "version": "1"
+        }
+      ]
+    },
+    "available_at": {
+      "clock_ref": {
+        "kind": "ClockProfile",
+        "id": "synthetic-clock",
+        "version": "1"
+      },
+      "offset": 10
+    },
+    "effective_window": {
+      "start": {
+        "clock_ref": {
+          "kind": "ClockProfile",
+          "id": "synthetic-clock",
+          "version": "1"
+        },
+        "offset": 10
+      },
+      "end": {
+        "clock_ref": {
+          "kind": "ClockProfile",
+          "id": "synthetic-clock",
+          "version": "1"
+        },
+        "offset": 20
+      },
+      "bounds": "closed_open"
+    },
+    "ref": {
+      "kind": "SupplierExecutionHandoffBasis",
+      "id": "synthetic-original-production-to-pending-quality-relation",
+      "version": "1"
+    },
+    "evidence_refs": [
+      {
+        "kind": "Evidence",
+        "id": "synthetic-independent-production-quality-relation",
+        "version": "1"
+      }
+    ],
+    "run_id": "synthetic-v4-production-material-connection",
+    "organization_id": "supplier-org",
+    "author_actor_id": "supplier-actor",
+    "author_organization_id": "supplier-org",
+    "author_function_ref": {
+      "kind": "FunctionAssignment",
+      "id": "v4-supplier-quality-function",
+      "version": "1"
+    },
+    "author_authority_ref": {
+      "kind": "Authorization",
+      "id": "v4-supplier-quality-grant",
+      "version": "1"
+    },
+    "author_action_id": "SUPPLIER-A07",
+    "authored_at": {
+      "clock_ref": {
+        "kind": "ClockProfile",
+        "id": "synthetic-clock",
+        "version": "1"
+      },
+      "offset": 10
+    },
+    "production_execution_ref": {
+      "kind": "ProductionExecution",
+      "id": "synthetic-observed-six-panel-production-execution",
+      "version": "1"
+    },
+    "native_receipt_evidence_ref": {
+      "kind": "Evidence",
+      "id": "synthetic-independent-native-production-receipt",
+      "version": "1"
+    },
+    "output_links": [
+      {
+        "movement_ref": {
+          "kind": "StockMovement",
+          "id": "synthetic-observed-six-panel-pending-output",
+          "version": "1"
+        },
+        "batch_ref": {
+          "kind": "ProductBatch",
+          "id": "source-cargo",
+          "version": "0"
+        }
+      }
+    ],
+    "relation_evidence_refs": [
+      {
+        "kind": "Evidence",
+        "id": "synthetic-independent-production-quality-relation",
+        "version": "1"
+      }
+    ]
+  },
+  "request": {
+    "scope": {
+      "kind": "project",
+      "ref": {
+        "kind": "Project",
+        "id": "buyer-project",
+        "version": "1"
+      },
+      "coverage_refs": [
+        {
+          "kind": "WorkScope",
+          "id": "receiving-line-1",
+          "version": "1"
+        }
+      ]
+    },
+    "available_at": {
+      "clock_ref": {
+        "kind": "ClockProfile",
+        "id": "synthetic-clock",
+        "version": "1"
+      },
+      "offset": 1
+    },
+    "effective_window": {
+      "start": {
+        "clock_ref": {
+          "kind": "ClockProfile",
+          "id": "synthetic-clock",
+          "version": "1"
+        },
+        "offset": 0
+      },
+      "end": {
+        "clock_ref": {
+          "kind": "ClockProfile",
+          "id": "synthetic-clock",
+          "version": "1"
+        },
+        "offset": 10
+      },
+      "bounds": "closed_open"
+    },
+    "ref": {
+      "kind": "ProductionRequest",
+      "id": "synthetic-original-six-panel-production-request",
+      "version": "1"
+    },
+    "evidence_refs": [
+      {
+        "kind": "Evidence",
+        "id": "synthetic-production-basis",
+        "version": "1"
+      }
+    ],
+    "task_ref": {
+      "kind": "SupplyTask",
+      "id": "production-task",
+      "version": "1"
+    },
+    "organization_id": "supplier-org",
+    "run_id": "synthetic-v4-production-material-connection",
+    "operation_id": "v4-supplier-production-1",
+    "business_key": "synthetic-original-six-panel-production-business",
+    "release_ref": {
+      "kind": "TaskRelease",
+      "id": "production-release",
+      "version": "1"
+    },
+    "method_ref": {
+      "kind": "ProductionMethod",
+      "id": "synthetic-conversion",
+      "version": "1"
+    },
+    "inputs": [
+      {
+        "batch_ref": {
+          "kind": "MaterialBatch",
+          "id": "raw-material",
+          "version": "1"
+        },
+        "allocation_ref": {
+          "kind": "InventoryAllocation",
+          "id": "material-allocation",
+          "version": "1"
+        },
+        "quantity": {
+          "value": "12",
+          "unit": "kg",
+          "basis_ref": {
+            "kind": "Evidence",
+            "id": "synthetic-production-basis",
+            "version": "1"
+          }
+        }
+      }
+    ],
+    "resources": [
+      {
+        "resource_ref": {
+          "kind": "ResourcePool",
+          "id": "production-pool",
+          "version": "1"
+        },
+        "scope_ref": {
+          "kind": "project",
+          "ref": {
+            "kind": "Project",
+            "id": "buyer-project",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "receiving-line-1",
+              "version": "1"
+            }
+          ]
+        },
+        "window_ref": {
+          "kind": "TimeWindow",
+          "id": "production-window",
+          "version": "1"
+        },
+        "quantity": {
+          "value": "2",
+          "unit": "machine-hour",
+          "basis_ref": {
+            "kind": "Evidence",
+            "id": "synthetic-production-basis",
+            "version": "1"
+          }
+        }
+      }
+    ]
+  },
+  "execution": {
+    "scope": {
+      "kind": "project",
+      "ref": {
+        "kind": "Project",
+        "id": "buyer-project",
+        "version": "1"
+      },
+      "coverage_refs": [
+        {
+          "kind": "WorkScope",
+          "id": "receiving-line-1",
+          "version": "1"
+        }
+      ]
+    },
+    "available_at": {
+      "clock_ref": {
+        "kind": "ClockProfile",
+        "id": "synthetic-clock",
+        "version": "1"
+      },
+      "offset": 10
+    },
+    "effective_window": {
+      "start": {
+        "clock_ref": {
+          "kind": "ClockProfile",
+          "id": "synthetic-clock",
+          "version": "1"
+        },
+        "offset": 10
+      },
+      "end": {
+        "clock_ref": {
+          "kind": "ClockProfile",
+          "id": "synthetic-clock",
+          "version": "1"
+        },
+        "offset": 20
+      },
+      "bounds": "closed_open"
+    },
+    "ref": {
+      "kind": "ProductionExecution",
+      "id": "synthetic-observed-six-panel-production-execution",
+      "version": "1"
+    },
+    "evidence_refs": [
+      {
+        "kind": "Evidence",
+        "id": "synthetic-independent-native-production-receipt",
+        "version": "1"
+      }
+    ],
+    "organization_id": "supplier-org",
+    "task_ref": {
+      "kind": "SupplyTask",
+      "id": "production-task",
+      "version": "1"
+    },
+    "run_id": "synthetic-v4-production-material-connection",
+    "operation_id": "v4-supplier-production-1",
+    "business_key": "synthetic-original-six-panel-production-business",
+    "request_ref": {
+      "kind": "ProductionRequest",
+      "id": "synthetic-original-six-panel-production-request",
+      "version": "1"
+    },
+    "request_sha256": "50167ebae9f8dc5996c6b4bfd985aa40a947cd88fb8fa3f2a9326fdcab79a872",
+    "status": "recorded",
+    "query_status": "present",
+    "core_event_id": "synthetic-pending-batch-event",
+    "recorded_at": {
+      "clock_ref": {
+        "kind": "ClockProfile",
+        "id": "synthetic-clock",
+        "version": "1"
+      },
+      "offset": 10
+    },
+    "movement_refs": [
+      {
+        "kind": "StockMovement",
+        "id": "synthetic-observed-twelve-kg-consumption",
+        "version": "1"
+      },
+      {
+        "kind": "StockMovement",
+        "id": "synthetic-observed-six-panel-pending-output",
+        "version": "1"
+      }
+    ],
+    "recovery_ref": null
+  },
+  "movements": [
+    {
+      "scope": {
+        "kind": "project",
+        "ref": {
+          "kind": "Project",
+          "id": "buyer-project",
+          "version": "1"
+        },
+        "coverage_refs": [
+          {
+            "kind": "WorkScope",
+            "id": "receiving-line-1",
+            "version": "1"
+          }
+        ]
+      },
+      "available_at": {
+        "clock_ref": {
+          "kind": "ClockProfile",
+          "id": "synthetic-clock",
+          "version": "1"
+        },
+        "offset": 10
+      },
+      "effective_window": {
+        "start": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "synthetic-clock",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "end": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "synthetic-clock",
+            "version": "1"
+          },
+          "offset": 20
+        },
+        "bounds": "closed_open"
+      },
+      "evidence_refs": [
+        {
+          "kind": "Evidence",
+          "id": "synthetic-independent-native-production-receipt",
+          "version": "1"
+        }
+      ],
+      "organization_id": "supplier-org",
+      "execution_ref": {
+        "kind": "ProductionExecution",
+        "id": "synthetic-observed-six-panel-production-execution",
+        "version": "1"
+      },
+      "core_event_id": "synthetic-pending-batch-event",
+      "source_allocation_refs": [
+        {
+          "kind": "InventoryAllocation",
+          "id": "material-allocation",
+          "version": "1"
+        }
+      ],
+      "lineage_batch_refs": [
+        {
+          "kind": "MaterialBatch",
+          "id": "raw-material",
+          "version": "1"
+        }
+      ],
+      "ref": {
+        "kind": "StockMovement",
+        "id": "synthetic-observed-twelve-kg-consumption",
+        "version": "1"
+      },
+      "physical_movement_key": "synthetic-original-twelve-kg-consumption",
+      "kind": "input_consumed",
+      "quantity": {
+        "value": "12",
+        "unit": "kg",
+        "basis_ref": {
+          "kind": "Evidence",
+          "id": "synthetic-production-basis",
+          "version": "1"
+        }
+      }
+    },
+    {
+      "scope": {
+        "kind": "project",
+        "ref": {
+          "kind": "Project",
+          "id": "buyer-project",
+          "version": "1"
+        },
+        "coverage_refs": [
+          {
+            "kind": "WorkScope",
+            "id": "receiving-line-1",
+            "version": "1"
+          }
+        ]
+      },
+      "available_at": {
+        "clock_ref": {
+          "kind": "ClockProfile",
+          "id": "synthetic-clock",
+          "version": "1"
+        },
+        "offset": 10
+      },
+      "effective_window": {
+        "start": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "synthetic-clock",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "end": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "synthetic-clock",
+            "version": "1"
+          },
+          "offset": 20
+        },
+        "bounds": "closed_open"
+      },
+      "evidence_refs": [
+        {
+          "kind": "Evidence",
+          "id": "synthetic-independent-native-production-receipt",
+          "version": "1"
+        }
+      ],
+      "organization_id": "supplier-org",
+      "execution_ref": {
+        "kind": "ProductionExecution",
+        "id": "synthetic-observed-six-panel-production-execution",
+        "version": "1"
+      },
+      "core_event_id": "synthetic-pending-batch-event",
+      "source_allocation_refs": [
+        {
+          "kind": "InventoryAllocation",
+          "id": "material-allocation",
+          "version": "1"
+        }
+      ],
+      "lineage_batch_refs": [
+        {
+          "kind": "MaterialBatch",
+          "id": "raw-material",
+          "version": "1"
+        }
+      ],
+      "ref": {
+        "kind": "StockMovement",
+        "id": "synthetic-observed-six-panel-pending-output",
+        "version": "1"
+      },
+      "physical_movement_key": "synthetic-original-six-panel-pending-output",
+      "kind": "pending_inspection_created",
+      "quantity": {
+        "value": "6",
+        "unit": "panel",
+        "basis_ref": {
+          "kind": "Evidence",
+          "id": "synthetic-connected-quality-basis",
+          "version": "1"
+        }
+      }
+    }
+  ],
+  "batches": [
+    {
+      "ref": {
+        "kind": "ProductBatch",
+        "id": "source-cargo",
+        "version": "0"
+      },
+      "evidence_refs": [
+        {
+          "kind": "Evidence",
+          "id": "synthetic-connected-quality-basis",
+          "version": "1"
+        }
+      ],
+      "scope": {
+        "kind": "project",
+        "ref": {
+          "kind": "Project",
+          "id": "buyer-project",
+          "version": "1"
+        },
+        "coverage_refs": [
+          {
+            "kind": "WorkScope",
+            "id": "receiving-line-1",
+            "version": "1"
+          }
+        ]
+      },
+      "available_at": {
+        "clock_ref": {
+          "kind": "ClockProfile",
+          "id": "synthetic-clock",
+          "version": "1"
+        },
+        "offset": 10
+      },
+      "effective_window": {
+        "start": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "synthetic-clock",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "end": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "synthetic-clock",
+            "version": "1"
+          },
+          "offset": 20
+        },
+        "bounds": "closed_open"
+      },
+      "organization_id": "supplier-org",
+      "owner_id": "supplier-org",
+      "product_ref": {
+        "kind": "ProductSpecification",
+        "id": "panel-spec",
+        "version": "1"
+      },
+      "physical_batch_key": "synthetic-receiving-physical-batch",
+      "actual_quantity": {
+        "value": "6",
+        "unit": "panel",
+        "basis_ref": {
+          "kind": "Evidence",
+          "id": "synthetic-connected-quality-basis",
+          "version": "1"
+        }
+      },
+      "state": "pending_inspection",
+      "lineage_ledger_ref": {
+        "kind": "BatchLineageLedger",
+        "id": "source-batch-lineage",
+        "version": "1"
+      },
+      "requirement_refs": [
+        {
+          "kind": "InspectionRequirement",
+          "id": "panel-use-inspection",
+          "version": "1"
+        }
+      ],
+      "known_defect_refs": [
+        {
+          "kind": "Defect",
+          "id": "visible-panel-defect",
+          "version": "1"
+        }
+      ],
+      "core_event_id": "synthetic-pending-batch-event",
+      "as_of": {
+        "clock_ref": {
+          "kind": "ClockProfile",
+          "id": "synthetic-clock",
+          "version": "1"
+        },
+        "offset": 10
+      }
+    }
+  ],
+  "consumption_attributions": [
+    {
+      "movement_ref": {
+        "kind": "StockMovement",
+        "id": "synthetic-observed-twelve-kg-consumption",
+        "version": "1"
+      },
+      "inputs": [
+        {
+          "batch_ref": {
+            "kind": "MaterialBatch",
+            "id": "raw-material",
+            "version": "1"
+          },
+          "allocation_ref": {
+            "kind": "InventoryAllocation",
+            "id": "material-allocation",
+            "version": "1"
+          },
+          "quantity": {
+            "value": "12",
+            "unit": "kg",
+            "basis_ref": {
+              "kind": "Evidence",
+              "id": "synthetic-production-basis",
+              "version": "1"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "native_receipt": {
+    "schema_version": "supplier-native-production-receipt-observation.v1",
+    "run_id": "synthetic-v4-production-material-connection",
+    "request": {
+      "scope": {
+        "kind": "project",
+        "ref": {
+          "kind": "Project",
+          "id": "buyer-project",
+          "version": "1"
+        },
+        "coverage_refs": [
+          {
+            "kind": "WorkScope",
+            "id": "receiving-line-1",
+            "version": "1"
+          }
+        ]
+      },
+      "available_at": {
+        "clock_ref": {
+          "kind": "ClockProfile",
+          "id": "synthetic-clock",
+          "version": "1"
+        },
+        "offset": 1
+      },
+      "effective_window": {
+        "start": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "synthetic-clock",
+            "version": "1"
+          },
+          "offset": 0
+        },
+        "end": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "synthetic-clock",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "bounds": "closed_open"
+      },
+      "ref": {
+        "kind": "ProductionRequest",
+        "id": "synthetic-original-six-panel-production-request",
+        "version": "1"
+      },
+      "evidence_refs": [
+        {
+          "kind": "Evidence",
+          "id": "synthetic-production-basis",
+          "version": "1"
+        }
+      ],
+      "task_ref": {
+        "kind": "SupplyTask",
+        "id": "production-task",
+        "version": "1"
+      },
+      "organization_id": "supplier-org",
+      "run_id": "synthetic-v4-production-material-connection",
+      "operation_id": "v4-supplier-production-1",
+      "business_key": "synthetic-original-six-panel-production-business",
+      "release_ref": {
+        "kind": "TaskRelease",
+        "id": "production-release",
+        "version": "1"
+      },
+      "method_ref": {
+        "kind": "ProductionMethod",
+        "id": "synthetic-conversion",
+        "version": "1"
+      },
+      "inputs": [
+        {
+          "batch_ref": {
+            "kind": "MaterialBatch",
+            "id": "raw-material",
+            "version": "1"
+          },
+          "allocation_ref": {
+            "kind": "InventoryAllocation",
+            "id": "material-allocation",
+            "version": "1"
+          },
+          "quantity": {
+            "value": "12",
+            "unit": "kg",
+            "basis_ref": {
+              "kind": "Evidence",
+              "id": "synthetic-production-basis",
+              "version": "1"
+            }
+          }
+        }
+      ],
+      "resources": [
+        {
+          "resource_ref": {
+            "kind": "ResourcePool",
+            "id": "production-pool",
+            "version": "1"
+          },
+          "scope_ref": {
+            "kind": "project",
+            "ref": {
+              "kind": "Project",
+              "id": "buyer-project",
+              "version": "1"
+            },
+            "coverage_refs": [
+              {
+                "kind": "WorkScope",
+                "id": "receiving-line-1",
+                "version": "1"
+              }
+            ]
+          },
+          "window_ref": {
+            "kind": "TimeWindow",
+            "id": "production-window",
+            "version": "1"
+          },
+          "quantity": {
+            "value": "2",
+            "unit": "machine-hour",
+            "basis_ref": {
+              "kind": "Evidence",
+              "id": "synthetic-production-basis",
+              "version": "1"
+            }
+          }
+        }
+      ]
+    },
+    "execution": {
+      "scope": {
+        "kind": "project",
+        "ref": {
+          "kind": "Project",
+          "id": "buyer-project",
+          "version": "1"
+        },
+        "coverage_refs": [
+          {
+            "kind": "WorkScope",
+            "id": "receiving-line-1",
+            "version": "1"
+          }
+        ]
+      },
+      "available_at": {
+        "clock_ref": {
+          "kind": "ClockProfile",
+          "id": "synthetic-clock",
+          "version": "1"
+        },
+        "offset": 10
+      },
+      "effective_window": {
+        "start": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "synthetic-clock",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "end": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "synthetic-clock",
+            "version": "1"
+          },
+          "offset": 20
+        },
+        "bounds": "closed_open"
+      },
+      "ref": {
+        "kind": "ProductionExecution",
+        "id": "synthetic-observed-six-panel-production-execution",
+        "version": "1"
+      },
+      "evidence_refs": [
+        {
+          "kind": "Evidence",
+          "id": "synthetic-independent-native-production-receipt",
+          "version": "1"
+        }
+      ],
+      "organization_id": "supplier-org",
+      "task_ref": {
+        "kind": "SupplyTask",
+        "id": "production-task",
+        "version": "1"
+      },
+      "run_id": "synthetic-v4-production-material-connection",
+      "operation_id": "v4-supplier-production-1",
+      "business_key": "synthetic-original-six-panel-production-business",
+      "request_ref": {
+        "kind": "ProductionRequest",
+        "id": "synthetic-original-six-panel-production-request",
+        "version": "1"
+      },
+      "request_sha256": "50167ebae9f8dc5996c6b4bfd985aa40a947cd88fb8fa3f2a9326fdcab79a872",
+      "status": "recorded",
+      "query_status": "present",
+      "core_event_id": "synthetic-pending-batch-event",
+      "recorded_at": {
+        "clock_ref": {
+          "kind": "ClockProfile",
+          "id": "synthetic-clock",
+          "version": "1"
+        },
+        "offset": 10
+      },
+      "movement_refs": [
+        {
+          "kind": "StockMovement",
+          "id": "synthetic-observed-twelve-kg-consumption",
+          "version": "1"
+        },
+        {
+          "kind": "StockMovement",
+          "id": "synthetic-observed-six-panel-pending-output",
+          "version": "1"
+        }
+      ],
+      "recovery_ref": null
+    },
+    "movements": [
+      {
+        "scope": {
+          "kind": "project",
+          "ref": {
+            "kind": "Project",
+            "id": "buyer-project",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "receiving-line-1",
+              "version": "1"
+            }
+          ]
+        },
+        "available_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "synthetic-clock",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "effective_window": {
+          "start": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "synthetic-clock",
+              "version": "1"
+            },
+            "offset": 10
+          },
+          "end": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "synthetic-clock",
+              "version": "1"
+            },
+            "offset": 20
+          },
+          "bounds": "closed_open"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic-independent-native-production-receipt",
+            "version": "1"
+          }
+        ],
+        "organization_id": "supplier-org",
+        "execution_ref": {
+          "kind": "ProductionExecution",
+          "id": "synthetic-observed-six-panel-production-execution",
+          "version": "1"
+        },
+        "core_event_id": "synthetic-pending-batch-event",
+        "source_allocation_refs": [
+          {
+            "kind": "InventoryAllocation",
+            "id": "material-allocation",
+            "version": "1"
+          }
+        ],
+        "lineage_batch_refs": [
+          {
+            "kind": "MaterialBatch",
+            "id": "raw-material",
+            "version": "1"
+          }
+        ],
+        "ref": {
+          "kind": "StockMovement",
+          "id": "synthetic-observed-twelve-kg-consumption",
+          "version": "1"
+        },
+        "physical_movement_key": "synthetic-original-twelve-kg-consumption",
+        "kind": "input_consumed",
+        "quantity": {
+          "value": "12",
+          "unit": "kg",
+          "basis_ref": {
+            "kind": "Evidence",
+            "id": "synthetic-production-basis",
+            "version": "1"
+          }
+        }
+      },
+      {
+        "scope": {
+          "kind": "project",
+          "ref": {
+            "kind": "Project",
+            "id": "buyer-project",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "receiving-line-1",
+              "version": "1"
+            }
+          ]
+        },
+        "available_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "synthetic-clock",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "effective_window": {
+          "start": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "synthetic-clock",
+              "version": "1"
+            },
+            "offset": 10
+          },
+          "end": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "synthetic-clock",
+              "version": "1"
+            },
+            "offset": 20
+          },
+          "bounds": "closed_open"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic-independent-native-production-receipt",
+            "version": "1"
+          }
+        ],
+        "organization_id": "supplier-org",
+        "execution_ref": {
+          "kind": "ProductionExecution",
+          "id": "synthetic-observed-six-panel-production-execution",
+          "version": "1"
+        },
+        "core_event_id": "synthetic-pending-batch-event",
+        "source_allocation_refs": [
+          {
+            "kind": "InventoryAllocation",
+            "id": "material-allocation",
+            "version": "1"
+          }
+        ],
+        "lineage_batch_refs": [
+          {
+            "kind": "MaterialBatch",
+            "id": "raw-material",
+            "version": "1"
+          }
+        ],
+        "ref": {
+          "kind": "StockMovement",
+          "id": "synthetic-observed-six-panel-pending-output",
+          "version": "1"
+        },
+        "physical_movement_key": "synthetic-original-six-panel-pending-output",
+        "kind": "pending_inspection_created",
+        "quantity": {
+          "value": "6",
+          "unit": "panel",
+          "basis_ref": {
+            "kind": "Evidence",
+            "id": "synthetic-connected-quality-basis",
+            "version": "1"
+          }
+        }
+      }
+    ],
+    "batches": [
+      {
+        "ref": {
+          "kind": "ProductBatch",
+          "id": "source-cargo",
+          "version": "0"
+        },
+        "evidence_refs": [
+          {
+            "kind": "Evidence",
+            "id": "synthetic-connected-quality-basis",
+            "version": "1"
+          }
+        ],
+        "scope": {
+          "kind": "project",
+          "ref": {
+            "kind": "Project",
+            "id": "buyer-project",
+            "version": "1"
+          },
+          "coverage_refs": [
+            {
+              "kind": "WorkScope",
+              "id": "receiving-line-1",
+              "version": "1"
+            }
+          ]
+        },
+        "available_at": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "synthetic-clock",
+            "version": "1"
+          },
+          "offset": 10
+        },
+        "effective_window": {
+          "start": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "synthetic-clock",
+              "version": "1"
+            },
+            "offset": 10
+          },
+          "end": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "synthetic-clock",
+              "version": "1"
+            },
+            "offset": 20
+          },
+          "bounds": "closed_open"
+        },
+        "organization_id": "supplier-org",
+        "owner_id": "supplier-org",
+        "product_ref": {
+          "kind": "ProductSpecification",
+          "id": "panel-spec",
+          "version": "1"
+        },
+        "physical_batch_key": "synthetic-receiving-physical-batch",
+        "actual_quantity": {
+          "value": "6",
+          "unit": "panel",
+          "basis_ref": {
+            "kind": "Evidence",
+            "id": "synthetic-connected-quality-basis",
+            "version": "1"
+          }
+        },
+        "state": "pending_inspection",
+        "lineage_ledger_ref": {
+          "kind": "BatchLineageLedger",
+          "id": "source-batch-lineage",
+          "version": "1"
+        },
+        "requirement_refs": [
+          {
+            "kind": "InspectionRequirement",
+            "id": "panel-use-inspection",
+            "version": "1"
+          }
+        ],
+        "known_defect_refs": [
+          {
+            "kind": "Defect",
+            "id": "visible-panel-defect",
+            "version": "1"
+          }
+        ],
+        "core_event_id": "synthetic-pending-batch-event",
+        "as_of": {
+          "clock_ref": {
+            "kind": "ClockProfile",
+            "id": "synthetic-clock",
+            "version": "1"
+          },
+          "offset": 10
+        }
+      }
+    ],
+    "consumption_attributions": [
+      {
+        "movement_ref": {
+          "kind": "StockMovement",
+          "id": "synthetic-observed-twelve-kg-consumption",
+          "version": "1"
+        },
+        "inputs": [
+          {
+            "batch_ref": {
+              "kind": "MaterialBatch",
+              "id": "raw-material",
+              "version": "1"
+            },
+            "allocation_ref": {
+              "kind": "InventoryAllocation",
+              "id": "material-allocation",
+              "version": "1"
+            },
+            "quantity": {
+              "value": "12",
+              "unit": "kg",
+              "basis_ref": {
+                "kind": "Evidence",
+                "id": "synthetic-production-basis",
+                "version": "1"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "assumptions": [
+    "Explicit synthetic original A06 request/material-resource intentions are independently matched to supplied native receipt at 10; no production or journal is generated.",
+    "Twelve kg consumed is attributed to original material batch and allocation; six panels remain pending inspection with original visible defect/unknown responsibility/cost values preserved.",
+    "Output conversion and zero loss/WIP in this particular input are supplied synthetic assumptions under declared method, not actual professional/core results.",
+    "Original saved task/record/result/audit/source digests are absent until A06 is run and bound with read-only journal verification. Full V4 upstream order/task and real effects remain pending."
+  ]
+}

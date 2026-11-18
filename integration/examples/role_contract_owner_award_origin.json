@@ -1,0 +1,61 @@
+{
+  "schema_version": "role-contract-fixture-origin.v1",
+  "origin": "synthetic",
+  "scenario_id": "V2",
+  "case_id": "v2-owner-award-accept",
+  "action_id": "OWN-A10",
+  "run_id": "synthetic-v2-procurement-publication-01",
+  "functional_status": "unverified",
+  "source_note": "Independent synthetic Owner A10 acceptance input aligned with V2 run, identities, scope, package/round and assumed bid price40. Native selection, Offer/final terms, budget/management occupancy and Contractor capacity verification are assumed declarations, not saved evaluation or contract evidence. No Contractor acceptance is supplied: retain explicit pending counterparty acceptance and capacity conditions; original A10 processor checks current original budget/resources. No selection outcome, signature, contract, reservation or formal receipt is provided.",
+  "expected_result": {
+    "kind": "completed",
+    "choice": "accept"
+  },
+  "expected_output_refs": {
+    "offer_ref": {
+      "kind": "Offer",
+      "id": "v2-owner-award-selected-offer",
+      "version": "1"
+    },
+    "terms_ref": {
+      "kind": "ContractTerms",
+      "id": "v2-owner-award-final-terms",
+      "version": "1"
+    },
+    "condition_refs": [
+      {
+        "kind": "Requirement",
+        "id": "v2-owner-award-pending-contractor-acceptance",
+        "version": "1"
+      },
+      {
+        "kind": "Requirement",
+        "id": "v2-owner-award-contractor-capacity",
+        "version": "1"
+      }
+    ]
+  },
+  "basis_sha256": "5f6cf5e37932c2d83bbc2182dfc354c8d24fa458dfcf076878f9c9b708ea4164",
+  "basis_hash_recipe": "Canonical task_digest(action_input, objects_without_evidence, source_note).",
+  "artifact_sha256": {
+    "role_contract_owner_award_invocation.json": "37a1e77af0aca70e6d1c31e33fdd0ed1993052a588c3fe81bea863d644eb1aa6",
+    "role_contract_owner_award_host.json": "96274c6edf585c1d41e103038c167fcce8aed1218dd21c6903b1d1b1f6e52b8f"
+  },
+  "source_artifacts": {
+    "integration/examples/role_contract_owner_tender_evaluation_invocation.json": "5c2329f5937b10f459caf46d0d9d65d6716eafd53e9e399f892d0816e61e29ac",
+    "integration/examples/role_contract_owner_tender_evaluation_host.json": "88dbff45aac4923a80267012a3a594feee495a54abd8bc3f5933600fe0298469",
+    "integration/examples/role_contract_owner_tender_evaluation_origin.json": "bc4e0133c187eaddf579e8254278b84a1fe9eadffd2ffd49c6b186c45674195c"
+  },
+  "declared_budget": {
+    "authorized": "150",
+    "prior_use": "20",
+    "price": "40",
+    "currency": "HKD"
+  },
+  "limitations": [
+    "Independent native selection/Offer/terms and budget/capacity declarations are synthetic assumed inputs, not original evaluation or registration evidence.",
+    "No Contractor acceptance exists in this input; Owner acceptance retains pending party and capacity conditions and does not form a contract.",
+    "tender_evaluation_inputs is not configured yet; actual selection requires the original saved evaluation and independent native mapping.",
+    "Input schemas, A10 processor/capacity method and host have not run; expected output refs are validation metadata only."
+  ]
+}

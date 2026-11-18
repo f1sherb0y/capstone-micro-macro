@@ -1,0 +1,213 @@
+{
+  "$defs": {
+    "BranchTarget": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "branch",
+          "title": "Kind",
+          "type": "string"
+        },
+        "choice": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Choice",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "choice"
+      ],
+      "title": "BranchTarget",
+      "type": "object"
+    },
+    "CheckTarget": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "check",
+          "title": "Kind",
+          "type": "string"
+        },
+        "check_id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Check Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "check_id"
+      ],
+      "title": "CheckTarget",
+      "type": "object"
+    },
+    "DimensionTarget": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "dimension",
+          "title": "Kind",
+          "type": "string"
+        },
+        "dimension": {
+          "enum": [
+            "C",
+            "D",
+            "M",
+            "B",
+            "F",
+            "V"
+          ],
+          "title": "Dimension",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "dimension"
+      ],
+      "title": "DimensionTarget",
+      "type": "object"
+    },
+    "EvidenceClaim": {
+      "additionalProperties": false,
+      "properties": {
+        "action_id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Action Id",
+          "type": "string"
+        },
+        "source_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Source Sha256",
+          "type": "string"
+        },
+        "target": {
+          "discriminator": {
+            "mapping": {
+              "branch": "#/$defs/BranchTarget",
+              "check": "#/$defs/CheckTarget",
+              "dimension": "#/$defs/DimensionTarget",
+              "scenario": "#/$defs/ScenarioTarget"
+            },
+            "propertyName": "kind"
+          },
+          "oneOf": [
+            {
+              "$ref": "#/$defs/DimensionTarget"
+            },
+            {
+              "$ref": "#/$defs/BranchTarget"
+            },
+            {
+              "$ref": "#/$defs/CheckTarget"
+            },
+            {
+              "$ref": "#/$defs/ScenarioTarget"
+            }
+          ],
+          "title": "Target"
+        },
+        "outcome": {
+          "enum": [
+            "passed",
+            "failed",
+            "unknown",
+            "not_applicable"
+          ],
+          "title": "Outcome",
+          "type": "string"
+        },
+        "origin": {
+          "enum": [
+            "synthetic",
+            "actual"
+          ],
+          "title": "Origin",
+          "type": "string"
+        },
+        "artifact_path": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Artifact Path",
+          "type": "string"
+        },
+        "artifact_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Artifact Sha256",
+          "type": "string"
+        },
+        "json_pointer": {
+          "title": "Json Pointer",
+          "type": "string"
+        }
+      },
+      "required": [
+        "action_id",
+        "source_sha256",
+        "target",
+        "outcome",
+        "origin",
+        "artifact_path",
+        "artifact_sha256",
+        "json_pointer"
+      ],
+      "title": "EvidenceClaim",
+      "type": "object"
+    },
+    "ScenarioTarget": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "scenario",
+          "title": "Kind",
+          "type": "string"
+        },
+        "scenario_id": {
+          "enum": [
+            "V1",
+            "V2",
+            "V3",
+            "V4",
+            "V5",
+            "V6",
+            "V7"
+          ],
+          "title": "Scenario Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "scenario_id"
+      ],
+      "title": "ScenarioTarget",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "action-evidence-map.v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "claims": {
+      "items": {
+        "$ref": "#/$defs/EvidenceClaim"
+      },
+      "title": "Claims",
+      "type": "array"
+    }
+  },
+  "required": [
+    "schema_version",
+    "claims"
+  ],
+  "title": "ActionEvidenceMap",
+  "type": "object"
+}

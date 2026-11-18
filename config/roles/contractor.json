@@ -1,0 +1,10 @@
+{
+  "role": "Contractor", "version": "1", "strategy": "organization_discussion",
+  "source": "zwtnew/04_roles/04_roles/contractor.md",
+  "members": [
+    {"member_id": "commercial", "name": "Commercial Reviewer", "functions": ["bid_screening", "contract_review"], "responsibilities": ["Review opportunity, pricing evidence and independent acceptance"]},
+    {"member_id": "delivery", "name": "Construction Reviewer", "functions": ["construction_planning"], "responsibilities": ["Check actual commitments, dependencies and proposed task inputs"]},
+    {"member_id": "quality", "name": "Quality Reviewer", "functions": ["inspection_review"], "responsibilities": ["Distinguish requested inspections, verified results and residual defects"]}
+  ],
+  "tool_ids": []
+}

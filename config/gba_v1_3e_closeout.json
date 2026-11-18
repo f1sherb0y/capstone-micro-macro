@@ -1,0 +1,197 @@
+{
+  "schema_version": "gba-v1-3e-closeout.v1",
+  "batch": "3E",
+  "status": "delivered_N05_with_explicit_unsupported_interface_boundaries",
+  "supported_native_contacts_complete": true,
+  "overall_goal3_complete": false,
+  "scope": "Original supply willingness/selection, actual signature-to-supply and outcome feedback, supported seeking/private relationship review. Batch inventory only, not all macro-action denominator.",
+  "operations": [
+    {
+      "role": "Supplier",
+      "operation": "consider_supply_order",
+      "macro_input": [
+        "project",
+        "contractor_id",
+        "required_resource",
+        "prior_fit"
+      ],
+      "micro_handler": "integration/supplier_order_native.py",
+      "micro_processing": "Original Supplier A01 screening -> A02 compatible product -> A03 actual pricing/capacity -> A04 exact full independent commercial acceptance. Complete-demand declines may end upstream. Exact current actual request, same authorized parties and strictly earlier own outcomes.",
+      "return_to_macro": "Same original result bound to consider_supply_order proposal and final supplier_order_acceptance; native supplier_order_decision accepted/declined.",
+      "feedback_consumer": "Own actual supplier_order_decision/supplier_selected -> later Supplier A01-A04; actual quote refusal changes later original A01 policy under declared threshold. Current actual contract_awarded consumed by all four stages.",
+      "status": "executed_current_bounded_a01_a04_supply_willingness",
+      "evidence": "output/integration/goal3e_procurement_20261018_01/checks.json",
+      "boundary": "Independent synthetic quantity/cost/cash/capacity/initial assent inputs; no conversion from native normalized resources. No detailed registered order, stock/cash reservation or physical work. Partial/revised/unresolved results remain unresolved."
+    },
+    {
+      "role": "Contractor",
+      "operation": "select_supplier",
+      "macro_input": [
+        "offers"
+      ],
+      "micro_handler": "integration/contractor_supply_native.py",
+      "micro_processing": "Actual accepted native Supplier outcomes constrain candidates; exact original A03/A04 results support independently received commercial views; explicit prior-selection priority penalty -> original Contractor A05 verifies authorized terms and limit. With zero accepted suppliers, optional original A05 observation validates all current actual refusals and own earlier committed failures, producing a specific dependency wait.",
+      "return_to_macro": "Same selected_supplier_id in original select_supplier proposal and contractor_supplier_selection final; original engine stores selection/flag/ACTIVE normalized engagement. Mobilization and construction transition occur in a later native call. N05 specific wait maps to accepted=false/final=false; native engine records actual failed selection and 15-day delay, without a supplier.",
+      "feedback_consumer": "Actual supplier_selected -> own later A05; earlier actual selection adjusts A priority 0+2*1=2 vs B=1 and changes selection. Same actual contract_awarded also consumed by current A05. Same negative A05/native outcome -> existing private failure follow-up and next-tick original A05 repeated-failure dependency judgment.",
+      "status": "executed_positive_and_no_accepted_micro_selection_with_actual_feedback",
+      "evidence": "output/integration/goal3e_closeout_20261019_01/accepted/checks.json",
+      "boundary": "No inquiry delivery, supplier appointment, formal order, reservation, cash or physical work from the private follow-up. Three micro waits remain pending rather than being relabeled as successful procurement. Partial acceptance, revised terms and generic unresolved/missing outcomes are not translated; original detailed interface gaps remain blocked."
+    }
+  ],
+  "monthly_subactions": [
+    {
+      "role": "Contractor",
+      "operation": "maintain_supplier_relationship",
+      "macro_input": "Own strictly earlier same-run original A05 supplier selections, actual current public normalized supplier reliability, corresponding project aggregate material availability and own native free ratio; independent future inquiry preparation sources",
+      "micro_handler": "integration.contractor_supplier_review:ContractorSupplierReviewApplication",
+      "micro_processing": "Original CONTRACTOR-A05 preparation authority, product/positive quantity/receiving window/inquiry-channel checks, then optional typed reliability/availability shortfall and exact previously executed issue comparison",
+      "return_to_macro": "Same original A05 result -> original monthly proposal/final -> actual maintain_supplier_relationship or maintain_operations and own native memory",
+      "feedback_consumer": "Later original own A05 reads exact actual earlier supplier selection and same confirmed monthly review/result; tick 3 suppresses A same issue from tick 2 while reviewing newly selected B",
+      "status": "executed_current_micro_judgment_and_feedback",
+      "evidence": "output/integration/goal3e_supplier_review_20261018_01/checks.json",
+      "boundary": "Original monthly internal selected-supplier reliability/material availability review for future bids. Same-run original Supplier A01-A04 and Contractor A05 produce actual supplier selections; only own strictly earlier selections are eligible. Current native supplier reliability and project material availability are normalized/aggregate indicators, not physical stock, commercial terms or remaining obligations. Future one-panel inquiry requirements, channels, preparation authority and review thresholds are independent synthetic initial sources. Original A05 validates the inquiry preparation; the monthly judgment chooses actual review targets. No inquiry is sent, no supplier consent, order, contract amendment, reservation, spending or physical reliability improvement is inferred."
+    },
+    {
+      "role": "Supplier",
+      "operation": "seek_supply_contract",
+      "macro_input": "Actual current monthly macro_environment and strictly earlier own micro-origin monthly outcomes",
+      "micro_handler": "integration.supplier_monthly_native:SupplierMonthlyApplication",
+      "micro_processing": "Original exact inquiry/product/function/geography/work-method and shared physical capacity checks, then optional sourced demand/own-outreach constraint inside original A01",
+      "return_to_macro": "Legal original positive candidate proposal then original final decision carries actual A01 respond/decline; original scheduler executes seek_supply_contract or maintain_operations",
+      "feedback_consumer": "Later own original A01 reads exact earlier original monthly event; only actual contract-seeking counts toward its own outreach cap",
+      "status": "executed_micro_judgment_native_execution_and_later_own_feedback",
+      "evidence": "output/integration/goal3e_monthly_20261018_01/checks.json",
+      "boundary": "Independent initial synthetic inquiry and private product/method/physical capacity/nonempty commitment disclosures only. No actual macro inquiry receipt, quote, order, reservation, stock adjustment, price publication or physical reliability improvement. Original normalized scalar mechanics remain native."
+    }
+  ],
+  "lifecycle_feedback": [
+    {
+      "macro_call_site": "simulation/project_lifecycle_engine.py:_handle_contract_award; contract_awarded",
+      "behavior": "Original macro signs only after independent Contractor and Owner consent",
+      "micro_contacts": [
+        "integration/native_contract_supply.py:signed_contract_for_supply",
+        "integration/contractor_supply_native.py",
+        "integration/supplier_order_native.py"
+      ],
+      "boundary": "Actual native contract/event only; no detailed signed-document, payment or physical-reservation receipt",
+      "status": "executed_current_actual_signature_to_supply_handoff",
+      "evidence": "output/integration/goal3e_procurement_20261018_01/checks.json",
+      "source_reuse_boundary": "Current same-project signed handoff actually rerun in 3E. Separate two-tick windows prove later own selection/refusal consumption; no current whole-3A/3F claim.",
+      "historical_signature_evidence": "output/integration/goal3a_20261018_05/historical-signature-feedback.json",
+      "batch": "3E",
+      "feedback_consumer": "Current tick-8 actual contract_awarded and same contract hashes -> tick-9 two Supplier A01-A04 chains and original Contractor A05 -> actual supplier_selected.",
+      "scope_calibration": {
+        "required_refs": [],
+        "note": "Actual native bilateral contract/signature-to-supply handoff already has bounded evidence; no detailed money/physical claim.",
+        "new_execution_evidence": false
+      }
+    },
+    {
+      "batch": "3E",
+      "macro_call_site": "simulation/project_lifecycle_engine.py: _select_supplier_after_contract / supplier_order_decision / supplier_selected",
+      "behavior": "Original candidate pool calls actual Supplier willingness; Contractor selects from actual accepted offers; macro stores selected Supplier, flag and ACTIVE normalized engagement and returns. Later macro call handles mobilization and construction transition. Current signed handoff stops immediately after selection in contract_award.",
+      "micro_contacts": [
+        "integration/supplier_order_native.py",
+        "integration/contractor_supply_native.py",
+        "integration/supplier_order_native_feedback.py",
+        "integration/contractor_supply_native_feedback.py",
+        "integration/procurement_failure_followup.py"
+      ],
+      "status": "executed_positive_and_negative_native_outcomes_with_later_own_consumption",
+      "evidence": "output/integration/goal3e_procurement_20261018_01/checks.json",
+      "feedback_consumer": "Actual private willingness and selection projections -> original later own Supplier A01-A04/Contractor A05. Supplier cost/stock/cash/strategy is not disclosed to Contractor.",
+      "boundary": "No inquiry delivery, supplier appointment, formal order, reservation, cash or physical work from the private follow-up. Three micro waits remain pending rather than being relabeled as successful procurement. Unsupported partial/revised terms and detailed formal supply execution remain blocked. Physical work remains 3F.",
+      "failure_feedback": {
+        "status": "executed_micro_negative_native_failure_private_followup_and_next_tick_judgment",
+        "evidence": "output/integration/goal3e_closeout_20261019_01/accepted/checks.json",
+        "consumer": "integration.procurement_failure_followup:ProcurementFailureFollowup",
+        "actual_failure_events": 3,
+        "actual_original_A05_consumers": 3,
+        "negative_selection_counts_as_micro_coverage": true,
+        "formal_inquiry_delivered": false,
+        "boundary": "No inquiry delivery, supplier appointment, formal order, reservation, cash or physical work from the private follow-up. Three micro waits remain pending rather than being relabeled as successful procurement.",
+        "later_negative_A05_consumers": 2
+      },
+      "scope_calibration": {
+        "required_refs": [
+          "N05"
+        ],
+        "note": "N05 exact A05 dependency wait, original negative execution and later same-failure consumption accepted. Other unresolved results are not promoted.",
+        "new_execution_evidence": true
+      },
+      "historical_positive_only_scope": {
+        "status": "executed_current_native_supply_outcomes_and_later_own_consumption",
+        "boundary": "Native positive selection is not detailed SupplyOrder/OrderLine, formation record, exclusive reservation, payment or delivery. No-accepted selection remains original native negative judgment; actual supplier_selection_failed now reaches an own original A05 private request_quote proposal. Closed micro negative selection, partial/revised/unresolved terms and formal inquiry delivery remain blocked. Physical execution remains 3F.",
+        "failure_feedback": {
+          "status": "executed_actual_native_failure_to_original_private_A05_request_quote",
+          "evidence": "output/integration/goal3e_noaccepted_20261018_01/checks.json",
+          "consumer": "integration.procurement_failure_followup:ProcurementFailureFollowup",
+          "actual_failure_events": 3,
+          "actual_original_A05_consumers": 3,
+          "negative_selection_counts_as_micro_coverage": false,
+          "formal_inquiry_delivered": false,
+          "boundary": "Original native no-supplier selection remains a failure and adds its original delay. Actual own committed failure may trigger an independently authorized original A05 private request_quote proposal. No inquiry delivery, new Supplier acceptance, selected supplier, detailed order, reservation or payment is inferred. Partial acceptance and revised/unresolved terms remain blocked. No Contractor A05 selection decision is claimed for the native negative selection."
+        },
+        "scope_calibration": {
+          "required_refs": [
+            "N05"
+          ],
+          "note": "Positive selection/failure feedback is proved; negative micro selection remains missing; detailed order/reservation is PLAN work.",
+          "new_execution_evidence": false
+        }
+      },
+      "negative_selection_evidence": "output/integration/goal3e_closeout_20261019_01/accepted/checks.json"
+    }
+  ],
+  "negative_selection_contact": {
+    "id": "N05",
+    "batch": "3E",
+    "status": "executed_micro_negative_selection_native_failure_and_later_same_result_consumption",
+    "records": [
+      "B11"
+    ],
+    "macro_input": "Exact current original select_supplier offers, each authenticated current supplier_order_decision and own strictly earlier committed supplier_selection_failed; own actual signed contractor mandate.",
+    "micro_processing": "Existing CONTRACTOR-A05 optional native refusal observation checks all current decisions are refusals, verifies own earlier failure proofs and returns an explicit dependency wait. Earlier actual failure changes the later wait condition to repeated-no-accepted. Generic missing/partial/unresolved results are never translated.",
+    "return_to_macro": "Exact original A05 wait result/hash -> original select_supplier proposal accepted=false -> contractor_supplier_selection final decision=false -> original engine supplier_selection_failed and +15 delay days. Pending micro task remains waiting_input.",
+    "feedback_consumer": "Existing ProcurementFailureFollowup authenticates same committed event/proposal/final/A05 result and forms private request_quote intention; next-tick A05 consumes same earlier actual failure/result and changes its dependency condition.",
+    "next": "N05 actual no-accepted path accepted. Retain unsupported partial/revised terms, formal inquiry delivery and detailed order execution as explicit interface/PLAN gaps; no other batch started.",
+    "historical_unwired_status": {
+      "id": "N05",
+      "batch": "3E",
+      "status": "unwired_negative_selection_micro_judgment",
+      "records": [
+        "B11"
+      ],
+      "macro_input": "Actual original all-supplier refusals/empty accepted candidate set",
+      "micro_processing": "Original Contractor A05 lacks a completed negative selection option; existing failure followup is not that decision",
+      "return_to_macro": "Original negative supplier selection without inventing an accepted supplier",
+      "feedback_consumer": "Existing ProcurementFailureFollowup consumes actual failure; preserve its evidence",
+      "next": "Reuse handler with a bounded negative choice or document exact interface limitation"
+    },
+    "complete": true,
+    "evidence": "output/integration/goal3e_closeout_20261019_01/accepted/checks.json",
+    "configuration": "config/procurement_negative_selection.json",
+    "boundary": "No inquiry delivery, supplier appointment, formal order, reservation, cash or physical work from the private follow-up. Three micro waits remain pending rather than being relabeled as successful procurement."
+  },
+  "actual_pending_boundary": "A05 wait tasks remain waiting_input; the original negative native decision actually executed. This is no successful purchase/registered order.",
+  "pure_macro_mechanisms": [
+    "Candidate pool generation and original request scheduling",
+    "Original failed-selection delay accumulation",
+    "Normalized engagement/resource updates and later mobilization; no physical-work claim"
+  ],
+  "unsupported_interfaces": [
+    {
+      "status": "blocked_unexpressible_by_existing_native_interface",
+      "decision": "Partial supplier acceptance or revised/unresolved terms",
+      "reason": "The existing bounded macro selection does not express detailed partial/revised commercial terms. Do not coerce a selected supplier or promote a generic unresolved A05."
+    },
+    {
+      "status": "blocked_missing_formal_source_or_interface",
+      "decision": "Sent inquiry, detailed registered supply order/lines, exclusive stock/cash reservation and payment",
+      "reason": "Private request_quote/acceptance and normalized native engagement are not formal execution receipts."
+    }
+  ],
+  "precondition_boundary": "Fixed N05 path has actual supplier offers whose accepted subset is empty. A missing original supplier pool/request is not replaced with fabricated refusal events.",
+  "evidence": "output/integration/goal3e_closeout_20261019_01/checks.json",
+  "stop_after_delivery": true
+}

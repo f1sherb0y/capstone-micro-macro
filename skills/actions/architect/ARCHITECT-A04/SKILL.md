@@ -1,0 +1,11 @@
+# ARCHITECT-A04 设计人员与实际任务计划
+
+有效原委任、独立A04职能/范围权限、已授权完整任务集、获授权依赖成果、已执行工作量依据、期限和完整当前跨项目ResourceCalendar逐原版本核对。适任人员须原实际personnel_ids、职能/地区资格及有效standing；同一人不能以多个资源重复贡献容量。工作方法不支持unsupported，无共享容量deferred。
+
+按原计划时间和任务身份稳定排序，用micro.capacity.fixed_location.v1逐任务核对并发容量，保留已选择任务需求及其他项目占用；独立就绪任务可先排，缺资料/未完成前置/人员不足任务继续等待。成果用途或依赖未知不当满足，旧合法成果不因出现新版草稿失效。
+
+工作量来自原成功WorkEstimate，剩余量须等于原总量减完整已确认WorkFact分片；原investment_key去重，已投入内部成本保留，恢复/重复调度只排剩余量。原任务投入已满不再排新投入；合法返工须另有授权增量，不能靠一次回复或能力分替代实际工作。未知投入不能作为已完成，也不把重复引用当新成本。
+
+原ResourceAllocation/Reservation逐原commitment与同版calendar核对，只有本次实际选择的任务排期转换时才扣除其旧占用，不重复累计；未选/阻塞任务占用继续保留。revise_plan保留原WorkPlan及逐任务existing_allocation_ref。核心必须按输出items范围原子更新，不因部分计划遗漏就释放其他任务；投入与费用历史不得删除。
+
+request_inputs只向原请求及ResponseRequirement有权接收者提出具体ArchitectQuestion。completed仅计划/补件草稿，确认后才分派；实际执行器另记投入、完成条件及内部成本，本动作不生成成果完成或向自身收费。真实任务/工作量/人员/投入/依赖/原预留投影生产者、跨动作兼容、正式资源submit/query、计划原子转换与反馈仍待集成。CHECK-ARCHITECT-004/038/048待集中测试；当前固定地点、同单位、单时钟、半开窗口和恒定生产率。

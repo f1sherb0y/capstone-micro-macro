@@ -1,0 +1,15 @@
+{
+  "schema_version": "role-contract-example-origin.v1",
+  "origin": "synthetic",
+  "action_id": "BANK-A02",
+  "source_file": "tests/fixtures/roles/bank_intake.v1.json",
+  "source_sha256": "93aab44d2064a0a84d540eb1be444a0ebf03fbe63dfd4c5a85e3e6e77d00a63c",
+  "source_note": "Synthetic Bank A02 intake example: invented borrower, application, authority, product and disclosures. No real intake registration, risk approval, loan, payment or macro effect.",
+  "materialization": "Original input and domain objects copied unchanged. Independent run/operation/task/read-token/candidate and explicit Bank organization/grant supplied; two synthetic evidence projections point to this provenance record.",
+  "runtime_source": "Only configured projections; no import of tests or historical results.",
+  "validation": "JSON syntax only; schema, factory and action have not been executed.",
+  "artifact_sha256s": {
+    "role_contract_bank_intake_invocation.json": "36e4c4e15b4d477384bd5fc0ba7476e90ae5924df2dfcfe2ab2e2cc4028ab1f0",
+    "role_contract_bank_intake_host.json": "460410687f08f111f7bcbb113d4b7e575e887cefe97e60cb639dd7f5c7677f20"
+  }
+}

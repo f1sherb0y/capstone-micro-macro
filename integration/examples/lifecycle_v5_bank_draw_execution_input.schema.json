@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Original Bank draw approval and actual registered execution approval",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "scenario_id",
+    "run_id",
+    "bank_organization_id",
+    "request",
+    "configuration",
+    "sources"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "lifecycle-v5-bank-draw-execution-input.v1"
+    },
+    "scenario_id": {
+      "const": "V5"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "request": {
+      "type": "object",
+      "description": "Formal current Bank A07 invocation with initiate operation_context and actual registered draw_approval_ref."
+    },
+    "configuration": {
+      "type": "object",
+      "description": "BankRoleContractSettings with draw_approval_inputs selecting original same-Bank A06 TaskIdentity and BankDrawHandoffBasis reference; actual same-store draw worker and independent history/approval validators required."
+    },
+    "sources": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "draw_result",
+        "bank_input",
+        "draw_basis",
+        "approval",
+        "execution_arrangement"
+      ],
+      "properties": {
+        "draw_result": {
+          "$ref": "#/$defs/sourceFile"
+        },
+        "bank_input": {
+          "$ref": "#/$defs/sourceFile"
+        },
+        "draw_basis": {
+          "$ref": "#/$defs/sourceFile"
+        },
+        "approval": {
+          "$ref": "#/$defs/sourceFile"
+        },
+        "execution_arrangement": {
+          "$ref": "#/$defs/sourceFile"
+        }
+      }
+    },
+    "bank_organization_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    }
+  },
+  "$defs": {
+    "sourceFile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "file_sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "file_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    }
+  }
+}

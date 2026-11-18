@@ -1,0 +1,1568 @@
+{
+  "schema_version": "lifecycle-input-case.v1",
+  "scenario_id": "V6",
+  "case_id": "v6-qs-final-request-unresolved-claim-evidence",
+  "origin": "synthetic",
+  "run_id": "synthetic-v6-qs-final-evidence",
+  "status": "input_prepared_execution_pending",
+  "source_declaration": {
+    "kind": "explicit_synthetic",
+    "assumptions": [
+      "An isolated synthetic contract has one submitted, unresolved contractor change claim; instruction, priced lines and determination basis have not been supplied.",
+      "Determined changes, certificates, receipts, payment executions, adjustments and prior final-account executions are explicitly empty within this isolated fixture, not inferred from native ledgers.",
+      "Base contract amount remains unknown. Zero retention fraction is a fixture assumption, not a calculated settlement value.",
+      "Synthetic authorizations and the claim are declared fixture inputs, not a persisted Contractor-A09 output or a connected V6 handover chain.",
+      "The request_evidence opinion does not resolve the claim, calculate a final price, settle cash or formally determine rights."
+    ]
+  },
+  "steps": [
+    {
+      "step_id": "v6-qs-final-evidence",
+      "action_id": "QS-A09",
+      "operation_id": "v6-qs-final-evidence-30",
+      "expected_kind": "completed",
+      "expected_choice": "request_evidence",
+      "expected_question_refs": [
+        {
+          "kind": "EvidenceTarget",
+          "id": "v6-final-claim-evidence-question",
+          "version": "1"
+        }
+      ],
+      "expected_response_requirement_refs": [
+        {
+          "kind": "ResponseRequirement",
+          "id": "v6-final-claim-response-requirement",
+          "version": "1"
+        }
+      ],
+      "expected_recipient_ids": [
+        "contractor"
+      ],
+      "expected_unresolved_claim_refs": [
+        {
+          "kind": "ChangeClaim",
+          "id": "v6-final-unresolved-claim",
+          "version": "1"
+        }
+      ],
+      "output_directory": "output/integration/v6_qs_final_evidence_pending_01",
+      "host": "integration.qs_role_contract_host:build_role_host",
+      "request": {
+        "schema_version": "role-contract-invocation.v1",
+        "context": {
+          "run_id": "synthetic-v6-qs-final-evidence",
+          "actor_id": "qs-actor",
+          "function_ref": {
+            "kind": "FunctionAssignment",
+            "id": "v6-qs-final-function",
+            "version": "1"
+          },
+          "authorization_refs": [
+            {
+              "kind": "Authorization",
+              "id": "v6-qs-final-grant",
+              "version": "1"
+            }
+          ],
+          "operation_id": "v6-qs-final-evidence-30",
+          "contract_ref": {
+            "kind": "ActionContract",
+            "id": "QS-A09",
+            "version": "1"
+          },
+          "task_ref": {
+            "kind": "DecisionTask",
+            "id": "v6-qs-final-evidence-30-task",
+            "version": "1"
+          },
+          "scope": {
+            "kind": "assessment_case",
+            "ref": {
+              "kind": "OwnerCase",
+              "id": "v6-qs-closeout-case",
+              "version": "1"
+            },
+            "coverage_refs": [
+              {
+                "kind": "WorkScope",
+                "id": "v6-qs-unresolved-scope",
+                "version": "1"
+              }
+            ]
+          },
+          "business_time": {
+            "clock_ref": {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            "offset": 30
+          },
+          "read_token": "synthetic-v6-qs-final-evidence:read:1",
+          "visible_refs": [
+            {
+              "kind": "Contract",
+              "id": "v6-qs-final-contract",
+              "version": "1"
+            },
+            {
+              "kind": "FinalAccountProfile",
+              "id": "v6-qs-final-evidence-profile",
+              "version": "1"
+            },
+            {
+              "kind": "ChangeClaim",
+              "id": "v6-final-unresolved-claim",
+              "version": "1"
+            },
+            {
+              "kind": "EvidenceTarget",
+              "id": "v6-final-claim-evidence-question",
+              "version": "1"
+            },
+            {
+              "kind": "ResponseRequirement",
+              "id": "v6-final-claim-response-requirement",
+              "version": "1"
+            },
+            {
+              "kind": "Evidence",
+              "id": "v6-qs-final-evidence-synthetic",
+              "version": "1"
+            },
+            {
+              "kind": "FunctionAssignment",
+              "id": "v6-qs-final-function",
+              "version": "1"
+            },
+            {
+              "kind": "FunctionAssignment",
+              "id": "v6-final-claim-contractor-function",
+              "version": "1"
+            },
+            {
+              "kind": "OwnerCase",
+              "id": "v6-qs-closeout-case",
+              "version": "1"
+            },
+            {
+              "kind": "WorkScope",
+              "id": "v6-qs-unresolved-scope",
+              "version": "1"
+            },
+            {
+              "kind": "ClockProfile",
+              "id": "business",
+              "version": "1"
+            },
+            {
+              "kind": "CandidateSet",
+              "id": "v6-qs-final-evidence-candidates",
+              "version": "1"
+            },
+            {
+              "kind": "Authorization",
+              "id": "v6-qs-final-grant",
+              "version": "1"
+            },
+            {
+              "kind": "Authorization",
+              "id": "v6-final-claim-contractor-grant",
+              "version": "1"
+            }
+          ],
+          "candidate_set_ref": {
+            "kind": "CandidateSet",
+            "id": "v6-qs-final-evidence-candidates",
+            "version": "1"
+          },
+          "execution_mode": "offline_fixture"
+        },
+        "action_input": {
+          "scope": {
+            "kind": "assessment_case",
+            "ref": {
+              "kind": "OwnerCase",
+              "id": "v6-qs-closeout-case",
+              "version": "1"
+            },
+            "coverage_refs": [
+              {
+                "kind": "WorkScope",
+                "id": "v6-qs-unresolved-scope",
+                "version": "1"
+              }
+            ]
+          },
+          "contract_ref": {
+            "kind": "Contract",
+            "id": "v6-qs-final-contract",
+            "version": "1"
+          },
+          "determined_change_refs": [],
+          "certificate_refs": [],
+          "payment_receipt_refs": [],
+          "unresolved_claim_refs": [
+            {
+              "kind": "ChangeClaim",
+              "id": "v6-final-unresolved-claim",
+              "version": "1"
+            }
+          ],
+          "reconciliation_result_ref": null
+        },
+        "execution_path": "deterministic"
+      },
+      "configuration": {
+        "schema_version": "role-contract-host-config.v1",
+        "host_id": "v6-qs-final-evidence",
+        "version": "1",
+        "settings": {
+          "action_id": "QS-A09",
+          "source_factory": "integration.qs_role_contract_fixture_sources:build_sources",
+          "source_version": "configured-qs-fixture-sources.v1",
+          "macro_version": "synthetic-v6-qs-final-evidence.v1",
+          "client_version": "role-contract-qs-fixture.v1",
+          "policy_version": "role-contract-qs-fixture.v1",
+          "model_version": "offline-fixture-no-model.v1",
+          "source_settings": {
+            "action_id": "QS-A09",
+            "source_note": "Explicit synthetic evidence request; one unresolved claim, no calculated or determined final account.",
+            "journal_path": "output/integration/v6_qs_final_evidence_pending_01/journal.sqlite",
+            "organization_snapshot": {
+              "schema_version": "organization.v2",
+              "run_id": "synthetic-v6-qs-final-evidence",
+              "organizations": [
+                {
+                  "organization_id": "qs",
+                  "actor_id": "qs-actor",
+                  "source_ids": [
+                    "synthetic:v6-qs-final-evidence:qs"
+                  ],
+                  "public_description": "Synthetic final-account evidence fixture organization.",
+                  "public_location": {
+                    "state": "unknown",
+                    "reason_code": "synthetic_unsupplied",
+                    "missing_refs": []
+                  },
+                  "members": [],
+                  "assignments": [
+                    {
+                      "role": "QS",
+                      "function_ref": {
+                        "kind": "FunctionAssignment",
+                        "id": "v6-qs-final-function",
+                        "version": "1"
+                      },
+                      "configuration_version": "1",
+                      "basis_refs": [
+                        {
+                          "kind": "Evidence",
+                          "id": "v6-qs-final-evidence-synthetic",
+                          "version": "1"
+                        }
+                      ]
+                    }
+                  ],
+                  "evidence_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "v6-qs-final-evidence-synthetic",
+                      "version": "1"
+                    }
+                  ]
+                },
+                {
+                  "organization_id": "contractor",
+                  "actor_id": "contractor",
+                  "source_ids": [
+                    "synthetic:v6-qs-final-evidence:contractor"
+                  ],
+                  "public_description": "Synthetic final-account evidence fixture organization.",
+                  "public_location": {
+                    "state": "unknown",
+                    "reason_code": "synthetic_unsupplied",
+                    "missing_refs": []
+                  },
+                  "members": [],
+                  "assignments": [
+                    {
+                      "role": "Contractor",
+                      "function_ref": {
+                        "kind": "FunctionAssignment",
+                        "id": "v6-final-claim-contractor-function",
+                        "version": "1"
+                      },
+                      "configuration_version": "1",
+                      "basis_refs": [
+                        {
+                          "kind": "Evidence",
+                          "id": "v6-qs-final-evidence-synthetic",
+                          "version": "1"
+                        }
+                      ]
+                    }
+                  ],
+                  "evidence_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "v6-qs-final-evidence-synthetic",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "authorizations": [
+                {
+                  "ref": {
+                    "kind": "Authorization",
+                    "id": "v6-qs-final-grant",
+                    "version": "1"
+                  },
+                  "organization_id": "qs",
+                  "actor_id": "qs-actor",
+                  "function_ref": {
+                    "kind": "FunctionAssignment",
+                    "id": "v6-qs-final-function",
+                    "version": "1"
+                  },
+                  "action_ids": [
+                    "QS-A09"
+                  ],
+                  "scopes": [
+                    {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-qs-closeout-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-qs-unresolved-scope",
+                          "version": "1"
+                        }
+                      ]
+                    }
+                  ],
+                  "readable_refs": [
+                    {
+                      "kind": "Contract",
+                      "id": "v6-qs-final-contract",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "FinalAccountProfile",
+                      "id": "v6-qs-final-evidence-profile",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ChangeClaim",
+                      "id": "v6-final-unresolved-claim",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "EvidenceTarget",
+                      "id": "v6-final-claim-evidence-question",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ResponseRequirement",
+                      "id": "v6-final-claim-response-requirement",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Evidence",
+                      "id": "v6-qs-final-evidence-synthetic",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-qs-final-function",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-final-claim-contractor-function",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "OwnerCase",
+                      "id": "v6-qs-closeout-case",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "WorkScope",
+                      "id": "v6-qs-unresolved-scope",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ClockProfile",
+                      "id": "business",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "CandidateSet",
+                      "id": "v6-qs-final-evidence-candidates",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Authorization",
+                      "id": "v6-qs-final-grant",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Authorization",
+                      "id": "v6-final-claim-contractor-grant",
+                      "version": "1"
+                    }
+                  ],
+                  "tool_ids": [],
+                  "validity": {
+                    "start": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 0
+                    },
+                    "end": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 100
+                    },
+                    "bounds": "closed_open"
+                  },
+                  "basis_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "v6-qs-final-evidence-synthetic",
+                      "version": "1"
+                    }
+                  ]
+                },
+                {
+                  "ref": {
+                    "kind": "Authorization",
+                    "id": "v6-final-claim-contractor-grant",
+                    "version": "1"
+                  },
+                  "organization_id": "contractor",
+                  "actor_id": "contractor",
+                  "function_ref": {
+                    "kind": "FunctionAssignment",
+                    "id": "v6-final-claim-contractor-function",
+                    "version": "1"
+                  },
+                  "action_ids": [
+                    "CONTRACTOR-A09"
+                  ],
+                  "scopes": [
+                    {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-qs-closeout-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-qs-unresolved-scope",
+                          "version": "1"
+                        }
+                      ]
+                    }
+                  ],
+                  "readable_refs": [
+                    {
+                      "kind": "Contract",
+                      "id": "v6-qs-final-contract",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ChangeClaim",
+                      "id": "v6-final-unresolved-claim",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "EvidenceTarget",
+                      "id": "v6-final-claim-evidence-question",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ResponseRequirement",
+                      "id": "v6-final-claim-response-requirement",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Evidence",
+                      "id": "v6-qs-final-evidence-synthetic",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-final-claim-contractor-function",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "Authorization",
+                      "id": "v6-final-claim-contractor-grant",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "OwnerCase",
+                      "id": "v6-qs-closeout-case",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "WorkScope",
+                      "id": "v6-qs-unresolved-scope",
+                      "version": "1"
+                    },
+                    {
+                      "kind": "ClockProfile",
+                      "id": "business",
+                      "version": "1"
+                    }
+                  ],
+                  "tool_ids": [],
+                  "validity": {
+                    "start": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 0
+                    },
+                    "end": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 100
+                    },
+                    "bounds": "closed_open"
+                  },
+                  "basis_refs": [
+                    {
+                      "kind": "Evidence",
+                      "id": "v6-qs-final-evidence-synthetic",
+                      "version": "1"
+                    }
+                  ]
+                }
+              ],
+              "inactive_authorization_refs": []
+            },
+            "source_projection": {
+              "run_id": "synthetic-v6-qs-final-evidence",
+              "macro_version": "synthetic-v6-qs-final-evidence.v1",
+              "state_version": "synthetic-v6-qs-final-evidence-30.v1",
+              "read_token": "synthetic-v6-qs-final-evidence:read:1",
+              "business_time": {
+                "clock_ref": {
+                  "kind": "ClockProfile",
+                  "id": "business",
+                  "version": "1"
+                },
+                "offset": 30
+              },
+              "organization_id": "qs",
+              "objects": [
+                {
+                  "ref": {
+                    "kind": "Contract",
+                    "id": "v6-qs-final-contract",
+                    "version": "1"
+                  },
+                  "value": {
+                    "scope": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-qs-closeout-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-qs-unresolved-scope",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-qs-final-evidence-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "ref": {
+                      "kind": "Contract",
+                      "id": "v6-qs-final-contract",
+                      "version": "1"
+                    },
+                    "party_ids": [
+                      "owner",
+                      "contractor"
+                    ],
+                    "currency": "HKD",
+                    "decimal_places": 2,
+                    "valuation_actor_id": "qs-actor",
+                    "valuation_organization_id": "qs",
+                    "valuation_function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-qs-final-function",
+                      "version": "1"
+                    },
+                    "valuation_authority_ref": {
+                      "kind": "Authorization",
+                      "id": "v6-qs-final-grant",
+                      "version": "1"
+                    },
+                    "payer_id": "owner",
+                    "beneficiary_id": "contractor",
+                    "rate_refs": [],
+                    "retention_fraction": "0",
+                    "retention_cap": null,
+                    "deduction_refs": [],
+                    "advance_credit_refs": [],
+                    "active_certificate_refs": [],
+                    "certificate_count": 0,
+                    "receipt_refs": [],
+                    "certified_cash_visibility": "complete",
+                    "base_component_key": "base-contract",
+                    "base_amount": {
+                      "state": "unknown",
+                      "reason_code": "synthetic_price_not_supplied",
+                      "missing_refs": []
+                    },
+                    "final_profile_ref": {
+                      "kind": "FinalAccountProfile",
+                      "id": "v6-qs-final-evidence-profile",
+                      "version": "1"
+                    },
+                    "determined_change_refs": [],
+                    "all_certificate_refs": [],
+                    "unresolved_claim_refs": [
+                      {
+                        "kind": "ChangeClaim",
+                        "id": "v6-final-unresolved-claim",
+                        "version": "1"
+                      }
+                    ],
+                    "payment_execution_refs": [],
+                    "adjustment_refs": [],
+                    "execution_refs": [],
+                    "coverage": "complete",
+                    "as_of": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "FinalAccountProfile",
+                    "id": "v6-qs-final-evidence-profile",
+                    "version": "1"
+                  },
+                  "value": {
+                    "scope": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-qs-closeout-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-qs-unresolved-scope",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-qs-final-evidence-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "ref": {
+                      "kind": "FinalAccountProfile",
+                      "id": "v6-qs-final-evidence-profile",
+                      "version": "1"
+                    },
+                    "contract_ref": {
+                      "kind": "Contract",
+                      "id": "v6-qs-final-contract",
+                      "version": "1"
+                    },
+                    "actor_id": "qs-actor",
+                    "function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-qs-final-function",
+                      "version": "1"
+                    },
+                    "authority_ref": {
+                      "kind": "Authorization",
+                      "id": "v6-qs-final-grant",
+                      "version": "1"
+                    },
+                    "choice": "request_evidence",
+                    "business_key": "v6-final-unresolved-claim-evidence",
+                    "question_refs": [
+                      {
+                        "kind": "EvidenceTarget",
+                        "id": "v6-final-claim-evidence-question",
+                        "version": "1"
+                      }
+                    ],
+                    "determination_basis_ref": null,
+                    "author_actor_id": "qs-actor",
+                    "author_organization_id": "qs",
+                    "author_function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-qs-final-function",
+                      "version": "1"
+                    },
+                    "author_authority_ref": {
+                      "kind": "Authorization",
+                      "id": "v6-qs-final-grant",
+                      "version": "1"
+                    },
+                    "author_action_id": "QS-A09",
+                    "authored_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "ChangeClaim",
+                    "id": "v6-final-unresolved-claim",
+                    "version": "1"
+                  },
+                  "value": {
+                    "scope": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-qs-closeout-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-qs-unresolved-scope",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-qs-final-evidence-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "ref": {
+                      "kind": "ChangeClaim",
+                      "id": "v6-final-unresolved-claim",
+                      "version": "1"
+                    },
+                    "contract_ref": {
+                      "kind": "Contract",
+                      "id": "v6-qs-final-contract",
+                      "version": "1"
+                    },
+                    "instruction_ref": null,
+                    "claimant_id": "contractor",
+                    "period": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "basis": "incremental",
+                    "line_refs": [],
+                    "prior_statement_refs": [],
+                    "prior_statement_count": 0,
+                    "question_refs": [
+                      {
+                        "kind": "EvidenceTarget",
+                        "id": "v6-final-claim-evidence-question",
+                        "version": "1"
+                      }
+                    ],
+                    "unresolved_question_refs": [
+                      {
+                        "kind": "EvidenceTarget",
+                        "id": "v6-final-claim-evidence-question",
+                        "version": "1"
+                      }
+                    ],
+                    "determination_basis_ref": null,
+                    "status": "submitted",
+                    "author_actor_id": "contractor",
+                    "author_function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-final-claim-contractor-function",
+                      "version": "1"
+                    },
+                    "author_authority_ref": {
+                      "kind": "Authorization",
+                      "id": "v6-final-claim-contractor-grant",
+                      "version": "1"
+                    },
+                    "author_action_id": "CONTRACTOR-A09",
+                    "authored_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "EvidenceTarget",
+                    "id": "v6-final-claim-evidence-question",
+                    "version": "1"
+                  },
+                  "value": {
+                    "scope": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-qs-closeout-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-qs-unresolved-scope",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-qs-final-evidence-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "ref": {
+                      "kind": "EvidenceTarget",
+                      "id": "v6-final-claim-evidence-question",
+                      "version": "1"
+                    },
+                    "contract_ref": {
+                      "kind": "Contract",
+                      "id": "v6-qs-final-contract",
+                      "version": "1"
+                    },
+                    "question": "Provide the original instruction, affected scope and substantiated cost basis for the unresolved claim before final-account assessment.",
+                    "recipient_ids": [
+                      "contractor"
+                    ],
+                    "response_requirement_ref": {
+                      "kind": "ResponseRequirement",
+                      "id": "v6-final-claim-response-requirement",
+                      "version": "1"
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "ResponseRequirement",
+                    "id": "v6-final-claim-response-requirement",
+                    "version": "1"
+                  },
+                  "value": {
+                    "scope": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-qs-closeout-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-qs-unresolved-scope",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "available_at": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-qs-final-evidence-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "ref": {
+                      "kind": "ResponseRequirement",
+                      "id": "v6-final-claim-response-requirement",
+                      "version": "1"
+                    },
+                    "contract_ref": {
+                      "kind": "Contract",
+                      "id": "v6-qs-final-contract",
+                      "version": "1"
+                    },
+                    "recipient_ids": [
+                      "contractor"
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "Evidence",
+                    "id": "v6-qs-final-evidence-synthetic",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "Evidence",
+                      "id": "v6-qs-final-evidence-synthetic",
+                      "version": "1"
+                    },
+                    "source_kind": "synthetic",
+                    "basis_kind": "observed",
+                    "locator": "synthetic:v6-qs-final-evidence",
+                    "content_hash": "7f03199942188dc76c2682f9afaaa2041ed34c5a70b309e050bbbece7ebaadbc",
+                    "effective_window": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "FunctionAssignment",
+                    "id": "v6-qs-final-function",
+                    "version": "1"
+                  },
+                  "value": {
+                    "role": "QS",
+                    "function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-qs-final-function",
+                      "version": "1"
+                    },
+                    "configuration_version": "1",
+                    "basis_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-qs-final-evidence-synthetic",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "FunctionAssignment",
+                    "id": "v6-final-claim-contractor-function",
+                    "version": "1"
+                  },
+                  "value": {
+                    "role": "Contractor",
+                    "function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-final-claim-contractor-function",
+                      "version": "1"
+                    },
+                    "configuration_version": "1",
+                    "basis_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-qs-final-evidence-synthetic",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "OwnerCase",
+                    "id": "v6-qs-closeout-case",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "OwnerCase",
+                      "id": "v6-qs-closeout-case",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-qs-final-evidence-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "organization_id": "qs"
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "WorkScope",
+                    "id": "v6-qs-unresolved-scope",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "WorkScope",
+                      "id": "v6-qs-unresolved-scope",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-qs-final-evidence-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "parent_ref": {
+                      "kind": "OwnerCase",
+                      "id": "v6-qs-closeout-case",
+                      "version": "1"
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "ClockProfile",
+                    "id": "business",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "ClockProfile",
+                      "id": "business",
+                      "version": "1"
+                    },
+                    "evidence_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-qs-final-evidence-synthetic",
+                        "version": "1"
+                      }
+                    ],
+                    "tick_unit": "day"
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "CandidateSet",
+                    "id": "v6-qs-final-evidence-candidates",
+                    "version": "1"
+                  },
+                  "value": {
+                    "operation_id": "v6-qs-final-evidence-30",
+                    "scope": {
+                      "kind": "assessment_case",
+                      "ref": {
+                        "kind": "OwnerCase",
+                        "id": "v6-qs-closeout-case",
+                        "version": "1"
+                      },
+                      "coverage_refs": [
+                        {
+                          "kind": "WorkScope",
+                          "id": "v6-qs-unresolved-scope",
+                          "version": "1"
+                        }
+                      ]
+                    },
+                    "as_of": {
+                      "clock_ref": {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      "offset": 30
+                    },
+                    "candidates": [
+                      {
+                        "ref": {
+                          "kind": "Contract",
+                          "id": "v6-qs-final-contract",
+                          "version": "1"
+                        },
+                        "permitted_choices": [
+                          "request_evidence"
+                        ]
+                      }
+                    ],
+                    "search_profile_ref": {
+                      "kind": "Profile",
+                      "id": "v6-final-evidence-search",
+                      "version": "1"
+                    }
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "Authorization",
+                    "id": "v6-qs-final-grant",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "Authorization",
+                      "id": "v6-qs-final-grant",
+                      "version": "1"
+                    },
+                    "organization_id": "qs",
+                    "actor_id": "qs-actor",
+                    "function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-qs-final-function",
+                      "version": "1"
+                    },
+                    "action_ids": [
+                      "QS-A09"
+                    ],
+                    "scopes": [
+                      {
+                        "kind": "assessment_case",
+                        "ref": {
+                          "kind": "OwnerCase",
+                          "id": "v6-qs-closeout-case",
+                          "version": "1"
+                        },
+                        "coverage_refs": [
+                          {
+                            "kind": "WorkScope",
+                            "id": "v6-qs-unresolved-scope",
+                            "version": "1"
+                          }
+                        ]
+                      }
+                    ],
+                    "readable_refs": [
+                      {
+                        "kind": "Contract",
+                        "id": "v6-qs-final-contract",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "FinalAccountProfile",
+                        "id": "v6-qs-final-evidence-profile",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "ChangeClaim",
+                        "id": "v6-final-unresolved-claim",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "EvidenceTarget",
+                        "id": "v6-final-claim-evidence-question",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "ResponseRequirement",
+                        "id": "v6-final-claim-response-requirement",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-qs-final-evidence-synthetic",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "FunctionAssignment",
+                        "id": "v6-qs-final-function",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "FunctionAssignment",
+                        "id": "v6-final-claim-contractor-function",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "OwnerCase",
+                        "id": "v6-qs-closeout-case",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "WorkScope",
+                        "id": "v6-qs-unresolved-scope",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "CandidateSet",
+                        "id": "v6-qs-final-evidence-candidates",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Authorization",
+                        "id": "v6-qs-final-grant",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Authorization",
+                        "id": "v6-final-claim-contractor-grant",
+                        "version": "1"
+                      }
+                    ],
+                    "tool_ids": [],
+                    "validity": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "basis_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-qs-final-evidence-synthetic",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ref": {
+                    "kind": "Authorization",
+                    "id": "v6-final-claim-contractor-grant",
+                    "version": "1"
+                  },
+                  "value": {
+                    "ref": {
+                      "kind": "Authorization",
+                      "id": "v6-final-claim-contractor-grant",
+                      "version": "1"
+                    },
+                    "organization_id": "contractor",
+                    "actor_id": "contractor",
+                    "function_ref": {
+                      "kind": "FunctionAssignment",
+                      "id": "v6-final-claim-contractor-function",
+                      "version": "1"
+                    },
+                    "action_ids": [
+                      "CONTRACTOR-A09"
+                    ],
+                    "scopes": [
+                      {
+                        "kind": "assessment_case",
+                        "ref": {
+                          "kind": "OwnerCase",
+                          "id": "v6-qs-closeout-case",
+                          "version": "1"
+                        },
+                        "coverage_refs": [
+                          {
+                            "kind": "WorkScope",
+                            "id": "v6-qs-unresolved-scope",
+                            "version": "1"
+                          }
+                        ]
+                      }
+                    ],
+                    "readable_refs": [
+                      {
+                        "kind": "Contract",
+                        "id": "v6-qs-final-contract",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "ChangeClaim",
+                        "id": "v6-final-unresolved-claim",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "EvidenceTarget",
+                        "id": "v6-final-claim-evidence-question",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "ResponseRequirement",
+                        "id": "v6-final-claim-response-requirement",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-qs-final-evidence-synthetic",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "FunctionAssignment",
+                        "id": "v6-final-claim-contractor-function",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "Authorization",
+                        "id": "v6-final-claim-contractor-grant",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "OwnerCase",
+                        "id": "v6-qs-closeout-case",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "WorkScope",
+                        "id": "v6-qs-unresolved-scope",
+                        "version": "1"
+                      },
+                      {
+                        "kind": "ClockProfile",
+                        "id": "business",
+                        "version": "1"
+                      }
+                    ],
+                    "tool_ids": [],
+                    "validity": {
+                      "start": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 0
+                      },
+                      "end": {
+                        "clock_ref": {
+                          "kind": "ClockProfile",
+                          "id": "business",
+                          "version": "1"
+                        },
+                        "offset": 100
+                      },
+                      "bounds": "closed_open"
+                    },
+                    "basis_refs": [
+                      {
+                        "kind": "Evidence",
+                        "id": "v6-qs-final-evidence-synthetic",
+                        "version": "1"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  ],
+  "remaining_requirements": [
+    "Execute the original host and verify exact questions, response requirement and contract recipients without resolving the original claim.",
+    "QS-A09 propose_account/determine_authorized inputs with registered reconciliation and independent authority, plus normal/boundary/recovery CHECK cases.",
+    "Other V6 actions and same-run handover/settlement/continuation; actual native bindings, feedback and complete PLAN validation."
+  ],
+  "limitations": "One isolated synthetic evidence request; no processor execution, connected V6 chain, calculated reconciliation or formal determination proven."
+}

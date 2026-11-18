@@ -1,0 +1,34 @@
+{
+  "schema_version": "lifecycle-input-case.v1",
+  "scenario_id": "V2",
+  "case_id": "v2-owner-tender-publication",
+  "origin": "synthetic",
+  "run_id": "synthetic-v2-procurement-publication-01",
+  "status": "input_prepared_execution_pending",
+  "steps": [
+    {
+      "step_id": "owner-tender-first-publication",
+      "action_id": "OWN-A09",
+      "operation_id": "v2-owner-tender-publication-01",
+      "expected_kind": "completed",
+      "expected_choice": "publish_package",
+      "host_factory": "integration.owner_role_contract_host:build_role_host",
+      "invocation_path": "integration/examples/role_contract_owner_tender_publication_invocation.json",
+      "invocation_file_sha256": "0c3b047c9060facee752ab0275137023880584b7b98fd85f918f4e3f35c4cfd0",
+      "configuration_path": "integration/examples/role_contract_owner_tender_publication_host.json",
+      "configuration_file_sha256": "b7de30180e008c3a1e2e34cfeb15e769810393b5e2999983ce4eae927e56a451",
+      "origin_path": "integration/examples/role_contract_owner_tender_publication_origin.json"
+    }
+  ],
+  "remaining_requirements": [
+    "Actual Owner A09 result, native publication/round registration and confirmed receipt.",
+    "Same-run Contractor tender intake/bid, Owner evaluation/award and independent formation chain.",
+    "Additional Owner A09 branches and full V2/PLAN verification."
+  ],
+  "limitations": [
+    "Only an independent synthetic first-publication draft input; no actual action run yet.",
+    "Professional submission, quantity permission and bidder eligibility are synthetic assumptions, not actual saved professional results.",
+    "No package/round identity, sent invitation, original publication receipt or Contractor intake is fabricated.",
+    "Full same-run tender/bid/evaluation/award/formation chain and formal source validators remain pending."
+  ]
+}

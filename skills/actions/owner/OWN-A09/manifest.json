@@ -1,0 +1,29 @@
+{
+  "skill_id": "OWN-A09.tender-round-decision",
+  "skill_version": "4",
+  "action_id": "OWN-A09",
+  "role": "Owner",
+  "status": "implemented",
+  "spec_source": "zwtnew/04_roles/04_roles/owner.md",
+  "spec_source_sha256": "addcb91c7a5b83caa31f5876a4eb347689847105500775b6fd1b88c87dcfd9c8",
+  "skill_path": "skills/actions/owner/OWN-A09/SKILL.md",
+  "skill_sha256": "6cf1e1fa634d04e4878441c96cabd995be7f5fd00211e0808bd25a2c9d510958",
+  "input_schema_id": "role-contract.v1:OWN-A09:input",
+  "output_schema_id": "role-contract.v1:OWN-A09:payload",
+  "processor_id": "owner.tender_round_decision.v1",
+  "tool_ids": [],
+  "shared_refs": [
+    "skills/shared/decision-basics.md"
+  ],
+  "shared_sha256s": {
+    "skills/shared/decision-basics.md": "77da3d2fc1683068353888daccecfabe25278bf180b593747e39505fea987e60"
+  },
+  "prompt_sha256": "6cf1e1fa634d04e4878441c96cabd995be7f5fd00211e0808bd25a2c9d510958",
+  "method_refs": [
+    {
+      "kind": "Method",
+      "id": "micro.owner.declared_tender_comparison",
+      "version": "1"
+    }
+  ]
+}

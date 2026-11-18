@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Original QS certificates received for Owner payment input",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "scenario_id",
+    "run_id",
+    "owner_organization_id",
+    "request",
+    "configuration",
+    "sources"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "lifecycle-v5-qs-certificate-owner-input.v1"
+    },
+    "scenario_id": {
+      "const": "V5"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "owner_organization_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "request": {
+      "type": "object",
+      "description": "Formal current Owner A06 invocation with original due obligations."
+    },
+    "configuration": {
+      "type": "object",
+      "description": "OwnerRoleContractSettings with certificate_inputs selecting one certificate or an explicit allocated group, each with source_task_sha256, receipt_ref and receipt_sha256."
+    },
+    "sources": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "owner_input",
+        "certificate_sources",
+        "certificates"
+      ],
+      "properties": {
+        "owner_input": {
+          "$ref": "#/$defs/sourceFile"
+        },
+        "certificate_sources": {
+          "$ref": "#/$defs/sourceFile"
+        },
+        "certificates": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "qs_result",
+              "receipt"
+            ],
+            "properties": {
+              "qs_result": {
+                "$ref": "#/$defs/sourceFile"
+              },
+              "receipt": {
+                "$ref": "#/$defs/sourceFile"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "sourceFile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "file_sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "file_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "schema_version": "contractor-screening-fixture.v1",
+  "origin": "synthetic",
+  "assumptions": "All organizations, qualifications, methods, capacities, commitments and procurement terms are invented for deterministic integration tests. No real eligibility, resource ledger or macro submission is claimed.",
+  "organization_id": "fixture-contractor",
+  "actor_id": "fixture-contractor-actor",
+  "input": {
+    "invitation_refs": [],
+    "package_ref": {"kind": "ProcurementPackage", "id": "package", "version": "1"},
+    "capability_ref": {"kind": "ContractorCapability", "id": "capability", "version": "1"},
+    "qualification_refs": [{"kind": "Qualification", "id": "qualification", "version": "1"}],
+    "commitments_ref": {"kind": "CommitmentSnapshot", "id": "commitments", "version": "1"},
+    "screening_profile_ref": {"kind": "OpportunityScreeningProfile", "id": "profile", "version": "1"}
+  },
+  "objects": [
+    {
+      "ref": {"kind": "ProcurementPackage", "id": "package", "version": "1"},
+      "value": {
+        "ref": {"kind": "ProcurementPackage", "id": "package", "version": "1"},
+        "employer_ref": {"kind": "Organization", "id": "fixture-owner", "version": "1"},
+        "scope": {"kind": "organization", "ref": {"kind": "Organization", "id": "fixture-contractor", "version": "1"}, "coverage_refs": []},
+        "access_mode": "public",
+        "region_id": {"state": "known", "value": "HK"},
+        "work_types": {"state": "known", "value": ["building"]},
+        "participation_window": {"state": "known", "value": {
+          "start": {"clock_ref": {"kind": "ClockProfile", "id": "fixture-clock", "version": "1"}, "offset": 0},
+          "end": {"clock_ref": {"kind": "ClockProfile", "id": "fixture-clock", "version": "1"}, "offset": 5}, "bounds": "closed_open"
+        }},
+        "work_window": {"state": "known", "value": {
+          "start": {"clock_ref": {"kind": "ClockProfile", "id": "fixture-clock", "version": "1"}, "offset": 10},
+          "end": {"clock_ref": {"kind": "ClockProfile", "id": "fixture-clock", "version": "1"}, "offset": 20}, "bounds": "closed_open"
+        }},
+        "qualification_requirements": {"state": "known", "value": [{
+          "requirement_ref": {"kind": "Requirement", "id": "qualification-requirement", "version": "1"},
+          "qualification_code": "fixture-building-qualification", "region_id": "HK", "work_type": "building"
+        }]},
+        "required_method_refs": {"state": "known", "value": [{"kind": "WorkMethod", "id": "building-method", "version": "1"}]},
+        "resource_demands": {"state": "known", "value": [{
+          "requirement_ref": {"kind": "Requirement", "id": "resource-requirement", "version": "1"},
+          "resource_kind": "construction_crew", "region_id": "HK",
+          "quantity": {"value": "1", "unit": "crew", "basis_ref": {"kind": "Evidence", "id": "synthetic-basis", "version": "1"}},
+          "window": {
+            "start": {"clock_ref": {"kind": "ClockProfile", "id": "fixture-clock", "version": "1"}, "offset": 10},
+            "end": {"clock_ref": {"kind": "ClockProfile", "id": "fixture-clock", "version": "1"}, "offset": 20}, "bounds": "closed_open"
+          }
+        }]},
+        "funding_signal": {"state": "unknown", "reason_code": "fixture_unsupplied", "missing_refs": []},
+        "clarification_requirement_refs": [],
+        "evidence_refs": [{"kind": "Evidence", "id": "synthetic-basis", "version": "1"}]
+      }
+    },
+    {
+      "ref": {"kind": "ContractorCapability", "id": "capability", "version": "1"},
+      "value": {
+        "ref": {"kind": "ContractorCapability", "id": "capability", "version": "1"},
+        "organization_ref": {"kind": "Organization", "id": "fixture-contractor", "version": "1"},
+        "effective_window": {
+          "start": {"clock_ref": {"kind": "ClockProfile", "id": "fixture-clock", "version": "1"}, "offset": 0},
+          "end": {"clock_ref": {"kind": "ClockProfile", "id": "fixture-clock", "version": "1"}, "offset": 100}, "bounds": "closed_open"
+        },
+        "work_types": {"state": "known", "value": ["building"]},
+        "method_refs": {"state": "known", "value": [{"kind": "WorkMethod", "id": "building-method", "version": "1"}]},
+        "qualification_coverage": "complete",
+        "resource_coverage": "complete",
+        "resources": [{
+          "resource_ref": {"kind": "Resource", "id": "shared-crew", "version": "1"},
+          "resource_kind": "construction_crew", "region_id": {"state": "known", "value": "HK"},
+          "total": {"state": "known", "value": {"value": "2", "unit": "crew", "basis_ref": {"kind": "Evidence", "id": "synthetic-basis", "version": "1"}}},
+          "effective_window": {
+            "start": {"clock_ref": {"kind": "ClockProfile", "id": "fixture-clock", "version": "1"}, "offset": 0},
+            "end": {"clock_ref": {"kind": "ClockProfile", "id": "fixture-clock", "version": "1"}, "offset": 100}, "bounds": "closed_open"
+          }
+        }],
+        "evidence_refs": [{"kind": "Evidence", "id": "synthetic-basis", "version": "1"}]
+      }
+    },
+    {
+      "ref": {"kind": "Qualification", "id": "qualification", "version": "1"},
+      "value": {
+        "ref": {"kind": "Qualification", "id": "qualification", "version": "1"},
+        "organization_ref": {"kind": "Organization", "id": "fixture-contractor", "version": "1"},
+        "qualification_code": "fixture-building-qualification", "region_ids": ["HK"], "work_types": ["building"],
+        "effective_window": {
+          "start": {"clock_ref": {"kind": "ClockProfile", "id": "fixture-clock", "version": "1"}, "offset": 0},
+          "end": {"clock_ref": {"kind": "ClockProfile", "id": "fixture-clock", "version": "1"}, "offset": 100}, "bounds": "closed_open"
+        },
+        "standing": {"state": "known", "value": true},
+        "evidence_refs": [{"kind": "Evidence", "id": "synthetic-basis", "version": "1"}]
+      }
+    },
+    {
+      "ref": {"kind": "CommitmentSnapshot", "id": "commitments", "version": "1"},
+      "value": {
+        "ref": {"kind": "CommitmentSnapshot", "id": "commitments", "version": "1"},
+        "organization_ref": {"kind": "Organization", "id": "fixture-contractor", "version": "1"},
+        "as_of": {"clock_ref": {"kind": "ClockProfile", "id": "fixture-clock", "version": "1"}, "offset": 1},
+        "coverage": "complete",
+        "allocations": [{
+          "commitment_ref": {"kind": "ResourceCommitment", "id": "other-project", "version": "1"},
+          "resource_ref": {"kind": "Resource", "id": "shared-crew", "version": "1"},
+          "quantity": {"value": "1", "unit": "crew", "basis_ref": {"kind": "Evidence", "id": "synthetic-basis", "version": "1"}},
+          "window": {
+            "start": {"clock_ref": {"kind": "ClockProfile", "id": "fixture-clock", "version": "1"}, "offset": 10},
+            "end": {"clock_ref": {"kind": "ClockProfile", "id": "fixture-clock", "version": "1"}, "offset": 20}, "bounds": "closed_open"
+          }
+        }],
+        "evidence_refs": [{"kind": "Evidence", "id": "synthetic-basis", "version": "1"}]
+      }
+    },
+    {
+      "ref": {"kind": "OpportunityScreeningProfile", "id": "profile", "version": "1"},
+      "value": {
+        "ref": {"kind": "OpportunityScreeningProfile", "id": "profile", "version": "1"},
+        "organization_ref": {"kind": "Organization", "id": "fixture-contractor", "version": "1"},
+        "effective_window": {
+          "start": {"clock_ref": {"kind": "ClockProfile", "id": "fixture-clock", "version": "1"}, "offset": 0},
+          "end": {"clock_ref": {"kind": "ClockProfile", "id": "fixture-clock", "version": "1"}, "offset": 100}, "bounds": "closed_open"
+        },
+        "policy": "participate_if_eligible", "require_known_funding_signal": false,
+        "decline_on_negative_funding_signal": false,
+        "resource_comparison": "fixed_location_half_open_exact_v1",
+        "evidence_refs": [{"kind": "Evidence", "id": "synthetic-basis", "version": "1"}]
+      }
+    },
+    {
+      "ref": {"kind": "WorkMethod", "id": "building-method", "version": "1"},
+      "value": {
+        "ref": {"kind": "WorkMethod", "id": "building-method", "version": "1"},
+        "region_ids": ["HK"], "work_types": ["building"],
+        "effective_window": {
+          "start": {"clock_ref": {"kind": "ClockProfile", "id": "fixture-clock", "version": "1"}, "offset": 0},
+          "end": {"clock_ref": {"kind": "ClockProfile", "id": "fixture-clock", "version": "1"}, "offset": 100}, "bounds": "closed_open"
+        },
+        "evidence_refs": [{"kind": "Evidence", "id": "synthetic-basis", "version": "1"}]
+      }
+    },
+    {
+      "ref": {"kind": "Invitation", "id": "invitation", "version": "1"},
+      "value": {
+        "ref": {"kind": "Invitation", "id": "invitation", "version": "1"},
+        "package_ref": {"kind": "ProcurementPackage", "id": "package", "version": "1"},
+        "issuer_ref": {"kind": "Organization", "id": "fixture-owner", "version": "1"},
+        "recipient_actor_id": "fixture-contractor-actor",
+        "effective_window": {
+          "start": {"clock_ref": {"kind": "ClockProfile", "id": "fixture-clock", "version": "1"}, "offset": 0},
+          "end": {"clock_ref": {"kind": "ClockProfile", "id": "fixture-clock", "version": "1"}, "offset": 5}, "bounds": "closed_open"
+        },
+        "evidence_refs": [{"kind": "Evidence", "id": "synthetic-basis", "version": "1"}]
+      }
+    },
+    {
+      "ref": {"kind": "Requirement", "id": "clarification", "version": "1"},
+      "value": {
+        "ref": {"kind": "Requirement", "id": "clarification", "version": "1"},
+        "package_ref": {"kind": "ProcurementPackage", "id": "package", "version": "1"},
+        "description": "Synthetic procurement scope needs a bounded clarification",
+        "evidence_refs": [{"kind": "Evidence", "id": "synthetic-basis", "version": "1"}]
+      }
+    }
+  ]
+}

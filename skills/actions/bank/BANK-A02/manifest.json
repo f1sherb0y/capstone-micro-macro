@@ -1,0 +1,22 @@
+{
+  "skill_id": "BANK-A02.application-intake",
+  "skill_version": "5",
+  "action_id": "BANK-A02",
+  "role": "Bank",
+  "status": "implemented",
+  "spec_source": "zwtnew/04_roles/04_roles/bank.md",
+  "spec_source_sha256": "a83c690b4d51fa363adaaaa2d0c1f6bbe3133e8cf57ec28b5c2e7427493754b1",
+  "skill_path": "skills/actions/bank/BANK-A02/SKILL.md",
+  "skill_sha256": "683df9e8e271e5690e652601092b818862c074d7c9bc870cb26b9a5acf9bb6de",
+  "input_schema_id": "role-contract.v1:BANK-A02:input",
+  "output_schema_id": "role-contract.v1:BANK-A02:payload",
+  "processor_id": "bank.application_intake.v2",
+  "tool_ids": [],
+  "shared_refs": [
+    "skills/shared/decision-basics.md"
+  ],
+  "shared_sha256s": {
+    "skills/shared/decision-basics.md": "77da3d2fc1683068353888daccecfabe25278bf180b593747e39505fea987e60"
+  },
+  "prompt_sha256": "683df9e8e271e5690e652601092b818862c074d7c9bc870cb26b9a5acf9bb6de"
+}

@@ -1,0 +1,133 @@
+{
+  "schema_version": "bank-intake-fixture.v1",
+  "origin": "synthetic",
+  "assumptions": "All borrower identities, authorities, function assignments, products and disclosures are invented to test intake rules. The borrower-finance function is explicitly an Owner role for the declared OWN-A05 submission, with synthetic-basis evidence. Region lists, amount limits and priorities are explicit synthetic product policy, not real banking or regulatory facts. No loan, formal intake or macro submission is claimed.",
+  "organization_id": "fixture-bank",
+  "actor_id": "fixture-bank-actor",
+  "business_time": {"clock_ref": {"kind": "ClockProfile", "id": "fixture-clock", "version": "1"}, "offset": 2},
+  "input": {
+    "application_ref": {"kind": "FinanceApplication", "id": "application", "version": "1"},
+    "borrower_id": "fixture-borrower",
+    "applicant_authority_ref": {"kind": "Authorization", "id": "borrower-authority", "version": "1"},
+    "requested": {"value": "100", "currency": "HKD", "basis_ref": {"kind": "Evidence", "id": "synthetic-basis", "version": "1"}},
+    "purpose_ref": {"kind": "FundingPurpose", "id": "purpose", "version": "1"},
+    "product_candidates": [{"kind": "FinanceProductProfile", "id": "product", "version": "1"}],
+    "disclosure_refs": [{"kind": "Evidence", "id": "identity-disclosure", "version": "1"}]
+  },
+  "evidence": [
+    {"id": "synthetic-basis", "version": "1", "effective_window": null},
+    {"id": "identity-disclosure", "version": "1", "effective_window": null}
+  ],
+  "objects": [
+    {
+      "ref": {"kind": "FinanceApplication", "id": "application", "version": "1"},
+      "value": {
+        "ref": {"kind": "FinanceApplication", "id": "application", "version": "1"},
+        "borrower_id": "fixture-borrower",
+        "borrower_ref": {"kind": "Organization", "id": "fixture-borrower", "version": "1"},
+        "lender_id": "fixture-bank",
+        "scope_ref": {"kind": "assessment_case", "ref": {"kind": "OwnerCase", "id": "case", "version": "1"}, "coverage_refs": []},
+        "requested": {"value": "100", "currency": "HKD", "basis_ref": {"kind": "Evidence", "id": "synthetic-basis", "version": "1"}},
+        "purpose_ref": {"kind": "FundingPurpose", "id": "purpose", "version": "1"},
+        "product_candidates": [{"kind": "FinanceProductProfile", "id": "product", "version": "1"}],
+        "disclosure_refs": [{"kind": "Evidence", "id": "identity-disclosure", "version": "1"}],
+        "disclosures": [{"disclosure_code": "borrower_identity", "evidence_ref": {"kind": "Evidence", "id": "identity-disclosure", "version": "1"}}],
+        "applicant_authority_ref": {"kind": "Authorization", "id": "borrower-authority", "version": "1"},
+        "applicant_actor_id": "borrower-actor",
+        "applicant_function_ref": {"kind": "FunctionAssignment", "id": "borrower-finance", "version": "1"},
+        "originating_action_id": "OWN-A05",
+        "submitted_at": {"clock_ref": {"kind": "ClockProfile", "id": "fixture-clock", "version": "1"}, "offset": 1},
+        "status": "submitted",
+        "evidence_refs": [{"kind": "Evidence", "id": "synthetic-basis", "version": "1"}]
+      }
+    },
+    {
+      "ref": {"kind": "Organization", "id": "fixture-borrower", "version": "1"},
+      "value": {
+        "ref": {"kind": "Organization", "id": "fixture-borrower", "version": "1"},
+        "legal_standing": {"state": "known", "value": true},
+        "registration_region_id": {"state": "known", "value": "GZ"},
+        "operating_region_ids": {"state": "known", "value": ["SZ"]},
+        "effective_window": {
+          "start": {"clock_ref": {"kind": "ClockProfile", "id": "fixture-clock", "version": "1"}, "offset": 0},
+          "end": {"clock_ref": {"kind": "ClockProfile", "id": "fixture-clock", "version": "1"}, "offset": 100}, "bounds": "closed_open"
+        },
+        "evidence_refs": [{"kind": "Evidence", "id": "synthetic-basis", "version": "1"}]
+      }
+    },
+    {
+      "ref": {"kind": "Authorization", "id": "borrower-authority", "version": "1"},
+      "value": {
+        "ref": {"kind": "Authorization", "id": "borrower-authority", "version": "1"},
+        "organization_id": "fixture-borrower", "actor_id": "borrower-actor",
+        "function_ref": {"kind": "FunctionAssignment", "id": "borrower-finance", "version": "1"},
+        "action_ids": ["OWN-A05"],
+        "scopes": [{"kind": "assessment_case", "ref": {"kind": "OwnerCase", "id": "case", "version": "1"}, "coverage_refs": []}],
+        "readable_refs": [], "tool_ids": [],
+        "validity": {
+          "start": {"clock_ref": {"kind": "ClockProfile", "id": "fixture-clock", "version": "1"}, "offset": 0},
+          "end": {"clock_ref": {"kind": "ClockProfile", "id": "fixture-clock", "version": "1"}, "offset": 100}, "bounds": "closed_open"
+        },
+        "basis_refs": [{"kind": "Evidence", "id": "synthetic-basis", "version": "1"}]
+      }
+    },
+    {
+      "ref": {"kind": "FunctionAssignment", "id": "borrower-finance", "version": "1"},
+      "value": {
+        "role": "Owner",
+        "function_ref": {"kind": "FunctionAssignment", "id": "borrower-finance", "version": "1"},
+        "configuration_version": "1",
+        "basis_refs": [{"kind": "Evidence", "id": "synthetic-basis", "version": "1"}]
+      }
+    },
+    {
+      "ref": {"kind": "FundingPurpose", "id": "purpose", "version": "1"},
+      "value": {
+        "ref": {"kind": "FundingPurpose", "id": "purpose", "version": "1"},
+        "borrower_ref": {"kind": "Organization", "id": "fixture-borrower", "version": "1"},
+        "scope_ref": {"kind": "assessment_case", "ref": {"kind": "OwnerCase", "id": "case", "version": "1"}, "coverage_refs": []},
+        "project_region_id": {"state": "known", "value": "HK"},
+        "purpose_code": {"state": "known", "value": "feasibility_study"},
+        "stage": {"state": "known", "value": "assessment"},
+        "effective_window": {
+          "start": {"clock_ref": {"kind": "ClockProfile", "id": "fixture-clock", "version": "1"}, "offset": 0},
+          "end": {"clock_ref": {"kind": "ClockProfile", "id": "fixture-clock", "version": "1"}, "offset": 100}, "bounds": "closed_open"
+        },
+        "evidence_refs": [{"kind": "Evidence", "id": "synthetic-basis", "version": "1"}]
+      }
+    },
+    {
+      "ref": {"kind": "FinanceProductProfile", "id": "product", "version": "1"},
+      "value": {
+        "ref": {"kind": "FinanceProductProfile", "id": "product", "version": "1"},
+        "lender_id": "fixture-bank",
+        "effective_window": {
+          "start": {"clock_ref": {"kind": "ClockProfile", "id": "fixture-clock", "version": "1"}, "offset": 0},
+          "end": {"clock_ref": {"kind": "ClockProfile", "id": "fixture-clock", "version": "1"}, "offset": 100}, "bounds": "closed_open"
+        },
+        "allowed_registration_region_ids": {"state": "known", "value": ["GZ"]},
+        "allowed_operating_region_ids": {"state": "known", "value": ["SZ"]},
+        "allowed_project_region_ids": {"state": "known", "value": ["HK"]},
+        "allowed_purpose_codes": {"state": "known", "value": ["feasibility_study"]},
+        "allowed_stages": {"state": "known", "value": ["assessment"]},
+        "allowed_currencies": {"state": "known", "value": ["HKD"]},
+        "minimum_request": {"state": "known", "value": {"value": "1", "currency": "HKD", "basis_ref": {"kind": "Evidence", "id": "synthetic-basis", "version": "1"}}},
+        "maximum_request": {"state": "known", "value": {"value": "1000", "currency": "HKD", "basis_ref": {"kind": "Evidence", "id": "synthetic-basis", "version": "1"}}},
+        "required_disclosure_codes": {"state": "known", "value": ["borrower_identity"]},
+        "required_condition_refs": [{"kind": "Requirement", "id": "review-condition", "version": "1"}],
+        "selection_priority": {"state": "known", "value": 1},
+        "evidence_refs": [{"kind": "Evidence", "id": "synthetic-basis", "version": "1"}]
+      }
+    },
+    {
+      "ref": {"kind": "Requirement", "id": "review-condition", "version": "1"},
+      "value": {
+        "ref": {"kind": "Requirement", "id": "review-condition", "version": "1"},
+        "product_ref": {"kind": "FinanceProductProfile", "id": "product", "version": "1"},
+        "scope_ref": {"kind": "assessment_case", "ref": {"kind": "OwnerCase", "id": "case", "version": "1"}, "coverage_refs": []},
+        "description": "Synthetic review condition; no credit approval or financing commitment",
+        "evidence_refs": [{"kind": "Evidence", "id": "synthetic-basis", "version": "1"}]
+      }
+    }
+  ]
+}

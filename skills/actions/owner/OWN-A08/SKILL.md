@@ -1,0 +1,15 @@
+# OWN-A08 监管申请、代理与通知回应
+
+读取原RegulatoryRequirement、Applicant、地区/事项、己方有权OwnerRegulatoryProfile及CompetentAuthority候选；按原Jurisdiction/Procedure核对覆盖、资格、适用窗口及材料schema，不把技术报告、政策公告、业主选择或提交写作法定许可。无许可只阻塞所依赖的活动，不影响无依赖的获授权研究或改变公共资金门槛。
+
+authorize_agent提出有证据的明确部分范围和条件，原RegulatoryAgencyAuthorization声明事项/动作/权限；提案不等于已委托或代理已提交。代理代表另一个申请人时须原有效申请人独立授权，不能仅凭自身职能授权代其他法人申请。
+
+submit首次可无RegulatoryCase。提交原同版有权专业成果、正确成熟度/监管用途与该事项schema材料和证据，草稿不伪造待建案件或受理回执。机关/地区/事项/程序不匹配先补正，申请资格未知不放行。
+
+submit/supplement/request_review的authority_ref必须属于本次CandidateSet且允许对应choice；原authority_candidates、案件机关、可见性及Jurisdiction/Procedure关系校验不能替代当前候选权限。空候选、可见但漏列、错版或禁止该分支均不得输出该选择。authorize_agent/withdraw保各自原分支规则，不据此额外要求机关选择字段。
+
+supplement/request_review必须沿原案件与已收到有权Government通知，逐原BusinessObject、Requirement或Issue回应，结构化response_items/evidence_refs不藏在note；补件与复核按不同通知用途/时限处理。withdraw只提出原案件撤回，保留明确原依据，不单方消除许可条件、费用或已有效义务。
+
+旧RegulatorySubmissionExecution未知/待定先按原command_id核对，已收到也不机械重发，失败保持technical_error，拒绝保留原依据与另行补正条件。五分支仅提供Owner提案/申请，不决定受理、批准、许可效力或专业通过。
+
+CHECK-OWN-008/024/066待集中验证。实际机关/资格/专业材料schema/通知/代理授权与申请生产者、正式submit/query、Government独立受理/许可核心及回执反馈仍待集成。

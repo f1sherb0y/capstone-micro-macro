@@ -1,0 +1,10 @@
+{
+  "schema_version": "supply-fulfillment-source-gates.v1",
+  "run_id": "goal3f-supply-source-gates",
+  "ticks": 4,
+  "verified_detailed_issuers": {},
+  "scenarios": {
+    "reliable": {"supply_reliability": 1.0, "material_quality": 0.9},
+    "low_reliability": {"supply_reliability": 0.0, "material_quality": 0.4}
+  }
+}

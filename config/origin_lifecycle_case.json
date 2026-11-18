@@ -1,0 +1,21 @@
+{
+  "schema_version": "origin-lifecycle-case.v1",
+  "run_id": "origin-lifecycle-20261025",
+  "ticks": 48,
+  "mode": "offline",
+  "tender_open_tick": 12,
+  "design_approval_tick": 9,
+  "contract_duration": 24,
+  "late_money_scale": "1000000",
+  "completion_earliest_tick": 40,
+  "completion_latest_tick": 44,
+  "review_ticks": [42,43,44,45,46,47,48],
+  "contractor_profile": {
+    "qualification_level": 1,
+    "technical_capability": 1,
+    "construction_capability": 1,
+    "safety_management_capability": 1,
+    "quality_management_capability": 1
+  },
+  "scope": "No initial project. Original opportunity, investment, financing and professional appointments flow into existing tender/signature/supply/aggregate settlement. Independent initial late monetary assumptions use HKD at a declared million multiplier. No model call or all-106-action claim."
+}

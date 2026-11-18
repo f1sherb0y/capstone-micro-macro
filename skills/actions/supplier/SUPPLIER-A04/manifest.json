@@ -1,0 +1,29 @@
+{
+  "skill_id": "SUPPLIER-A04.order_acceptance",
+  "skill_version": "3",
+  "action_id": "SUPPLIER-A04",
+  "role": "Supplier",
+  "status": "implemented",
+  "spec_source": "zwtnew/04_roles/04_roles/supplier.md",
+  "spec_source_sha256": "6c2220cf090c8dfd10b2407ad8edebd11f2c2257a45b36b3e91db0fd26677ce4",
+  "skill_path": "skills/actions/supplier/SUPPLIER-A04/SKILL.md",
+  "skill_sha256": "9533832aa0cc96a1cec6d8750596574c572e42ff74d0ef73cec0656d1ebc6a5c",
+  "shared_sha256s": {
+    "skills/shared/decision-basics.md": "77da3d2fc1683068353888daccecfabe25278bf180b593747e39505fea987e60"
+  },
+  "prompt_sha256": "9533832aa0cc96a1cec6d8750596574c572e42ff74d0ef73cec0656d1ebc6a5c",
+  "input_schema_id": "role-contract.v1:SUPPLIER-A04:input",
+  "output_schema_id": "role-contract.v1:SUPPLIER-A04:payload",
+  "processor_id": "supplier.order_acceptance.v1",
+  "tool_ids": [],
+  "method_refs": [
+    {
+      "kind": "Method",
+      "id": "micro.capacity.fixed_location",
+      "version": "1"
+    }
+  ],
+  "shared_refs": [
+    "skills/shared/decision-basics.md"
+  ]
+}

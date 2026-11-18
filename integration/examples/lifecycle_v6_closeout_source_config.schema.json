@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "V6 actual Owner closeout/continuation source application configuration",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "application_factory",
+    "application_version",
+    "application_settings"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "lifecycle-v6-closeout-source-config.v1"
+    },
+    "application_factory": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[^:]+:[A-Za-z_][A-Za-z0-9_]*$",
+      "description": "Actual module:factory returning V6CloseoutApplication with original readers and sources; owns partial resource cleanup."
+    },
+    "application_version": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "application_settings": {
+      "type": "object",
+      "description": "Application-defined original component/provider/native observation settings. Handover routes to OWN-A12; continuation routes to OWN-A13."
+    }
+  }
+}

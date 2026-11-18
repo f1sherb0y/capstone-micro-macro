@@ -1,0 +1,32 @@
+{
+  "skill_id": "CONTRACTOR-A02.priced-bid-plan",
+  "skill_version": "1",
+  "action_id": "CONTRACTOR-A02",
+  "role": "Contractor",
+  "status": "implemented",
+  "spec_source": "zwtnew/04_roles/04_roles/contractor.md",
+  "spec_source_sha256": "7b1175592c21601ddfa6aedb7859fe46e6bba3285502c285b483a502632f803e",
+  "skill_path": "skills/actions/contractor/CONTRACTOR-A02/SKILL.md",
+  "skill_sha256": "77c6a88d783938130554fa21259cd9b3ce7f7d5fa9d211822f973dd51f7d7a07",
+  "input_schema_id": "role-contract.v1:CONTRACTOR-A02:input",
+  "output_schema_id": "role-contract.v1:CONTRACTOR-A02:payload",
+  "processor_id": "contractor.priced_bid_plan.v1",
+  "tool_ids": [],
+  "shared_refs": [
+    "skills/shared/decision-basics.md"
+  ],
+  "shared_sha256s": {"skills/shared/decision-basics.md": "77da3d2fc1683068353888daccecfabe25278bf180b593747e39505fea987e60"},
+  "prompt_sha256": "77c6a88d783938130554fa21259cd9b3ce7f7d5fa9d211822f973dd51f7d7a07",
+  "method_refs": [
+    {
+      "kind": "Method",
+      "id": "micro.contractor.declared_bid_price",
+      "version": "1"
+    },
+    {
+      "kind": "Method",
+      "id": "micro.capacity.fixed_location",
+      "version": "1"
+    }
+  ]
+}

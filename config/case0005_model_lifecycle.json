@@ -1,0 +1,25 @@
+{
+  "schema_version": "case-library-lifecycle.v1",
+  "entry_kind": "case_library_initial_project",
+  "case_id": "CASE-0005",
+  "run_id": "case0005-model-lifecycle-20261026",
+  "base_config": "config/origin_model_lifecycle_case.json",
+  "mode": "model",
+  "ticks": 48,
+  "tender_open_tick": 12,
+  "contract_duration": 24,
+  "scenario_budget": 150000000,
+  "scenario_currency": "HKD",
+  "technical_complexity": 0.6,
+  "random_seed": 42,
+  "model_options": {
+    "strategy": "single_agent",
+    "provider": "deepseek",
+    "model": "deepseek-v4-flash",
+    "alternate_markup_fraction": "0.2",
+    "max_calls": 4,
+    "max_prompt_chars": 300000
+  },
+  "api_total_attempt_cap": 4,
+  "scope": "CASE-0005 public background via original initiation entry. Only A02 pricing calls the model. Initial investment choice and initial bank selection are outside this imported-project entry. All costs, duration and numerical capabilities are explicit scenario assumptions; no historical winner is imported."
+}

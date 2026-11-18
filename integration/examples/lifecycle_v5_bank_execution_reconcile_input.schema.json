@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Original Bank execution and actual complete command/receipt observations for existing processing",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "scenario_id",
+    "run_id",
+    "bank_organization_id",
+    "request",
+    "configuration",
+    "sources"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "lifecycle-v5-bank-execution-reconcile-input.v1"
+    },
+    "scenario_id": {
+      "const": "V5"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "request": {
+      "type": "object",
+      "description": "Formal current Bank A07 existing operation_context retaining the complete selected original execution_refs and actual receipt_refs; unknown/partial outcomes remain explicit."
+    },
+    "configuration": {
+      "type": "object",
+      "description": "BankRoleContractSettings with execution_receipt_inputs selecting the original same-Bank A07 execute task; formal original same-store worker and independent native authenticity/coverage/mapping validator required."
+    },
+    "sources": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "execution_result",
+        "bank_input",
+        "observation"
+      ],
+      "properties": {
+        "execution_result": {
+          "$ref": "#/$defs/sourceFile"
+        },
+        "bank_input": {
+          "$ref": "#/$defs/sourceFile"
+        },
+        "observation": {
+          "$ref": "#/$defs/sourceFile",
+          "description": "BankExecutionReceptionSettings JSON: original identity/record/result/reading SHA, full executions/receipts and separate native/relation payloads and evidence refs. Current request is retained in bank_input."
+        }
+      }
+    },
+    "bank_organization_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    }
+  },
+  "$defs": {
+    "sourceFile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "file_sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "file_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    }
+  }
+}

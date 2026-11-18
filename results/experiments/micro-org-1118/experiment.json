@@ -1,0 +1,22 @@
+{
+  "cases": [
+    "CASE-0014",
+    "CASE-0001",
+    "CASE-0002",
+    "CASE-0004",
+    "CASE-0008",
+    "CASE-0050"
+  ],
+  "arms": [
+    "single",
+    "solo",
+    "multi"
+  ],
+  "profile": "full",
+  "per_role": 2,
+  "reference_arm": "multi",
+  "model": "deepseek-flash",
+  "provider": "deepseek",
+  "llm_concurrency": "5",
+  "design": "stage-isolated paired arms; shared rosters; internal condition review enabled"
+}

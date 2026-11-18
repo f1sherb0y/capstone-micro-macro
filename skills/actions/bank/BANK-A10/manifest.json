@@ -1,0 +1,23 @@
+{
+  "skill_id": "BANK-A10.original-debt-resolution",
+  "skill_version": "4",
+  "action_id": "BANK-A10",
+  "role": "Bank",
+  "status": "implemented",
+  "spec_source": "zwtnew/04_roles/04_roles/bank.md",
+  "spec_source_sha256": "a83c690b4d51fa363adaaaa2d0c1f6bbe3133e8cf57ec28b5c2e7427493754b1",
+  "skill_path": "skills/actions/bank/BANK-A10/SKILL.md",
+  "skill_sha256": "3a88a3855c64dc571b5fccc2973bd251176bbadcb3a0da422e33b3e3f19262d8",
+  "input_schema_id": "role-contract.v1:BANK-A10:input",
+  "output_schema_id": "role-contract.v1:BANK-A10:payload",
+  "processor_id": "bank.original_debt_resolution.v1",
+  "tool_ids": [],
+  "shared_refs": [
+    "skills/shared/decision-basics.md"
+  ],
+  "shared_sha256s": {
+    "skills/shared/decision-basics.md": "77da3d2fc1683068353888daccecfabe25278bf180b593747e39505fea987e60"
+  },
+  "prompt_sha256": "3a88a3855c64dc571b5fccc2973bd251176bbadcb3a0da422e33b3e3f19262d8",
+  "method_refs": []
+}

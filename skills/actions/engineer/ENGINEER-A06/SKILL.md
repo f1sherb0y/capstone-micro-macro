@@ -1,0 +1,11 @@
+# ENGINEER-A06 指定专业成果与接口检查
+
+assess/request_evidence/request_coordination逐原ReviewRequest/Task、有效本行委任及同版条款摘要、专业职能/用途与独立A06权限。原目标作者、真实人员、内容摘要、版本与时间逐项核对；CheckSpec/MethodResult/Interface集合完整，不把局部专业结果推广为全部工程通过。
+
+需要独立性时按原条款IndependenceRequirement、原A03核验、真实作者/审查人员与当前组织关系核对，换agent_id不绕过同人员或组织关联。问题/补证沿原请求、目标、Question及ResponseRequirement接收权，不生成调查或检查结果。
+
+已保存执行逐原任务/目标摘要/检查规范/方法/用途/作者权限/原输入及执行时间核对。当前只绑定micro.engineer.declared_interface_code@1的合成接口码规则，按真实原EngineeringFact及证据状态复算：一致satisfied，不同conflict，缺失undetermined并列缺项，未覆盖物理检查out_of_scope。声明输入必须在原执行时已可取得和适用；假设不标充分实测。未执行或技术失败结果null，失败不能写实质检查结论，不调用真实模型补数值。
+
+assessment逐项保留已知conflict与未知并存；任何conflict为revise，不平均分消除。无检查/缺项investigate，未覆盖/假设/原Issue为reserve_interpretation；只有全部原检查充分通过且无原问题/接口缺口才support_limited_option。未覆盖范围和未核对接口继续保留，原目标及接口问题保持引用。会议结束、风险分下降不关闭Issue，本动作不提交关闭或写安全/许可状态。
+
+协调只转送原可见Issue给原ResponseRequirement有权接收者，不修改原作者成果。真实委任/复核/独立性/输入/执行/问题投影生产者、跨动作兼容、正式检查submit/query及问题复查关闭/原子后果/反馈仍待集成。CHECK-ENGINEER-023/045/046/047待集中验收；现实专业方法不在合成接口码支持域。

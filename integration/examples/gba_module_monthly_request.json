@@ -1,0 +1,21 @@
+{
+  "name": "Explicit synthetic offline monthly wiring fixture",
+  "agent_source": "explicit",
+  "agents": [
+    {"agent_id": "Owner", "name": "Synthetic Owner", "role": "Owner", "region": "Hong Kong", "enterprise_type": "synthetic_fixture"},
+    {"agent_id": "Bank", "name": "Synthetic Bank", "role": "Bank", "region": "Hong Kong", "enterprise_type": "synthetic_fixture"},
+    {"agent_id": "Architect", "name": "Synthetic Architect", "role": "Architect", "region": "Hong Kong", "enterprise_type": "synthetic_fixture"},
+    {"agent_id": "Engineer", "name": "Synthetic Engineer", "role": "Engineer", "region": "Hong Kong", "enterprise_type": "synthetic_fixture"},
+    {"agent_id": "QS", "name": "Synthetic QS", "role": "QS", "region": "Hong Kong", "enterprise_type": "synthetic_fixture"},
+    {"agent_id": "Government", "name": "Synthetic Government", "role": "Government", "region": "Hong Kong", "enterprise_type": "synthetic_fixture"},
+    {"agent_id": "Contractor", "name": "Synthetic Contractor", "role": "Contractor", "region": "Hong Kong", "enterprise_type": "synthetic_fixture"},
+    {"agent_id": "Supplier", "name": "Synthetic Supplier", "role": "Supplier", "region": "Hong Kong", "enterprise_type": "synthetic_fixture"}
+  ],
+  "initial_projects": [
+    {"project_id": "fixture-project", "name": "Synthetic suspended project", "project_type": "building", "region": "Hong Kong", "owner_id": "Owner", "initial_budget": 1000, "current_stage": "suspended"}
+  ],
+  "use_prior_network_edges": false,
+  "enable_project_generation": false,
+  "ticks": 1,
+  "random_seed": 42
+}

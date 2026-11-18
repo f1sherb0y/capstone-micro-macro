@@ -1,0 +1,17 @@
+{
+  "schema_version": "financing-chain-acceptance.v1",
+  "run_id": "goal3b-financing-chain",
+  "bundle_options": {
+    "with_owner": true,
+    "feedback_followup": true,
+    "with_bank_strategy": true,
+    "with_arrangement": true
+  },
+  "expected": {
+    "ticks": 2,
+    "projects": 4,
+    "bank_requests": 8,
+    "owner_selections": 4,
+    "private_arrangement_reviews": 4
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "skill_id": "OWN-A11.contract-management",
+  "skill_version": "1",
+  "action_id": "OWN-A11",
+  "role": "Owner",
+  "status": "implemented",
+  "spec_source": "zwtnew/04_roles/04_roles/owner.md",
+  "spec_source_sha256": "addcb91c7a5b83caa31f5876a4eb347689847105500775b6fd1b88c87dcfd9c8",
+  "skill_path": "skills/actions/owner/OWN-A11/SKILL.md",
+  "skill_sha256": "9af456fbf1c293aee19fe59a1755287ca73155e383a0270f73377b5bd80b5c8b",
+  "input_schema_id": "role-contract.v1:OWN-A11:input",
+  "output_schema_id": "role-contract.v1:OWN-A11:payload",
+  "processor_id": "owner.contract_management.v1",
+  "tool_ids": [],
+  "shared_refs": [
+    "skills/shared/decision-basics.md"
+  ],
+  "shared_sha256s": {"skills/shared/decision-basics.md": "77da3d2fc1683068353888daccecfabe25278bf180b593747e39505fea987e60"},
+  "prompt_sha256": "9af456fbf1c293aee19fe59a1755287ca73155e383a0270f73377b5bd80b5c8b",
+  "method_refs": []
+}

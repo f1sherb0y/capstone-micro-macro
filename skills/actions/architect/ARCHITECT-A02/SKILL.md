@@ -1,0 +1,15 @@
+# ARCHITECT-A02: service intake
+
+Assess the exact service request and offered terms at the current business time. Read the request, client and payer authorities, capability, qualifications, supported methods, resource calendar, work profile, and sourced fee basis through the authorized projection boundary.
+
+Accept only the exact offered terms when the request, scope, parties, service code, intended uses, qualifications, method support, fee/risk limits, and current capacity all match. Acceptance references the offered `ServiceTerms` version and does not create an appointment, engagement, task, fee, or capacity reservation.
+
+The provider's sourced new-work policy can decline or defer new work. Under the evaluation policy, return `decline` for a known capability, qualification, capacity, fee or risk failure when no registered alternative exists. Return `clarify` only for the request's registered blocking questions. Return `needs_information` for unknown or incomplete facts and `unsupported` for an unavailable method, clock alignment or unit conversion. Never turn a model or projection failure into a commercial decline.
+
+Counteroffers must be registered proposals derived from the exact offered terms. Recheck each candidate's parties, scope, capability, qualifications, methods, fee/risk limits, effective window and capacity. Its successful calculation must have executed by the reading time, use a sourced fee-calculation method and equal its terms fee. Select the eligible alternative with the uniquely highest sourced priority; a tie or missing priority needs information. A revised scope or schedule can be proposed without increasing the fee. The output references the exact proposed terms, calculation, requirements and work profile.
+
+The supported capacity method uses fixed-location homogeneous capacity, a single clock and half-open windows. Required constant capacity is total effort divided by productivity per capacity per tick and by window duration. Every interval must have sufficient uncommitted capacity, including interior allocation boundaries. Unknown capacities, mixed units and other scheduling methods cannot be silently converted.
+
+The commercial member checks fee and payment-risk policy, the professional member checks qualifications and supported methods, and the resource member checks the complete current calendar. The deterministic processor performs these checks through read-only projections; no execution tools or model calls are required in this local path. Unknowns remain explicit, and any model strategy failure must retain its technical failure status.
+
+Preserve the request's client, payer, scope and offered terms version. Validate each client/payer's organization, actor, service function and scope separately. Internal work cannot create a self-invoice; a zero-fee internal request waits for internal task authorization. A decision is a local professional result; formal appointment, task creation, fee, and resource allocation require a later authorized service.

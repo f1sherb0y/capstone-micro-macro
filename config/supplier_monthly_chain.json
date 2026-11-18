@@ -1,0 +1,10 @@
+{
+  "schema_version": "supplier-monthly-chain.v1",
+  "run_id": "goal3e-monthly",
+  "ticks": 2,
+  "scenarios": {
+    "high": {"market_demand_index": 1.2},
+    "low": {"market_demand_index": 0.6}
+  },
+  "source_note": "Two independently authorized suppliers. Explicit initial synthetic inquiry dossiers and independent product, method, physical capacity and nonempty existing commitment disclosures. Original current monthly macro input and strictly earlier own results. No native inquiry receipt, quote, order, stock adjustment or detailed fulfillment is inferred."
+}

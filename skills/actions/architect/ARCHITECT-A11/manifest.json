@@ -1,0 +1,29 @@
+{
+  "skill_id": "ARCHITECT-A11.original-service-transition",
+  "skill_version": "2",
+  "action_id": "ARCHITECT-A11",
+  "role": "Architect",
+  "status": "implemented",
+  "spec_source": "zwtnew/04_roles/04_roles/architect.md",
+  "spec_source_sha256": "24526795fd91ef6ec733a1889ea474542d9d672c91a9414c1962bf74b9626eea",
+  "skill_path": "skills/actions/architect/ARCHITECT-A11/SKILL.md",
+  "skill_sha256": "69350db399a1684405a53dbcdf49f47b2137a1f280e6caa8f5bf8436507e875a",
+  "input_schema_id": "role-contract.v1:ARCHITECT-A11:input",
+  "output_schema_id": "role-contract.v1:ARCHITECT-A11:payload",
+  "processor_id": "architect.original_service_transition.v1",
+  "tool_ids": [],
+  "shared_refs": [
+    "skills/shared/decision-basics.md"
+  ],
+  "shared_sha256s": {
+    "skills/shared/decision-basics.md": "77da3d2fc1683068353888daccecfabe25278bf180b593747e39505fea987e60"
+  },
+  "prompt_sha256": "69350db399a1684405a53dbcdf49f47b2137a1f280e6caa8f5bf8436507e875a",
+  "method_refs": [
+    {
+      "kind": "Method",
+      "id": "micro.capacity.fixed_location",
+      "version": "1"
+    }
+  ]
+}

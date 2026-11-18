@@ -1,0 +1,487 @@
+{
+  "schema_version": "1.0",
+  "companies": [
+    {
+      "company_id": "owner_001",
+      "company_name": "owner_001",
+      "company_role": "owner",
+      "profile": "Synthetic DBB fixture; no historical outcomes",
+      "strengths": [
+        "Scenario delivery capability"
+      ],
+      "weaknesses": [],
+      "qualifications": [
+        "Scenario eligibility"
+      ],
+      "past_project_experience": [],
+      "capacity": "See authorized own resource state",
+      "risk_signals": [],
+      "eligible_packages": []
+    },
+    {
+      "company_id": "designer_001",
+      "company_name": "designer_001",
+      "company_role": "designer",
+      "profile": "Synthetic DBB fixture; no historical outcomes",
+      "strengths": [
+        "Scenario delivery capability"
+      ],
+      "weaknesses": [],
+      "qualifications": [
+        "Scenario eligibility"
+      ],
+      "past_project_experience": [],
+      "capacity": "See authorized own resource state",
+      "risk_signals": [],
+      "eligible_packages": []
+    },
+    {
+      "company_id": "designer_002",
+      "company_name": "designer_002",
+      "company_role": "designer",
+      "profile": "Synthetic DBB fixture; no historical outcomes",
+      "strengths": [
+        "Scenario delivery capability"
+      ],
+      "weaknesses": [],
+      "qualifications": [
+        "Scenario eligibility"
+      ],
+      "past_project_experience": [],
+      "capacity": "See authorized own resource state",
+      "risk_signals": [],
+      "eligible_packages": []
+    },
+    {
+      "company_id": "supervisor_001",
+      "company_name": "supervisor_001",
+      "company_role": "supervisor",
+      "profile": "Synthetic DBB fixture; no historical outcomes",
+      "strengths": [
+        "Scenario delivery capability"
+      ],
+      "weaknesses": [],
+      "qualifications": [
+        "Scenario eligibility"
+      ],
+      "past_project_experience": [],
+      "capacity": "See authorized own resource state",
+      "risk_signals": [],
+      "eligible_packages": []
+    },
+    {
+      "company_id": "supervisor_002",
+      "company_name": "supervisor_002",
+      "company_role": "supervisor",
+      "profile": "Synthetic DBB fixture; no historical outcomes",
+      "strengths": [
+        "Scenario delivery capability"
+      ],
+      "weaknesses": [],
+      "qualifications": [
+        "Scenario eligibility"
+      ],
+      "past_project_experience": [],
+      "capacity": "See authorized own resource state",
+      "risk_signals": [],
+      "eligible_packages": []
+    },
+    {
+      "company_id": "contractor_001",
+      "company_name": "contractor_001",
+      "company_role": "contractor",
+      "profile": "Synthetic DBB fixture; no historical outcomes",
+      "strengths": [
+        "Scenario delivery capability"
+      ],
+      "weaknesses": [],
+      "qualifications": [
+        "Scenario eligibility"
+      ],
+      "past_project_experience": [],
+      "capacity": "See authorized own resource state",
+      "risk_signals": [],
+      "eligible_packages": []
+    },
+    {
+      "company_id": "contractor_002",
+      "company_name": "contractor_002",
+      "company_role": "contractor",
+      "profile": "Synthetic DBB fixture; no historical outcomes",
+      "strengths": [
+        "Scenario delivery capability"
+      ],
+      "weaknesses": [],
+      "qualifications": [
+        "Scenario eligibility"
+      ],
+      "past_project_experience": [],
+      "capacity": "See authorized own resource state",
+      "risk_signals": [],
+      "eligible_packages": []
+    },
+    {
+      "company_id": "contractor_003",
+      "company_name": "contractor_003",
+      "company_role": "contractor",
+      "profile": "Synthetic DBB fixture; no historical outcomes",
+      "strengths": [
+        "Scenario delivery capability"
+      ],
+      "weaknesses": [],
+      "qualifications": [
+        "Scenario eligibility"
+      ],
+      "past_project_experience": [],
+      "capacity": "See authorized own resource state",
+      "risk_signals": [],
+      "eligible_packages": []
+    },
+    {
+      "company_id": "supplier_001",
+      "company_name": "supplier_001",
+      "company_role": "supplier",
+      "profile": "Synthetic DBB fixture; no historical outcomes",
+      "strengths": [
+        "Scenario delivery capability"
+      ],
+      "weaknesses": [],
+      "qualifications": [
+        "Scenario eligibility"
+      ],
+      "past_project_experience": [],
+      "capacity": "See authorized own resource state",
+      "risk_signals": [],
+      "eligible_packages": []
+    },
+    {
+      "company_id": "supplier_002",
+      "company_name": "supplier_002",
+      "company_role": "supplier",
+      "profile": "Synthetic DBB fixture; no historical outcomes",
+      "strengths": [
+        "Scenario delivery capability"
+      ],
+      "weaknesses": [],
+      "qualifications": [
+        "Scenario eligibility"
+      ],
+      "past_project_experience": [],
+      "capacity": "See authorized own resource state",
+      "risk_signals": [],
+      "eligible_packages": []
+    }
+  ],
+  "projects": [
+    {
+      "project_id": "PRJ01",
+      "name": "Synthetic shared DBB project",
+      "owner_id": "owner_001",
+      "region": "Macau",
+      "project_type": "building",
+      "scope": "Two construction sections with separate included supplies",
+      "budget": 15000000,
+      "currency": "MOP",
+      "duration_months": 18,
+      "delivery_mode": "DBB"
+    }
+  ],
+  "packages": [
+    {
+      "package_id": "PRJ01/design_package",
+      "project_id": "PRJ01",
+      "kind": "design",
+      "buyer_id": "owner_001",
+      "name": "design_package",
+      "scope": "Scenario-defined design_package",
+      "budget": 1000000,
+      "currency": "MOP",
+      "resource_required": 0.4,
+      "candidate_ids": [
+        "designer_001",
+        "designer_002"
+      ],
+      "depends_on": [],
+      "cost_inclusion": "owner_additional",
+      "parent_package_id": null
+    },
+    {
+      "package_id": "PRJ01/supervision_package",
+      "project_id": "PRJ01",
+      "kind": "cost_consulting",
+      "buyer_id": "owner_001",
+      "name": "supervision_package",
+      "scope": "Scenario-defined supervision_package",
+      "budget": 500000,
+      "currency": "MOP",
+      "resource_required": 0.3,
+      "candidate_ids": [
+        "supervisor_001",
+        "supervisor_002"
+      ],
+      "depends_on": [],
+      "cost_inclusion": "owner_additional",
+      "parent_package_id": null
+    },
+    {
+      "package_id": "PRJ01/contractor_package_A",
+      "project_id": "PRJ01",
+      "kind": "construction",
+      "buyer_id": "owner_001",
+      "name": "contractor_package_A",
+      "scope": "Scenario-defined contractor_package_A",
+      "budget": 6000000,
+      "currency": "MOP",
+      "resource_required": 0.8,
+      "candidate_ids": [
+        "contractor_001",
+        "contractor_002",
+        "contractor_003"
+      ],
+      "depends_on": [
+        "PRJ01/design_package",
+        "PRJ01/supervision_package"
+      ],
+      "cost_inclusion": "owner_additional",
+      "parent_package_id": null
+    },
+    {
+      "package_id": "PRJ01/supplier_package_A",
+      "project_id": "PRJ01",
+      "kind": "supply",
+      "buyer_id": "$construction_lead",
+      "name": "supplier_package_A",
+      "scope": "Scenario-defined supplier_package_A",
+      "budget": 1500000,
+      "currency": "MOP",
+      "resource_required": 0.3,
+      "candidate_ids": [
+        "supplier_001",
+        "supplier_002"
+      ],
+      "depends_on": [
+        "PRJ01/contractor_package_A"
+      ],
+      "cost_inclusion": "included_in_parent",
+      "parent_package_id": "PRJ01/contractor_package_A"
+    },
+    {
+      "package_id": "PRJ01/contractor_package_B",
+      "project_id": "PRJ01",
+      "kind": "construction",
+      "buyer_id": "owner_001",
+      "name": "contractor_package_B",
+      "scope": "Scenario-defined contractor_package_B",
+      "budget": 6000000,
+      "currency": "MOP",
+      "resource_required": 0.8,
+      "candidate_ids": [
+        "contractor_001",
+        "contractor_002",
+        "contractor_003"
+      ],
+      "depends_on": [
+        "PRJ01/design_package",
+        "PRJ01/supervision_package"
+      ],
+      "cost_inclusion": "owner_additional",
+      "parent_package_id": null
+    },
+    {
+      "package_id": "PRJ01/supplier_package_B",
+      "project_id": "PRJ01",
+      "kind": "supply",
+      "buyer_id": "$construction_lead",
+      "name": "supplier_package_B",
+      "scope": "Scenario-defined supplier_package_B",
+      "budget": 1500000,
+      "currency": "MOP",
+      "resource_required": 0.3,
+      "candidate_ids": [
+        "supplier_001",
+        "supplier_002"
+      ],
+      "depends_on": [
+        "PRJ01/contractor_package_B"
+      ],
+      "cost_inclusion": "included_in_parent",
+      "parent_package_id": "PRJ01/contractor_package_B"
+    }
+  ],
+  "assumptions": {
+    "version": "fixture-v1",
+    "source_note": "All budgets, durations, capacities, capabilities and eligibility are synthetic reproducible assumptions, not observed enterprise facts.",
+    "enterprise_parameters": {
+      "owner_001": {
+        "total_resource_capacity": 3.0,
+        "financial_capacity": 0.8,
+        "technical_capability": 0.8,
+        "management_capability": 0.8,
+        "design_capability": 0.8,
+        "cost_estimation_capability": 0.8,
+        "construction_capability": 0.8,
+        "quality_management_capability": 0.8,
+        "safety_management_capability": 0.8,
+        "supply_reliability": 0.8,
+        "material_quality": 0.8,
+        "policy_adaptability": 0.8
+      },
+      "designer_001": {
+        "total_resource_capacity": 3.0,
+        "financial_capacity": 0.8,
+        "technical_capability": 0.8,
+        "management_capability": 0.8,
+        "design_capability": 0.8,
+        "cost_estimation_capability": 0.8,
+        "construction_capability": 0.8,
+        "quality_management_capability": 0.8,
+        "safety_management_capability": 0.8,
+        "supply_reliability": 0.8,
+        "material_quality": 0.8,
+        "policy_adaptability": 0.8
+      },
+      "designer_002": {
+        "total_resource_capacity": 3.0,
+        "financial_capacity": 0.8,
+        "technical_capability": 0.8,
+        "management_capability": 0.8,
+        "design_capability": 0.8,
+        "cost_estimation_capability": 0.8,
+        "construction_capability": 0.8,
+        "quality_management_capability": 0.8,
+        "safety_management_capability": 0.8,
+        "supply_reliability": 0.8,
+        "material_quality": 0.8,
+        "policy_adaptability": 0.8
+      },
+      "supervisor_001": {
+        "total_resource_capacity": 3.0,
+        "financial_capacity": 0.8,
+        "technical_capability": 0.8,
+        "management_capability": 0.8,
+        "design_capability": 0.8,
+        "cost_estimation_capability": 0.8,
+        "construction_capability": 0.8,
+        "quality_management_capability": 0.8,
+        "safety_management_capability": 0.8,
+        "supply_reliability": 0.8,
+        "material_quality": 0.8,
+        "policy_adaptability": 0.8
+      },
+      "supervisor_002": {
+        "total_resource_capacity": 3.0,
+        "financial_capacity": 0.8,
+        "technical_capability": 0.8,
+        "management_capability": 0.8,
+        "design_capability": 0.8,
+        "cost_estimation_capability": 0.8,
+        "construction_capability": 0.8,
+        "quality_management_capability": 0.8,
+        "safety_management_capability": 0.8,
+        "supply_reliability": 0.8,
+        "material_quality": 0.8,
+        "policy_adaptability": 0.8
+      },
+      "contractor_001": {
+        "total_resource_capacity": 3.0,
+        "financial_capacity": 0.8,
+        "technical_capability": 0.8,
+        "management_capability": 0.8,
+        "design_capability": 0.8,
+        "cost_estimation_capability": 0.8,
+        "construction_capability": 0.8,
+        "quality_management_capability": 0.8,
+        "safety_management_capability": 0.8,
+        "supply_reliability": 0.8,
+        "material_quality": 0.8,
+        "policy_adaptability": 0.8
+      },
+      "contractor_002": {
+        "total_resource_capacity": 3.0,
+        "financial_capacity": 0.8,
+        "technical_capability": 0.8,
+        "management_capability": 0.8,
+        "design_capability": 0.8,
+        "cost_estimation_capability": 0.8,
+        "construction_capability": 0.8,
+        "quality_management_capability": 0.8,
+        "safety_management_capability": 0.8,
+        "supply_reliability": 0.8,
+        "material_quality": 0.8,
+        "policy_adaptability": 0.8
+      },
+      "contractor_003": {
+        "total_resource_capacity": 3.0,
+        "financial_capacity": 0.8,
+        "technical_capability": 0.8,
+        "management_capability": 0.8,
+        "design_capability": 0.8,
+        "cost_estimation_capability": 0.8,
+        "construction_capability": 0.8,
+        "quality_management_capability": 0.8,
+        "safety_management_capability": 0.8,
+        "supply_reliability": 0.8,
+        "material_quality": 0.8,
+        "policy_adaptability": 0.8
+      },
+      "supplier_001": {
+        "total_resource_capacity": 3.0,
+        "financial_capacity": 0.8,
+        "technical_capability": 0.8,
+        "management_capability": 0.8,
+        "design_capability": 0.8,
+        "cost_estimation_capability": 0.8,
+        "construction_capability": 0.8,
+        "quality_management_capability": 0.8,
+        "safety_management_capability": 0.8,
+        "supply_reliability": 0.8,
+        "material_quality": 0.8,
+        "policy_adaptability": 0.8
+      },
+      "supplier_002": {
+        "total_resource_capacity": 3.0,
+        "financial_capacity": 0.8,
+        "technical_capability": 0.8,
+        "management_capability": 0.8,
+        "design_capability": 0.8,
+        "cost_estimation_capability": 0.8,
+        "construction_capability": 0.8,
+        "quality_management_capability": 0.8,
+        "safety_management_capability": 0.8,
+        "supply_reliability": 0.8,
+        "material_quality": 0.8,
+        "policy_adaptability": 0.8
+      }
+    },
+    "enterprise_regions": {
+      "owner_001": "Macau",
+      "designer_001": "Macau",
+      "designer_002": "Macau",
+      "supervisor_001": "Macau",
+      "supervisor_002": "Macau",
+      "contractor_001": "Macau",
+      "contractor_002": "Macau",
+      "contractor_003": "Macau",
+      "supplier_001": "Macau",
+      "supplier_002": "Macau"
+    },
+    "support_agents": [
+      {
+        "agent_id": "government_001",
+        "name": "Scenario regulator",
+        "role": "Government",
+        "region": "Macau",
+        "enterprise_type": "scenario_support",
+        "total_resource_capacity": 3.0,
+        "policy_adaptability": 0.9
+      }
+    ]
+  },
+  "environment": {
+    "material_price_index": 1.0,
+    "labor_price_index": 1.0
+  },
+  "policy": {
+    "approval_success_prob": 0.95
+  }
+}

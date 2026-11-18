@@ -1,0 +1,25 @@
+# BANK-A05 确认接受并建立融资安排
+
+收到借款方对具体 FinanceOffer 版本的 PartyAcceptance 后处理；未收到接受时等待，不伪造借款人决定。宿主绑定本行、当前 BANK-A05 职能、授权、输入版本和读取时点。
+
+借款方与银行分别决定。核对借款方原 RecordedDecision、作者职能及原接受授权、完整 accepted_terms、报价摘要、实际借款人和范围；拒绝/撤回不形成安排，反报价或失效报价进入 requote。不能把 BANK-A04 报价建议当成借款方接受，不能用银行 A 的条款批准银行 B 的申请。
+
+原报价evidence_refs按issued_at、原PartyAcceptance按accepted_at、原RecordedDecision按decided_at核证据有效窗，并先核这些原时点不晚于本次业务时点且同钟。当时有效而现在到期的依据不丢弃，当时无效的依据不能由后来有效追认；原接受与RecordedDecision仍须同一实际时点、同版完整内容和作者授权。当前报价状态/有效期/时间竞争规则、本行A05权限和最新容量仍按原当前门槛检查，不从历史依据推报价现在可接受，不以本行获知时间替代对方决策时间。
+
+A04→A05正式报价交接保留原报价作者职能的完整保存投影，同版同ref也不能改写原职能或依据。原作者grant/function证据按原A04决定时点、报价记录证据按issued_at、后登记/关系证明及其作者依据按证明authored_at核有效性；同证据用于多个时点须分别有效。原申请/预留政策依据仍核当前有效，关系/native证据仍须observed，真实当前报价/预留历史由宿主独立认证。交接准备不代替借款人接受或本次形成决定。
+
+原报价作者grant/function的所有basis_refs均须当前有权读取且与原source_reading完整内容一致，不仅核引用或Evidence标签；原Evidence仍按原A04时点核。关系证明作者须具有报价及所用报价/关系/native证据的精确读权。所有原/当前形成、接受和条件核验授权也核精确职能ref与原动作角色；grant/function的非Evidence依据保实际登记类型解析，不静默跳过或变造Evidence，不代替独立限额/容量规则。
+
+实际业主接受接收入口逐项经当前授权读取接收记录evidence_refs，按真实received_at核Evidence类型和有效窗，native接受登记证据也按该点核；仍须observed、原摘要及formal/fixture来源一致。先核原决定/签署/可获/接收/接收可获/当前时点同钟有序，不能以现在有效追认当时无效依据。接收记录自身仍须当前有效，实际宿主继续认证独立接受、原预留/撤回历史与合法披露；接收或本地confirm不直接形成正式安排。
+
+该接收另核原Owner RoleAssignment与当前原精确职能投影完整相同，角色为Owner；grant/function每项basis均须当前有权读取且与原source_reading内容一致。Evidence在原Owner决定和actual accepted_at均须有效，非Evidence保原schema解析。原grant/actor/范围/报价读权及完整同版条款/独立接收/预留撤回认证保持，不能用现在新授权或改写同ref来源追认原接受。
+
+授权成员核对报价原作者权限与当前独立 BANK-A05 形成限额、用途、产品及定价范围。条件成员读取全部要求与依赖图，保留负责方、授权核证者和证据；循环和未知不视为满足。安排生效条件与逐次提款条件区分；仅明确允许时可确认待生效签署，输出仍保留未满足条件，不声明可提款。
+
+整张条件图中，有原verification的条件按verified_at核row.evidence_refs；无verification则按当前时点读原依据且outcome保持unknown。先核原时点同钟且不晚于现在，条件自身effective_window仍须当前有效。输入整组condition_evidence_refs先核物理排重、Evidence类型/读权及业务钟，实际条件消费时再按各自核验时点核有效窗，不要求历史核验证据现在仍有效；额外未消费证据不形成满足结论。核验人原grant/职能/依据仍按verified_at，其scope须覆盖完整row.scope_ref，不能只覆盖更小报价范围而替整项条件签证；原允许组织/action、原evidence读权和本批完整提交仍必需。当前银行A05、报价作者和借款人接受保原各自范围与时点门槛。
+
+按显式 FinanceTimeRule 处理接受/到期同一时点，不能由循环调用顺序决定。重新读取本行当前完整容量/承诺组合。原报价预留与本行/借款人/范围/金额一致时，转换同一占用，新增占用为零；不重复扣减。已有安排、未知占用、缺原预留或缺释放证据先核对，不释放、不重新占用。
+
+合法输出：confirm 保留输入 offer_ref、acceptance_ref 和完整 BankCondition，offer_ref 必须在当前 CandidateSet 中明确允许 confirm；收到报价和借款人接受不自动扩大本行候选权限，空候选不确认。requote 带明确 affected_requirement_refs；decline 不带确认/重报价字段。缺资料、方法不支持与技术失败使用通用包装，note 不隐藏状态、金额或条件。
+
+简单金额/版本/排重检查使用确定性代码，本动作无需新的专业计算方法。completed 只形成本行决定；正式 finance.prepare_arrangement 仍需双方 RecordedDecision 的明确映射、当前容量原子转换、提交/查询/回执和反馈。不创建安排、合同、承诺、本金、现金、提款批准或付款。条件签署/生效与提款各有正式时点。

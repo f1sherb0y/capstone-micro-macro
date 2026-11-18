@@ -1,0 +1,7 @@
+{
+  "schema_version":"professional-methods-chain.v1",
+  "run_id":"goal3c-monthly-methods",
+  "ticks":2,
+  "scenarios":{"high":{"regulatory_pressure_index":0.9},"low":{"regulatory_pressure_index":0.2}},
+  "source_note":"Only the original initial regulatory_pressure_index varies. Original Architect/Engineer A12 computes a background method-improvement need from actual current pressure, native capability/free ratio and strictly earlier own actual operations. Detailed private learning history stays unknown. No completed training, issued credential, formal design or independently verified capability effect is inferred; original random normalized capability updates can also occur on maintain_operations."
+}

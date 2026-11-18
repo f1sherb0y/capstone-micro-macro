@@ -1,0 +1,12 @@
+{
+  "schema_version": "report-case.v1",
+  "purpose": "One continuous synthetic micro-macro business case for a supervisor report; no model comparison or live API calls.",
+  "baseline_config": "config/goal4_integration.json",
+  "tender": {
+    "run_id": "report-case-20261025",
+    "with_owner_award": true,
+    "with_government_completion": true,
+    "authorization_read_until_tick": 25
+  },
+  "scope": "One initially empty tender project through original aggregate settlement and later Owner consumption. Deterministic offline micro processors; original preferred-bid selection. Synthetic development inputs, not a real project or evidence of model superiority."
+}
